@@ -1,10 +1,10 @@
 ---
 title: "Bittensor"
 description: "The largest decentralised AI network by market cap. An incentivised system of AI subnets competing to produce intelligence. Full review with practitioner assessment."
-category: "inference"
+category: "platform"
 token: "TAO"
 status: "active"
-freedomScore: 7
+freedomScore: 6
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "bittensor"
@@ -12,7 +12,7 @@ launchType: "mining"
 chain: "Bittensor L1"
 supplyType: "capped"
 maxSupply: "21M"
-verdict: "Largest DeAI network with real workloads. Governance more centralised than marketed."
+verdict: "Largest DeAI network with real workloads. PoA block production and governance far more centralised than marketed. No security audit."
 oymHolds: true
 ---
 
@@ -22,7 +22,7 @@ Bittensor is an incentivised network for AI. The architecture is built around su
 
 Each subnet has miners (who perform the work) and validators (who assess the quality). Miners compete to produce the best outputs. Validators score the miners and distribute TAO rewards accordingly. The system creates a Darwinian selection pressure where the best-performing miners earn the most and underperforming ones get pushed out.
 
-There are currently over 50 active subnets. Anyone can create a new one by registering it on the network and attracting miners and validators.
+There are currently 128+ active subnets. Anyone can create a new one by registering it on the network and attracting miners and validators. Leading subnets include Chutes (serverless inference, processing billions of tokens daily), Gradients (model training, cheaper than Google Cloud), and Nineteen (inference speed records). All three are built by Rayon Labs.
 
 ## Value proposition
 
@@ -38,19 +38,19 @@ For developers, the value is infrastructure. Build a subnet for any AI task, att
 
 ## Tokenomics
 
-TAO has a fixed supply cap of 21 million, mirroring Bitcoin's design. Current emissions are approximately 7,200 TAO per day, distributed across subnets based on the Root Network's assessment of subnet value.
+TAO has a fixed supply cap of 21 million, mirroring Bitcoin's design. The first halving completed on 14 December 2025, cutting emissions from 1 TAO/block (~7,200/day) to 0.5 TAO/block (~3,600/day). Current inflation is approximately 12-13% annually. Circulating supply is ~10.7M TAO (~51% of max).
 
-The emission mechanism:
+Dynamic TAO (dTAO), launched February 2025, replaced the Root Network validator oligarchy with market-driven emission allocation. Each subnet now has its own alpha token traded against TAO in an on-chain AMM. Stakers vote with their TAO by depositing into subnets they believe produce value. Emission allocation follows an 86.8-day EMA of net staking flows.
+
+The emission split is fixed at 41/41/18 between miners, validators and subnet owners.
 
 - **Miners** earn TAO for producing high-quality outputs within their subnet
-- **Validators** earn TAO for accurately assessing miner quality
-- **Subnet owners** earn a percentage of their subnet's emissions
+- **Validators** earn TAO for accurately assessing miner quality via Yuma Consensus
+- **Subnet owners** earn 18% of their subnet's emissions for defining the incentive mechanism
 
-TAO uses a halving schedule similar to Bitcoin, with emissions declining over time. The first halving is expected around 2025-2026.
+The critical economic dynamic is competition within subnets. Miners with better hardware, better models and better optimisation earn disproportionately more. Academic analysis (arXiv, 2025) found that stake weight is the primary driver of rewards (0.50-0.80 correlation), not AI output quality (0.10-0.30 correlation). The protocol rewards capital concentration more than quality contributions.
 
-The critical economic dynamic is competition within subnets. Miners with better hardware, better models and better optimisation earn disproportionately more. This creates an arms race that drives quality up but also raises the barrier to entry for new participants.
-
-Registration on popular subnets requires burning TAO. This creates a cost barrier that prevents spam but also means you need capital to participate as a miner or validator.
+Registration on popular subnets requires burning TAO. This creates a cost barrier that prevents spam but also means you need capital to participate as a miner or validator. TAO spent on registration is recycled back to the unissued emission pool -- it is not a permanent burn.
 
 ## How to participate
 
@@ -58,27 +58,34 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 **Validate.** Run a validator on one or more subnets. Requires staking TAO and running validation infrastructure. Validators earn emissions for accurately scoring miners.
 
-**Hold TAO.** The simplest participation. If the network grows and demand for subnet services increases, TAO value should follow. No staking mechanism for passive holders beyond delegation to validators on some subnets.
+**Stake TAO.** Delegate to validators on specific subnets or the Root Network. Root staking returns ~14-20% APY nominal. Subnet staking converts TAO to alpha tokens with higher potential returns (80%+) but alpha price risk. Minimum 0.1 TAO. No hard lock-up but unstaking involves AMM conversion at market rate.
 
 **Build a subnet.** Create a new subnet for an AI workload that does not exist on the network yet. This is the most ambitious path and requires both technical capability and the ability to attract miners and validators.
 
 ## Honest assessment
 
-**What works.** Bittensor has the largest and most active decentralised AI network. Real workloads process through subnets daily. The subnet architecture is genuinely innovative and allows the network to expand into any AI task without centralised coordination. The community is technically strong and deeply engaged.
+**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real -- Grayscale filed for a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
 
-**What does not work yet.** The barrier to entry for mining is high and getting higher. Competitive subnets require serious hardware investment with no guarantee of returns. Validator concentration is a concern, with a relatively small number of validators controlling significant emission allocation. Some subnets produce outputs that are measurably worse than centralised alternatives.
+**What does not work yet.** The barrier to entry for mining is high and getting higher. Competitive subnets require serious hardware investment with no guarantee of returns. Most subnets have not demonstrated output quality exceeding centralised alternatives. Academic analysis shows stake weight drives rewards more than AI output quality.
 
-**The concern.** Bittensor's governance is more centralised than its marketing suggests. The Opentensor Foundation retains significant influence over protocol development and subnet parameters. Root Network validators (who determine emission allocation across subnets) are a small, concentrated group. The "decentralised" label applies more to the compute layer than the governance layer.
+**The concern.** Bittensor's decentralisation narrative significantly overstates its operational reality. The Opentensor Foundation validates all blocks (Proof of Authority), can halt the entire network (demonstrated July 2024), and controls governance proposals through a 3-person Triumvirate. No timeline for PoS transition has been published. A $28-30M insider hack by former OTF employees in mid-2024 exposed real security failures. No third-party security audit has been publicly disclosed for the core protocol. The top 1% of wallets control approximately 90% of stake (Gini coefficient ~0.98).
+
+**The fair launch question.** Technically clean -- no ICO, no pre-mine, no VC allocation. But 5.38M TAO were mined between January 2021 and October 2023 with very limited participants and no public accounting of where those tokens went. Polychain Capital and DCG accumulated significant positions, likely through early mining or OTC.
 
 **The competitive dynamic.** Mining Bittensor is closer to competitive gaming than passive yield farming. You need to constantly optimise, upgrade hardware and adapt to changing subnet dynamics. If you are looking for passive income, this is not it. If you enjoy the technical challenge and have the hardware, it can be rewarding.
 
 **My experience.** I have explored Bittensor mining and found the barrier to entry on established subnets too high for my hardware. Newer subnets offer better opportunities but come with the risk of lower and more volatile emissions. I hold TAO as a network exposure position but do not actively mine.
 
-## Freedom score: 7/10
+## Freedom score: 6/10
 
-**Open source:** Yes. Core protocol and most subnet code is public.
-**Fair launch:** Partial. Early mining distribution was concentrated. No formal VC allocation but early miners accumulated significant positions.
-**Decentralised compute:** Yes. Thousands of miners across dozens of subnets.
-**Permissionless participation:** Mostly. Subnet registration requires TAO burn, which creates a capital barrier.
-**Governance decentralisation:** Weak. Opentensor Foundation and Root Network validators hold concentrated influence.
-**Censorship resistance:** Moderate. Individual subnets can set their own content policies.
+**Infrastructure decentralisation (12/20):** 128 subnets, 8,000+ reported GPU nodes, permissionless mining. But OTF validates all blocks (PoA) and can halt the network. No PoS timeline published.
+
+**Governance decentralisation (9/20):** Triumvirate (3 OTF employees) plus Senate (top validators). dTAO improved emission allocation. But OTF controls proposals, intervened in SN28, and top 1% hold ~90% of stake.
+
+**Token distribution (8/15):** Fair launch technically (no ICO, no pre-mine). But 5.38M TAO mined 2021-2023 with limited participants. Gini ~0.98.
+
+**Censorship resistance (8/15):** Permissionless subnets. No content policy. But OTF controls block production, halted the network in July 2024, and intervened in SN28.
+
+**Data sovereignty (10/15):** Local miner execution, self-custodial wallets, no platform surveillance. But coldkey exposure on every operation, no ZK on inference.
+
+**Open source transparency (9/15):** MIT licence, 64 public repos, active development. But no security audit, no bug bounty, opaque early distribution, OTF finances undisclosed.
