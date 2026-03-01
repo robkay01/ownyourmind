@@ -1,0 +1,751 @@
+{
+  "meta": {
+    "project_id": "bittensor",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "research_gaps": [
+      "Exact destination of 5.38M TAO mined during Kusanagi/Nakamoto era (Jan 2021 - Oct 2023) is undocumented publicly",
+      "No public dashboard for active compute node count across subnets -- 8,000+ figure from aggregator, not on-chain verified",
+      "Polychain Capital's 2019 'incubation' terms never disclosed -- unclear if financial support, mining access, or advisory",
+      "Total developer count across all 128+ subnets not centrally tracked",
+      "Staking APY varies significantly by subnet and changes continuously -- no fixed figure",
+      "Opentensor Foundation financials not publicly disclosed beyond estimated $1.8M annual revenue",
+      "Protection Fund or Treasury management not documented",
+      "Matthew McAteer (third whitepaper co-author) has no public presence in the project post-publication",
+      "Exact validator count across all subnets not reported in aggregate",
+      "Real yield after inflation not calculable without subnet-specific data",
+      "Insider lawsuit (JustM2J LLC v Brewer et al) outcome pending -- proceeding to discovery as of Nov 2025",
+      "OTF's timeline for transitioning from Proof of Authority to Proof of Stake not published"
+    ]
+  },
+
+  "identity": {
+    "name": "Bittensor",
+    "ticker": "TAO",
+    "category": "Intelligence Networks",
+    "subcategory": "Decentralised AI marketplace",
+    "tagline": "Internet-scale Neural Networks",
+    "one_liner": "An incentivised network of AI subnets competing to produce digital commodities, funded by Bitcoin-modelled token emissions.",
+    "website": "https://bittensor.com",
+    "documentation_url": "https://docs.learnbittensor.org/",
+    "whitepaper_url": "https://bittensor.com/whitepaper",
+    "github_url": "https://github.com/opentensor",
+    "chain": "Bittensor L1 (Substrate)",
+    "launch_date": "2021-01-03",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Jacob Robert Steeves",
+        "role": "Co-Founder",
+        "background": "BASc Mathematics & Computer Science, Simon Fraser University. ML Researcher at Knowm Inc (DARPA contractor). Software Engineer at Google (2016-2018), reportedly on the Brain team. Co-founded Bittensor in 2016, went full-time in 2018.",
+        "linkedin_or_x": "https://pe.linkedin.com/in/jacob-robert-steeves-7b0629b8",
+        "doxxed": true
+      },
+      {
+        "name": "Ala Shaabana",
+        "role": "Co-Founder (now Board, shifted to Crucible Labs Nov 2024)",
+        "background": "BSc Computer Science, University of Windsor. PhD Computer Science (applied AI), McMaster University (2013-2017). VMware R&D, Senior Software Engineer at Instacart, Assistant Professor U of T, Postdoc U of Waterloo. Co-founded Crucible Labs with David Lawee (ex-Alphabet/CapitalG) in Nov 2024.",
+        "linkedin_or_x": "https://iq.wiki/wiki/ala-shaabana",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 40,
+    "entity_name": "Opentensor Foundation",
+    "entity_jurisdiction": "Canada (Federal Corporation #13026531, incorporated May 18, 2021)",
+    "notable_backers": [
+      "Polychain Capital (~$200M in TAO, incubated 2019)",
+      "Digital Currency Group (~500K TAO / ~$175M, launched Yuma subsidiary Nov 2024)",
+      "dao5 (~$50M in TAO, acquired 3rd largest validator Dec 2024)",
+      "Grayscale (GTAO trust, filed for spot ETF Dec 2025)",
+      "OSS Capital / Joseph Jacks ($25M committed to ecosystem)",
+      "Stillcore Capital / Jason Calacanis (subnet token fund)",
+      "David Lawee (ex-Alphabet CMO / CapitalG founder, co-founded Crucible Labs)"
+    ],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": []
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Bittensor is a Substrate-based Layer 1 blockchain (Subtensor) that coordinates a network of 128+ AI subnets. Each subnet is a competitive marketplace where miners produce AI work (inference, training, prediction, data) and validators score quality using Yuma Consensus. The chain currently runs Proof of Authority (Aura + GRANDPA) with block production controlled by the Opentensor Foundation. Dynamic TAO (launched Feb 2025) introduced per-subnet alpha tokens traded via on-chain AMMs, replacing the previous Root Network validator oligarchy for emission allocation. Block time is 12 seconds with a 360-block tempo (~72 min) for consensus and emission distribution cycles.",
+    "consensus_mechanism": "Proof of Authority (Aura + GRANDPA) for block production (OTF-controlled). Yuma Consensus for emission distribution within subnets. dTAO market mechanism for cross-subnet emission allocation.",
+    "what_is_onchain": "TAO transfers, staking/delegation, subnet registration, neuron registration, weight submissions, Yuma Consensus scoring, alpha token AMMs, emission distribution, EVM smart contracts",
+    "what_is_offchain": "AI inference and model execution (miners), quality scoring computation (validators), subnet incentive mechanism logic, model storage and training data",
+    "key_dependencies": [
+      "Substrate/Polkadot SDK (blockchain framework)",
+      "PyPI (Python package distribution -- attack vector in July 2024)",
+      "CUDA/GPU drivers (miner hardware)",
+      "libp2p (networking)"
+    ],
+    "smart_contract_languages": ["Rust (Substrate pallets)", "Python (SDK/btcli)", "Solidity (EVM layer, since Oct 2024)"],
+    "open_source": true,
+    "license": "MIT",
+    "github_metrics": {
+      "total_repos": 64,
+      "primary_repo_url": "https://github.com/opentensor/bittensor",
+      "total_commits": 9444,
+      "contributors": 171,
+      "last_commit_date": "2026-02-27",
+      "stars": 1373,
+      "forks": 443,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": [
+      {
+        "date": "2024-06-01",
+        "description": "Wallet drain: single user lost 28,000+ TAO ($11.2M). Part of coordinated insider attack. Attacker split funds across 18 wallets, bridged to Ethereum.",
+        "loss_amount_usd": 11200000,
+        "post_mortem_url": "https://cointelegraph.com/magazine/crypto-sec-11m-bittensor-phished-22m-lykke-hack-uwu-lend-exploits-deepfake-scam/"
+      },
+      {
+        "date": "2024-07-02",
+        "description": "PyPI supply chain attack: malicious Bittensor v6.12.2 package uploaded to PyPI, exfiltrated coldkey private keys. ~32,000 TAO (~$8M) stolen. OTF halted the network in safe mode. Lawsuit filed Jan 2025 naming former OTF employees Ayden Brewer, Jon Litz, and Jason St. George. Total combined theft ~61,794 TAO (~$30.3M).",
+        "loss_amount_usd": 8000000,
+        "post_mortem_url": "https://opentensor.medium.com/bittnesor-community-update-july-3-2024-45661b1d542d"
+      },
+      {
+        "date": "2025-08-01",
+        "description": "Separate typosquatting campaign: 5 malicious PyPI packages with similar names (bitensor, bittenso etc) hijacked stake_extrinsic function. Discovered by GitLab, removed within 6 hours.",
+        "loss_amount_usd": null,
+        "post_mortem_url": "https://about.gitlab.com/blog/gitlab-uncovers-bittensor-theft-campaign-via-pypi/"
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "TAO",
+    "ticker": "TAO",
+    "token_standard": "Native coin (Substrate-based L1). Wrapped version (wTAO) on Ethereum: 0x77e06c9eccf2e797fd462a92b6d7642ef85b0a44",
+    "token_type": "both",
+    "token_utility": [
+      "Staking to validators and subnets (earn emissions)",
+      "Subnet registration burn (dynamic cost)",
+      "Miner/validator registration burn",
+      "Transaction fees (recycled to emission pool)",
+      "Governance weight (delegation to Senate validators)",
+      "dTAO subnet investment (TAO swapped for alpha tokens via AMM)"
+    ],
+    "supply": {
+      "max_supply": 21000000,
+      "total_supply": 21000000,
+      "circulating_supply": 10719000,
+      "circulating_supply_date": "2026-03-01",
+      "circulating_percentage": 51.04
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Mining (network participation)",
+          "percentage": 100,
+          "vesting_schedule": "Continuous emission via block rewards",
+          "cliff": "None",
+          "notes": "All TAO distributed through mining/validating. No ICO, no pre-mine, no VC allocation. However, 5.38M TAO mined Jan 2021 - Oct 2023 with very limited participants. Destination of early-mined TAO is undocumented."
+        }
+      ],
+      "distribution_method": "Fair launch (mining). Network went live Jan 3, 2021 (Kusanagi). All tokens earned through network participation. No token sale, no pre-mine. Polychain Capital incubated in 2019; DCG and dao5 accumulated through early mining or OTC. Largest single wallet holds ~1.55M TAO (~20% of supply at time of analysis)."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": 3600,
+      "current_annual_inflation_rate": 12.3,
+      "halving_schedule": "Supply-milestone-based (not block-height). Halves when 50% of remaining unmined supply is emitted. First halving at 10.5M TAO, second at 15.75M, third at 18.375M.",
+      "next_major_emission_event": "Second halving (~15.75M TAO emitted)",
+      "next_event_date": "2029-12-01",
+      "burn_mechanism": "Recycling: TAO spent on subnet registration, miner registration, and transaction fees is removed from circulation and returned to the unissued emission pool. Does not reduce max supply but delays halvings and reduces circulating supply."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Delegated Proof of Stake (nominator staking). Post-dTAO: stake TAO into specific subnets (converted to alpha tokens) or stake on Root (TAO-to-TAO).",
+      "minimum_stake": 0.1,
+      "lock_up_period": "No hard lock-up. Unstaking involves alpha-to-TAO conversion at current AMM rate (price impact risk on large positions).",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Alpha token price risk (subnet tokens can lose value vs TAO)",
+        "Validator take rate (0-18% of delegator rewards)",
+        "Subnet deregistration risk (lowest-performing subnets removed)",
+        "Coldkey exposure on every stake/unstake operation",
+        "Concentration risk: top 1% of wallets control ~90% of stake"
+      ],
+      "slashing_conditions": "No formal slashing mechanism documented. Validators who deviate from Yuma Consensus build weaker bonds and earn less, but are not slashed."
+    },
+    "market_data": {
+      "price_usd": 178.5,
+      "market_cap_usd": 1900000000,
+      "fully_diluted_valuation_usd": 3730000000,
+      "twenty_four_hour_volume_usd": 118000000,
+      "all_time_high_usd": 757.60,
+      "all_time_high_date": "2024-04-11",
+      "all_time_low_usd": 30.83,
+      "all_time_low_date": "2023-05-14",
+      "major_exchanges": ["Binance", "Coinbase", "Kraken", "KuCoin", "MEXC", "Gate.io", "Crypto.com", "Bitget"],
+      "data_snapshot_date": "2026-03-02"
+    },
+    "token_model_classification": "Bitcoin-modelled disinflationary with Darwinian AI incentive layer",
+    "tokenomics_notes": "TAO deliberately mirrors Bitcoin: 21M cap, halving schedule, PoW-analogous distribution. Key difference: halvings are supply-milestone-based (not block-height), and recycled TAO delays halving dates. The 41/41/18 emission split (miners/validators/subnet owner) is fixed. dTAO introduced per-subnet alpha tokens with their own 21M supply caps, creating a two-tier token economy. Root staking yields ~14-20% nominal APY; high-performing subnets can yield 80%+ but with significant alpha price risk."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate TAO to validators on specific subnets or on the Root Network. Subnet staking converts TAO to alpha tokens; Root staking keeps TAO-to-TAO. Earn emissions proportional to stake.",
+        "minimum_hardware": "None (wallet only)",
+        "minimum_capital_usd": 18,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Root: ~14-20% APY nominal. Subnets: 80%+ possible but with alpha price risk.",
+        "barriers_to_entry": ["Need to research subnets before staking", "Alpha token price risk on subnet staking", "Bittensor wallet setup (Talisman or btcli)"],
+        "guide_available": true,
+        "guide_url": "https://docs.learnbittensor.org/staking-and-delegation/delegation"
+      },
+      {
+        "type": "mining",
+        "description": "Run AI models on a specific subnet, competing with other miners for quality-based emissions. Requires GPU hardware and subnet-specific software setup.",
+        "minimum_hardware": "NVIDIA RTX 4090 minimum (A100/H100 for competitive subnets), 256GB RAM, NVMe SSD, 10Gbps bandwidth",
+        "minimum_capital_usd": 5000,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Highly variable by subnet and competitive position. Top miners earn disproportionately.",
+        "barriers_to_entry": ["Significant hardware investment", "TAO burn for registration", "Continuous optimisation required", "Competitive -- underperforming miners earn nothing"],
+        "guide_available": true,
+        "guide_url": "https://docs.learnbittensor.org/miners"
+      },
+      {
+        "type": "validating",
+        "description": "Run a validator on one or more subnets. Score miner outputs, distribute emissions, earn validator rewards. Requires staking TAO and running infrastructure.",
+        "minimum_hardware": "High-end GPU (A100/H100), 256GB+ RAM, NVMe SSD, 10Gbps bandwidth",
+        "minimum_capital_usd": 178000,
+        "technical_skill_required": "expert",
+        "estimated_returns": "41% of subnet emissions split among validators by stake weight, minus take rate shared with delegators.",
+        "barriers_to_entry": ["Minimum 1,000 TAO stake required per subnet", "Top 64 positions only per subnet", "Hardware and operational costs", "Must maintain consensus accuracy"],
+        "guide_available": true,
+        "guide_url": "https://docs.learnbittensor.org/validators"
+      },
+      {
+        "type": "building",
+        "description": "Create a new subnet for an AI workload. Define the incentive mechanism, attract miners and validators. Earn 18% of subnet emissions as owner.",
+        "minimum_hardware": "Development environment plus infrastructure for incentive mechanism",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "expert",
+        "estimated_returns": "18% of subnet emissions. Top subnets earn >$200K/day at current emission rates and TAO price.",
+        "barriers_to_entry": ["Dynamic TAO burn cost for subnet registration (fluctuates significantly)", "Must attract miners and validators", "Subnet deregistration risk if underperforming", "No formal grants programme -- protocol emissions are the funding mechanism"],
+        "guide_available": true,
+        "guide_url": "https://docs.learnbittensor.org/subnets/create-a-subnet"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "171 contributors on core repo; total across 128+ subnets substantially larger but not tracked",
+      "grants_program": false,
+      "grants_url": null
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "128 active subnets covering inference, training, prediction, data, storage, and more. 8,000+ GPU nodes reported.",
+    "nodes_active": 8000,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Protocol emissions (no direct protocol revenue from external demand yet)",
+    "metrics_source": "Taostats.io, Gate.io analysis",
+    "metrics_date": "2026-03-02",
+    "usage_notes": "102,000+ wallet addresses. Daily emissions of 3,600 TAO (~$640K/day at current price) distributed across subnets. Chutes (SN64) is the largest subnet by emission share (~14.4%). Real external demand vs emission-driven activity is difficult to distinguish. No public metrics for inference volume, latency, or throughput at the network level."
+  },
+
+  "community": {
+    "discord_members": 45500,
+    "telegram_members": 6400,
+    "x_followers": null,
+    "github_contributors": 171,
+    "governance_participation_rate": "Not measurable -- Senate is a small fixed group (top validators by stake), Triumvirate is 3 OTF employees",
+    "governance_model": "Bicameral: Triumvirate (3 OTF employees propose changes) + Senate (top validators by delegated stake vote, 50%+1 required). dTAO adds market-driven economic governance via subnet staking flows.",
+    "governance_url": "https://docs.learnbittensor.org/governance",
+    "key_community_channels": [
+      "Discord (~45,500 members) -- primary hub",
+      "X @opentensor -- official announcements",
+      "Taostats.io -- real-time subnet and validator analytics",
+      "Novelty Search podcast (YouTube) -- official OTF podcast",
+      "OpenDev weekly summaries -- developer updates"
+    ],
+    "sentiment_summary": "Technically sophisticated community with strong conviction. 'Bitcoin of AI' narrative drives long-term holders. Institutional interest (Grayscale ETF, DCG/Yuma) validates thesis. Key concerns: dTAO gaming, meme coin subnets, OTF centralisation, post-halving price decline. Community graded Bittensor 'B' for 2025. Culture described as 'professional, not crypto-native' which is refreshing but can feel closed.",
+    "community_notes": "X follower count split across @opentensor (official) and @bittensor (~8,774) accounts. Telegram is community-run, not listed as official channel. Notable community figures: @const_reborn, @markjeffrey, @Old_Samster, @brodydotai. Institutional ecosystem includes Yuma (DCG), Crucible Labs (Shaabana/Lawee), Latent Holdings (Joseph Jacks)."
+  },
+
+  "freedom_score": {
+    "total_score": 56,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 12,
+        "max": 20,
+        "evidence": "128 active subnets with permissionless participation. 8,000+ GPU nodes across the network. Miners and validators operate independently. However, Subtensor blockchain runs Proof of Authority with block production controlled entirely by the Opentensor Foundation. OTF can unilaterally halt the network (demonstrated July 2024). Transition to PoS planned but no timeline published. Standalone L1 with no shared security from external chain."
+      },
+      "governance_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "Bicameral governance: Triumvirate (3 OTF employees) proposes all changes; Senate (top validators by stake) votes. 50%+1 required. dTAO (Feb 2025) meaningfully shifted emission allocation from validator oligarchy to market mechanism. However, OTF still controls block production and governance proposals. SN28 intervention (OTF used root stake to crash a meme coin subnet 98%) demonstrated centralised override capability. Academic analysis shows top 1% of wallets control ~90% of stake (Gini ~0.98)."
+      },
+      "token_distribution_fairness": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Technically a fair launch: no ICO, no pre-mine, no VC allocation, no token sale. All TAO earned through mining. However, 5.38M TAO mined during 2021-2023 with very limited participants and no public accounting of destination. Polychain 'incubated' in 2019, DCG 'invested' in 2021 -- likely through early mining access. Largest single wallet holds ~1.55M TAO (~20% of supply). Staking rate 70-90% means extremely thin free float. Fair launch label is technically accurate but practically the distribution resembles insider accumulation."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Permissionless subnet creation and miner registration (with TAO burn). No content policy on individual subnets. However, OTF validated all blocks and can censor transactions at the chain level. Network halt in July 2024 and SN28 intervention demonstrate that OTF can and will intervene. TAO burn barrier for registration creates capital-gated access."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Miners run models locally on their own hardware. Validators score independently. Self-custodial wallets (coldkey/hotkey architecture). No platform data collection or surveillance. However, coldkey must be decrypted for every stake/unstake operation, creating repeated exposure risk (exploited in 2024 hack). No ZK or encryption on the inference layer."
+      },
+      "open_source_transparency": {
+        "score": 9,
+        "max": 15,
+        "evidence": "All core code is open source (MIT license) across 64 public repos. Active development with frequent commits. However: no third-party security audit has been publicly disclosed despite multi-billion dollar market cap. No SECURITY.md file on main repo. No formal bug bounty programme. Early token distribution (5.38M TAO) is opaque. OTF financials not publicly reported."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Bittensor scores a C, reflecting genuine decentralisation at the compute/subnet layer undermined by significant centralisation at the chain and governance layer. The subnet architecture is innovative and permissionless with 128+ independent markets. However, the Opentensor Foundation validates all blocks (Proof of Authority), can halt the network unilaterally, and controls governance proposals through a 3-person Triumvirate. The 'fair launch' is technically clean but practically resulted in concentrated distribution (top 1% hold ~90% of stake). No security audit, a $28-30M insider hack, and no bug bounty programme are serious concerns for a protocol of this scale."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Largest decentralised AI network by market cap and activity -- 128 subnets, 8,000+ GPU nodes",
+      "Bitcoin-modelled tokenomics with genuine fair launch (no ICO, no pre-mine, no VC allocation)",
+      "dTAO (Feb 2025) replaced validator oligarchy with market-driven emission allocation",
+      "Real institutional adoption: Grayscale Trust/ETF filing, DCG subsidiary (Yuma), Binance/Coinbase/Kraken listings",
+      "Subnet architecture allows permissionless creation of AI marketplaces for any workload",
+      "First halving completed (Dec 2025) -- disinflationary pressure now active",
+      "Leading subnets producing real outputs: Chutes (inference, billions of tokens/day on OpenRouter), Nineteen (inference speed records), Gradients (model training cheaper than Google Cloud)"
+    ],
+    "what_is_hype": [
+      "'Decentralised' claim undermined by OTF controlling all block production (Proof of Authority)",
+      "Fair launch narrative ignores 5.38M TAO accumulated by limited participants pre-subnet era",
+      "'8,000+ GPU nodes' -- not independently verifiable, no public dashboard",
+      "Miner quality claims -- academic analysis shows performance-to-reward correlation only 0.10-0.30; stake weight drives rewards, not AI output quality",
+      "Most subnets have not demonstrated output quality exceeding centralised alternatives",
+      "dTAO susceptible to gaming (SN28 meme coin subnet) and speculation over genuine utility signals",
+      "'102,000+ wallet addresses' likely includes inactive and duplicate wallets"
+    ],
+    "key_risks": [
+      "OTF validates ALL blocks (PoA) and can halt the network -- single most critical centralisation vector",
+      "$28-30M insider hack by former employees -- lawsuit pending, demonstrates personnel/supply chain risk",
+      "No third-party security audit disclosed for core protocol",
+      "Top 1% of wallets control ~90% of stake (Gini ~0.98) -- extreme concentration",
+      "Post-halving inflation still ~12% annually -- if external demand doesn't materialise, sell pressure persists",
+      "Ala Shaabana (co-founder) partially departed to Crucible Labs -- key person risk on Jacob Steeves",
+      "Regulatory classification uncertain -- alpha tokens add further complexity",
+      "Competition from centralised AI providers remains orders of magnitude ahead on UX and capability",
+      "PyPI supply chain dependency exploited twice -- fundamental tooling vulnerability"
+    ],
+    "competitive_advantages": [
+      "Largest DeAI network by market cap and subnet count",
+      "Bitcoin-modelled tokenomics provide clear, credible scarcity narrative",
+      "Institutional adoption (Grayscale, DCG/Yuma, Bitwise) creates legitimacy moat",
+      "Subnet architecture is genuinely innovative -- permissionless AI marketplace creation",
+      "Strong technical community with high development velocity"
+    ],
+    "competitive_disadvantages": [
+      "Chain layer is centralised (PoA) -- behind peers like Bittensor's own marketing suggests",
+      "No security audit -- behind Morpheus (4 audits) and other DeAI projects",
+      "UX friction: Bittensor wallet setup, bridging from EVM/Solana, complex staking mechanics",
+      "Isolated ecosystem -- not natively interoperable with EVM or Solana chains",
+      "Incentive gaming (relay mining, bucket copying) remains an ongoing challenge"
+    ],
+    "comparable_projects": [
+      "Morpheus (MOR) -- decentralised AI agent infrastructure with fair launch",
+      "Render Network (RNDR) -- decentralised GPU rendering",
+      "Akash Network (AKT) -- decentralised cloud compute marketplace",
+      "SingularityNET / ASI Alliance (FET/AGIX/OCEAN) -- AI agent marketplace"
+    ],
+    "outlook": "Bittensor occupies a unique position as the largest DeAI network with genuine institutional backing and a Bitcoin-modelled scarcity narrative. The next 12 months will determine whether dTAO-driven market allocation produces real quality differentiation or degenerates into speculation. The transition from Proof of Authority to Proof of Stake is the critical infrastructure milestone. If external demand for subnet services materialises at scale, the tokenomics become extremely compelling post-halving. If not, the network risks becoming an expensive incentive game with limited real-world utility.",
+    "overall_assessment": "Bittensor is the most ambitious and well-capitalised DeAI project, with a genuinely innovative subnet architecture and institutional adoption that no competitor matches. However, the gap between its decentralisation narrative and operational reality is significant. OTF controls block production, can halt the network, and retains governance proposal power. The 'fair launch' produced a practically concentrated distribution. No security audit for a $2B+ protocol is indefensible. The $28M insider hack exposed real operational failures. For practitioners: TAO staking offers meaningful yield with institutional-grade exchange access, but understand that you are trusting the Opentensor Foundation more than the marketing suggests."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Bittensor Official Documentation",
+      "url": "https://docs.learnbittensor.org/",
+      "author": "Opentensor Foundation",
+      "publisher": "Opentensor Foundation",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["architecture", "consensus", "emissions", "governance", "staking", "subnets"],
+      "reliability_notes": "Primary documentation. Redirects from docs.bittensor.com."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Bittensor Whitepaper",
+      "url": "https://bittensor.com/whitepaper",
+      "author": "Yuma Rao (Jacob Steeves), Ala Shaabana, Matthew McAteer",
+      "publisher": "Bittensor",
+      "date_published": "2020-03-09",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["founding thesis", "Yuma Consensus design"],
+      "reliability_notes": "Original academic paper on arXiv (2003.03917)"
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "github",
+      "title": "opentensor/bittensor GitHub Repository",
+      "url": "https://github.com/opentensor/bittensor",
+      "author": "Opentensor Foundation",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["stars", "forks", "contributors", "commits", "last_commit_date"],
+      "reliability_notes": "Direct from GitHub. 1,373 stars, 443 forks, 171 contributors."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "github",
+      "title": "opentensor/subtensor GitHub Repository",
+      "url": "https://github.com/opentensor/subtensor",
+      "author": "Opentensor Foundation",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["blockchain codebase", "Rust/Substrate", "contributor data"],
+      "reliability_notes": "Direct from GitHub. 300 stars, 287 forks."
+    },
+    {
+      "source_id": "S005",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko -- Bittensor",
+      "url": "https://www.coingecko.com/en/coins/bittensor",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["price", "market_cap", "fdv", "volume", "ath", "atl"],
+      "reliability_notes": "Tier 2 market data. Price ~$177-180, mcap ~$1.9B, FDV ~$3.73B."
+    },
+    {
+      "source_id": "S006",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinMarketCap -- Bittensor",
+      "url": "https://coinmarketcap.com/currencies/bittensor/",
+      "author": "CoinMarketCap",
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["circulating_supply", "market_cap", "self_reported_supply"],
+      "reliability_notes": "Circulating supply: 10,718,521 TAO (self-reported)."
+    },
+    {
+      "source_id": "S007",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "Taostats -- Bittensor Analytics",
+      "url": "https://taostats.io/",
+      "author": "Taostats",
+      "publisher": "Taostats",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["tokenomics", "subnets", "emissions", "halving_data"],
+      "reliability_notes": "Primary block explorer and analytics platform for Bittensor."
+    },
+    {
+      "source_id": "S008",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Bittensor Protocol Critical Analysis",
+      "url": "https://arxiv.org/html/2507.02951v1",
+      "author": "Academic researchers",
+      "publisher": "arXiv",
+      "date_published": "2025-07-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["stake_concentration", "gini_coefficient", "performance_reward_correlation", "validator_analysis"],
+      "reliability_notes": "Academic peer analysis. Key finding: Gini ~0.98, top 1% control ~90% stake. Performance-to-reward correlation 0.10-0.30 for miners."
+    },
+    {
+      "source_id": "S009",
+      "tier": 2,
+      "type": "news",
+      "title": "VCs Pouring Hundreds of Millions into Bittensor",
+      "url": "https://fortune.com/crypto/2024/04/15/bittensor-tao-polychain-digital-currency-group-dao5-ai-bitcoin/",
+      "author": "Fortune",
+      "publisher": "Fortune",
+      "date_published": "2024-04-15",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["polychain_holdings", "dcg_holdings", "dao5_holdings"],
+      "reliability_notes": "Tier 2 credible financial publication."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Bittensor Governance Documentation",
+      "url": "https://docs.learnbittensor.org/governance",
+      "author": "Opentensor Foundation",
+      "publisher": "Opentensor Foundation",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["triumvirate", "senate", "governance_process"],
+      "reliability_notes": "Primary source for governance structure."
+    },
+    {
+      "source_id": "S011",
+      "tier": 2,
+      "type": "news",
+      "title": "Halborn -- Explained: The Bittensor Hack July 2024",
+      "url": "https://www.halborn.com/blog/post/explained-the-bittensor-hack-july-2024",
+      "author": "Halborn",
+      "publisher": "Halborn",
+      "date_published": "2024-07-15",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["hack_details", "pypi_attack_vector", "loss_amount"],
+      "reliability_notes": "Post-incident analysis by security firm (not an audit)."
+    },
+    {
+      "source_id": "S012",
+      "tier": 1,
+      "type": "documentation",
+      "title": "OTF Community Update -- July 3 2024",
+      "url": "https://opentensor.medium.com/bittnesor-community-update-july-3-2024-45661b1d542d",
+      "author": "Opentensor Foundation",
+      "publisher": "Medium",
+      "date_published": "2024-07-03",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["hack_response", "safe_mode", "timeline"],
+      "reliability_notes": "Official post-mortem from OTF."
+    },
+    {
+      "source_id": "S013",
+      "tier": 2,
+      "type": "news",
+      "title": "Lawsuit Alleges Former Opentensor Employees Orchestrated $28M Crypto Heist",
+      "url": "https://blocktribune.com/lawsuit-alleges-former-opentensor-employees-orchestrated-28m-crypto-heist/",
+      "author": "BlockTribune",
+      "publisher": "BlockTribune",
+      "date_published": "2025-01-27",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["lawsuit_details", "named_defendants", "total_theft_amount"],
+      "reliability_notes": "Court filing coverage."
+    },
+    {
+      "source_id": "S014",
+      "tier": 2,
+      "type": "news",
+      "title": "DCG Launches Yuma -- Bittensor Subsidiary",
+      "url": "https://www.theblock.co/post/327428/dcg-launches-new-bittensor-focused-subsidiary-yuma-doubling-down-on-decentralized-ai-investments",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2024-11-20",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["yuma_launch", "dcg_commitment", "employee_count"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S015",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Grayscale Research -- Bittensor on the Eve of the First Halving",
+      "url": "https://research.grayscale.com/reports/bittensor-on-the-eve-of-the-first-halving",
+      "author": "Grayscale",
+      "publisher": "Grayscale",
+      "date_published": "2025-12-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["halving_analysis", "emission_data", "institutional_perspective"],
+      "reliability_notes": "Institutional research. Note: Grayscale operates GTAO trust -- potential bias."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "news",
+      "title": "Grayscale Files for First US Bittensor ETP",
+      "url": "https://www.coindesk.com/business/2025/12/30/grayscale-files-for-first-u-s-bittensor-etp-as-decentralized-ai-gains-momentum",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2025-12-30",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["etf_filing", "regulatory_status"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S017",
+      "tier": 3,
+      "type": "social_media",
+      "title": "PANews -- Why Bittensor is a Scam",
+      "url": "https://www.panewslab.com/en/articles/rrxcps1r",
+      "author": "PANews",
+      "publisher": "PANews",
+      "date_published": "2024-06-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["early_mining_concentration", "5.38M_TAO_analysis", "governance_criticism"],
+      "reliability_notes": "Critical analysis. Some claims unverified but raises legitimate questions about early distribution."
+    },
+    {
+      "source_id": "S018",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Bittensor Halving Countdown",
+      "url": "https://bittensorhalving.com/",
+      "author": "Community",
+      "publisher": "bittensorhalving.com",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["halving_date", "emission_schedule", "supply_thresholds"],
+      "reliability_notes": "Community-built tracker. Data consistent with official docs."
+    },
+    {
+      "source_id": "S019",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Bittensor Emissions Documentation",
+      "url": "https://docs.learnbittensor.org/learn/emissions",
+      "author": "Opentensor Foundation",
+      "publisher": "Opentensor Foundation",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["emission_split", "taoflow_model", "alpha_emissions"],
+      "reliability_notes": "Primary source for emission mechanics."
+    },
+    {
+      "source_id": "S020",
+      "tier": 3,
+      "type": "research_report",
+      "title": "0xJeff -- Beginner's Guide to Bittensor (TAO)",
+      "url": "https://defi0xjeff.substack.com/p/beginners-guide-to-bittensor-tao",
+      "author": "0xJeff",
+      "publisher": "Substack",
+      "date_published": "2025-10-15",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["dTAO_mechanics", "subnet_ecosystem", "investor_perspective", "challenges"],
+      "reliability_notes": "Tier 3 informed commentary. Paid Substack. Good ecosystem context but not primary evidence."
+    },
+    {
+      "source_id": "S021",
+      "tier": 3,
+      "type": "research_report",
+      "title": "0xJeff -- Into the Bittensor Ecosystem",
+      "url": "https://defi0xjeff.substack.com/p/into-the-bittensor-ecosystem",
+      "author": "0xJeff",
+      "publisher": "Substack",
+      "date_published": "2025-04-17",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["leading_subnets", "Rayon_Labs", "Chutes", "Sportstensor", "subnet_investing"],
+      "reliability_notes": "Tier 3 informed commentary. Good subnet ecosystem detail."
+    },
+    {
+      "source_id": "S022",
+      "tier": 2,
+      "type": "news",
+      "title": "IQ.wiki -- Jacob Robert Steeves",
+      "url": "https://iq.wiki/wiki/jacob-robert-steeves",
+      "author": "IQ.wiki",
+      "publisher": "IQ.wiki",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["founder_background", "education", "career_history"],
+      "reliability_notes": "Wiki-style. Cross-referenced with LinkedIn and Fox Business."
+    },
+    {
+      "source_id": "S023",
+      "tier": 2,
+      "type": "news",
+      "title": "IQ.wiki -- Ala Shaabana",
+      "url": "https://iq.wiki/wiki/ala-shaabana",
+      "author": "IQ.wiki",
+      "publisher": "IQ.wiki",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["co-founder_background", "education", "career_history", "Crucible_Labs"],
+      "reliability_notes": "Wiki-style. Cross-referenced with McMaster thesis repository."
+    },
+    {
+      "source_id": "S024",
+      "tier": 1,
+      "type": "governance",
+      "title": "Federal Corporation Canada -- Opentensor Foundation",
+      "url": "https://opengovca.com/corporation/13026531",
+      "author": "Government of Canada",
+      "publisher": "OpenGovCA",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["incorporation_date", "jurisdiction", "directors", "registered_address"],
+      "reliability_notes": "Government registry. Corporation #13026531, incorporated May 18, 2021."
+    },
+    {
+      "source_id": "S025",
+      "tier": 2,
+      "type": "news",
+      "title": "Rekt News -- Bittensor Rekt",
+      "url": "https://rekt.news/bittensor-rekt",
+      "author": "Rekt News",
+      "publisher": "Rekt News",
+      "date_published": "2024-07-03",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["hack_analysis", "network_halt", "centralisation_criticism"],
+      "reliability_notes": "Well-respected security incident analysis publication."
+    },
+    {
+      "source_id": "S026",
+      "tier": 3,
+      "type": "research_report",
+      "title": "A Bittensor Journey -- 2025 End of Year Report Card",
+      "url": "https://www.abittensorjourney.com/p/bittensor-2025-end-of-year-report",
+      "author": "A Bittensor Journey",
+      "publisher": "Substack",
+      "date_published": "2025-12-31",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["community_grade", "2025_assessment", "challenges"],
+      "reliability_notes": "Tier 3 community publication. Bittensor community gave itself a B grade for 2025."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "news",
+      "title": "Gate.io -- How Active is the Bittensor Community and Ecosystem in 2025",
+      "url": "https://www.gate.com/crypto-wiki/article/how-active-is-the-bittensor-tao-community-and-ecosystem-in-2025",
+      "author": "Gate.io",
+      "publisher": "Gate.io",
+      "date_published": "2025-12-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["discord_members", "social_engagement", "community_metrics"],
+      "reliability_notes": "Exchange-published analysis."
+    },
+    {
+      "source_id": "S028",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Blocmates -- What is Bittensor (TAO)?",
+      "url": "https://www.blocmates.com/blocmates-101/what-is-bittensor-tao",
+      "author": "Blocmates",
+      "publisher": "Blocmates",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["launch_dates", "network_iterations", "basic_architecture"],
+      "reliability_notes": "Educational crypto publication."
+    }
+  ]
+}
