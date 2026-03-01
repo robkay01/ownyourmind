@@ -15,6 +15,39 @@ import path from 'node:path';
 // --- Meta ---
 // Tracks research provenance, versioning and completeness.
 
+// --- Refresh Config ---
+// Identifiers for automated data refresh pipelines.
+
+export interface RefreshConfig {
+  /** GitHub organisation name (e.g. "opentensor") */
+  github_org?: string | null;
+  /** Primary GitHub repository name (e.g. "bittensor") */
+  github_primary_repo?: string | null;
+  /** CoinGecko API identifier (e.g. "bittensor") */
+  coingecko_id?: string | null;
+  /** Discord server ID for member count (not currently automated) */
+  discord_server_id?: string | null;
+  /** Telegram username for member count (not currently automated) */
+  telegram_username?: string | null;
+  /** X/Twitter handle (not currently automated) */
+  x_handle?: string | null;
+  /** Dot-path list of prose fields containing embedded numeric figures that cannot be auto-refreshed */
+  prose_fields_with_embedded_figures?: string[] | null;
+}
+
+export interface RefreshLogEntry {
+  /** Date the refresh was run: YYYY-MM-DD */
+  run_date: string;
+  /** List of field paths that were updated */
+  fields_updated: string[];
+  /** Previous values of updated fields */
+  previous_values: Record<string, unknown>;
+  /** New values of updated fields */
+  new_values: Record<string, unknown>;
+  /** Who or what ran the refresh (e.g. "github-actions", "manual-quarterly") */
+  run_by: string;
+}
+
 export interface ResearchMeta {
   /** Kebab-case identifier matching the content collection slug (e.g. "morpheus") */
   project_id: string;
@@ -30,6 +63,10 @@ export interface ResearchMeta {
   status?: 'draft' | 'fact-checked' | 'published' | null;
   /** List of things that could not be confirmed or sourced */
   research_gaps?: string[] | null;
+  /** Configuration for automated data refresh pipelines */
+  refresh_config?: RefreshConfig | null;
+  /** Log of automated refresh runs (capped at 12 entries) */
+  auto_refresh_log?: RefreshLogEntry[] | null;
 }
 
 // --- Identity ---

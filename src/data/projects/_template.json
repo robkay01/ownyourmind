@@ -6,7 +6,17 @@
     "version": 1,
     "last_updated": null,
     "status": "draft",
-    "research_gaps": []
+    "research_gaps": [],
+    "refresh_config": {
+      "github_org": null,
+      "github_primary_repo": null,
+      "coingecko_id": null,
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": null,
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
   },
 
   "identity": {

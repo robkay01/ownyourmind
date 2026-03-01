@@ -6,6 +6,19 @@
     "version": 1,
     "last_updated": "2026-03-01",
     "status": "draft",
+    "refresh_config": {
+      "github_org": "MorpheusAIs",
+      "github_primary_repo": "Morpheus",
+      "coingecko_id": "morpheusai",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "MorpheusAIs",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "participation.methods[2].estimated_returns"
+      ]
+    },
+    "auto_refresh_log": [],
     "research_gaps": [
       "Exact active compute node count not publicly available. No dashboard reports this metric.",
       "Market data shows significant discrepancies across aggregators (CoinGecko, CoinMarketCap, DropsTab). Verify on-chain before publishing.",

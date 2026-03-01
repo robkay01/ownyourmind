@@ -1,0 +1,53 @@
+name: Monthly Research Data Refresh
+
+on:
+  schedule:
+    - cron: '0 8 1 * *' # 08:00 UTC, 1st of every month
+  workflow_dispatch: # manual trigger from GitHub UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh GitHub metrics
+        run: npm run refresh:github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/projects/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'data: monthly GitHub metrics refresh'
+          title: 'data: monthly GitHub metrics refresh'
+          body: |
+            Automated monthly refresh of GitHub metrics in research JSONs.
+
+            Updated fields: stars, forks, open_issues, last_commit_date,
+            contributors, total_commits, total_repos, community.github_contributors.
+
+            Review the diff to verify no zero/null values were written from a rate-limited response.
+          branch: auto/github-metrics-refresh
+          delete-branch: true
+          labels: data,automated

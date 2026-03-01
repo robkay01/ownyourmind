@@ -6,6 +6,20 @@
     "version": 1,
     "last_updated": "2026-03-02",
     "status": "draft",
+    "refresh_config": {
+      "github_org": "opentensor",
+      "github_primary_repo": "bittensor",
+      "coingecko_id": "bittensor",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "opentensor",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "freedom_score.breakdown.infrastructure_decentralisation.evidence",
+        "freedom_score.breakdown.governance_decentralisation.evidence"
+      ]
+    },
+    "auto_refresh_log": [],
     "research_gaps": [
       "Exact destination of 5.38M TAO mined during Kusanagi/Nakamoto era (Jan 2021 - Oct 2023) is undocumented publicly",
       "No public dashboard for active compute node count across subnets -- 8,000+ figure from aggregator, not on-chain verified",
