@@ -19,10 +19,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Build Commands
 
 ```bash
-npm run dev        # Development server
-npm run build      # Production build
-npm run preview    # Preview production build
-npm run check      # Astro type checking
+npm run dev              # Development server
+npm run build            # Production build
+npm run preview          # Preview production build
+npm run check            # Astro type checking
+npm run refresh:github   # Fetch latest GitHub metrics for all projects (needs GITHUB_TOKEN)
+npm run check:staleness  # Flag stale or incomplete project data (read-only)
 ```
 
 ## Content Architecture
@@ -65,3 +67,4 @@ Full frontmatter schemas: see `own-your-mind-claude-code-brief.md` lines 169–2
 
 - `own-your-mind-claude-code-brief.md` — Complete build specification with all decisions
 - `deai_site_structure.md` — Content strategy, editorial guidelines, competitive positioning
+- `own-your-mind-claude-code-brief.md` § "Data Maintenance" — Full pipeline docs (automated refresh, sparklines, staleness, quarterly review)

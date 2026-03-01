@@ -271,6 +271,99 @@ Include placeholder/sample content so the site isn't empty at first build:
 
 ---
 
+## Data Maintenance
+
+Four interlocking processes keep project data current: automated deploys, monthly GitHub refresh, a staleness checker, and a quarterly manual review.
+
+### Automated deploy (market data refresh)
+
+The deploy workflow (`.github/workflows/deploy.yml`) runs on every push to `main` **and** on a 6-hourly cron (`0 */6 * * *`). Each run rebuilds the Astro site, which triggers `src/data/fetch-market-data.ts` at build time. That script hits the CoinGecko `/coins/markets` endpoint, writes prices, market caps, FDV, 24h/7d change, and a 168-point 7-day sparkline to `src/data/market-data.json` (30-minute cache TTL, falls back to stale cache on API failure). The result: project pages always show prices no older than roughly 6 hours.
+
+### Monthly GitHub metrics refresh
+
+**Workflow:** `.github/workflows/monthly-refresh.yml`
+**Schedule:** 08:00 UTC on the 1st of each month (also triggerable manually via `workflow_dispatch`).
+
+The workflow runs `npm run refresh:github` (`scripts/refresh-github-metrics.ts`). For every project JSON in `src/data/projects/` that has `meta.refresh_config.github_org` and `github_primary_repo` set, the script:
+
+1. Fetches four GitHub API endpoints (repo stats, contributors, commits, org repos).
+2. Updates `technical.github_metrics` (stars, forks, open_issues, last_commit_date, contributors, total_commits, total_repos) and syncs `community.github_contributors`.
+3. Appends a dated snapshot to the project's `metrics_history[]` array (source: `"github-refresh"`).
+4. Appends an entry to `meta.auto_refresh_log` (capped at 12 entries) recording previous and new values.
+5. Increments `meta.version` and sets `meta.last_updated`.
+
+If any files changed, the workflow opens a PR labelled `data,automated` with the message `data: monthly GitHub metrics refresh`.
+
+**Dry-run mode:** `DRY_RUN=true npm run refresh:github` prints changes without writing.
+**Rate-limit guard:** aborts if remaining GitHub API requests drop below 20. A `GITHUB_TOKEN` env var raises the ceiling from 60 to 5,000 requests/hour.
+
+### Metrics history and sparklines
+
+Each project JSON contains a `metrics_history` array of `MetricsSnapshot` objects (defined in `src/data/project-research.ts`). A snapshot records:
+
+| Field | Type |
+|---|---|
+| `date` | `YYYY-MM-DD` |
+| `source` | `"github-refresh"` / `"manual-quarterly"` / `"manual"` |
+| `stars` | `number \| null` |
+| `forks` | `number \| null` |
+| `open_issues` | `number \| null` |
+| `contributors` | `number \| null` |
+| `total_commits` | `number \| null` |
+| `total_repos` | `number \| null` |
+| `discord_members` | `number \| null` |
+| `telegram_members` | `number \| null` |
+| `x_followers` | `number \| null` |
+
+Automated runs populate the GitHub-sourced fields; social metrics (Discord, Telegram, X) are filled during quarterly manual reviews.
+
+`ProjectLayout.astro` extracts trend arrays via `getTrend(key)`, which maps over `metrics_history` and filters to non-null numbers. The `Sparkline.astro` component renders an SVG polyline from any array with 2+ data points. Sparklines appear in both the "Technical snapshot" and "Community" sections of a project page, sized at 48x16px (inline) with the site accent colour (#0D9488).
+
+After two monthly runs a project will show GitHub sparklines; after two quarterly reviews it will also show social sparklines.
+
+### Staleness checker
+
+`npm run check:staleness` (`scripts/flag-stale-records.ts`) is a read-only diagnostic. It scans every project JSON and flags:
+
+| Check | Threshold | Level |
+|---|---|---|
+| `meta.last_updated` missing | -- | WARN |
+| `meta.last_updated` age | > 180 days | CRITICAL |
+| `meta.last_updated` age | 90--180 days | WARN |
+| Last `auto_refresh_log` entry | > 35 days ago | WARN |
+| `usage_metrics.metrics_date` missing | -- | WARN |
+| `usage_metrics.metrics_date` age | > 90 days | WARN |
+| Prose fields with embedded figures | listed in `refresh_config` | REVIEW |
+| `technical.audits` empty (non-draft) | -- | WARN |
+| `meta.research_gaps` has entries | -- | INFO |
+| `technical.security_incidents` unresolved | contains "pending"/"ongoing"/"active" | CRITICAL |
+
+Run it before every quarterly review and after monthly PRs merge.
+
+### Quarterly manual review
+
+Full checklist: `docs/quarterly-review-checklist.md` (January, April, July, October).
+
+In brief: run the staleness checker, update manual community metrics (Discord, Telegram, X, node counts), review security/audit landscape, check team and governance changes, reassess freedom scores if triggered, edit project JSONs directly, append `metrics_history` snapshots with source `"manual-quarterly"`, then build and commit (`data: Q[N] [YYYY] quarterly research review`).
+
+### Key files
+
+| Path | Purpose |
+|---|---|
+| `.github/workflows/deploy.yml` | 6-hourly deploy + market data rebuild |
+| `.github/workflows/monthly-refresh.yml` | Monthly GitHub metrics PR |
+| `scripts/refresh-github-metrics.ts` | GitHub API fetch + snapshot logic |
+| `scripts/flag-stale-records.ts` | Read-only staleness diagnostic |
+| `src/data/projects/*.json` | Per-project research data (includes `metrics_history`) |
+| `src/data/market-data.json` | CoinGecko price cache |
+| `src/data/fetch-market-data.ts` | CoinGecko fetch + caching logic |
+| `src/data/project-research.ts` | TypeScript interfaces (`MetricsSnapshot`, `RefreshConfig`, etc.) |
+| `src/components/Sparkline.astro` | SVG sparkline renderer |
+| `src/layouts/ProjectLayout.astro` | Project page template (consumes sparklines) |
+| `docs/quarterly-review-checklist.md` | Step-by-step quarterly review process |
+
+---
+
 ## Reference
 
 - **Existing site to fork design from:** https://4orbs.com
