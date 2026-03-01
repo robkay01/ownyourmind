@@ -1,0 +1,57 @@
+---
+import ContentLayout from './ContentLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  difficulty: string;
+  category: string;
+  publishDate: Date;
+}
+
+const { title, description, difficulty, category, publishDate } = Astro.props;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const difficultyColors: Record<string, string> = {
+  beginner: 'badge-beginner',
+  intermediate: 'badge-intermediate',
+  advanced: 'badge-advanced',
+};
+---
+
+<ContentLayout
+  title={title}
+  description={description}
+  breadcrumbs={[
+    { label: 'Build', href: '/build/' },
+    { label: title },
+  ]}
+>
+  <article class="max-w-3xl">
+    <header class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class:list={['badge', difficultyColors[difficulty] || 'badge-beginner']}>
+          {difficulty}
+        </span>
+        <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)]">
+          {category}
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">{title}</h1>
+      <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed">{description}</p>
+
+      <div class="text-sm text-[var(--color-text-tertiary)] mt-4">
+        <time datetime={publishDate.toISOString()}>
+          {formatDate(publishDate)}
+        </time>
+      </div>
+    </header>
+
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</ContentLayout>

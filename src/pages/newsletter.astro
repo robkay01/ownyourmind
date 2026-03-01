@@ -1,0 +1,41 @@
+---
+import ContentLayout from '../layouts/ContentLayout.astro';
+---
+
+<ContentLayout
+  title="Newsletter"
+  description="Subscribe to the Own Your Mind newsletter — weekly dispatches on decentralised AI."
+  breadcrumbs={[{ label: 'Newsletter' }]}
+>
+  <div class="max-w-xl mx-auto text-center py-8">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Stay sovereign</h1>
+    <p class="text-lg text-[var(--color-text-secondary)] mb-8">
+      Weekly dispatches on decentralised AI. Practitioner insights, project reviews, and build guides delivered to your inbox. No spam, no shilling. Unsubscribe anytime.
+    </p>
+
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/ownyourmind"
+      method="post"
+      target="popupwindow"
+      class="flex flex-col sm:flex-row gap-3 mb-8"
+    >
+      <input
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        class="flex-1 px-4 py-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:border-[var(--color-accent)] focus:outline-none transition-colors"
+      />
+      <button
+        type="submit"
+        class="px-6 py-3 rounded-lg bg-[var(--color-accent)] text-white font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
+      >
+        Subscribe
+      </button>
+    </form>
+
+    <p class="text-sm text-[var(--color-text-tertiary)]">
+      Powered by <a href="https://buttondown.com" target="_blank" rel="noopener noreferrer">Buttondown</a>.
+    </p>
+  </div>
+</ContentLayout>

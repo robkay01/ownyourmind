@@ -1,0 +1,89 @@
+---
+const sections = [
+  {
+    title: 'Content',
+    links: [
+      { label: 'Why DeAI', href: '/why-deai/' },
+      { label: 'Projects', href: '/projects/' },
+      { label: 'Tokenomics', href: '/tokenomics/' },
+    ],
+  },
+  {
+    title: 'Learn',
+    links: [
+      { label: 'Build', href: '/build/' },
+      { label: 'Journal', href: '/journal/' },
+      { label: 'Resources', href: '/resources/' },
+    ],
+  },
+  {
+    title: 'Site',
+    links: [
+      { label: 'About', href: '/about/' },
+      { label: 'Newsletter', href: '/newsletter/' },
+      { label: 'RSS Feed', href: '/rss.xml' },
+    ],
+  },
+];
+---
+
+<footer class="border-t border-[var(--color-border)] bg-[var(--color-bg-primary)]">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="no-underline mb-4 block">
+          <span class="font-[var(--font-heading)] text-base font-bold text-[var(--color-text-primary)]">OWN YOUR MIND</span>
+        </a>
+        <p class="text-sm text-[var(--color-text-tertiary)] leading-relaxed">
+          Freedom AND returns. Practitioner-led. Sovereignty-first. Hands-on.
+        </p>
+        <div class="flex items-center gap-4 mt-4">
+          <a
+            href="https://x.com/ownyourmindai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] no-underline transition-colors text-sm"
+          >
+            @ownyourmindai
+          </a>
+          <a
+            href="https://x.com/0xBobski"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] no-underline transition-colors text-sm"
+          >
+            @0xBobski
+          </a>
+        </div>
+      </div>
+
+      <!-- Link sections -->
+      {sections.map((section) => (
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
+            {section.title}
+          </h4>
+          <ul class="space-y-2">
+            {section.links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] no-underline transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-[var(--color-border)]">
+      <p class="text-xs text-[var(--color-text-tertiary)] text-center">
+        &copy; {new Date().getFullYear()} Own Your Mind. Independent coverage of decentralised AI.
+      </p>
+    </div>
+  </div>
+</footer>

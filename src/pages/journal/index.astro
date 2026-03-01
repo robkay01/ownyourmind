@@ -1,0 +1,49 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('journal'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<ContentLayout
+  title="Journal"
+  description="Weekly dispatches from the frontier of decentralised AI."
+  breadcrumbs={[{ label: 'Journal' }]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Journal</h1>
+    <p class="text-lg text-[var(--color-text-secondary)]">
+      Weekly dispatches from the frontier of decentralised AI.
+    </p>
+  </div>
+
+  <div class="grid gap-6">
+    {entries.map((entry) => (
+      <Card href={`/journal/${entry.id}/`}>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-sm text-[var(--color-text-tertiary)]">
+            {entry.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          </span>
+          {entry.data.tags.length > 0 && (
+            <div class="flex gap-2">
+              {entry.data.tags.map((tag: string) => (
+                <span class="text-xs text-[var(--color-text-tertiary)] bg-[var(--color-bg-tertiary)] px-2 py-0.5 rounded-full">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
+        <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
+      </Card>
+    ))}
+  </div>
+
+  {entries.length === 0 && (
+    <p class="text-[var(--color-text-tertiary)] py-12 text-center">Coming soon.</p>
+  )}
+</ContentLayout>

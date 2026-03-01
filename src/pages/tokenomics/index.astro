@@ -1,0 +1,38 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import Card from '../../components/Card.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('tokenomics'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<ContentLayout
+  title="Tokenomics"
+  description="How the tokens actually work. Economic analysis from a practitioner perspective."
+  breadcrumbs={[{ label: 'Tokenomics' }]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Tokenomics</h1>
+    <p class="text-lg text-[var(--color-text-secondary)]">
+      How the tokens actually work. Economic analysis from a practitioner perspective.
+    </p>
+  </div>
+
+  <div class="grid gap-6">
+    {entries.map((entry) => (
+      <Card href={`/tokenomics/${entry.id}/`}>
+        <div class="text-sm text-[var(--color-text-tertiary)] mb-2">
+          {entry.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </div>
+        <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
+        <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
+      </Card>
+    ))}
+  </div>
+
+  {entries.length === 0 && (
+    <p class="text-[var(--color-text-tertiary)] py-12 text-center">Coming soon.</p>
+  )}
+</ContentLayout>

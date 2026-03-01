@@ -1,0 +1,9 @@
+{
+  "name": "Own Your Mind",
+  "short_name": "OYM",
+  "description": "Practitioner-led coverage of decentralised AI. Freedom AND returns. Sovereignty-first. Hands-on.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0F1117",
+  "theme_color": "#0D9488"
+}

@@ -1,0 +1,46 @@
+---
+interface Props {
+  variant: 'difficulty' | 'status' | 'category';
+  value: string;
+  size?: 'sm' | 'md';
+}
+
+const { variant, value, size = 'sm' } = Astro.props;
+
+const difficultyColors: Record<string, string> = {
+  beginner: 'bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30',
+  intermediate: 'bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30',
+  advanced: 'bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/30',
+};
+
+const statusColors: Record<string, string> = {
+  active: 'bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30',
+  upcoming: 'bg-[#3B82F6]/15 text-[#3B82F6] border-[#3B82F6]/30',
+  dormant: 'bg-[#64748B]/15 text-[#94A3B8] border-[#64748B]/30',
+};
+
+let classes = '';
+let label = value;
+
+if (variant === 'difficulty') {
+  classes = difficultyColors[value] || difficultyColors['beginner'];
+} else if (variant === 'status') {
+  classes = statusColors[value] || statusColors['dormant'];
+} else {
+  classes = 'bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border-[var(--color-border)]';
+}
+
+label = value.charAt(0).toUpperCase() + value.slice(1);
+
+const sizeClasses = size === 'sm'
+  ? 'px-2 py-0.5 text-[10px]'
+  : 'px-2.5 py-1 text-xs';
+---
+
+<span class:list={[
+  'inline-flex items-center rounded-full border font-medium uppercase tracking-wider',
+  sizeClasses,
+  classes,
+]}>
+  {label}
+</span>
