@@ -18,7 +18,7 @@ That is what this journal is for. Weekly dispatches from Fremantle. No hype.
 
 My primary setup:
 
-- **Mac Studio M4 Max** (64GB unified memory). Running local inference via Ollama and contributing compute to the Morpheus network. Silent, 60W draw, runs 24/7.
+- **Mac Studio M4 Max** (64GB unified memory). Running local inference via Ollama for daily work. Silent, 60W draw, runs 24/7.
 - **RackNerd VPS** in Texas. Running Agent Zero with Docker, connected to Venice AI for inference. This handles autonomous agent tasks that need to run continuously without tying up my local machine.
 
 Total out-of-pocket for the compute setup is roughly A$5,000 (Mac Studio) plus US$30/month (VPS). Power cost for the Mac Studio is negligible. The VPS cost is a rounding error.

@@ -1,6 +1,6 @@
 ---
 title: "Mac Studio DeAI Setup Guide"
-description: "How I set up a Mac Studio M4 Max as a decentralised AI workstation. Local inference, compute contribution and sovereign AI from your desk."
+description: "How I set up a Mac Studio M4 Max as a decentralised AI workstation. Local inference, sovereign AI from your desk."
 difficulty: "intermediate"
 category: "hardware"
 publishDate: 2025-03-01
@@ -17,13 +17,11 @@ The M4 Max is silent at load, draws around 60W, sits on your desk and runs 24/7 
 
 ## What I am running
 
-My Mac Studio handles three workloads:
+My Mac Studio handles two workloads:
 
 1. **Local inference.** Running open-weight models via Ollama for daily work: drafting, code review, data processing, research. This is my primary use case. No API calls, no data leaving my machine, no ongoing costs after the hardware investment.
 
-2. **Decentralised compute.** Contributing inference capacity to the Morpheus compute network. The Mac Studio serves requests and earns MOR tokens.
-
-3. **Experimentation.** Testing new models as they release, benchmarking quantisation levels, evaluating DeAI tools before writing about them.
+2. **Experimentation.** Testing new models as they release, benchmarking quantisation levels, evaluating DeAI tools before writing about them.
 
 ## What you need
 
@@ -113,18 +111,16 @@ curl http://localhost:11434/v1/chat/completions \
 
 This is the foundation for connecting local models to agents, automation tools and custom applications without any external API dependency.
 
-## Step 5: Connect to a compute network
+## Step 5: Connect to a compute network (optional)
 
-Once local inference works, you can contribute compute to a decentralised network and earn for it.
+Once local inference works, you have the option to contribute compute to a decentralised network and earn tokens for it.
 
-For Morpheus, the compute node software connects your machine to the network and routes inference requests to your Ollama instance. You earn MOR tokens proportional to the compute you serve.
-
-The specific setup instructions vary by network and change as node software updates. Check the current documentation for whichever network you choose:
+Morpheus, Akash and others each have their own node software that connects your machine to the network and routes inference requests to your local models. The specific setup instructions vary by network and change frequently. Check the current documentation:
 
 - Morpheus: [mor.org](https://mor.org) for compute node setup
 - Akash: [akash.network](https://akash.network) for provider setup
 
-The principle is the same across all of them. Your hardware, your models, your earnings. The network handles discovery, routing and payment.
+I have not done this step myself yet. The Mac Studio earns its keep through local inference alone. Contributing to a compute network is on my list to explore but it is not required to get value from this setup.
 
 ## Step 6: Monitoring and maintenance
 
