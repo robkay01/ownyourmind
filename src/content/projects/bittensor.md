@@ -7,6 +7,13 @@ status: "active"
 freedomScore: 7
 publishDate: 2025-03-02
 draft: false
+coingeckoId: "bittensor"
+launchType: "mining"
+chain: "Bittensor L1"
+supplyType: "capped"
+maxSupply: "21M"
+verdict: "Largest DeAI network with real workloads. Governance more centralised than marketed."
+oymHolds: true
 ---
 
 ## What it does

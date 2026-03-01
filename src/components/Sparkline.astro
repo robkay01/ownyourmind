@@ -1,0 +1,41 @@
+---
+interface Props {
+  data: number[];
+  color?: string;
+  width?: number;
+  height?: number;
+}
+
+const { data, color = '#0D9488', width = 80, height = 24 } = Astro.props;
+
+// Normalise data points to SVG coordinates
+const points = data.length > 1 ? data : [];
+const min = Math.min(...points);
+const max = Math.max(...points);
+const range = max - min || 1;
+
+const coords = points.map((val, i) => {
+  const x = (i / (points.length - 1)) * width;
+  const y = height - ((val - min) / range) * (height - 4) - 2;
+  return `${x.toFixed(1)},${y.toFixed(1)}`;
+}).join(' ');
+---
+
+{points.length > 1 && (
+  <svg
+    width={width}
+    height={height}
+    viewBox={`0 0 ${width} ${height}`}
+    class="sparkline inline-block align-middle"
+    aria-hidden="true"
+  >
+    <polyline
+      points={coords}
+      fill="none"
+      stroke={color}
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+)}

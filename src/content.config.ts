@@ -24,6 +24,13 @@ const projects = defineCollection({
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     draft: z.boolean().default(false),
+    coingeckoId: z.string().optional(),
+    launchType: z.enum(['fair-launch', 'ico', 'mining', 'airdrop', 'pre-token']).optional(),
+    chain: z.string().optional(),
+    supplyType: z.enum(['capped', 'uncapped']).optional(),
+    maxSupply: z.string().optional(),
+    verdict: z.string().optional(),
+    oymHolds: z.boolean().default(false),
   }),
 });
 

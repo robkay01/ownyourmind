@@ -1,47 +1,373 @@
 ---
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import Card from '../../components/Card.astro';
-import Badge from '../../components/Badge.astro';
+import Sparkline from '../../components/Sparkline.astro';
 import { getCollection } from 'astro:content';
+import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../../data/fetch-market-data';
 
 const entries = (await getCollection('projects'))
-  .filter((e) => !e.data.draft)
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+  .filter((e) => !e.data.draft || e.data.coingeckoId)
+  .sort((a, b) => b.data.freedomScore - a.data.freedomScore);
+
+// Fetch market data for all projects with coingeckoId
+const coingeckoIds = entries
+  .map((e) => e.data.coingeckoId)
+  .filter((id): id is string => !!id);
+
+const marketData = await fetchMarketData(coingeckoIds);
+
+// Compute stats
+const totalProjects = entries.length;
+const avgFreedomScore = (entries.reduce((sum, e) => sum + e.data.freedomScore, 0) / totalProjects).toFixed(1);
+const totalMarketCap = Object.values(marketData).reduce((sum, d) => sum + d.marketCap, 0);
+const categories = [...new Set(entries.map((e) => e.data.category))];
+
+// Helper: does this project have a full review?
+function hasReview(entry: typeof entries[0]): boolean {
+  return !entry.data.draft;
+}
+
+// Score colour thresholds
+function scoreColor(score: number): string {
+  if (score >= 7) return '#10B981';
+  if (score >= 4) return '#F59E0B';
+  return '#EF4444';
+}
+
+function sparklineColor(change7d: number): string {
+  return change7d >= 0 ? '#10B981' : '#EF4444';
+}
+
+// Downsample sparkline to 7 points for display
+function downsample(data: number[], targetPoints: number): number[] {
+  if (data.length <= targetPoints) return data;
+  const step = Math.floor(data.length / targetPoints);
+  const result: number[] = [];
+  for (let i = 0; i < targetPoints; i++) {
+    result.push(data[i * step]);
+  }
+  return result;
+}
 ---
 
 <ContentLayout
-  title="Projects"
-  description="Honest reviews of decentralised AI projects with freedom scores."
+  title="DeAI Projects Dashboard"
+  description="Decentralised AI projects tracked with freedom scores, market data and editorial assessment."
   breadcrumbs={[{ label: 'Projects' }]}
 >
   <div class="mb-8">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Projects</h1>
-    <p class="text-lg text-[var(--color-text-secondary)]">
-      Honest reviews of decentralised AI projects. Freedom scores, tokenomics, and how to participate.
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Projects</h1>
+    <p class="text-[var(--color-text-secondary)]">
+      Decentralised AI projects. Freedom scores, market data and honest assessment.
     </p>
   </div>
 
-  <div class="grid gap-6">
+  <!-- Stats Bar -->
+  <div class="dashboard-stats">
+    <div class="stat-card">
+      <span class="stat-value">{totalProjects}</span>
+      <span class="stat-label">Projects tracked</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{avgFreedomScore}</span>
+      <span class="stat-label">Avg freedom score</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{formatMarketCap(totalMarketCap)}</span>
+      <span class="stat-label">Total market cap</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{categories.length}</span>
+      <span class="stat-label">Categories</span>
+    </div>
+  </div>
+
+  <!-- Category Filter Tabs -->
+  <div class="filter-tabs" role="tablist" aria-label="Filter by category">
+    <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+    <button class="filter-tab" data-category="compute" role="tab" aria-selected="false">Compute</button>
+    <button class="filter-tab" data-category="inference" role="tab" aria-selected="false">Inference</button>
+    <button class="filter-tab" data-category="agent" role="tab" aria-selected="false">Agent</button>
+    <button class="filter-tab" data-category="data" role="tab" aria-selected="false">Data</button>
+    <button class="filter-tab" data-category="platform" role="tab" aria-selected="false">Platform</button>
+    <button class="filter-tab" data-category="storage" role="tab" aria-selected="false">Storage</button>
+  </div>
+
+  <!-- Desktop Table -->
+  <div class="dashboard-table-wrap">
+    <table class="dashboard-table" id="projects-table">
+      <thead>
+        <tr>
+          <th class="th-project">Project</th>
+          <th class="th-category">Category</th>
+          <th class="sort-header" data-sort="freedom" data-order="desc" aria-sort="descending">
+            Freedom<span class="sort-arrow">&#9660;</span>
+          </th>
+          <th>Status</th>
+          <th>Launch</th>
+          <th class="sort-header text-right" data-sort="price">Price</th>
+          <th class="sort-header text-right" data-sort="mcap">Mkt Cap</th>
+          <th class="sort-header text-right" data-sort="fdv">FDV</th>
+          <th class="sort-header text-right" data-sort="change7d">7d</th>
+          <th class="th-verdict">OYM Verdict</th>
+          <th>Review</th>
+        </tr>
+      </thead>
+      <tbody>
+        {entries.map((entry) => {
+          const md = entry.data.coingeckoId ? marketData[entry.data.coingeckoId] : null;
+          const spark = md ? downsample(md.sparkline7d, 7) : [];
+          const change7d = md?.priceChange7d ?? 0;
+          const changeColor = change7d >= 0 ? '#10B981' : '#EF4444';
+          const sc = scoreColor(entry.data.freedomScore);
+          const reviewUrl = hasReview(entry) ? `/projects/${entry.id}/` : null;
+
+          return (
+            <tr
+              class="table-row"
+              data-category={entry.data.category}
+              data-freedom={entry.data.freedomScore}
+              data-price={md?.price ?? 0}
+              data-mcap={md?.marketCap ?? 0}
+              data-fdv={md?.fdv ?? 0}
+              data-change7d={change7d}
+              data-href={reviewUrl}
+            >
+              <td class="td-project">
+                <div class="flex items-center gap-2">
+                  <span class="font-semibold text-[var(--color-text-primary)]">{entry.data.title}</span>
+                  <span class="text-xs font-mono text-[var(--color-accent)]">{entry.data.token}</span>
+                  {entry.data.oymHolds && (
+                    <span class="disclosure-icon" title="OYM holds this token">&#9679;</span>
+                  )}
+                </div>
+              </td>
+              <td>
+                <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">
+                  {entry.data.category}
+                </span>
+              </td>
+              <td>
+                <div class="flex items-center gap-2">
+                  <div class="freedom-bar-container">
+                    <div class="freedom-bar" style={`width: ${entry.data.freedomScore * 10}%; background-color: ${sc};`} />
+                  </div>
+                  <span class="text-sm font-bold whitespace-nowrap" style={`color: ${sc};`}>
+                    {entry.data.freedomScore}
+                  </span>
+                </div>
+              </td>
+              <td>
+                <span class:list={['badge', entry.data.status === 'active' ? 'badge-active' : entry.data.status === 'upcoming' ? 'badge-upcoming' : 'badge-dormant']}>
+                  {entry.data.status}
+                </span>
+              </td>
+              <td class="text-xs text-[var(--color-text-secondary)] whitespace-nowrap">
+                {entry.data.launchType?.replace('-', ' ') ?? '--'}
+              </td>
+              <td class="text-right font-mono text-sm">
+                {md ? formatPrice(md.price) : <span class="text-[var(--color-text-tertiary)]">--</span>}
+              </td>
+              <td class="text-right font-mono text-sm">
+                {md ? formatMarketCap(md.marketCap) : <span class="text-[var(--color-text-tertiary)]">--</span>}
+              </td>
+              <td class="text-right font-mono text-sm">
+                {md ? formatMarketCap(md.fdv) : <span class="text-[var(--color-text-tertiary)]">--</span>}
+              </td>
+              <td class="text-right">
+                <div class="flex items-center justify-end gap-2">
+                  {spark.length > 1 && (
+                    <Sparkline data={spark} color={sparklineColor(change7d)} />
+                  )}
+                  <span class="text-sm font-mono" style={`color: ${changeColor};`}>
+                    {md ? formatPercent(change7d) : '--'}
+                  </span>
+                </div>
+              </td>
+              <td class="text-sm text-[var(--color-text-secondary)] max-w-[200px]">
+                <span class="line-clamp-2">{entry.data.verdict ?? '--'}</span>
+              </td>
+              <td>
+                {reviewUrl ? (
+                  <a href={reviewUrl} class="text-[var(--color-accent)] text-sm font-medium hover:text-[var(--color-accent-hover)]">
+                    Read
+                  </a>
+                ) : (
+                  <span class="text-[var(--color-text-tertiary)] text-sm">Coming</span>
+                )}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mobile Cards -->
+  <div class="dashboard-cards" id="projects-cards">
     {entries.map((entry) => {
-      const scoreColor = entry.data.freedomScore >= 7 ? '#10B981' : entry.data.freedomScore >= 4 ? '#F59E0B' : '#EF4444';
+      const md = entry.data.coingeckoId ? marketData[entry.data.coingeckoId] : null;
+      const spark = md ? downsample(md.sparkline7d, 7) : [];
+      const change7d = md?.priceChange7d ?? 0;
+      const changeColor = change7d >= 0 ? '#10B981' : '#EF4444';
+      const sc = scoreColor(entry.data.freedomScore);
+      const reviewUrl = hasReview(entry) ? `/projects/${entry.id}/` : null;
+
       return (
-        <Card href={`/projects/${entry.id}/`}>
-          <div class="flex items-center gap-3 mb-3">
-            <Badge variant="status" value={entry.data.status} />
-            <Badge variant="category" value={entry.data.category} />
-            <span class="text-sm font-mono text-[var(--color-accent)]">{entry.data.token}</span>
-            <span class="ml-auto text-sm font-bold" style={`color: ${scoreColor};`}>
-              {entry.data.freedomScore}/10
+        <div class="dashboard-card" data-category={entry.data.category} data-href={reviewUrl}>
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="font-semibold text-[var(--color-text-primary)]">{entry.data.title}</span>
+              <span class="text-xs font-mono text-[var(--color-accent)]">{entry.data.token}</span>
+              {entry.data.oymHolds && (
+                <span class="disclosure-icon" title="OYM holds this token">&#9679;</span>
+              )}
+            </div>
+            <span class:list={['badge', entry.data.status === 'active' ? 'badge-active' : entry.data.status === 'upcoming' ? 'badge-upcoming' : 'badge-dormant']}>
+              {entry.data.status}
             </span>
           </div>
-          <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
-          <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
-        </Card>
+
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs text-[var(--color-text-tertiary)]">Freedom</span>
+            <div class="freedom-bar-container flex-1">
+              <div class="freedom-bar" style={`width: ${entry.data.freedomScore * 10}%; background-color: ${sc};`} />
+            </div>
+            <span class="text-sm font-bold" style={`color: ${sc};`}>{entry.data.freedomScore}/10</span>
+          </div>
+
+          {md && (
+            <div class="grid grid-cols-3 gap-3 mb-3 text-sm">
+              <div>
+                <span class="text-[var(--color-text-tertiary)] text-xs block">Price</span>
+                <span class="font-mono">{formatPrice(md.price)}</span>
+              </div>
+              <div>
+                <span class="text-[var(--color-text-tertiary)] text-xs block">Mkt Cap</span>
+                <span class="font-mono">{formatMarketCap(md.marketCap)}</span>
+              </div>
+              <div>
+                <span class="text-[var(--color-text-tertiary)] text-xs block">7d</span>
+                <div class="flex items-center gap-1">
+                  {spark.length > 1 && <Sparkline data={spark} color={sparklineColor(change7d)} width={48} height={16} />}
+                  <span class="font-mono" style={`color: ${changeColor};`}>{formatPercent(change7d)}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {entry.data.verdict && (
+            <p class="text-sm text-[var(--color-text-secondary)] mb-3">{entry.data.verdict}</p>
+          )}
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">
+                {entry.data.category}
+              </span>
+              {entry.data.launchType && (
+                <span class="text-xs text-[var(--color-text-tertiary)]">{entry.data.launchType.replace('-', ' ')}</span>
+              )}
+            </div>
+            {reviewUrl ? (
+              <a href={reviewUrl} class="text-[var(--color-accent)] text-sm font-medium hover:text-[var(--color-accent-hover)]">
+                Full review &rarr;
+              </a>
+            ) : (
+              <span class="text-[var(--color-text-tertiary)] text-sm">Review coming</span>
+            )}
+          </div>
+        </div>
       );
     })}
   </div>
-
-  {entries.length === 0 && (
-    <p class="text-[var(--color-text-tertiary)] py-12 text-center">Coming soon.</p>
-  )}
 </ContentLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    // Filter tabs
+    const tabs = document.querySelectorAll<HTMLButtonElement>('.filter-tab');
+    const tableRows = document.querySelectorAll<HTMLTableRowElement>('#projects-table tbody .table-row');
+    const cards = document.querySelectorAll<HTMLElement>('.dashboard-card');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const cat = tab.dataset.category;
+        tableRows.forEach((row) => {
+          row.style.display = cat === 'all' || row.dataset.category === cat ? '' : 'none';
+        });
+        cards.forEach((card) => {
+          card.style.display = cat === 'all' || card.dataset.category === cat ? '' : 'none';
+        });
+      });
+    });
+
+    // Sortable columns
+    const table = document.getElementById('projects-table') as HTMLTableElement | null;
+    if (!table) return;
+
+    const headers = table.querySelectorAll<HTMLElement>('.sort-header');
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+
+    headers.forEach((header) => {
+      header.addEventListener('click', () => {
+        const sortKey = header.dataset.sort!;
+        let order = header.dataset.order === 'asc' ? 'desc' : 'asc';
+
+        // Reset all headers
+        headers.forEach((h) => {
+          h.dataset.order = '';
+          h.setAttribute('aria-sort', 'none');
+          const arrow = h.querySelector('.sort-arrow');
+          if (arrow) arrow.textContent = '';
+        });
+
+        header.dataset.order = order;
+        header.setAttribute('aria-sort', order === 'asc' ? 'ascending' : 'descending');
+        const arrow = header.querySelector('.sort-arrow');
+        if (arrow) arrow.textContent = order === 'asc' ? '\u25B2' : '\u25BC';
+
+        const rows = Array.from(tbody.querySelectorAll<HTMLTableRowElement>('.table-row'));
+        rows.sort((a, b) => {
+          const aVal = parseFloat(a.dataset[sortKey === 'change7d' ? 'change7d' : sortKey] ?? '0');
+          const bVal = parseFloat(b.dataset[sortKey === 'change7d' ? 'change7d' : sortKey] ?? '0');
+          return order === 'asc' ? aVal - bVal : bVal - aVal;
+        });
+
+        rows.forEach((row) => tbody.appendChild(row));
+      });
+    });
+
+    // Row click navigation (table)
+    tableRows.forEach((row) => {
+      const href = row.dataset.href;
+      if (href) {
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', (e) => {
+          // Don't navigate if clicking a link inside the row
+          if ((e.target as HTMLElement).closest('a')) return;
+          window.location.href = href;
+        });
+      }
+    });
+
+    // Card click navigation
+    cards.forEach((card) => {
+      const href = card.dataset.href;
+      if (href) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+          if ((e.target as HTMLElement).closest('a')) return;
+          window.location.href = href;
+        });
+      }
+    });
+  });
+</script>
