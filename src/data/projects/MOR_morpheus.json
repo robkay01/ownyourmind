@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "project_id": "morpheus",
+    "research_date": null,
+    "researcher": null,
+    "version": 1,
+    "last_updated": null,
+    "status": "draft",
+    "research_gaps": []
+  },
+
+  "identity": {
+    "name": "Morpheus",
+    "ticker": "MOR",
+    "category": "agent",
+    "subcategory": null,
+    "tagline": null,
+    "one_liner": null,
+    "website": "https://mor.org",
+    "documentation_url": null,
+    "whitepaper_url": null,
+    "github_url": "https://github.com/MorpheusAIs",
+    "chain": "Ethereum / Arbitrum",
+    "launch_date": null,
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": null,
+        "role": null,
+        "background": null,
+        "linkedin_or_x": null,
+        "doxxed": null
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": null,
+    "entity_jurisdiction": null,
+    "notable_backers": [],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": []
+    }
+  },
+
+  "technical": {
+    "architecture_summary": null,
+    "consensus_mechanism": null,
+    "what_is_onchain": null,
+    "what_is_offchain": null,
+    "key_dependencies": [],
+    "smart_contract_languages": [],
+    "open_source": true,
+    "license": null,
+    "github_metrics": {
+      "total_repos": null,
+      "primary_repo_url": null,
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "Morpheus",
+    "ticker": "MOR",
+    "token_standard": null,
+    "token_type": null,
+    "token_utility": [],
+    "supply": {
+      "max_supply": 42000000,
+      "total_supply": null,
+      "circulating_supply": null,
+      "circulating_supply_date": null,
+      "circulating_percentage": null
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Compute providers",
+          "percentage": 24,
+          "vesting_schedule": null,
+          "cliff": null,
+          "notes": null
+        },
+        {
+          "category": "Code contributors",
+          "percentage": 24,
+          "vesting_schedule": null,
+          "cliff": null,
+          "notes": null
+        },
+        {
+          "category": "Capital providers",
+          "percentage": 24,
+          "vesting_schedule": null,
+          "cliff": null,
+          "notes": null
+        },
+        {
+          "category": "Community builders",
+          "percentage": 24,
+          "vesting_schedule": null,
+          "cliff": null,
+          "notes": null
+        },
+        {
+          "category": "Protection fund",
+          "percentage": 4,
+          "vesting_schedule": null,
+          "cliff": null,
+          "notes": null
+        }
+      ],
+      "distribution_method": "fair-launch"
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": null,
+      "next_major_emission_event": null,
+      "next_event_date": null,
+      "burn_mechanism": null
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": null,
+      "minimum_stake": null,
+      "lock_up_period": "90 days",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [],
+      "slashing_conditions": null
+    },
+    "token_model_classification": null,
+    "tokenomics_notes": null
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": null,
+        "minimum_hardware": null,
+        "minimum_capital_usd": null,
+        "technical_skill_required": null,
+        "estimated_returns": null,
+        "barriers_to_entry": [],
+        "guide_available": false,
+        "guide_url": null
+      },
+      {
+        "type": "node_operation",
+        "description": null,
+        "minimum_hardware": null,
+        "minimum_capital_usd": null,
+        "technical_skill_required": null,
+        "estimated_returns": null,
+        "barriers_to_entry": [],
+        "guide_available": false,
+        "guide_url": null
+      },
+      {
+        "type": "contributing",
+        "description": null,
+        "minimum_hardware": null,
+        "minimum_capital_usd": null,
+        "technical_skill_required": null,
+        "estimated_returns": null,
+        "barriers_to_entry": [],
+        "guide_available": false,
+        "guide_url": null
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": null,
+      "api_available": null,
+      "documentation_quality": null,
+      "developer_community_size": null,
+      "grants_program": null,
+      "grants_url": null
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": null,
+    "metrics_source": null,
+    "metrics_date": null,
+    "usage_notes": null
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": null,
+    "governance_url": null,
+    "key_community_channels": [],
+    "sentiment_summary": null,
+    "community_notes": null
+  },
+
+  "freedom_score": {
+    "total_score": null,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": null,
+        "max": 20,
+        "evidence": null
+      },
+      "governance_decentralisation": {
+        "score": null,
+        "max": 20,
+        "evidence": null
+      },
+      "token_distribution_fairness": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "censorship_resistance": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "data_sovereignty": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "open_source_transparency": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      }
+    },
+    "freedom_grade": null,
+    "freedom_summary": null
+  },
+
+  "assessment": {
+    "what_works_today": [],
+    "what_is_hype": [],
+    "key_risks": [],
+    "competitive_advantages": [],
+    "competitive_disadvantages": [],
+    "comparable_projects": [],
+    "outlook": null,
+    "overall_assessment": null
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": null,
+      "type": null,
+      "title": null,
+      "url": null,
+      "author": null,
+      "publisher": null,
+      "date_published": null,
+      "date_accessed": null,
+      "data_points_sourced": [],
+      "reliability_notes": null
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "project_id": "",
+    "research_date": null,
+    "researcher": null,
+    "version": 1,
+    "last_updated": null,
+    "status": "draft",
+    "research_gaps": []
+  },
+
+  "identity": {
+    "name": null,
+    "ticker": null,
+    "category": null,
+    "subcategory": null,
+    "tagline": null,
+    "one_liner": null,
+    "website": null,
+    "documentation_url": null,
+    "whitepaper_url": null,
+    "github_url": null,
+    "chain": null,
+    "launch_date": null,
+    "current_status": null,
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [],
+    "team_size_estimate": null,
+    "entity_name": null,
+    "entity_jurisdiction": null,
+    "notable_backers": [],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": []
+    }
+  },
+
+  "technical": {
+    "architecture_summary": null,
+    "consensus_mechanism": null,
+    "what_is_onchain": null,
+    "what_is_offchain": null,
+    "key_dependencies": [],
+    "smart_contract_languages": [],
+    "open_source": null,
+    "license": null,
+    "github_metrics": {
+      "total_repos": null,
+      "primary_repo_url": null,
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": null,
+      "stars": null,
+      "forks": null,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": null,
+    "ticker": null,
+    "token_standard": null,
+    "token_type": null,
+    "token_utility": [],
+    "supply": {
+      "max_supply": null,
+      "total_supply": null,
+      "circulating_supply": null,
+      "circulating_supply_date": null,
+      "circulating_percentage": null
+    },
+    "distribution": {
+      "initial_allocation": [],
+      "distribution_method": null
+    },
+    "emissions": {
+      "model": null,
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": null,
+      "next_major_emission_event": null,
+      "next_event_date": null,
+      "burn_mechanism": null
+    },
+    "staking": {
+      "staking_available": null,
+      "staking_type": null,
+      "minimum_stake": null,
+      "lock_up_period": null,
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [],
+      "slashing_conditions": null
+    },
+    "token_model_classification": null,
+    "tokenomics_notes": null
+  },
+
+  "participation": {
+    "methods": [],
+    "developer_resources": {
+      "sdk_available": null,
+      "api_available": null,
+      "documentation_quality": null,
+      "developer_community_size": null,
+      "grants_program": null,
+      "grants_url": null
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": null,
+    "metrics_source": null,
+    "metrics_date": null,
+    "usage_notes": null
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": null,
+    "governance_url": null,
+    "key_community_channels": [],
+    "sentiment_summary": null,
+    "community_notes": null
+  },
+
+  "freedom_score": {
+    "total_score": null,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": null,
+        "max": 20,
+        "evidence": null
+      },
+      "governance_decentralisation": {
+        "score": null,
+        "max": 20,
+        "evidence": null
+      },
+      "token_distribution_fairness": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "censorship_resistance": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "data_sovereignty": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      },
+      "open_source_transparency": {
+        "score": null,
+        "max": 15,
+        "evidence": null
+      }
+    },
+    "freedom_grade": null,
+    "freedom_summary": null
+  },
+
+  "assessment": {
+    "what_works_today": [],
+    "what_is_hype": [],
+    "key_risks": [],
+    "competitive_advantages": [],
+    "competitive_disadvantages": [],
+    "comparable_projects": [],
+    "outlook": null,
+    "overall_assessment": null
+  },
+
+  "sources": []
+}
