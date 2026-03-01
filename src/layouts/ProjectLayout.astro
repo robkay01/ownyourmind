@@ -1,6 +1,7 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
+import type { ProjectResearchRecord } from '../data/project-research';
 
 interface Props {
   title: string;
@@ -14,9 +15,10 @@ interface Props {
   coingeckoId?: string;
   verdict?: string;
   oymHolds?: boolean;
+  research?: ProjectResearchRecord | null;
 }
 
-const { title, description, category, token, status, freedomScore, publishDate, updatedDate, coingeckoId, verdict, oymHolds } = Astro.props;
+const { title, description, category, token, status, freedomScore, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -35,6 +37,79 @@ if (coingeckoId) {
   const data = await fetchMarketData([coingeckoId]);
   if (data[coingeckoId]) {
     market = data[coingeckoId];
+  }
+}
+
+// --- Research section visibility checks ---
+const r = research;
+const hasTeam = !!(r?.team?.founding_team?.some(m => m.name));
+const hasTechnical = !!(r?.technical?.architecture_summary);
+const hasTokenomics = !!(r?.tokenomics?.token_name);
+const hasParticipation = !!(r?.participation?.methods?.some(m => m.type || m.description));
+const hasUsage = !!(r?.usage_metrics && (
+  r.usage_metrics.nodes_active != null ||
+  r.usage_metrics.validators_active != null ||
+  r.usage_metrics.miners_active != null ||
+  r.usage_metrics.daily_transactions != null ||
+  r.usage_metrics.tvl_usd != null ||
+  r.usage_metrics.revenue_annual_usd != null ||
+  r.usage_metrics.active_users_daily != null ||
+  r.usage_metrics.active_users_monthly != null ||
+  r.usage_metrics.compute_delivered != null
+));
+const hasCommunity = !!(r?.community && (
+  r.community.discord_members != null ||
+  r.community.telegram_members != null ||
+  r.community.x_followers != null ||
+  r.community.github_contributors != null
+));
+const hasSources = !!(r?.sources?.some(s => s.title || s.url));
+const hasAnyResearch = hasTeam || hasTechnical || hasTokenomics || hasParticipation || hasUsage || hasCommunity;
+const researchDate = r?.meta?.last_updated || r?.meta?.research_date || null;
+
+// Format large numbers with commas
+function fmtNum(n: number | null | undefined): string {
+  if (n == null) return '--';
+  return n.toLocaleString('en-US');
+}
+
+// Format USD amounts
+function fmtUsd(n: number | null | undefined): string {
+  if (n == null) return '--';
+  if (n >= 1e9) return `$${(n / 1e9).toFixed(2)}B`;
+  if (n >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
+  if (n >= 1e3) return `$${(n / 1e3).toFixed(0)}K`;
+  return `$${n.toLocaleString('en-US')}`;
+}
+
+// Skill level badge colours
+function skillColor(level: string | null | undefined): string {
+  switch (level) {
+    case 'none': case 'basic': return 'badge-beginner';
+    case 'intermediate': return 'badge-intermediate';
+    case 'advanced': case 'expert': return 'badge-advanced';
+    default: return 'badge-dormant';
+  }
+}
+
+// Source tier badge
+function tierLabel(tier: number | null | undefined): string {
+  switch (tier) {
+    case 1: return 'Tier 1';
+    case 2: return 'Tier 2';
+    case 3: return 'Tier 3';
+    case 4: return 'Tier 4';
+    default: return '';
+  }
+}
+
+function tierColor(tier: number | null | undefined): string {
+  switch (tier) {
+    case 1: return 'badge-active';
+    case 2: return 'badge-upcoming';
+    case 3: return 'badge-intermediate';
+    case 4: return 'badge-dormant';
+    default: return 'badge-dormant';
   }
 }
 ---
@@ -131,5 +206,720 @@ if (coingeckoId) {
     <div class="prose">
       <slot />
     </div>
+
+    {/* ============================================
+        RESEARCH DATA SECTIONS
+        Only rendered when research JSON exists
+        ============================================ */}
+
+    {hasAnyResearch && (
+      <div class="research-sections mt-16">
+
+        {/* --- TEAM OVERVIEW --- */}
+        {hasTeam && (
+          <section class="research-section">
+            <h2 class="research-h2">Team overview</h2>
+
+            {r!.team!.founding_team!.filter(m => m.name).map(member => (
+              <div class="mb-4">
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-semibold text-[var(--color-text-primary)]">{member.name}</span>
+                  {member.role && (
+                    <span class="text-sm text-[var(--color-accent)]">{member.role}</span>
+                  )}
+                  {member.doxxed != null && (
+                    <span class:list={['badge text-xs', member.doxxed ? 'badge-active' : 'badge-dormant']}>
+                      {member.doxxed ? 'doxxed' : 'anon'}
+                    </span>
+                  )}
+                </div>
+                {member.background && (
+                  <p class="text-sm text-[var(--color-text-secondary)]">{member.background}</p>
+                )}
+                {member.linkedin_or_x && (
+                  <a href={member.linkedin_or_x} class="text-xs text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]" target="_blank" rel="noopener">{member.linkedin_or_x}</a>
+                )}
+              </div>
+            ))}
+
+            {(r!.team!.entity_name || r!.team!.entity_jurisdiction) && (
+              <div class="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] mt-4">
+                {r!.team!.entity_name && <span class="font-medium text-[var(--color-text-primary)]">{r!.team!.entity_name}</span>}
+                {r!.team!.entity_jurisdiction && <span>({r!.team!.entity_jurisdiction})</span>}
+                {r!.team!.team_size_estimate != null && <span>· ~{r!.team!.team_size_estimate} people</span>}
+              </div>
+            )}
+
+            {r!.team!.notable_backers && r!.team!.notable_backers.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-4">
+                {r!.team!.notable_backers.map(backer => (
+                  <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">{backer}</span>
+                ))}
+              </div>
+            )}
+
+            {r!.team!.funding_raised?.total_usd != null && (
+              <div class="mt-4">
+                <span class="text-sm text-[var(--color-text-tertiary)]">Total raised: </span>
+                <span class="text-sm font-mono font-semibold text-[var(--color-text-primary)]">{fmtUsd(r!.team!.funding_raised.total_usd)}</span>
+                {r!.team!.funding_raised.rounds && r!.team!.funding_raised.rounds.length > 0 && (
+                  <div class="mt-2 overflow-x-auto">
+                    <table class="research-table">
+                      <thead>
+                        <tr>
+                          <th>Round</th>
+                          <th>Amount</th>
+                          <th>Date</th>
+                          <th>Lead</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {r!.team!.funding_raised.rounds.filter(rd => rd.round_type).map(rd => (
+                          <tr>
+                            <td>{rd.round_type}</td>
+                            <td class="font-mono">{fmtUsd(rd.amount_usd)}</td>
+                            <td>{rd.date || '--'}</td>
+                            <td>{rd.lead_investor || '--'}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- TECHNICAL SNAPSHOT --- */}
+        {hasTechnical && (
+          <section class="research-section">
+            <h2 class="research-h2">Technical snapshot</h2>
+
+            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-6">{r!.technical!.architecture_summary}</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+              {r!.technical!.consensus_mechanism && (
+                <div class="research-fact">
+                  <span class="research-fact-label">Consensus</span>
+                  <span class="research-fact-value">{r!.technical!.consensus_mechanism}</span>
+                </div>
+              )}
+              {r!.identity?.chain && (
+                <div class="research-fact">
+                  <span class="research-fact-label">Chain</span>
+                  <span class="research-fact-value">{r!.identity!.chain}</span>
+                </div>
+              )}
+              {r!.technical!.open_source != null && (
+                <div class="research-fact">
+                  <span class="research-fact-label">Open source</span>
+                  <span class="research-fact-value">{r!.technical!.open_source ? 'Yes' : 'No'}</span>
+                </div>
+              )}
+              {r!.technical!.license && (
+                <div class="research-fact">
+                  <span class="research-fact-label">Licence</span>
+                  <span class="research-fact-value">{r!.technical!.license}</span>
+                </div>
+              )}
+              {r!.technical!.smart_contract_languages && r!.technical!.smart_contract_languages.length > 0 && (
+                <div class="research-fact">
+                  <span class="research-fact-label">Languages</span>
+                  <span class="research-fact-value">{r!.technical!.smart_contract_languages.join(', ')}</span>
+                </div>
+              )}
+            </div>
+
+            {r!.technical!.github_metrics && (r!.technical!.github_metrics.contributors != null || r!.technical!.github_metrics.stars != null) && (
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                {r!.technical!.github_metrics.contributors != null && (
+                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Contributors</span>
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.contributors)}</span>
+                  </div>
+                )}
+                {r!.technical!.github_metrics.stars != null && (
+                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Stars</span>
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.stars)}</span>
+                  </div>
+                )}
+                {r!.technical!.github_metrics.forks != null && (
+                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Forks</span>
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.forks)}</span>
+                  </div>
+                )}
+                {r!.technical!.github_metrics.last_commit_date && (
+                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Last commit</span>
+                    <span class="text-sm text-[var(--color-text-primary)]">{r!.technical!.github_metrics.last_commit_date}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {r!.technical!.audits && r!.technical!.audits.length > 0 && r!.technical!.audits.some(a => a.auditor) && (
+              <div class="mb-4">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">Audits</h3>
+                {r!.technical!.audits.filter(a => a.auditor).map(audit => (
+                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] mb-2">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="font-medium text-sm text-[var(--color-text-primary)]">{audit.auditor}</span>
+                      {audit.date && <span class="text-xs text-[var(--color-text-tertiary)]">{audit.date}</span>}
+                    </div>
+                    {audit.scope && <p class="text-xs text-[var(--color-text-tertiary)] mb-1">Scope: {audit.scope}</p>}
+                    {audit.result_summary && <p class="text-sm text-[var(--color-text-secondary)]">{audit.result_summary}</p>}
+                    {audit.report_url && (
+                      <a href={audit.report_url} class="text-xs text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]" target="_blank" rel="noopener">View report</a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- TOKENOMICS DEEP DIVE --- */}
+        {hasTokenomics && (
+          <section class="research-section">
+            <h2 class="research-h2">Tokenomics deep dive</h2>
+
+            {/* Token utility */}
+            {r!.tokenomics!.token_utility && r!.tokenomics!.token_utility.length > 0 && (
+              <div class="mb-6">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Token utility</h3>
+                <ul class="list-disc list-inside text-sm text-[var(--color-text-secondary)] space-y-1">
+                  {r!.tokenomics!.token_utility.map(u => <li>{u}</li>)}
+                </ul>
+              </div>
+            )}
+
+            {/* Supply table */}
+            {r!.tokenomics!.supply && (r!.tokenomics!.supply.max_supply != null || r!.tokenomics!.supply.circulating_supply != null) && (
+              <div class="mb-6 overflow-x-auto">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Supply</h3>
+                <table class="research-table">
+                  <thead>
+                    <tr>
+                      <th>Max supply</th>
+                      <th>Total supply</th>
+                      <th>Circulating</th>
+                      <th>Circ. %</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.max_supply)}</td>
+                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.total_supply)}</td>
+                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.circulating_supply)}</td>
+                      <td class="font-mono">{r!.tokenomics!.supply.circulating_percentage != null ? `${r!.tokenomics!.supply.circulating_percentage}%` : '--'}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {/* Distribution table */}
+            {r!.tokenomics!.distribution?.initial_allocation && r!.tokenomics!.distribution.initial_allocation.length > 0 && r!.tokenomics!.distribution.initial_allocation.some(a => a.category) && (
+              <div class="mb-6 overflow-x-auto">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Distribution</h3>
+                {r!.tokenomics!.distribution.distribution_method && (
+                  <p class="text-sm text-[var(--color-text-secondary)] mb-2">Method: {r!.tokenomics!.distribution.distribution_method}</p>
+                )}
+                <table class="research-table">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>%</th>
+                      <th>Vesting</th>
+                      <th>Cliff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {r!.tokenomics!.distribution.initial_allocation.filter(a => a.category).map(alloc => (
+                      <tr>
+                        <td>{alloc.category}</td>
+                        <td class="font-mono">{alloc.percentage != null ? `${alloc.percentage}%` : '--'}</td>
+                        <td>{alloc.vesting_schedule || '--'}</td>
+                        <td>{alloc.cliff || '--'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {/* Emissions */}
+            {r!.tokenomics!.emissions && (r!.tokenomics!.emissions.model || r!.tokenomics!.emissions.current_daily_emissions != null) && (
+              <div class="mb-6">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Emissions</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {r!.tokenomics!.emissions.model && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Model</span>
+                      <span class="research-fact-value">{r!.tokenomics!.emissions.model}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.emissions.current_daily_emissions != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Daily emissions</span>
+                      <span class="research-fact-value font-mono">{fmtNum(r!.tokenomics!.emissions.current_daily_emissions)}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.emissions.current_annual_inflation_rate != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Annual inflation</span>
+                      <span class="research-fact-value font-mono">{r!.tokenomics!.emissions.current_annual_inflation_rate}%</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.emissions.halving_schedule && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Halving</span>
+                      <span class="research-fact-value">{r!.tokenomics!.emissions.halving_schedule}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.emissions.burn_mechanism && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Burn mechanism</span>
+                      <span class="research-fact-value">{r!.tokenomics!.emissions.burn_mechanism}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.emissions.next_major_emission_event && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Next event</span>
+                      <span class="research-fact-value">{r!.tokenomics!.emissions.next_major_emission_event}{r!.tokenomics!.emissions.next_event_date ? ` (${r!.tokenomics!.emissions.next_event_date})` : ''}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Staking */}
+            {r!.tokenomics!.staking?.staking_available && (
+              <div class="mb-6">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Staking</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {r!.tokenomics!.staking.staking_type && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Type</span>
+                      <span class="research-fact-value">{r!.tokenomics!.staking.staking_type}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.staking.minimum_stake != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Minimum stake</span>
+                      <span class="research-fact-value font-mono">{fmtNum(r!.tokenomics!.staking.minimum_stake)}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.staking.lock_up_period && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Lock-up</span>
+                      <span class="research-fact-value">{r!.tokenomics!.staking.lock_up_period}</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.staking.current_apy_nominal != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Nominal APY</span>
+                      <span class="research-fact-value font-mono">{r!.tokenomics!.staking.current_apy_nominal}%</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.staking.real_yield_after_inflation != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Real yield</span>
+                      <span class="research-fact-value font-mono">{r!.tokenomics!.staking.real_yield_after_inflation}%</span>
+                    </div>
+                  )}
+                  {r!.tokenomics!.staking.staking_ratio != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Staking ratio</span>
+                      <span class="research-fact-value font-mono">{r!.tokenomics!.staking.staking_ratio}%</span>
+                    </div>
+                  )}
+                </div>
+                {r!.tokenomics!.staking.staking_risks && r!.tokenomics!.staking.staking_risks.length > 0 && (
+                  <div class="mt-3">
+                    <span class="text-xs text-[var(--color-text-tertiary)] uppercase tracking-wider">Risks: </span>
+                    <span class="text-sm text-[var(--color-text-secondary)]">{r!.tokenomics!.staking.staking_risks.join('; ')}</span>
+                  </div>
+                )}
+                {r!.tokenomics!.staking.slashing_conditions && (
+                  <div class="mt-1">
+                    <span class="text-xs text-[var(--color-text-tertiary)] uppercase tracking-wider">Slashing: </span>
+                    <span class="text-sm text-[var(--color-text-secondary)]">{r!.tokenomics!.staking.slashing_conditions}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {r!.tokenomics!.tokenomics_notes && (
+              <p class="text-sm text-[var(--color-text-secondary)] italic mb-4">{r!.tokenomics!.tokenomics_notes}</p>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- HOW TO PARTICIPATE --- */}
+        {hasParticipation && (
+          <section class="research-section">
+            <h2 class="research-h2">How to participate</h2>
+
+            {r!.participation!.methods!.filter(m => m.type || m.description).map(method => (
+              <div class="p-4 rounded-lg bg-[var(--color-bg-secondary)] border border-[var(--color-border)] mb-3">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  {method.type && (
+                    <span class="badge badge-active text-xs">{method.type.replace('_', ' ')}</span>
+                  )}
+                  {method.technical_skill_required && (
+                    <span class:list={['badge text-xs', skillColor(method.technical_skill_required)]}>
+                      {method.technical_skill_required}
+                    </span>
+                  )}
+                </div>
+
+                {method.description && (
+                  <p class="text-sm text-[var(--color-text-secondary)] mb-3">{method.description}</p>
+                )}
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
+                  {method.minimum_hardware && (
+                    <div>
+                      <span class="text-xs text-[var(--color-text-tertiary)] block">Hardware</span>
+                      <span class="text-[var(--color-text-secondary)]">{method.minimum_hardware}</span>
+                    </div>
+                  )}
+                  {method.minimum_capital_usd != null && (
+                    <div>
+                      <span class="text-xs text-[var(--color-text-tertiary)] block">Min. capital</span>
+                      <span class="font-mono text-[var(--color-text-secondary)]">{fmtUsd(method.minimum_capital_usd)}</span>
+                    </div>
+                  )}
+                  {method.estimated_returns && (
+                    <div>
+                      <span class="text-xs text-[var(--color-text-tertiary)] block">Est. returns</span>
+                      <span class="text-[var(--color-text-secondary)]">{method.estimated_returns}</span>
+                    </div>
+                  )}
+                </div>
+
+                {method.barriers_to_entry && method.barriers_to_entry.length > 0 && (
+                  <div class="mt-3">
+                    <span class="text-xs text-[var(--color-text-tertiary)]">Barriers: </span>
+                    <span class="text-sm text-[var(--color-text-secondary)]">{method.barriers_to_entry.join(', ')}</span>
+                  </div>
+                )}
+
+                {method.guide_available && method.guide_url && (
+                  <a href={method.guide_url} class="inline-block mt-2 text-xs text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]">View guide &rarr;</a>
+                )}
+              </div>
+            ))}
+
+            {r!.participation!.developer_resources && (
+              <div class="mt-4">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Developer resources</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {r!.participation!.developer_resources.sdk_available != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">SDK</span>
+                      <span class="research-fact-value">{r!.participation!.developer_resources.sdk_available ? 'Available' : 'None'}</span>
+                    </div>
+                  )}
+                  {r!.participation!.developer_resources.api_available != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">API</span>
+                      <span class="research-fact-value">{r!.participation!.developer_resources.api_available ? 'Available' : 'None'}</span>
+                    </div>
+                  )}
+                  {r!.participation!.developer_resources.documentation_quality && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Docs quality</span>
+                      <span class="research-fact-value">{r!.participation!.developer_resources.documentation_quality}</span>
+                    </div>
+                  )}
+                  {r!.participation!.developer_resources.grants_program != null && (
+                    <div class="research-fact">
+                      <span class="research-fact-label">Grants</span>
+                      <span class="research-fact-value">
+                        {r!.participation!.developer_resources.grants_program
+                          ? (r!.participation!.developer_resources.grants_url
+                              ? <a href={r!.participation!.developer_resources.grants_url} class="text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]" target="_blank" rel="noopener">Yes</a>
+                              : 'Yes')
+                          : 'No'}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- USAGE & TRACTION --- */}
+        {hasUsage && (
+          <section class="research-section">
+            <h2 class="research-h2">Usage and traction</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
+              {r!.usage_metrics!.nodes_active != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Active nodes</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.nodes_active)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.validators_active != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Validators</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.validators_active)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.miners_active != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Miners</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.miners_active)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.active_users_daily != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Daily active users</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.active_users_daily)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.daily_transactions != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Daily transactions</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.daily_transactions)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.tvl_usd != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">TVL</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtUsd(r!.usage_metrics!.tvl_usd)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.revenue_annual_usd != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Annual revenue</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtUsd(r!.usage_metrics!.revenue_annual_usd)}</span>
+                </div>
+              )}
+              {r!.usage_metrics!.compute_delivered && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Compute</span>
+                  <span class="text-sm text-[var(--color-text-primary)]">{r!.usage_metrics!.compute_delivered}</span>
+                </div>
+              )}
+            </div>
+
+            {(r!.usage_metrics!.metrics_source || r!.usage_metrics!.metrics_date) && (
+              <p class="text-xs text-[var(--color-text-tertiary)] mb-2">
+                {r!.usage_metrics!.metrics_source && <span>Data from: {r!.usage_metrics!.metrics_source}</span>}
+                {r!.usage_metrics!.metrics_date && <span> ({r!.usage_metrics!.metrics_date})</span>}
+              </p>
+            )}
+
+            {r!.usage_metrics!.usage_notes && (
+              <p class="text-sm text-[var(--color-text-secondary)] italic">{r!.usage_metrics!.usage_notes}</p>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- COMMUNITY --- */}
+        {hasCommunity && (
+          <section class="research-section">
+            <h2 class="research-h2">Community</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              {r!.community!.discord_members != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Discord</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.discord_members)}</span>
+                </div>
+              )}
+              {r!.community!.telegram_members != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Telegram</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.telegram_members)}</span>
+                </div>
+              )}
+              {r!.community!.x_followers != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">X followers</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.x_followers)}</span>
+                </div>
+              )}
+              {r!.community!.github_contributors != null && (
+                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">GitHub contributors</span>
+                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.github_contributors)}</span>
+                </div>
+              )}
+            </div>
+
+            {r!.community!.governance_model && (
+              <div class="mb-3">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-1">Governance</h3>
+                <p class="text-sm text-[var(--color-text-secondary)]">
+                  {r!.community!.governance_model}
+                  {r!.community!.governance_url && (
+                    <span> <a href={r!.community!.governance_url} class="text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]" target="_blank" rel="noopener">View &rarr;</a></span>
+                  )}
+                </p>
+              </div>
+            )}
+
+            {r!.community!.sentiment_summary && (
+              <div class="mb-3">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-1">Sentiment</h3>
+                <p class="text-sm text-[var(--color-text-secondary)]">{r!.community!.sentiment_summary}</p>
+              </div>
+            )}
+
+            <p class="research-attribution">Source: OYM Research{researchDate ? ` · Last updated ${researchDate}` : ''}</p>
+          </section>
+        )}
+
+        {/* --- SOURCES CONSULTED --- */}
+        {hasSources && (
+          <section class="research-section">
+            <details class="research-sources-details">
+              <summary class="research-h2 cursor-pointer select-none list-none flex items-center gap-2">
+                Sources consulted
+                <span class="text-xs text-[var(--color-text-tertiary)] font-normal">({r!.sources!.filter(s => s.title || s.url).length})</span>
+                <svg class="research-chevron w-4 h-4 text-[var(--color-text-tertiary)] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div class="mt-4 space-y-2">
+                {r!.sources!.filter(s => s.title || s.url).map(source => (
+                  <div class="flex items-start gap-3 p-3 rounded-lg bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+                    {source.source_id && (
+                      <span class="font-mono text-xs text-[var(--color-text-tertiary)] shrink-0 mt-0.5">{source.source_id}</span>
+                    )}
+                    {source.tier != null && (
+                      <span class:list={['badge text-xs shrink-0', tierColor(source.tier)]}>{tierLabel(source.tier)}</span>
+                    )}
+                    <div class="min-w-0 flex-1">
+                      {source.url ? (
+                        <a href={source.url} class="text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] break-all" target="_blank" rel="noopener">{source.title || source.url}</a>
+                      ) : (
+                        <span class="text-sm text-[var(--color-text-primary)]">{source.title}</span>
+                      )}
+                      <div class="flex flex-wrap gap-2 mt-1 text-xs text-[var(--color-text-tertiary)]">
+                        {source.type && <span>{source.type.replace('_', ' ')}</span>}
+                        {source.publisher && <span>· {source.publisher}</span>}
+                        {source.date_accessed && <span>· Accessed {source.date_accessed}</span>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </details>
+          </section>
+        )}
+
+      </div>
+    )}
+
   </article>
 </ContentLayout>
+
+<style>
+  .research-sections {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2.5rem;
+  }
+
+  .research-section {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+
+  .research-section:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .research-h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .research-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .research-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: var(--color-bg-tertiary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .research-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+  }
+
+  .research-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .research-fact {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+  }
+
+  .research-fact-label {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .research-fact-value {
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+  }
+
+  .research-attribution {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+  }
+
+  .research-sources-details[open] .research-chevron {
+    transform: rotate(180deg);
+  }
+
+  .research-sources-details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

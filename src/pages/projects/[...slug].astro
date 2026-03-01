@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import { getProjectResearch } from '../../data/project-research';
+import type { ProjectResearchRecord } from '../../data/project-research';
 
 export async function getStaticPaths() {
   const entries = await getCollection('projects');
@@ -12,6 +14,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const research: ProjectResearchRecord | null = getProjectResearch(entry.id);
 ---
 
 <ProjectLayout
@@ -26,6 +29,7 @@ const { Content } = await render(entry);
   coingeckoId={entry.data.coingeckoId}
   verdict={entry.data.verdict}
   oymHolds={entry.data.oymHolds}
+  research={research}
 >
   <Content />
 </ProjectLayout>
