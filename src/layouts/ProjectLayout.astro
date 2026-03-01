@@ -1,8 +1,9 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
+import Sparkline from '../components/Sparkline.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
-import type { ProjectResearchRecord } from '../data/project-research';
+import type { ProjectResearchRecord, MetricsSnapshot } from '../data/project-research';
 
 interface Props {
   title: string;
@@ -68,6 +69,15 @@ const hasSources = !!(r?.sources?.some(s => s.title || s.url));
 const hasFreedomBreakdown = !!(r?.freedom_score?.total_score != null);
 const hasAnyResearch = hasTeam || hasTechnical || hasTokenomics || hasParticipation || hasUsage || hasCommunity;
 const researchDate = r?.meta?.last_updated || r?.meta?.research_date || null;
+
+// Extract trend data from metrics_history for sparklines
+function getTrend(key: keyof MetricsSnapshot): number[] {
+  const history = r?.metrics_history;
+  if (!history || history.length < 2) return [];
+  return history
+    .map((s) => s[key])
+    .filter((v): v is number => typeof v === 'number');
+}
 
 // Format large numbers with commas
 function fmtNum(n: number | null | undefined): string {
@@ -344,19 +354,28 @@ function tierColor(tier: number | null | undefined): string {
                 {r!.technical!.github_metrics.contributors != null && (
                   <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                     <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Contributors</span>
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.contributors)}</span>
+                    <span class="flex items-center gap-2">
+                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.contributors)}</span>
+                      <Sparkline data={getTrend('contributors')} width={48} height={16} />
+                    </span>
                   </div>
                 )}
                 {r!.technical!.github_metrics.stars != null && (
                   <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                     <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Stars</span>
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.stars)}</span>
+                    <span class="flex items-center gap-2">
+                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.stars)}</span>
+                      <Sparkline data={getTrend('stars')} width={48} height={16} />
+                    </span>
                   </div>
                 )}
                 {r!.technical!.github_metrics.forks != null && (
                   <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                     <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Forks</span>
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.forks)}</span>
+                    <span class="flex items-center gap-2">
+                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.forks)}</span>
+                      <Sparkline data={getTrend('forks')} width={48} height={16} />
+                    </span>
                   </div>
                 )}
                 {r!.technical!.github_metrics.last_commit_date && (
@@ -749,25 +768,37 @@ function tierColor(tier: number | null | undefined): string {
               {r!.community!.discord_members != null && (
                 <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                   <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Discord</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.discord_members)}</span>
+                  <span class="flex items-center gap-2">
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.discord_members)}</span>
+                    <Sparkline data={getTrend('discord_members')} width={48} height={16} />
+                  </span>
                 </div>
               )}
               {r!.community!.telegram_members != null && (
                 <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                   <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Telegram</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.telegram_members)}</span>
+                  <span class="flex items-center gap-2">
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.telegram_members)}</span>
+                    <Sparkline data={getTrend('telegram_members')} width={48} height={16} />
+                  </span>
                 </div>
               )}
               {r!.community!.x_followers != null && (
                 <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                   <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">X followers</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.x_followers)}</span>
+                  <span class="flex items-center gap-2">
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.x_followers)}</span>
+                    <Sparkline data={getTrend('x_followers')} width={48} height={16} />
+                  </span>
                 </div>
               )}
               {r!.community!.github_contributors != null && (
                 <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
                   <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">GitHub contributors</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.github_contributors)}</span>
+                  <span class="flex items-center gap-2">
+                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.github_contributors)}</span>
+                    <Sparkline data={getTrend('contributors')} width={48} height={16} />
+                  </span>
                 </div>
               )}
             </div>

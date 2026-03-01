@@ -114,6 +114,22 @@ function today(): string {
   return new Date().toISOString().split('T')[0];
 }
 
+function buildSnapshot(metrics: GitHubUpdate, data: Record<string, any>): Record<string, unknown> {
+  return {
+    date: today(),
+    source: 'github-refresh',
+    stars: metrics.stars,
+    forks: metrics.forks,
+    open_issues: metrics.open_issues,
+    contributors: metrics.contributors,
+    total_commits: metrics.total_commits,
+    total_repos: metrics.total_repos,
+    discord_members: data.community?.discord_members ?? null,
+    telegram_members: data.community?.telegram_members ?? null,
+    x_followers: data.community?.x_followers ?? null,
+  };
+}
+
 async function main() {
   console.log(`GitHub Metrics Refresh${DRY_RUN ? ' (DRY RUN)' : ''}`);
   console.log(`Token: ${GITHUB_TOKEN ? 'provided' : 'not set (60 req/hr limit)'}`);
@@ -190,6 +206,12 @@ async function main() {
 
     if (fieldsUpdated.length === 0) {
       console.log(`  ${file}: no changes`);
+      if (!DRY_RUN) {
+        if (!data.metrics_history) data.metrics_history = [];
+        data.metrics_history.push(buildSnapshot(metrics, data));
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n', 'utf-8');
+        console.log(`  ${file}: snapshot appended`);
+      }
       continue;
     }
 
@@ -216,6 +238,10 @@ async function main() {
 
     if (!data.community) data.community = {};
     data.community.github_contributors = metrics.contributors;
+
+    // Append metrics snapshot
+    if (!data.metrics_history) data.metrics_history = [];
+    data.metrics_history.push(buildSnapshot(metrics, data));
 
     // Increment version and update date
     data.meta.version = (data.meta.version ?? 0) + 1;

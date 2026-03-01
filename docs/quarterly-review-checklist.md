@@ -81,8 +81,26 @@ For each modified project JSON:
 }
 ```
 
-5. Review `meta.research_gaps` -- close resolved items, add new ones
-6. Review all `prose_fields_with_embedded_figures` and update prose if figures changed materially
+5. Append a `metrics_history` entry with all current counts:
+
+```json
+{
+  "date": "YYYY-MM-DD",
+  "source": "manual-quarterly",
+  "stars": 1234,
+  "forks": 567,
+  "open_issues": 89,
+  "contributors": 120,
+  "total_commits": 4500,
+  "total_repos": 15,
+  "discord_members": 48200,
+  "telegram_members": 12000,
+  "x_followers": 95000
+}
+```
+
+6. Review `meta.research_gaps` -- close resolved items, add new ones
+7. Review all `prose_fields_with_embedded_figures` and update prose if figures changed materially
 
 ---
 

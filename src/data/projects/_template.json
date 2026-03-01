@@ -205,5 +205,7 @@
     "overall_assessment": null
   },
 
-  "sources": []
+  "sources": [],
+
+  "metrics_history": []
 }

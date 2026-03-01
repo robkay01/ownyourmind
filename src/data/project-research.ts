@@ -512,6 +512,25 @@ export interface Source {
   reliability_notes?: string | null;
 }
 
+// --- Metrics History ---
+// Time-series snapshots for trending sparklines on project pages.
+
+export interface MetricsSnapshot {
+  /** Date the snapshot was taken: YYYY-MM-DD */
+  date: string;
+  /** What triggered this snapshot */
+  source: 'github-refresh' | 'manual-quarterly' | 'manual';
+  stars?: number | null;
+  forks?: number | null;
+  open_issues?: number | null;
+  contributors?: number | null;
+  total_commits?: number | null;
+  total_repos?: number | null;
+  discord_members?: number | null;
+  telegram_members?: number | null;
+  x_followers?: number | null;
+}
+
 // --- Top-level record ---
 
 export interface ProjectResearchRecord {
@@ -526,6 +545,7 @@ export interface ProjectResearchRecord {
   freedom_score?: FreedomScore | null;
   assessment?: Assessment | null;
   sources?: Source[] | null;
+  metrics_history?: MetricsSnapshot[] | null;
 }
 
 // ============================================
