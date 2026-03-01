@@ -609,6 +609,210 @@ a:focus-visible {
   }
 }
 
+/* ============================================
+   Freedom Score Breakdown
+   ============================================ */
+
+.freedom-breakdown-container {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.freedom-breakdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.freedom-breakdown-label {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.freedom-breakdown-total {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.freedom-breakdown-max {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+}
+
+.freedom-breakdown-summary {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Grade badges */
+.freedom-breakdown-grade-a {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.freedom-breakdown-grade-b {
+  background-color: rgba(13, 148, 136, 0.15);
+  color: #0D9488;
+  border: 1px solid rgba(13, 148, 136, 0.3);
+}
+
+.freedom-breakdown-grade-c {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.freedom-breakdown-grade-d {
+  background-color: rgba(249, 115, 22, 0.15);
+  color: #F97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.freedom-breakdown-grade-f {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Sub-score rows */
+.freedom-breakdown-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.freedom-breakdown-row-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.freedom-breakdown-dim-label {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.freedom-breakdown-bar-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.freedom-breakdown-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.freedom-breakdown-dim-score {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  width: 48px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.freedom-breakdown-dim-max {
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  font-size: 0.75rem;
+}
+
+/* Evidence accordions */
+.freedom-breakdown-evidence {
+  margin-top: 4px;
+  margin-left: 212px;
+}
+
+.freedom-breakdown-evidence-toggle {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.freedom-breakdown-evidence-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.freedom-breakdown-evidence-toggle:hover {
+  color: var(--color-text-secondary);
+}
+
+.freedom-breakdown-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.15s ease;
+}
+
+.freedom-breakdown-evidence[open] .freedom-breakdown-chevron {
+  transform: rotate(180deg);
+}
+
+.freedom-breakdown-evidence-text {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-accent-muted);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Mobile: stack label above bar */
+@media (max-width: 768px) {
+  .freedom-breakdown-container {
+    padding: 16px;
+  }
+
+  .freedom-breakdown-row-inner {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  .freedom-breakdown-dim-label {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+
+  .freedom-breakdown-bar-track {
+    flex: 1;
+  }
+
+  .freedom-breakdown-dim-score {
+    width: auto;
+  }
+
+  .freedom-breakdown-evidence {
+    margin-left: 0;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {

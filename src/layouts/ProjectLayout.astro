@@ -1,5 +1,6 @@
 ---
 import ContentLayout from './ContentLayout.astro';
+import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
 import type { ProjectResearchRecord } from '../data/project-research';
 
@@ -64,6 +65,7 @@ const hasCommunity = !!(r?.community && (
   r.community.github_contributors != null
 ));
 const hasSources = !!(r?.sources?.some(s => s.title || s.url));
+const hasFreedomBreakdown = !!(r?.freedom_score?.total_score != null);
 const hasAnyResearch = hasTeam || hasTechnical || hasTokenomics || hasParticipation || hasUsage || hasCommunity;
 const researchDate = r?.meta?.last_updated || r?.meta?.research_date || null;
 
@@ -137,19 +139,23 @@ function tierColor(tier: number | null | undefined): string {
       <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">{title}</h1>
       <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">{description}</p>
 
-      <!-- Freedom Score -->
-      <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-        <span class="text-sm font-medium text-[var(--color-text-secondary)]">Freedom Score</span>
-        <div class="flex-1 h-2 rounded-full bg-[var(--color-bg-primary)]">
-          <div
-            class="h-full rounded-full transition-all"
-            style={`width: ${freedomScore * 10}%; background-color: ${scoreColor};`}
-          />
+      <!-- Freedom Score: full breakdown when research exists, simple bar otherwise -->
+      {hasFreedomBreakdown ? (
+        <FreedomScoreBreakdown freedomScore={r!.freedom_score} />
+      ) : (
+        <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+          <span class="text-sm font-medium text-[var(--color-text-secondary)]">Freedom Score</span>
+          <div class="flex-1 h-2 rounded-full bg-[var(--color-bg-primary)]">
+            <div
+              class="h-full rounded-full transition-all"
+              style={`width: ${freedomScore * 10}%; background-color: ${scoreColor};`}
+            />
+          </div>
+          <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${scoreColor};`}>
+            {freedomScore}/10
+          </span>
         </div>
-        <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${scoreColor};`}>
-          {freedomScore}/10
-        </span>
-      </div>
+      )}
 
       <!-- Market Data -->
       {market && (

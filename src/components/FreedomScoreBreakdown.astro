@@ -1,0 +1,100 @@
+---
+import type { FreedomScore, FreedomDimension } from '../data/project-research';
+
+interface Props {
+  freedomScore?: FreedomScore | null;
+}
+
+const { freedomScore } = Astro.props;
+
+const show = !!(freedomScore && freedomScore.total_score != null);
+
+const dimensions: { key: string; label: string; data: FreedomDimension | null | undefined }[] = show ? [
+  { key: 'infrastructure', label: 'Infrastructure decentralisation', data: freedomScore!.breakdown?.infrastructure_decentralisation },
+  { key: 'governance', label: 'Governance decentralisation', data: freedomScore!.breakdown?.governance_decentralisation },
+  { key: 'distribution', label: 'Token distribution fairness', data: freedomScore!.breakdown?.token_distribution_fairness },
+  { key: 'censorship', label: 'Censorship resistance', data: freedomScore!.breakdown?.censorship_resistance },
+  { key: 'sovereignty', label: 'Data sovereignty', data: freedomScore!.breakdown?.data_sovereignty },
+  { key: 'opensource', label: 'Open source transparency', data: freedomScore!.breakdown?.open_source_transparency },
+] : [];
+
+function barColor(score: number | null | undefined, max: number | null | undefined): string {
+  if (score == null || max == null || max === 0) return '#64748B';
+  const pct = score / max;
+  if (pct >= 0.75) return '#10B981';
+  if (pct >= 0.5) return '#F59E0B';
+  return '#EF4444';
+}
+
+function gradeColor(grade: string | null | undefined): string {
+  switch (grade) {
+    case 'A': return 'freedom-breakdown-grade-a';
+    case 'B': return 'freedom-breakdown-grade-b';
+    case 'C': return 'freedom-breakdown-grade-c';
+    case 'D': return 'freedom-breakdown-grade-d';
+    case 'F': return 'freedom-breakdown-grade-f';
+    default: return 'badge-dormant';
+  }
+}
+---
+
+{show && freedomScore && (
+  <div class="freedom-breakdown-container">
+    <!-- Header -->
+    <div class="freedom-breakdown-header">
+      <span class="freedom-breakdown-label">Freedom Score</span>
+      <div class="flex items-center gap-2">
+        {freedomScore.freedom_grade && (
+          <span class:list={['badge', gradeColor(freedomScore.freedom_grade)]}>
+            {freedomScore.freedom_grade}
+          </span>
+        )}
+        <span class="freedom-breakdown-total">{freedomScore.total_score}<span class="freedom-breakdown-max">/100</span></span>
+      </div>
+    </div>
+
+    {freedomScore.freedom_summary && (
+      <p class="freedom-breakdown-summary">{freedomScore.freedom_summary}</p>
+    )}
+
+    <!-- Sub-score bars -->
+    <div class="freedom-breakdown-bars">
+      {dimensions.map(dim => {
+        if (!dim.data || dim.data.score == null) return null;
+        const score = dim.data.score;
+        const max = dim.data.max ?? 20;
+        const pct = max > 0 ? (score / max) * 100 : 0;
+        const color = barColor(score, max);
+        const hasEvidence = !!(dim.data.evidence);
+
+        return (
+          <div class="freedom-breakdown-row">
+            <div class="freedom-breakdown-row-inner">
+              <span class="freedom-breakdown-dim-label">{dim.label}</span>
+              <div class="freedom-breakdown-bar-track">
+                <div
+                  class="freedom-breakdown-bar-fill"
+                  style={`width: ${pct}%; background-color: ${color};`}
+                />
+              </div>
+              <span class="freedom-breakdown-dim-score" style={`color: ${color};`}>
+                {score}<span class="freedom-breakdown-dim-max">/{max}</span>
+              </span>
+            </div>
+            {hasEvidence && (
+              <details class="freedom-breakdown-evidence">
+                <summary class="freedom-breakdown-evidence-toggle">
+                  Evidence
+                  <svg class="freedom-breakdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </summary>
+                <div class="freedom-breakdown-evidence-text">
+                  {dim.data.evidence}
+                </div>
+              </details>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+)}
