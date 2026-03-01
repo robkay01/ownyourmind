@@ -1,7 +1,7 @@
 ---
 title: "Morpheus"
 description: "A decentralised network for personal AI agents, backed by a fair-launch token and tokenised compute marketplace. Full review with practitioner assessment."
-category: "agent"
+category: "platform"
 token: "MOR"
 status: "active"
 freedomScore: 8
