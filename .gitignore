@@ -20,6 +20,9 @@ pnpm-debug.log*
 # youtube cookies (contains auth tokens — never commit)
 cookies.txt
 
+# Claude Code internal state
+.claude/
+
 # macOS-specific files
 .DS_Store
 
