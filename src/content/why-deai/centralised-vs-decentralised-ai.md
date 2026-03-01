@@ -1,0 +1,77 @@
+---
+title: "Centralised AI vs Decentralised AI"
+description: "An honest comparison. What centralised does better today, where decentralised wins, and where the gap is closing. No ideology, just practitioner observations."
+publishDate: 2025-03-02
+draft: false
+---
+
+## The honest version
+
+Most comparisons between centralised and decentralised AI read like marketing material for one side or the other. Centralised advocates dismiss DeAI as slow, expensive and impractical. DeAI advocates pretend their tools already match GPT-4. Both are wrong.
+
+I use both daily. Centralised AI for most of my professional work. Decentralised infrastructure for experimentation, sovereignty-sensitive tasks and earning yield. Here is what actually holds up in practice.
+
+## Where centralised AI wins today
+
+**Model quality at the frontier.** Claude, GPT-4 and Gemini are the best general-purpose models available. They are better than any open-weight alternative for complex reasoning, long-context tasks and nuanced instruction following. This is not close right now.
+
+**Ease of use.** Sign up, get an API key, start building. The developer experience on centralised platforms is polished. Documentation is thorough. Libraries work out of the box. You can go from zero to a working prototype in an afternoon.
+
+**Reliability.** Centralised APIs have uptime guarantees, dedicated infrastructure and engineering teams keeping things running. When you are building a production system, this matters.
+
+**Speed.** Centralised inference on dedicated hardware is fast. Decentralised networks add latency from routing, node selection and network overhead. For real-time applications, this gap is significant.
+
+**Multimodal capability.** Vision, audio, video, tool use, computer interaction. Centralised models are years ahead on multimodal capabilities. Open models are catching up but the gap remains.
+
+## Where decentralised AI wins
+
+**Cost.** Decentralised compute marketplaces consistently undercut centralised cloud providers. Akash offers GPU compute at 50-80% below AWS equivalent pricing. For batch inference, training runs and non-latency-sensitive workloads, the economics are compelling.
+
+**Censorship resistance.** No terms of service. No content policy. No model refusing your request because a safety team decided your use case was problematic. If you need uncensored inference for legitimate purposes (security research, creative writing, medical queries, legal analysis), decentralised is the only reliable option.
+
+**Privacy.** Your prompts, your data and your outputs stay on infrastructure you control. No corporate data harvesting. No ambiguity about whether your inputs are being used to train the next model version. For sensitive professional work, this is not optional.
+
+**Ownership.** When you run infrastructure on a decentralised network, you own a piece of that network through tokens. You earn yield. You participate in governance. You are a stakeholder, not a customer. When the network grows, your position grows with it.
+
+**Permissionless access.** No KYC. No waitlists. No geographic restrictions. No corporate approval process. You connect and you use it. For people in jurisdictions with restrictive AI policies, this is the only path to access.
+
+**Resilience.** No single point of failure. If one node goes down, the network routes around it. There is no "OpenAI is having an outage" moment that takes down every application built on the platform.
+
+## Where the gap is closing
+
+**Open model quality.** Llama 3, Mistral, Qwen 2.5 and DeepSeek are competitive with closed models for most practical tasks. The gap at the frontier persists but the frontier is not where most work happens. For code generation, summarisation, classification and structured extraction, open models are good enough right now.
+
+**Local inference performance.** Apple Silicon changed the equation. A Mac Studio with 64GB of unified memory runs 70B parameter models at usable speeds. Quantised models (GGUF format via llama.cpp or Ollama) deliver 80-90% of full-precision quality at a fraction of the compute cost. I run local models for first-draft work, code review and data processing daily.
+
+**Network infrastructure.** Decentralised compute networks are maturing. Morpheus launched its compute marketplace. Akash has thousands of active deployments. Bittensor processes real inference workloads across dozens of subnets. These are no longer whitepapers. They are functioning systems with measurable usage.
+
+## The practical framework
+
+The choice between centralised and decentralised is not binary. It is a spectrum, and the right position depends on what you are doing.
+
+**Use centralised when:**
+- You need frontier model quality (complex reasoning, long-context analysis)
+- Latency matters (real-time applications, interactive tools)
+- You want the easiest developer experience
+- You are prototyping and speed of iteration matters more than sovereignty
+
+**Use decentralised when:**
+- Cost matters and you can tolerate some latency
+- Privacy is critical (sensitive data, professional confidentiality)
+- You need uncensored inference
+- You want to own infrastructure rather than rent it
+- You are building something that cannot depend on a single provider
+
+**Run local when:**
+- You are working with sensitive data that must not leave your machine
+- You want zero ongoing costs after hardware investment
+- You need offline capability
+- You want to experiment with models without API costs
+
+I run all three. Centralised for professional work where I need the best model available. Local for sensitive tasks, experimentation and daily utility. Decentralised networks for yield generation and building conviction in the infrastructure I write about.
+
+## The trajectory
+
+The gap between centralised and decentralised AI is narrowing, not widening. Open models improve with every release. Compute networks add capacity and reduce latency. Local hardware gets more capable.
+
+The question is not whether decentralised AI will be competitive. The question is how quickly it gets there and who will have built positions in the infrastructure when it does.
