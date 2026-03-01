@@ -1,27 +1,41 @@
 {
   "meta": {
     "project_id": "morpheus",
-    "research_date": null,
-    "researcher": null,
+    "research_date": "2026-03-01",
+    "researcher": "Claude (OYM Research Agent)",
     "version": 1,
-    "last_updated": null,
+    "last_updated": "2026-03-01",
     "status": "draft",
-    "research_gaps": []
+    "research_gaps": [
+      "Exact active compute node count not publicly available. No dashboard reports this metric.",
+      "Market data shows significant discrepancies across aggregators (CoinGecko, CoinMarketCap, DropsTab). Verify on-chain before publishing.",
+      "CoinGecko ID in morpheus.md frontmatter is 'morpheus-network' which is the WRONG project (Morpheus Network / MNW). Should be 'morpheusai'.",
+      "Which pseudonymous whitepaper author (Morpheus, Trinity, Neo) maps to which real person is not publicly confirmed.",
+      "Protection Fund (4% of emissions) governance and disbursement rules are not extensively documented.",
+      "Daily transaction count not publicly reported. Protocol designed to minimise on-chain writes.",
+      "mor.org claims '1M+ users' which likely counts wallet interactions across ecosystem projects, not unique active users. Treat with scepticism.",
+      "Real staking APY is variable and not fixed. No published figure exists.",
+      "Exact GitHub contributor count could not be verified via API. mor.org self-reports '300+ open-source developers'.",
+      "Metamorph Labs entity (docs.metamorphlabs.io) unclear — may be community documentation site, not legal entity.",
+      "ATL discrepancy: CryptoRank reports $0.000211 on 30 Oct 2024 (likely data artefact). CoinGecko's $0.4768 is more credible.",
+      "Compute provider staking uses LMR (Lumerin token) — exact requirements not fully documented in public sources.",
+      "Total MOR emitted to date vs circulating supply discrepancy suggests significant unclaimed or locked MOR."
+    ]
   },
 
   "identity": {
     "name": "Morpheus",
     "ticker": "MOR",
     "category": "agent",
-    "subcategory": null,
-    "tagline": null,
-    "one_liner": null,
+    "subcategory": "compute network",
+    "tagline": "A Network For Powering Smart Agents",
+    "one_liner": "Decentralised peer-to-peer network for building and running AI agents, funded by a four-way token incentive system across compute, code, capital, and community contributors.",
     "website": "https://mor.org",
-    "documentation_url": null,
-    "whitepaper_url": null,
+    "documentation_url": "https://gitbook.mor.org",
+    "whitepaper_url": "https://github.com/MorpheusAIs/Docs/blob/main/!KEYDOCS%20README%20FIRST!/WhitePaper.md",
     "github_url": "https://github.com/MorpheusAIs",
-    "chain": "Ethereum / Arbitrum",
-    "launch_date": null,
+    "chain": "Ethereum / Arbitrum / Base",
+    "launch_date": "2024-02-08",
     "current_status": "mainnet",
     "logo_url": null
   },
@@ -29,166 +43,293 @@
   "team": {
     "founding_team": [
       {
-        "name": null,
-        "role": null,
-        "background": null,
+        "name": "Morpheus, Trinity, Neo (pseudonymous)",
+        "role": "Whitepaper authors",
+        "background": "Published the Morpheus whitepaper on 2 September 2023 under Matrix-themed pseudonyms. Real identities not officially confirmed.",
         "linkedin_or_x": null,
-        "doxxed": null
+        "doxxed": false
+      },
+      {
+        "name": "David A. Johnston",
+        "role": "Lead Technologist & Code Maintainer",
+        "background": "Serial crypto entrepreneur since 2012. Coined the term 'DApps' (2013). Co-founded BitAngels (first crypto angel group). Board of Mastercoin (first token sale, 2013). Former Chairman at Factom. Runs Yeoman's Capital. Created 'Smart Agents' framework.",
+        "linkedin_or_x": "https://x.com/DJohnstonEC",
+        "doxxed": true
+      },
+      {
+        "name": "Erik Voorhees",
+        "role": "Community contributor (not formal leadership)",
+        "background": "Founder and former CEO of ShapeShift. Now CEO of Venice.ai (privacy-focused AI platform). Long-standing Bitcoin advocate. Venice.ai integrates with Morpheus as community partner. Voorhees explicitly says he is 'just a humble community member'.",
+        "linkedin_or_x": "https://x.com/ErikVoorhees",
+        "doxxed": true
+      },
+      {
+        "name": "Lumerin Protocol team",
+        "role": "Key code contributors (compute node infrastructure)",
+        "background": "Founded 2021. Built and maintain the Morpheus-Lumerin Node (desktop client for decentralised AI inference). Originally a hashpower marketplace for Bitcoin mining. Strategic partners: Bloq, Hive Blockchain, Fenbushi Capital, Outlier Ventures.",
+        "linkedin_or_x": "https://github.com/MorpheusAIs/Morpheus-Lumerin-Node",
+        "doxxed": true
       }
     ],
-    "team_size_estimate": null,
-    "entity_name": null,
+    "team_size_estimate": 15,
+    "entity_name": "None — no company, foundation, or DAO wrapper",
     "entity_jurisdiction": null,
-    "notable_backers": [],
+    "notable_backers": [
+      "No traditional VC investors. Fair launch with no presale.",
+      "Lumerin Protocol (backed by Bloq, Hive Blockchain, Fenbushi Capital, Outlier Ventures) is key infrastructure partner."
+    ],
     "funding_raised": {
-      "total_usd": null,
+      "total_usd": 0,
       "rounds": []
     }
   },
 
   "technical": {
-    "architecture_summary": null,
-    "consensus_mechanism": null,
-    "what_is_onchain": null,
-    "what_is_offchain": null,
-    "key_dependencies": [],
-    "smart_contract_languages": [],
+    "architecture_summary": "Morpheus is not a blockchain but a chain-agnostic protocol using the Techno Capital Machine (TCM) to fund open-source AI development. Users deposit yield-generating assets (stETH, USDC, USDT, WBTC). 50% of the yield buys MOR tokens via an AMM; the other 50% pairs with the purchased MOR as Protocol-Owned Liquidity (PoL). Daily MOR emissions (starting at 14,400, decaying linearly to zero over 16 years) are split across four contributor pools (24% each) plus a 4% protection fund. The compute layer uses the Yellowstone model: a Lumerin-based proxy router negotiates a two-sided market between AI users and GPU providers. Users submit signed Requests for Compute specifying LLM and throughput requirements. The router selects providers by lowest cost per inference, performs liveness checks, and routes TCP/IP connections directly. Smart Agents run locally on user machines and interact with Web3 wallets, DApps, and smart contracts.",
+    "consensus_mechanism": "Atomic Governance (not PoS or PoW). Each contributor category operates independently: Compute uses the Yellowstone model with Lumerin proxy router selecting providers by cost and performance. Code consensus is maintainer-merge-gated on GitHub with FTE-weighted rewards. Capital is fully automated by smart contracts. Community builders prove contribution via MOR transaction fees burned through their frontends/tools.",
+    "what_is_onchain": "MOR token (ERC-20 + LayerZero OFT for cross-chain bridging). Distribution/emission contracts on Ethereum L1. MOR minting on Arbitrum L2. Compute marketplace contracts on Base. Capital deposit tracking, yield routing, time-lock and referral multipliers. Payment settlement for compute providers. Frontend/tool registration with IPFS hash.",
+    "what_is_offchain": "Lumerin proxy router software (provider-consumer matching, TCP/IP session management). Local LLM inference (runs on user machines). MORagents (Python-based agent infrastructure with Docker). Code repository evaluation (GitHub-based, human maintainer merges). IPFS for model and agent file storage.",
+    "key_dependencies": [
+      "Ethereum L1 (capital staking contracts)",
+      "Arbitrum L2 (MOR minting, reward distribution)",
+      "Base L2 (compute marketplace, inference)",
+      "Lido stETH/wstETH (primary yield source)",
+      "Aave V3 (yield source for USDC, USDT, WBTC)",
+      "LayerZero V1 (cross-chain messaging, OFT standard)",
+      "Chainlink Oracles (multi-asset yield normalisation)",
+      "Uniswap V3 (AMM for Protocol-Owned Liquidity)",
+      "OpenZeppelin (contract upgradeability framework)",
+      "Lumerin Protocol (compute routing)",
+      "IPFS / Kubo (distributed storage)"
+    ],
+    "smart_contract_languages": ["Solidity"],
     "open_source": true,
-    "license": null,
+    "license": "MIT",
     "github_metrics": {
-      "total_repos": null,
-      "primary_repo_url": null,
+      "total_repos": 52,
+      "primary_repo_url": "https://github.com/MorpheusAIs/Morpheus",
       "total_commits": null,
       "contributors": null,
-      "last_commit_date": null,
-      "stars": null,
-      "forks": null,
-      "open_issues": null
+      "last_commit_date": "2026-02-01",
+      "stars": 219,
+      "forks": 142,
+      "open_issues": 21
     },
-    "audits": [],
-    "security_incidents": []
+    "audits": [
+      {
+        "auditor": "OpenZeppelin",
+        "date": null,
+        "scope": "MOROFT.sol — ERC-20 token contract inheriting LayerZero OFT standard for cross-chain bridging. Commit 5e1222e.",
+        "result_summary": "Found constructor does not validate _delegate and _minter input addresses as non-zero. Also noted modified local copies of LayerZero-v2 contracts rather than importing as dependencies. Issues resolved in PR #29.",
+        "report_url": "https://www.openzeppelin.com/news/morpheus-mor-oft-token-audit"
+      },
+      {
+        "auditor": "Cyfrin / CodeHawks",
+        "date": "2024-01-01",
+        "scope": "Competitive public audit of Distribution.sol, L1Sender.sol, L2TokenReceiver.sol, and related staking/distribution/bridging contracts.",
+        "result_summary": "Multiple findings: block.timestamp as Uniswap swap deadline (no MEV protection), Lido staking rebase attack vector, privileged roles in Distribution.sol could cause indefinite custody of deposited tokens, ETH refund accumulation with no recovery mechanism.",
+        "report_url": "https://codehawks.cyfrin.io/c/2024-01-Morpheus"
+      },
+      {
+        "auditor": "Renascence Labs",
+        "date": null,
+        "scope": "MOR token smart contracts.",
+        "result_summary": "Mentioned alongside OpenZeppelin on official MOR token page. No standalone public report with detailed findings located.",
+        "report_url": null
+      },
+      {
+        "auditor": "Code4rena",
+        "date": "2025-08-25",
+        "scope": "MOR OFT, DistributionV6, DepositPool, ChainLinkDataConsumer contracts. $20,000 USDC bounty.",
+        "result_summary": "4 unique vulnerabilities found: forced MOR minting after v7 upgrade on zero-yield days, Chainlink oracle heartbeat mismatch across feeds, deposit pool migration issues with multiple public pools, dead code (unused isPrivateDepositPoolAdded variable).",
+        "report_url": "https://code4rena.com/reports/2025-08-morpheus"
+      }
+    ],
+    "security_incidents": [
+      "No confirmed hacks, exploits, or security incidents on MOR token or smart contract infrastructure as of March 2026. Contracts live since February 2024."
+    ]
   },
 
   "tokenomics": {
-    "token_name": "Morpheus",
+    "token_name": "MOR",
     "ticker": "MOR",
-    "token_standard": null,
-    "token_type": null,
-    "token_utility": [],
+    "token_standard": "ERC-20 with LayerZero OFT (Omnichain Fungible Token)",
+    "token_type": "utility",
+    "token_utility": [
+      "Access to pro-rata share of network compute/inference per day based on MOR balance",
+      "Rewarding four contributor classes (capital, code, compute, community)",
+      "Burned as transaction fees when accessing compute services",
+      "Protocol-Owned Liquidity via yield-to-MOR buybacks",
+      "Sybil resistance for compute requests (router prioritises by MOR balance)"
+    ],
     "supply": {
       "max_supply": 42000000,
       "total_supply": null,
-      "circulating_supply": null,
-      "circulating_supply_date": null,
-      "circulating_percentage": null
+      "circulating_supply": 6800000,
+      "circulating_supply_date": "2026-03-01",
+      "circulating_percentage": 16.2
     },
     "distribution": {
       "initial_allocation": [
         {
-          "category": "Compute providers",
+          "category": "Capital providers",
           "percentage": 24,
-          "vesting_schedule": null,
-          "cliff": null,
-          "notes": null
+          "vesting_schedule": "Daily emissions proportional to yield generated from deposited assets. Claims available after 90-day initial bootstrapping period.",
+          "cliff": "90 days (initial bootstrapping period, Feb-May 2024)",
+          "notes": "Deposit stETH, USDC, USDT, or WBTC. Only the yield is captured by the protocol; principal remains claimable by depositor."
         },
         {
           "category": "Code contributors",
           "percentage": 24,
-          "vesting_schedule": null,
-          "cliff": null,
-          "notes": null
+          "vesting_schedule": "Daily emissions weighted by Full-Time Equivalent (FTE) contribution value. Only merged code counts.",
+          "cliff": "90 days (initial bootstrapping period)",
+          "notes": "Rewards based on contribution weights assigned by community/maintainers, not hours worked."
         },
         {
-          "category": "Capital providers",
+          "category": "Compute providers",
           "percentage": 24,
-          "vesting_schedule": null,
-          "cliff": null,
-          "notes": null
+          "vesting_schedule": "Daily emissions proportional to compute demand served via Lumerin proxy router.",
+          "cliff": "90 days (initial bootstrapping period). $20M in MOR rewards made available Dec 2024.",
+          "notes": "Run Morpheus-Lumerin-Node with GPU. Earn based on inference requests served and performance."
         },
         {
           "category": "Community builders",
           "percentage": 24,
-          "vesting_schedule": null,
-          "cliff": null,
-          "notes": null
+          "vesting_schedule": "Daily emissions proportional to MOR transaction fees burned through builder frontends/tools.",
+          "cliff": "90 days (initial bootstrapping period). $10M in MOR rewards went live on Base Jan 2025.",
+          "notes": "Build frontends, tools, integrations. Register on-chain with IPFS link. 77 builders claimed rewards in a recent month."
         },
         {
           "category": "Protection fund",
           "percentage": 4,
-          "vesting_schedule": null,
+          "vesting_schedule": "Accrues daily alongside other pools.",
           "cliff": null,
-          "notes": null
+          "notes": "Reserved for security, bug bounties, unforeseen needs. Governance and disbursement rules not extensively documented."
         }
       ],
       "distribution_method": "fair-launch"
     },
     "emissions": {
       "model": "disinflationary",
-      "current_daily_emissions": null,
+      "current_daily_emissions": 12546,
       "current_annual_inflation_rate": null,
-      "halving_schedule": null,
+      "halving_schedule": "No halving. Linear daily decay: emissions decrease by ~2.469 MOR per day. Started at 14,400 MOR/day on 8 Feb 2024. Reaches zero on approximately day 5,833 (~16 years, around 2040).",
       "next_major_emission_event": null,
       "next_event_date": null,
-      "burn_mechanism": null
+      "burn_mechanism": "MOR is burned as transaction fees when users access compute/inference. Compute providers earn emissions proportional to MOR fees burned through their nodes. Community builders similarly earn based on share of MOR fees burned via their frontends."
     },
     "staking": {
       "staking_available": true,
-      "staking_type": null,
+      "staking_type": "Yield-redirect capital provision (deposit yield-bearing assets, earn MOR from redirected yield) plus MOR reward re-staking for Power Multiplier (up to 10.7x after 6 years).",
       "minimum_stake": null,
-      "lock_up_period": "90 days",
+      "lock_up_period": "stETH v1 pools: 7-day initial lock. v2 pools (USDC, USDT, WBTC): no lock-up, stake/unstake anytime. MOR rewards: accrual begins after 7 days, claimable after 90 days.",
       "current_apy_nominal": null,
       "real_yield_after_inflation": null,
-      "staking_ratio": null,
-      "staking_risks": [],
-      "slashing_conditions": null
+      "staking_ratio": 12,
+      "staking_risks": [
+        "Smart contract risk (mitigated by 4 audits from OpenZeppelin, Cyfrin, Renascence, Code4rena)",
+        "DeFi protocol risk (Lido stETH depeg, Aave protocol risk)",
+        "MOR token price volatility affecting reward value",
+        "Opportunity cost during 90-day reward claim delay",
+        "Contract upgradeability: Cyfrin audit noted owner of Distribution.sol has significant power over deposited tokens"
+      ],
+      "slashing_conditions": "No slashing mechanism found for capital providers. Compute provider slashing not explicitly documented."
     },
-    "token_model_classification": null,
-    "tokenomics_notes": null
+    "market_data": {
+      "price_usd": 0.75,
+      "market_cap_usd": 5100000,
+      "fully_diluted_valuation_usd": 31500000,
+      "twenty_four_hour_volume_usd": 29000,
+      "all_time_high_usd": 139.23,
+      "all_time_high_date": "2024-05-23",
+      "all_time_low_usd": 0.4768,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Uniswap V3 (Arbitrum) — primary DEX",
+        "Aerodrome (Base) — DEX",
+        "Uniswap V4 (Base) — DEX",
+        "CoinEx — CEX",
+        "Unocoin (India) — CEX, listed Dec 2024"
+      ],
+      "data_snapshot_date": "2026-03-01"
+    },
+    "token_model_classification": "Work token with burn-and-mint mechanics. MOR is earned through provable contributions (capital yield, compute served, code merged, community fees burned) and consumed by burning when accessing network services.",
+    "tokenomics_notes": "Market data shows significant discrepancies across aggregators. CoinGecko reports ~$5.1M market cap while DropsTab showed ~$21M. FDV calculated as $0.75 x 42M = $31.5M. 24h volume is very low (~$29K), indicating thin liquidity. Token is primarily DEX-traded with minimal CEX presence. The CoinGecko ID is 'morpheusai' (NOT 'morpheus-network' which is a different project — Morpheus Network / MNW)."
   },
 
   "participation": {
     "methods": [
       {
         "type": "staking",
-        "description": null,
-        "minimum_hardware": null,
+        "description": "Deposit yield-bearing assets (stETH, USDC, USDT, WBTC) into Morpheus smart contracts. Your principal remains intact and claimable. Only the yield generated is captured by the protocol. In return, you earn daily MOR emissions proportional to the yield your deposit generates. v2 contracts (Sep 2025) expanded beyond stETH via Aave integration.",
+        "minimum_hardware": "None — web wallet only",
         "minimum_capital_usd": null,
-        "technical_skill_required": null,
-        "estimated_returns": null,
-        "barriers_to_entry": [],
-        "guide_available": false,
-        "guide_url": null
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable. Depends on total capital deposited, yield generated, and MOR price. No fixed APY.",
+        "barriers_to_entry": [
+          "Need ETH for gas on Ethereum/Arbitrum",
+          "Need stETH or supported stablecoin/WBTC",
+          "90-day wait before MOR rewards are claimable",
+          "Understanding of DeFi yield mechanics"
+        ],
+        "guide_available": true,
+        "guide_url": "https://github.com/MorpheusAIs/Docs/blob/main/!KEYDOCS%20README%20FIRST!/FAQs%20&%20Guides/Guides/MOR/Mainnet/Capital%20Rewards%20Staking%20Contract%20Guide.md"
       },
       {
         "type": "node_operation",
-        "description": null,
-        "minimum_hardware": null,
+        "description": "Run a Morpheus-Lumerin-Node to provide decentralised AI inference. Node software connects to the Lumerin proxy router on Arbitrum, registers as a compute provider, and serves inference requests from users. Earn MOR from the 24% compute emissions pool proportional to demand served.",
+        "minimum_hardware": "GPU capable of running 8B parameter LLMs via llama.cpp. Multi-GPU recommended for larger models. Linux/macOS/Windows supported.",
         "minimum_capital_usd": null,
-        "technical_skill_required": null,
-        "estimated_returns": null,
-        "barriers_to_entry": [],
-        "guide_available": false,
-        "guide_url": null
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Pro-rata share of 24% of daily MOR emissions (~3,014 MOR/day at current rate), proportional to inference requests served.",
+        "barriers_to_entry": [
+          "Need GPU hardware capable of running LLMs",
+          "Need MOR tokens for provider registration/staking",
+          "Need ETH on Arbitrum for gas",
+          "Technical setup of llama.cpp backend",
+          "Network still early — demand for decentralised inference unclear"
+        ],
+        "guide_available": true,
+        "guide_url": "https://github.com/MorpheusAIs/Docs/blob/main/!KEYDOCS%20README%20FIRST!/Compute%20Providers/Compute%20Node/Sample%20Basic%20Compute%20Provider%20Build.md"
       },
       {
         "type": "contributing",
-        "description": null,
-        "minimum_hardware": null,
-        "minimum_capital_usd": null,
-        "technical_skill_required": null,
-        "estimated_returns": null,
-        "barriers_to_entry": [],
-        "guide_available": false,
-        "guide_url": null
+        "description": "Contribute code to Morpheus repositories. Rewards are based on contribution weights (FTE value produced), not hours worked. Only merged code counts. GitHub maintainers act as judges. No permission needed to start contributing. 24% of all MOR emissions for 16 years go to code contributors.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Pro-rata share of 24% of daily MOR emissions based on assigned code weights. 58,311 MOR (~$1.2M+) distributed to 77 builders in a recent month.",
+        "barriers_to_entry": [
+          "Must produce work deemed valuable by maintainers",
+          "Code weight system can be opaque to newcomers",
+          "Competition with established contributors"
+        ],
+        "guide_available": true,
+        "guide_url": "https://mor.org/blog/morpheus-coder-guide-and-best-practices"
+      },
+      {
+        "type": "building",
+        "description": "Build frontends, tools, integrations, or AI agents on the Morpheus network. Earn MOR from the 24% community builder emissions proportional to MOR transaction fees burned through your contributions. Register on-chain with IPFS link, signature, and version hash. Forge no-code agent builder available since March 2025.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Pro-rata share of 24% of daily MOR emissions based on fees burned through your frontend/tool.",
+        "barriers_to_entry": [
+          "Need to build something users actually use",
+          "Revenue tied to transaction fees burned (chicken-and-egg with adoption)",
+          "On-chain registration required"
+        ],
+        "guide_available": true,
+        "guide_url": "https://gitbook.mor.org/builders"
       }
     ],
     "developer_resources": {
-      "sdk_available": null,
-      "api_available": null,
-      "documentation_quality": null,
-      "developer_community_size": null,
-      "grants_program": null,
-      "grants_url": null
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "~300 open-source developers (self-reported by mor.org). 52 public repositories.",
+      "grants_program": true,
+      "grants_url": "https://mor.org/ecosystem"
     }
   },
 
@@ -204,88 +345,451 @@
     "miners_active": null,
     "unique_contracts_deployed": null,
     "revenue_annual_usd": null,
-    "revenue_source": null,
-    "metrics_source": null,
-    "metrics_date": null,
-    "usage_notes": null
+    "revenue_source": "MOR transaction fees burned when users access compute/inference services",
+    "metrics_source": "mor.org, DeFiLlama (defillama.com/protocol/morpheusai)",
+    "metrics_date": "2026-03-01",
+    "usage_notes": "mor.org claims 1M+ users and 100+ ecosystem projects. 20,000 MOR token holders. 6,500+ capital providers with over 320,000 ETH flowed through contracts. 566,000+ MOR staked (~12% of circulating). Peak stETH deposits: 150,403 stETH. $3B total value staked claimed by mor.org. Active compute node count not publicly reported. Protocol designed to minimise on-chain writes, so daily transaction counts are not meaningful as a usage metric."
   },
 
   "community": {
-    "discord_members": null,
+    "discord_members": 5300,
     "telegram_members": null,
-    "x_followers": null,
+    "x_followers": 24300,
     "github_contributors": null,
     "governance_participation_rate": null,
-    "governance_model": null,
-    "governance_url": null,
-    "key_community_channels": [],
-    "sentiment_summary": null,
-    "community_notes": null
+    "governance_model": "Atomic Governance — no central team, company, or foundation. Each contributor category makes independent decisions. MRC (Morpheus Request for Comments) system for proposals submitted as markdown to GitHub. MOR holders vote on proposals via Snapshot. Contributors do not need permission to build or contribute.",
+    "governance_url": "https://github.com/MorpheusAIs/MRC",
+    "key_community_channels": [
+      "Discord: https://discord.gg/morpheusai",
+      "X/Twitter: https://x.com/MorpheusAIs",
+      "GitHub: https://github.com/MorpheusAIs",
+      "MRC Governance: https://github.com/MorpheusAIs/MRC",
+      "Blog: https://mor.org/blog",
+      "Week in Morpheus: https://weekinmorpheus.substack.com"
+    ],
+    "sentiment_summary": "Community sentiment is cautiously optimistic among committed participants. Strong alignment with sovereignty and fair-launch values. Concerns about thin liquidity, low trading volume, and gap between ambitious vision and current agent capabilities. The fair-launch ethos and TCM model attract ideologically motivated participants. Token price decline from ATH ($139 to ~$0.75) has tested conviction.",
+    "community_notes": "Community operates without formal leadership. David Johnston is the most visible public figure. Erik Voorhees provides high-profile advocacy through Venice.ai integration. Weekly community digests published on Substack and mor.org blog."
   },
 
   "freedom_score": {
-    "total_score": null,
+    "total_score": 70,
     "max_possible": 100,
     "breakdown": {
       "infrastructure_decentralisation": {
-        "score": null,
+        "score": 12,
         "max": 20,
-        "evidence": null
+        "evidence": "Permissionless compute node operation via Lumerin proxy router. Multi-chain deployment (Ethereum L1, Arbitrum L2, Base L2). Mainnet compute live since Nov 2024, inference marketplace on Base since Dec 2025. However: contract upgradeability via UUPS proxy pattern is a centralisation vector. L2 sequencers (Arbitrum, Base) are centralised. Active compute node count unknown. LayerZero dependency for cross-chain bridging. Network still early with unproven node distribution."
       },
       "governance_decentralisation": {
-        "score": null,
+        "score": 12,
         "max": 20,
-        "evidence": null
+        "evidence": "Atomic Governance model with no central team, company, or foundation. MRC proposal system with Snapshot voting for MOR holders. GitHub maintainers act as judges for code merges. However: Cyfrin audit confirmed contract owners have significant power over deposited tokens. Pseudonymous founders. David Johnston has outsized influence as lead technologist. Protection Fund governance undocumented. Maintainer-gated code merges concentrate power."
       },
       "token_distribution_fairness": {
-        "score": null,
+        "score": 14,
         "max": 15,
-        "evidence": null
+        "evidence": "Exemplary fair launch: no pre-mine, no VC allocation, no token sale, no insider allocation. 24/24/24/24/4 split across contributor types with all tokens earned through provable work or yield contribution. 90-day bootstrapping period before claims. Power multiplier rewards long-term holders (up to 10.7x over 6 years). One of the fairest token distributions in the crypto space."
       },
       "censorship_resistance": {
-        "score": null,
+        "score": 10,
         "max": 15,
-        "evidence": null
+        "evidence": "Compute providers join permissionlessly. Lumerin proxy router provides decentralised matching between users and providers. LLM inference can run locally on user machines via llama.cpp. Smart Agents execute locally. No content filtering at the protocol level. However: Arbitrum and Base sequencers are centralised (could theoretically censor transactions). Compute router could be a censorship vector if compromised. No formal censorship resistance guarantees documented."
       },
       "data_sovereignty": {
-        "score": null,
+        "score": 10,
         "max": 15,
-        "evidence": null
+        "evidence": "Smart Agents designed to run locally on user hardware. Users control wallets and cryptographic keys. IPFS used for model/agent storage. Capital staking is self-custodial (principal never touched by protocol). However: compute requests routed through network expose inference queries. No zero-knowledge proofs or end-to-end encryption on the inference layer. Metadata leakage possible through router interactions."
       },
       "open_source_transparency": {
-        "score": null,
+        "score": 12,
         "max": 15,
-        "evidence": null
+        "evidence": "MIT license across all 52 public repositories. Four audits from reputable firms: OpenZeppelin, Cyfrin/CodeHawks, Renascence Labs, Code4rena. Active bug bounty programme ($500-$150,000). On-chain operations verifiable on Etherscan/Arbiscan/Basescan. However: Protection Fund management and treasury operations lack detailed public reporting. Modified local copies of LayerZero contracts noted by OpenZeppelin (divergence risk)."
       }
     },
-    "freedom_grade": null,
-    "freedom_summary": null
+    "freedom_grade": "B",
+    "freedom_summary": "Morpheus scores a B (70/100) for genuine decentralisation with meaningful concerns. Its standout strength is token distribution fairness — one of the best fair launches in crypto, with zero insider allocation and all tokens earned through provable contributions. Open-source transparency is strong with MIT licensing and multiple tier-1 audits. The main concerns are infrastructure maturity (early network with unknown node distribution and L2 sequencer dependencies) and governance (contract owner privileges and maintainer-gated code decisions). The project demonstrates genuine commitment to sovereignty principles but still has centralisation vectors that need addressing as it matures."
   },
 
   "assessment": {
-    "what_works_today": [],
-    "what_is_hype": [],
-    "key_risks": [],
-    "competitive_advantages": [],
-    "competitive_disadvantages": [],
-    "comparable_projects": [],
-    "outlook": null,
-    "overall_assessment": null
+    "what_works_today": [
+      "Techno Capital Machine (TCM) — genuinely novel yield-redirect model that has attracted $3B+ in total value staked from 6,500+ capital providers. No other DeAI project has replicated this mechanism at scale.",
+      "Fair launch tokenomics — no pre-mine, no VC, no insider allocation. 42M hard cap with transparent 24/24/24/24/4 distribution. Clean cap table.",
+      "Mainnet compute — Morpheus-Lumerin compute system live on Arbitrum since Nov 2024. Inference marketplace on Base in full production since Dec 2025. Real compute being routed.",
+      "Multi-asset staking v2 — Capital contract upgrade live Sep 2025 via Aave integration. Accepts stETH, USDC, USDT, WBTC. Broadens capital provider base beyond ETH holders.",
+      "Audit coverage — OpenZeppelin, Cyfrin/CodeHawks, Renascence, Code4rena. Above average for DeAI. Active $150K bug bounty.",
+      "Developer payments — 58,311 MOR (~$1.2M+) distributed to 77 builders in a recent month. Code contributors are being compensated for real work.",
+      "Forge no-code agent builder — launched March 2025, lowering barrier to building Smart Agents."
+    ],
+    "what_is_hype": [
+      "'1M users' claim — mor.org claims 1M+ users across ecosystem projects. This likely counts wallet interactions, staking events, and downstream project usage, not unique active individuals. Treat with extreme scepticism.",
+      "Smart Agent capabilities — current agents can answer balance queries and execute basic ETH transactions. This is a demo-grade experience compared to centralised AI agents (ChatGPT, Claude). The full vision of sovereign personal AI assistants acting autonomously is years away.",
+      "'Personal AI' vision — the whitepaper paints a compelling picture of AI agents managing your finances, scheduling, and digital life. Current reality is an inference marketplace with basic Web3 tool integrations.",
+      "Compute quality and scale — no public data on active compute node count, inference throughput, model quality, or latency benchmarks vs centralised providers. 'Decentralised compute' is a narrative without published performance evidence.",
+      "'100 ecosystem projects' — many are early-stage or token-incentivised projects that may not survive beyond the emissions period."
+    ],
+    "key_risks": [
+      "Token price dependency — compute provider and developer incentives are denominated in MOR. Token has fallen 99.5% from ATH ($139 to ~$0.75). Sustained low price could trigger an exodus of contributors, creating a death spiral.",
+      "Thin liquidity — 24h volume of ~$29K across primarily DEX venues. Large trades would move price significantly. Minimal CEX presence.",
+      "Regulatory risk — pseudonymous founders, no legal entity, yield-redirect model that could be classified as a securities offering. Zero accountability if regulators act.",
+      "Contract upgradeability — UUPS proxy pattern means contract owners can upgrade logic. Cyfrin audit confirmed owner of Distribution.sol could cause indefinite custody of deposited tokens.",
+      "Competition from centralised AI — OpenAI, Anthropic, Google shipping agent capabilities that are orders of magnitude more capable. Morpheus must overcome massive UX and performance gaps.",
+      "Competition from Bittensor — TAO has multi-year head start, 128+ subnets, deeper compute liquidity, larger market cap.",
+      "Unknown compute network size — no public metric for active compute nodes. Impossible to assess network resilience or capacity.",
+      "Oracle risk — Code4rena found Chainlink heartbeat mismatches that could be exploited. Multi-asset staking increases oracle attack surface."
+    ],
+    "competitive_advantages": [
+      "Techno Capital Machine — genuinely novel yield-redirect funding model. No other project has replicated this at scale.",
+      "Fair launch credibility — zero VC, zero presale, zero insider allocation. Strong alignment with sovereignty-focused community.",
+      "Lumerin partnership — identifiable infrastructure partner with experience in decentralised routing (originally Bitcoin mining hashrate).",
+      "Agent-focused positioning — targets personal AI assistants for Web3, a less crowded niche than general compute (Bittensor) or economic agents (Fetch.ai).",
+      "Multi-chain deployment — Ethereum (staking), Arbitrum (rewards), Base (inference marketplace). Not locked to single chain.",
+      "MIT licensing — everything fully open source with no proprietary components."
+    ],
+    "competitive_disadvantages": [
+      "Late to market vs Bittensor — TAO has multi-year head start with 128+ active subnets and deeper ecosystem.",
+      "No proprietary models — defaults to open-source LLMs (Llama). No unique AI capability. Differentiation is purely incentive and routing infrastructure.",
+      "Anonymous team — reduces institutional trust. Creates regulatory vulnerability. No recourse for token holders.",
+      "Centralised AI competition — OpenAI, Anthropic, Google are shipping agent capabilities that dwarf what Morpheus can currently offer.",
+      "Token price collapse — 99.5% decline from ATH undermines the incentive model and reduces contributor motivation.",
+      "Thin liquidity and minimal exchange listings — limits accessibility for new participants."
+    ],
+    "comparable_projects": [
+      "Bittensor (TAO) — decentralised ML training/inference via subnet architecture",
+      "Fetch.ai / ASI Alliance (FET) — autonomous economic agents with real-world deployments",
+      "Render Network (RENDER) — decentralised GPU rendering",
+      "Akash Network (AKT) — decentralised cloud compute marketplace",
+      "Virtuals Protocol (VIRTUAL) — AI agent token launchpad on Base",
+      "Venice.ai — privacy-focused AI inference (community partner, built by Erik Voorhees)"
+    ],
+    "outlook": "Morpheus has built genuine infrastructure — the TCM funding model works, the compute network is live, and the fair launch gives it credibility that VC-funded competitors lack. The critical question is whether decentralised AI inference can attract real demand when centralised alternatives are faster, cheaper, and more capable. The 99.5% token price decline suggests the market is sceptical. The next 12 months will determine whether the compute marketplace generates enough usage to justify the incentive structure, or whether Morpheus becomes another well-engineered protocol that could not find product-market fit.",
+    "overall_assessment": "Genuine infrastructure project with best-in-class tokenomics fairness, hampered by thin liquidity, early-stage compute network, and the enormous gap between its sovereign AI vision and current capabilities. Worth watching for the TCM model alone. Not yet proven as a competitive AI inference platform."
   },
 
   "sources": [
     {
       "source_id": "S001",
-      "tier": null,
-      "type": null,
-      "title": null,
-      "url": null,
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Morpheus Whitepaper",
+      "url": "https://github.com/MorpheusAIs/Docs/blob/main/!KEYDOCS%20README%20FIRST!/WhitePaper.md",
+      "author": "Morpheus, Trinity, Neo (pseudonymous)",
+      "publisher": "MorpheusAIs GitHub",
+      "date_published": "2023-09-02",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity", "tokenomics.distribution", "tokenomics.supply.max_supply", "technical.architecture_summary"],
+      "reliability_notes": "Primary source. Published by project pseudonymous founders."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus GitBook — Tokenomics",
+      "url": "https://gitbook.mor.org/tokenomics",
       "author": null,
-      "publisher": null,
+      "publisher": "Morpheus",
       "date_published": null,
-      "date_accessed": null,
-      "data_points_sourced": [],
-      "reliability_notes": null
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics.distribution", "tokenomics.emissions", "tokenomics.supply"],
+      "reliability_notes": "Official project documentation."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus GitBook — What is Morpheus?",
+      "url": "https://gitbook.mor.org/meet-morpheus/what-is-morpheus",
+      "author": null,
+      "publisher": "Morpheus",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity", "team.entity_name"],
+      "reliability_notes": "Official project documentation."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "github",
+      "title": "MorpheusAIs GitHub Organisation",
+      "url": "https://github.com/MorpheusAIs",
+      "author": null,
+      "publisher": "GitHub",
+      "date_published": "2023-09-14",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.github_metrics", "technical.license", "technical.open_source"],
+      "reliability_notes": "Direct GitHub data. 52 public repos confirmed via GitHub API."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "github",
+      "title": "MorpheusAIs/Morpheus — Main Repository",
+      "url": "https://github.com/MorpheusAIs/Morpheus",
+      "author": null,
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity.tagline", "technical.github_metrics.stars", "technical.github_metrics.forks"],
+      "reliability_notes": "Primary repo. 219 stars, 142 forks confirmed."
+    },
+    {
+      "source_id": "S006",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Morpheus MOR OFT Token Audit",
+      "url": "https://www.openzeppelin.com/news/morpheus-mor-oft-token-audit",
+      "author": "OpenZeppelin",
+      "publisher": "OpenZeppelin",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.audits", "tokenomics.token_standard"],
+      "reliability_notes": "Tier-1 auditor. Scope limited to MOROFT.sol only."
+    },
+    {
+      "source_id": "S007",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Cyfrin/CodeHawks Morpheus Competitive Audit",
+      "url": "https://codehawks.cyfrin.io/c/2024-01-Morpheus",
+      "author": "Cyfrin / CodeHawks community",
+      "publisher": "CodeHawks",
+      "date_published": "2024-01-01",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.audits", "assessment.key_risks"],
+      "reliability_notes": "Competitive public audit. Multiple findings including privileged role risks."
+    },
+    {
+      "source_id": "S008",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Code4rena Morpheus Audit Report",
+      "url": "https://code4rena.com/reports/2025-08-morpheus",
+      "author": "Code4rena community",
+      "publisher": "Code4rena",
+      "date_published": "2025-08-25",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.audits"],
+      "reliability_notes": "Competitive audit, $20K USDC bounty. 4 unique vulnerabilities found."
+    },
+    {
+      "source_id": "S009",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Morpheus AI (MOR) — CoinGecko",
+      "url": "https://www.coingecko.com/en/coins/morpheusai",
+      "author": null,
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics.market_data", "tokenomics.supply.circulating_supply"],
+      "reliability_notes": "Primary market data source. Noted discrepancies with other aggregators."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Morpheus price today — CoinMarketCap",
+      "url": "https://coinmarketcap.com/currencies/morpheus/",
+      "author": null,
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics.market_data", "tokenomics.emissions"],
+      "reliability_notes": "Secondary market data source for cross-reference."
+    },
+    {
+      "source_id": "S011",
+      "tier": 2,
+      "type": "news",
+      "title": "Decentralized AI Project Morpheus Goes Live on Mainnet",
+      "url": "https://www.coindesk.com/tech/2024/11/18/decentralized-ai-project-morpheus-goes-live-on-mainnet",
+      "author": null,
+      "publisher": "CoinDesk",
+      "date_published": "2024-11-18",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity.current_status", "identity.chain"],
+      "reliability_notes": "Reputable crypto news outlet."
+    },
+    {
+      "source_id": "S012",
+      "tier": 2,
+      "type": "news",
+      "title": "Lumerin Announces Launch of Morpheus Mainnet for Decentralized AI Compute",
+      "url": "https://www.globenewswire.com/news-release/2024/11/20/2984419/0/en/Lumerin-Announces-Launch-of-Morpheus-Mainnet-for-Decentralized-AI-Compute.html",
+      "author": null,
+      "publisher": "GlobeNewsWire",
+      "date_published": "2024-11-20",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity.current_status", "technical.architecture_summary"],
+      "reliability_notes": "Press release from Lumerin (key infrastructure partner)."
+    },
+    {
+      "source_id": "S013",
+      "tier": 2,
+      "type": "news",
+      "title": "Morpheus Makes $20 Million MOR Rewards Available for Compute Providers",
+      "url": "https://www.globenewswire.com/news-release/2024/12/12/2995907/0/en/Morpheus-Makes-20-Million-MOR-Rewards-Available-for-Compute-Providers.html",
+      "author": null,
+      "publisher": "GlobeNewsWire",
+      "date_published": "2024-12-12",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["participation.methods"],
+      "reliability_notes": "Press release."
+    },
+    {
+      "source_id": "S014",
+      "tier": 2,
+      "type": "news",
+      "title": "Morpheus Decentralized AI Marketplace Expands Staking to USDC, USDT, and WBTC via Aave",
+      "url": "https://www.globenewswire.com/news-release/2025/09/18/3152710/0/en/Morpheus-Decentralized-AI-Marketplace-Expands-Staking-to-USDC-USDT-and-WBTC-via-Aave-DeFi-Integration.html",
+      "author": null,
+      "publisher": "GlobeNewsWire",
+      "date_published": "2025-09-18",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics.staking", "participation.methods"],
+      "reliability_notes": "Press release confirming v2 capital contracts expansion."
+    },
+    {
+      "source_id": "S015",
+      "tier": 2,
+      "type": "news",
+      "title": "Morpheus AI Launch Attracts $50M Within Hours",
+      "url": "https://thedefiant.io/news/defi/morpheus-ai-launch-attracts-usd50m-within-hours",
+      "author": null,
+      "publisher": "The Defiant",
+      "date_published": "2024-02-08",
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity.launch_date", "usage_metrics.usage_notes"],
+      "reliability_notes": "Reputable DeFi news outlet. Confirms first-day deposit figures."
+    },
+    {
+      "source_id": "S016",
+      "tier": 3,
+      "type": "interview",
+      "title": "David Johnston Medium — Morpheus",
+      "url": "https://djohnstonec.medium.com/morpheus-658bfd4a0617",
+      "author": "David Johnston",
+      "publisher": "Medium",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["team.founding_team"],
+      "reliability_notes": "Written by the project's lead technologist."
+    },
+    {
+      "source_id": "S017",
+      "tier": 3,
+      "type": "news",
+      "title": "Why Erik Voorhees is pivoting to Venice AI — Decrypt",
+      "url": "https://decrypt.co/230281/venice-ai-shapeshift-founder-erik-voorhees-morpheus-open-source",
+      "author": null,
+      "publisher": "Decrypt",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["team.founding_team"],
+      "reliability_notes": "Credible crypto outlet. Contextualises Voorhees/Morpheus relationship."
+    },
+    {
+      "source_id": "S018",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus About Page",
+      "url": "https://mor.org/about",
+      "author": null,
+      "publisher": "Morpheus",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["usage_metrics.usage_notes", "community", "team.entity_name"],
+      "reliability_notes": "Self-reported metrics from project. Claims should be cross-referenced."
+    },
+    {
+      "source_id": "S019",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus Fair Launch Page",
+      "url": "https://mor.org/fair-launch",
+      "author": null,
+      "publisher": "Morpheus",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity.launch_date", "tokenomics.distribution"],
+      "reliability_notes": "Official project page confirming fair launch details."
+    },
+    {
+      "source_id": "S020",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus MOR Token Page",
+      "url": "https://mor.org/mor-token",
+      "author": null,
+      "publisher": "Morpheus",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics", "technical.audits"],
+      "reliability_notes": "Official page confirming auditors and token details."
+    },
+    {
+      "source_id": "S021",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Morpheus — IQ.wiki",
+      "url": "https://iq.wiki/wiki/morpheus",
+      "author": null,
+      "publisher": "IQ.wiki",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["identity", "technical"],
+      "reliability_notes": "Community wiki. Cross-referenced against primary sources."
+    },
+    {
+      "source_id": "S022",
+      "tier": 1,
+      "type": "smart_contract",
+      "title": "MOR Token Contract — Arbiscan",
+      "url": "https://arbiscan.io/token/0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86",
+      "author": null,
+      "publisher": "Arbiscan",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["tokenomics.token_standard", "tokenomics.market_data"],
+      "reliability_notes": "On-chain data. Primary source for contract verification."
+    },
+    {
+      "source_id": "S023",
+      "tier": 1,
+      "type": "github",
+      "title": "Morpheus-Lumerin-Node Repository",
+      "url": "https://github.com/MorpheusAIs/Morpheus-Lumerin-Node",
+      "author": null,
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.architecture_summary", "participation.methods"],
+      "reliability_notes": "Active development. v5.14.0 released Feb 2026."
+    },
+    {
+      "source_id": "S024",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Morpheus Bug Bounty Program",
+      "url": "https://github.com/MorpheusAIs/Docs/blob/main/Security%20Audit%20Reports/Bug%20Bounty%20Program.md",
+      "author": null,
+      "publisher": "MorpheusAIs GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["technical.audits"],
+      "reliability_notes": "Official bug bounty programme documentation."
+    },
+    {
+      "source_id": "S025",
+      "tier": 2,
+      "type": "market_data",
+      "title": "DeFiLlama — MorpheusAI",
+      "url": "https://defillama.com/protocol/morpheusai",
+      "author": null,
+      "publisher": "DeFiLlama",
+      "date_published": null,
+      "date_accessed": "2026-03-01",
+      "data_points_sourced": ["usage_metrics.tvl_usd"],
+      "reliability_notes": "Industry standard TVL tracker. Live data not programmatically fetched; verify directly."
     }
   ]
 }

@@ -7,9 +7,9 @@ status: "active"
 freedomScore: 8
 publishDate: 2025-03-01
 draft: false
-coingeckoId: "morpheus-network"
+coingeckoId: "morpheusai"
 launchType: "fair-launch"
-chain: "Ethereum / Arbitrum"
+chain: "Ethereum / Arbitrum / Base"
 supplyType: "capped"
 maxSupply: "42M"
 verdict: "Genuine fair launch with working compute marketplace. Early-stage agents but real infrastructure."
