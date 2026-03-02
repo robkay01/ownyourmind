@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "project_id": "gensyn",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "research_gaps": [
+      "Exact circulating supply unknown -- TGE scheduled for April 2026 but not yet occurred as of research date",
+      "No public security audit reports found for smart contracts or protocol",
+      "Discord and Telegram member counts not directly verifiable -- pages require JavaScript rendering",
+      "X (Twitter) follower count not directly verifiable -- page requires JavaScript rendering",
+      "Exact token contract address on Gensyn L2 not yet published",
+      "Mainnet launch date not confirmed -- testnet Phase 0 is current status",
+      "No exchange listings announced -- token not yet trading on any CEX or DEX",
+      "Revenue figures unverified -- $2.2M annual revenue claim from third-party aggregator (Latka) not confirmed by Gensyn",
+      "Governance model details post-TGE not fully specified beyond elected council concept",
+      "DeFiLlama does not list Gensyn -- no TVL or protocol metrics available",
+      "CoinMarketCap does not yet list the $AI token",
+      "CoinGecko lists Gensyn but shows no price or market data -- token not yet trading",
+      "Staking APY and real yield not yet determinable -- staking not live",
+      "Jeff Amico (COO) background details not independently verified beyond one third-party source",
+      "Exact number of active testnet nodes not publicly reported by Gensyn"
+    ],
+    "refresh_config": {
+      "github_org": "gensyn-ai",
+      "github_primary_repo": "rl-swarm",
+      "coingecko_id": "gensyn",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "gensynai",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+  "identity": {
+    "name": "Gensyn",
+    "ticker": "AI",
+    "category": "compute",
+    "subcategory": "ML training compute network",
+    "tagline": "The network for machine intelligence",
+    "one_liner": "A decentralised ML compute protocol that networks global hardware into a unified training and verification layer, built on a custom Ethereum rollup.",
+    "website": "https://www.gensyn.ai",
+    "documentation_url": "https://docs.gensyn.ai",
+    "whitepaper_url": "https://docs.gensyn.ai/litepaper",
+    "github_url": "https://github.com/gensyn-ai",
+    "chain": "Gensyn Network (Custom Ethereum L2 Rollup)",
+    "launch_date": "2025-03-01",
+    "current_status": "testnet",
+    "logo_url": null
+  },
+  "team": {
+    "founding_team": [
+      {
+        "name": "Ben Fielding",
+        "role": "Co-Founder & CEO",
+        "background": "BSc Computer Science, Northumbria University (2015). PhD Computer Science (AI, ML, computer vision, evolutionary neural architecture search), Northumbria University (2015-2019). Co-founded Fair Custodian (personal data management, 2018-2020). Entrepreneur First LD14 cohort (2020). Co-founded Gensyn May 2020. RL Swarm protocol descended from PhD work on evolutionary optimisation for neural networks.",
+        "linkedin_or_x": "https://www.linkedin.com/in/ben-fielding/",
+        "doxxed": true
+      },
+      {
+        "name": "Harry Grieve",
+        "role": "Co-Founder & CTO",
+        "background": "MA Economics & Finance, University of Aberdeen. Master of Public Affairs, Brown University. Analyst at Kames Capital Management (Scotland). Director of Data Research at Cytora (ML-driven insurance data across US, UK, Australia). Active angel investor in AI, cryptography, and verifiable intelligence startups. Entrepreneur First LD14 cohort (2020). Co-founded Gensyn May 2020. Author on Verde verification paper and other research.",
+        "linkedin_or_x": "https://www.linkedin.com/in/harry-grieve-81427771/",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 44,
+    "entity_name": "Gensyn Limited",
+    "entity_jurisdiction": "United Kingdom (Companies House #12601008, incorporated 13 May 2020, registered at International House, 64 Nile Street, London N1 7SR)",
+    "notable_backers": [
+      "Andreessen Horowitz (a16z crypto) -- led $43M Series A (June 2023)",
+      "CoinFund -- Series A participant",
+      "Protocol Labs -- Series A participant",
+      "Canonical Crypto -- Series A participant",
+      "Eden Block -- led $6.5M Seed (March 2022)",
+      "Galaxy -- Seed participant",
+      "Maven 11 Capital -- Seed & Series A participant",
+      "Hypersphere Ventures -- Seed participant",
+      "Zee Prime Capital -- Series A participant",
+      "M31 Capital -- Series A participant",
+      "PEER Venture Partners -- Series A participant",
+      "Id4 Ventures -- Series A participant"
+    ],
+    "funding_raised": {
+      "total_usd": 66740000,
+      "rounds": [
+        {
+          "round_type": "Pre-Seed",
+          "date": "2021-01-01",
+          "amount_usd": 1100000,
+          "lead_investor": null,
+          "valuation_usd": null,
+          "notes": "Limited disclosure; estimated amount"
+        },
+        {
+          "round_type": "Seed",
+          "date": "2022-03-21",
+          "amount_usd": 6500000,
+          "lead_investor": "Eden Block",
+          "valuation_usd": null,
+          "notes": "Participants included Galaxy, CoinFund, Maven 11 Capital, Hypersphere Ventures"
+        },
+        {
+          "round_type": "Series A",
+          "date": "2023-06-11",
+          "amount_usd": 43000000,
+          "lead_investor": "Andreessen Horowitz (a16z crypto)",
+          "valuation_usd": null,
+          "notes": "Participants included CoinFund, Canonical Crypto, Protocol Labs, Eden Block, Maven 11 Capital, Zee Prime Capital, M31 Capital, PEER Venture Partners, Id4 Ventures. Valuation not publicly disclosed."
+        },
+        {
+          "round_type": "Public Sale",
+          "date": "2025-12-20",
+          "amount_usd": 16140000,
+          "lead_investor": null,
+          "valuation_usd": 473000000,
+          "notes": "English auction on Sonar platform. 300M tokens (3% of supply) sold. FDV floor $1M, cap $1B. Cleared at ~$473M FDV ($0.0473/token). USDC/USDT on Ethereum Mainnet. US buyers subject to 12-month lockup."
+        }
+      ]
+    }
+  },
+  "technical": {
+    "architecture_summary": "Gensyn is a decentralised ML compute protocol built on a custom Ethereum L2 rollup. The protocol comprises four layers: (1) Consistent ML Execution -- SAPO algorithm ensures deterministic computation across heterogeneous hardware (GPUs, Apple Silicon, CPUs); (2) Trustless Verification -- Verde system uses Reproducible Operators (RepOps) for bitwise-identical ML outputs across diverse hardware, with a two-level bisection game for dispute resolution via refereed delegation; (3) Peer-to-Peer Communication -- NoLoCo (gossip-based gradient averaging replacing all-reduce), CheckFree (fault-tolerant recovery without checkpoints), and SkipPipe (efficient gradient sharing minimising message hops); (4) Decentralised Coordination -- Ethereum rollup handles participant identification, token incentives, and permissionless payment settlement via smart contracts. The network supports four participant roles: Submitters (task creators), Solvers (compute workers), Verifiers (proof checkers), and Whistleblowers (final defence layer). Off-chain: actual ML training and verification computation. On-chain: task submission, proof registration, dispute arbitration, settlement, and payment distribution.",
+    "consensus_mechanism": "Custom Ethereum L2 rollup for coordination and settlement. Verde refereed-delegation system for ML computation verification. Probabilistic proof-of-learning for work certificates (from litepaper, being superseded by Verde in production).",
+    "what_is_onchain": "Task submission and metadata, proof registration, dispute arbitration via bisection game, settlement and payment distribution, participant registration, token transfers and staking, SwarmCoordinator contracts for RL Swarm round management, Delphi prediction market settlements",
+    "what_is_offchain": "ML model training (Solver execution), verification computation (Verifier re-execution), peer-to-peer gradient sharing (NoLoCo/SkipPipe), model storage (HuggingFace integration), training data hosting, checkpoint management (CheckFree)",
+    "key_dependencies": [
+      "Ethereum (rollup settlement and security)",
+      "Alchemy (testnet infrastructure and authentication)",
+      "HuggingFace (model hosting and distribution)",
+      "PyTorch (ML framework)",
+      "Docker (containerised node deployment)",
+      "CUDA (NVIDIA GPU compute)",
+      "Foundry (smart contract development framework)"
+    ],
+    "smart_contract_languages": [
+      "Solidity"
+    ],
+    "open_source": true,
+    "license": "MIT (primary repos)",
+    "github_metrics": {
+      "total_repos": 10,
+      "primary_repo_url": "https://github.com/gensyn-ai/rl-swarm",
+      "total_commits": 238,
+      "contributors": null,
+      "last_commit_date": "2026-01-05",
+      "stars": 1699,
+      "forks": 639,
+      "open_issues": 60
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+  "tokenomics": {
+    "token_name": "$AI",
+    "ticker": "AI",
+    "token_standard": "ERC-20 (on Gensyn Network L2)",
+    "token_type": "Utility & Governance",
+    "token_utility": [
+      "Compute payments -- compensating verified ML training and inference work",
+      "Staking and verification -- securing guarantees about ML work correctness",
+      "Evaluation markets -- backing models or outcomes in Delphi prediction markets",
+      "Governance -- protocol upgrades, ecosystem programmes, treasury deployments",
+      "Revenue accrual -- programmatic buy-and-burn mechanism from transaction fees"
+    ],
+    "supply": {
+      "max_supply": 10000000000,
+      "total_supply": 10000000000,
+      "circulating_supply": null,
+      "circulating_supply_date": null,
+      "circulating_percentage": null
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community Treasury",
+          "percentage": 40.4,
+          "vesting": "20% unlocked at TGE, remainder linear over 36 months",
+          "notes": "Funds ecosystem development, grants, and programmes"
+        },
+        {
+          "category": "Investors",
+          "percentage": 29.6,
+          "vesting": "12-month cliff, then 24-month linear unlock (36 months total). Cannot stake during lockup.",
+          "notes": "Pre-seed, seed, and Series A investors"
+        },
+        {
+          "category": "Team",
+          "percentage": 25.0,
+          "vesting": "12-month cliff, then 24-month linear unlock (36 months total). Cannot stake during lockup.",
+          "notes": "Core team allocation"
+        },
+        {
+          "category": "Community Sale",
+          "percentage": 3.0,
+          "vesting": "Immediate unlock at TGE for non-US buyers. 12-month lockup for US buyers and those opting for 10% bonus multiplier.",
+          "notes": "300M tokens sold via English auction on Sonar at $0.0473/token (Dec 2025)"
+        },
+        {
+          "category": "Testnet Rewards",
+          "percentage": 2.0,
+          "vesting": "Distributed based on testnet participation level and sale bid amount",
+          "notes": "Bonus multiplier programme for verified testnet participants"
+        }
+      ],
+      "distribution_method": "Public auction (English auction on Sonar platform) plus testnet reward allocation"
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": null,
+      "next_major_emission_event": "Token Generation Event (TGE)",
+      "next_event_date": "2026-04-01",
+      "burn_mechanism": "Programmatic buy-and-burn from transaction revenue"
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "Verification staking (planned)",
+      "minimum_stake": null,
+      "lock_up_period": null,
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Slashing for fraudulent verification work (described in litepaper)",
+        "Team and investor tokens cannot be staked during lockup period"
+      ],
+      "slashing_conditions": "Solvers slashed for fraudulent work; Verifiers penalised for incorrect verification; Whistleblower deposits forfeited for invalid challenges"
+    },
+    "token_model_classification": "Work token with buy-and-burn deflationary pressure. Fixed supply of 10B tokens with vested unlocks over 36 months. Revenue from compute payments, evaluation markets, and verification fees accrues through programmatic buy-and-burn.",
+    "tokenomics_notes": "Token has not yet launched (TGE planned April 2026). Public sale completed December 2025 raising $16.14M at $473M FDV. Insider allocation is heavy at 54.6% (29.6% investors + 25% team) but subject to 36-month vesting with 12-month cliff. Community treasury (40.4%) is the largest single allocation. The 3% public sale is relatively small. Token not yet trading on any exchange.",
+    "market_data": {
+      "price_usd": null,
+      "market_cap_usd": null,
+      "fully_diluted_valuation_usd": null,
+      "twenty_four_hour_volume_usd": null,
+      "all_time_high_usd": null,
+      "all_time_high_date": null,
+      "all_time_low_usd": null,
+      "all_time_low_date": null,
+      "major_exchanges": [],
+      "data_snapshot_date": "2026-03-02"
+    }
+  },
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run an RL Swarm node on the Gensyn testnet to contribute GPU or CPU compute for collaborative reinforcement learning model training. Nodes train local models (Qwen2.5 variants from 0.5B to 1.5B parameters) as part of a distributed swarm.",
+        "minimum_capital_usd": 0,
+        "minimum_hardware": "CPU: ARM64 or x86 with 32GB+ RAM. GPU (recommended): NVIDIA RTX 3090, 4090, 5090, A100, or H100 with 12GB+ VRAM and CUDA 12.4+. Software: Python 3.10+, Docker, Node.js 22.x.",
+        "expected_returns": "Testnet rewards (2% of total token supply allocated to testnet participants). No live economic returns yet -- testnet uses non-permanent tokens.",
+        "risks": "Hardware costs for GPU operation. No guaranteed mainnet rewards. Testnet may reset or change parameters."
+      },
+      {
+        "type": "using",
+        "description": "Participate in Delphi prediction markets by staking on AI models competing on benchmarks. Watch models compete live, buy stakes in expected top performers, earn rewards when markets settle.",
+        "minimum_capital_usd": null,
+        "minimum_hardware": "Web browser",
+        "expected_returns": "Rewards for holding stake in top-performing models when markets settle",
+        "risks": "Market risk on model performance predictions. Currently testnet only."
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute to Gensyn's open-source repositories (RL Swarm, CodeAssist, BlockAssist, rl-swarm-contracts). Deploy custom swarms for others to join. Publish trained models to HuggingFace.",
+        "minimum_capital_usd": 0,
+        "minimum_hardware": "Development machine with Python, Docker",
+        "expected_returns": "Community recognition, potential testnet reward multipliers",
+        "risks": "Time investment with no guaranteed compensation"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "Good -- comprehensive docs site covering protocol, testnet, products, and research. Litepaper is outdated (Feb 2022) but core docs are current. Seven academic papers published on arXiv.",
+      "developer_community_size": null,
+      "grants_program": null,
+      "grants_url": null
+    }
+  },
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": 90000000,
+    "daily_transactions": 575000,
+    "tvl_usd": null,
+    "compute_delivered": "2,000,000+ AI models trained on testnet",
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": null,
+    "metrics_source": "Gensyn press release (December 2025 token sale announcement via PR Newswire)",
+    "metrics_date": "2025-12-15",
+    "usage_notes": "Testnet metrics as reported by Gensyn: 165,000+ users, 2,000,000+ AI models trained, 90,000,000+ transactions averaging 575,000 daily. These are testnet figures with no real economic value transacted. Metrics not independently verifiable via block explorer (Blockscout instance returned null API data). DeFiLlama does not list Gensyn. Revenue figure of $2.2M from third-party aggregator (Latka) is unconfirmed."
+  },
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": "Planned progressive decentralisation: Initially centralised around Gensyn Limited and core team. Post-TGE, Gensyn Foundation to govern via elected council (initially mapped to core team), on-chain proposals, and referenda. $AI token holders will vote on protocol upgrades, ecosystem programmes, and treasury deployments.",
+    "governance_url": "https://gensyn.network",
+    "key_community_channels": [
+      {
+        "platform": "Discord",
+        "url": "https://discord.com/invite/gensyn",
+        "notes": "Primary community channel"
+      },
+      {
+        "platform": "X (Twitter)",
+        "url": "https://x.com/gensynai",
+        "notes": "Official announcements"
+      },
+      {
+        "platform": "YouTube",
+        "url": "https://www.youtube.com/@gensynai",
+        "notes": "Video content"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/gensyn-ai",
+        "notes": "602 followers on GitHub org. 10+ repos. Primary activity on rl-swarm."
+      },
+      {
+        "platform": "HuggingFace",
+        "url": "https://huggingface.co/Gensyn",
+        "notes": "6 models published (Qwen2.5 variants). 65.9K downloads on primary 0.5B model."
+      },
+      {
+        "platform": "Blog",
+        "url": "https://blog.gensyn.ai",
+        "notes": "Research-focused blog with technical deep-dives"
+      }
+    ],
+    "sentiment_summary": "Community sentiment appears research-oriented and technically engaged, driven by the RL Swarm testnet participation model. The 165,000+ testnet users indicate significant grassroots interest. The project has strong credibility from a16z backing and published academic research. Some airdrop-farming behaviour is likely given the testnet reward multiplier programme.",
+    "community_notes": "Gensyn has built community primarily through open-source research and the RL Swarm testnet rather than traditional crypto marketing. The blog publishes substantive research rather than hype posts. Seven academic papers on arXiv demonstrate serious technical output. Community channels were not directly measurable due to JavaScript-rendered pages, but GitHub engagement (1,699 stars, 639 forks on rl-swarm) and testnet participation (165K+ users) indicate meaningful traction."
+  },
+  "freedom_score": {
+    "total_score": 52,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Gensyn's testnet is permissionless -- anyone with qualifying hardware (GPU or 32GB+ RAM CPU) can run an RL Swarm node. The network supports heterogeneous hardware from gaming GPUs to data centre A100/H100s. However, the coordination layer runs on a custom Ethereum rollup whose operator/sequencer details are not disclosed. Testnet infrastructure relies on Alchemy for authentication and block exploration. The Verde verification system enables trustless verification without requiring centralised intermediaries. Current status is testnet only -- no mainnet with real economic security. Score reflects permissionless participation design offset by centralised infrastructure dependencies and pre-mainnet status."
+      },
+      "governance_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Governance is currently fully centralised. Gensyn Limited (UK company #12601008) controls all protocol decisions. Two directors (Ben Fielding and Harry Grieve) are the sole decision-makers. Post-TGE plans include an elected council 'initially mapped to core team members' with on-chain proposals and referenda -- this is a stated intention, not a delivered feature. The Gensyn Foundation exists but has no demonstrated independent governance. No DAO, no community voting, no governance forum visible. Score reflects team-controls-all reality with voting planned but not yet implemented."
+      },
+      "token_distribution_fairness": {
+        "score": 6,
+        "max": 15,
+        "evidence": "Token distribution is heavily insider-weighted: 29.6% investors + 25% team = 54.6% insider allocation. Community treasury (40.4%) is the largest single category but controlled by the Foundation (initially team-aligned). Only 3% went to public sale and 2% to testnet rewards -- giving the broader community just 5% direct access. Vesting mitigates concentration risk: team and investors face 12-month cliff + 24-month linear unlock (36 months total). Team/investor tokens cannot be staked during lockup. The public sale used a transparent English auction mechanism clearing at $473M FDV. Score reflects heavy insider allocation partially offset by meaningful vesting restrictions."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "The protocol design is built for permissionless participation -- any device can contribute compute. Verde verification removes the need to trust individual compute providers. The Ethereum rollup inherits some censorship resistance from Ethereum L1 settlement. However, the rollup sequencer/operator is not documented as decentralised, creating a potential censorship vector. Smart contracts coordinate swarm behaviour but the team could theoretically upgrade or pause contracts. Training data is publicly accessible. Models can be published to HuggingFace independently. No documented censorship incidents. Score reflects strong design principles offset by centralised rollup operation and pre-mainnet status."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Gensyn's architecture gives users meaningful control: CodeAssist trains models locally on user machines, BlockAssist models are published to user-owned HuggingFace accounts. RL Swarm nodes train local models with results uploaded to user-controlled repositories. The litepaper describes optional functional encryption for training on encrypted data with <0.5% accuracy penalty. Training data must be publicly accessible (design constraint) but model weights belong to participants. The peer-to-peer architecture avoids centralised data aggregation. Privacy by design through local execution with only proofs submitted on-chain."
+      },
+      "open_source_transparency": {
+        "score": 13,
+        "max": 15,
+        "evidence": "Core repositories are open source under MIT licence: rl-swarm (1,699 stars), codeassist (699 stars), blockassist (96 stars), rl-swarm-contracts (40 stars), skippipe (48 stars). Seven academic papers published on arXiv with full methodology (Verde, NoLoCo, CheckFree, SkipPipe, SAPO, RL Swarm, Diverse Network Ensembles). HuggingFace presence with 6 published models. Blog publishes substantive research. Smart contract code publicly auditable on GitHub (Foundry framework with tests). Research-to-product pipeline is transparent. Minor deduction: no published security audits, rollup infrastructure code not visibly open-sourced, and the litepaper is explicitly outdated with no comprehensive replacement document."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "Gensyn scores 52/100 (D grade), reflecting a project with strong open-source and data sovereignty credentials but significant centralisation in governance and infrastructure. The protocol design is genuinely permissionless and the research output is exceptional for a crypto project -- seven arXiv papers and meaningful open-source contributions. However, governance remains fully team-controlled with only stated intentions for decentralisation post-TGE. Token distribution is heavily insider-weighted at 54.6% (team + investors) despite reasonable vesting schedules. The project is pre-mainnet with no live economic security, and the rollup infrastructure details are opaque. Freedom grade should improve materially if the team delivers on mainnet launch, decentralised governance, and rollup decentralisation."
+  },
+  "assessment": {
+    "what_works_today": [
+      "Genuine technical innovation: Verde verification system (RepOps for bitwise-reproducible ML across heterogeneous hardware) is a real contribution to decentralised ML, published as a peer-reviewed arXiv paper",
+      "Active testnet with real traction: 165,000+ users, 2M+ models trained, 90M+ transactions -- meaningful engagement beyond vapourware",
+      "Strong open-source culture: MIT-licensed repos, 7 academic papers, research-to-product pipeline visible in RL Swarm to CodeAssist progression",
+      "Practical applications shipping: Delphi prediction markets running live rounds with real model evaluations, CodeAssist and BlockAssist demonstrating tangible use cases",
+      "RL Swarm framework genuinely enables distributed RL training over the internet with low barriers to entry (CPU support with 32GB RAM)"
+    ],
+    "what_is_hype": [
+      "Claims of being 'the network for machine intelligence' -- currently a testnet for collaborative RL post-training, not general-purpose ML compute",
+      "Projected $0.40/hour V100-equivalent pricing (80% cheaper than AWS) from litepaper -- no real pricing exists as mainnet has not launched",
+      "The $473M FDV from public sale prices a testnet with no revenue, no mainnet, and no live token -- valuation is entirely speculative",
+      "Litepaper's vision of training state-of-the-art foundation models via distributed compute across consumer hardware -- current testnet trains 0.5B-1.5B parameter models, not frontier-scale",
+      "165,000+ testnet users likely inflated by airdrop farming behaviour given the testnet reward multiplier programme"
+    ],
+    "key_risks": [
+      "Execution risk: Mainnet launch not confirmed. Transitioning from testnet to production with real economic value and game-theoretic security is a massive engineering challenge",
+      "Competitive risk: io.net, Akash, Render, and Bittensor subnets all compete for decentralised compute. Gensyn's ML-specific focus narrows its market",
+      "Token concentration: 54.6% insider allocation creates selling pressure post-cliff. 12-month cliff ends ~April 2027, then 24 months of linear unlocks",
+      "Regulatory risk: UK-registered company conducting a public token sale with US buyer restrictions. Securities classification risk in multiple jurisdictions",
+      "Technical risk: Verde verification adds overhead to ML computation. Scaling from testnet Qwen 0.5B models to production-grade training workloads is unproven",
+      "No security audits: No published audit reports for smart contracts or protocol -- significant gap for a protocol handling economic value",
+      "Sequencer centralisation: Ethereum rollup operator/sequencer not documented as decentralised -- single point of failure and censorship vector"
+    ],
+    "competitive_advantages": [
+      "ML-specific protocol design: Unlike general compute networks (Akash, io.net), Gensyn is purpose-built for machine learning with verification, reproducibility, and distributed training primitives",
+      "Verde verification is a genuine technical moat: Bitwise-reproducible ML across heterogeneous hardware via RepOps is a novel contribution not replicated by competitors",
+      "Research depth: Seven arXiv papers (Verde, NoLoCo, CheckFree, SkipPipe, SAPO, RL Swarm, Diverse Ensembles) demonstrate frontier ML research capability",
+      "a16z crypto backing provides credibility, network effects, and capital for long-term development",
+      "Founding team combines ML research (Ben Fielding PhD) with quantitative finance and data (Harry Grieve) -- genuine domain expertise in both AI and crypto",
+      "Permissionless heterogeneous hardware support: Apple Silicon, consumer GPUs, and data centre hardware all supported -- broadens supply-side network effects"
+    ],
+    "competitive_disadvantages": [
+      "Pre-mainnet: Competitors like Akash (live mainnet since 2020), Render (live mainnet), and io.net (operational) have production networks. Gensyn is still on testnet",
+      "No live token: $AI has not launched or traded. Competitors have liquid tokens, staking, and economic flywheels already operating",
+      "Narrow ML focus: General compute networks can serve ML workloads plus everything else. Gensyn is ML-only, limiting total addressable market",
+      "Current testnet trains only small models (0.5B-1.5B parameters): Unproven for the large-scale training workloads that would justify the protocol's existence",
+      "Heavy reliance on Ethereum rollup: Performance and cost constrained by Ethereum L1 gas costs and rollup throughput limits"
+    ],
+    "comparable_projects": [
+      "io.net -- Decentralised GPU cloud for AI/ML workloads, aggregating compute from data centres and miners",
+      "Akash Network -- Open cloud marketplace for CPU/GPU/storage with reverse auction deployment model",
+      "Render Network -- GPU rendering and AI compute marketplace, recently pivoting to AI compute via Dispersed.com",
+      "Bittensor -- Incentivised network of AI subnets, particularly compute and training-focused subnets",
+      "Ritual -- Decentralised AI infrastructure for model hosting and inference",
+      "Together AI -- Decentralised training and inference platform (more centralised than Gensyn but similar ML focus)"
+    ],
+    "outlook": "Gensyn occupies a credible position in decentralised ML compute, differentiated by genuine research depth and a purpose-built verification layer. The Verde system and academic output set it apart from competitors who largely offer undifferentiated GPU marketplaces. However, the project is still pre-mainnet and pre-token, making the $473M FDV entirely forward-looking. The critical path is mainnet launch (likely H2 2026), which will test whether the protocol can scale beyond testnet RL training to production ML workloads. The insider-heavy token distribution (54.6%) and planned progressive decentralisation mean this will be a team-controlled project for at least 2-3 years post-TGE. Watch for: mainnet launch timeline, first production use cases beyond RL Swarm, smart contract audits, and governance decentralisation milestones.",
+    "overall_assessment": "Gensyn is one of the more technically serious projects in the decentralised compute space, with real research contributions (Verde, RepOps) and a working testnet showing genuine traction (165K+ users). The founding team is credible with relevant domain expertise, and a16z backing provides validation and runway. However, it remains fundamentally pre-product -- the testnet trains small models for reinforcement learning research, not production ML workloads. The $473M FDV prices a lot of future execution. The token distribution is insider-heavy and governance is fully centralised. For practitioners, the RL Swarm testnet is genuinely interesting to participate in today, but any economic exposure carries significant execution, regulatory, and competition risk. This is a high-conviction research bet, not a working infrastructure play."
+  },
+  "sources": [
+    {
+      "url": "https://www.gensyn.ai/",
+      "type": "Official Website",
+      "source_id": "S001",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "Main website: tagline, product descriptions, links to docs/blog/social, token sale status (closed), Delphi and CodeAssist announcements"
+    },
+    {
+      "url": "https://docs.gensyn.ai/",
+      "type": "Documentation",
+      "source_id": "S002",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Protocol docs homepage: four-layer architecture overview, Ethereum rollup foundation, compatibility/fairness/permissionless design principles"
+    },
+    {
+      "url": "https://docs.gensyn.ai/litepaper",
+      "type": "Litepaper",
+      "source_id": "S003",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "Legacy litepaper (Feb 2022, explicitly outdated): original Probabilistic Proof of Learning design, Substrate L1 plan (since replaced by Ethereum rollup), participant roles (Submitters/Solvers/Verifiers/Whistleblowers), cost projections, treasury mechanism, governance structure"
+    },
+    {
+      "url": "https://blog.gensyn.ai/",
+      "type": "Blog",
+      "source_id": "S004",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Blog index: Verde in production, Delphi introduction, prediction markets research, compute market theory, GRPO attack/defence analysis"
+    },
+    {
+      "url": "https://github.com/gensyn-ai",
+      "type": "GitHub Organisation",
+      "source_id": "S005",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "GitHub org page: London UK, 602 followers, 10+ repos. rl-swarm (1,699 stars, 639 forks), codeassist (699 stars, 123 forks), blockassist (96 stars), rl-swarm-contracts (40 stars, Solidity)"
+    },
+    {
+      "url": "https://github.com/gensyn-ai/rl-swarm",
+      "type": "GitHub Repository",
+      "source_id": "S006",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "Primary repo: peer-to-peer RL framework, 238 commits, MIT licence, Python/TypeScript, supports Qwen2.5 variants, requires Docker + NVIDIA GPU or 32GB+ RAM CPU"
+    },
+    {
+      "url": "https://github.com/gensyn-ai/rl-swarm-contracts",
+      "type": "GitHub Repository",
+      "source_id": "S007",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "Smart contracts repo: SwarmCoordinator contract on Gensyn testnet, Solidity, Foundry framework, 197 commits, v0.6.0 deployed, round-based coordination with peer registration and reward tracking"
+    },
+    {
+      "url": "https://github.com/gensyn-ai/codeassist",
+      "type": "GitHub Repository",
+      "source_id": "S008",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "CodeAssist repo: 699 stars, 123 forks, MIT licence, 26 commits, Python 64.2%/TypeScript 34%, local AI coding assistant that learns from user edits"
+    },
+    {
+      "url": "https://cryptorank.io/ico/gensyn",
+      "type": "Token Data Aggregator",
+      "source_id": "S009",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Token details: 10B total supply, distribution (Community Treasury 40.4%, Investors 29.6%, Team 25%, Community Sale 3%, Testnet Rewards 2%), TGE January 2026 (per CryptoRank), $66.74M total raised across 4 rounds, UK jurisdiction"
+    },
+    {
+      "url": "https://docs.gensyn.network/ai-token",
+      "type": "Foundation Documentation",
+      "source_id": "S010",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Official token docs: ERC-20 on Gensyn L2, TGE April 2026, 5 utility functions, vesting schedules (team/investors: 12mo cliff + 24mo linear; treasury: 20% at TGE + 36mo linear), programmatic buy-and-burn mechanism"
+    },
+    {
+      "url": "https://tokenomist.ai/gensyn",
+      "type": "Tokenomics Tracker",
+      "source_id": "S011",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Supply schedule: 10B total, 300M circulating (3%), FDV data unavailable, allocation breakdown confirmed. Data inconsistency noted (shows 'fully unlocked' which appears incorrect)"
+    },
+    {
+      "url": "https://www.coindesk.com/business/2023/06/11/blockchain-based-ai-compute-protocol-gensyn-closes-43m-series-a-funding-round-led-by-a16z/",
+      "type": "News Article",
+      "source_id": "S012",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Series A coverage: $43M led by a16z, CoinFund, Canonical Crypto, Protocol Labs, Eden Block. UK-based, pay-as-you-use compute access, cryptographic verification network. Quotes from Ben Fielding and Harry Grieve."
+    },
+    {
+      "url": "https://a16zcrypto.com/posts/article/investing-in-gensyn/",
+      "type": "Investor Blog",
+      "source_id": "S013",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "a16z investment thesis: potential 10-100x available ML compute, connecting underutilised hardware globally, strong team endorsement ('nobody better combines AI and crypto cypherpunk worlds')"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12601008",
+      "type": "Companies House",
+      "source_id": "S014",
+      "date_accessed": "2026-03-02",
+      "tier": 2,
+      "reliability_notes": "Company details: Gensyn Limited, #12601008, incorporated 13 May 2020, active, private limited company, SIC 62012 (software development), 64 Nile Street London N1 7SR"
+    },
+    {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12601008/officers",
+      "type": "Companies House",
+      "source_id": "S015",
+      "date_accessed": "2026-03-02",
+      "tier": 2,
+      "reliability_notes": "Two active directors: Benjamin Fielding (appointed 13 May 2020, born Jan 1993, British, England) and Harry James Kerr Grieve (appointed 13 May 2020, born Dec 1992, British, Scotland)"
+    },
+    {
+      "url": "https://huggingface.co/Gensyn",
+      "type": "HuggingFace",
+      "source_id": "S016",
+      "date_accessed": "2026-03-02",
+      "tier": 2,
+      "reliability_notes": "6 models published: Qwen2.5-0.5B-Instruct (65.9K downloads), Qwen2.5-1.5B-Instruct (1.92K downloads), plus 7B/32B/72B quantised variants. Collections: Gensyn Papers and RL Swarm. No public datasets."
+    },
+    {
+      "url": "https://blog.gensyn.ai/verde-verification-system-in-production/",
+      "type": "Technical Blog",
+      "source_id": "S017",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Verde technical deep-dive: two-level bisection game (iteration-level then operation-level), RepOps for bitwise reproducibility, Merkle tree of training iterations, single-step inference verification, partial re-execution for training verification"
+    },
+    {
+      "url": "https://docs.gensyn.ai/core-components",
+      "type": "Documentation",
+      "source_id": "S018",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Four protocol layers: (1) Consistent ML Execution (SAPO algorithm), (2) Trustless Verification (Verde + Judge), (3) P2P Communication (NoLoCo, CheckFree, SkipPipe), (4) Decentralised Coordination (RL Swarm + Testnet)"
+    },
+    {
+      "url": "https://docs.gensyn.ai/the-gensyn-protocol",
+      "type": "Documentation",
+      "source_id": "S019",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Protocol overview: four main components (execution, verification, communication, coordination), custom Ethereum rollup blockchain, focus on accessibility and verifiability"
+    },
+    {
+      "url": "https://docs.gensyn.ai/products-and-research",
+      "type": "Documentation",
+      "source_id": "S020",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Complete product/research catalogue: 7 research projects with arXiv links (Verde 2502.19405, NoLoCo 2506.10911, CheckFree 2506.15461, SkipPipe 2502.19913, SAPO 2509.08721, Diverse Ensembles 2502.19385, RL Swarm PDF). 5 products: Judge, BlockAssist, Testnet, CodeAssist, Delphi"
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.19405",
+      "type": "Academic Paper",
+      "source_id": "S021",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Verde paper: authors include Arasu Arun, Adam St. Arnaud, Alexey Titov, Brian Wilcox, Viktor Kolobaric, Marc Brinkmann, Oguzhan Ersoy, Ben Fielding, Joseph Bonneau. Refereed delegation for ML programs with RepOps. Submitted Feb 2025."
+    },
+    {
+      "url": "https://docs.gensyn.ai/testnet",
+      "type": "Documentation",
+      "source_id": "S022",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Testnet overview: launched March 2025, Phase 0 tracking RL Swarm participation, custom Ethereum rollup, future phases covering full ML lifecycle culminating in mainnet with real economic value"
+    },
+    {
+      "url": "https://delphi.gensyn.ai",
+      "type": "Product Page",
+      "source_id": "S023",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Delphi prediction market: 4 completed markets (Dec 2024 - Feb 2025), next market scheduled March 4 2026, winners include grok-4.1-fast-reasoning and Qwen3 variants"
+    },
+    {
+      "url": "https://www.prnewswire.com/apac/news-releases/gensyn-launches-ai-token-sale-on-sonar-302642315.html",
+      "type": "Press Release",
+      "source_id": "S024",
+      "date_accessed": "2026-03-02",
+      "tier": 1,
+      "reliability_notes": "Official token sale PR: testnet metrics (2M+ models trained, 165K+ users, 90M+ transactions, 575K daily average). 3% supply sold via English auction, FDV floor $1M to cap $1B. Testnet multiplier programme from 2% reward pool."
+    },
+    {
+      "url": "https://github.com/0xmoei/gensyn-ai",
+      "type": "Community Guide",
+      "source_id": "S025",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Node setup guide: hardware requirements (GPU: RTX 3090/4090/5090/A100/H100, 12GB+ VRAM, CUDA 12.4+; CPU: ARM64/x86, 32GB+ RAM), supported models (Qwen2.5 0.5B-1.5B), HuggingFace integration"
+    },
+    {
+      "url": "https://www.joinef.com/companies/gensyn/",
+      "type": "Incubator Portfolio",
+      "source_id": "S026",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Entrepreneur First portfolio: London, web3 industry, founded 2020, backed by a16z crypto. 'Making compute for AI as accessible as oxygen for humans.'"
+    },
+    {
+      "url": "https://gensyn.network",
+      "type": "Foundation Website",
+      "source_id": "S027",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Gensyn Foundation: supports ecosystem development and growth, links to $AI token docs and sale portal"
+    },
+    {
+      "url": "https://whales.market/blog/what-is-gensyn/",
+      "type": "Analysis Article",
+      "source_id": "S028",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Project analysis: lists Jeff Amico as COO alongside Ben Fielding (CEO) and Harry Grieve (CTO). Total funding $80.6M (may include public sale). Notes official tokenomics 'not announced' despite allocation being published."
+    },
+    {
+      "url": "https://depinhub.io/projects/gensyn",
+      "type": "DePIN Aggregator",
+      "source_id": "S029",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "DePIN Hub listing: compute/AI/blockchain category, permissionless global participation, token compensation for ML tasks, progressive governance decentralisation planned, fully remote team"
+    },
+    {
+      "url": "https://university.mitosis.org/breaking-down-gensyn-core-features-and-architecture/",
+      "type": "Analysis Article",
+      "source_id": "S030",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Technical analysis: Apple Metal GPU support added May 2025, W&B integration, ~$57M funding, references $GENS token ticker (may be outdated -- official ticker is $AI)"
+    },
+    {
+      "url": "https://www.gensyn.ai/careers",
+      "type": "Careers Page",
+      "source_id": "S031",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Small senior team, hiring 20+ roles in research and engineering, work at intersection of AI/cryptography/distributed systems, 4-stage interview process including co-founder conversation"
+    },
+    {
+      "url": "https://icodrops.com/gensyn/",
+      "type": "ICO Tracker",
+      "source_id": "S032",
+      "date_accessed": "2026-03-02",
+      "tier": 3,
+      "reliability_notes": "Token sale details: AI token, ERC-20, Dec 20 2025 sale at $0.0473/token, $16.14M raised, pre-valuation $473M (#349 ranked), 4 funding rounds totalling $66.74M, TGE date not confirmed"
+    }
+  ],
+  "metrics_history": []
+}
