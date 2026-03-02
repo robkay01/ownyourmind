@@ -4,7 +4,7 @@ description: "Decentralised GPU rendering and compute. Connects GPU providers wi
 category: "compute"
 token: "RENDER"
 status: "active"
-freedomScore: 4
+freedomScore: 3
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "render-token"
@@ -85,21 +85,21 @@ Solana single-chain dependency means 87-plus historical outages can halt settlem
 
 **My position.** I do not hold RENDER. The permissioned network model and proprietary core are fundamentally incompatible with the sovereignty thesis that drives this site's editorial position. Render is a good product. It may be a reasonable investment on the rendering demand thesis. But it is not decentralised infrastructure in any meaningful sense, and calling it such is misleading.
 
-## Freedom score: 4/10
+## Freedom score: 3/10
 
-Render scores 35/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+Render scores 32/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
-**Infrastructure decentralisation (8/20):** Roughly 1,140 active node operators. Network is explicitly permissioned. Foundation approves operators. OTOY controls the core rendering engine (proprietary) and receives a hardcoded 5% service fee. Dispersed AI subnet requires separate application. Compare this with [Akash's](/projects/akash/) permissionless model where anyone with hardware joins without approval.
+**Infrastructure decentralisation (6/20):** ~15,670 registered node operators, but the network is explicitly permissioned. Foundation approves all operators. All core infrastructure is proprietary OTOY software: node client, job routing, allocation algorithm, reputation system. Foundation controls who participates and can remove operators. Rendering is off-chain and not verifiable by external parties. Compare with [Akash's](/projects/akash/) permissionless model where anyone with hardware joins without approval.
 
-**Governance decentralisation (7/20):** Render Network Proposals with two-phase voting, 15% quorum, token-weighted on Nation.io. But OTOY's COO sits on the Foundation board. 71% whale concentration dominates outcomes. Near-100% approval rates on proposals that reach final vote suggest governance is confirmatory, not deliberative.
+**Governance decentralisation (8/20):** 22 Render Network Proposals with voting on Nation.io. 15% quorum requirement met (18% participation in RNP-022). But actual active voting is extremely low: only ~0.5% of supply voted for/against in RNP-022 (91.3M tokens abstained vs 2.6M voted). RNPs are primarily authored by the Foundation. OTOY Treasury (23.3%) gives insiders significant voting weight. No evidence of proposals contradicting Foundation wishes being passed.
 
-**Token distribution fairness (5/15):** OTOY Treasury (23.3%) plus Partner Escrow (26.6%) plus Reserve (8.61%) equals approximately 58.5% insider allocation. Public and private sale combined only 18.29%. ICO raised just $1.16 million of a $134 million hard cap. Whale concentration 71% as of 2024 (up from 51.5%). The $30 million 2021 round from Multicoin, Alameda and Solana further increased institutional capture.
+**Token distribution fairness (5/15):** OTOY Treasury (23.3%) plus Partner Escrow (26.6%) equals ~50% insider-controlled supply. Public and private sale combined only 18.29%. 91% of supply held by ~902 addresses. The $30 million 2021 round from Multicoin and Alameda further increased institutional concentration. ICO was small ($1.16 million) but the overwhelming insider allocation dominates the picture.
 
-**Censorship resistance (5/15):** Permissioned operator model means the Foundation can approve or deny GPU providers. OTOY gates access to OctaneRender integration. Creators submit through the platform-controlled Render Portal. Foundation can delist operators or refuse job processing. Solana dependency means 87-plus historical outages halt settlement.
+**Censorship resistance (5/15):** Permissioned operator model means the Foundation can approve or deny GPU providers. Proprietary node client means Foundation could push updates that censor. Job allocation algorithm is opaque. No documented content-neutral policy. Solana dependency adds chain-level risk (7 outage incidents, declining validator count, 78% client homogeneity).
 
-**Data sovereignty (6/15):** Job files encrypted and hashed during transfer. Output watermarked until payment confirmed. Self-custodial Solana wallets. But the Foundation knows all participants (permissioned). No confidential computing. OTOY has visibility into network operations.
+**Data sovereignty (6/15):** Creators upload rendering assets to the network for processing on node operator hardware. Encrypted transport claimed but not independently verifiable (proprietary). Token holdings are self-custodial on Solana. But the Foundation knows all participants (permissioned) and rendering data passes through opaque proprietary infrastructure with no independent verification of privacy guarantees.
 
-**Open source and transparency (4/15):** Core rendering engine proprietary. Job orchestration, node operator client and Solana programmes all closed source. Public GitHub repos contain zero operational code. Six contributors. Only one verifiable audit: OpenZeppelin 2017 for deprecated Ethereum contracts. No audit of current Solana infrastructure, BME contracts or escrow.
+**Open source and transparency (2/15):** The overwhelming majority of the codebase is proprietary to OTOY Inc.: OctaneRender engine (commercial, EUR 23.95/month), node client, job routing, allocation algorithm, reputation system, network backend. Public GitHub repos contain only governance proposals (Markdown), legacy token contracts (last updated 2021), and one plugin binary. 9 total repos across two orgs. 6 contributors. No reproducible builds. No independent code review possible. If OTOY ceased operations, the network would likely become non-functional.
 
 ### Path to improvement
 

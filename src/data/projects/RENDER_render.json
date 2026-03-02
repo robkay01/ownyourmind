@@ -3,7 +3,7 @@
     "project_id": "render",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-02",
     "status": "draft",
     "refresh_config": {
@@ -21,18 +21,22 @@
     },
     "auto_refresh_log": [],
     "research_gaps": [
-      "Core rendering/compute software is proprietary and closed source -- no independent code review possible",
-      "Node operator count (5,600 cumulative) cannot be independently verified; ~1,140 active at any time is from Messari references",
-      "GPU utilisation rates not officially published; 85-95% figure from promotional materials, not independently auditable",
-      "No publicly verifiable audit of Solana SPL token program, BME emission contracts, or escrow contracts",
-      "EtherAuthority audit (April 2024) referenced by one source but report could not be located -- unverified claim",
+      "Core rendering/compute software (OctaneRender, node client, job routing) is proprietary and closed source -- no independent code review possible",
+      "EtherAuthority audit (April 14, 2024) referenced in one source but full report could not be located publicly -- single-source claim, unverified",
+      "No confirmed public audit of the Solana SPL token contract",
+      "Exact Discord member count could not be confirmed via web research",
+      "Exact Telegram member count could not be confirmed via web research",
+      "Current Twitter/X follower count (2026) not confirmed -- last verified: 122,511 (Dec 2023), likely 150K+ based on growth trajectory",
+      "Whitepaper v4.0 full text could not be retrieved (PDF was corrupted/unreadable)",
+      "OTOY Inc. corporate financials not publicly available (private company). Total corporate funding conflicting: Crunchbase ~$37.8M vs PitchBook ~$98M.",
       "Exact size of Alameda Research's RNDR holding not publicly documented",
       "Active creator/user count not disclosed by Foundation",
-      "Governance voter participation rates not publicly aggregated -- 15% quorum threshold exists but actual turnout unknown",
-      "OTOY Inc. corporate financials not publicly available (private company)",
-      "RenderLabs (for-profit spinout, 2025) terms and structure not yet public",
-      "Dispersed.com (AI compute subnet, Dec 2025) adoption metrics not yet available",
-      "Revenue proxy from token burns (~$1.7M Jan-Sep 2025) is an approximation based on varying token prices"
+      "Governance voter participation rates not publicly aggregated -- 15% quorum threshold exists but actual active vote (excluding abstentions) is ~0.5% of supply",
+      "RNP-022 Year 3 detailed emission schedule amount not confirmed in available sources",
+      "Specific Hollywood studio partnership names not publicly disclosed",
+      "Internal Render Network/OTOY revenue figures not publicly available",
+      "Per-node operator earnings data not available for 2025-2026",
+      "ATL price discrepancy: CoinGecko says $0.03666; another source says $0.0001151 (Sep 22, 2020) -- likely reflects pre-TGE or illiquid data"
     ]
   },
 
@@ -40,15 +44,15 @@
     "name": "Render Network",
     "ticker": "RENDER",
     "category": "Compute & Infrastructure",
-    "subcategory": "GPU rendering and compute marketplace",
-    "tagline": "Powering the Future of Creativity",
-    "one_liner": "A permissioned GPU compute marketplace connecting creators and AI developers who need rendering and inference capacity with node operators who provide NVIDIA GPUs.",
+    "subcategory": "GPU rendering and AI compute marketplace",
+    "tagline": "The Leading Decentralized GPU Rendering Network",
+    "one_liner": "A distributed GPU rendering and compute marketplace connecting node operators to creators and enterprises, built on proprietary OctaneRender technology with a Solana-based token settlement layer.",
     "website": "https://rendernetwork.com",
     "documentation_url": "https://know.rendernetwork.com",
     "whitepaper_url": "https://renderfoundation.com/whitepaper",
     "github_url": "https://github.com/rendernetwork",
-    "chain": "Solana (SPL token, migrated from Ethereum ERC-20 in November 2023)",
-    "launch_date": "2019-06-24",
+    "chain": "Solana (SPL token, migrated from Ethereum ERC-20 in November 2023 via RNP-002/Wormhole). Legacy ERC-20 still exists but deprecated.",
+    "launch_date": "2020-04-27",
     "current_status": "mainnet",
     "logo_url": null
   },
@@ -57,32 +61,47 @@
     "founding_team": [
       {
         "name": "Jules Urbach",
-        "role": "Founder & CEO (OTOY Inc. and Render Network)",
-        "background": "Serial entrepreneur in computer graphics. Founded OTOY Inc. in 2008. Created OctaneRender (GPU rendering engine). Previously created Hell Cab (one of the first CD-ROM games, Time Warner Interactive) and Real Pool (first 3D Shockwave game). Over 25 years in GPU rendering and cloud graphics. Harvard-Westlake School; accepted to Harvard University but deferred to build games. Self-taught programmer.",
-        "linkedin_or_x": "https://x.com/juaboreth",
+        "role": "Founder & CEO (OTOY Inc.)",
+        "background": "Born in France, raised in LA. Created one of the first CD-ROM games (Hell Cab) at age 18. Founded OTOY Inc. in 2008. Over 25 years in computer graphics. Built OctaneRender, the world's first GPU-accelerated unbiased renderer. Visionary in holographic media and cloud rendering.",
+        "linkedin_or_x": "https://x.com/julesurbach",
         "doxxed": true
       },
       {
         "name": "Malcolm Taylor",
-        "role": "Co-Founder & CTO (OTOY Inc.)",
-        "background": "BS Mathematics, Massey University (New Zealand). ~20 years software development experience in distributed systems and rendering. Based in New Zealand.",
+        "role": "CTO & Co-Founder (OTOY Inc.)",
+        "background": "Co-founded OTOY with Jules Urbach. Technical leadership of OctaneRender development.",
         "linkedin_or_x": null,
         "doxxed": true
       }
     ],
-    "team_size_estimate": 99,
-    "entity_name": "OTOY Inc. (parent) / Render Network Foundation (governance)",
-    "entity_jurisdiction": "OTOY: Los Angeles, California, USA. Foundation: Cayman Islands (spun out January 2023).",
+    "render_foundation": {
+      "established": "2023",
+      "jurisdiction": "Cayman Islands",
+      "structure": "Not-for-profit, spun out of OTOY Inc.",
+      "key_personnel": [
+        {"name": "Tristan Relly", "role": "Head of Operations", "background": "Former CEO of Balancer Foundation, 20+ years financial advisory"},
+        {"name": "Andrew Hyde", "role": "Head of Communications", "background": "Founded Startup Weekend, TEDxBoulder"},
+        {"name": "Ryan Shea", "role": "Foundation Advisor"},
+        {"name": "Sonny Osahn", "role": "Foundation (delivered Breakpoint 2025 keynote)"}
+      ],
+      "advisory_board": ["Ari Emanuel (Co-CEO, WME)", "Mike Winkelmann (Beeple)", "Brendan Eich (CEO, Brave/BAT)", "J.J. Abrams (filmmaker)"]
+    },
+    "team_size_estimate": null,
+    "entity_name": "OTOY Inc. (development) / Render Network Foundation (governance)",
+    "entity_jurisdiction": "OTOY: USA (private company). Render Foundation: Cayman Islands.",
     "notable_backers": [
-      "Multicoin Capital (led $30M round, Dec 2021)",
-      "Alameda Research ($30M round participant)",
-      "Solana Foundation / Solana Ventures ($30M round participant)",
-      "Sfermion ($30M round participant)",
-      "Beeple (Mike Winkelmann, advisor)",
-      "Brendan Eich (Brave/BAT founder, advisor)",
-      "J.J. Abrams (Bad Robot, advisory board)",
-      "Ari Emanuel (Endeavor/WME CEO, advisory board)",
-      "Emad Mostaque (ex-Stability AI founder, advisory board)"
+      "Multicoin Capital (led $30M round)",
+      "Alameda Research (pre-FTX collapse)",
+      "Solana Foundation",
+      "Sfermion",
+      "Kenetic Capital",
+      "NGC Ventures",
+      "Vinny Lingham",
+      "Bill Lee",
+      "Yuri Milner / DST Global (OTOY corporate)",
+      "Autodesk (OTOY corporate)",
+      "HBO (OTOY corporate)",
+      "Discovery Communications (OTOY corporate)"
     ],
     "funding_raised": {
       "total_usd": 35180000,
@@ -92,65 +111,86 @@
           "amount_usd": 1160000,
           "date": "2017-10-05",
           "lead_investor": null,
-          "notes": "4,650,922 RNDR at $0.25. Hard cap of $134M not reached. 20% genesis bonus for participants."
+          "notes": "4,650,922 RNDR sold at $0.25 per token. October 5-12, 2017."
         },
         {
           "round_type": "Private Sale",
           "amount_usd": 4020000,
-          "date": "2018-01-01",
+          "date": "2018-01",
           "lead_investor": null,
-          "notes": "~16,080,000 RNDR at $0.25. Bonuses 2.5-30% depending on tranche."
+          "notes": "16,080,000 RNDR sold at $0.25 with 2.5-30% bonuses. January-May 2018."
         },
         {
-          "round_type": "Strategic Token Round",
+          "round_type": "Venture Round (Token)",
           "amount_usd": 30000000,
           "date": "2021-12-21",
           "lead_investor": "Multicoin Capital",
-          "notes": "Participants: Alameda Research, Solana Foundation, Sfermion, Kenetic Capital. Angels: Vinny Lingham, Bill Lee."
+          "notes": "Token round. Investors include Alameda Research, Solana Foundation, Sfermion, Kenetic Capital, NGC Ventures, Vinny Lingham, Bill Lee. Undisclosed token amount and price."
         }
-      ]
+      ],
+      "otoy_corporate_funding": {
+        "total_usd_estimated": "37,800,000 to 98,000,000 (Crunchbase vs PitchBook conflict)",
+        "rounds": [
+          {"round_type": "Series D", "date": "2014-02", "lead_investor": "Yuri Milner / DST Global", "notes": "Also Autodesk, Taylor Frigon, John Mack, The Roddenberry Trust"},
+          {"round_type": "Series E", "date": "2016-04", "lead_investor": null, "notes": "HBO, Discovery Communications. Separate from token funding."}
+        ]
+      }
     }
   },
 
   "technical": {
-    "architecture_summary": "Render Network is a GPU compute marketplace built on Solana. Creators submit rendering or AI compute jobs via the Render Portal or integrated tools (OctaneRender, Blender Cycles, Redshift). Jobs are encrypted, hashed, and matched to node operators based on OctaneBench scores and reputation. Node operators render jobs on NVIDIA GPUs. Output is validated via Proof of Render (automated quality checks plus manual creator confirmation). Payment is held in on-chain escrow and released upon validation. The core rendering engine (OctaneRender) is proprietary OTOY software. The blockchain layer handles settlement, token burns/mints, escrow, and governance only. All actual compute happens off-chain. The network is permissioned -- node operators must be approved by the Foundation.",
-    "consensus_mechanism": "None of its own. Render sits on Solana (Proof of History + Tower BFT). 'Proof of Render' is a job validation protocol, not a blockchain consensus mechanism.",
-    "what_is_onchain": "RENDER SPL token, BME burn/mint transactions, escrow smart contracts, emissions distribution, governance voting (Nation.io), provenance tracking, Render Credits (non-transferable records of completed work)",
-    "what_is_offchain": "All GPU rendering/compute work, job distribution, file transfer, OctaneBench scoring, reputation calculations, rendering engines (OctaneRender, Blender Cycles, Redshift), node operator client software, AI inference (Dispersed)",
+    "architecture_summary": "Render Network is a two-layer architecture. The off-chain layer (proprietary, OTOY-owned) handles all core functionality: OctaneRender GPU rendering engine, node client software, job routing and allocation, multi-tier pricing (Tier 1 trusted partners, Tier 2 high-quality, Tier 3 economy), reputation scoring, and encrypted job payload transport. Supported engines: OctaneRender (primary), Blender Cycles (via RNP-014), Cinema 4D/Redshift. The Dispersed platform (launched December 2025 at Breakpoint) extends into AI compute for inference and training. The on-chain layer (Solana) handles RENDER token burn-mint-transfer via BME, governance voting via Nation.io, and proof-of-render job completion logging. Job workflow: creator uploads project -> files divided into units -> allocated to node operators by pricing tier and reputation -> operators render frames -> proof published -> creator validates -> tokens released from escrow. BME: 95% of payment tokens burned, node operators receive newly minted tokens.",
+    "consensus_mechanism": "Solana PoS (inherited, for token settlement only). Core rendering runs off-chain on proprietary OTOY infrastructure. No rendering-specific consensus mechanism.",
+    "what_is_onchain": "RENDER token burn/mint/transfer (SPL, Solana), BME settlement, governance votes (Nation.io), proof-of-render job completion logging",
+    "what_is_offchain": "ALL core rendering and compute: OctaneRender engine, node client, job routing, allocation algorithm, reputation scoring, file distribution, frame rendering, quality verification, Dispersed AI compute, encrypted payload transport",
     "key_dependencies": [
-      "Solana blockchain (all on-chain settlement and token operations)",
-      "OTOY Inc. (proprietary OctaneRender engine, 5% service fee, core infrastructure)",
-      "NVIDIA CUDA ecosystem (node operators require NVIDIA GPUs with CUDA 10.1+)",
-      "Wormhole (cross-chain bridge used for Ethereum-to-Solana migration)",
-      "Blender Cycles (open-source rendering engine, secondary integration)",
-      "Maxon Redshift (proprietary, additional rendering engine)"
+      "OTOY Inc. OctaneRender (proprietary, commercial software -- EUR 23.95/month)",
+      "OTOY Inc. node client software (proprietary, not open source)",
+      "OTOY Inc. job routing and allocation system (proprietary)",
+      "Solana blockchain (token settlement, SPL standard)",
+      "Nation.io (governance voting platform)",
+      "Wormhole (Ethereum-Solana bridge for legacy RNDR holders)",
+      "Blender Cycles (open-source rendering engine, integrated via RNP-014)",
+      "Cinema 4D / Redshift (commercial rendering, plugin integration)"
     ],
-    "smart_contract_languages": ["Solidity (legacy Ethereum ERC-20, crowdsale)", "Rust (Solana SPL programs, Anchor framework)"],
+    "smart_contract_languages": ["Solana/Rust (SPL token)", "Solidity (legacy Ethereum ERC-20, deprecated)"],
     "open_source": false,
-    "license": "No license on most repos. Apache 2.0 on two minor repos. Core software is proprietary.",
+    "license": "Proprietary (OTOY Inc.) for core software. Governance proposals (RNPs) are public on GitHub. Legacy token contracts on GitHub under MIT-like terms.",
     "github_metrics": {
       "total_repos": 9,
       "primary_repo_url": "https://github.com/rendernetwork/RNPs",
       "total_commits": 107,
       "contributors": 6,
-      "last_commit_date": "2026-02-28",
+      "last_commit_date": "2025-12-05",
       "stars": 44,
       "forks": 5,
-      "open_issues": null
+      "open_issues": 0,
+      "org_breakdown": {
+        "rendernetwork": {
+          "repos": 4,
+          "description": "Active org. Contains: RNPs (107 commits, 44 stars, governance proposals), c4d-plugin (release binary host, 5 releases), advent-tos (terms of service), .github (org profile)"
+        },
+        "rndr-network": {
+          "repos": 5,
+          "description": "Legacy org. Contains: RNPs (89 commits, older copy), account-compression-anchor-gen (Helium fork, Rust), HIP (Helium fork), Token-Audit (ERC-20 source, 15 commits, last updated 2021), Token-Airdrop (airdrop contract, last updated 2018)"
+        }
+      },
+      "critical_assessment": "Development activity on GitHub is minimal and governance-focused. The RNPs repo is the primary active repository and contains only governance proposals (Markdown documents), not production code. The actual rendering engine, node client, job routing, and network backend are ALL proprietary and closed-source. There is no open-source reference implementation of core network software. The C4D plugin repo hosts binary releases, not source code."
     },
     "audits": [
       {
         "auditor": "OpenZeppelin",
-        "date": "2017-09-01",
-        "scope": "RNDR ERC-20 token and crowdsale contracts (Ethereum)",
-        "result_summary": "1 low-severity issue (misuse of FinalizableCrowdsale). Fixed.",
-        "report_url": "https://www.openzeppelin.com/news/render-token-audit-2a078ba6d759"
+        "date": "2017-09-18",
+        "scope": "RNDR ERC-20 token and crowdsale contracts (Ethereum). Initial allocation: 25% crowdsale, 65% foundation escrow, 10% founders.",
+        "result_summary": "1 low-severity issue found (misuse of FinalizableCrowdsale library). Fixed.",
+        "report_url": "https://www.openzeppelin.com/news/render-token-audit-2a078ba6d759/"
       }
     ],
+    "audit_notes": "Only one confirmed public audit: OpenZeppelin (2017) on the original Ethereum ERC-20 token and crowdsale. An EtherAuthority audit (April 14, 2024) is referenced in one source but the full report could not be located publicly -- single-source claim, unverified. No confirmed public audit of the Solana SPL token contract. No audit of the off-chain rendering/compute infrastructure is possible because it is proprietary and closed-source. This is a significant gap for a network with a $700M+ market cap.",
     "security_incidents": [
       {
         "date": "2022-01-01",
-        "description": "Alameda Research-linked Twitter bot manipulation. Research by NCRI found coordinated bot activity pumped RNDR price by 11-30% on four separate occasions. Inauthentic comments comprised roughly half of all Twitter posts about RNDR during manipulation windows.",
+        "description": "Alameda Research-linked Twitter bot manipulation. NCRI study (August 2023) found coordinated bot activity on four separate occasions from 2022-2023. Each instance: spikes in bot posts preceded RNDR price increases of 11-30% within 24 hours. Out of 182,105 accounts discussing FTX-listed coins, 172,451 were flagged as potential bots. Inauthentic comments comprised roughly half of all Twitter posts about RNDR during manipulation windows.",
         "loss_amount_usd": null,
         "post_mortem_url": "https://www.coindesk.com/tech/2023/08/03/alameda-linked-coins-pumped-twitter-bots-after-ftx-listing-report-shows"
       }
@@ -160,80 +200,82 @@
   "tokenomics": {
     "token_name": "Render",
     "ticker": "RENDER",
-    "token_standard": "Solana SPL token (migrated from Ethereum ERC-20 RNDR in November 2023 via Wormhole). Legacy ERC-20 still exists but deprecated.",
+    "token_standard": "Solana SPL token (contract: rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof). Migrated from Ethereum ERC-20 (RNDR) in November 2023 via RNP-002/Wormhole. Legacy ERC-20 exists but deprecated.",
     "token_type": "both",
     "token_utility": [
-      "Payment for rendering/compute jobs (burned via BME)",
-      "Node operator rewards (minted from emission schedule)",
-      "Governance voting on Render Network Proposals (RNPs) via Nation.io",
-      "Render Credits (non-transferable provenance records of completed work)"
+      "Payment for rendering and AI compute jobs (burned via BME on completion)",
+      "Node operator rewards (newly minted via BME emission schedule)",
+      "Governance voting on RNPs via Nation.io",
+      "Access to network compute resources (job submission requires RENDER)",
+      "Bounty platform rewards for developers and artists"
     ],
     "supply": {
       "max_supply": 644245094,
-      "total_supply": 533000000,
-      "circulating_supply": 519000000,
+      "total_supply": 533474886,
+      "circulating_supply": 518743261,
       "circulating_supply_date": "2026-03-02",
-      "circulating_percentage": 80.6
+      "circulating_percentage": 80.5
     },
     "distribution": {
       "initial_allocation": [
         {
-          "category": "Escrow for Partners (3 tranches)",
-          "percentage": 26.6,
-          "vesting_schedule": "Cliff vesting across three tranches extending to 2051",
-          "cliff": "Variable by tranche",
-          "notes": "Tranche 1: 7.45%, Tranche 2: 17.08%, Tranche 3: 2.08%"
+          "category": "Escrow for Partners",
+          "percentage": 26.60,
+          "vesting_schedule": "Cliff vesting, various tranches",
+          "cliff": "Various",
+          "notes": "Partner allocations with cliff-based release schedules. ~125.5M RENDER remaining in lock as of March 2026."
         },
         {
           "category": "OTOY Treasury",
-          "percentage": 23.3,
-          "vesting_schedule": "Company-controlled",
-          "cliff": "None",
-          "notes": "OTOY Inc. corporate treasury allocation"
+          "percentage": 23.30,
+          "vesting_schedule": "Foundation/OTOY controlled",
+          "cliff": "None documented",
+          "notes": "Controlled by OTOY Inc. / Render Foundation. Single largest insider allocation."
         },
         {
-          "category": "Public & Private Sale",
+          "category": "Public & Private Token Sale",
           "percentage": 18.29,
-          "vesting_schedule": "Unlocked at sale",
-          "cliff": "None",
-          "notes": "Combined ICO ($1.16M) and private sale (~$4M) at $0.25 per RNDR"
+          "vesting_schedule": "ICO unlocked at TGE; private sale with bonuses and schedules",
+          "cliff": "None for ICO",
+          "notes": "ICO: $1.16M at $0.25 (4.65M tokens). Private: $4.02M at $0.25 with 2.5-30% bonuses (16.08M tokens)."
         },
         {
-          "category": "BME Inflation Pool",
+          "category": "Inflation (BME emissions)",
           "percentage": 16.67,
-          "vesting_schedule": "Minted on declining schedule per governance-approved annual proposals",
+          "vesting_schedule": "Declining annual emissions via governance-approved BME schedule",
           "cliff": "None",
-          "notes": "107,374,182 tokens (20% of original supply) added via RNP-001 governance vote"
+          "notes": "Year 1: 9.13M RENDER. Year 2: 5.91M RENDER (~35% reduction). Year 3: TBD (RNP-022 approved). Supply increase capped at 107.37M tokens (20% of original mint), never exceeding 10% per year."
         },
         {
           "category": "RNDR Reserve",
           "percentage": 8.61,
-          "vesting_schedule": "Foundation-managed",
-          "cliff": "None",
-          "notes": "Escrow for supply/demand flowback"
+          "vesting_schedule": "Foundation controlled",
+          "cliff": "None documented",
+          "notes": "Reserve allocation managed by Foundation"
         },
         {
-          "category": "Subsequent Distribution",
+          "category": "Escrow for Subsequent Distribution",
           "percentage": 6.52,
-          "vesting_schedule": "Future allocation",
-          "cliff": "None",
-          "notes": "Token Release Fund (~1.96%) + Future Distribution (~4.56%)"
+          "vesting_schedule": "Foundation controlled, phased release",
+          "cliff": "Various",
+          "notes": "Additional escrow for future distributions"
         }
       ],
-      "distribution_method": "ICO (October 2017) at $0.25 per RNDR. Hard cap of $134M not reached -- raised only $1.16M publicly. Private sale (Jan-May 2018) raised ~$4M. Strategic round (Dec 2021) raised $30M led by Multicoin Capital. Combined insider allocation (OTOY Treasury + Partner Escrow + Reserve) ≈ 58.5% of supply. 71% whale concentration as of 2024."
+      "distribution_method": "ICO (October 2017) at $0.25 per token. Private sale (January-May 2018) at $0.25 with bonuses. Venture round ($30M, December 2021) led by Multicoin Capital with Alameda Research, Solana Foundation, others. TGE: October 6, 2020 at listing price $0.0533. Original mint: 536,870,912 RNDR (2^29). OTOY Treasury (23.3%) + Partner Escrows (26.6%) = ~50% of total supply controlled by insiders/Foundation. Not a fair launch.",
+      "whale_concentration": "91% of supply held by approximately 902 addresses (100K+ tokens). In 11 weeks leading up to March 2026, large wallets accumulated 20.5M tokens (~3.7% of supply, valued at $126.3M). Total holders: ~91,712 (January 2026)."
     },
     "emissions": {
-      "model": "Burn-and-Mint Equilibrium (BME) -- net inflationary",
+      "model": "inflationary",
       "current_daily_emissions": null,
       "current_annual_inflation_rate": null,
-      "halving_schedule": "No halving. Emissions decline annually per governance-approved proposals. Year 1: 9.13M RENDER. Year 2: 5.91M RENDER (35% reduction). Damping coefficient of 0.945 proposed for post-Year 5.",
-      "next_major_emission_event": "Year 2 emissions schedule (RNP-018)",
-      "next_event_date": null,
-      "burn_mechanism": "BME: 95% of USD-equivalent job payments converted to RENDER and burned permanently. 5% goes to OTOY as service fee. Burns are demand-driven. Jan-Sep 2025: 530,171 RENDER burned (up 279% YoY from 139,924). Monthly burns growing ~29% MoM but still only offset 10-25% of emissions. True equilibrium requires substantially more network usage."
+      "halving_schedule": "No halving. Declining annual emissions set by governance vote. Year 1 (2024): 9,126,804 RENDER. Year 2 (2025): 5,905,580 RENDER (~35% reduction). Year 3 (2026): approved via RNP-022, amount TBD. Damping coefficient: 0.945 (gradually decreasing). Supply increase capped at 107,374,182 tokens (20% of original mint), never exceeding 10% per year.",
+      "next_major_emission_event": "RNP-022 Year 3 emission distribution",
+      "next_event_date": "2026-01-01",
+      "burn_mechanism": "BME (Burn-Mint Equilibrium, RNP-001): 95% of RENDER spent on jobs is burned upon completion. 5% goes to Foundation as fee. New RENDER minted per epoch (weekly) to node operators via Job Completion Rewards and Availability Rewards. Currently NET INFLATIONARY: monthly emissions (~500K RENDER) significantly exceed monthly burns (~50K RENDER) as of late 2025. 2025 burns (Jan-Sep): 530,171 RENDER, up 279% from 2024 (139,924 RENDER same period). System designed to become deflationary as utilisation increases, but that threshold is not yet reached."
     },
     "staking": {
       "staking_available": false,
-      "staking_type": "No native protocol staking. RENDER is not a proof-of-stake token. Node operators earn by providing GPU compute, not by staking tokens.",
+      "staking_type": "No native staking mechanism. Node operators provide GPU compute but do not stake tokens. Third-party platforms offer RENDER staking external to the protocol.",
       "minimum_stake": null,
       "lock_up_period": null,
       "current_apy_nominal": null,
@@ -243,64 +285,75 @@
       "slashing_conditions": null
     },
     "market_data": {
-      "price_usd": 1.40,
-      "market_cap_usd": 726000000,
-      "fully_diluted_valuation_usd": 902000000,
-      "twenty_four_hour_volume_usd": 63000000,
+      "price_usd": 1.35,
+      "market_cap_usd": 701000000,
+      "fully_diluted_valuation_usd": 882000000,
+      "twenty_four_hour_volume_usd": 41000000,
       "all_time_high_usd": 13.59,
       "all_time_high_date": "2024-03-17",
-      "all_time_low_usd": 0.0366,
+      "all_time_low_usd": 0.03666,
       "all_time_low_date": "2020-06-16",
-      "major_exchanges": ["Binance", "Coinbase", "Kraken", "OKX", "KuCoin", "Bybit", "Crypto.com", "MEXC"],
+      "major_exchanges": ["Binance", "Coinbase", "Kraken", "OKX", "Bybit", "KuCoin", "Gate.io", "Crypto.com", "MEXC", "HTX"],
       "data_snapshot_date": "2026-03-02"
     },
-    "token_model_classification": "Burn-and-Mint Equilibrium (BME) with net inflationary dynamics at current usage levels",
-    "tokenomics_notes": "RENDER has no native staking -- holders earn nothing by simply holding. The BME model is elegant in theory (usage burns tokens, offsetting new mints) but in practice emissions outpace burns by roughly 4-10x at current usage. Jan-Sep 2025 burns of 530K RENDER against Year 1 emissions of 9.13M means burns covered roughly 6% of emissions. The 5% OTOY service fee on all jobs is a permanent centralised revenue extraction. Original max supply was 536,870,912 (2^29); governance vote added 107.4M for the BME pool, bringing effective max to ~644M. 71% whale concentration and no staking means the token's primary function is speculation, with rendering demand providing the only organic buy pressure."
+    "token_model_classification": "BME (Burn-Mint Equilibrium) utility token. Currently net inflationary with declining emission schedule. No native staking.",
+    "tokenomics_notes": "BME is well-designed in theory but currently net inflationary: monthly emissions (~500K RENDER) outpace monthly burns (~50K RENDER) by ~10x. Burns are growing (279% YoY) but remain an order of magnitude below emissions. The system is designed to become deflationary at scale, but that threshold is not reached. OTOY Treasury (23.3%) + Partner Escrows (26.6%) = ~50% insider-controlled supply. 91% of supply held by ~902 addresses. No native staking means holders cannot earn yield from the protocol directly. The ~82% decline from ATH ($13.59 March 2024 to ~$1.35) reflects both broader market conditions and the inflationary pressure. CoinMarketCap rank #66 -- significantly higher market cap than Akash despite similar utility category."
   },
 
   "participation": {
     "methods": [
       {
         "type": "node_operation",
-        "description": "Register NVIDIA GPUs as a node operator on the Render Network. Provide rendering and AI compute capacity. Earn RENDER from BME emission schedule based on jobs completed, uptime, bandwidth, and GPU model. Network is permissioned -- must be approved by the Foundation.",
-        "minimum_hardware": "NVIDIA GPU with CUDA 10.1+, compute capability 3.0+, 6GB+ VRAM (8GB+ preferred), 32GB+ system RAM, 100GB free disk, 100 Mbps download / 75 Mbps upload, driver v566.36+",
-        "minimum_capital_usd": 500,
+        "description": "Provide GPU computing power for rendering and AI compute jobs. PERMISSIONED: must complete Render Network Interest Form and be approved by Foundation. This is a CRITICAL differentiator from permissionless networks like Akash. Multi-tier pricing: Tier 1 (trusted partners), Tier 2 (high-quality), Tier 3 (economy). Reputation scoring affects job allocation.",
+        "minimum_hardware": "NVIDIA CUDA-enabled GPU with CUDA 10.1+ (driver 566.36+, compute capability 3.0+). Minimum 6GB VRAM (8GB+ preferred), compute score at or above RTX 3050. 32GB+ RAM, 100GB+ free SSD. 100Mbps download, 75Mbps upload. Qualified GPUs: RTX 3050-5090 range. Data centre operators (25+ GPUs or H100+): separate onboarding path.",
+        "minimum_capital_usd": 300,
         "technical_skill_required": "intermediate",
-        "estimated_returns": "Variable. Depends on GPU model, utilisation rate, and emission distribution. Rewards weighted: compute 25%, bandwidth 35%, GPU model 20%, uptime 20%.",
-        "barriers_to_entry": ["Permissioned -- must be approved by Foundation", "NVIDIA GPUs only (no AMD)", "CUDA-specific requirements", "Inconsistent utilisation and unpredictable earnings reported by operators"],
+        "estimated_returns": "Highly variable and unpredictable. Forum consensus: 'paid for themselves multiple times' over extended periods but not reliable primary income. ~$125K total node earnings across all operators in a single epoch (Nov 2023 data). Not expecting '100% or even 10% load' consistently. Better suited as credit-banking for future rendering needs.",
+        "barriers_to_entry": ["Foundation approval required (waitlist/application)", "Qualifying NVIDIA GPU hardware", "Ongoing maintenance and uptime requirements", "Inconsistent demand and unpredictable earnings", "Proprietary node client software (no transparency into allocation)"],
         "guide_available": true,
-        "guide_url": "https://know.rendernetwork.com/"
+        "guide_url": "https://know.rendernetwork.com/general-render-network/what-role-am-i/how-to-get-started-1"
       },
       {
         "type": "using",
-        "description": "Submit rendering or AI compute jobs as a creator. Upload jobs via Render Portal or integrated tools (OctaneRender, Blender Cycles, Cinema 4D/Redshift). Jobs priced in USD, paid in RENDER (burned via BME). 50-80% cheaper than centralised cloud rendering.",
-        "minimum_hardware": "None (upload jobs via portal or integrated software)",
-        "minimum_capital_usd": 10,
+        "description": "Submit rendering or AI compute jobs as a creator/enterprise. Upload projects via OctaneRender, Blender Cycles, or Cinema 4D/Redshift. Jobs priced in USD, paid in RENDER (burned via BME). 50-80% cheaper than centralised cloud rendering. Dispersed platform (Dec 2025) for AI compute workloads.",
+        "minimum_hardware": "None (rendering happens on network nodes)",
+        "minimum_capital_usd": null,
         "technical_skill_required": "intermediate",
-        "estimated_returns": "Cost savings vs centralised rendering. Not yield-generating.",
-        "barriers_to_entry": ["Must use supported rendering engines", "Job pricing in USD requires RENDER purchase", "Learning curve for non-crypto-native creators"],
+        "estimated_returns": "Cost savings vs centralised rendering. Not a yield-generating activity.",
+        "barriers_to_entry": ["OctaneRender subscription (EUR 23.95/month) or other supported engine", "3D rendering workflow knowledge", "RENDER tokens for job payment"],
         "guide_available": true,
-        "guide_url": "https://know.rendernetwork.com/"
+        "guide_url": "https://know.rendernetwork.com"
       },
       {
         "type": "governance",
-        "description": "Participate in Render Network Proposals (RNPs). Two-phase voting: community snapshot (72h, simple majority) then final vote on Nation.io (6 days, 50%+ approval, 15% quorum of total supply). Any RENDER holder can propose or vote.",
+        "description": "Vote on Render Network Proposals (RNPs) via Nation.io using RENDER tokens. 4-phase process: Draft > Initial Vote (72h, simple majority, no quorum) > Final Vote (6 days, 50% majority + 15% quorum) > Implementation. Emergency provisions raise quorum to 20%. 22 RNPs submitted to date. Actual active participation is very low: RNP-022 had 2.6M votes for/against out of 93.9M participating tokens (91.3M abstained), meaning ~0.5% of supply actively voted.",
         "minimum_hardware": "None (Solana wallet only)",
-        "minimum_capital_usd": 1,
+        "minimum_capital_usd": null,
         "technical_skill_required": "basic",
-        "estimated_returns": "No direct financial return. Governance influence over emission schedules, network parameters, and strategic direction.",
-        "barriers_to_entry": ["15% quorum threshold is high", "71% whale concentration means large holders dominate", "Solana wallet required"],
+        "estimated_returns": "No direct returns. Influence over protocol direction.",
+        "barriers_to_entry": ["RENDER token holdings for voting weight", "Low active participation means individual votes have limited influence unless large holder"],
         "guide_available": true,
         "guide_url": "https://know.rendernetwork.com/about-render-network-governance/render-network-proposal-rnp-system"
+      },
+      {
+        "type": "contributing",
+        "description": "Build on the network via Bounty Platform (launched July 2025) or submit RNPs. Bounty rewards paid in RENDER tokens.",
+        "minimum_hardware": "Development environment",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Bounty rewards in RENDER",
+        "barriers_to_entry": ["Technical skills for bounties", "Community engagement for RNPs"],
+        "guide_available": true,
+        "guide_url": "https://rendernetwork.com/bounties"
       }
     ],
     "developer_resources": {
       "sdk_available": false,
       "api_available": false,
-      "documentation_quality": "good",
-      "developer_community_size": "6 contributors on governance repos. Core software is proprietary -- no public developer ecosystem around the protocol itself.",
+      "documentation_quality": "adequate",
+      "developer_community_size": "Very limited open-source community. GitHub repos across both orgs total 9, with primary activity being governance proposals (Markdown). Core development is internal to OTOY Inc. Bounty Platform (Jul 2025) is the primary external developer engagement mechanism.",
       "grants_program": true,
-      "grants_url": "https://rendernetwork.com"
+      "grants_url": "https://rendernetwork.com/bounties"
     }
   },
 
@@ -310,136 +363,136 @@
     "total_transactions": null,
     "daily_transactions": null,
     "tvl_usd": null,
-    "compute_delivered": "68M+ cumulative frames rendered. 22M frames in 2025 alone (35% of all-time total). ~1.5M frames/month throughput. Average OctaneBench: 1.67M OBh (Q1 2024, up 112% YoY).",
-    "nodes_active": 1140,
+    "compute_delivered": "~69.1M total frames rendered (cumulative). ~15,670 current node operators (dashboard). ~5,600 nodes since inception. 2M+ OctaneBench compute capacity. Dispersed AI compute platform launched December 2025.",
+    "nodes_active": 15670,
     "validators_active": null,
     "miners_active": null,
     "unique_contracts_deployed": null,
-    "revenue_annual_usd": 2300000,
-    "revenue_source": "Token burns as proxy for network usage. 530,171 RENDER burned Jan-Sep 2025 (up 279% YoY). Implied USD revenue ~$1.7M for that 9-month period (annualised ~$2.3M). OTOY also receives 5% service fee on all jobs.",
-    "metrics_source": "Render Foundation Monthly Reports, CoinLaw, Messari",
+    "revenue_annual_usd": null,
+    "revenue_source": "Network fees from rendering/compute jobs. 95% of RENDER spent on jobs is burned (BME), 5% to Foundation. Internal revenue figures not publicly disclosed.",
+    "metrics_source": "Render Foundation Stats Dashboard, CoinLaw, Foundation Monthly Reports",
     "metrics_date": "2026-03-02",
-    "usage_notes": "5,600 cumulative node operators registered; ~1,140 active at any given time. 276 artist grants funded. Burns growing fast (29% MoM average in 2025) but from a small base. The implied $2.3M annual revenue against ~$726M market cap gives a price-to-revenue ratio of ~315x -- significantly more speculative than Akash's ~27x. Key customers: Hollywood/VFX studios (via OTOY), V! Studios (NASA), Super Bowl LIX trailer. Dispersed.com (AI compute) launched Dec 2025 with 600+ AI models at $1.75/hour. Real rendering demand is proven; AI compute pivot is early-stage."
+    "usage_notes": "69.1M total frames rendered is impressive for a GPU marketplace. ~35% of all-time frames rendered in 2025, with monthly throughput of ~1.5M frames. 2025 RENDER burned (Jan-Sep): 530,171 tokens, up 279% from 139,924 in same period 2024 -- shows growing utilisation. Peak network utilisation: 85% during high-demand epochs. GPU marketplace grew 87% YoY per Foundation report. However: 15,670 'node operators' on dashboard vs 5,600 'since inception' suggests dashboard counts registered rather than active nodes. Actual concurrent active node count unclear. No public revenue figures make it difficult to assess economic sustainability. The network delivers real rendering output (Hollywood, Beeple, enterprise clients) but the proprietary nature means utilisation claims cannot be independently verified."
   },
 
   "community": {
-    "discord_members": 7600,
-    "telegram_members": 19600,
-    "x_followers": 228000,
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": 150000,
     "github_contributors": 6,
-    "governance_participation_rate": "Unknown. 15% quorum threshold exists but actual voter participation rates not publicly aggregated. Approval rates are extremely high (99%+) on proposals that reach final vote.",
-    "governance_model": "Render Network Proposals (RNPs) with two-phase voting. Phase 1: community Snapshot vote (72h, simple majority, no quorum). Phase 2: final vote on Nation.io (6 days, 50%+ approval, 15% quorum). Emergency provisions skip Phase 1 but raise quorum to 20%. Foundation board includes OTOY COO.",
+    "governance_participation_rate": "Low active participation despite meeting quorum. RNP-022 (Dec 2025): 93.9M tokens participating (18% of supply, exceeds 15% quorum), but 91.3M abstained. Only 2.6M tokens actively voted for/against (~0.5% of supply). 22 RNPs submitted; 8 implemented, 10+ approved/roadmap, 1 withdrawn.",
+    "governance_model": "Render Network Proposals (RNPs). 4-phase voting on Nation.io (Solana-compatible, migrated from Snapshot). Draft > Initial Vote (72h, simple majority, no quorum) > Final Vote (6 days, 50% majority, 15% quorum of total supply) > Implementation. Emergency provisions raise quorum to 20%. RNPs primarily authored by Foundation, not community. Foundation controls proposal filtering and implementation. No evidence of proposals contradicting Foundation wishes being passed.",
     "governance_url": "https://know.rendernetwork.com/about-render-network-governance/render-network-proposal-rnp-system",
     "key_community_channels": [
-      "X @rendernetwork (~228,000 followers) -- primary announcements",
-      "Telegram @rendernetwork (~19,600 members) -- community discussion",
-      "Discord (~7,600 members) -- community hub",
-      "OTOY Forums (render.otoy.com/forum) -- node operator discussions",
-      "Nation.io -- governance voting platform (Solana)",
-      "Render Foundation Dashboard (stats.renderfoundation.com) -- network metrics"
+      "X @rendernetwork (~150K estimated followers) -- announcements and updates",
+      "Discord (active, member count unconfirmed) -- community discussion",
+      "Telegram @rendernetwork (active, member count unconfirmed) -- community discussion",
+      "OTOY Forum (render.otoy.com/forum) -- technical discussions and node operator experiences",
+      "Nation.io -- governance voting",
+      "Instagram @rendertoken (~10K followers)"
     ],
-    "sentiment_summary": "Generally positive among holders and the creative/VFX community. Node operator frustration around inconsistent utilisation and unpredictable earnings is a recurring theme. Apple keynote feature (May 2024) was a major sentiment driver. Community confident in rendering use case but divided on AI compute pivot timeline. The 89.7% decline from ATH weighs on sentiment. Hollywood and creative industry ties give the project credibility that most crypto projects lack.",
-    "community_notes": "Jules Urbach is the dominant public figure. Advisory board includes J.J. Abrams, Ari Emanuel, Beeple, Brendan Eich, and Emad Mostaque (ex-Stability AI). RenderCon annual event (2026 in Hollywood). Community culture is more creative/VFX-oriented than typical crypto -- many participants are artists and studios, not speculators. 228K X followers is substantial but engagement rates not independently measured."
+    "sentiment_summary": "Community is split between artist/creator users (positive, value the product for rendering) and crypto/DeFi participants (concerned about price decline, insider concentration, limited staking). Hollywood and enterprise partnerships generate genuine excitement. Node operators report inconsistent earnings and low utilisation. Governance participation is very low in active terms. The Dispersed AI compute launch (Dec 2025) is viewed as the key growth catalyst. Community generally respects Jules Urbach's vision but is frustrated by the proprietary nature of the core platform and lack of transparency around node economics.",
+    "community_notes": "Token holders: ~91,712 as of January 2026. Render Foundation produces monthly reports via Medium. RenderCon 2026 scheduled for April 16-17. SUMERGE: Beyond the Render art exhibition at ARTECHOUSE NYC (Sep-Dec 2025) was a high-profile community/art event. io.net partnership for compute client node onboarding. The advisory board (Ari Emanuel, Beeple, Brendan Eich, J.J. Abrams) is exceptionally high-profile for a crypto project."
   },
 
   "freedom_score": {
-    "total_score": 35,
+    "total_score": 32,
     "max_possible": 100,
     "breakdown": {
       "infrastructure_decentralisation": {
-        "score": 8,
+        "score": 6,
         "max": 20,
-        "evidence": "~1,140 active node operators (5,600 cumulative) distribute GPU compute across independent hardware. However, the network is explicitly permissioned -- operators must be approved by the Foundation. OTOY Inc. controls the core rendering engine (OctaneRender, proprietary), receives a hardcoded 5% service fee on all jobs, and maintains the network infrastructure. Node operators provide GPUs but have no influence over the technology layer. The Dispersed AI compute subnet onboards providers through a separate application process. This is a permissioned marketplace controlled by a single company, not a permissionless infrastructure layer."
+        "evidence": "Permissioned node onboarding: operators must apply and be approved by Foundation. All core infrastructure is proprietary OTOY software (node client, job routing, rendering engine, allocation algorithm, reputation system). Foundation controls who can participate as a GPU provider and can remove operators. ~15,670 registered node operators, but Foundation mediates all access. Rendering and compute are entirely off-chain and not verifiable by external parties. Solana used only for token settlement (itself having centralisation vectors: validator count declined to ~800 in 2025, 78% use Jito-Solana client). Some merit: geographically distributed GPU providers, growing toward 2.4M TFLOPS via RNP-021 (H100/H200, AMD MI300X). But the permissioned model and proprietary software stack place this firmly in the 'permissioned' range."
       },
       "governance_decentralisation": {
-        "score": 7,
+        "score": 8,
         "max": 20,
-        "evidence": "Render Network Proposals (RNPs) provide a formal governance framework with two-phase voting, 15% quorum requirements, and token-weighted voting on Nation.io. Multiple proposals have been submitted and passed (RNP-006 for Solana migration passed with 99.84% approval). However, OTOY's COO sits on the Foundation board. 71% whale concentration means governance is dominated by large holders. Near-100% approval rates on proposals that reach final vote suggest either strong pre-vote consensus-building or low adversarial participation. OTOY retains structural influence through technology provision, fee extraction, and board representation."
+        "evidence": "RNP system exists and is functional: 22 proposals submitted, 8 implemented, multiple governance votes. Community voting via Nation.io with 15% quorum requirement met (18% participation in RNP-022). However: actual active voting is extremely low -- only ~0.5% of supply voted for/against in RNP-022 (91.3M abstained vs 2.6M voted). RNPs are primarily authored by the Render Foundation, not community members. Foundation controls proposal filtering and implementation pipeline. OTOY Treasury (23.3%) gives insiders significant voting weight. No evidence of proposals contradicting Foundation wishes being passed. Token voting exists but Foundation heavily influences direction."
       },
       "token_distribution_fairness": {
         "score": 5,
         "max": 15,
-        "evidence": "OTOY Treasury (23.3%) + Partner Escrow (26.6%) + Reserve (8.61%) = ~58.5% of supply allocated to insiders. Public and private sale combined was only 18.29%. The ICO raised just $1.16M of a $134M hard cap -- suggesting limited public distribution. 71% of holdings concentrated in whale wallets as of 2024, up from 51.5%. Vesting extends to 2051 but the concentration is extreme. The $30M 2021 round (Multicoin, Alameda, Solana) further increased institutional concentration."
+        "evidence": "OTOY Treasury (23.3%) + Partner Escrows (26.6%) = ~50% of total supply controlled by insiders/Foundation. Public & Private Sale: only 18.29% of supply. 91% of supply held by ~902 addresses. ICO was small ($1.16M) and relatively accessible at $0.25/token, but the overwhelming insider allocation dominates. Venture round ($30M, Multicoin + Alameda) further concentrated holdings. Cliff vesting for partner allocations creates concentration events. No native staking means no mechanism for broader distribution through participation. Recent whale accumulation (20.5M tokens in 11 weeks) reinforces concentration."
       },
       "censorship_resistance": {
         "score": 5,
         "max": 15,
-        "evidence": "Permissioned node operator model means the Foundation can approve or deny GPU providers. OTOY controls the primary rendering engine and can gate access to OctaneRender integration. Creators submit jobs through the Render Portal -- a platform-controlled interface. The Foundation can theoretically delist node operators or refuse job processing. Solana dependency means any Solana outage (87+ historical outages) halts settlement. Within the approved network, creators can submit arbitrary rendering jobs, but the gatekeeping at the provider and platform level creates meaningful censorship vectors."
+        "evidence": "Foundation controls node onboarding (can deny or revoke access). Proprietary node client means Foundation could push software updates that censor. Job allocation algorithm is opaque -- Foundation could theoretically deprioritise certain users or content types. No documented content-neutral policy. However: once jobs are on the network, rendering is distributed across multiple nodes. Solana settlement provides some censorship resistance for token transfers. No documented instances of censorship to date. The permissioned nature and proprietary software create meaningful censorship capability even if not currently exercised."
       },
       "data_sovereignty": {
         "score": 6,
         "max": 15,
-        "evidence": "Job files are encrypted and hashed during transfer to node operators. Output is watermarked until payment is confirmed via escrow. Self-custodial Solana wallets for token holdings. However, the permissioned model means the Foundation knows all participants. OTOY has visibility into network operations. Node operators process creator files on their hardware -- no confidential computing or zero-knowledge verification. Render Credits (provenance records) are on-chain, providing transparency but not privacy."
+        "evidence": "Creators upload rendering assets to the network for processing on node operator hardware. Encrypted transport claimed but not independently verifiable (proprietary infrastructure). Rendered outputs returned to creators who retain ownership. No documented data retention policy for job payloads on node operator machines. Token holdings are self-custodial on Solana (strong). No data export tools documented for network interaction history. IP rights collaboration with Stability AI/Endeavor focuses on provenance (positive signal). Users control some data, but rendering data passes through opaque proprietary infrastructure with no independent verification of privacy guarantees."
       },
       "open_source_transparency": {
-        "score": 4,
+        "score": 2,
         "max": 15,
-        "evidence": "The core rendering engine (OctaneRender) is proprietary commercial software owned by OTOY. The job orchestration layer, node operator client, and Solana programs are all closed source. The 9 public GitHub repos contain essentially zero operational code -- only governance proposals (RNPs) and legacy token utilities. 6 contributors across all public repos. Only one verifiable audit exists (OpenZeppelin 2017 for the original Ethereum crowdsale contracts -- now deprecated). No audit of current Solana infrastructure, BME contracts, or escrow. The Foundation publishes monthly reports, which provides some transparency on metrics, but the codebase is overwhelmingly proprietary."
+        "evidence": "The overwhelming majority of the Render Network's codebase is closed source and proprietary to OTOY Inc. Proprietary: OctaneRender engine (commercial, EUR 23.95/month), node client software, job routing/allocation algorithm, reputation system, network backend, Dispersed AI compute platform. Open: governance proposals (RNPs on GitHub, Markdown only), basic legacy token contracts (ERC-20, 15 commits, last updated 2021), one C4D plugin release binary. Total GitHub presence: 9 repos across 2 orgs with minimal actual code. Primary active repo (RNPs) contains only governance proposals. No reproducible builds, no public code review, no independent audit of core systems possible. If OTOY ceased operations, the network would likely become non-functional. Blender Cycles integration (open-source engine) is a positive signal, but the Render Network integration layer itself is not open. This is fundamentally a proprietary commercial platform with a token layer."
       }
     },
     "freedom_grade": "F",
-    "freedom_summary": "Render Network scores an F (35/100), reflecting a fundamentally centralised project with a token. OTOY Inc. controls the proprietary rendering engine, receives a hardcoded 5% fee on all jobs, has board representation on the Foundation, and maintains the network infrastructure. The network is explicitly permissioned -- node operators must be approved. The core software is entirely closed source with no public code repositories containing operational code. Token distribution is heavily insider-weighted (~58.5% to insiders) with 71% whale concentration. The one verifiable audit (2017) covers deprecated Ethereum contracts, not the current Solana infrastructure. The rendering use case is genuine and the network processes real workloads, but the 'decentralised' label is primarily marketing. The GPU supply side is distributed across independent operators, which is the sole meaningful decentralisation vector."
+    "freedom_summary": "Render Network scores an F (32/100), reflecting a fundamentally proprietary computing platform with a token layer. OTOY Inc. controls the core rendering engine, node client, job routing infrastructure, and the Foundation that gates node operator access. While functional governance exists via RNPs, active participation is extremely low (~0.5% of supply), and ~50% of token supply is insider-controlled. The network delivers real utility (69M+ frames, growing AI compute, impressive partnerships) and has the highest market cap in its category, but from a decentralisation and sovereignty perspective it scores poorly. The open-source transparency score (2/15) is the most damaging dimension: the vast majority of the system runs on closed-source OTOY software with no public code, no reproducible builds, and no independent audit possible. The key tension: Render is arguably the best GPU rendering marketplace product, but a poor example of decentralised infrastructure."
   },
 
   "assessment": {
     "what_works_today": [
-      "Real rendering demand -- 68M+ cumulative frames, 22M in 2025 alone, growing 35% of all-time total in one year",
-      "Proven Hollywood/VFX customer base through OTOY's existing relationships (Westworld, The Crown, Altered Carbon, NASA)",
-      "OctaneRender integration provides a genuine moat -- widely used GPU rendering engine with Blender and Cinema 4D support",
-      "Token burns growing fast (279% YoY) -- organic demand signal even if still small relative to emissions",
-      "Strong exchange coverage (Binance, Coinbase, Kraken, OKX) and #84 by market cap on CoinGecko",
-      "Solana migration completed successfully with major exchange auto-conversion",
-      "Advisory board with genuine industry credibility (J.J. Abrams, Ari Emanuel, Beeple, Brendan Eich)"
+      "69.1M+ frames rendered cumulatively -- real production output, not vapourware",
+      "Genuine enterprise and Hollywood adoption: Beeple, Apple Vision Pro integration, Stability AI partnership",
+      "OctaneRender is a world-class GPU rendering engine with 25+ years of development",
+      "BME is a well-designed token mechanism -- burns growing 279% YoY as utilisation increases",
+      "Dispersed AI compute platform (Dec 2025) expands addressable market beyond rendering",
+      "RNP-021 proposes enterprise-grade GPU support (H100/H200, AMD MI300X) targeting 2.4M TFLOPS",
+      "Strong advisory board: Ari Emanuel (WME), Beeple, Brendan Eich (Brave), J.J. Abrams",
+      "Highest market cap in DePIN compute category (~$700M), listed on all major exchanges including Binance",
+      "Blender Cycles integration (RNP-014) adds open-source engine support"
     ],
     "what_is_hype": [
-      "'Decentralised' claim is misleading -- the network is permissioned, core software is proprietary, and OTOY extracts a 5% fee on all jobs",
-      "'Apple partnership' is massively overstated -- OTOY's software runs on Apple Silicon (Metal API) and Apple featured OctaneX in an iPad Pro keynote. This is software compatibility, not a strategic partnership",
-      "'85-95% GPU utilisation' appears in promotional materials but is not independently verifiable. Permissioned onboarding could simply reflect tight supply management",
-      "AI compute pivot (Dispersed.com, Dec 2025) is early-stage with no public adoption metrics -- competing against well-funded alternatives",
-      "BME 'equilibrium' is aspirational -- burns cover only 6-25% of emissions at current usage, meaning the token is significantly net inflationary",
-      "5,600 node operators sounds impressive but only ~1,140 are active at any given time",
-      "Node operator profitability is poorly documented -- operators are primarily paid through inflation subsidies, not organic demand"
+      "'Decentralised GPU network' narrative significantly overstates actual decentralisation -- core is proprietary OTOY software with Foundation-gated access",
+      "15,670 'node operators' on dashboard likely counts registered nodes, not concurrent active operators. '5,600 since inception' suggests much lower active count.",
+      "BME framed as deflationary but is currently net inflationary: ~500K RENDER minted vs ~50K burned monthly (~10x gap)",
+      "'Open and permissionless' claims in marketing materials contradict the permissioned node onboarding reality",
+      "85-95% utilisation figures from promotional materials cannot be independently verified (proprietary infrastructure)",
+      "Governance participation framed as community-driven but only ~0.5% of supply actively votes (rest abstains or delegates passively)"
     ],
     "key_risks": [
-      "OTOY Inc. retains structural control -- proprietary technology, 5% fee extraction, board representation, brand authority. The Foundation provides a governance facade but OTOY is the actual operator",
-      "Permissioned network contradicts the decentralisation thesis -- node operators must be approved, can be removed",
-      "71% whale token concentration creates severe manipulation risk and governance capture",
-      "Net inflationary tokenomics -- emissions outpace burns by 4-10x at current usage levels",
-      "No native staking -- RENDER holders earn nothing by holding. Pure speculation plus rendering demand",
-      "Jules Urbach extreme key person risk -- single founder controls both OTOY and Render vision with no visible succession plan",
-      "Only one verifiable audit (2017, for deprecated Ethereum contracts). No audit of current Solana infrastructure",
-      "Alameda Research investment and documented Twitter bot manipulation of RNDR price",
-      "Solana single-chain dependency with no fallback -- 87+ historical Solana outages",
-      "89.7% below all-time high ($1.40 vs $13.59)",
-      "OTOY is US-based (California) with ICO history -- SEC regulatory surface area",
-      "Dispersed AI compute competing against Akash (permissionless), io.net, and centralised cloud with SLAs"
+      "OTOY/Jules Urbach centralisation: one private company controls the core rendering engine, node client, job routing, and network infrastructure. All proprietary and closed-source.",
+      "Permissioned network: Foundation controls who can be a node operator. Can deny or revoke access. Structural opposite of permissionless compute (Akash).",
+      "~50% insider token allocation: OTOY Treasury (23.3%) + Partner Escrows (26.6%). 91% of supply held by ~902 addresses.",
+      "Jules Urbach key person risk: founder/CEO of both OTOY and Render vision. No documented succession plan.",
+      "BME is currently net inflationary: emissions outpace burns by ~10x. Deflationary threshold not yet reached.",
+      "Alameda Research was an investor ($30M round); NCRI documented bot manipulation with 11-30% price spikes on four occasions.",
+      "No current security audit: OpenZeppelin audit (2017) is 9 years old and covered only the Ethereum token. No confirmed Solana SPL audit. No audit of off-chain infrastructure possible (proprietary).",
+      "Solana chain risk: 7 separate outage incidents, validator count declining, 78% client homogeneity (Jito-Solana).",
+      "If OTOY ceased operations, the network would likely become non-functional -- existential dependency on a single private company."
     ],
     "competitive_advantages": [
-      "Only decentralised GPU network with deep integration into professional rendering workflows (OctaneRender, Blender, Redshift)",
-      "Real Hollywood/studio production credits and industry relationships through OTOY's 15+ year history",
-      "OctaneRender is a genuine product moat -- widely adopted GPU rendering engine",
-      "Strong brand recognition in the creative/VFX community",
-      "Largest social following among DeAI compute projects (228K X followers)",
-      "Binance listing gives liquidity advantage over Akash and smaller competitors"
+      "OctaneRender is best-in-class GPU rendering software with 25+ years of development -- genuine technical moat",
+      "Hollywood and enterprise adoption provides credibility and demand that crypto-native competitors lack",
+      "Highest market cap in DePIN compute (~$700M) with listings on all major exchanges including Binance",
+      "Apple Vision Pro integration positions for spatial computing growth",
+      "Advisory board of exceptional profile (Ari Emanuel, Beeple, Brendan Eich, J.J. Abrams)",
+      "Dispersed AI compute expansion addresses the fastest-growing GPU demand sector",
+      "Significant rendering output (69M+ frames) demonstrates proven product-market fit for rendering workloads"
     ],
     "competitive_disadvantages": [
-      "Permissioned network vs Akash's permissionless marketplace and Bittensor's permissionless subnets",
-      "No native staking reduces token utility vs AKT (staking + gas) and TAO (staking + subnet investment)",
-      "Proprietary core software vs Akash (Apache 2.0), Bittensor (MIT), and others that are fully open source",
-      "NVIDIA-only GPUs limit provider pool vs Akash (any hardware) and Dispersed (adding AMD/Intel)",
-      "AI compute pivot is late and unproven -- Akash and io.net have multi-year head starts in GPU marketplace",
-      "No managed services or general-purpose compute -- limited to rendering and nascent AI inference",
-      "315x price-to-revenue ratio is extremely speculative compared to Akash (~27x)"
+      "Permissioned node onboarding vs Akash's permissionless model -- fundamentally less decentralised",
+      "Proprietary core: no independent code review, no reproducible builds, no community fork possible",
+      "No native staking -- token holders cannot earn yield from the protocol, reducing holding incentive",
+      "No SDK or API for developers -- limited third-party ecosystem building",
+      "Net inflationary token economics at current utilisation levels",
+      "Rendering is a niche market compared to general compute -- Dispersed must succeed for broader relevance",
+      "Extreme whale concentration (91% of supply in ~902 addresses) creates price manipulation risk"
     ],
     "comparable_projects": [
-      "Akash Network (AKT) -- permissionless cloud compute marketplace (more decentralised, less specialised)",
-      "io.net -- decentralised GPU aggregation for AI/ML (newer, larger claimed GPU count but credibility concerns)",
-      "Bittensor (TAO) -- decentralised AI network (different model: subnets, not raw GPU rental)",
-      "Flux (FLUX) -- decentralised cloud infrastructure (hosting/APIs, not rendering)",
-      "Golem (GLM) -- original decentralised compute project (declining relevance)"
+      "Akash Network (AKT) -- decentralised cloud compute marketplace (permissionless, open-source, lower market cap)",
+      "io.net -- decentralised GPU network (newer entrant, partnered with Render for node onboarding)",
+      "Nosana -- decentralised GPU compute on Solana (same chain, narrower focus)",
+      "Aethir -- decentralised cloud gaming and AI compute",
+      "Livepeer (LPT) -- decentralised video transcoding (similar model: GPU network with token)",
+      "AWS / GCP / Azure -- centralised cloud (the real competition for enterprise workloads)"
     ],
-    "outlook": "Render Network has the most proven use case in decentralised GPU compute -- 68M+ frames rendered with real Hollywood customers. The OctaneRender moat gives it a defensible niche that no competitor can easily replicate. However, the project's 'decentralised' positioning is fundamentally compromised by OTOY's structural control, the permissioned network model, and the proprietary codebase. The AI compute pivot via Dispersed is strategically necessary (rendering alone cannot justify the market cap) but is early-stage and facing well-funded competition from both decentralised and centralised alternatives. For practitioners: Render is best understood as a crypto-enabled rendering service operated by OTOY, not a decentralised protocol. The token has strong liquidity and brand recognition but no staking yield, inflationary supply, and 89.7% drawdown from ATH. Node operators with NVIDIA GPUs may find it worthwhile if approved, but earnings are inconsistent and primarily subsidy-driven.",
-    "overall_assessment": "Render is the odd one out in the DeAI landscape: a genuine product with real demand and industry credibility, wrapped in a decentralisation narrative that does not hold up to scrutiny. OTOY's rendering technology is proven and the Hollywood customer base is real. But the permissioned network, proprietary codebase, 5% fee extraction, insider-heavy token distribution, and OTOY's structural control make this closer to a centralised service with a token than a decentralised protocol. The freedom score of 35/100 (F) reflects this reality. For the OYM thesis (sovereignty-first), Render does not deliver meaningful decentralisation -- but it does demonstrate that decentralised GPU compute can produce commercially viable output, which validates the broader thesis even if this specific project falls short."
+    "outlook": "Render Network occupies a unique position: arguably the best GPU rendering product in crypto, with real enterprise adoption, Hollywood credentials, and a growing AI compute offering via Dispersed. The Coinbase 50 and major exchange listings give it retail accessibility that competitors lack. However, the sovereignty thesis is fundamentally weak: this is a proprietary OTOY platform with a Solana token layer, not a decentralised network. The next 12-18 months hinge on Dispersed AI compute adoption (can it compete with Lambda, CoreWeave, and Akash for AI workloads?), BME crossing the deflationary threshold, and RNP-021 enterprise GPU onboarding. For practitioners: there is no way to earn passive yield (no staking). Node operation requires Foundation approval and offers inconsistent returns. The value proposition is as a creator tool (cheaper rendering) or a token investment (betting on AI compute demand). The investment thesis is a bet on OTOY's execution and AI compute growth, not on decentralisation.",
+    "overall_assessment": "Render Network is a good product but a poor example of decentralised infrastructure. OctaneRender is world-class software; the rendering marketplace works; the partnerships are real; the AI compute expansion via Dispersed is timely. But from the OYM sovereignty thesis, Render fails on almost every dimension: proprietary core software, permissioned access, 50% insider token supply, Foundation-controlled governance, no open-source codebase, and existential dependency on one private company (OTOY Inc.). The Freedom Score of 32/100 (F) reflects this accurately. Render demonstrates that blockchain can add value to a compute marketplace (BME is clever, governance exists), but it does not demonstrate decentralised infrastructure. For investors prioritising the sovereignty thesis, Render is not aligned. For investors prioritising product quality and market position in GPU compute, Render is a serious contender."
   },
 
   "sources": [
@@ -448,29 +501,16 @@
       "tier": 1,
       "type": "documentation",
       "title": "Render Network Knowledge Base",
-      "url": "https://know.rendernetwork.com/",
+      "url": "https://know.rendernetwork.com",
       "author": "Render Network Foundation",
       "publisher": "Render Network",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["architecture", "BME mechanism", "node requirements", "governance", "token metrics"],
-      "reliability_notes": "Primary documentation. Comprehensive and regularly updated."
+      "data_points_sourced": ["BME mechanism", "Foundation details", "governance process", "node requirements", "token metrics"],
+      "reliability_notes": "Primary documentation. Comprehensive but somewhat marketing-oriented. Technical details verified against RNPs."
     },
     {
       "source_id": "S002",
-      "tier": 1,
-      "type": "whitepaper",
-      "title": "Render Network Whitepaper v4",
-      "url": "https://renderfoundation.com/whitepaper",
-      "author": "Render Network Foundation",
-      "publisher": "Render Network Foundation",
-      "date_published": null,
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["architecture", "BME design", "tokenomics", "vision"],
-      "reliability_notes": "Living document (v4). Foundation-maintained."
-    },
-    {
-      "source_id": "S003",
       "tier": 1,
       "type": "github",
       "title": "rendernetwork GitHub Organisation",
@@ -479,24 +519,24 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["repos", "stars", "forks", "contributors", "license", "last_commit"],
-      "reliability_notes": "Direct from GitHub. 4 public repos. Primary repo (RNPs): 44 stars, 5 forks, 6 contributors."
+      "data_points_sourced": ["4 repos", "RNPs repo (107 commits, 44 stars, 5 forks)", "c4d-plugin (5 releases)", "advent-tos", ".github profile"],
+      "reliability_notes": "Direct from GitHub. Primary active org. Minimal code -- governance proposals are the main content."
     },
     {
-      "source_id": "S004",
+      "source_id": "S003",
       "tier": 1,
       "type": "github",
       "title": "rndr-network GitHub Organisation (legacy)",
       "url": "https://github.com/rndr-network",
-      "author": "Render Network",
+      "author": "RNDR Network",
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["legacy_repos", "token_audit", "account_compression"],
-      "reliability_notes": "Legacy org. 5 repos. Includes Token-Audit and Token-Airdrop (JavaScript, 2018-2021)."
+      "data_points_sourced": ["5 repos", "Token-Audit (ERC-20 source, 15 commits, last updated 2021)", "Token-Airdrop", "legacy RNPs (89 commits)", "Helium forks"],
+      "reliability_notes": "Legacy org. Token-Audit is the only production code publicly available. Last updated February 2021."
     },
     {
-      "source_id": "S005",
+      "source_id": "S004",
       "tier": 1,
       "type": "governance",
       "title": "RNP-001: Burn-Mint Equilibrium",
@@ -505,24 +545,24 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["BME_mechanism", "inflation_pool", "emission_schedule", "damping_coefficient"],
-      "reliability_notes": "Primary governance document for BME."
+      "data_points_sourced": ["BME mechanism design", "95% burn / 5% Foundation fee", "damping coefficient (0.945)", "Job Completion Rewards", "Availability Rewards", "epoch structure"],
+      "reliability_notes": "Primary source for BME mechanism. Governance proposal with full technical detail."
     },
     {
-      "source_id": "S006",
+      "source_id": "S005",
       "tier": 1,
       "type": "governance",
-      "title": "RNP-006: Solana Migration",
+      "title": "RNP-006: Solana Migration and Year 1 Emissions",
       "url": "https://github.com/rendernetwork/RNPs/blob/main/RNP-006.md",
       "author": "Render Network Foundation",
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["solana_migration_rationale", "year1_emissions", "reward_weights"],
-      "reliability_notes": "Primary governance document for Solana migration. Passed with 99.84% approval."
+      "data_points_sourced": ["Year 1 emissions (9,126,804 RENDER)", "Solana upgrade details", "GPU scoring formula", "qualifying GPU list", "bandwidth requirements (100Mbps/75Mbps)"],
+      "reliability_notes": "Primary governance document. Technical specifications for node operators."
     },
     {
-      "source_id": "S007",
+      "source_id": "S006",
       "tier": 1,
       "type": "governance",
       "title": "RNP-018: Year 2 Emissions",
@@ -531,37 +571,37 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["year2_emissions", "emission_reduction", "distribution_split"],
-      "reliability_notes": "Governance proposal for Year 2 emissions schedule."
+      "data_points_sourced": ["Year 2 emissions (5,905,580 RENDER)", "~35% reduction from Year 1", "allocation breakdown"],
+      "reliability_notes": "Primary governance document for Year 2 emission schedule."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "audit_report",
+      "title": "OpenZeppelin RNDR Token Audit",
+      "url": "https://www.openzeppelin.com/news/render-token-audit-2a078ba6d759/",
+      "author": "OpenZeppelin",
+      "publisher": "OpenZeppelin",
+      "date_published": "2017-09-18",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["1 low-severity issue (FinalizableCrowdsale misuse)", "token allocation at genesis (25% crowdsale, 65% foundation, 10% founders)", "audit scope (ERC-20 + crowdsale)"],
+      "reliability_notes": "Tier 1 audit from a top-tier firm. However, audit is 9 years old and covers only the original Ethereum token, not the current Solana SPL token or any network infrastructure."
     },
     {
       "source_id": "S008",
       "tier": 1,
-      "type": "audit_report",
-      "title": "OpenZeppelin RNDR Token Audit",
-      "url": "https://www.openzeppelin.com/news/render-token-audit-2a078ba6d759",
-      "author": "OpenZeppelin",
-      "publisher": "OpenZeppelin",
-      "date_published": "2017-09-01",
+      "type": "block_explorer",
+      "title": "Render Foundation Stats Dashboard",
+      "url": "https://stats.renderfoundation.com",
+      "author": "Render Network Foundation",
+      "publisher": "Render Foundation",
+      "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["audit_findings", "severity", "resolution"],
-      "reliability_notes": "Only verifiable audit. Covers deprecated Ethereum crowdsale contracts."
+      "data_points_sourced": ["69.1M frames rendered", "15,670 node operators", "5,600 nodes since inception"],
+      "reliability_notes": "Official dashboard. Self-reported metrics. Node count discrepancy (15,670 current vs 5,600 since inception) suggests registered vs active distinction."
     },
     {
       "source_id": "S009",
-      "tier": 2,
-      "type": "market_data",
-      "title": "CoinGecko -- Render",
-      "url": "https://www.coingecko.com/en/coins/render",
-      "author": "CoinGecko",
-      "publisher": "CoinGecko",
-      "date_published": null,
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["price", "market_cap", "fdv", "volume", "circulating_supply", "ath", "atl"],
-      "reliability_notes": "Tier 2 market data. Price ~$1.40, mcap ~$726M."
-    },
-    {
-      "source_id": "S010",
       "tier": 2,
       "type": "market_data",
       "title": "CoinMarketCap -- Render",
@@ -570,8 +610,21 @@
       "publisher": "CoinMarketCap",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["market_cap", "supply", "volume"],
-      "reliability_notes": "Cross-referenced with CoinGecko. Circulating: ~518.7M."
+      "data_points_sourced": ["price ($1.35)", "market cap ($701M)", "rank (#66)", "total supply (533M)", "circulating supply (518M)", "max supply (644M)", "24h volume (~$41M)"],
+      "reliability_notes": "Tier 2 market data. Cross-referenced with CoinGecko."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko -- Render",
+      "url": "https://www.coingecko.com/en/coins/render",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["ATH ($13.59, March 17 2024)", "ATL ($0.03666)", "market data cross-reference"],
+      "reliability_notes": "Tier 2 market data aggregator."
     },
     {
       "source_id": "S011",
@@ -583,8 +636,8 @@
       "publisher": "Tokenomist",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["supply_breakdown", "emission_schedule", "burn_rate", "vesting"],
-      "reliability_notes": "Detailed supply tracking. Reports 80.52% unlocked, 0.35% burn rate."
+      "data_points_sourced": ["distribution breakdown (6 categories)", "OTOY Treasury 23.3%", "Partner Escrows 26.6%", "FDV (~$882M)", "~125.5M locked", "cliff vesting details"],
+      "reliability_notes": "Tier 2 token analytics. Most granular distribution breakdown found."
     },
     {
       "source_id": "S012",
@@ -596,47 +649,47 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["ico_details", "token_allocation", "vesting_schedule", "funding_rounds"],
-      "reliability_notes": "Detailed ICO and allocation data."
+      "data_points_sourced": ["funding rounds (ICO $1.16M, Private $4.02M, Venture $30M)", "investor list (Multicoin, Alameda, Solana Foundation)", "allocation chart"],
+      "reliability_notes": "Tier 2 ICO data aggregator. Cross-referenced with ICO Drops."
     },
     {
       "source_id": "S013",
       "tier": 2,
-      "type": "news",
-      "title": "Decentralized Rendering Engine Raises $30M",
-      "url": "https://www.coindesk.com/business/2021/12/21/decentralized-rendering-engine-raises-30m-in-rndr-token-sale-as-metaverse-graphics-go-big",
-      "author": "CoinDesk",
-      "publisher": "CoinDesk",
-      "date_published": "2021-12-21",
+      "type": "market_data",
+      "title": "ICO Drops -- Render Token",
+      "url": "https://icodrops.com/render/",
+      "author": "ICO Drops",
+      "publisher": "ICO Drops",
+      "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["funding_round", "investors", "amount"],
-      "reliability_notes": "Tier 2 crypto publication. Confirmed $30M round details."
+      "data_points_sourced": ["ICO ($1.16M at $0.25)", "Private ($4.02M with bonuses)", "Venture ($30M)", "TGE price ($0.0533)"],
+      "reliability_notes": "Tier 2. Confirms CryptoRank funding data."
     },
     {
       "source_id": "S014",
       "tier": 2,
       "type": "news",
-      "title": "Alameda-Linked Coins Pumped by Twitter Bots",
+      "title": "CoinDesk: Alameda-Linked Coins Pumped by Twitter Bots",
       "url": "https://www.coindesk.com/tech/2023/08/03/alameda-linked-coins-pumped-twitter-bots-after-ftx-listing-report-shows",
       "author": "CoinDesk",
       "publisher": "CoinDesk",
       "date_published": "2023-08-03",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["alameda_rndr_holding", "bot_manipulation", "price_impact"],
-      "reliability_notes": "Based on NCRI research report."
+      "data_points_sourced": ["NCRI study findings", "4 instances of bot manipulation", "11-30% price spikes", "172,451 flagged bot accounts", "Alameda RNDR holdings"],
+      "reliability_notes": "Tier 2 reporting based on NCRI academic research. Multiple sources corroborate."
     },
     {
       "source_id": "S015",
       "tier": 2,
-      "type": "documentation",
-      "title": "Render Network Solana Upgrade Complete",
-      "url": "https://medium.com/render-token/render-network-completes-successful-upgrade-to-solana-3d7947b60aed",
-      "author": "Render Network",
-      "publisher": "Medium",
-      "date_published": "2023-11-02",
+      "type": "research_report",
+      "title": "CoinLaw -- Render Statistics 2025",
+      "url": "https://coinlaw.io/render-statistics/",
+      "author": "CoinLaw",
+      "publisher": "CoinLaw",
+      "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["solana_migration_completion", "wormhole_bridge", "migration_mechanics"],
-      "reliability_notes": "Official announcement."
+      "data_points_sourced": ["total frames (68.3M)", "2025 frames (~35% of all-time)", "monthly throughput (~1.5M)", "2025 burns (530,171 RENDER Jan-Sep)", "2024 burns (139,924)", "burn growth (279%)", "peak utilisation (85%)"],
+      "reliability_notes": "Tier 2 crypto statistics. Provides the most detailed burn data found."
     },
     {
       "source_id": "S016",
@@ -646,182 +699,117 @@
       "url": "https://rendernetwork.medium.com/render-network-foundation-monthly-report-october-2025-f475fa0b3b35",
       "author": "Render Network Foundation",
       "publisher": "Medium",
-      "date_published": "2025-11-01",
+      "date_published": "2025-10",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["burn_data", "emissions_data", "network_metrics"],
-      "reliability_notes": "Official Foundation report."
+      "data_points_sourced": ["GPU marketplace 87% YoY growth", "recent developments", "partnership updates"],
+      "reliability_notes": "Official Foundation report. Self-reported metrics."
     },
     {
       "source_id": "S017",
-      "tier": 2,
-      "type": "documentation",
-      "title": "How the Render Network Operates",
-      "url": "https://rendernetwork.medium.com/how-the-render-network-operates-foundation-network-and-treasury-a43bc492616e",
-      "author": "Render Network Foundation",
-      "publisher": "Medium",
-      "date_published": "2025-12-01",
+      "tier": 1,
+      "type": "governance",
+      "title": "RNP-022 Vote Results (X post)",
+      "url": "https://x.com/rendernetwork/status/2001807312345055309",
+      "author": "@rendernetwork",
+      "publisher": "X (Twitter)",
+      "date_published": "2025-12",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["foundation_operations", "treasury_management", "otoy_fee"],
-      "reliability_notes": "Official operational transparency document."
+      "data_points_sourced": ["2.6M tokens voted for", "10.5K against", "91.3M abstained", "total participating: 93.9M (~18% of supply)"],
+      "reliability_notes": "Official governance vote results. Demonstrates the gap between quorum participation (18%) and active voting (0.5%)."
     },
     {
       "source_id": "S018",
-      "tier": 2,
+      "tier": 3,
       "type": "news",
-      "title": "ICO Drops -- Render Token",
-      "url": "https://icodrops.com/render/",
-      "author": "ICO Drops",
-      "publisher": "ICO Drops",
-      "date_published": null,
+      "title": "The Block: Render Network Raises $30M",
+      "url": "https://www.theblock.co/post/128266/metaverse-infrastructure-startup-render-network-raises-30-million-in-token-round",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2021-12-21",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["ico_date", "price", "tokens_sold", "eth_raised"],
-      "reliability_notes": "ICO tracking platform. Cross-referenced with CryptoRank."
+      "data_points_sourced": ["$30M token round", "Multicoin Capital lead", "investor list"],
+      "reliability_notes": "Tier 3 crypto news. Funding details confirmed by Decrypt and CryptoRank."
     },
     {
       "source_id": "S019",
-      "tier": 2,
-      "type": "research_report",
-      "title": "Multicoin Capital -- Rendering the Metaverse",
-      "url": "https://multicoin.capital/2021/12/21/rendering-the-metaverse/",
-      "author": "Multicoin Capital",
-      "publisher": "Multicoin Capital",
+      "tier": 3,
+      "type": "news",
+      "title": "Decrypt: Beeple-Backed Render Network Raises $30M",
+      "url": "https://decrypt.co/88871/beeple-backed-render-network-raises-30m-from-solana-alameda-more",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
       "date_published": "2021-12-21",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["investment_thesis", "technical_assessment", "market_positioning"],
-      "reliability_notes": "Lead investor's own thesis. Obviously biased but contains technical analysis."
+      "data_points_sourced": ["$30M round confirmation", "Alameda Research as investor", "Solana Foundation as investor"],
+      "reliability_notes": "Tier 3. Cross-confirms The Block reporting."
     },
     {
       "source_id": "S020",
-      "tier": 2,
-      "type": "research_report",
-      "title": "CoinLaw -- Render Statistics 2025",
-      "url": "https://coinlaw.io/render-statistics/",
-      "author": "CoinLaw",
-      "publisher": "CoinLaw",
-      "date_published": null,
+      "tier": 3,
+      "type": "news",
+      "title": "LLily Medium: Render Network Data-Driven Thesis (Part II)",
+      "url": "https://medium.com/@LiesiL/render-network-a-data-driven-thesis-part-ii-c89898f3bb0c",
+      "author": "LLily",
+      "publisher": "Medium",
+      "date_published": "2025-11",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["frames_rendered", "burn_data", "node_count", "revenue_proxy"],
-      "reliability_notes": "Aggregated metrics. Cross-referenced with Foundation reports."
+      "data_points_sourced": ["BME net inflationary status (~500K mint vs ~50K burn monthly)", "95% burn rate detail", "inflation-adjusted dynamics offset only ~40% of new mints"],
+      "reliability_notes": "Tier 3 independent analysis. Data-driven with on-chain references. Provides the best available analysis of BME burn-vs-mint economics."
     },
     {
       "source_id": "S021",
-      "tier": 2,
-      "type": "news",
-      "title": "Render vs Akash: Battle for the AI Computer Throne",
-      "url": "https://eng.ambcrypto.com/render-vs-akash-battle-for-the-ai-computer-throne-explained/",
-      "author": "AMBCrypto",
-      "publisher": "AMBCrypto",
+      "tier": 3,
+      "type": "social_media",
+      "title": "OTOY Forum -- Node Operator Experiences",
+      "url": "https://render.otoy.com/forum/viewtopic.php?t=81788",
+      "author": "OTOY Forum Users",
+      "publisher": "OTOY",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["permissioned_vs_permissionless", "competitive_comparison"],
-      "reliability_notes": "Tier 2 crypto publication. Confirms Render is permissioned, Akash is permissionless."
+      "data_points_sourced": ["operator earnings ('paid for themselves multiple times')", "~10% utilisation expectation", "$125K total epoch earnings (Nov 2023)"],
+      "reliability_notes": "Tier 3 forum. Self-reported operator experiences. Provides ground-truth perspective on node economics."
     },
     {
       "source_id": "S022",
       "tier": 2,
       "type": "news",
-      "title": "Render Network Whale Accumulation",
-      "url": "https://www.ainvest.com/news/render-network-gains-traction-ai-boom-whale-accumulation-2507/",
-      "author": "AInvest",
-      "publisher": "AInvest",
-      "date_published": "2025-07-01",
+      "title": "PR Newswire: Stability AI, OTOY, Endeavor Partnership",
+      "url": "https://www.prnewswire.com/news-releases/stability-ai-otoy-endeavor-and-the-render-network-join-forces-to-develop-next-generation-ai-models-ip-rights-systems-and-open-standards-powered-by-decentralized-gpu-computing-302091818.html",
+      "author": "OTOY / Stability AI / Endeavor",
+      "publisher": "PR Newswire",
+      "date_published": "2024",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["whale_concentration", "accumulation_trend"],
-      "reliability_notes": "Reports whale holdings surged from 51.5% to 71% in 2024."
+      "data_points_sourced": ["Stability AI partnership", "IP rights initiative", "open standards collaboration"],
+      "reliability_notes": "Official press release. Partnership confirmed by all parties."
     },
     {
       "source_id": "S023",
       "tier": 2,
       "type": "news",
-      "title": "Render Network Launches Dispersed for AI Compute",
-      "url": "https://rendernetwork.medium.com/render-network-launches-dispersed-to-address-global-ai-compute-shortage-84a16dacde78",
-      "author": "Render Network",
-      "publisher": "Medium",
-      "date_published": "2025-12-01",
+      "title": "Solana Compass: Render Network Breakpoint 2025 Keynote",
+      "url": "https://solanacompass.com/learn/breakpoint-25/product-keynote-render-network-render-network-foundation",
+      "author": "Solana Compass",
+      "publisher": "Solana Compass",
+      "date_published": "2025-12",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["dispersed_launch", "ai_models_supported", "gpu_types", "pricing"],
-      "reliability_notes": "Official announcement."
+      "data_points_sourced": ["Dispersed.com launch", "AI compute platform details", "Sonny Osahn keynote"],
+      "reliability_notes": "Tier 2 Solana ecosystem reporting. Confirms Dispersed launch."
     },
     {
       "source_id": "S024",
       "tier": 2,
-      "type": "news",
-      "title": "Can Render Ride the AI Wave in 2026",
-      "url": "https://www.disruptionbanking.com/2026/02/19/can-render-ride-the-ai-wave-in-2026/",
-      "author": "Disruption Banking",
-      "publisher": "Disruption Banking",
-      "date_published": "2026-02-19",
+      "type": "documentation",
+      "title": "OctaneRender Purchase Page",
+      "url": "https://home.otoy.com/render/octane-render/purchase/",
+      "author": "OTOY Inc.",
+      "publisher": "OTOY",
+      "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["2025_metrics", "hollywood_percentage", "ai_pivot_status"],
-      "reliability_notes": "Recent analysis with Foundation-sourced data."
+      "data_points_sourced": ["OctaneRender subscription pricing (EUR 23.95/month)", "commercial proprietary nature"],
+      "reliability_notes": "Tier 1 primary documentation of the proprietary nature and commercial pricing of the core rendering software."
     },
     {
       "source_id": "S025",
-      "tier": 2,
-      "type": "news",
-      "title": "Solana Compass -- Render Breakpoint 2025 Keynote",
-      "url": "https://solanacompass.com/learn/breakpoint-25/product-keynote-render-network-render-network-foundation",
-      "author": "Solana Compass",
-      "publisher": "Solana Compass",
-      "date_published": null,
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["frames_rendered", "compute_growth", "dispersed_launch", "artist_grants"],
-      "reliability_notes": "Breakpoint conference coverage."
-    },
-    {
-      "source_id": "S026",
-      "tier": 2,
-      "type": "news",
-      "title": "Render Network Stability AI Partnership",
-      "url": "https://home.otoy.com/stabilityai/",
-      "author": "OTOY",
-      "publisher": "OTOY",
-      "date_published": "2024-03-01",
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["stability_ai_partnership", "endeavor_partnership"],
-      "reliability_notes": "Official OTOY announcement."
-    },
-    {
-      "source_id": "S027",
-      "tier": 2,
-      "type": "documentation",
-      "title": "Render Foundation Governance (GitBook)",
-      "url": "https://rndr.gitbook.io/render-network-foundation-governance",
-      "author": "Render Network Foundation",
-      "publisher": "GitBook",
-      "date_published": null,
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["governance_structure", "foundation_board", "dao_transition_plan"],
-      "reliability_notes": "Official governance documentation."
-    },
-    {
-      "source_id": "S028",
-      "tier": 2,
-      "type": "news",
-      "title": "FTX/Alameda RNDR Token Liquidation",
-      "url": "https://cointelegraph.com/news/ftx-alameda-research-wallets-send-13-1-m-crypto-exchanges-overnight",
-      "author": "Cointelegraph",
-      "publisher": "Cointelegraph",
-      "date_published": "2023-10-26",
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["alameda_rndr_holding", "liquidation_process"],
-      "reliability_notes": "Reports 972,073 RNDR tokens transferred as part of FTX bankruptcy liquidation."
-    },
-    {
-      "source_id": "S029",
-      "tier": 2,
-      "type": "news",
-      "title": "Helius -- Complete History of Solana Outages",
-      "url": "https://www.helius.dev/blog/solana-outages-complete-history",
-      "author": "Helius",
-      "publisher": "Helius",
-      "date_published": null,
-      "date_accessed": "2026-03-02",
-      "data_points_sourced": ["solana_outage_count", "outage_duration"],
-      "reliability_notes": "Comprehensive Solana outage tracking. 87+ outages documented."
-    },
-    {
-      "source_id": "S030",
       "tier": 2,
       "type": "research_report",
       "title": "Crunchbase -- Jules Urbach",
@@ -830,11 +818,11 @@
       "publisher": "Crunchbase",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["founder_background", "career_history"],
-      "reliability_notes": "Business data platform."
+      "data_points_sourced": ["founding biography", "Hell Cab game", "OTOY founding (2008)"],
+      "reliability_notes": "Tier 2 business data. Cross-referenced with Bitget biography and other sources."
     },
     {
-      "source_id": "S031",
+      "source_id": "S026",
       "tier": 2,
       "type": "research_report",
       "title": "Crunchbase -- OTOY Inc.",
@@ -843,21 +831,86 @@
       "publisher": "Crunchbase",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["funding_rounds", "team_size", "entity_details"],
-      "reliability_notes": "OTOY corporate funding data. Discrepancy with CB Insights ($98M vs $37.8M)."
+      "data_points_sourced": ["corporate funding (~$37.8M)", "Series D/E details", "investors (Yuri Milner, Autodesk, HBO, Discovery)"],
+      "reliability_notes": "Tier 2 business data. Total funding conflicts with PitchBook (~$98M) -- flagged in research_gaps."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Messari -- Understanding the Render Network",
+      "url": "https://messari.io/report/understanding-the-render-network-a-comprehensive-overview",
+      "author": "Messari",
+      "publisher": "Messari",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["comprehensive overview", "BME analysis", "governance structure", "network metrics"],
+      "reliability_notes": "Tier 2 crypto research platform."
+    },
+    {
+      "source_id": "S028",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Render Foundation -- About",
+      "url": "https://renderfoundation.com",
+      "author": "Render Network Foundation",
+      "publisher": "Render Foundation",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["not-for-profit status", "Cayman Islands jurisdiction", "team (Tristan Relly, Andrew Hyde, Ryan Shea)", "advisory board"],
+      "reliability_notes": "Primary Foundation documentation."
+    },
+    {
+      "source_id": "S029",
+      "tier": 3,
+      "type": "news",
+      "title": "Securities.io: GPU Rendering Wars -- Render vs Akash vs AWS",
+      "url": "https://www.securities.io/gpu-rendering-wars-render-akash-aws/",
+      "author": "Securities.io",
+      "publisher": "Securities.io",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["permissioned vs permissionless comparison", "cost comparison", "market positioning"],
+      "reliability_notes": "Tier 3 comparative analysis. Useful for competitive context."
+    },
+    {
+      "source_id": "S030",
+      "tier": 3,
+      "type": "news",
+      "title": "Render Network Whale Accumulation",
+      "url": null,
+      "author": "Multiple crypto analytics",
+      "publisher": "Multiple",
+      "date_published": "2026-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["20.5M tokens accumulated in 11 weeks", "~3.7% of supply", "~$126.3M value", "91,712 total holders"],
+      "reliability_notes": "Tier 3. Whale accumulation figures from on-chain analytics reports. Single canonical URL not available."
+    },
+    {
+      "source_id": "S031",
+      "tier": 3,
+      "type": "news",
+      "title": "Bitget: Jules Urbach Biography",
+      "url": "https://www.bitget.com/news/detail/12560604852990",
+      "author": "Bitget",
+      "publisher": "Bitget",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Jules Urbach biography", "Hell Cab at age 18", "French-born, LA-raised", "25+ years computer graphics"],
+      "reliability_notes": "Tier 3. Cross-referenced with Crunchbase and official OTOY materials."
     },
     {
       "source_id": "S032",
       "tier": 2,
-      "type": "documentation",
-      "title": "Render Foundation Stats Dashboard",
-      "url": "https://stats.renderfoundation.com/",
-      "author": "Render Network Foundation",
-      "publisher": "Render Network Foundation",
+      "type": "news",
+      "title": "Helius: Complete History of Solana Outages",
+      "url": "https://www.helius.dev/blog/solana-outages-complete-history",
+      "author": "Helius",
+      "publisher": "Helius",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["network_metrics", "burn_data", "emission_data"],
-      "reliability_notes": "Official metrics dashboard. Self-reported data."
+      "data_points_sourced": ["7 Solana outage incidents", "validator count decline", "78% Jito-Solana client share"],
+      "reliability_notes": "Tier 2 Solana infrastructure analysis. Relevant to chain risk assessment."
     }
   ],
 

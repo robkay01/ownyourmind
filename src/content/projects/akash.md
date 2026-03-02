@@ -4,7 +4,7 @@ description: "A decentralised cloud computing marketplace. Providers list spare 
 category: "compute"
 token: "AKT"
 status: "active"
-freedomScore: 6
+freedomScore: 7
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "akash-network"
@@ -80,21 +80,21 @@ Overclock Labs is a US-incorporated entity (Delaware), exposing the project to S
 
 **My position.** I do not hold AKT. I have indirect exposure through Venice (which uses Akash GPUs) and Morpheus (which routes compute through Akash providers). I find the project technically credible but the chain migration introduces too much uncertainty for a direct position at current prices.
 
-## Freedom score: 6/10
+## Freedom score: 7/10
 
-Akash scores 63/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+Akash scores 66/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
-**Infrastructure decentralisation (12/20):** 63 active providers with permissionless participation. 100 DPoS validators. Roughly 700 GPUs across independent providers. Geographic distribution is real. But 63 providers is objectively thin. Planned chain deprecation means current infrastructure could be rebuilt from scratch. Overclock Labs remains the dominant development entity.
+**Infrastructure decentralisation (12/20):** 99 active validators (top 100 control 63.2% of voting power). ~69 active providers with permissionless onboarding. ~700-1,000 GPUs across independent providers. Geographic distribution is real. But 69 providers is objectively thin, and the count declined through 2025. Starcluster/Starbonds introduces centralisation via enterprise datacentres with "vetted Nodekeepers". Homenode (Feb 2026 beta) is a decentralising force but very early.
 
-**Governance decentralisation (11/20):** On-chain Cosmos SDK governance with token-weighted voting. Proposals have been submitted and passed by the community, including inflation adjustments and community pool spending. But Overclock Labs drives the development roadmap and strategic direction. Chain deprecation and Starbonds appear to be company decisions, not community-governed. Foundation and team hold significant voting power.
+**Governance decentralisation (13/20):** 300+ on-chain governance proposals with active participation. Proposal #308 had 42.31% turnout, exceeding 33.4% quorum. Community rejected Proposal #302 for lack of transparency, which shows governance has real teeth. 50% community pool tax funds community-directed spending. But Overclock Labs drives the strategic roadmap. Chain migration was announced by the founder, not governance-voted.
 
-**Token distribution fairness (8/15):** IEO with public participation at $0.39. Team allocation 26% with 4-year vesting and 1-year cliff, which is standard and reasonable. Total raise of $2.8 million is notably small, meaning limited VC capture. Ongoing inflation distributes to stakers. Not a fair launch, but the small raise and meaningful vesting are above average.
+**Token distribution fairness (8/15):** Genesis was insider-heavy (34.5% investors, 27% team) but long-term allocation is better: 70.94% of max supply goes to mining/block rewards. All tokens now fully vested and unlocked. Total raise was very modest ($4.1M). Not a fair launch, but the small raise and majority mining allocation are above average.
 
-**Censorship resistance (11/15):** Permissionless provider onboarding. Tenants deploy arbitrary containers with no protocol-level content filtering. Reverse auction bidding is neutral. Providers individually choose what to host. But Overclock Labs as a US entity is subject to regulatory pressure, and the small provider count means coordinated pressure is more feasible than in a larger network.
+**Censorship resistance (10/15):** Permissionless provider and tenant participation. No KYC required. Reverse auction is on-chain and transparent. But Starcluster introduces "vetted Nodekeepers" as a potential censorship vector. Overclock Labs is US-incorporated (Delaware) and subject to regulatory pressure. Spam attack (March 2025) demonstrated temporary disruption was possible.
 
-**Data sovereignty (9/15):** Tenants fully control deployment configurations and data. Self-custodial Cosmos wallets. No platform-level data collection. Deployments run in isolated Kubernetes containers. But providers physically host workloads and could theoretically inspect container contents. No encryption at the compute layer. No confidential computing.
+**Data sovereignty (10/15):** Tenants fully control deployment configurations and data. Self-custodial Cosmos wallets. No central data collection by the protocol. Homenode lets users control their own hardware. But providers physically host workloads and could theoretically inspect containers. No encryption at the compute layer. ChainLight vulnerability (patched) showed potential for unauthorised deployment access.
 
-**Open source and transparency (12/15):** Fully open source under Apache 2.0 across 65 repositories. Active development. On-chain governance is transparent and verifiable. Revenue and provider metrics publicly accessible. But no formal security audit despite five-plus years of operation. Overclock Labs' corporate financials are not public. Starbonds introduces a new opaque financial dimension.
+**Open source and transparency (13/15):** Fully open source under Apache 2.0 across 65 repositories. Active development with real commits (Mainnet 14 was a major Cosmos SDK migration). All governance proposals public on GitHub. Quarterly Messari reports and internal blog provide regular transparency. Near-exemplary. But no formal security audit despite five-plus years of operation. Overclock Labs' corporate financials not public. Starbonds introduces an opaque financial dimension.
 
 ### Path to improvement
 
