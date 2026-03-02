@@ -4,14 +4,14 @@ description: "Private, uncensored AI inference platform. No logs, no content fil
 category: "inference"
 token: "VVV"
 status: "active"
-freedomScore: 7
+freedomScore: 6
 publishDate: 2025-03-01
 draft: true
 coingeckoId: "venice-token"
 launchType: "airdrop"
-chain: "Ethereum"
-supplyType: "capped"
-maxSupply: "100M"
+chain: "Base"
+supplyType: "uncapped"
+maxSupply: "100M genesis (no hard cap, inflationary via emissions minus burns)"
 verdict: "Best privacy-focused inference platform available. Centralised company but aligned incentives."
 oymHolds: true
 ---

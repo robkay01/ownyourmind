@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "project_id": "venice",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "veniceai",
+      "github_primary_repo": "ironclaw",
+      "coingecko_id": "venice-token",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "AskVenice",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "freedom_score.breakdown.infrastructure_decentralisation.evidence",
+        "freedom_score.breakdown.censorship_resistance.evidence"
+      ]
+    },
+    "auto_refresh_log": [],
+    "research_gaps": [
+      "No formal whitepaper or litepaper exists. Blog posts and help centre articles serve as the closest equivalent.",
+      "Exact current team size uncertain. The Block reported 6 at launch (May 2024); RocketReach estimates 13; no official current figure published.",
+      "No independent privacy audit completed. Venice acknowledges this gap; third-most-requested feature on Featurebase (334 votes).",
+      "Discord member count not publicly visible without joining the server.",
+      "No official Telegram group identified.",
+      "Exact GitHub contributor count not publicly visible; organisation membership is private.",
+      "Company operations allocation (25M VVV) has no explicit public vesting schedule.",
+      "Incentive Fund (10M VVV) disbursement schedule not documented.",
+      "Exact monthly revenue buyback burn amounts not published per-month.",
+      "Specific monthly/annual revenue figures not publicly disclosed.",
+      "Daily/monthly active user breakdown not disclosed; only total (1.3M+) as of Oct 2025.",
+      "Trust Security audit report full findings not accessible; audit page renders via JavaScript with no PDF link found.",
+      "Staking APY is variable and not displayed on a single authoritative dashboard; ranges cited 20-72% depending on source and time period.",
+      "Whether Morpheus compute providers specifically serve Venice inference requests is claimed but not technically verified.",
+      "Erik Voorhees' personal financial stake/amount invested in Venice not publicly disclosed."
+    ]
+  },
+
+  "identity": {
+    "name": "Venice AI",
+    "ticker": "VVV",
+    "category": "Inference",
+    "subcategory": "Private AI inference platform",
+    "tagline": "Private AI for Unlimited Creative Freedom",
+    "one_liner": "A privacy-first AI inference platform running open-source models on distributed GPUs, with a utility token granting pro-rata API access.",
+    "website": "https://venice.ai",
+    "documentation_url": "https://docs.venice.ai",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/veniceai",
+    "chain": "Base (Ethereum L2)",
+    "launch_date": "2024-05-01",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Erik Voorhees",
+        "role": "Founder & CEO",
+        "background": "Early Bitcoin adopter and crypto-libertarian. Founded SatoshiDice (Bitcoin gambling), ShapeShift (no-KYC crypto exchange, founded 2014, DAO transition 2021). Two SEC settlements: SatoshiDice unregistered securities ($50,843, 2014) and ShapeShift AG unregistered dealer ($275,000, 2024). Sole funder of Venice. Based in Panama since 2013.",
+        "linkedin_or_x": "https://x.com/erikvoorhees",
+        "doxxed": true
+      },
+      {
+        "name": "Teana Baker-Taylor",
+        "role": "Co-Founder & COO",
+        "background": "Former VP of Policy & Regulatory Strategy (EMEA) at Circle (2022-2024). Former UK Director at Binance. Former General Manager UK at Crypto.com. Former Chief Policy Officer at Chamber of Digital Commerce. Senior roles at Coinfloor, HSBC, Citi, Fiserv, Royal Bank of Scotland.",
+        "linkedin_or_x": "https://www.linkedin.com/in/teana-baker-taylor-a4184237/",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 6,
+    "entity_name": "Venice.ai, Inc.",
+    "entity_jurisdiction": "Wyoming, USA (1309 Coffeen Avenue Suite 14343, Sheridan, WY 82801 -- registered agent address, no physical office)",
+    "notable_backers": [],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": []
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Venice is a centralised company operating a privacy-focused AI inference platform. Users submit prompts via browser or API, encrypted via SSL to a Venice-controlled proxy server. The proxy strips identifying information and routes raw prompts to a pool of third-party GPU providers (Akash Network, Hyperbolic, Prime Intellect). GPUs run open-source AI models, stream responses back through the proxy, and immediately purge all data. No prompts, responses, or conversation history are stored server-side. Conversation history exists only in the user's local browser (IndexedDB). A local memory system (Memoria) uses FAISS vector embeddings stored in browser IndexedDB for cross-session context. The VVV token (ERC-20 on Base) and staking/DIEM contracts handle all on-chain economics. The entire AI inference stack is off-chain and routed through Venice's centralised proxy.",
+    "consensus_mechanism": "None. Venice is not a blockchain. VVV lives on Base (OP Stack, Optimistic Rollup consensus). The inference layer has no on-chain verification, no proof-of-inference, and no decentralised consensus for GPU computation.",
+    "what_is_onchain": "VVV token (ERC-20 on Base), staking contract, DIEM token, token emissions/burns/minting, DEX liquidity on Aerodrome",
+    "what_is_offchain": "All AI inference (prompts and responses), GPU provider routing (Venice proxy), user data and conversation history (client-side IndexedDB), Memoria vector embeddings (client-side FAISS), model hosting on third-party GPU hardware",
+    "key_dependencies": [
+      "Base L2 (OP Stack) -- blockchain layer for token operations",
+      "Akash Network, Hyperbolic, Prime Intellect -- GPU compute providers",
+      "Open-source AI models (DeepSeek, Llama, Qwen, Mistral, Dolphin, FLUX, Stable Diffusion)",
+      "Solmate v6.8.0 -- Solidity ERC-20 library",
+      "OpenZeppelin Contracts v5.2.0-rc.1 -- smart contract dependencies",
+      "Forge/Foundry -- smart contract development framework",
+      "FAISS -- vector similarity search for Memoria",
+      "Aerodrome -- primary DEX for VVV/DIEM liquidity"
+    ],
+    "smart_contract_languages": ["Solidity 0.8.26"],
+    "open_source": false,
+    "license": "Mixed. Core platform/proxy/inference routing is closed source. Smart contracts verified on BaseScan. CLI (MIT), ironclaw agent runtime (Apache-2.0/MIT dual), API docs (open). Venice uses open-source AI models but does not open-source its own inference infrastructure.",
+    "github_metrics": {
+      "total_repos": 11,
+      "primary_repo_url": "https://github.com/veniceai/ironclaw",
+      "total_commits": 261,
+      "contributors": null,
+      "last_commit_date": "2026-03-01",
+      "stars": 40,
+      "forks": 422,
+      "open_issues": null
+    },
+    "audits": [
+      {
+        "auditor": "Trust Security",
+        "date": "2025-01-01",
+        "scope": "VVV token contract, staking contract, vesting logic",
+        "result_summary": "Audit completed. Full report findings not publicly accessible (JavaScript-rendered page, no PDF link found). Continuous Skynet monitoring active.",
+        "report_url": "https://www.trust-security.xyz/venice-ai-audit"
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2025-01-27",
+        "description": "Insider trading at launch: Two Aerodrome contributors purchased VVV tokens before public announcements on launch day, turning $50,000 into $1,000,000+ within an hour. Aerodrome flagged it within 30 minutes and suspended both contributors within 3 hours. VVV price dropped 50% immediately on the insider trading allegations.",
+        "loss_amount_usd": null,
+        "post_mortem_url": "https://www.coindesk.com/markets/2025/01/29/venice-ai-s-vvv-drops-50-as-insider-trading-concerns-swirl"
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Venice Token",
+    "ticker": "VVV",
+    "token_standard": "ERC-20 on Base (0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf)",
+    "token_type": "utility",
+    "token_utility": [
+      "Pro-rata API access: staking VVV grants proportional share of Venice's daily AI inference capacity",
+      "Staking yield: stakers receive newly emitted VVV tokens based on Utilization Rate model",
+      "DIEM minting: staked VVV (sVVV) can be locked to mint DIEM tokens, each representing $1/day of perpetual API credit",
+      "Tradeable compute capacity: token holders can effectively trade their inference allocation"
+    ],
+    "supply": {
+      "max_supply": null,
+      "total_supply": 78800000,
+      "circulating_supply": 44240000,
+      "circulating_supply_date": "2026-02-28",
+      "circulating_percentage": 56.1
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Airdrop: Venice users",
+          "percentage": 25,
+          "vesting_schedule": "None. Fully claimable at TGE within 45-day window.",
+          "cliff": "None",
+          "notes": "Eligible: active users since 1 Oct 2024 with minimum 25 points by 31 Dec 2024. 100,000+ eligible wallets. ~32.6M unclaimed tokens burned March 2025."
+        },
+        {
+          "category": "Airdrop: Crypto AI community",
+          "percentage": 25,
+          "vesting_schedule": "None. Fully claimable at TGE within 45-day window.",
+          "cliff": "None",
+          "notes": "Distributed to protocol communities: Virtuals, Aero, Degen, aixbt, Game, Luna, VaderAI, Clanker, Mor, Nous Research, ~200 Coinbase AgentKit developers."
+        },
+        {
+          "category": "Team",
+          "percentage": 10,
+          "vesting_schedule": "25% unlocked at TGE (2.5M); remaining 7.5M vests linearly over 24 months (~312,500/month)",
+          "cliff": "None (25% immediate)",
+          "notes": "Vesting completes approximately January 2027."
+        },
+        {
+          "category": "Company operations",
+          "percentage": 25,
+          "vesting_schedule": "No explicit public vesting schedule found",
+          "cliff": "None documented",
+          "notes": "Venice states treasury is public and on-chain. Claims to be a net buyer since launch."
+        },
+        {
+          "category": "Incentive Fund",
+          "percentage": 10,
+          "vesting_schedule": "No explicit disbursement schedule published",
+          "cliff": "None documented",
+          "notes": "Developer grants of $5,000-$100,000 in VVV. Two cohorts run so far (110+ applications in Cohort 1, ~30 semifinalists in Cohort 2)."
+        },
+        {
+          "category": "Liquidity",
+          "percentage": 5,
+          "vesting_schedule": "Deployed at TGE",
+          "cliff": "None",
+          "notes": "Deployed to Aerodrome DEX on Base (VVV/WETH pool)."
+        }
+      ],
+      "distribution_method": "Free airdrop + company allocation. No presale, no ICO, no private sale, no tokens sold to outside investors. Venice self-funded by Erik Voorhees. 45-day claim window; unclaimed tokens burned (32.6M, ~33% of genesis)."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": 16438,
+      "current_annual_inflation_rate": 7.6,
+      "halving_schedule": "No formal halving. Team has reduced emissions four times in 13 months: 14M to 10M to 8M to 6M VVV/year. Further reductions planned but not scheduled.",
+      "next_major_emission_event": "Further emission reduction (timing not announced)",
+      "next_event_date": null,
+      "burn_mechanism": "Two mechanisms: (1) Unclaimed airdrop burn (March 2025): 32.6M tokens burned permanently, one-time event. (2) Revenue buyback and burn (ongoing since December 2025): portion of platform revenue buys VVV from open market and burns it monthly. Cumulative burns: over 33M VVV (42.8% of genesis supply)."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Pro-rata capacity staking. Stake VVV to receive sVVV; sVVV entitles holder to proportional share of Venice API inference capacity plus emission yield. Not validator staking.",
+      "minimum_stake": null,
+      "lock_up_period": "No mandatory lock for basic staking; 7-day cooldown on unstaking. Optional DIEM lock: lock sVVV to mint DIEM, unlockable by burning DIEM at any time.",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "7-day unstaking cooldown exposes stakers to price risk during withdrawal",
+        "Yield is inflationary (paid in newly minted VVV), not from protocol revenue",
+        "Smart contract risk (mitigated by Trust Security audit)",
+        "DIEM lock further restricts liquidity if chosen",
+        "VVV price is high-beta, tied to demand for private AI compute",
+        "Venice.ai is a centralised company; token value depends on company execution"
+      ],
+      "slashing_conditions": "None. VVV staking is not validator-based; no slashing mechanism exists."
+    },
+    "market_data": {
+      "price_usd": 5.65,
+      "market_cap_usd": 250000000,
+      "fully_diluted_valuation_usd": 445000000,
+      "twenty_four_hour_volume_usd": 43000000,
+      "all_time_high_usd": 22.58,
+      "all_time_high_date": "2025-01-28",
+      "all_time_low_usd": 0.92,
+      "all_time_low_date": "2025-11-21",
+      "major_exchanges": ["Coinbase", "Binance (futures)", "KuCoin", "Kraken", "Bybit", "Gate.io", "OKX", "MEXC", "Aerodrome (DEX)"],
+      "data_snapshot_date": "2026-03-02"
+    },
+    "token_model_classification": "Utility token (access-rights model) with disinflationary emissions and active revenue-funded burn. Dual-token system: VVV for staking/speculation, DIEM for stable compute pricing.",
+    "tokenomics_notes": "No max supply cap (inflationary via emissions), but four emission reductions in 13 months (14M to 6M/yr) plus monthly revenue buyback burns are aggressive supply tightening. Over 42.8% of genesis supply burned. Pro-rata staking model is distinctive: stakers get proportional API access, not just yield, creating genuine utility demand. No presale and no outside investors is unusual for a project of this scale. Venice self-funded. ~35.1M locked tokens (company treasury + vesting) represent potential future sell pressure. Team vesting completes ~January 2027. DIEM is a separate derivative token (not a predecessor): each DIEM = $1/day perpetual API credit, minted by locking sVVV."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "using",
+        "description": "Use Venice as a consumer AI platform. Free tier: 10 text prompts/day + 15 image prompts/day. Pro subscription ($18/month or $149/year): unlimited text, 1,000 images/day, access to advanced models (Claude, GPT-5.x, Qwen 3 VL), character creation, watermark removal, voice mode, Memoria.",
+        "minimum_hardware": "Any device with a web browser. iOS and Android apps available.",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "none",
+        "estimated_returns": "N/A (consumer product)",
+        "barriers_to_entry": ["Free tier has daily prompt caps", "Free tier not available in UK (FSMA regulatory issue)"],
+        "guide_available": true,
+        "guide_url": "https://venice.ai/pricing"
+      },
+      {
+        "type": "staking",
+        "description": "Stake VVV on Base at venice.ai/token. Your daily inference allocation is proportional to your share of total staked VVV. Stakers also receive VVV emission yield. Optionally lock sVVV to mint DIEM ($1/day perpetual API credit per DIEM).",
+        "minimum_hardware": "None (Web3 wallet on Base network)",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable; ~20-72% APR nominal depending on utilization rate and time period. Yield paid in VVV emissions. Plus zero-cost API inference proportional to stake.",
+        "barriers_to_entry": ["Requires Web3 wallet (MetaMask etc.) on Base network", "Need to purchase VVV token", "7-day unstaking cooldown", "Yield is inflationary, not fee-based"],
+        "guide_available": true,
+        "guide_url": "https://venice.ai/blog/how-to-stake-and-claim-your-venice-tokens-vvv"
+      },
+      {
+        "type": "building",
+        "description": "Build on Venice's OpenAI-compatible API. Drop-in replacement: change base URL and existing OpenAI code works. Endpoints for chat, image generation, speech synthesis, embeddings, video. Three access methods: Pro account, DIEM tokens, or USD deposit.",
+        "minimum_hardware": "Development environment",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "N/A (developer tool). Grants available: $5,000-$100,000 in VVV from $27M Incentive Fund.",
+        "barriers_to_entry": ["API pricing varies by model", "No official SDK (community SDKs available)", "Grant applications on rolling basis"],
+        "guide_available": true,
+        "guide_url": "https://docs.venice.ai"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": false,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "Unknown. GitHub org membership is private. Multiple community-built SDKs (TypeScript, Python, PHP) indicate active developer engagement. 1M+ daily API calls from developers as of Oct 2025.",
+      "grants_program": true,
+      "grants_url": "https://venice.ai/blog/venice-launches-27m-incentive-fund-to-advance-private-uncensored-ai-apps-agents-infrastructure"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "45 billion+ LLM tokens processed daily (early 2026). 1M+ daily API calls from developers (Oct 2025). Text, image, video, audio, music, code, and web search inference.",
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Pro subscriptions ($18/month), API usage fees, credit purchases. Revenue used for monthly VVV buyback and burn since December 2025.",
+    "metrics_source": "Venice blog posts, CoinMarketCap",
+    "metrics_date": "2026-03-02",
+    "usage_notes": "1.3M+ total registered users as of October 2025. 45 billion+ LLM tokens processed daily reported in early 2026 (described as double the volume from early February). No public revenue dashboard. Dune Analytics community dashboard (dune.com/seoul/venice) covers on-chain token metrics. Featurebase (featurebase.venice.ai) tracks public roadmap and feature requests. Venice cannot offer free tier in the UK due to FSMA regulatory issues."
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": 53200,
+    "github_contributors": null,
+    "governance_participation_rate": "Not measurable. Governance is described as token-weighted voting but no specific voting interface (Snapshot, Tally) or quorum requirements documented. Day-to-day product decisions made by Venice team with community input via Featurebase and Discord.",
+    "governance_model": "Token-weighted voting described conceptually. VVV holders can propose and vote on platform decisions. Voting power proportional to staked VVV. In practice, Venice.ai (the company) retains full operational control. Featurebase upvote system for feature requests (not token-weighted). Closer to team-led project with token governance aspirations than a fully operational DAO.",
+    "governance_url": null,
+    "key_community_channels": [
+      "X @AskVenice (~53,200 followers) -- primary announcements",
+      "Discord (discord.gg/AskVenice) -- community discussion",
+      "Featurebase (featurebase.venice.ai) -- public roadmap, changelog, feature requests",
+      "Dune Analytics (dune.com/seoul/venice) -- community-built on-chain dashboard"
+    ],
+    "sentiment_summary": "Polarised. Privacy-focused users value the no-logs architecture and uncensored access, describing it as the best privacy-first inference platform available. Active development pace is praised (Memoria, video gen, music gen, voice mode shipped in rapid succession). However, multiple users report censorship creep in the 'uncensored' model. Customer support described as 'a black hole' with no refund policy. Quality inconsistency noted. Trustpilot rating is 2.8/5 (19 reviews, 63% one-star). The Independent Privacy Audit is the third-most-requested feature (334 votes). Cybersecurity firms have flagged Venice as a tool for malware generation, creating reputational risk.",
+    "community_notes": "No official Telegram group found. X follower count from @AskVenice profile. Voorhees' personal X (@ErikVoorhees) is also a major channel for Venice announcements. Notable integrations: Warden Protocol (~1.5M daily chats through Venice), ElizaOS, Cursor IDE, Cline, ROO Code. Morpheus (MOR) token holders receive free Venice Pro access."
+  },
+
+  "freedom_score": {
+    "total_score": 57,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "Venice sources GPU compute from multiple independent decentralised networks: Akash Network, Hyperbolic, and Prime Intellect. Anyone can provide GPUs on Akash, making the compute layer permissionless at the provider level. If one provider goes down, others serve requests. VVV token economics live on Base L2, providing decentralised settlement. However, Venice operates a centralised proxy server that routes all inference requests. The proxy exists for privacy (stripping user identity before forwarding to GPUs) but is also a single point of control and failure. Users cannot choose which GPU provider processes their request. Venice controls model selection and routing logic. The proxy code is closed source. Approximately 6 employees operate this infrastructure."
+      },
+      "governance_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Venice describes token-weighted governance but no specific voting interface, proposal format, or quorum requirements are documented or deployed. No Snapshot, Tally, or on-chain governance contracts found. Day-to-day product decisions are made by the Venice team. The Featurebase upvote system provides community input but is not token-weighted. Erik Voorhees is the sole funder, CEO, and primary decision-maker. The company retains full operational control over the platform, model selection, emission schedule changes, and burns. Four emission reductions and the DIEM launch were unilateral team decisions. However, all unilateral actions have been consistently aligned with token holder interests (burns, emission cuts, supply tightening). Venice is transparent about being a company, not a DAO. This is a centralised company with a utility token, not a decentralised protocol."
+      },
+      "token_distribution_fairness": {
+        "score": 11,
+        "max": 15,
+        "evidence": "No presale, no ICO, no private sale, no VC allocation. Self-funded entirely by Voorhees. 50% of genesis supply allocated to community airdrops (25% to Venice users, 25% to crypto AI communities), 5% to DEX liquidity. This is one of the fairest distributions in the DeAI space. 32.6M unclaimed airdrop tokens were burned rather than retained by the company, improving the distribution for active community participants. The Aerodrome insider trading at launch was external to Venice (two Aerodrome contributors, not Venice team) and Aerodrome suspended both within hours. Team allocation (10%) has a 24-month vest. Company operations (25%) has no published vesting schedule but Venice claims to be a net buyer since launch. 42.8% of genesis supply has been burned to date."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Venice's core value proposition is uncensored AI inference, and it delivers. Models run with minimal content restrictions. Pro subscribers can disable Safe Mode entirely. No content policy enforced at the model level for paid users. Venice runs open-source models (Qwen, Mistral, Llama, Dolphin, DeepSeek) that cannot be centrally recalled or modified. This is the strongest censorship resistance of any consumer AI product available today. However, Venice controls the proxy and can theoretically block users, models, or content at the routing layer. Free tier is already blocked in the UK (FSMA). Some users report censorship creep in the uncensored model over time. Venice could change its content policy at any time as a centralised company. The censorship resistance is a business decision, not an architectural guarantee."
+      },
+      "data_sovereignty": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Strong privacy architecture: no prompts, responses, or conversation history stored server-side. All conversation data in user's local browser (IndexedDB). Memoria (vector memory) stored locally via FAISS. GPU providers see individual prompts but not user identity or full history. Venice proxy strips identifying information. Minimal metadata collected. Crypto payment option (wallet address only). No-account usage possible. However, homomorphic encryption is not feasible -- GPUs must see plaintext prompts. Privacy relies on architectural isolation and Venice's policy, not cryptographic guarantees. No independent privacy audit exists. Venice collects event/usage telemetry. Competitors (Nillion, Phala, Secret Network) offer stronger cryptographic privacy."
+      },
+      "open_source_transparency": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Venice uses open-source AI models (DeepSeek, Llama, Qwen, Mistral, Dolphin, FLUX) as its foundation. Smart contracts are verified on BaseScan. CLI tool is MIT licensed. Ironclaw agent runtime is Apache-2.0/MIT dual licensed. API documentation is open source. Trust Security audit completed on token/staking contracts. However, the core inference engine, proxy layer, and platform code are all closed source and proprietary. Venice's privacy claims cannot be independently verified because the proxy code is not public. No independent privacy audit despite it being the third-most-requested feature. Revenue and financials not disclosed. Team size and organisational structure opaque."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Venice scores a C (57/100), reflecting genuine strengths in privacy, censorship resistance, and token distribution offset by centralised infrastructure and governance. The privacy architecture is thoughtful: no server-side storage, local-only conversation history, proxy stripping identity. The token distribution (no presale, no VCs, self-funded, 50% airdrop, 42.8% of genesis burned) is among the fairest in DeAI. Uncensored model access is the best available in a consumer product. GPU compute runs across multiple decentralised networks (Akash, Hyperbolic, Prime Intellect). However, Venice is a ~6-person company where one person (Voorhees) controls funding, strategy, and operations. The centralised proxy is a single point of failure. Governance is aspirational, not functional. The core platform code is closed source, making privacy claims unverifiable without an independent audit."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Best consumer-facing private AI inference product available. No prompts or responses stored server-side. Local-only conversation history.",
+      "Genuinely uncensored model access. Users can disable all content filtering. Open-source models cannot be centrally recalled.",
+      "OpenAI-compatible API is a genuine competitive advantage. One base URL change to migrate existing code.",
+      "No presale, no ICO, no VC allocation. Self-funded. 50% of genesis airdropped to community.",
+      "Pro-rata staking model creates real utility demand: stake VVV for inference capacity at zero marginal cost.",
+      "Aggressive supply tightening: 42.8% of genesis burned, emissions cut from 14M to 6M/yr in 13 months, monthly revenue buyback burns active.",
+      "Rapid product development: text, image, video, audio, music, code, web search, voice mode, Memoria all shipped within 18 months.",
+      "45 billion+ LLM tokens processed daily demonstrates genuine usage.",
+      "Coinbase, Binance (futures), Kraken, KuCoin, Bybit, Gate.io, OKX listings provide strong exchange coverage."
+    ],
+    "what_is_hype": [
+      "'Decentralised AI' positioning: Venice is a centralised company with ~6 employees running a proxy server. The GPU providers are distributed but Venice controls all routing.",
+      "'Built atop Morpheus' is primarily a marketing/ecosystem alignment, not a deep technical integration. Venice sources GPUs from Akash/Hyperbolic/Prime Intellect, not primarily from Morpheus compute providers.",
+      "Token governance is described but not deployed. No voting interface, no proposal system, no quorum. Emission changes and DIEM launch were unilateral team decisions.",
+      "'Private by design' relies on company policy and architectural isolation, not cryptographic guarantees. Competitors (Nillion, Phala, Secret Network) offer stronger provable privacy.",
+      "No independent privacy audit despite it being the third-most-requested feature. The core privacy claim is currently trust-based."
+    ],
+    "key_risks": [
+      "Extreme key-person dependency: Voorhees is sole funder, CEO, and primary public face of a ~6-person company. No disclosed succession plan, no external investors, no board.",
+      "Two SEC settlements on Voorhees' record (SatoshiDice 2014, ShapeShift 2024). Pattern that regulators could reference.",
+      "Uncensored AI attracts cybersecurity scrutiny: Certo, CyberPress, CPO Magazine, Infosecurity Magazine have all flagged Venice as a tool for malware generation. One real-world crime traced to Venice-generated content could trigger a regulatory crisis.",
+      "UK free tier already blocked due to FSMA. Other jurisdictions likely to follow.",
+      "ShapeShift precedent: Voorhees has form for building, hitting regulatory walls, then pivoting to decentralisation as an exit strategy.",
+      "Closed-source proxy is a single point of failure. If Venice's proxy goes down or is compromised, the entire service stops.",
+      "~35.1M locked tokens (company treasury + team vesting) represent potential sell pressure. Team vesting completes ~January 2027.",
+      "Token price 75% below ATH. Insider trading by Aerodrome contributors at launch damaged initial credibility.",
+      "No independent privacy audit. Privacy claims rest on trust in a centralised company.",
+      "Trustpilot rating 2.8/5 with 63% one-star reviews. Customer support described as 'a black hole'.",
+      "Yield is inflationary (paid in newly minted VVV), not from protocol revenue. Real yield depends on VVV price holding."
+    ],
+    "competitive_advantages": [
+      "Only consumer-facing private AI product with meaningful scale (1.3M+ users, 45B+ tokens/day)",
+      "OpenAI-compatible API enables instant migration for existing developers",
+      "No-VC, self-funded model means no investor pressure for premature monetisation or token dumps",
+      "Erik Voorhees is a known quantity with 10+ years of crypto credibility and distribution network",
+      "Aggressive supply dynamics: 42.8% burned, declining emissions, revenue buyback burns",
+      "Pro-rata staking creates genuine utility beyond speculation",
+      "Multi-model access through single interface (open-source and proprietary models)"
+    ],
+    "competitive_disadvantages": [
+      "Centralised proxy architecture vs cryptographically private competitors (Nillion, Phala, Secret Network)",
+      "Closed-source core platform prevents independent verification of privacy claims",
+      "~6-person team vs well-funded competitors (Nillion raised $50M+, Phala has 100+ contributors)",
+      "No formal whitepaper or technical specification document",
+      "Token governance aspirational, not functional",
+      "Customer support and refund policy issues damage consumer trust",
+      "Reputational risk from cybersecurity industry coverage of uncensored misuse"
+    ],
+    "comparable_projects": [
+      "Nillion (NIL) -- blind computation, compute on encrypted data, protocol-level privacy",
+      "Phala Network (PHA) -- confidential GPUs via TEEs, enterprise/infrastructure focus",
+      "Secret Network (SCRT) -- TEE-based confidential computing in Cosmos ecosystem",
+      "Morpheus (MOR) -- decentralised AI agent infrastructure, ecosystem partner",
+      "Akash Network (AKT) -- decentralised GPU compute marketplace (Venice supplier)"
+    ],
+    "outlook": "Venice occupies a unique niche: the only consumer-grade private AI product with meaningful adoption. The 45B+ daily tokens demonstrate real demand for private, uncensored inference. If Venice ships the independent privacy audit, maintains its emission reduction trajectory, and avoids a regulatory incident from the uncensored model, the token economics become increasingly compelling as burns outpace emissions. The key question is whether Venice can remain a company-operated product or whether regulatory pressure forces another Voorhees pivot. The next 12 months will be defined by: (1) whether the privacy audit materialises, (2) whether a real-world incident from uncensored AI triggers regulatory action, (3) whether team vesting completion (Jan 2027) creates sell pressure, and (4) whether token governance transitions from aspirational to functional.",
+    "overall_assessment": "Venice is the best privacy-focused AI inference product available to consumers today. The privacy architecture is genuinely thoughtful, the token model creates real utility demand, and the no-VC, self-funded approach is rare and commendable. Erik Voorhees' track record as a builder is real. However, Venice is a centralised company with a token, not a decentralised protocol. The proxy layer is a single point of failure controlled by ~6 people. Governance is aspirational. The core code is closed source. Privacy claims are trust-based, not provable. The uncensored positioning is both Venice's moat and its biggest regulatory risk. For practitioners: if you want private AI inference today, Venice is the clear choice. If you want decentralised AI infrastructure, look elsewhere. Stake for utility (API access), not for ideology."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice.ai About Page",
+      "url": "https://venice.ai/about",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["team", "mission", "company_overview"],
+      "reliability_notes": "Primary source."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice.ai Privacy Architecture",
+      "url": "https://venice.ai/privacy",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["privacy_architecture", "data_handling", "metadata_collected"],
+      "reliability_notes": "Primary source for privacy claims."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Introducing the Venice Token: VVV",
+      "url": "https://venice.ai/blog/introducing-the-venice-token-vvv",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": "2025-01-27",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["token_utility", "distribution", "staking_model", "emissions"],
+      "reliability_notes": "De facto tokenomics specification. No separate whitepaper exists."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Introducing DIEM -- The Next Evolution of VVV",
+      "url": "https://venice.ai/blog/introducing-diem-as-tokenized-intelligence-the-next-evolution-of-vvv",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": "2025-08-20",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["DIEM_mechanics", "dual_token_system", "lock_unlock"],
+      "reliability_notes": "Primary source for DIEM token."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "documentation",
+      "title": "How Venice Handles Your Privacy",
+      "url": "https://venice.ai/blog/how-venice-handles-your-privacy",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["privacy_architecture_detail", "proxy_design", "data_flow"],
+      "reliability_notes": "Detailed privacy architecture blog post."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice API Documentation",
+      "url": "https://docs.venice.ai",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["api_endpoints", "models", "pricing", "integrations"],
+      "reliability_notes": "Primary API documentation."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice Development Update -- October 2025",
+      "url": "https://venice.ai/blog/venice-development-update-october-2025",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": "2025-10-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["1.3M_users", "1M_daily_api_calls", "emission_reduction"],
+      "reliability_notes": "Most recent usage metrics from official source."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice Memoria Technical Overview",
+      "url": "https://venice.ai/blog/venice-memoria-technical-overview",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["memoria_architecture", "FAISS_vectors", "local_storage"],
+      "reliability_notes": "Technical detail on local memory system."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice Terms of Service",
+      "url": "https://venice.ai/legal/tos",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["entity_name", "jurisdiction", "address", "governing_law"],
+      "reliability_notes": "Legal entity details."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice Incentive Fund Launch",
+      "url": "https://venice.ai/blog/venice-launches-27m-incentive-fund-to-advance-private-uncensored-ai-apps-agents-infrastructure",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["grants_program", "fund_size", "application_process"],
+      "reliability_notes": "Primary source for developer incentives."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "github",
+      "title": "veniceai GitHub Organisation",
+      "url": "https://github.com/veniceai",
+      "author": "Venice.ai",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["repos", "stars", "forks", "languages", "activity"],
+      "reliability_notes": "Direct from GitHub. 11 public repos. Membership private."
+    },
+    {
+      "source_id": "S012",
+      "tier": 1,
+      "type": "smart_contract",
+      "title": "VVV Token Contract on BaseScan",
+      "url": "https://basescan.org/token/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+      "author": "Venice.ai",
+      "publisher": "BaseScan",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["contract_source", "solidity_version", "dependencies", "supply"],
+      "reliability_notes": "Verified contract source on-chain."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "audit_report",
+      "title": "Trust Security -- Venice.ai Audit",
+      "url": "https://www.trust-security.xyz/venice-ai-audit",
+      "author": "Trust Security",
+      "publisher": "Trust Security",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["audit_scope", "audit_status"],
+      "reliability_notes": "Audit page exists but full report not accessible (JavaScript-rendered, no PDF). Scope: VVV token, staking, vesting contracts."
+    },
+    {
+      "source_id": "S014",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Venice Help Centre -- Tokenomics FAQ",
+      "url": "https://veniceaihelp.zendesk.com/hc/en-gb/articles/5308234911519-What-are-the-tokenomics-of-the-Venice-token-VVV",
+      "author": "Venice.ai",
+      "publisher": "Zendesk",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["tokenomics_summary", "supply_breakdown"],
+      "reliability_notes": "Help centre FAQ."
+    },
+    {
+      "source_id": "S015",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko -- Venice Token",
+      "url": "https://www.coingecko.com/en/coins/venice-token",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["price", "market_cap", "fdv", "volume", "ath", "atl"],
+      "reliability_notes": "Tier 2 market data aggregator."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinMarketCap -- Venice Token",
+      "url": "https://coinmarketcap.com/currencies/venice-token/",
+      "author": "CoinMarketCap",
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["circulating_supply", "market_cap"],
+      "reliability_notes": "Tier 2 market data aggregator."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "news",
+      "title": "Erik Voorhees Launches Venice AI Token on Base",
+      "url": "https://www.theblock.co/post/337196/erik-voorhees-ai-platform-venice-token-ethereum-layer-2-base",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2025-01-27",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["launch_details", "token_distribution", "team_size"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S018",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice Airdrop Ends, $100M Unclaimed VVV Tokens Burned",
+      "url": "https://www.theblock.co/post/345912/venice-airdrop-ends-100-million-usd-unclaimed-vvv-tokens-burned",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2025-03-12",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["airdrop_burn", "unclaimed_amount", "token_burns"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S019",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice AI's VVV Drops 50% as Insider Trading Concerns Swirl",
+      "url": "https://www.coindesk.com/markets/2025/01/29/venice-ai-s-vvv-drops-50-as-insider-trading-concerns-swirl",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2025-01-29",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["insider_trading_incident", "price_impact", "aerodrome_response"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S020",
+      "tier": 2,
+      "type": "news",
+      "title": "Two Aerodrome Contributors Suspended After VVV Launch",
+      "url": "https://www.theblock.co/post/337521/two-contributors-suspended-from-venices-vvv-token-launch-on-aerodrome",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2025-01-29",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["suspension_details", "amounts_involved"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S021",
+      "tier": 2,
+      "type": "news",
+      "title": "Erik Voorhees Founds Generative AI Platform Venice",
+      "url": "https://www.theblock.co/post/293593/erik-voorhees-founds-generative-ai-platform-venice",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2024-05-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["platform_launch", "team_size_initial", "self_funding"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S022",
+      "tier": 2,
+      "type": "news",
+      "title": "What is Venice AI?",
+      "url": "https://decrypt.co/resources/what-is-venice-ai-the-privacy-focused-chatbot",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["product_overview", "privacy_architecture"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S023",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice AI: ShapeShift Founder Erik Voorhees and Morpheus",
+      "url": "https://decrypt.co/230281/venice-ai-shapeshift-founder-erik-voorhees-morpheus-open-source",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["morpheus_relationship", "voorhees_background"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S024",
+      "tier": 2,
+      "type": "news",
+      "title": "Former Circle Policy VP and Erik Voorhees Launch AI App",
+      "url": "https://www.dlnews.com/articles/people-culture/former-circle-policy-vp-and-erik-voorhees-launch-ai-app/",
+      "author": "DL News",
+      "publisher": "DL News",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["teana_baker_taylor_background", "co_founder_details"],
+      "reliability_notes": "Tier 2 crypto publication."
+    },
+    {
+      "source_id": "S025",
+      "tier": 1,
+      "type": "governance",
+      "title": "SEC Charges -- Erik Voorhees (SatoshiDice)",
+      "url": "https://www.sec.gov/newsroom/press-releases/2014-111",
+      "author": "SEC",
+      "publisher": "SEC.gov",
+      "date_published": "2014-06-03",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["sec_settlement_2014", "penalty_amount", "bar_duration"],
+      "reliability_notes": "Primary regulatory source."
+    },
+    {
+      "source_id": "S026",
+      "tier": 1,
+      "type": "governance",
+      "title": "SEC Charges -- ShapeShift AG",
+      "url": "https://www.sec.gov/enforce/34-99676-s",
+      "author": "SEC",
+      "publisher": "SEC.gov",
+      "date_published": "2024-03-06",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["sec_settlement_2024", "penalty_amount"],
+      "reliability_notes": "Primary regulatory source."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "news",
+      "title": "ShapeShift to Shut Down, Airdrop FOX Tokens",
+      "url": "https://www.coindesk.com/business/2021/07/14/shapeshift-to-shut-down-airdrop-fox-tokens-to-decentralize-itself-out-of-existence",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2021-07-14",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["shapeshift_dao_transition", "fox_airdrop"],
+      "reliability_notes": "Tier 2 reporting on ShapeShift history."
+    },
+    {
+      "source_id": "S028",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice AI -- Unrestricted Access Raises Cybersecurity Alarms",
+      "url": "https://gbhackers.com/venice-ais-unrestricted-access/",
+      "author": "GBHackers",
+      "publisher": "GBHackers",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["cybersecurity_concerns", "malware_generation"],
+      "reliability_notes": "Security industry publication."
+    },
+    {
+      "source_id": "S029",
+      "tier": 2,
+      "type": "news",
+      "title": "Black Hat Hackers Have Their First Brand Name AI Chatbot",
+      "url": "https://www.cpomagazine.com/cyber-security/black-hat-hackers-have-their-first-brand-name-ai-chatbot-in-venice-ai/",
+      "author": "CPO Magazine",
+      "publisher": "CPO Magazine",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["cybersecurity_reputation_risk"],
+      "reliability_notes": "Security industry publication."
+    },
+    {
+      "source_id": "S030",
+      "tier": 2,
+      "type": "news",
+      "title": "Hackers Embrace Venice.ai as Unrestricted AI Chatbot",
+      "url": "https://www.certosoftware.com/insights/unleashed-ai-hackers-embrace-unrestricted-chatbot-venice-ai/",
+      "author": "Certo Software",
+      "publisher": "Certo",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["hands_on_testing", "malware_generation_capability"],
+      "reliability_notes": "Mobile security firm. Hands-on testing."
+    },
+    {
+      "source_id": "S031",
+      "tier": 2,
+      "type": "documentation",
+      "title": "Morpheus Ecosystem -- Venice",
+      "url": "https://mor.org/ecosystem/f9df1f1f-e7ff-4c33-b2f9-ad6dcd0a1721",
+      "author": "Morpheus",
+      "publisher": "mor.org",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["morpheus_relationship", "ecosystem_listing"],
+      "reliability_notes": "Morpheus ecosystem listing."
+    },
+    {
+      "source_id": "S032",
+      "tier": 2,
+      "type": "documentation",
+      "title": "Venice Help Centre -- MOR Free Pro Access",
+      "url": "https://veniceaihelp.zendesk.com/hc/en-gb/articles/4530108566943-How-do-I-get-free-Pro-account-access-with-Morpheus-MOR",
+      "author": "Venice.ai",
+      "publisher": "Zendesk",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["mor_free_pro_access"],
+      "reliability_notes": "Official help centre."
+    },
+    {
+      "source_id": "S033",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice and Warden Protocol Partner to Bring AI On-Chain",
+      "url": "https://venice.ai/blog/venice-warden-protocol-partner-to-bring-ai-onchain",
+      "author": "Venice.ai",
+      "publisher": "Venice.ai",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["warden_partnership", "1.5M_daily_chats"],
+      "reliability_notes": "Official blog post."
+    },
+    {
+      "source_id": "S034",
+      "tier": 2,
+      "type": "news",
+      "title": "Erik Voorhees -- Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Erik_Voorhees",
+      "author": "Wikipedia",
+      "publisher": "Wikipedia",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["voorhees_biography", "sec_history", "shapeshift_history"],
+      "reliability_notes": "Cross-referenced with SEC.gov and CoinDesk."
+    },
+    {
+      "source_id": "S035",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Coinbase -- Venice Token",
+      "url": "https://www.coinbase.com/price/venice-token",
+      "author": "Coinbase",
+      "publisher": "Coinbase",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["price", "exchange_listing"],
+      "reliability_notes": "Primary exchange listing."
+    },
+    {
+      "source_id": "S036",
+      "tier": 3,
+      "type": "social_media",
+      "title": "Trustpilot -- Venice.ai Reviews",
+      "url": "https://www.trustpilot.com/review/venice.ai",
+      "author": "Various",
+      "publisher": "Trustpilot",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["user_sentiment", "customer_support_issues", "rating"],
+      "reliability_notes": "Consumer review platform. 2.8/5 stars, 19 reviews, highly polarised."
+    },
+    {
+      "source_id": "S037",
+      "tier": 3,
+      "type": "research_report",
+      "title": "Alea Research -- Venice: Tokenized AI Compute",
+      "url": "https://alearesearch.io/newsletters/venice-tokenized-ai-compute",
+      "author": "Alea Research",
+      "publisher": "Alea Research",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["token_analysis", "architecture_overview"],
+      "reliability_notes": "Tier 3 informed commentary."
+    },
+    {
+      "source_id": "S038",
+      "tier": 3,
+      "type": "research_report",
+      "title": "PANews -- Venice AI Analysis",
+      "url": "https://www.panewslab.com/en/articles/y338u12y",
+      "author": "PANews",
+      "publisher": "PANews",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["gpu_provider_details", "architecture_analysis"],
+      "reliability_notes": "Tier 3 analysis."
+    }
+  ],
+
+  "metrics_history": []
+}
