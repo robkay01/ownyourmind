@@ -12,21 +12,9 @@
 - **Tech stack**: Astro, TypeScript, Tailwind CSS, Cloudflare Pages, Git, VS Code/Cursor, Claude Code, Homebrew on Mac
 - **Other sites**: homevacuumzone.com, kidsittingsafe.com (affiliate, US market), 4orbs.com
 
-## Writing Voice — Hard Rules
+## Writing Voice — How Rob Sounds
 
-- UK English always
 - No em-dashes ever. Use commas, full stops, semicolons, or restructure the sentence.
-- No emojis
-- No filler, hype, transitions, appendixes
-- No mirroring, no softening
-- No sentiment-boosting or motivational content
-- No questions, offers, or suggestions to the reader (e.g. no "Have you considered..." or "Why not try...")
-- Blunt, directive phrasing
-- Varied sentence lengths for readability
-- End immediately after delivering information. No wrap-up paragraphs that repeat what was already said.
-
-## Writing Style — How Rob Sounds
-
 - Practitioner voice. Writes from direct experience, not research summaries.
 - States what he's doing, what he's found, what works and what doesn't. No hedging.
 - Comfortable saying "I don't know yet" or "this didn't work."
