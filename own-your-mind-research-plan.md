@@ -601,6 +601,20 @@ After running the check, document the result as a brief checklist before proceed
 
 If FAIL, re-run the research agent with specific instructions addressing the failures. Do not proceed to editorial until PASS.
 
+### 4.5.5 Post-Editorial Sync Check
+
+After writing the editorial, verify that the research JSON freedom score dimensions **exactly match** the editorial body text. If editorial judgement changed any dimension score from the research phase, the JSON must be updated before committing.
+
+Checklist:
+- [ ] Each of the 6 dimension scores in the JSON matches the editorial body text
+- [ ] The JSON `total_score` equals the sum of its dimension scores
+- [ ] The JSON `total_score` matches the `/100` figure in the editorial body text
+- [ ] The JSON `freedom_grade` matches the letter grade in the editorial body text
+- [ ] The JSON `freedom_summary` references the correct total score
+- [ ] The frontmatter `freedomScore` (1-10) is consistent with the `/100` score (divide by 10, round to nearest integer)
+
+**Rationale:** The research JSON drives the visual chart at the top of the project page. The editorial body text contains the prose breakdown. If these diverge, readers see contradictory scores on the same page. This check was added after discovering a 70 vs 76 discrepancy on the Morpheus page (first project researched, JSON never updated when editorial adjusted scores).
+
 ---
 
 ## Section 5: Source Log Format

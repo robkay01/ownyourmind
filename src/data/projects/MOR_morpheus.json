@@ -385,13 +385,13 @@
   },
 
   "freedom_score": {
-    "total_score": 70,
+    "total_score": 76,
     "max_possible": 100,
     "breakdown": {
       "infrastructure_decentralisation": {
-        "score": 12,
+        "score": 15,
         "max": 20,
-        "evidence": "Permissionless compute node operation via Lumerin proxy router. Multi-chain deployment (Ethereum L1, Arbitrum L2, Base L2). Mainnet compute live since Nov 2024, inference marketplace on Base since Dec 2025. However: contract upgradeability via UUPS proxy pattern is a centralisation vector. L2 sequencers (Arbitrum, Base) are centralised. Active compute node count unknown. LayerZero dependency for cross-chain bridging. Network still early with unproven node distribution."
+        "evidence": "Compute marketplace with independent providers running real hardware. Permissionless participation. No geographic restrictions. Multi-chain deployment (Ethereum L1, Arbitrum L2, Base L2). Mainnet compute live since Nov 2024, inference marketplace on Base since Dec 2025. But the network is early-stage and provider count is still small relative to the demand target. Critical smart contract infrastructure runs on Ethereum/Arbitrum/Base, inheriting those chains' decentralisation properties."
       },
       "governance_decentralisation": {
         "score": 12,
@@ -399,19 +399,19 @@
         "evidence": "Atomic Governance model with no central team, company, or foundation. MRC proposal system with Snapshot voting for MOR holders. GitHub maintainers act as judges for code merges. However: Cyfrin audit confirmed contract owners have significant power over deposited tokens. Pseudonymous founders. David Johnston has outsized influence as lead technologist. Protection Fund governance undocumented. Maintainer-gated code merges concentrate power."
       },
       "token_distribution_fairness": {
-        "score": 14,
+        "score": 13,
         "max": 15,
-        "evidence": "Exemplary fair launch: no pre-mine, no VC allocation, no token sale, no insider allocation. 24/24/24/24/4 split across contributor types with all tokens earned through provable work or yield contribution. 90-day bootstrapping period before claims. Power multiplier rewards long-term holders (up to 10.7x over 6 years). One of the fairest token distributions in the crypto space."
+        "evidence": "Genuine fair launch. No pre-mine, no ICO, no VC allocation, no insider distribution. Every MOR earned through contribution. 24/24/24/24/4 split across contributor types. This is the cleanest distribution in the DeAI space. The 90-day lock-up on earned MOR prevents immediate dumping but does lock participants into positions."
       },
       "censorship_resistance": {
-        "score": 10,
+        "score": 12,
         "max": 15,
-        "evidence": "Compute providers join permissionlessly. Lumerin proxy router provides decentralised matching between users and providers. LLM inference can run locally on user machines via llama.cpp. Smart Agents execute locally. No content filtering at the protocol level. However: Arbitrum and Base sequencers are centralised (could theoretically censor transactions). Compute router could be a censorship vector if compromised. No formal censorship resistance guarantees documented."
+        "evidence": "No content policy on inference requests. Permissionless compute providers serve any workload. No KYC requirement. Lumerin proxy router provides decentralised matching between users and providers. But the network's small scale means fewer alternative providers if any individual node refuses a request."
       },
       "data_sovereignty": {
-        "score": 10,
+        "score": 12,
         "max": 15,
-        "evidence": "Smart Agents designed to run locally on user hardware. Users control wallets and cryptographic keys. IPFS used for model/agent storage. Capital staking is self-custodial (principal never touched by protocol). However: compute requests routed through network expose inference queries. No zero-knowledge proofs or end-to-end encryption on the inference layer. Metadata leakage possible through router interactions."
+        "evidence": "Local agent execution. Self-custodial wallets. No platform surveillance or data collection. Agent interactions with DeFi protocols do not route through a centralised intermediary. But on-chain transactions are publicly visible (standard blockchain transparency, not a Morpheus-specific limitation)."
       },
       "open_source_transparency": {
         "score": 12,
@@ -420,7 +420,7 @@
       }
     },
     "freedom_grade": "B",
-    "freedom_summary": "Morpheus scores a B (70/100) for genuine decentralisation with meaningful concerns. Its standout strength is token distribution fairness — one of the best fair launches in crypto, with zero insider allocation and all tokens earned through provable contributions. Open-source transparency is strong with MIT licensing and multiple tier-1 audits. The main concerns are infrastructure maturity (early network with unknown node distribution and L2 sequencer dependencies) and governance (contract owner privileges and maintainer-gated code decisions). The project demonstrates genuine commitment to sovereignty principles but still has centralisation vectors that need addressing as it matures."
+    "freedom_summary": "Morpheus scores a B (76/100) for genuine decentralisation with meaningful concerns. Its standout strength is token distribution fairness — one of the fairest launches in crypto, with zero insider allocation and all tokens earned through provable contributions. Open-source transparency is strong with MIT licensing and multiple tier-1 audits. The main concerns are governance maturity (bootstrap-phase multisig controls and maintainer-gated code decisions) and the early-stage compute provider network. The project demonstrates genuine commitment to sovereignty principles but still has centralisation vectors that need addressing as it matures."
   },
 
   "assessment": {
