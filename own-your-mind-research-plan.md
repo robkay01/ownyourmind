@@ -535,6 +535,74 @@ If any of these are encountered during research, escalate by adding a note to `r
 
 ---
 
+## Section 4.5: Post-Research Compliance Check
+
+Every research JSON must pass this compliance check before an editorial is written. This check is run by the orchestrating agent (Claude Code) after receiving the research output from a research agent. The research agent does not self-certify.
+
+### 4.5.1 Source Depth Verification
+
+Count the actual primary source reads (WebFetch calls or equivalent deep reads) in the research agent's transcript. Search result snippets do not count as source reads.
+
+| Check | Minimum | How to Verify |
+|-------|---------|---------------|
+| Total primary source fetches (WebFetch) | 20+ | Count WebFetch calls in agent transcript |
+| Tier 1 sources actually read (not just cited) | 5+ | Confirm fetches of official docs, whitepaper, GitHub, blog |
+| Tier 2 sources actually read | 3+ | Confirm fetches of CoinGecko, CoinMarketCap, DeFiLlama, block explorer, or audit reports |
+| Block explorer data checked | 1+ | Confirm fetch of Etherscan, Solscan, Arbiscan, or equivalent for token contract |
+| GitHub checked directly | 1+ | Confirm fetch of GitHub org page or API call for repo data |
+
+If any minimum is not met, reject the research and re-run with explicit instructions to address the gap.
+
+### 4.5.2 Schema Completeness Check
+
+Run these automated checks against the output JSON:
+
+1. **Valid JSON** — parse without errors
+2. **All top-level sections present** — meta, identity, team, technical, tokenomics, participation, usage_metrics, community, freedom_score, assessment, sources
+3. **Freedom score dimensions sum correctly** — individual dimension scores must sum to total_score (tolerance ±1 for rounding)
+4. **Freedom grade matches score** — F: 0-39, D: 40-54, C: 55-69, B: 70-84, A: 85-100
+5. **Token distribution percentages** — initial_allocation percentages should sum to approximately 100% (tolerance ±5%). If not, a note must explain the gap.
+6. **No empty evidence fields** — every freedom_score breakdown dimension must have non-empty evidence
+7. **Sources array populated** — minimum 15 sources with sequential IDs
+8. **Research gaps documented** — every null field in the schema should have a corresponding entry in research_gaps explaining why
+
+### 4.5.3 Content Quality Spot-Checks
+
+The orchestrating agent must manually verify at least 3 of these:
+
+1. **Market data freshness** — price, market cap, and volume data must be from within 7 days of research date
+2. **Team backgrounds verified** — at least one founding team member's background cross-checked against a second source
+3. **Supply data cross-referenced** — circulating supply verified against at least 2 of: CoinGecko, CoinMarketCap, block explorer
+4. **Assessment balance** — both what_works_today and what_is_hype arrays have 3+ entries each
+5. **Freedom score defensibility** — scores are within the correct rubric range for the evidence provided (e.g., if evidence says "no governance exists", governance score should be 0-4, not 5-8)
+
+### 4.5.4 Compliance Check Output
+
+After running the check, document the result as a brief checklist before proceeding to write the editorial:
+
+```
+## Research Compliance Check — {PROJECT_NAME}
+- [ ] Valid JSON: yes/no
+- [ ] WebFetch count: X (minimum 20)
+- [ ] Tier 1 sources read: X (minimum 5)
+- [ ] Tier 2 sources read: X (minimum 3)
+- [ ] Block explorer checked: yes/no
+- [ ] GitHub checked directly: yes/no
+- [ ] DeFiLlama checked: yes/no
+- [ ] Freedom score sums correctly: yes/no
+- [ ] Freedom grade matches score: yes/no
+- [ ] Token distribution sums to ~100%: yes/no (or noted)
+- [ ] Sources count: X (minimum 15)
+- [ ] Research gaps documented for null fields: yes/no
+- [ ] Market data within 7 days: yes/no
+- [ ] Assessment balanced (3+ works, 3+ hype): yes/no
+- RESULT: PASS / FAIL (reason)
+```
+
+If FAIL, re-run the research agent with specific instructions addressing the failures. Do not proceed to editorial until PASS.
+
+---
+
 ## Section 5: Source Log Format
 
 Every source consulted must be logged in the `sources` array using this format:
@@ -664,21 +732,33 @@ When given a project to research, follow these instructions exactly:
 
 2. **Execute the research sequence** in Section 2.2 step by step. Do not skip steps.
 
-3. **For each data point in the schema**, attempt to find the information from the highest-tier source available. If unavailable, try the next tier down. If no source exists, set the field to `null` and add an entry to `research_gaps`.
+3. **Actually read primary sources.** Use WebFetch (or equivalent) to fetch and read the full content of primary source pages. Web search result snippets are not a substitute for reading the actual page. Every Tier 1 source cited must have been fetched and read, not just found in a search result. Minimum 20 actual page reads per project. Specifically:
+   - Fetch and read the official documentation (docs site, introduction, architecture, tokenomics pages)
+   - Fetch and read the whitepaper or litepaper
+   - Fetch the GitHub organisation page and at least 3 individual repositories to assess activity
+   - Fetch at least one block explorer page for the token contract (Etherscan, Solscan, Arbiscan, etc.)
+   - Fetch CoinGecko AND CoinMarketCap for market data
+   - Fetch DeFiLlama for TVL/protocol metrics (even if the project is not listed, verify this)
+   - Fetch the official blog for recent posts
+   - Search for and fetch any published audit reports
 
-4. **Do not infer, estimate, or fabricate data.** If a number is not explicitly stated in a source, do not calculate or guess it unless the calculation methodology is obvious and documented (e.g., circulating percentage = circulating supply / max supply). Mark any derived calculations with a note.
+4. **For each data point in the schema**, attempt to find the information from the highest-tier source available. If unavailable, try the next tier down. If no source exists, set the field to `null` and add an entry to `research_gaps`.
 
-5. **Log every source as you go.** Do not compile sources after the fact.
+5. **Do not infer, estimate, or fabricate data.** If a number is not explicitly stated in a source, do not calculate or guess it unless the calculation methodology is obvious and documented (e.g., circulating percentage = circulating supply / max supply). Mark any derived calculations with a note.
 
-6. **Run the fact-checking checklist** in Section 4.2 before marking the report as complete.
+6. **Log every source as you go.** Do not compile sources after the fact.
 
-7. **Output two files:** the JSON database record and the markdown research summary.
+7. **Run the fact-checking checklist** in Section 4.2 before marking the report as complete.
 
-8. **If you encounter a red flag** from Section 4.4, note it prominently in both the research_gaps array and the research summary. Do not bury concerns.
+8. **Output two files:** the JSON database record and the markdown research summary.
 
-9. **Time-sensitive data** (price, market cap, volume, TVL, community size) should note the exact date and time of access.
+9. **The orchestrating agent runs the compliance check** in Section 4.5 on the output JSON before proceeding to write the editorial. If the check fails, re-run the research with specific instructions to address the gaps. Do not write an editorial from non-compliant research.
 
-10. **When in doubt, leave it null and flag it** rather than guessing. Gaps are acceptable. Inaccuracies are not.
+10. **If you encounter a red flag** from Section 4.4, note it prominently in both the research_gaps array and the research summary. Do not bury concerns.
+
+11. **Time-sensitive data** (price, market cap, volume, TVL, community size) should note the exact date and time of access.
+
+12. **When in doubt, leave it null and flag it** rather than guessing. Gaps are acceptable. Inaccuracies are not.
 
 ### Prompt Template for Initiating Research
 

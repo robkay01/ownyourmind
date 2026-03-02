@@ -4,7 +4,7 @@ description: "A VC-backed GPU marketplace on Solana aggregating compute from dat
 category: "compute"
 token: "IO"
 status: "active"
-freedomScore: 3
+freedomScore: 4
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "io-net"
@@ -57,9 +57,9 @@ Insider allocation (seed plus team plus Series A) totals roughly 34%. The Binanc
 
 The burn mechanism: at least 50% of platform revenue (collected in IO tokens) is permanently burned after GPU suppliers are paid. All slashed tokens are also burned. At the current annualised revenue of roughly $20 million, that means approximately $10 million of buy pressure against hundreds of millions in unlocking insider tokens. The maths does not favour holders in the near term.
 
-Market snapshot: IO trades at $0.11 with a $32 million market cap and $85 million FDV. That is 98% below the all-time high of $6.43, set on 12 June 2024, the day after listing. The all-time low of $0.091 was hit in February 2026. Listed on Binance (futures), Coinbase, Gate, Bybit, KuCoin and others.
+Market snapshot: IO trades at $0.108 with a $32 million market cap and $86 million FDV. That is 98% below the all-time high of $6.43, set on 12 June 2024, the day after listing. The all-time low of $0.092 was hit in February 2026. Listed on Binance, Coinbase, Gate, Bybit, KuCoin, WhiteBIT and others.
 
-The token was valued at $1 billion at the Series A. Current FDV: $85 million. Investors who bought at that valuation are deeply underwater.
+The token was valued at $1 billion at the Series A. Current FDV: $86 million. Investors who bought at that valuation are deeply underwater.
 
 ## How to participate
 
@@ -75,13 +75,13 @@ The token was valued at $1 billion at the Series A. Current FDV: $85 million. In
 
 **What works.** The revenue is real and growing. $5.7 million in Q1 2025 with 82.6% quarter-on-quarter growth is not hype. Seven million compute hours delivered in January 2025. The confidential compute offering with hardware-based attestation (Intel TDX plus NVIDIA) is ahead of most DePIN competitors. IO Intelligence provides a practical API for AI model access. The leadership under Gaurav Sharma (ex-Binance VP Engineering) brings operational credibility after a turbulent 2024. Eighty-five-plus partnerships announced by January 2025, including integrations with Filecoin, Render Network, ChainGPT, Injective and Nillion.
 
-**What does not work.** The GPU numbers are the headline problem. io.net markets 327,000 "registered" GPUs. The daily average of verified, active GPUs in Q1 2025 was 6,720. That is 2% utilisation of the registered base. The verified GPU count declined 11.1% quarter-on-quarter in Q1 2025 even as revenue grew. The gap between headline metrics and operational reality was already exposed by the April 2024 Sybil attack, when attackers exploited leaked user ID tokens to perform SQL injection and spoof GPU metadata, inflating the apparent GPU count. An RTX 4090 was reportedly split into infinite virtual GPUs. Martin Shkreli publicly highlighted the discrepancies. The project's own CSO admitted: "We fucked up."
+**What does not work.** The GPU numbers are the headline problem. io.net markets 327,000 "registered" GPUs. The daily average of verified, active GPUs in Q1 2025 was 6,720. That is 2% utilisation of the registered base. The verified GPU count declined 11.1% quarter-on-quarter in Q1 2025 even as revenue grew. The gap between headline metrics and operational reality was already exposed by the April 2024 Sybil attack, when approximately 1.8 million fake GPUs attempted to connect to the network to farm airdrop rewards. Attackers exploited vulnerabilities that allowed them to mimic genuine GPU signals and spoof metadata. An RTX 4090 was reportedly split into infinite virtual GPUs. Martin Shkreli publicly highlighted the discrepancies. The project's own CSO admitted: "We fucked up." Only 5,350 GPUs are cluster-ready on any given day.
 
 The "decentralised" and "open source" branding is misleading. io.net describes itself as "The Open Source AI Infrastructure Platform" on its website. The core platform code (backend, IO-SDK, GPU orchestration, matching engine, billing, IO Worker node software) is not open source. Only 9 public GitHub repos exist, containing setup scripts, binaries, documentation and demo apps. 131 GitHub stars total. [Akash](/projects/akash/) publishes everything.
 
 There is no governance. No DAO. No on-chain voting. No governance forum. No proposals mechanism. All decisions are made by the io.net team and foundation. Token holders have zero governance rights. For a project with a $32 million market cap token, the complete absence of governance is notable.
 
-No security audit from any recognised firm has been published, despite $30 million in Series A funding and a platform handling GPU compute workloads and a staking system. This is a significant gap.
+io.net achieved SOC 2 compliance, which covers organisational security controls and is relevant for enterprise customers. However, no smart contract audit or platform security audit from a recognised blockchain auditing firm (CertiK, Trail of Bits, Halborn, etc.) has been published, despite $30 million in Series A funding and a platform handling GPU compute workloads and a staking system.
 
 **The risk.** The founder risk has already materialised. Ahmad Shadid departed under a cloud and his subsequent project O.XYZ also faced misrepresentation allegations. Three CEOs in under two years creates leadership instability. Tory Green's move to Foundation chair suggests organisational restructuring is ongoing.
 
@@ -91,11 +91,11 @@ The competitive position is squeezed. [Akash](/projects/akash/) is more decentra
 
 **My position.** I do not hold IO. The closed-source core, absence of governance, founder scandal, inflated GPU metrics, and 98% price decline from ATH put this firmly in the "show me" category. The revenue growth is genuine and worth monitoring, but the decentralisation credentials are too weak for the sovereignty thesis. If you want decentralised GPU compute, [Akash](/projects/akash/) is the more honest option. If you want cheap GPUs without caring about decentralisation, Lambda Labs and Vast.ai do not require a token.
 
-## Freedom score: 3/10
+## Freedom score: 4/10
 
-io.net scores 33/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+io.net scores 38/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
-**Infrastructure decentralisation (9/20):** GPU supply comes from independent operators across 138-plus countries, which is architecturally distributed. But the core platform (orchestration, matching, billing, API, verification) is entirely centralised and operated by io.net. The IO Worker software is closed-source binaries. The 2024 Sybil attack demonstrated that verification systems were insufficient. Only 6,720 daily active verified GPUs on average (Q1 2025) despite 327,000 registered. The platform can censor or deny service to any provider or consumer.
+**Infrastructure decentralisation (10/20):** GPU supply comes from independent operators across 138-plus countries, which is architecturally distributed. Permissionless GPU onboarding is a genuine positive. But the core platform (orchestration, matching, billing, API, verification) is entirely centralised and operated by io.net. The IO Worker software is closed-source binaries. The 2024 Sybil attack demonstrated that verification systems were insufficient. Only 5,350 cluster-ready GPUs on any given day despite 327,000 registered. The platform can censor or deny service to any provider or consumer.
 
 **Governance decentralisation (2/20):** No on-chain governance. No DAO. No governance forum. No proposals. All decisions made by the io.net team and foundation board. The io.net Foundation (chaired by co-founder Tory Green) controls strategic direction. Token holders have no governance rights whatsoever. This is fully centralised governance with a "foundation" label.
 
@@ -103,9 +103,9 @@ io.net scores 33/100 (F grade). Full methodology at [Freedom Score Methodology](
 
 **Censorship resistance (5/15):** io.net can censor any user or provider. The platform controls account access, job allocation and the matching engine. KYC requirements for some participation. Terms of Service can restrict usage. The IO Worker binary is closed-source, so providers cannot verify what code they run. The underlying Solana token is censorship-resistant for transfers. Confidential compute VMs protect data during processing. But the platform layer is a centralised censorship vector.
 
-**Data sovereignty (7/15):** Confidential compute VMs with Intel TDX and NVIDIA H100/H200/B200 provide genuine hardware-based data protection during processing. Users can verify attestation reports. Supports encrypted training data, model weights and architectures. Federated learning with dataset isolation is supported. This is a real strength. However, standard (non-confidential) workloads lack these protections, and metadata (usage patterns, billing) is held centrally by io.net.
+**Data sovereignty (8/15):** Confidential compute VMs with Intel TDX and NVIDIA H100/H200/B200 provide genuine hardware-based data protection during processing. Users can verify attestation reports. Supports encrypted training data, model weights and architectures. Federated learning with dataset isolation is supported. SOC 2 compliance adds enterprise-grade organisational security controls. This is a real strength. However, standard (non-confidential) workloads lack these protections, and metadata (usage patterns, billing) is held centrally by io.net.
 
-**Open source and transparency (5/15):** Only 9 public GitHub repos containing setup scripts, binaries, docs and demo apps. Core platform code is not open source. IO-SDK (Ray fork), GPU orchestration engine, matching engine, billing system and IO Worker node software are all closed-source. No reproducible builds. No public reporting on treasury spending or foundation operations. The "Open Source AI Infrastructure Platform" branding on the website is misleading given the closed-source core.
+**Open source and transparency (8/15):** Only 9 public GitHub repos containing setup scripts, binaries, docs and demo apps. Core platform code is not open source. IO-SDK (Ray fork), GPU orchestration engine, matching engine, billing system and IO Worker node software are all closed-source. No reproducible builds. The "Open Source AI Infrastructure Platform" branding on the website is misleading given the closed-source core. However, SOC 2 compliance demonstrates audited organisational security processes, Messari publishes quarterly reports with verifiable network metrics, and token economics are well documented with verifiable on-chain data (contract: BZLbGTNCSFfoth2GYDtwr7e4imWzpR5jqcUuGEwr646K on Solana).
 
 ### Path to improvement
 
