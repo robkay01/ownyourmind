@@ -22,7 +22,7 @@ Akash is a decentralised cloud computing marketplace built on a Cosmos SDK appch
 
 The chain handles order matching, escrow payments and provider attestation. Actual compute happens off-chain. GPU marketplace launched in September 2023 with NVIDIA support. AkashML managed inference service followed, simplifying AI model deployment for tenants who do not want to wrangle Kubernetes themselves.
 
-Founded by Greg Osuri and Adam Bozanich through Overclock Labs, a Delaware-incorporated company. Osuri's background is genuine open-source credibility: he created AnyCast (acquired by Cloudflare) and co-created the Kubernetes Helm package manager. The team has grown to roughly 115 people. Mainnet has been running since September 2020, making Akash the longest-running decentralised cloud marketplace in the space.
+Founded by Greg Osuri and Adam Bozanich through Overclock Labs, a Delaware-incorporated company (June 2015). Osuri founded AngelHack, the world's largest hackathon organisation (100,000-plus developers across 50 cities), and has over 10,000 GitHub contributions. He testified before the US Congress House Committee on AI energy in May 2025, the first decentralised cloud founder to do so. The team has grown to roughly 115 people. Mainnet has been running since September 2020, making Akash the longest-running decentralised cloud marketplace in the space.
 
 ## Value proposition
 
@@ -32,33 +32,36 @@ Permissionless supply is the structural differentiator. Anyone with qualifying h
 
 For the sovereignty thesis, the value is straightforward: you deploy containerised workloads on infrastructure that no single entity controls, pay with a self-custodial wallet, and no platform collects data about what you are running. [Venice](/projects/venice/) uses Akash GPUs for its inference workloads. [Morpheus](/projects/morpheus/) routes compute through Akash providers. ElizaOS runs AI agents on the network. These are real customers generating real revenue, not testnet experiments.
 
-The counter-narrative is scale. Akash has 63 active providers with roughly 700 GPUs. AWS has millions. The "decentralised AWS" framing is aspirational. The reality is a functional but small marketplace that serves a specific niche: developers and projects that value permissionless deployment over managed services. GPU utilisation sits at roughly 60% (self-reported), which suggests genuine demand but the absolute base is tiny. Homenode, launched in beta in February 2026, aims to expand the provider base by letting consumer hardware participate, but adoption metrics are not yet available.
+The counter-narrative is scale. Akash has roughly 69 active providers with 700-1,000 GPUs. AWS has millions. The "decentralised AWS" framing is aspirational. The reality is a functional but small marketplace that serves a specific niche: developers and projects that value permissionless deployment over managed services. GPU utilisation sits at roughly 60% (self-reported), which suggests genuine demand but the absolute base is tiny. Provider count actually declined through 2025, despite usage growth. Homenode, launched in beta in February 2026, aims to reverse this by letting consumer hardware (RTX 4090/5090 minimum in Phase 1) participate, but adoption metrics are not yet available.
 
 ## Tokenomics
 
-AKT launched via IEO on BitMax (now AscendEX) in October 2020 at $0.39 per token. Total raise: $2.8 million. By crypto standards, this is tiny, and that matters. Low funding means less VC overhang, less misaligned incentive, and less pressure to juice metrics for investor returns.
+AKT launched via IEO on BitMax (now AscendEX) in October 2020 at $0.38-$0.77 per token. Total raise across all rounds: $4.1 million ($1.31 million seed from CrunchFund in 2017, $2 million private sale in 2019, roughly $800,000 IEO). By crypto standards, this is tiny, and that matters. Low funding means less VC overhang, less misaligned incentive, and less pressure to juice metrics for investor returns.
 
-Genesis supply was 100 million AKT. Distribution:
+Genesis supply was 100 million AKT. Long-term distribution of max supply:
 
-- **Community and ecosystem:** 29%
-- **Team and advisors:** 26% (4-year vesting, 1-year cliff)
-- **Public sale (IEO):** 20% (unlocked at launch)
-- **Foundation/treasury:** 15% (long-term, foundation-managed)
-- **Validators/inflation:** 10% (bootstrap allocation plus ongoing block rewards)
+- **Mining (block rewards):** 70.94%
+- **Investors:** 10.03% (1-year lock, graded release, fully unlocked)
+- **Team and advisors:** 7.85% (1-year lock, graduated release, fully unlocked)
+- **Foundation:** 5.72% (fully unlocked)
+- **Ecosystem:** 2.32%
+- **Testnets:** 1.45%
+- **Vendors and marketing:** 1.16%
+- **Public sale (IEO):** 0.52%
 
-Current supply sits at roughly 289 million AKT against a genesis cap of 388.5 million. Circulating supply is 283 million (73% of cap). Inflation runs at approximately 10% annually, adjusted by governance to target a specific bonding ratio via standard Cosmos SDK mechanics.
+Current supply sits at roughly 290 million AKT against a genesis cap of 388.5 million. Circulating supply is 283 million (74% of cap). All initial allocations are now fully vested and unlocked. Inflation runs at a maximum of 8% annually (reduced from the original schedule by Proposal 283 in March 2025), with a 50% community pool tax meaning half of all inflation goes to community-directed spending.
 
-The tokenomics thesis hinges on BME (Burn-Mint Equilibrium). When activated, AKT spent on compute gets burned and new AKT minted to providers. If compute spend exceeds inflation, the token becomes deflationary. The code is complete. Activation target is early-mid 2026. But at $3.15 million annual revenue against an $85 million market cap, BME alone cannot drive meaningful deflation yet. The gap between the deflationary narrative and the inflationary reality is the core investment question.
+The tokenomics thesis hinges on BME (Burn-Mint Equilibrium). When activated, AKT spent on compute gets burned and new AKT minted to providers. If compute spend exceeds inflation, the token becomes deflationary. The code is complete. Activation target is early-mid 2026. But at $3.15 million annual revenue against an $88 million market cap, BME alone cannot drive meaningful deflation yet. The gap between the deflationary narrative and the inflationary reality is the core investment question.
 
-Staking yields roughly 10% APY nominal, which is near zero real yield after accounting for inflation. The 21-day unbonding period locks capital during volatile markets. Slashing risk exists: 5% for double-signing, 0.01% for prolonged downtime.
+Staking yields roughly 7.3% APY nominal, which is approximately -0.7% to 0% real yield after accounting for 8% inflation and the 50% community pool tax. The 21-day unbonding period locks capital during volatile markets. Slashing risk exists: 5% for double-signing, 0.01% for prolonged downtime.
 
-Starbonds, a $75 million Reg D securities offering announced in 2025, is the elephant in the room. This is a corporate fundraise by Overclock Labs. Terms are not yet public. Whatever the structure, it represents significant new capital flowing into the entity that controls the development roadmap.
+Starbonds, a $75 million securities offering (Reg A+ filing) announced in 2025, is the elephant in the room. This is a corporate fundraise by Overclock Labs. Terms are not yet fully public. Whatever the structure, it represents significant new capital flowing into the entity that controls the development roadmap, and introduces an opaque financial dimension alongside the transparent on-chain economics.
 
-Market snapshot: AKT trades at $0.30 with an $85 million market cap. That is 96% below the all-time high of $8.07 from April 2021. Listed on Coinbase, Kraken and KuCoin but notably absent from Binance, which limits Asian market liquidity and retail discovery.
+Market snapshot: AKT trades at $0.30 with an $88 million market cap. That is 96% below the all-time high of $8.08 from April 2021. Listed on Coinbase, Kraken and KuCoin but notably absent from Binance, which limits Asian market liquidity and retail discovery. Grayscale added AKT to its AI Tools and Resources sector index in May 2025, and Coinbase included AKT in the Coinbase 50 Index in June 2025.
 
 ## How to participate
 
-**Stake AKT.** Delegate to validators on the Akash chain. Earn inflation rewards (~10% APY nominal). Vote on governance proposals through your validator or directly. Requires a Cosmos wallet (Keplr). Minimum stake is negligible. The main consideration is the 21-day unbonding period.
+**Stake AKT.** Delegate to validators on the Akash chain. Earn inflation rewards (~7.3% APY nominal, near zero real yield after inflation and community pool tax). Vote on governance proposals through your validator or directly. Requires a Cosmos wallet (Keplr). Minimum stake is negligible. The main consideration is the 21-day unbonding period.
 
 **Provide compute.** Run a provider node and list spare capacity on the marketplace. Permissionless, anyone with qualifying hardware can join. Requires server-grade hardware, Kubernetes administration skills, NVIDIA GPUs for GPU workloads, and reliable internet. This is the more interesting participation mode if you have idle hardware, but the technical barrier is real.
 
@@ -68,9 +71,9 @@ Market snapshot: AKT trades at $0.30 with an $85 million market cap. That is 96%
 
 ## Honest assessment
 
-**What works.** Akash is the most credible decentralised cloud marketplace operating today. That is a factual statement, not an endorsement. $3.15 million annual revenue (up 128% year-over-year) from real customers. Venice, ElizaOS and Morpheus are verifiable, named customers deploying real workloads. The permissionless provider model is structurally sound. Fully open source under Apache 2.0 across 65 repositories. Osuri's open-source background (AnyCast/Cloudflare, Kubernetes Helm) provides genuine technical credibility. Listed on Coinbase and Kraken. Cosmos-based on-chain governance with active community participation. Homenode (beta February 2026) could expand the provider base by making consumer hardware eligible.
+**What works.** Akash is the most credible decentralised cloud marketplace operating today. That is a factual statement, not an endorsement. $3.15 million annual revenue (up 128% year-over-year) from real customers, with 3.1 million deployments created in 2025 (466% growth). Venice, ElizaOS, Morpheus and Gensyn are verifiable, named customers deploying real workloads. The permissionless provider model is structurally sound. Fully open source under Apache 2.0 across 65 repositories with 350-plus contributors. Osuri's background (AngelHack founder, congressional testimony on AI energy) provides genuine credibility. Listed on Coinbase and Kraken. Cosmos-based on-chain governance with active community participation: 300-plus proposals, and the community rejected Proposal #302 for transparency concerns, showing governance has real teeth. Homenode (beta February 2026) could expand the provider base by making consumer hardware eligible.
 
-**What does not work yet.** Sixty-three active providers is not a cloud marketplace. It is a pilot programme. Provider concentration means a handful of large operators serve the majority of capacity. No managed services limits enterprise adoption to teams comfortable with raw compute. Revenue growth of 128% sounds impressive until you realise it went from $1.4 million to $3.15 million, which is not meaningful at infrastructure scale. GPU utilisation at 60% reflects genuine demand but across only 700 GPUs, which is a rounding error against hyperscaler capacity.
+**What does not work yet.** Roughly 69 active providers is not a cloud marketplace. It is a pilot programme, and the provider count actually declined through 2025. Provider concentration means a handful of large operators serve the majority of capacity. No managed services limits enterprise adoption to teams comfortable with raw compute. Revenue growth of 128% sounds impressive until you realise it went from $1.4 million to $3.15 million, which is not meaningful at infrastructure scale. GPU utilisation at 60% reflects genuine demand but across only 700-1,000 GPUs, which is a rounding error against hyperscaler capacity.
 
 **The risk.** Chain deprecation is the single highest-impact risk. Akash plans to deprecate its Cosmos chain in late 2026 and migrate to a new chain, with Solana mentioned as a "strong contender" but no governance vote conducted. Migrating an entire blockchain and marketplace is technically complex, operationally disruptive, and could fracture the community. There is no published technical specification. This is not an upgrade. It is a rebuild.
 
@@ -102,4 +105,4 @@ Three changes would materially increase Akash's score:
 
 1. **Commission a formal security audit.** Five years of production infrastructure without a third-party security review is indefensible. The ChainLight vulnerability proved the attack surface exists. An audit by a credible firm would address the most obvious gap in Akash's otherwise strong transparency position.
 2. **Execute the chain migration transparently.** Publish a technical specification. Run a governance vote on the destination chain. Provide a detailed migration timeline with milestones. The current state, aspirational timelines with no published roadmap, creates justified uncertainty.
-3. **Grow the provider count.** Sixty-three providers is not decentralised cloud. Homenode is a step in the right direction. The target should be hundreds of active providers across multiple geographies before claiming the "decentralised AWS" positioning with a straight face.
+3. **Grow the provider count.** Roughly 69 providers, declining through 2025, is not decentralised cloud. Homenode is a step in the right direction. The target should be hundreds of active providers across multiple geographies before claiming the "decentralised AWS" positioning with a straight face.
