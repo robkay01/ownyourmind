@@ -50,7 +50,7 @@ The emission split is fixed at 41/41/18 between miners, validators and subnet ow
 
 The critical economic dynamic is competition within subnets. Miners with better hardware, better models and better optimisation earn disproportionately more. Academic analysis (arXiv, 2025) found that stake weight is the primary driver of rewards (0.50-0.80 correlation), not AI output quality (0.10-0.30 correlation). The protocol rewards capital concentration more than quality contributions.
 
-Registration on popular subnets requires burning TAO. This creates a cost barrier that prevents spam but also means you need capital to participate as a miner or validator. TAO spent on registration is recycled back to the unissued emission pool -- it is not a permanent burn.
+Registration on popular subnets requires burning TAO. This creates a cost barrier that prevents spam but also means you need capital to participate as a miner or validator. TAO spent on registration is recycled back to the unissued emission pool; it is not a permanent burn.
 
 ## How to participate
 
@@ -64,19 +64,21 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 ## Honest assessment
 
-**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real -- Grayscale filed for a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
+**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real: Grayscale filed for a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
 
 **What does not work yet.** The barrier to entry for mining is high and getting higher. Competitive subnets require serious hardware investment with no guarantee of returns. Most subnets have not demonstrated output quality exceeding centralised alternatives. Academic analysis shows stake weight drives rewards more than AI output quality.
 
 **The concern.** Bittensor's decentralisation narrative significantly overstates its operational reality. The Opentensor Foundation validates all blocks (Proof of Authority), can halt the entire network (demonstrated July 2024), and controls governance proposals through a 3-person Triumvirate. No timeline for PoS transition has been published. A $28-30M insider hack by former OTF employees in mid-2024 exposed real security failures. No third-party security audit has been publicly disclosed for the core protocol. The top 1% of wallets control approximately 90% of stake (Gini coefficient ~0.98).
 
-**The fair launch question.** Technically clean -- no ICO, no pre-mine, no VC allocation. But 5.38M TAO were mined between January 2021 and October 2023 with very limited participants and no public accounting of where those tokens went. Polychain Capital and DCG accumulated significant positions, likely through early mining or OTC.
+**The fair launch question.** Technically clean: no ICO, no pre-mine, no VC allocation. But 5.38M TAO were mined between January 2021 and October 2023 with very limited participants and no public accounting of where those tokens went. Polychain Capital and DCG accumulated significant positions, likely through early mining or OTC.
 
 **The competitive dynamic.** Mining Bittensor is closer to competitive gaming than passive yield farming. You need to constantly optimise, upgrade hardware and adapt to changing subnet dynamics. If you are looking for passive income, this is not it. If you enjoy the technical challenge and have the hardware, it can be rewarding.
 
 **My experience.** I have explored Bittensor mining and found the barrier to entry on established subnets too high for my hardware. Newer subnets offer better opportunities but come with the risk of lower and more volatile emissions. I hold TAO as a network exposure position but do not actively mine.
 
 ## Freedom score: 6/10
+
+Bittensor scores 56/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
 **Infrastructure decentralisation (12/20):** 128 subnets, 8,000+ reported GPU nodes, permissionless mining. But OTF validates all blocks (PoA) and can halt the network. No PoS timeline published.
 
@@ -89,3 +91,11 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 **Data sovereignty (10/15):** Local miner execution, self-custodial wallets, no platform surveillance. But coldkey exposure on every operation, no ZK on inference.
 
 **Open source transparency (9/15):** MIT licence, 64 public repos, active development. But no security audit, no bug bounty, opaque early distribution, OTF finances undisclosed.
+
+### Path to improvement
+
+Three changes would materially increase Bittensor's score:
+
+1. **Transition from Proof of Authority to Proof of Stake.** OTF validating all blocks is the single largest centralisation vector. The network cannot credibly claim decentralisation while one foundation controls block production and has demonstrated willingness to halt the chain. Publishing a concrete PoS transition timeline with milestones would be the highest-impact action available.
+2. **Commission a third-party security audit.** A network with a $1.9 billion market cap and a history of a $28-30 million insider hack has no disclosed security audit. This is indefensible. An audit of the core protocol, consensus mechanism and smart contracts by a credible firm would address the most obvious gap.
+3. **Reform governance beyond the Triumvirate.** Three OTF employees controlling governance proposals for a network of this scale is not decentralised governance. Expanding proposal rights to the broader validator set or implementing a community proposal mechanism would distribute decision-making power meaningfully.

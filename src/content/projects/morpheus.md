@@ -72,9 +72,24 @@ MOR is consumed when users access compute on the network, creating burn pressure
 
 ## Freedom score: 8/10
 
-**Open source:** Yes. All code is public and auditable.
-**Fair launch:** Yes. No pre-mine, no VC allocation.
-**Decentralised compute:** Yes. Real marketplace with independent providers.
-**Permissionless participation:** Yes. No KYC, no geographic restrictions.
-**Smart contract controls:** Some centralised mechanisms remain during bootstrap phase. This is the main deduction.
-**Censorship resistance:** High. No content policy on inference requests.
+Morpheus scores 76/100 (B grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+
+**Infrastructure decentralisation (15/20):** Compute marketplace with independent providers running real hardware. Permissionless participation. No geographic restrictions. But the network is early-stage and provider count is still small relative to the demand target. Critical smart contract infrastructure runs on Ethereum/Arbitrum/Base, inheriting those chains' decentralisation properties.
+
+**Governance decentralisation (12/20):** Four-group emission model distributes influence across compute, code, capital and community contributors. No single entity controls emissions allocation. But the core development team retains significant influence over protocol direction during the bootstrap phase. Multisig controls on key contracts have not yet transitioned to full community governance.
+
+**Token distribution fairness (13/15):** Genuine fair launch. No pre-mine, no ICO, no VC allocation, no insider distribution. Every MOR earned through contribution. This is the cleanest distribution in the DeAI space. The 90-day lock-up on earned MOR prevents immediate dumping but does lock participants into positions.
+
+**Censorship resistance (12/15):** No content policy on inference requests. Permissionless compute providers serve any workload. No KYC requirement. But the network's small scale means fewer alternative providers if any individual node refuses a request.
+
+**Data sovereignty (12/15):** Local agent execution. Self-custodial wallets. No platform surveillance or data collection. Agent interactions with DeFi protocols do not route through a centralised intermediary. But on-chain transactions are publicly visible (standard blockchain transparency, not a Morpheus-specific limitation).
+
+**Open source and transparency (12/15):** All code public and auditable. Active GitHub development. Transparent emission mechanics verifiable on-chain. But no formal third-party security audit has been publicly disclosed for the core smart contracts. Bug bounty programme scope could be broader.
+
+### Path to improvement
+
+Three changes would materially increase Morpheus's score:
+
+1. **Transition smart contract controls to community governance.** The bootstrap-phase multisig controls are the primary freedom score deduction. Publishing a concrete timeline for transitioning key contract controls to on-chain governance would signal commitment to full decentralisation.
+2. **Commission a formal security audit.** The smart contracts handle real capital (stETH deposits, MOR emissions). A third-party audit by a credible firm would strengthen confidence in the infrastructure that underpins the entire network.
+3. **Grow the compute provider base.** More providers means more redundancy, lower latency and stronger censorship resistance. The compute marketplace is functional but needs scale to deliver on the sovereign agent vision.
