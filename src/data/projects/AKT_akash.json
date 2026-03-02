@@ -32,7 +32,8 @@
       "Annual revenue ($3.15M) source methodology unclear -- may be annualised from shorter periods",
       "Homenode (beta Feb 2026) metrics and adoption numbers not yet available",
       "Number of unique tenants/deployers not publicly tracked or reported",
-      "Greg Osuri's personal AKT holdings not publicly disclosed"
+      "Greg Osuri's personal AKT holdings not publicly disclosed",
+      "9 sources (S009-S012, S014, S016-S019) have null URLs -- aggregated from multiple publications without a single canonical link"
     ]
   },
 
@@ -83,14 +84,14 @@
       "total_usd": 2800000,
       "rounds": [
         {
-          "round": "Private sale / pre-seed",
+          "round_type": "Private sale / pre-seed",
           "amount_usd": null,
           "date": "2019",
           "lead_investor": null,
           "notes": "Early private round details sparse. CoinGecko lists Cypher Capital, Nika Osuri, Hiro Systems, Cosmostation as investors."
         },
         {
-          "round": "IEO (Initial Exchange Offering)",
+          "round_type": "IEO (Initial Exchange Offering)",
           "amount_usd": 2800000,
           "date": "2020-10-15",
           "lead_investor": "BitMax (now AscendEX)",
@@ -257,7 +258,7 @@
         "guide_url": "https://akash.network/docs/getting-started/token-and-wallets"
       },
       {
-        "type": "providing",
+        "type": "node_operation",
         "description": "Run a cloud provider node on Akash. List spare compute (CPU, GPU, memory, storage) on the marketplace. Earn AKT from tenant deployments. Permissionless -- anyone with qualifying hardware can join.",
         "minimum_hardware": "Server-grade hardware with Kubernetes capability. GPU providers need NVIDIA cards (consumer or data centre). Reliable internet, static IP preferred.",
         "minimum_capital_usd": 2000,
@@ -268,7 +269,7 @@
         "guide_url": "https://akash.network/docs/providers/build-a-cloud-provider"
       },
       {
-        "type": "deploying",
+        "type": "using",
         "description": "Deploy containerised workloads on Akash as a tenant. Use SDL (YAML-based) to describe requirements, submit to marketplace, providers bid. Typically 50-85% cheaper than AWS/GCP/Azure for comparable compute.",
         "minimum_hardware": "None (client-side CLI or web console only)",
         "minimum_capital_usd": 5,

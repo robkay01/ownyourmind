@@ -88,21 +88,21 @@
       "total_usd": 35180000,
       "rounds": [
         {
-          "round": "Public Sale (ICO)",
+          "round_type": "Public Sale (ICO)",
           "amount_usd": 1160000,
           "date": "2017-10-05",
           "lead_investor": null,
           "notes": "4,650,922 RNDR at $0.25. Hard cap of $134M not reached. 20% genesis bonus for participants."
         },
         {
-          "round": "Private Sale",
+          "round_type": "Private Sale",
           "amount_usd": 4020000,
           "date": "2018-01-01",
           "lead_investor": null,
           "notes": "~16,080,000 RNDR at $0.25. Bonuses 2.5-30% depending on tranche."
         },
         {
-          "round": "Strategic Token Round",
+          "round_type": "Strategic Token Round",
           "amount_usd": 30000000,
           "date": "2021-12-21",
           "lead_investor": "Multicoin Capital",
@@ -143,7 +143,7 @@
         "auditor": "OpenZeppelin",
         "date": "2017-09-01",
         "scope": "RNDR ERC-20 token and crowdsale contracts (Ethereum)",
-        "result": "1 low-severity issue (misuse of FinalizableCrowdsale). Fixed.",
+        "result_summary": "1 low-severity issue (misuse of FinalizableCrowdsale). Fixed.",
         "report_url": "https://www.openzeppelin.com/news/render-token-audit-2a078ba6d759"
       }
     ],
@@ -261,7 +261,7 @@
   "participation": {
     "methods": [
       {
-        "type": "providing",
+        "type": "node_operation",
         "description": "Register NVIDIA GPUs as a node operator on the Render Network. Provide rendering and AI compute capacity. Earn RENDER from BME emission schedule based on jobs completed, uptime, bandwidth, and GPU model. Network is permissioned -- must be approved by the Foundation.",
         "minimum_hardware": "NVIDIA GPU with CUDA 10.1+, compute capability 3.0+, 6GB+ VRAM (8GB+ preferred), 32GB+ system RAM, 100GB free disk, 100 Mbps download / 75 Mbps upload, driver v566.36+",
         "minimum_capital_usd": 500,
