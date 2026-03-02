@@ -1,0 +1,741 @@
+{
+  "meta": {
+    "project_id": "autonolas",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "research_gaps": [
+      "Whitepaper is a PDF that could not be parsed directly -- tokenomics and architecture details reconstructed from secondary sources and official documentation",
+      "Exact veOLAS locked supply and governance participation rate not directly verifiable from on-chain data in this research session",
+      "X (Twitter) follower count for @autonolas not directly verifiable -- JavaScript-rendered page",
+      "Telegram member count not found -- project does not appear to maintain an active Telegram group",
+      "DeFiLlama returned 403 for Autonolas -- TVL and protocol revenue metrics not available from DeFiLlama",
+      "CoinGecko returned 403 -- market data reconstructed from search snippets and Etherscan",
+      "CoinMarketCap page did not render market data -- JavaScript-dependent page",
+      "Exact staking APY varies by agent and staking contract -- no single canonical APY figure available",
+      "Oaksprout the Tan's real identity and detailed background not publicly disclosed beyond pseudonymous DeFi contributor",
+      "No HuggingFace presence found for either 'autonolas' or 'valory-xyz' organisations -- 404 on both",
+      "Valory AG Swiss commercial register details not independently verified in this session",
+      "Exact number of Code4rena 2026-01 audit findings not yet published -- audit recently completed",
+      "Pearl v1 user count and download statistics not publicly disclosed",
+      "Exact OLAS burn amount from marketplace fees not available -- mechanism exists but burn totals not reported"
+    ],
+    "refresh_config": {
+      "github_org": "valory-xyz",
+      "github_primary_repo": "open-autonomy",
+      "coingecko_id": "autonolas",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "autonolas",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "Olas (Autonolas)",
+    "ticker": "OLAS",
+    "category": "agent",
+    "subcategory": "Autonomous agent protocol and marketplace",
+    "tagline": "Co-own AI",
+    "one_liner": "A permissionless protocol for building, deploying, and co-owning autonomous AI agents that operate across multiple blockchains, featuring an on-chain registry, developer incentive system, and agent-to-agent marketplace.",
+    "website": "https://olas.network",
+    "documentation_url": "https://stack.olas.network",
+    "whitepaper_url": "https://olas.network/documents/whitepaper/Whitepaper%20v1.0.pdf",
+    "github_url": "https://github.com/valory-xyz",
+    "chain": "Ethereum (primary), Gnosis Chain, Polygon, Solana, Arbitrum, Optimism, Base, Celo, Mode",
+    "launch_date": "2023-07-05",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "David Minarsch",
+        "role": "Co-Founder & CEO, Valory AG",
+        "background": "PhD in Applied Game Theory from the University of Cambridge (2017). BSc Mathematics with Economics from UCL (2012). MPhil Economics from Cambridge (2013). Former Head of Multi-Agent Systems at Fetch.ai where he led development of the AEA (Autonomous Economic Agent) Software Framework. Co-founder of Panopy.co (collaboration software startup). Creator of the original AEA framework that underpins the Olas stack. Co-founded Valory AG in mid-2021.",
+        "linkedin_or_x": "https://uk.linkedin.com/in/davidminarsch",
+        "doxxed": true
+      },
+      {
+        "name": "David Galindo",
+        "role": "Co-Founder & CTO, Valory AG",
+        "background": "Former Associate Professor of Computer Security at University of Birmingham (2015-2022), member of the Security & Privacy research group. Over 15 years of experience in cryptography research. 2,625 academic citations. Specialises in cryptography, blockchain, multi-agent systems, computer security, and electronic voting. Joined Valory as CTO in March 2023.",
+        "linkedin_or_x": "https://uk.linkedin.com/in/dgcrypto",
+        "doxxed": true
+      },
+      {
+        "name": "Oaksprout the Tan",
+        "role": "Co-Founder & CPO, Valory AG",
+        "background": "Pseudonymous co-founder. Described as an established DeFi community contributor and investor with 10+ years in web2 product development. Key representative for Valory in the crypto community. Exact background not publicly disclosed.",
+        "linkedin_or_x": null,
+        "doxxed": false
+      }
+    ],
+    "team_size_estimate": 30,
+    "entity_name": "Valory AG (core contributor); Autonolas DAO (protocol governance)",
+    "entity_jurisdiction": "Switzerland (Valory AG, headquartered in Zug). Autonolas DAO is decentralised with no single jurisdiction.",
+    "notable_backers": [
+      "1kx -- led $13.8M OTC round (February 2025)",
+      "True Ventures -- led Valory's $4M seed round (October 2022)",
+      "Zee Prime Capital -- OTC round participant (2025)",
+      "Borderless Capital -- OTC round participant (2025)",
+      "Generative Ventures -- OTC round participant (2025)",
+      "Keyrock -- OTC round participant (2025)",
+      "Tioga Capital Partners -- OTC round participant (2025)",
+      "SpaceshipDAO -- OTC round participant (2025)",
+      "Signature Ventures -- Valory seed participant",
+      "Semantic Ventures -- Valory seed participant",
+      "Prime Block Ventures -- Valory seed participant",
+      "Proof Group -- Valory seed participant",
+      "Atka -- Valory seed participant",
+      "Martin Koeppelmann (Gnosis co-founder) -- strategic supporter"
+    ],
+    "funding_raised": {
+      "total_usd": 18350000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "date": "2022-10-12",
+          "amount_usd": 4000000,
+          "lead_investor": "True Ventures",
+          "valuation_usd": null,
+          "notes": "Valory AG seed round. Participants: Signature Ventures, Semantic Ventures, Prime Block Ventures, Proof Group, Atka. Funds for infrastructure development."
+        },
+        {
+          "round_type": "IDO",
+          "date": "2023-07-05",
+          "amount_usd": 547580,
+          "lead_investor": null,
+          "valuation_usd": 74600000,
+          "notes": "Liquidity Bootstrapping Pool via Fjord Foundry on Balancer. 14.84M OLAS (~1.5% of supply) sold to 149 holders. 393 swaps over 7 days. Closing FDV $74.6M. US buyers excluded."
+        },
+        {
+          "round_type": "OTC",
+          "date": "2025-02-04",
+          "amount_usd": 13800000,
+          "lead_investor": "1kx",
+          "valuation_usd": null,
+          "notes": "OTC fundraise to support Olas ecosystem development and Pearl launch. Participants: Zee Prime Capital, Borderless Capital, Generative Ventures, Keyrock, Tioga Capital Partners, SpaceshipDAO, SMAPE Capital, Very Early Ventures, Arkn Ventures."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Olas is an autonomous agent protocol built on a three-layer architecture: (1) On-chain Registry -- NFT-based registration system for components, agents, and services, enabling composable software reuse and tracking contributions; (2) Protocol Tokenomics -- OLAS token coordinates permissionless capital-code pairing through bonding (protocol-owned liquidity), developer staking incentives (code top-ups), and Proof-of-Active-Agent staking emissions; (3) Governance -- veOLAS (vote-escrowed OLAS) holders guide protocol evolution through Snapshot (off-chain) and on-chain voting. The execution layer uses the Open Autonomy Framework (built atop Open AEA, a fork of Fetch.ai's AEA framework) enabling multi-agent systems that run off-chain but are secured on-chain. Agent services operate as decentralised multi-agent systems replicated on a temporary consensus gadget (Tendermint) while being crypto-economically secured on public blockchains. The protocol is deployed across 9 chains: Ethereum, Gnosis Chain, Polygon, Solana, Arbitrum, Optimism, Base, Celo, and Mode. Key products include Pearl (consumer AI agent app store), Mech Marketplace (agent-to-agent service marketplace), and Olas Predict (autonomous prediction market trading agents).",
+    "consensus_mechanism": "Agent services use Tendermint v0.34.19 as a temporary consensus gadget for off-chain multi-agent coordination. On-chain settlement uses the consensus mechanisms of deployed chains (Ethereum PoS, Gnosis Chain GBC, Solana PoH, etc.). Safe multisig wallets serve as the on-chain representation of agent services.",
+    "what_is_onchain": "Component/agent/service registry (NFTs), OLAS token (ERC-20), veOLAS governance, tokenomics contracts (bonding, treasury, dispenser), staking contracts (Proof-of-Active-Agent), cross-chain governance bridges, Safe multisig wallets for agent services, Mech Marketplace transactions, VoteWeighting for staking emissions",
+    "what_is_offchain": "Agent service execution (multi-agent systems running on operator machines), AI inference and decision-making, prediction market analysis, DeFi strategy execution, agent-to-agent communication, IPFS-hosted software packages, Tendermint consensus between agent instances",
+    "key_dependencies": [
+      "Ethereum (primary settlement and token layer)",
+      "Gnosis Chain (largest agent activity chain, prediction market execution)",
+      "Safe (multisig wallet infrastructure for agent services)",
+      "Tendermint (off-chain consensus for multi-agent coordination)",
+      "IPFS (decentralised package storage for agent components)",
+      "Balancer (initial DEX liquidity and LBP launch)",
+      "Omen / Polymarket (prediction market platforms used by trading agents)"
+    ],
+    "smart_contract_languages": [
+      "Solidity",
+      "Rust (Solana lockbox)"
+    ],
+    "open_source": true,
+    "license": "Apache-2.0 (primary repos), MIT (tokenomics and governance repos)",
+    "github_metrics": {
+      "total_repos": 146,
+      "primary_repo_url": "https://github.com/valory-xyz/open-autonomy",
+      "total_commits": 13698,
+      "contributors": null,
+      "last_commit_date": "2026-02-11",
+      "stars": 114,
+      "forks": 46,
+      "open_issues": null
+    },
+    "audits": [
+      {
+        "auditor": "Code4rena",
+        "date": "2024-01-08",
+        "scope": "43 contracts across governance (veOLAS, GuardCM, bridge contracts), registries (agent/component NFTs), tokenomics (bonding, treasury), and Solana lockbox. 3,817 lines of Solidity.",
+        "result_summary": "5 high-risk and 5 medium-risk vulnerabilities found. High-risk issues included permanent DoS in liquidity_lockbox via storage limit exhaustion and GuardCM delegatecall bypass. $90,500 USDC prize pool. 39 wardens participated.",
+        "report_url": "https://code4rena.com/audits/2023-12-olas"
+      },
+      {
+        "auditor": "Code4rena",
+        "date": "2026-02-09",
+        "scope": "41 contracts across governance (L1 governance, cross-chain bridges, security guards, token burning), tokenomics (inflation logic, L2 staking distribution, POL with buyback-and-burn), and registries (service lifecycle, multisig recovery, activity-based staking).",
+        "result_summary": "Audit completed. $62,000 USDC prize pool. Results not yet fully published as of research date.",
+        "report_url": "https://code4rena.com/audits/2026-01-olas"
+      }
+    ],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "Autonolas",
+    "ticker": "OLAS",
+    "token_standard": "ERC-20 (Ethereum mainnet)",
+    "token_type": "Utility & Governance",
+    "token_utility": [
+      "Governance -- lock OLAS for veOLAS to vote on protocol parameters, staking emissions, and treasury allocation via Snapshot and on-chain proposals",
+      "Developer incentives -- staked code components and agents receive ETH donations and OLAS top-ups based on usage and veOLAS whitelist",
+      "Bonding -- deposit LP tokens to acquire OLAS at a discount, growing protocol-owned liquidity (modelled on Olympus DAO v1)",
+      "Agent staking -- stake OLAS via Proof-of-Active-Agent to power autonomous agents and earn rewards for useful agent activity",
+      "Fee burning -- marketplace fees from Mech Marketplace are burned, creating deflationary pressure"
+    ],
+    "supply": {
+      "max_supply": 527890426,
+      "total_supply": 527890426,
+      "circulating_supply": 236247266,
+      "circulating_supply_date": "2026-03-02",
+      "circulating_percentage": 44.75
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Developer Incentives & Bonders",
+          "percentage": 47.35,
+          "vesting": "Distributed autonomously by the protocol over the initial 10 years via bonding discounts and developer code top-ups",
+          "notes": "S-shaped emission curve designed to proportionally reward code contributions. Includes bonding rewards and developer staking incentives."
+        },
+        {
+          "category": "DAO Founding Members",
+          "percentage": 32.65,
+          "vesting": "buOLAS (burnable tokens) with annual release events through July 2026. No mandatory vesting enforced by smart contract but subject to buOLAS unlock schedule.",
+          "notes": "Founding DAO members who participated in 2022 DAO founding. Approximately 50 participants invested tens of thousands of dollars."
+        },
+        {
+          "category": "Valory AG (Core Contributor)",
+          "percentage": 10.0,
+          "vesting": "No locking or vesting requirements per FAQ. Valory holds tokens at its own discretion.",
+          "notes": "Valory's allocation for maintenance, operations, and ecosystem development. No lock-up enforced."
+        },
+        {
+          "category": "DAO Treasury",
+          "percentage": 10.0,
+          "vesting": "Controlled by DAO governance. Mostly untouched as of late 2023 research.",
+          "notes": "100M OLAS allocated. Used for grants, ecosystem programmes, and protocol development."
+        }
+      ],
+      "distribution_method": "Liquidity Bootstrapping Pool via Fjord Foundry (July 2023) for public distribution. Founding members contributed during 2022 DAO formation. Developer incentives distributed via protocol mechanisms."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": null,
+      "next_major_emission_event": "Year 10 transition to 2% max annual inflation cap",
+      "next_event_date": null,
+      "burn_mechanism": "Mech Marketplace fees are burned. The protocol includes a buyback-and-burn mechanism from protocol-owned liquidity. ~77.9M unvested OLAS tokens were burned in early 2025."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Proof-of-Active-Agent (PoAA) -- rewards based on agent activity and performance, not passive lockup. Blends PoS and PoW principles. Also veOLAS governance staking (lock OLAS for voting power).",
+      "minimum_stake": null,
+      "lock_up_period": "veOLAS: variable lock period (longer lock = more voting power, max 4 years). Agent staking: varies by staking contract and program.",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Agent performance risk -- rewards depend on agents meeting KPI targets, not guaranteed",
+        "Smart contract risk -- staking contracts have been audited but vulnerabilities were found (Code4rena high-risk findings)",
+        "veOLAS lock-up risk -- tokens locked for governance cannot be transferred until unlock date",
+        "Slashing is not implemented -- no direct economic penalty for underperforming agents, but rewards are withheld"
+      ],
+      "slashing_conditions": "No explicit slashing mechanism. Rewards are conditional on agent activity meeting defined KPI thresholds."
+    },
+    "token_model_classification": "Utility token with governance escrow (veOLAS), developer incentive staking, bonding-based protocol-owned liquidity (Olympus-style), and fee-burning deflationary mechanism. First 10 years capped at 1B supply with S-shaped emission curve for developer rewards, then max 2% annual inflation. Real economic activity from agent transactions drives fee burn.",
+    "tokenomics_notes": "Token distribution is unusual: no traditional VC round for the protocol itself (only Valory the company raised $4M seed). The 32.65% founding member allocation has no enforced vesting, which is a risk. Valory's 10% also has no lock-up. The 47.35% developer/bonding allocation is the largest category and is programmatically distributed over 10 years. The recent $13.8M OTC round (Feb 2025) was at the Valory company level, not a protocol token sale. The LBP raised only $547K, making this one of the smaller public launches in DeFi/AI. The 77.9M token burn in early 2025 was notable. Current circulating supply (~236M) is well below the theoretical 1B first-decade cap, indicating slow emission relative to schedule.",
+    "market_data": {
+      "price_usd": 0.0363,
+      "market_cap_usd": 8567315,
+      "fully_diluted_valuation_usd": 19776454,
+      "twenty_four_hour_volume_usd": 227875,
+      "all_time_high_usd": 8.47,
+      "all_time_high_date": "2024-01-03",
+      "all_time_low_usd": 0.0148,
+      "all_time_low_date": "2026-02-06",
+      "major_exchanges": [
+        "Uniswap V2 (Ethereum) -- primary DEX",
+        "Balancer V2 (Gnosis Chain)",
+        "MEXC Global",
+        "CoinEx",
+        "XT",
+        "Uphold"
+      ],
+      "data_snapshot_date": "2026-03-02"
+    }
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake OLAS via Pearl (AI Agent App Store) to run autonomous agents and earn rewards through Proof-of-Active-Agent. Install Pearl, stake OLAS, and launch an agent (e.g., Polystrat for Polymarket trading, Omenstrat for Omen trading, BabyDegen for DeFi). Rewards distributed based on agent activity meeting KPI targets set by staking contracts.",
+        "minimum_capital_usd": null,
+        "minimum_hardware": "macOS computer (Pearl currently macOS only). No GPU required.",
+        "expected_returns": "Variable -- depends on agent performance and staking contract. Reports of ~138% APY from staking and one DeFi agent achieving 150% ROI in 150 days, but returns are not guaranteed and vary significantly.",
+        "risks": "Agent performance risk. Smart contract risk. Token price risk. Pearl is macOS-only currently. Returns depend on market conditions for prediction/DeFi agents."
+      },
+      {
+        "type": "governance",
+        "description": "Lock OLAS for veOLAS to participate in DAO governance. Vote on staking programme emissions, protocol parameters, and treasury allocation via Snapshot (off-chain) and on-chain proposals. Longer lock periods yield more voting power (max 4 years).",
+        "minimum_capital_usd": null,
+        "minimum_hardware": "Web browser and Ethereum wallet",
+        "expected_returns": "No direct yield from governance locking. Indirect benefit through protocol direction and staking emission allocation.",
+        "risks": "Illiquidity during lock period. Governance influence concentrated among large holders."
+      },
+      {
+        "type": "building",
+        "description": "Build autonomous agent services using the Open Autonomy Framework and register components/agents as NFTs on the on-chain registry. Earn ETH donations and OLAS top-ups when your code is used by active agent services. Apply to the Olas Accelerator programme for up to $1,000,000 plus developer rewards.",
+        "minimum_capital_usd": 0,
+        "minimum_hardware": "Development machine with Python 3.10+, Docker, Node.js. Knowledge of multi-agent systems and Python development.",
+        "expected_returns": "Developer rewards from protocol tokenomics (ETH donations + OLAS top-ups for used code). Accelerator grants up to $1M.",
+        "risks": "Steep learning curve for Open Autonomy framework. Reward depends on adoption of your components by agent operators."
+      },
+      {
+        "type": "using",
+        "description": "Use Mech Marketplace to hire AI agents for tasks or offer your own agents' services for crypto payments. Agent-to-agent transactions enable autonomous collaboration across predictive analytics, DeFi operations, and other AI workflows.",
+        "minimum_capital_usd": null,
+        "minimum_hardware": "Web browser for marketplace interaction; development environment to deploy custom agents",
+        "expected_returns": "Revenue from agent services offered on marketplace. Cost savings from hiring specialised agents.",
+        "risks": "Market risk on agent service quality. Marketplace is still early-stage with limited turnover (~$89K total as of latest data)."
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "Good -- comprehensive developer docs at stack.olas.network covering Open Autonomy framework, Open AEA, protocol tokenomics, and agent development. Multiple repos with README documentation. Olas Academy has run 4 cohorts training 17 participants. Documentation covers both sovereign (single-operator) and decentralised (multi-operator) agent deployments.",
+      "developer_community_size": null,
+      "grants_program": true,
+      "grants_url": "https://olas.network/accelerator"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": 14543449,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": 3176,
+    "revenue_annual_usd": null,
+    "revenue_source": "Mech Marketplace fees (burned), protocol donations from agent services",
+    "metrics_source": "olas.network homepage and Q1/Q3 2025 blog posts",
+    "metrics_date": "2026-03-02",
+    "usage_notes": "3,176 agents deployed across 9 chains. 542 daily active agents. 14,543,449 total transactions. 11,101,413 agent-to-agent transactions. $89,000 marketplace turnover. 3,773,512 OLAS staked. On Gnosis Chain specifically: Olas agents responsible for 35%+ of all Safe transactions, with 300+ daily active agents and 340,000+ monthly transactions. 79% prediction accuracy for Olas Predict agents. Q1 2025 showed 599 daily active agents across 9 chains and 5.25M total transactions. By Q3 2025, 9M+ agent-to-agent Mech transactions. CoinDesk reported ~2,000 agents deployed and ~500 daily active agents as of Feb 2025. These figures demonstrate genuine usage, particularly the dominance on Gnosis Chain prediction markets."
+  },
+
+  "community": {
+    "discord_members": 5462,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": "veOLAS-based DAO governance. OLAS holders lock tokens for veOLAS (longer lock = more weight, max 4 years). Governance operates via: (1) Snapshot for off-chain gasless voting; (2) On-chain proposals for critical decisions via GovernorOLAS and Timelock contracts; (3) VoteWeighting contract for staking emission allocation. Cross-chain governance bridges extend voting to Polygon, Gnosis, Optimism, Base, Arbitrum via dedicated bridge contracts. GuardCM provides multisig oversight. The DAO was founded in 2022 with ~50 participants. Deployer (Valory) holds no privileged protocol role per FAQ.",
+    "governance_url": "https://snapshot.org/#/autonolas.eth",
+    "key_community_channels": [
+      {
+        "platform": "Discord",
+        "url": "https://discord.com/invite/eRa5e9c6zh",
+        "notes": "Primary community channel. ~5,462 members."
+      },
+      {
+        "platform": "X (Twitter)",
+        "url": "https://x.com/autonolas",
+        "notes": "Official announcements and updates. Handle: @autonolas."
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/valory-xyz",
+        "notes": "132 followers on org. 146 total repos. Primary development activity."
+      },
+      {
+        "platform": "Blog",
+        "url": "https://olas.network/blog",
+        "notes": "Quarterly reports, product updates, case studies."
+      },
+      {
+        "platform": "Snapshot",
+        "url": "https://snapshot.org/#/autonolas.eth",
+        "notes": "Off-chain governance voting."
+      }
+    ],
+    "sentiment_summary": "Community is technically oriented and developer-focused rather than retail-speculative. Sentiment appears pragmatic -- the project has genuine usage metrics (Gnosis Chain dominance) but the token has suffered a 99.6% drawdown from ATH, which creates frustration among holders. The agent products (Pearl, Predict) show real traction but the marketplace turnover ($89K total) is modest. Developer community is small but active with 4 Academy cohorts completed.",
+    "community_notes": "Olas has built a relatively small but technically engaged community. The Discord (5,462 members) is modest compared to larger AI/crypto projects. The project's strength lies in developer engagement and actual protocol usage rather than retail hype. The Olas Accelerator programme (up to $1M per team) is actively recruiting builders. The Q3 2025 Agents Unleashed event attracted 4,000+ signups and 450+ attendees, suggesting growing interest. No active Telegram group was found. The pseudonymous co-founder (Oaksprout) is typical of DeFi culture but may concern institutional participants."
+  },
+
+  "freedom_score": {
+    "total_score": 62,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Olas agents run on a permissionless multi-agent system framework across 9 chains. Agent services use Tendermint consensus for off-chain coordination with on-chain settlement via Safe multisigs. Anyone can register components, deploy agents, and run services without permission. However, the infrastructure has centralisation vectors: Valory operates key infrastructure, the Open Autonomy framework has a single primary maintainer (Valory), and agent operators depend on RPC endpoints and the specific chains they deploy to. Gnosis Chain hosts the vast majority of agent activity. The protocol registries and tokenomics contracts are on Ethereum mainnet. Cross-chain governance bridges add complexity and potential failure points. Score reflects permissionless design with practical centralisation around the core development team and Gnosis Chain concentration."
+      },
+      "governance_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "veOLAS governance is functional with both off-chain (Snapshot) and on-chain voting mechanisms. The DAO was founded in 2022 with ~50 participants. VoteWeighting allows veOLAS holders to direct staking emissions. Cross-chain governance bridges extend voting to 6 chains. GuardCM provides multisig oversight. The deployer (Valory) officially holds no privileged protocol role per FAQ. However, 32.65% founding member allocation + 10% Valory allocation = 42.65% insider tokens with no enforced vesting, creating significant governance concentration. The DAO treasury (10%) is mostly untouched. Governance participation rate is unknown. Score reflects functioning governance infrastructure with significant insider token concentration."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "42.65% insider allocation (32.65% founding members + 10% Valory) with no enforced lock-up or vesting -- a significant concern. 47.35% developer/bonding incentives distributed over 10 years is the largest allocation but controlled by protocol mechanisms, not directly community-held. 10% DAO treasury. Only ~1.5% went to public LBP raising $547K -- very small public distribution. The 77.9M token burn in early 2025 was positive. The LBP mechanism (Fjord Foundry) was fair and transparent. No traditional VC round for the protocol itself (Valory raised separately). Score reflects heavy insider concentration partially offset by the large developer incentive pool and absence of traditional VC extraction."
+      },
+      "censorship_resistance": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Agent services are permissionless to deploy and operate. The on-chain registry is open and uncensored. Multi-chain deployment across 9 chains provides redundancy. Safe multisigs provide censorship-resistant agent wallets. However, Valory controls the Open Autonomy framework and could theoretically influence which agent packages are available in Pearl. The protocol's cross-chain bridges could be paused by governance. Gnosis Chain concentration means most agent activity depends on one chain's liveness. Agent packages stored on IPFS provide some censorship resistance for code distribution. Score reflects strong permissionless design with some practical centralisation vectors."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Agent operators maintain sovereignty over their agent instances and Safe wallets. Pearl enables users to own their agents locally on their machines. Agent code is open-source and can be self-hosted. Component/agent NFTs on the registry are owned by their creators. However, agents interact with external protocols (Omen, Polymarket) and depend on their data availability. The Mech Marketplace creates dependencies on the marketplace infrastructure. Agent operators control their own keys and wallets. IPFS storage for packages provides decentralised code hosting. Score reflects strong user ownership model (Pearl's 'own, don't rent' philosophy) with dependencies on external protocol data."
+      },
+      "open_source_transparency": {
+        "score": 13,
+        "max": 15,
+        "evidence": "All core repositories are open source: Open Autonomy (114 stars, 13,698 commits, Apache-2.0), Open AEA (74 stars, 15,162 commits, Apache-2.0), Trader agent (63 stars, 4,170 commits, Apache-2.0), tokenomics (18 stars, 1,543 commits, MIT), governance (21 stars, 816 commits, MIT). 146 total repos on GitHub. Smart contracts are verified on Etherscan (Solidity v0.8.15, optimisation enabled). Two Code4rena audits completed (2023-12 and 2026-01). Immunefi bug bounty programme covering governance, registry, and tokenomics with up to $50K for critical bugs. Whitepaper published. Quarterly blog reports with metrics. Minor deduction: some infrastructure code may not be open-source, and the 2026 audit results not yet published."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Olas scores 62/100 (C grade), reflecting a protocol with strong open-source credentials and genuinely permissionless agent infrastructure, but significant concerns around token distribution and governance centralisation. The open-source output is excellent -- 146 repos, multiple audits, verified contracts, and a working bug bounty. The permissionless agent framework and multi-chain deployment demonstrate real infrastructure decentralisation. However, the 42.65% insider allocation with no enforced vesting is a serious governance concentration risk. Valory's 10% has no lock-up, and founding members' 32.65% uses buOLAS with gradual releases but no smart contract enforcement. The public LBP was small (1.5% of supply, $547K raised). The project is on mainnet with real usage (14.5M transactions, Gnosis Chain dominance), which partially offsets these concerns. Freedom grade should improve if governance participation broadens and the developer incentive pool (47.35%) is effectively distributed to a wide base of contributors."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Real on-chain agent activity: 14.5M total transactions, 542 daily active agents across 9 chains, 11.1M agent-to-agent transactions -- these are genuine usage metrics, not testnet figures",
+      "Gnosis Chain prediction market dominance: Olas agents responsible for 35%+ of all Safe transactions on Gnosis Chain, with 79% prediction accuracy -- meaningful market presence",
+      "Working consumer product: Pearl (AI Agent App Store) enables non-technical users to own and operate autonomous agents with staking rewards",
+      "Mech Marketplace: First on-chain agent-to-agent service marketplace with 9M+ transactions -- novel infrastructure for autonomous agent economies",
+      "Mature open-source framework: Open Autonomy has 13,698 commits and is used by 152 downstream projects, demonstrating real developer adoption",
+      "Multi-chain deployment: Active on 9 chains simultaneously, not just a single-chain project"
+    ],
+    "what_is_hype": [
+      "Marketplace turnover of $89K total is tiny -- the 'agent economy' is real in transaction volume but minimal in economic value",
+      "Staking APY claims (~138%) are misleading in context of 99.6% token price decline from ATH -- nominal APY means nothing when the underlying token has collapsed",
+      "The 'co-own AI' narrative is aspirational -- users run relatively simple trading/prediction bots, not the kind of transformative AI implied by the tagline",
+      "3,176 agents 'deployed' may overcount -- many could be inactive, dormant, or duplicate registrations",
+      "The Olas Accelerator's $1M grant figure is attention-grabbing but only 4 of 40+ applicants were accepted in the first cohort"
+    ],
+    "key_risks": [
+      "Token price collapse: 99.6% decline from $8.47 ATH to ~$0.036, with market cap now $8.5M. FDV of $19.8M is modest but the price trend is severe. All-time low set in Feb 2026.",
+      "Insider token concentration: 42.65% insider allocation with no enforced vesting. Valory's 10% has no lock-up. Founding members' buOLAS tokens are gradually unlocking through July 2026.",
+      "Gnosis Chain dependency: Vast majority of agent activity is on Gnosis Chain prediction markets. If Gnosis Chain loses relevance or prediction market demand drops, Olas loses its primary use case.",
+      "Prediction market concentration: Olas is heavily dependent on the prediction market vertical. The Predict agent economy is the clear driver of metrics.",
+      "Smart contract risk: Code4rena found 5 high-risk vulnerabilities in 2023 audit including a permanent DoS vector. A second audit just completed in 2026.",
+      "Low liquidity: $227K daily volume primarily on Uniswap V2. No major CEX listings beyond MEXC. Thin order books create execution risk.",
+      "Framework complexity: Open Autonomy has a steep learning curve requiring Python, Docker, Tendermint, and multi-agent system knowledge, limiting developer adoption."
+    ],
+    "competitive_advantages": [
+      "First-mover in autonomous agent infrastructure: On mainnet since mid-2023 with real usage, while most AI agent projects are still in development or hype phase",
+      "Proven Gnosis Chain prediction market dominance: 35%+ of Safe transactions, 79% accuracy -- demonstrated product-market fit in one vertical",
+      "Full-stack agent framework: Only project offering the complete pipeline from component registry to agent deployment to on-chain staking to consumer app (Pearl) to agent-to-agent marketplace (Mechs)",
+      "Multi-chain from day one: 9 chains supported vs single-chain competitors",
+      "Academic founding team: PhD-level expertise in game theory (Minarsch) and cryptography (Galindo) applied to a practical product",
+      "Genuine developer incentive model: Protocol-level rewards for code contributions via NFT registry and top-ups -- aligns builders with ecosystem growth"
+    ],
+    "competitive_disadvantages": [
+      "Tiny market cap ($8.5M) and severe price decline make it hard to attract new investors, developers, and partners",
+      "Pearl is macOS-only -- excludes most potential users",
+      "Marketplace turnover ($89K) is negligible -- the agent economy generates transaction volume but minimal economic value",
+      "Framework complexity limits developer adoption -- Open Autonomy requires specialist knowledge vs simpler agent frameworks",
+      "No major CEX listing -- MEXC is the only notable exchange, limiting retail access",
+      "Heavy reliance on prediction markets -- lack of diversified use cases beyond trading/predictions"
+    ],
+    "comparable_projects": [
+      "Virtuals Protocol -- AI agent platform on Base with a focus on entertainment/social agents and tokenised agent ownership",
+      "ElizaOS (ai16z) -- AI agent framework with broader LLM integration, TypeScript-based for wider developer accessibility",
+      "Fetch.ai (ASI Alliance) -- David Minarsch's former employer; the original AEA framework that Olas forked from. Now part of Artificial Superintelligence Alliance.",
+      "Morpheus -- Decentralised AI agent network with compute, code, and capital incentive layers",
+      "SingularityNET (ASI Alliance) -- AI marketplace and agent platform, now merged with Fetch.ai",
+      "Phala Network -- Decentralised compute for AI agents with TEE-based execution"
+    ],
+    "outlook": "Olas occupies a credible position as one of the earliest and most usage-proven autonomous agent protocols in crypto. The Gnosis Chain prediction market dominance is real and demonstrates genuine product-market fit. However, the project faces serious headwinds: the token has collapsed 99.6% from ATH, market cap is now only $8.5M, and the marketplace economy generates volume but not meaningful revenue. The $13.8M OTC raise (Feb 2025) provides runway, and the Pearl v1 launch shows consumer product ambition. The critical path forward is: (1) diversifying beyond prediction markets into DeFi, social, and enterprise agent use cases; (2) expanding Pearl to Windows/Linux to broaden the user base; (3) growing marketplace turnover from $89K to meaningful economic activity; and (4) stabilising the token price to attract developers to the incentive model. The 47.35% developer incentive pool is a long-term structural advantage if the ecosystem grows. Watch for: Pearl multi-platform launch, new agent verticals beyond prediction markets, developer adoption metrics, and whether the 2026 audit results reveal significant new vulnerabilities.",
+    "overall_assessment": "Olas is a technically serious autonomous agent protocol with genuine on-chain usage that most AI/crypto projects cannot match -- 14.5M transactions, 542 daily active agents, and Gnosis Chain prediction market dominance are real metrics. The founding team combines academic rigour (Cambridge PhD, Birmingham cryptography professor) with practical DeFi experience, and the open-source output (146 repos, 13K+ commits) demonstrates sustained development effort. However, the project sits in an uncomfortable position: the usage is real but the economics are not yet working. A $8.5M market cap, $89K marketplace turnover, and 99.6% price decline from ATH tell a story of a protocol that has found product-market fit in one vertical (prediction market bots) but has not yet translated that into sustainable economic value or token demand. The no-vesting insider allocation (42.65%) and Valory's unencumbered 10% add trust concerns. For practitioners, the Open Autonomy framework is a legitimate tool for building autonomous agents, and Pearl makes agent ownership accessible. But economic exposure via OLAS carries substantial risk given the price trend and low liquidity. This is a technically credible project with a real usage base that needs to solve its tokenomics and economic sustainability problems."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "Official Website",
+      "title": "Olas | Co-own AI",
+      "url": "https://olas.network",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Primary website: products (Pearl, Mech Marketplace), ecosystem metrics (3,176 agents, 542 DAA, 14.5M transactions, 11.1M agent-to-agent, $89K marketplace turnover, 3.77M OLAS staked), supported chains, partners"
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "Documentation",
+      "title": "Olas Stack Developer Documentation -- Tokenomics",
+      "url": "https://stack.olas.network/protocol/tokenomics/",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Official tokenomics docs: OLAS utility (governance, whitelist, bonding), developer incentive model (NFT staking, ETH donations, OLAS top-ups), bonding mechanism with adjustable discount factors, minimum donation threshold of 0.065 ETH"
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "FAQ",
+      "title": "Olas FAQ",
+      "url": "https://olas.network/faq",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Official FAQ: DAO founding (2022, ~50 participants), LBP details ($1.2M raised, 149 holders, $74.6M closing FDV), token distribution (47.35% dev incentives, 32.65% founding members, 10% Valory, 10% treasury), Valory allocation has no vesting, MEXC listing Oct 2024, audits mentioned, name origin"
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "GitHub Organisation",
+      "title": "Valory GitHub Organisation",
+      "url": "https://github.com/valory-xyz",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "132 followers, 146 total repos, Switzerland location. Key repos: open-autonomy (114 stars, 13,698 commits), trader (63 stars, 4,170 commits), open-aea (74 stars, 15,162 commits), autonolas-tokenomics (18 stars, 1,543 commits), autonolas-governance (21 stars, 816 commits)"
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "GitHub Repository",
+      "title": "open-autonomy -- Framework for autonomous agent services",
+      "url": "https://github.com/valory-xyz/open-autonomy",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Primary repo: 114 stars, 46 forks, 13,698 commits, Python 99.2%, Apache-2.0 licence, latest release v0.21.11 (Feb 2026), used by 152 projects, requires Python 3.10+, Tendermint v0.34.19, IPFS, Docker"
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "GitHub Repository",
+      "title": "trader -- AI agent for prediction markets",
+      "url": "https://github.com/valory-xyz/trader",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "63 stars, 29 forks, 4,170 commits, Python 99.2%, Apache-2.0, latest release v0.31.5 (Feb 2026). Trades on Omen (Gnosis) and Polymarket (Polygon) via AI Mech probability queries. Requires Safe multisig."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "GitHub Repository",
+      "title": "open-aea -- Autonomous Economic Agent framework",
+      "url": "https://github.com/valory-xyz/open-aea",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "74 stars, 21 forks, 15,162 commits, Apache-2.0, Python 94.4%. Community fork of Fetch.ai AEA removing centralised registry dependencies. Last release v2.0.8 (Jan 2026)."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "GitHub Repository",
+      "title": "autonolas-tokenomics -- Tokenomics smart contracts",
+      "url": "https://github.com/valory-xyz/autonolas-tokenomics",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "18 stars, 18 forks, 1,543 commits, Solidity 70.2%, MIT licence, last commit Jan 2025. Core contracts: Depository, Dispenser, Tokenomics, TokenomicsProxy, Treasury. 12 staking contracts for multi-chain. Includes audit reports."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "GitHub Repository",
+      "title": "autonolas-governance -- Governance smart contracts",
+      "url": "https://github.com/valory-xyz/autonolas-governance",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "21 stars, 13 forks, 816 commits, MIT licence. Core: OLAS ERC-20, veOLAS voting escrow, GovernorOLAS, Timelock. Cross-chain bridges for 6 chains. VoteWeighting for staking emissions. Immunefi bug bounty. Multiple audit reports in /audits."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "Block Explorer",
+      "title": "OLAS Token on Etherscan",
+      "url": "https://etherscan.io/token/0x0001a500a6b18995b03f44bb040a5ffc28e45cb0",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "On-chain data: ERC-20, 18 decimals, max total supply 527,890,426.15, circulating 236,247,266, 13,571 holders, 330 24h transfers, onchain market cap $19.78M, verified Solidity v0.8.15. No security audit submitted to Etherscan."
+    },
+    {
+      "source_id": "S011",
+      "tier": 2,
+      "type": "Audit Report",
+      "title": "Code4rena Olas Audit (December 2023)",
+      "url": "https://code4rena.com/audits/2023-12-olas",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "18-day audit (Dec 21 2023 - Jan 8 2024). 43 contracts, 3,817 lines Solidity. $90,500 pool. Findings: 5 high-risk (including permanent DoS in liquidity_lockbox, GuardCM delegatecall bypass), 5 medium-risk. 39 wardens."
+    },
+    {
+      "source_id": "S012",
+      "tier": 2,
+      "type": "Audit Report",
+      "title": "Code4rena Olas Audit (January 2026)",
+      "url": "https://code4rena.com/audits/2026-01-olas",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "18-day audit (Jan 22 - Feb 9 2026). 41 contracts covering governance, tokenomics (inflation, L2 staking, buyback-and-burn), and registries. $62,000 pool. Results not yet fully published."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "Corporate Website",
+      "title": "Valory | Architecting Autonomy",
+      "url": "https://www.valory.xyz/",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Core contributor company. Team: David Minarsch (CEO, Cambridge PhD), David Galindo (CTO, Birmingham cryptography), Oaksprout (CPO), Ellie Hirschhorn (CGO, ex-CoinDesk COO, Harvard MBA). 30+ employees. Products: Pearl, Mech Marketplace, Olas Stack. Investors: True Ventures, Signature, Semantic, Prime Block, Proof, Atka."
+    },
+    {
+      "source_id": "S014",
+      "tier": 3,
+      "type": "News Article",
+      "title": "Valory raises $4M (SiliconANGLE)",
+      "url": "https://siliconangle.com/2022/10/12/valory-raises-4m-unlock-software-driven-autonomy-blockchain-apps/",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "$4M seed led by True Ventures (Oct 2022). Valory established Autonolas DAO. Company launched mid-2021. David Minarsch co-founder."
+    },
+    {
+      "source_id": "S015",
+      "tier": 3,
+      "type": "News Article",
+      "title": "Olas Mech Marketplace launch (CoinDesk)",
+      "url": "https://www.coindesk.com/markets/2025/02/27/olas-mech-marketplace-enables-ai-agents-to-hire-each-other-for-help",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Mech Marketplace launch Feb 2025. 4M+ total transactions, 50%+ agent-to-agent, ~2,000 agents deployed, ~500 daily active agents. David Minarsch quotes on agent specialisation. $13.8M raised for Pearl. Supports 7 chains."
+    },
+    {
+      "source_id": "S016",
+      "tier": 1,
+      "type": "Blog Post",
+      "title": "Q1 2025 Olas Report",
+      "url": "https://olas.network/blog/q-1",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Official Q1 metrics: 5,251,860 total transactions by March 31 2025, 3.45M Mech agent-to-agent requests, 599 daily active agents across 9 chains. 77.9M OLAS burned. $13.8M raised led by 1kx. 4 Accelerator teams accepted from 40+ applicants."
+    },
+    {
+      "source_id": "S017",
+      "tier": 1,
+      "type": "Blog Post",
+      "title": "Q3 2025 Olas Report",
+      "url": "https://olas.network/blog/q-3-2025",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "9M+ agent-to-agent Mech transactions. 8 Accelerator teams. Agents Unleashed Singapore event: 4,000+ signups, 450+ attendees. 24 podcast episodes."
+    },
+    {
+      "source_id": "S018",
+      "tier": 1,
+      "type": "Blog Post",
+      "title": "Olas Predict on Gnosis -- Case Study",
+      "url": "https://olas.network/blog/how-gnosis-used-olas-predict-to-build-the-largest-on-chain-prediction-market-economy",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Case study: 79% prediction accuracy, 300+ daily active agents, 340,000+ monthly transactions, 35%+ of all Safe transactions on Gnosis Chain."
+    },
+    {
+      "source_id": "S019",
+      "tier": 1,
+      "type": "Blog Post",
+      "title": "Pearl: Agent Staking on OLAS",
+      "url": "https://olas.network/blog/pearl",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Pearl overview: 3-step process (install, stake, launch agent). Polystrat agent for Polymarket. macOS only. Rewards based on agent performance targets. Open-source, self-custody."
+    },
+    {
+      "source_id": "S020",
+      "tier": 1,
+      "type": "Blog Post",
+      "title": "OLAS Public Launch",
+      "url": "https://olas.network/blog/olas-public-launch",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "LBP via Fjord Foundry, July 5-12 2023. 15M OLAS + 50K USDC in pool. ERC-20 on Ethereum mainnet. US buyers excluded. Funds for protocol maintenance."
+    },
+    {
+      "source_id": "S021",
+      "tier": 1,
+      "type": "Staking Page",
+      "title": "Olas Staking -- Proof of Active Agent",
+      "url": "https://olas.network/staking",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Proof-of-Active-Agent (PoAA) mechanism. Rewards real agent activity, not passive lockup. DAO manages emissions via on-chain voting. Custom staking contracts available for DAOs and builders."
+    },
+    {
+      "source_id": "S022",
+      "tier": 3,
+      "type": "Analysis Article",
+      "title": "0xBlockBard OLAS Deep Dive Research Report",
+      "url": "https://www.0xblockbard.com/p/0xblockbard-olas-network-deep-dive",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Comprehensive Dec 2023 analysis: token distribution (32.65% founders, 10% Valory, 10% treasury, 47.35% dev incentives), veOLAS 186M locked, 165 components, 24 agents, 20 services, 4 Academy cohorts, buOLAS unlock schedule, Olympus-style bonding. $536M FDV at time of writing."
+    },
+    {
+      "source_id": "S023",
+      "tier": 3,
+      "type": "Analysis Article",
+      "title": "Gate.io: What is Autonolas (Olas)?",
+      "url": "https://www.gate.com/learn/articles/what-is-autonolas-olas/7162",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Token holdings breakdown: veOLAS 169.49M, Treasury 74.75M, Valory 62.15M, circulating 157.76M (as of Feb 2025). $13.8M funding led by 1kx. Three agent deployment models (sovereign, decentralised, economies)."
+    },
+    {
+      "source_id": "S024",
+      "tier": 3,
+      "type": "Token Data Aggregator",
+      "title": "CryptoRank: Olas ICO & Token Data",
+      "url": "https://cryptorank.io/ico/autonolas",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "IDO price $0.0369, 14.84M tokens sold, $547.58K raised. ATH ROI: 230x. Feb 2025 OTC: $13.8M led by 1kx. Total supply 472.74M, circulating 236.21M (49.97%). FDV $17.70M, market cap $8.85M."
+    },
+    {
+      "source_id": "S025",
+      "tier": 3,
+      "type": "Personal Website",
+      "title": "David Minarsch -- About",
+      "url": "https://davidminarsch.github.io/about/",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "PhD Applied Game Theory, Cambridge (2017). CEO and co-founder Valory AG. Creator of AEA Framework. Former Head of MAS at Fetch.ai. Co-founder Panopy.co."
+    },
+    {
+      "source_id": "S026",
+      "tier": 3,
+      "type": "Search Results",
+      "title": "David Galindo Background (IQ.wiki, Google Scholar, ResearchGate)",
+      "url": "https://iq.wiki/wiki/david-galindo",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Associate Professor of Computer Security, University of Birmingham (2015-2022). 2,625 scholarly citations. Specialises in cryptography, blockchain, electronic voting. Co-founded Valory as CTO (March 2023)."
+    },
+    {
+      "source_id": "S027",
+      "tier": 3,
+      "type": "Search Results",
+      "title": "CoinGecko OLAS Market Data (via search)",
+      "url": "https://www.coingecko.com/en/coins/autonolas",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Price $0.03627, 24h volume $77,690, market cap $8,567,315, circulating 240M OLAS. ATH $8.47 (Jan 3, 2024). Ranked #1230. Primary DEX: Uniswap V2 OLAS/WETH."
+    },
+    {
+      "source_id": "S028",
+      "tier": 3,
+      "type": "Community Data",
+      "title": "Olas Discord Server",
+      "url": "https://discord.com/invite/eRa5e9c6zh",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "5,462 members. Primary community channel."
+    },
+    {
+      "source_id": "S029",
+      "tier": 1,
+      "type": "Agent Ecosystem Page",
+      "title": "Olas Agents",
+      "url": "https://olas.network/agents",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Agent types: Sovereign (Omenstrat, Polystrat, BabyDegen, Optimus, Agents.fun, Pettbro) and Decentralised (Mech, Contribute). Self-custody, optional staking, Mech Marketplace listing."
+    },
+    {
+      "source_id": "S030",
+      "tier": 3,
+      "type": "News Article",
+      "title": "Autonolas Immunefi Bug Bounty (via search)",
+      "url": "https://immunefi.com/bug-bounty/autonolas",
+      "date_accessed": "2026-03-02",
+      "reliability_notes": "Bug bounty covers Governance, Registry, and Tokenomics. Up to $50K for critical bugs. KYC required for rewards. Proof of concept mandatory."
+    }
+  ],
+
+  "metrics_history": []
+}
