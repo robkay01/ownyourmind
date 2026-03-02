@@ -1,0 +1,853 @@
+{
+  "meta": {
+    "project_id": "io-net",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "research_gaps": [
+      "Seed round amount and date not publicly disclosed with specificity -- only Series A ($30M, March 2024) confirmed across multiple sources. Seed allocation is 12.5% of supply but USD amount raised is unknown.",
+      "No publicly available smart contract audit reports found from any recognised auditing firm (CertiK, Trail of Bits, Halborn, etc.). This is a significant gap for a project with $30M+ funding.",
+      "Entity jurisdiction unclear -- ZoomInfo lists HQ as New York, Basem Oubah's LinkedIn references Dubai. The io.net Foundation (Tory Green as Chair) legal structure and jurisdiction are not publicly documented.",
+      "Exact io.net Foundation vs IO Research Inc corporate structure not publicly documented. Crunchbase lists entity as 'revolution-w-sparkassets-a-s' which may be a prior entity name.",
+      "Discord member count not confirmed via web research.",
+      "Telegram member count not confirmed -- dynamic page did not render.",
+      "Real staking yield after inflation cannot be precisely calculated -- emissions rate is disinflationary (starting 8% annual, decreasing ~1.02%/month) but exact current rate depends on staked ratio and burn rate which are not transparently reported.",
+      "Ahmad Shadid's specific prior project allegations (Arabic crypto community claims of scamming since 2018) are single-source (X posts) and could not be independently verified.",
+      "Annual revenue figure is estimated from quarterly reports -- no audited annual financial statements exist.",
+      "Exact minimum IO stake per device varies by GPU model and is dynamically calculated -- base is 200 IO per chip with multipliers, but exact current cost in USD fluctuates.",
+      "io.net core platform code (backend, orchestration, matching engine) is NOT open source -- only setup scripts, docs, demo apps, and binaries are on GitHub. The core GPU orchestration and IO-SDK (Ray fork) code is not publicly available.",
+      "All-time low price differs between sources: CoinGecko reports $0.09298, CoinMarketCap reports $0.09111 (Feb 6, 2026). Used CoinMarketCap figure as more recent.",
+      "Governance model is effectively centralised -- no on-chain governance, no DAO, no public governance forum or proposals system found."
+    ]
+  },
+
+  "identity": {
+    "name": "io.net",
+    "ticker": "IO",
+    "category": "Compute & Infrastructure",
+    "subcategory": "Decentralised GPU cloud for AI/ML",
+    "tagline": "The Internet of GPUs",
+    "one_liner": "A decentralised physical infrastructure network (DePIN) aggregating underutilised GPUs from data centres, crypto miners, and cloud providers into virtual clusters for AI/ML workloads, built on Solana.",
+    "website": "https://io.net",
+    "documentation_url": "https://io.net/docs",
+    "whitepaper_url": "https://io.net/documents/ionet_Tokenomics_Litepaper.pdf",
+    "github_url": "https://github.com/ionet-official",
+    "chain": "Solana (SPL token)",
+    "launch_date": "2024-06-11",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Ahmad Shadid",
+        "role": "Founder & original CEO (resigned June 2024, 2 days before token launch)",
+        "background": "Founded io.net in 2022. Stepped down as CEO amid allegations regarding his past involvement with Arabic-language crypto projects and questions about inflated GPU metrics. Subsequently founded O.XYZ, which also faced misrepresentation allegations. Accused by X users of being a 'well-known scammer in the Arabic crypto community since 2018' -- these claims are single-source and unverified. No verifiable LinkedIn or public professional history prior to io.net found.",
+        "linkedin_or_x": "https://x.com/AhmadShadid_",
+        "doxxed": true
+      },
+      {
+        "name": "Tory Green",
+        "role": "Co-Founder, former CEO (June 2024 - April 2025), now Chair of io.net Foundation",
+        "background": "Stanford Economics degree. US Military Academy at West Point (Economics & Nuclear Engineering), Distinguished Cadet Award. Analyst at Merrill Lynch (M&A). Strategic Planning at Walt Disney Company. Co-founded The Art of Charm (Top 50 iTunes, 2M+ downloads/month). COO/CFO at Hum Capital (fintech). Partner & COO at Tiller Partners (venture capital). Verifiable professional history across multiple sources.",
+        "linkedin_or_x": "https://linkedin.com/in/torygreen",
+        "doxxed": true
+      },
+      {
+        "name": "Basem Oubah",
+        "role": "Co-Founder & COO",
+        "background": "Bachelor's in Engineering from Yildiz Technical University, Turkey (2018-2022). Chief of Staff at io.net from May 2021. Over a decade of claimed tech industry experience. Based in Dubai, UAE. Limited verifiable public professional history prior to io.net.",
+        "linkedin_or_x": "https://linkedin.com/in/basem-oubah-64b434244",
+        "doxxed": true
+      }
+    ],
+    "key_leadership": [
+      {
+        "name": "Gaurav Sharma",
+        "role": "CEO (appointed April 2025, previously CTO from August 2024)",
+        "background": "Ex-Binance VP of Engineering. Senior engineering leadership at Agoda and Amazon. Built and scaled global platforms handling billions of transactions."
+      },
+      {
+        "name": "Milan Amin",
+        "role": "Marketing (ex-Binance marketer, joined August 2024)"
+      },
+      {
+        "name": "Tausif Ahmed",
+        "role": "Business & Revenue (ex-Amazon, joined August 2024)"
+      }
+    ],
+    "team_size_estimate": 100,
+    "entity_name": "IO Research (operating entity); io.net Foundation (token/ecosystem)",
+    "entity_jurisdiction": "New York, NY, USA (HQ at 447 Broadway St, Manhattan). Also San Francisco office at 500 Folsom St. Foundation jurisdiction undisclosed.",
+    "notable_backers": [
+      "Hack VC (Series A lead)",
+      "Multicoin Capital",
+      "Anatoly Yakovenko (Solana founder, angel)",
+      "OKX Ventures",
+      "Delphi Ventures",
+      "Solana Ventures",
+      "Animoca Brands",
+      "Yat Siu (Animoca Brands)",
+      "Mo Shaikh (Aptos co-founder, angel)",
+      "Avery Ching (Aptos co-founder, angel)",
+      "Amber Group",
+      "MH Ventures",
+      "6th Man Ventures",
+      "The Sandbox",
+      "SevenX Ventures",
+      "Foresight Ventures",
+      "M13",
+      "Longhash Ventures",
+      "ArkStream Capital",
+      "Continue Capital"
+    ],
+    "funding_raised": {
+      "total_usd": 30000000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": null,
+          "date": null,
+          "lead_investor": null,
+          "notes": "Seed round occurred but amount not publicly disclosed. Token allocation is 12.5% of total supply (100M IO tokens). Investors include some of the same backers as Series A."
+        },
+        {
+          "round_type": "Series A",
+          "amount_usd": 30000000,
+          "date": "2024-03-05",
+          "lead_investor": "Hack VC",
+          "notes": "Valued project at $1 billion. 24 investors participated. Confirmed across multiple Tier 1 and Tier 2 sources."
+        },
+        {
+          "round_type": "Binance Launchpool",
+          "amount_usd": null,
+          "date": "2024-06-07",
+          "lead_investor": "Binance",
+          "notes": "20M IO tokens (2.5% of supply) distributed via farming. Not a fundraise but a distribution/listing event. 55th Binance Launchpool project."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "io.net operates a seven-layer architecture: (1) UI Layer (ReactJS, Tailwind, web3.js), (2) Security Layer (firewall, OAuth/JWT, logging), (3) API Layer (FastAPI, GraphQL, REST), (4) Backend Layer (FastAPI, Python, Node.js, Flask, IO-SDK), (5) Database Layer (PostgreSQL, Redis), (6) Message Broker/Task Layer (RabbitMQ, Celery), (7) Infrastructure Layer (Kubernetes, Ray, PyTorch, TensorFlow, NVIDIA DCGM). IO-SDK is a proprietary fork of Ray for distributed Python task execution. GPU verification uses Proof-of-Work (computational benchmarks) and Proof of Time-Lock (staking + uptime monitoring). Confidential compute VMs available using Intel TDX and NVIDIA H100/H200/B200 GPUs with hardware-based attestation.",
+    "consensus_mechanism": "No blockchain consensus -- uses Solana for token settlement and staking. Network verification is through Proof-of-Work (GPU benchmarks) and Proof of Time-Lock (PoTL) for GPU supplier validation, not a consensus mechanism in the traditional sense.",
+    "what_is_onchain": "IO token (SPL on Solana), staking/unstaking, block reward distribution, slashing penalties, token burns. Payment settlement for compute services.",
+    "what_is_offchain": "All compute orchestration, GPU matching, job scheduling, task execution, cluster management, user authentication, billing logic, API layer, database, and the entire GPU worker node software stack. The vast majority of the platform operates off-chain.",
+    "key_dependencies": [
+      "Solana blockchain (token infrastructure)",
+      "Ray (distributed computing framework -- io.net uses proprietary fork called IO-SDK)",
+      "NVIDIA GPU drivers and CUDA",
+      "Kubernetes (orchestration)",
+      "PostgreSQL and Redis (data layer)",
+      "RabbitMQ and Celery (task queue)",
+      "Intel TDX (confidential compute)",
+      "Render Network (GPU supply integration partner)",
+      "Filecoin (compute-storage integration)"
+    ],
+    "smart_contract_languages": [
+      "Rust (Solana programs)"
+    ],
+    "open_source": false,
+    "license": "Mixed -- setup scripts and demos are Apache 2.0/MIT on GitHub. Core platform code (backend, IO-SDK, orchestration engine, worker software) is NOT open source. Only 9 public repos exist, primarily containing setup scripts, binaries, documentation, and demo applications.",
+    "github_metrics": {
+      "total_repos": 9,
+      "primary_repo_url": "https://github.com/ionet-official",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-02",
+      "stars": 131,
+      "forks": 90,
+      "open_issues": 10,
+      "notes": "GitHub presence is minimal for a project of this scale. 9 public repos contain only setup scripts (Shell), demo apps (Python), documentation (MDX), and binary releases. No core platform source code is publicly available. The io_launch_binaries repo (75 stars) and setup-script repo (44 stars) are the most popular. Only 3 repos have explicit open source licenses."
+    },
+    "audits": [
+      {
+        "auditor": "None found",
+        "date": null,
+        "scope": null,
+        "result_summary": "No publicly available smart contract or platform security audit from any recognised auditing firm was found despite extensive search. This is a significant concern for a project that raised $30M in Series A funding and handles GPU compute workloads.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2024-04-25",
+        "description": "Sybil attack / fake GPU spoofing incident. Attackers exploited leaked user ID tokens to perform SQL injection and spoof GPU metadata, inflating the network's apparent GPU count. Initially io.net reported ~500,000 workers, then identified 120,000 'verified' nodes, which further reduced to approximately 12,000 'clusterable, verifiably active and real GPUs'. Martin Shkreli publicly highlighted metric discrepancies. CEO Ahmad Shadid published a post-mortem, CSO Hushky admitted 'We fucked up'. Some attackers were motivated by gaming potential airdrop rewards. An RTX 4090 was reportedly split into infinite virtual GPUs. The incident raised fundamental questions about io.net's verification mechanisms and the credibility of self-reported metrics.",
+        "severity": "High",
+        "sources": [
+          "https://www.theblock.co/post/291315/solana-based-depin-io-net-ceo-claims-network-was-attacked-in-detailed-postmortem",
+          "https://protos.com/solana-project-ceo-says-sybil-attackers-gamed-metric-hoping-for-airdrop/",
+          "https://ionet.medium.com/25th-april-incident-report-176e5fb5c576"
+        ]
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "IO",
+    "ticker": "IO",
+    "token_standard": "SPL (Solana)",
+    "token_type": "both",
+    "token_utility": [
+      "Payment for GPU compute services on the platform",
+      "Staking by GPU suppliers to qualify for Proof of Time-Lock (PoTL) and earn block rewards",
+      "Co-staking by token holders alongside GPU operators to share block rewards",
+      "Slashing collateral for underperforming or malicious suppliers",
+      "Revenue share burn mechanism (at least 50% of platform revenue in IO tokens is burned)"
+    ],
+    "supply": {
+      "max_supply": 800000000,
+      "total_supply": 799996944,
+      "circulating_supply": 298343308,
+      "circulating_supply_date": "2026-03-02",
+      "circulating_percentage": 37.3,
+      "notes": "CoinMarketCap reports 298.3M circulating; CoinGecko reports ~300M. DropsTab/CryptoRank report ~266M unlocked (33.27%). Discrepancy likely due to different definitions of 'circulating' vs 'unlocked'. Used CoinMarketCap figure."
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Emissions (GPU supplier & staker rewards)",
+          "percentage": 37.5,
+          "vesting_schedule": "Distributed hourly over 20 years. Disinflationary: starts at 8% annual rate, decreasing ~1.02% per month (~12% reduction per year).",
+          "cliff": "None",
+          "notes": "300M IO tokens total. This is the ongoing incentive pool for network participants."
+        },
+        {
+          "category": "R&D and Ecosystem",
+          "percentage": 16.0,
+          "vesting_schedule": "30% at TGE, linear vest over 35 months from January 2025",
+          "cliff": "None",
+          "notes": "128.08M IO tokens. 75.74M unlocked as of research date."
+        },
+        {
+          "category": "Early Backers: Seed Sale",
+          "percentage": 12.5,
+          "vesting_schedule": "Linear vest over 23 months",
+          "cliff": "13-month cliff from TGE (unlocks began July 2025)",
+          "notes": "100M IO tokens. 37.39M unlocked as of research date."
+        },
+        {
+          "category": "Initial Core Contributors (team)",
+          "percentage": 11.3,
+          "vesting_schedule": "Linear vest over 35 months",
+          "cliff": "13-month cliff from TGE (unlocks began July 2025)",
+          "notes": "90.72M IO tokens. 22.63M unlocked as of research date."
+        },
+        {
+          "category": "Community (airdrops, incentives)",
+          "percentage": 10.0,
+          "vesting_schedule": "45% at TGE, linear vest over 41 months",
+          "cliff": "None",
+          "notes": "80M IO tokens. 58M unlocked as of research date."
+        },
+        {
+          "category": "Binance Launchpool",
+          "percentage": 2.5,
+          "vesting_schedule": "100% at TGE",
+          "cliff": "None",
+          "notes": "20M IO tokens. Fully distributed at launch."
+        }
+      ],
+      "distribution_method": "Token Generation Event (TGE) on June 11, 2024 via Binance Launchpool + exchange listing. 500M genesis supply with 300M emitted over 20 years. Insider allocation (seed + Series A + team) totals ~33.95% -- significant insider weighting.",
+      "distribution_percentages_sum": 89.8,
+      "distribution_notes": "Percentages from DropsTab/CryptoRank sources sum to ~89.8%. The remaining ~10.2% may be accounted for in the Series A allocation which is not separately broken out in all sources, or rounding differences. Multiple sources confirm 50% of total supply is earmarked for community incentives over time."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "No halving. Continuous disinflationary model: starts at 8% annual rate, decreasing ~1.02% per month (~12% annual reduction). Emissions distributed hourly.",
+      "next_major_emission_event": "Ongoing linear vesting unlocks for seed investors, Series A investors, and core contributors (all began July 2025)",
+      "next_event_date": null,
+      "burn_mechanism": "At least 50% of platform revenue (in IO tokens) is permanently burned after GPU suppliers are paid. All slashed IO is also burned. This creates deflationary pressure to partially offset emissions."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Required staking for GPU suppliers (Proof of Time-Lock) + voluntary co-staking for token holders via Co-Staking Marketplace (launched February 2025)",
+      "minimum_stake": null,
+      "minimum_stake_notes": "Base stake is 200 IO per chip, adjusted by an earning multiplier predefined for each GPU/CPU model. At current prices (~$0.11/IO), minimum is approximately $22 per chip before multipliers.",
+      "lock_up_period": "14-day cooldown period for unstaking. During cooldown, tokens do not earn block rewards. Must withdraw before restaking.",
+      "current_apy_nominal": 8.71,
+      "current_apy_notes": "Average APR across 7 platforms is 8.71% per stakingy.com. HTX offers up to 100% APR but this is likely promotional/subsidised. On-network staking yields depend on GPU model, uptime, and job allocation.",
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Slashing for uptime failures or fraudulent activity",
+        "14-day unstaking cooldown during which tokens earn no rewards",
+        "IO token price volatility (down 98% from ATH)",
+        "Minimum 5-hour uptime requirement per day to maintain eligibility",
+        "GPU suppliers must pass ongoing Proof-of-Work verification"
+      ],
+      "slashing_conditions": "Slashing applies to GPU suppliers who fail Proof-of-Work verification, have compromised computational capacity (fail PoTL), or exhibit fraudulent activity. All slashed IO is burned."
+    },
+    "market_data": {
+      "price_usd": 0.1065,
+      "market_cap_usd": 31766146,
+      "fully_diluted_valuation_usd": 85200000,
+      "twenty_four_hour_volume_usd": 11206319,
+      "all_time_high_usd": 6.43,
+      "all_time_high_date": "2024-06-12",
+      "all_time_low_usd": 0.09111,
+      "all_time_low_date": "2026-02-06",
+      "major_exchanges": [
+        "Binance (futures)",
+        "Gate.io",
+        "Bybit",
+        "KuCoin",
+        "Coinbase",
+        "HTX (Huobi)",
+        "MEXC",
+        "CoinEx"
+      ],
+      "data_snapshot_date": "2026-03-02",
+      "data_sources": "CoinMarketCap (primary), CoinGecko (cross-reference). Price, market cap, and ATL from CoinMarketCap. ATH confirmed across both sources. Minor discrepancies in circulating supply figures between sources."
+    },
+    "token_model_classification": "Disinflationary work token with burn mechanism. Insiders (seed + team + Series A) hold ~34% with vesting through 2027-2028. Revenue-based burn creates deflationary counterweight to emissions. The token's primary demand driver is GPU supplier staking requirements.",
+    "tokenomics_notes": "The 98% decline from ATH ($6.43 to $0.11) is stark. Insider unlocks began July 2025 and will create continuous sell pressure through 2028. The burn mechanism provides some counterbalance but depends on platform revenue growing substantially. Q1 2025 network revenue was $5.7M annualised ~$23M -- if 50% of revenue is burned, that is only ~$11.5M annually of buy pressure against hundreds of millions in unlocking tokens."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Supply GPU compute to the io.net network via the IO Worker software. GPUs must pass Proof-of-Work benchmarks and Proof of Time-Lock verification. Earn hourly block rewards plus payment from compute jobs.",
+        "minimum_hardware": "GPU with minimum 4GB VRAM. Internet: 100Mb/s download, 75Mb/s upload minimum. Higher-end GPUs (A100, H100, RTX 4090) earn significantly more. NVIDIA GPUs required.",
+        "minimum_capital_usd": null,
+        "minimum_capital_notes": "Must stake minimum 200 IO per chip (adjusted by GPU model multiplier). At $0.11/IO that is ~$22+ base. Plus cost of GPU hardware. First-time onboarding requires 12-hour stress test period.",
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Variable -- depends on GPU model, uptime, job allocation, and block rewards. Revenue to suppliers was $5.7M in Q1 2025 across the network.",
+        "barriers_to_entry": [
+          "GPU hardware ownership required (NVIDIA only)",
+          "IO token staking requirement",
+          "Technical setup of IO Worker software",
+          "12-hour initial onboarding stress test",
+          "Minimum 5-hour daily uptime",
+          "Internet speed requirements"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.io.net/docs/device-onboarding"
+      },
+      {
+        "type": "staking",
+        "description": "Co-Staking Marketplace (launched February 2025) allows IO token holders to stake alongside GPU operators and share block rewards without running hardware. Suppliers create co-staking offers specifying reward split percentages.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Share of block rewards based on co-staking offer terms. Average APR ~8.71% across platforms.",
+        "barriers_to_entry": [
+          "Must hold IO tokens",
+          "14-day unstaking cooldown",
+          "Smart contract risk",
+          "Dependent on GPU operator performance"
+        ],
+        "guide_available": true,
+        "guide_url": "https://io.net/docs/guides/staking/staking"
+      },
+      {
+        "type": "using",
+        "description": "Rent GPU compute clusters for AI/ML workloads via IO Cloud. Deploy clusters in under 2 minutes. Access IO Intelligence API for pre-trained models (30+ open source models including Llama, DeepSeek, Qwen). Claims up to 70-90% cost savings vs centralised cloud providers.",
+        "minimum_hardware": "None -- cloud-based",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Cost savings on compute vs AWS/GCP/Azure",
+        "barriers_to_entry": [
+          "Account creation and KYC",
+          "Payment in IO tokens or fiat",
+          "Technical knowledge to deploy AI/ML workloads"
+        ],
+        "guide_available": true,
+        "guide_url": "https://io.net/docs"
+      },
+      {
+        "type": "building",
+        "description": "Build on io.net using IO Intelligence APIs, IO-SDK, or deploy custom models. Python library available. OpenAI-compatible API endpoint for easy integration.",
+        "minimum_hardware": "Development machine",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "N/A",
+        "barriers_to_entry": [
+          "Python development skills required",
+          "AI/ML domain knowledge",
+          "Limited SDK documentation compared to major cloud providers"
+        ],
+        "guide_available": true,
+        "guide_url": "https://io.net/docs"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "adequate",
+      "developer_community_size": "Unknown -- no public developer Discord channel metrics or developer-specific community metrics available",
+      "grants_program": true,
+      "grants_url": null,
+      "notes": "IO Intelligence provides OpenAI-compatible API with 30+ open source models. IO-SDK (Ray fork) available for distributed computing. Documentation is Mintlify-based and improving but lacks depth compared to Akash or major cloud providers."
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "7.1 million compute hours in January 2025, up from 1.4 million in September 2024",
+    "nodes_active": null,
+    "verified_gpus_daily_average": 6720,
+    "verified_cpus_daily_average": 1130,
+    "verified_gpus_total_registered": 327000,
+    "cluster_ready_gpus": 5350,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": 22800000,
+    "revenue_annual_notes": "Annualised from Q1 2025 figure of $5.7M (x4). Q4 2024 was $3.1M. Q1 2025 was 82.6% QoQ growth. January 2025 exceeded $1M monthly. io.net announced $20M+ annualised on-chain revenue. Actual annual figure will depend on sustained growth.",
+    "revenue_source": "Compute service fees from GPU rentals. At least 50% of revenue (in IO tokens) is burned. Remainder goes to GPU suppliers.",
+    "metrics_source": "Messari State of io.net Q1 2025; Nansen Research; io.net official blog",
+    "metrics_date": "2025-03-31",
+    "usage_notes": "CRITICAL CONTEXT: There is a massive gap between 'registered' GPUs (327,000) and daily active verified GPUs (6,720 average in Q1 2025). This means only ~2% of registered GPUs are actually active on any given day. The verified GPU count has been declining -- down 11.1% QoQ in Q1 2025. This contrasts sharply with io.net's marketing which emphasises the larger registered figure. The 2024 Sybil attack demonstrated that GPU counts were historically inflated by spoofed devices. Revenue growth is genuine and positive but the supply-side utilisation picture is much weaker than headlines suggest. Geographic distribution across 138+ countries is impressive but most compute is likely concentrated in a small number of data centres.",
+    "countries_covered": 138
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": 447200,
+    "github_contributors": null,
+    "governance_participation_rate": "N/A -- no on-chain governance exists",
+    "governance_model": "Centralised. All decisions made by the io.net team and foundation. No DAO, no on-chain governance, no public governance forum, no governance proposals system. Tory Green chairs the io.net Foundation. No evidence of community governance participation mechanisms.",
+    "governance_url": null,
+    "key_community_channels": [
+      "X/Twitter: @ionet (447.2K followers)",
+      "Telegram: t.me/io_net",
+      "Discord (server exists but member count unconfirmed)",
+      "Medium: ionet.medium.com",
+      "io.net blog: io.net/blog"
+    ],
+    "sentiment_summary": "Mixed. The project has a large social following (447K on X) but community sentiment has been damaged by the April 2024 Sybil attack, Ahmad Shadid's controversial departure, and the 98% token price decline from ATH. DePIN-focused communities recognise io.net as a significant player but harbour scepticism about self-reported metrics. The leadership transition (Shadid -> Green -> Sharma) has created some instability concerns. Revenue growth provides a positive counternarrative.",
+    "community_notes": "85+ partnerships announced by January 2025 including Gaia, ChainGPT, Injective, Nillion, Allora, GAIB, Oortech, FrodoBots, Filecoin, Render Network. Partnership breadth is impressive but depth and revenue contribution of individual partnerships is unclear."
+  },
+
+  "freedom_score": {
+    "total_score": 33,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "io.net aggregates GPUs from multiple independent sources across 138+ countries, which is architecturally decentralised. However, the core platform (orchestration, matching, billing, API) is entirely centralised and operated by io.net. The IO Worker software is closed-source binaries. GPU verification (PoW/PoTL) is managed by io.net's centralised backend. The 2024 Sybil attack demonstrated that verification systems were insufficient. Only 6,720 daily active verified GPUs on average (Q1 2025) despite 327,000 registered. The platform could theoretically censor or deny service to any provider or consumer. Permissionless GPU supply is a positive, but control over the orchestration layer gives io.net significant centralised power."
+      },
+      "governance_decentralisation": {
+        "score": 2,
+        "max": 20,
+        "evidence": "No on-chain governance. No DAO. No governance forum. No governance proposals. All decisions made by the io.net team and foundation board. The io.net Foundation (chaired by co-founder Tory Green) controls strategic direction. CEO Gaurav Sharma controls operational decisions. Token holders have no governance rights. This is fully centralised governance with a 'foundation' label."
+      },
+      "token_distribution_fairness": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Insider allocation is ~34% (seed 12.5% + team 11.3% + Series A 10.15%). Vesting schedules exist (2-3 year vesting with 13-month cliff for insiders). 50% is earmarked for community over time but much of this is via emissions (37.5%) which primarily benefits GPU suppliers, not general token holders. Binance Launchpool (2.5%) was accessible but required Binance KYC. Community airdrop (10%) had reasonable distribution. Not a fair launch -- VC-backed with $1B valuation at Series A. Token price declined 98% from ATH while insiders began unlocking in July 2025."
+      },
+      "censorship_resistance": {
+        "score": 5,
+        "max": 15,
+        "evidence": "io.net can theoretically censor any user or provider -- the platform controls account access, job allocation, and the matching engine. KYC requirements for some participation methods. Terms of Service can restrict usage. The IO Worker binary is closed-source so providers cannot verify what code they are running. On the positive side, the underlying Solana token is censorship-resistant for transfers. Confidential compute VMs (Intel TDX) protect data during processing. But the platform layer is a centralised censorship vector."
+      },
+      "data_sovereignty": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Confidential compute VMs with Intel TDX and NVIDIA H100/H200/B200 provide genuine hardware-based data protection during processing. Users can verify attestation reports. Supports encrypted training data, model weights, and architectures. Federated learning with dataset isolation is supported. This is a genuine strength. However, standard (non-confidential) workloads do not have these protections, and metadata (usage patterns, billing) is held by io.net centrally."
+      },
+      "open_source_transparency": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Only 9 public GitHub repos containing setup scripts, binaries, docs, and demo apps. Core platform code is NOT open source. IO-SDK (Ray fork), GPU orchestration engine, matching engine, billing system, and IO Worker node software are all closed-source. No reproducible builds. No public reporting on treasury spending or foundation operations. Token economics are documented but actual burn amounts and emissions are not transparently reported in real-time. The project describes itself as 'The Open Source AI Infrastructure Platform' on its website which is misleading given the closed-source core."
+      }
+    },
+    "freedom_grade": "F",
+    "freedom_summary": "io.net scores 33/100 (F grade), making it a largely centralised project with decentralisation narrative. While it genuinely aggregates GPUs from distributed sources across 138+ countries and offers meaningful confidential computing capabilities, the core platform is entirely centralised: closed-source code, no governance, centralised orchestration, and full platform control over providers and consumers. The 'decentralised' label applies to the GPU supply side only -- the demand side, orchestration, and governance are all controlled by io.net. The project has a token but the token does not confer governance rights. For an Own Your Mind reader focused on sovereignty and genuine decentralisation, io.net is better understood as a centralised GPU marketplace with a token-incentivised supply network, not a decentralised protocol."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Genuine and growing network revenue ($5.7M in Q1 2025, 82.6% QoQ growth)",
+      "Real compute being delivered (7.1M compute hours in January 2025)",
+      "Confidential compute offering with hardware-based attestation (Intel TDX, NVIDIA H100/H200/B200) is a genuine differentiator",
+      "IO Intelligence API provides practical access to 30+ open source AI models",
+      "Co-Staking Marketplace (Feb 2025) lowers barriers for both GPU suppliers and token holders",
+      "Strong investor backing and exchange listings (Binance, Coinbase, Bybit, Gate, KuCoin)",
+      "Geographic distribution across 138+ countries",
+      "Cost savings of 70-90% vs centralised cloud for some workloads",
+      "Leadership stabilised after tumultuous 2024 (Gaurav Sharma as CEO, ex-Binance VP Engineering)"
+    ],
+    "what_is_hype": [
+      "327,000 registered GPUs vs 6,720 daily active verified GPUs -- the headline figure is 48x the actual daily active supply",
+      "'Decentralised' framing when core platform is entirely centralised (closed-source code, no governance, centralised orchestration)",
+      "'Open Source AI Infrastructure Platform' branding when core code is not open source",
+      "GPU count historically inflated by Sybil attack and spoofed devices",
+      "Partnership announcements (85+ in 2024) without clear revenue attribution or depth metrics",
+      "'Up to 90% cost savings' claims -- Akash undercuts io.net by ~$0.07/GPU-hour on H100s",
+      "The 'Internet of GPUs' vision -- ambitious but current utilisation suggests demand has not materialised at the scale of available supply"
+    ],
+    "key_risks": [
+      "Founder risk: Ahmad Shadid departed amid scam allegations and GPU metric inflation. His subsequent project (O.XYZ) also faced misrepresentation allegations. This history creates reputational overhang.",
+      "Leadership instability: Three CEOs in under 2 years (Shadid -> Green -> Sharma). Tory Green moved to Foundation chair role. Frequent leadership changes signal organisational challenges.",
+      "Token price risk: 98% decline from ATH ($6.43 to $0.11). Insider unlock sell pressure ongoing through 2028.",
+      "Centralisation risk: Platform can censor users, deny service, or shut down. No governance mechanism. Closed-source core.",
+      "Metric credibility risk: The 2024 Sybil attack and ongoing gap between registered vs active GPUs undermines trust in self-reported metrics.",
+      "No security audits: No publicly available audit from any recognised firm despite handling compute workloads and managing a staking system.",
+      "Competitive risk: Akash Network offers permissionless, open-source, truly decentralised compute with competitive pricing. Centralised providers (AWS, GCP, Lambda Labs) continue to improve GPU availability.",
+      "Regulatory risk: Centralised entity operating a token-incentivised network may face securities scrutiny, particularly given Binance Launchpool distribution and ongoing emissions.",
+      "Supply-demand mismatch: Verified GPU supply contracting (down 11.1% QoQ in Q1 2025) while revenue grows -- this could indicate consolidation but also reduced network resilience."
+    ],
+    "competitive_advantages": [
+      "Strong institutional backing (Hack VC, Multicoin, Solana Labs, Animoca Brands)",
+      "Binance Launchpool listing provided broad initial distribution and visibility",
+      "Confidential compute with hardware attestation (Intel TDX + NVIDIA) is ahead of most DePIN competitors",
+      "IO Intelligence API provides turnkey AI model access that pure compute networks do not",
+      "Revenue growing meaningfully ($5.7M Q1 2025, annualised $20M+)",
+      "Solana-based token settlement is fast and cheap",
+      "Co-Staking Marketplace creates additional token demand"
+    ],
+    "competitive_disadvantages": [
+      "Closed-source core platform -- fundamentally less trustworthy than open-source alternatives like Akash",
+      "No governance -- token holders have no say in protocol direction",
+      "Founder scandal and leadership instability compared to Akash (Greg Osuri, consistent since 2015) or Render (Jules Urbach, since 2009)",
+      "GPU count credibility damaged by 2024 Sybil attack",
+      "Akash undercuts io.net on H100 pricing and is fully permissionless and open source",
+      "No security audits vs Akash which has been operating since 2020 with Cosmos SDK security model",
+      "Heavier reliance on token incentives to attract GPU supply -- sustainability unclear as emissions decrease"
+    ],
+    "comparable_projects": [
+      "Akash Network (AKT) -- permissionless, open-source decentralised cloud compute. More genuinely decentralised but lower revenue.",
+      "Render Network (RENDER) -- decentralised GPU rendering, now expanding to AI. Partner of io.net.",
+      "Aethir -- centralised GPU cloud with token, similar model to io.net",
+      "Nosana -- Solana-based GPU compute for AI inference",
+      "Lambda Labs -- centralised GPU cloud (no token) with competitive pricing",
+      "Vast.ai -- GPU marketplace (no token) connecting GPU owners with renters"
+    ],
+    "outlook": "io.net has found product-market fit as a GPU marketplace with meaningful revenue growth. The Q1 2025 revenue of $5.7M (82.6% QoQ growth) and annualised $20M+ demonstrates real demand. However, the project's decentralisation credentials are weak -- it is better understood as a token-incentivised centralised GPU marketplace than a decentralised protocol. The 98% token price decline, founder scandal, Sybil attack history, and lack of governance or open-source code are significant headwinds. The leadership under Gaurav Sharma (ex-Binance) brings operational credibility, and the confidential compute offering is a genuine technical differentiator. For the token to recover value, io.net needs sustained revenue growth well above the rate of token unlock dilution. The project's future depends on whether it can become a must-have infrastructure layer for AI workloads or remains a lower-cost alternative that struggles to compete with both centralised providers (on reliability) and genuinely decentralised alternatives (on trust).",
+    "overall_assessment": "io.net is a VC-backed, centralised GPU marketplace wearing decentralisation clothing. It has real revenue ($20M+ annualised), real compute delivery (7.1M hours/month), and a genuine confidential compute capability. But the core platform is closed-source, governance is non-existent, the founder departed under a cloud, GPU metrics were historically inflated, and no security audits exist. The token has declined 98% from ATH amid insider unlocks. For Own Your Mind readers seeking genuinely sovereignty-first infrastructure, Akash Network is the more honest comparison -- fully open source, permissioned DAO governance, and consistent leadership since 2015. io.net delivers on compute at competitive prices but falls short on the freedom, transparency, and decentralisation that define the DeAI thesis."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "type": "official",
+      "title": "io.net Official Website",
+      "url": "https://io.net",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S002",
+      "type": "official",
+      "title": "io.net Documentation - Architecture",
+      "url": "https://io.net/docs/guides/architecture/io-architecture",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S003",
+      "type": "official",
+      "title": "IO Coin Allocation - Official Documentation",
+      "url": "https://io.net/docs/guides/coin/io-coin-allocation",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S004",
+      "type": "official",
+      "title": "io.net Tokenomics Litepaper (PDF)",
+      "url": "https://io.net/documents/ionet_Tokenomics_Litepaper.pdf",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S005",
+      "type": "official",
+      "title": "io.net GitHub Organisation",
+      "url": "https://github.com/ionet-official",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S006",
+      "type": "official",
+      "title": "io.net - 25th April Incident Report (Sybil Attack Post-Mortem)",
+      "url": "https://ionet.medium.com/25th-april-incident-report-176e5fb5c576",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S007",
+      "type": "official",
+      "title": "io.net Blog - $20M Annualised Revenue Announcement",
+      "url": "https://io.net/blog/io-net-20m-in-annualized-on-chain-revenue",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S008",
+      "type": "official",
+      "title": "io.net Blog - 2025 Year in Review",
+      "url": "https://io.net/blog/2025-io-net-year-in-review",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S009",
+      "type": "official",
+      "title": "io.net Confidential Compute Documentation",
+      "url": "https://io.net/docs/guides/clouds/confidential-compute-overview",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S010",
+      "type": "official",
+      "title": "io.net Staking Documentation",
+      "url": "https://io.net/docs/guides/staking/staking",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S011",
+      "type": "official",
+      "title": "io.net Device Onboarding Documentation",
+      "url": "https://docs.io.net/docs/device-onboarding",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S012",
+      "type": "official",
+      "title": "io.net Supported Devices",
+      "url": "https://developers.io.net/docs/supported-devices",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S013",
+      "type": "official",
+      "title": "io.net Medium - $30M Series A Announcement",
+      "url": "https://ionet.medium.com/io-net-raises-30m-to-solve-the-ai-compute-shortage-by-building-the-internet-of-gpus-f9c5167c9f6e",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S014",
+      "type": "official",
+      "title": "Binance - IO.NET Launchpool Announcement",
+      "url": "https://www.binance.com/en/support/announcement/introducing-io-net-io-on-binance-launchpool-farm-io-by-staking-bnb-and-fdusd-6556e3b5aae54c76adb0fd267b105a15",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S015",
+      "type": "official",
+      "title": "Chainwire - io.net Leadership Transition (Green to Sharma)",
+      "url": "https://chainwire.org/2025/04/23/io-net-co-founder-tory-green-appointed-as-chair-of-io-net-foundation-gaurav-sharma-appointed-ceo-to-drive-next-phase-of-growth/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S016",
+      "type": "third_party_authoritative",
+      "title": "CoinMarketCap - io.net (IO) Price and Market Data",
+      "url": "https://coinmarketcap.com/currencies/io-net/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S017",
+      "type": "third_party_authoritative",
+      "title": "CoinGecko - io.net (IO) Price and Market Data",
+      "url": "https://www.coingecko.com/en/coins/io-net",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S018",
+      "type": "third_party_authoritative",
+      "title": "Messari - State of io.net Q1 2025",
+      "url": "https://messari.io/report/state-of-io-net-q1-2025",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S019",
+      "type": "third_party_authoritative",
+      "title": "Messari - State of io.net Q4 2024",
+      "url": "https://messari.io/report/state-of-io-net-q4-2024",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S020",
+      "type": "third_party_authoritative",
+      "title": "Messari - Understanding io.net: A Comprehensive Overview",
+      "url": "https://messari.io/report/understanding-io-net-a-comprehensive-overview",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S021",
+      "type": "third_party_authoritative",
+      "title": "Nansen Research - IO.net: Does It Have What It Takes?",
+      "url": "https://research.nansen.ai/articles/ionet-does-it-have-what-it-takes",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S022",
+      "type": "third_party_authoritative",
+      "title": "CryptoRank - io.net Token Unlocks and Vesting Schedule",
+      "url": "https://cryptorank.io/price/io-net/vesting",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S023",
+      "type": "third_party_authoritative",
+      "title": "DropsTab - io.net IO Token Unlocks and Vesting Schedule",
+      "url": "https://dropstab.com/coins/io-net/vesting",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S024",
+      "type": "third_party_authoritative",
+      "title": "CryptoRank - io.net Funding Rounds and Investors",
+      "url": "https://cryptorank.io/ico/io-net",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S025",
+      "type": "third_party_authoritative",
+      "title": "Tokenomist - io.net Token Supply and Release Schedule",
+      "url": "https://tokenomist.ai/io",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S026",
+      "type": "third_party_authoritative",
+      "title": "DePIN Hub - io.net Project Page",
+      "url": "https://depinhub.io/projects/ionet",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S027",
+      "type": "informed_commentary",
+      "title": "The Block - io.net CEO Ahmad Shadid Steps Down",
+      "url": "https://www.theblock.co/post/299182/io-net-ceo-ahmad-shadid-steps-down-from-ceo-role-days-before-token-launch",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S028",
+      "type": "informed_commentary",
+      "title": "The Block - Sybil Attack Post-Mortem Coverage",
+      "url": "https://www.theblock.co/post/291315/solana-based-depin-io-net-ceo-claims-network-was-attacked-in-detailed-postmortem",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S029",
+      "type": "informed_commentary",
+      "title": "Protos - Sybil Attackers Gamed Metric Hoping for Airdrop",
+      "url": "https://protos.com/solana-project-ceo-says-sybil-attackers-gamed-metric-hoping-for-airdrop/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S030",
+      "type": "informed_commentary",
+      "title": "Cointelegraph - io.net CEO Departs Before Token Launch",
+      "url": "https://cointelegraph.com/news/io-net-ceo-departs-days-before-token-launch",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S031",
+      "type": "informed_commentary",
+      "title": "CryptoPotato - Ahmad Shadid's Departure Not Because of Previous Allegations",
+      "url": "https://cryptopotato.com/ahmad-shadids-departure-as-io-net-ceo-is-not-because-of-previous-allegations/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S032",
+      "type": "informed_commentary",
+      "title": "Decrypt - O.XYZ Allegations of Misrepresentation",
+      "url": "https://decrypt.co/293270/ai-crypto-startup-oxyz-faces-allegations-misrepresentation",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S033",
+      "type": "informed_commentary",
+      "title": "Crypto Briefing - io.net Tokenomics with Inflation Model and Burn",
+      "url": "https://cryptobriefing.com/io-net-io-tokenomics/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S034",
+      "type": "informed_commentary",
+      "title": "Multicoin Capital - Building The Internet of GPUs (Investment Thesis)",
+      "url": "https://multicoin.capital/2024/03/05/building-the-internet-of-gpus/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S035",
+      "type": "informed_commentary",
+      "title": "US News - IO Research $30M Series A",
+      "url": "https://www.usnews.com/news/technology/articles/2024-03-05/ai-focused-blockchain-startup-io-research-raises-30-million-in-series-a-funding-round",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S036",
+      "type": "informed_commentary",
+      "title": "CryptoTimes - IO Research $1 Billion Valuation",
+      "url": "https://www.cryptotimes.io/2024/03/06/io-research-hits-1-billion-valuation-in-new-funding-round/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S037",
+      "type": "informed_commentary",
+      "title": "Invezz - io.net Launches Co-Staking",
+      "url": "https://invezz.com/news/2025/02/19/io-net-launches-co-staking-enabling-io-holders-to-share-block-rewards/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S038",
+      "type": "informed_commentary",
+      "title": "CoinGecko Learn - What Is io.net?",
+      "url": "https://www.coingecko.com/learn/what-is-io-net-io-token",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S039",
+      "type": "third_party_authoritative",
+      "title": "ZoomInfo - io.net Company Profile",
+      "url": "https://www.zoominfo.com/c/ionet/20087409",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S040",
+      "type": "informed_commentary",
+      "title": "IQ Wiki - Tory Green Profile",
+      "url": "https://iq.wiki/wiki/tory-green",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S041",
+      "type": "informed_commentary",
+      "title": "UseTheBitcoin - Basem Oubah Profile",
+      "url": "https://usethebitcoin.com/crypto-personalities/all-you-need-to-know-about-basem-oubah-the-co-founder-of-io-net/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S042",
+      "type": "informed_commentary",
+      "title": "Stakingy - io.net Staking Rewards and APR",
+      "url": "https://stakingy.com/crypto/io-net",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S043",
+      "type": "informed_commentary",
+      "title": "DePIN Scan - io.net Q4 2024 Revenue Growth",
+      "url": "https://depinscan.io/news/2025-03-06/io-net-achieves-record-revenue-growth-and-expands-partnerships-in-q4-2024",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S044",
+      "type": "informed_commentary",
+      "title": "Unchained - The Chopping Block: Shkreli vs Io.net",
+      "url": "https://unchainedcrypto.com/the-chopping-block-eigenlayer-airdrop-fallout-shkreli-vs-io-net-and-czs-sentencing/",
+      "accessed": "2026-03-02"
+    },
+    {
+      "id": "S045",
+      "type": "informed_commentary",
+      "title": "Daily Political - io.net Market Cap $31.92M (March 1, 2026)",
+      "url": "https://www.dailypolitical.com/2026/03/01/io-net-io-hits-self-reported-market-cap-of-31-92-million.html",
+      "accessed": "2026-03-02"
+    }
+  ]
+}
