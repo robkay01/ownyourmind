@@ -1,0 +1,807 @@
+{
+  "meta": {
+    "project_id": "asi-alliance",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "fetchai",
+      "github_primary_repo": "uAgents",
+      "coingecko_id": "fetch-ai",
+      "discord_server_id": null,
+      "telegram_username": "ASI_Alliance",
+      "x_handle": "ASI_Alliance",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "freedom_score.breakdown.infrastructure_decentralisation.evidence",
+        "freedom_score.breakdown.governance_decentralisation.evidence",
+        "assessment.overall_assessment"
+      ]
+    },
+    "auto_refresh_log": [],
+    "research_gaps": [
+      "Exact Discord and Telegram member counts could not be confirmed -- dynamic pages did not render in web fetch. Estimated from third-party summaries.",
+      "ASI Cloud usage metrics (active users, GPU hours, revenue) not publicly disclosed. Product exited beta Dec 2025 but no usage dashboard exists.",
+      "Exact current number of active validators not confirmed via block explorer -- capped at 70 per documentation but actual active count unclear.",
+      "Total staked FET amount estimated at 480-560M FET based on third-party staking sites; no authoritative on-chain dashboard confirmed.",
+      "No publicly available comprehensive smart contract audit report for the token merger contracts found. Ocean Protocol cited 'lack of proper audits' as a concern.",
+      "SingularityNET AI marketplace actual usage metrics (number of services listed, API calls, revenue) not publicly disclosed.",
+      "ASI-1 Mini model weights and training data not confirmed as open source -- appears to be a proprietary model.",
+      "Fetch.ai and Ocean Protocol lawsuit settlement status as of March 2026 remains unconfirmed -- last reports from late 2025 indicate settlement discussions are ongoing but not finalised.",
+      "Ocean Protocol's OCEAN token status post-exit unclear -- whether remaining 19% unconverted OCEAN tokens will be honoured by the alliance.",
+      "Annual protocol revenue not publicly reported. No Token Terminal or DeFiLlama revenue data available.",
+      "Exact Fetch.ai Inc. employee count not confirmed -- '300+ experts' across the alliance is marketing language, not headcount.",
+      "Ben Goertzel's involvement with Jeffrey Epstein referenced in search results but details and context not fully researched -- flagged for editorial review."
+    ]
+  },
+
+  "identity": {
+    "name": "Artificial Superintelligence Alliance",
+    "ticker": "FET",
+    "category": "AI Agents & Infrastructure",
+    "subcategory": "Multi-project alliance for decentralised AI agents, marketplace, and compute",
+    "tagline": "Building decentralised Artificial Superintelligence",
+    "one_liner": "A merged entity of Fetch.ai, SingularityNET, and CUDOS (formerly including Ocean Protocol) pursuing decentralised AGI through autonomous AI agents, an AI services marketplace, and distributed compute infrastructure.",
+    "website": "https://superintelligence.io",
+    "documentation_url": "https://docs.superintelligence.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/fetchai",
+    "chain": "Cosmos SDK (Fetchhub-4) + CometBFT consensus; ASI Chain (blockDAG Layer 1) in DevNet",
+    "launch_date": "2019-02-25",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Humayun Sheikh",
+        "role": "Chairman (ASI Alliance) & CEO/Founder (Fetch.ai)",
+        "background": "Founding investor in DeepMind. Innovation entrepreneur who revolutionised trading in the steel sector before pivoting to AI. Built Fetch.ai as a decentralised multi-agent platform. Cambridge-based.",
+        "linkedin_or_x": "https://x.com/HMsheikh4",
+        "doxxed": true
+      },
+      {
+        "name": "Dr. Ben Goertzel",
+        "role": "CEO (ASI Alliance) & Founder (SingularityNET)",
+        "background": "Known as the 'Father of AGI' -- coined the term Artificial General Intelligence. Over 150 research publications. Created OpenCog Hyperon AGI framework and robots Sophia, Desdemona, and Grace. PhD in mathematics. Leads the AGI research direction for the alliance.",
+        "linkedin_or_x": "https://www.linkedin.com/in/bengoertzel/",
+        "doxxed": true
+      },
+      {
+        "name": "Trent McConaghy",
+        "role": "Governing Council Member & Co-Founder (Ocean Protocol)",
+        "background": "Co-founded Ocean Protocol and BigchainDB. PhD from KU Leuven. Extensive background in AI and machine learning research. NOTE: Ocean Protocol withdrew from the ASI Alliance in October 2025; McConaghy's current involvement is unclear and subject to ongoing legal dispute.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Bruce Pon",
+        "role": "Governing Council Member & Co-Founder (Ocean Protocol)",
+        "background": "Co-founded Ocean Protocol and BigchainDB. Background in banking and fintech. NOTE: Named as defendant in Fetch.ai's November 2025 lawsuit following Ocean Protocol's exit from the alliance.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "key_leadership": [
+      {
+        "name": "Humayun Sheikh",
+        "role": "Chairman of the ASI Alliance Governing Council"
+      },
+      {
+        "name": "Dr. Ben Goertzel",
+        "role": "CEO of the ASI Alliance"
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": "Fetch.ai Foundation (co-founded with Bosch), SingularityNET Foundation, CUDOS -- each remains an independent legal entity within the alliance",
+    "entity_jurisdiction": "Multiple: Fetch.ai Foundation (various), SingularityNET Foundation (Netherlands), CUDOS (UK)",
+    "notable_backers": [
+      "DWF Labs (lead investor, $40M Series C, March 2023)",
+      "Robert Bosch GmbH (co-founded Fetch.ai Foundation)",
+      "Outlier Ventures (seed investor)",
+      "GDA Group (2021 institutional investment)",
+      "Alibaba Cloud (cloud partner)",
+      "Binance (IEO on Binance Launchpad, Feb 2019)"
+    ],
+    "funding_raised": {
+      "total_usd": 61900000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "date": "2018",
+          "amount_usd": null,
+          "lead_investor": "Outlier Ventures",
+          "valuation_usd": null
+        },
+        {
+          "round_type": "IEO (Binance Launchpad)",
+          "date": "2019-02-25",
+          "amount_usd": 6000000,
+          "lead_investor": "Binance",
+          "valuation_usd": null
+        },
+        {
+          "round_type": "Series C",
+          "date": "2023-03",
+          "amount_usd": 40000000,
+          "lead_investor": "DWF Labs",
+          "valuation_usd": 250000000
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "The ASI Alliance combines three distinct technical platforms under one token. (1) Fetch.ai: A Cosmos SDK-based Layer 1 blockchain (Fetchhub-4) with CometBFT consensus, running autonomous AI agents via the uAgents Python framework. Agents register on the Almanac contract for discoverability and transact in FET. The Agentverse platform provides a no-code browser-based agent deployment hub. (2) SingularityNET: A decentralised AI services marketplace where developers publish and monetise AI models and services. Multi-chain (Ethereum + Cardano). The OpenCog Hyperon framework is an open-source AGI system. (3) CUDOS: Contributed cloud compute infrastructure with 30 validators migrated to the Fetch.ai mainnet (October 2024). Additionally, the alliance is building ASI Chain -- a new Layer 1 blockDAG designed for AI workloads, using MeTTa (a cognitive programming language from the Hyperon AGI framework) compiled into Rholang for concurrent execution. ASI Chain uses CBC Casper consensus and is currently in DevNet (launched November 2025). Key products include ASI-1 Mini (a Web3-native LLM for agentic AI), ASI Cloud (decentralised GPU inference, exited beta December 2025), and ASI:One (AI assistant platform).",
+    "consensus_mechanism": "CometBFT (Tendermint successor) on Fetchhub-4 mainnet; CBC Casper planned for ASI Chain (DevNet). Slot Proof of Stake (sPOS) with max 70 validators.",
+    "what_is_onchain": "Token transfers and staking, agent registration (Almanac contract), governance proposals and voting, smart contracts (CosmWasm), IBC transfers. SingularityNET has on-chain payment channels for AI service access.",
+    "what_is_offchain": "AI agent execution logic (uAgents runtime), AI model inference (ASI Cloud, SingularityNET marketplace), Agentverse platform hosting, ASI-1 Mini LLM inference, data storage and processing, AI training workloads.",
+    "key_dependencies": [
+      "Cosmos SDK / CometBFT (blockchain layer)",
+      "CosmWasm (smart contracts)",
+      "IBC Protocol (cross-chain interoperability)",
+      "Python (uAgents framework)",
+      "Ethereum (ERC-20 FET token, SingularityNET contracts)",
+      "Cardano (SingularityNET multi-chain)",
+      "Rholang (ASI Chain smart contract compilation target)",
+      "MeTTa / OpenCog Hyperon (AGI framework)"
+    ],
+    "smart_contract_languages": ["CosmWasm (Rust)", "Solidity (ERC-20)", "MeTTa (ASI Chain, DevNet)", "Rholang (ASI Chain compilation target)"],
+    "open_source": true,
+    "license": "Apache 2.0 (uAgents, primary repos); mixed across constituent projects",
+    "github_metrics": {
+      "total_repos": 371,
+      "primary_repo_url": "https://github.com/fetchai/uAgents",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-02",
+      "stars": 1551,
+      "forks": 351,
+      "open_issues": 35,
+      "additional_github_orgs": [
+        {
+          "org": "fetchai",
+          "public_repos": 91,
+          "followers": 1474,
+          "key_repos": ["uAgents (1551 stars)", "innovation-lab-examples (873 stars)", "cosmpy (153 stars)", "fetchd (123 stars)", "asi-alliance-wallet (50 stars)"]
+        },
+        {
+          "org": "singnet",
+          "public_repos": 186,
+          "followers": 422,
+          "key_repos": ["snet-daemon (52 stars)", "snet-dapp (24 stars)", "snet-marketplace-service (17 stars)"]
+        },
+        {
+          "org": "oceanprotocol",
+          "public_repos": 94,
+          "followers": 388,
+          "key_repos": ["market (221 stars)", "ocean.js (117 stars)", "contracts (86 stars)", "ocean-node (72 stars)", "pdr-backend (51 stars)"],
+          "note": "Ocean Protocol withdrew from the ASI Alliance in October 2025. These repos remain active under the Ocean Protocol brand."
+        }
+      ]
+    },
+    "audits": [
+      {
+        "auditor": "Unknown -- merger contracts reportedly audited",
+        "date": null,
+        "result_summary": "Token migration contracts shared during merger preparation. However, Ocean Protocol cited 'lack of proper audits and rushed token-merger steps' as a concern. No publicly available audit report found.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2025-07 to 2025-10",
+        "severity": "high",
+        "description": "Ocean Protocol Foundation allegedly converted 661 million OCEAN tokens into approximately 286 million FET tokens and sold roughly 263 million FET (~10% of circulating supply) on the open market via GSR Markets and ExaGroup without proper disclosure, depressing the FET price. Fetch.ai filed a lawsuit in November 2025 naming Ocean Protocol Foundation, OceanDAO, and co-founders Bruce Pon, Trent McConaghy, and Christina Pon as defendants. Settlement discussions ongoing as of late 2025.",
+        "funds_lost": "Estimated $84-120M in FET token value impact on holders",
+        "resolution": "Fetch.ai CEO proposed dropping lawsuit if Ocean returns 286M FET. Ocean expressed willingness to return tokens if proposal submitted in writing. Final resolution unconfirmed as of March 2026."
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Artificial Superintelligence Alliance",
+    "ticker": "FET",
+    "token_standard": "Cosmos native (Fetchhub-4), ERC-20 (Ethereum), BEP-20 (BSC), Cardano native, IBC (Osmosis)",
+    "token_type": "both",
+    "token_utility": [
+      "Staking and network security (delegated PoS on Fetchhub-4)",
+      "Gas fees for transactions on Fetchhub-4",
+      "Agent registration fees (Almanac contract, renewed every 48 hours)",
+      "Payment for AI services on SingularityNET marketplace",
+      "Payment for ASI Cloud GPU inference",
+      "Payment for ASI-1 Mini LLM usage",
+      "Governance voting on ASI Alliance proposals",
+      "Agent token launches (Agent Launch Toolkit)"
+    ],
+    "supply": {
+      "max_supply": 2714384547,
+      "total_supply": 2714384547,
+      "circulating_supply": 2260960637,
+      "circulating_supply_date": "2026-03-02",
+      "circulating_percentage": 83.3
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "AGIX Migration (SingularityNET holders)",
+          "percentage": 32.95,
+          "amount": 866700000,
+          "vesting": "Cliff-based release schedule; majority unlocked",
+          "notes": "Converted at 1 AGIX = 0.433350 FET"
+        },
+        {
+          "category": "OCEAN Migration (Ocean Protocol holders)",
+          "percentage": 23.22,
+          "amount": 610800000,
+          "vesting": "Cliff-based release schedule; majority unlocked. NOTE: Ocean Protocol exited the alliance in October 2025. ~81% of OCEAN supply had been converted to FET. Remaining ~19% (270M OCEAN across 37,334 addresses) unconverted.",
+          "notes": "Converted at 1 OCEAN = 0.433226 FET"
+        },
+        {
+          "category": "FET - Founders",
+          "percentage": 8.77,
+          "amount": null,
+          "vesting": "Cliff-based vesting; schedule extends to 2050",
+          "notes": "Original Fetch.ai founding team allocation"
+        },
+        {
+          "category": "FET - Foundation",
+          "percentage": 8.77,
+          "amount": null,
+          "vesting": "Managed by Fetch.ai Foundation (co-founded with Bosch)",
+          "notes": "For ecosystem development and grants"
+        },
+        {
+          "category": "FET - Future Releases",
+          "percentage": 7.63,
+          "amount": null,
+          "vesting": "Long-term schedule extending to 2050",
+          "notes": "Reserved for future ecosystem needs"
+        },
+        {
+          "category": "FET - Mining/Staking Rewards",
+          "percentage": 6.57,
+          "amount": null,
+          "vesting": "Distributed as validator and delegator rewards",
+          "notes": null
+        },
+        {
+          "category": "FET - Private Sale",
+          "percentage": 5.08,
+          "amount": null,
+          "vesting": "Fully unlocked",
+          "notes": "Pre-IEO private sale investors"
+        },
+        {
+          "category": "FET - Advisors",
+          "percentage": 4.38,
+          "amount": null,
+          "vesting": "Cliff-based vesting",
+          "notes": null
+        },
+        {
+          "category": "FET - Public Sale (Binance Launchpad IEO)",
+          "percentage": 2.49,
+          "amount": 69204152,
+          "vesting": "Fully unlocked at TGE",
+          "notes": "IEO price: $0.0867 per FET (Feb 25, 2019)"
+        },
+        {
+          "category": "FET - Unsold",
+          "percentage": 0.14,
+          "amount": null,
+          "vesting": null,
+          "notes": "Unsold allocation from initial sale"
+        }
+      ],
+      "distribution_method": "Binance Launchpad IEO (Feb 2019) for original FET. Three-token merger (July 2024) absorbed AGIX and OCEAN holders. CUDOS merger (October 2024) at 118.344:1 ratio with 3-10 month vesting."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": null,
+      "next_major_emission_event": "AGIX Migration cliff unlock",
+      "next_event_date": "2026-03-28",
+      "burn_mechanism": "Earn & Burn mechanism: portion of ecosystem fees (from ASI Cloud, ASI-1 Mini, etc.) used to buy and burn FET. First burn: 5M FET on January 10, 2026. Burns tied to ASI:One adoption. Additionally, Fetch.ai Foundation executed a $50M FET buyback in June 2025."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Delegated Proof of Stake (Cosmos SDK)",
+      "minimum_stake": "No minimum (recommended to leave at least 1 FET undelegated for tx fees)",
+      "lock_up_period": "21-day unbonding period",
+      "current_apy_nominal": "5.5-8.0%",
+      "real_yield_after_inflation": null,
+      "staking_ratio": "Estimated 21-25% of circulating supply (480-560M FET staked)",
+      "staking_risks": [
+        "Slashing risk if chosen validator misbehaves or has excessive downtime",
+        "21-day unbonding period leaves stakers exposed during market downturns",
+        "Validator commission rates range from 0% to 15%",
+        "Concentration risk: top validators (Kiln, Binance) hold disproportionate stake"
+      ],
+      "slashing_conditions": "Standard Cosmos SDK slashing: double-signing results in 5% slash and permanent jailing; downtime (missing >500 of last 10,000 blocks) results in 0.01% slash and temporary jailing."
+    },
+    "token_model_classification": "Multi-utility token across a federated alliance of AI projects. Serves as gas, staking, payment, and governance token. Post-merger, carries legacy utility obligations from three (formerly four) separate ecosystems.",
+    "tokenomics_notes": "The tokenomics are unusually complex due to the multi-project merger. The AGIX and OCEAN migration allocations (56.17% combined) represent conversion of existing holder bases, not new inflation -- but the ~600M FET minted to absorb OCEAN supply did create dilution for existing FET holders. Ocean Protocol's exit in October 2025 and alleged dumping of 263M FET (10%+ of circulating supply) severely impacted price. The full unlock schedule extends to 2050, though ~83% was already circulating as of March 2026. The Earn & Burn mechanism is nascent (first burn: 5M FET, ~0.18% of supply)."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate FET to validators on Fetchhub-4 to earn staking rewards (5.5-8% APY). Use the ASI Alliance Wallet (browser extension) or any Cosmos-compatible wallet. 21-day unbonding period.",
+        "minimum_requirements": "Any amount of FET (keep 1 FET undelegated for fees)",
+        "barriers_to_entry": "Low -- purchase FET on exchanges, install wallet, delegate",
+        "technical_skill_required": "basic"
+      },
+      {
+        "type": "building",
+        "description": "Build autonomous AI agents using the uAgents Python framework. Deploy on Agentverse (no-code) or self-host. Register agents on the Almanac contract (requires FET, renewed every 48 hours). Access to ASI-1 Mini LLM and ASI Cloud for agent capabilities.",
+        "minimum_requirements": "Python programming knowledge, FET for agent registration",
+        "barriers_to_entry": "Moderate -- requires programming skills and understanding of agent architecture",
+        "technical_skill_required": "intermediate"
+      },
+      {
+        "type": "validating",
+        "description": "Run a validator node on Fetchhub-4. Max 70 validator slots (sPOS). Requires self-bonding FET and attracting delegations to enter the active set.",
+        "minimum_requirements": "Substantial FET stake (competitive -- top validators have 30M+ FET), server infrastructure, DevOps expertise",
+        "barriers_to_entry": "High -- limited slots, high capital requirements, technical expertise needed",
+        "technical_skill_required": "expert"
+      },
+      {
+        "type": "using",
+        "description": "Use ASI Cloud for GPU inference (~50% cheaper than AWS, per project claims). Use ASI-1 Mini LLM via API. Browse and consume AI services on the SingularityNET marketplace. Interact with deployed agents.",
+        "minimum_requirements": "FET tokens for payment",
+        "barriers_to_entry": "Low to moderate -- some products still in early access or beta",
+        "technical_skill_required": "basic"
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute to open-source repos (uAgents, fetchd, SingularityNET SDK, etc.). Participate in hackathons and the Innovation Lab (backed by $10M fund with Imperial College London).",
+        "minimum_requirements": "Development skills, GitHub account",
+        "barriers_to_entry": "Low -- open-source contributions welcome",
+        "technical_skill_required": "intermediate"
+      },
+      {
+        "type": "governance",
+        "description": "Vote on ASI Alliance governance proposals using staked FET. Proposals include alliance membership (e.g., CUDOS, Paal.ai), tokenomics changes, and protocol upgrades.",
+        "minimum_requirements": "Staked FET tokens",
+        "barriers_to_entry": "Low -- any staked FET holder can vote",
+        "technical_skill_required": "none"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "Medium -- 1,551 stars on uAgents, active Innovation Lab, hackathon partnerships. Fetch.ai GitHub org has 1,474 followers.",
+      "grants_program": true,
+      "grants_url": "https://superintelligence.io/grants/"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": 70,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "ASI Cloud GPU inference fees, ASI-1 Mini API usage, SingularityNET marketplace fees, agent registration fees",
+    "metrics_source": null,
+    "metrics_date": "2026-03-02",
+    "usage_notes": "Usage metrics are notably opaque. The ASI Alliance does not publish a public dashboard with transaction counts, active users, or revenue figures. ASI Cloud exited beta in December 2025 claiming costs ~50% cheaper than AWS, but no adoption metrics are available. SingularityNET marketplace has listed AI services but usage volumes are not disclosed. The primary verifiable on-chain activity is staking (estimated 480-560M FET staked across ~70 validators). Ocean Protocol had reported 1.4M Ocean Nodes installed across 70+ countries before its October 2025 departure, but this infrastructure is no longer part of the alliance. The lack of transparent usage metrics is a significant gap for a project of this market capitalisation."
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": 96700,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": "Federated: ASI Alliance Governing Council (Sheikh as Chairman, Goertzel as CEO) sets strategic direction. On-chain governance via FET token voting for major proposals (merger approvals, new member additions). Each constituent foundation (Fetch.ai, SingularityNET, CUDOS) retains independent governance for project-specific decisions.",
+    "governance_url": "https://docs.superintelligence.io",
+    "key_community_channels": [
+      "X: @ASI_Alliance (~97K followers), @Fetch_ai, @SingularityNET",
+      "Telegram: @ASI_Alliance",
+      "Discord: Fetch.ai Discord, SingularityNET Discord",
+      "GitHub: fetchai, singnet, oceanprotocol (note: Ocean exited alliance)",
+      "Reddit: r/FetchAI, r/SingularityNet",
+      "Developer Forum: Fetch.ai Innovation Lab"
+    ],
+    "sentiment_summary": "Community sentiment is mixed. The AI narrative drove significant hype in early 2024 (ATH $3.45 in March 2024), but the token has lost ~96% from peak as of March 2026 ($0.15). Ocean Protocol's messy exit and alleged token dumping damaged trust. The FET-Ocean lawsuit has created uncertainty. Developer sentiment around uAgents and Agentverse remains relatively positive. The ASI Chain DevNet and ASI-1 Mini launches generated some renewed interest. Core believers see long-term AGI potential; sceptics question execution and centralisation of key products.",
+    "community_notes": "The alliance inherited three separate communities (Fetch.ai, SingularityNET, Ocean Protocol/CUDOS) with different cultures and expectations. Unifying community sentiment has proven difficult, particularly after Ocean's departure. The @ASI_Alliance X account has ~97K followers -- modest for a top-100 crypto project. Fetch.ai's own @Fetch_ai account maintains a separate presence. Approximately 225,000 wallet holders were reported at the time of the merger announcement."
+  },
+
+  "freedom_score": {
+    "total_score": 50,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "The Fetchhub-4 mainnet runs on Cosmos SDK with CometBFT consensus, capped at 70 validator slots (sPOS). This is a permissionless chain in theory, but the small validator set and high capital requirements for entry create concentration. Top validators (Kiln: 143M FET, Binance Staking: 60M FET) hold disproportionate influence. The 30 CUDOS validators were migrated in October 2024, adding some diversity. However, the core value-adding products -- Agentverse, ASI Cloud, ASI-1 Mini, ASI:One -- are centrally hosted and operated by Fetch.ai Inc. The SingularityNET marketplace has some decentralised elements but relies on centralised infrastructure for service discovery. The ASI Chain (blockDAG) is still in DevNet (launched November 2025) and is not yet contributing to production infrastructure. Agent registration requires renewal every 48 hours via centralised Almanac contract. Score: 9/20 -- permissionless base layer but significant centralisation in application layer."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "The ASI Alliance has a Governing Council with Humayun Sheikh as Chairman and Ben Goertzel as CEO -- two individuals with outsized influence. On-chain governance via FET token voting exists for major decisions (merger approvals, new members), and the CUDOS and Paal.ai proposals went through community votes. However, the Ocean Protocol exit exposed deep governance failures: Ocean alleged the governance 'didn't match the original decentralised vision' and cited rushed decision-making. Each foundation retains independent governance, creating a federated structure where the council can make strategic decisions without full community consent. The lawsuit between Fetch.ai and Ocean Protocol further demonstrates governance dysfunction. No evidence of active DAO with meaningful community override capacity. Score: 8/20 -- token voting exists but team/council effectively controls direction."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "The original FET was launched via Binance Launchpad IEO (Feb 2019, $6M raised in 10 seconds). Insider allocations (founders 8.77%, foundation 8.77%, advisors 4.38%, private sale 5.08%) total ~27% of original FET distribution. The AGIX and OCEAN migration allocations (56.17% combined) represent conversion of existing communities, not new insider allocation -- but the process of absorbing these created ~600M new FET tokens, diluting existing holders. The Ocean Protocol controversy revealed that Ocean Foundation converted 661M OCEAN into 286M FET and allegedly sold 263M FET (~10% of circulating supply) on exchanges without disclosure. CUDOS merger included a 5% fee and 3-10 month vesting. The $50M buyback by Fetch.ai Foundation in June 2025 was a positive signal but used Foundation treasury. Score: 7/15 -- original IEO was reasonable but merger mechanics introduced significant dilution and insider manipulation."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "The Cosmos SDK base layer is permissionless -- anyone can submit transactions and interact with the chain. IBC enables cross-chain interoperability. The ERC-20 token on Ethereum provides additional censorship resistance via Ethereum's decentralised validator set. However, the application layer has significant censorship vectors: Agentverse is centrally hosted (Fetch.ai can deplatform agents), ASI Cloud and ASI-1 Mini are centrally operated services, and the SingularityNET marketplace has curation and moderation capabilities. Agent registration on the Almanac contract requires renewal every 48 hours, creating a dependency on continued registration. The 70-validator cap with high stake requirements means a relatively small number of parties control block production. Score: 8/15 -- base layer is resistant but application layer has multiple censorship vectors."
+      },
+      "data_sovereignty": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Ocean Protocol's compute-to-data paradigm was the alliance's strongest data sovereignty feature -- enabling computation on data without data leaving the provider's infrastructure, using ERC721 data NFTs and ERC20 datatokens. However, Ocean Protocol withdrew from the alliance in October 2025, removing this capability from the alliance's direct offerings. SingularityNET's marketplace allows developers to control their AI services and retain ownership. The uAgents framework gives developers control over agent logic and data. However, ASI Cloud and ASI-1 Mini are centrally hosted -- user queries and data pass through Fetch.ai's infrastructure. No evidence of ZK proofs, encryption, or advanced privacy-preserving features in the core Fetch.ai stack. Score: 8/15 -- reasonable user control in agent architecture, but lost Ocean's strong data sovereignty features and centralised AI products create data exposure."
+      },
+      "open_source_transparency": {
+        "score": 10,
+        "max": 15,
+        "evidence": "The constituent projects have extensive open-source footprints: 371 public repositories across fetchai (91), singnet (186), and oceanprotocol (94) GitHub organisations. Core infrastructure (uAgents, fetchd, cosmpy, SingularityNET daemon, Ocean contracts) is open source under Apache 2.0 and similar permissive licences. Active development continues with recent commits across all orgs (last commit March 2, 2026). The uAgents framework has 1,551 stars and 351 forks. However, key newer products appear proprietary or not fully open: ASI-1 Mini model weights are not confirmed open source, ASI Cloud infrastructure is not open source, and ASI Chain's MeTTa kernel implementation details are limited. The Ocean Protocol exit and associated lawsuit also revealed a lack of transparency in token operations. Score: 10/15 -- strong open-source foundation but newer commercial products are not fully transparent."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "The ASI Alliance scores 50/100 (Grade D), reflecting a project with genuine open-source roots and a permissionless base layer that is significantly undermined by centralised application-layer products, governance dysfunction, and the messy Ocean Protocol exit. The Cosmos SDK chain provides a solid decentralised foundation, but the products that actually deliver value -- Agentverse, ASI Cloud, ASI-1 Mini -- are centrally operated by Fetch.ai Inc. The 70-validator cap creates infrastructure concentration. Governance is nominally token-based but effectively council-driven, as demonstrated by the Ocean exit crisis. The Ocean Protocol departure removed the alliance's strongest data sovereignty capabilities (compute-to-data). Open-source credentials are solid at the infrastructure level but weaker for newer commercial products. The alleged dumping of 263M FET by Ocean Protocol highlights systemic transparency failures in alliance governance."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "The uAgents Python framework is functional, well-documented, and actively maintained (1,551 GitHub stars, Apache 2.0, regular commits). Developers can build and deploy autonomous agents.",
+      "Fetchhub-4 mainnet operates reliably as a Cosmos SDK chain with ~70 validators, CometBFT consensus, and IBC interoperability. Staking yields 5.5-8% APY.",
+      "SingularityNET AI marketplace exists and allows developers to publish and consume AI services, though usage volumes are not publicly disclosed.",
+      "ASI Cloud exited beta (December 2025) and offers GPU inference at reportedly competitive prices. ASI-1 Mini provides a Web3-native LLM with multiple reasoning modes.",
+      "The Innovation Lab partnership with Imperial College London ($10M fund) provides a real channel for developer engagement and education.",
+      "Earn & Burn mechanism has launched (first 5M FET burn, January 2026), establishing a deflationary counter to emissions."
+    ],
+    "what_is_hype": [
+      "'Artificial Superintelligence' framing: the alliance is nowhere near ASI. The constituent projects are building AI agents, marketplaces, and compute infrastructure -- all valuable, but calling this a path to superintelligence is aspirational marketing at best.",
+      "ASI Chain (blockDAG) is in DevNet with no mainnet timeline. Claims of 'the first Layer 1 blockchain designed for advanced AI applications' remain unproven.",
+      "'300+ leading experts' across the alliance is marketing language with no verifiable headcount. Team size is opaque.",
+      "The merger was framed as creating a $7.5B unified AI powerhouse; the actual market cap is ~$334M (March 2026), a 95% decline from that figure.",
+      "Claims of ASI Cloud being '~50% cheaper than AWS' are unverified with no public benchmarks or usage data.",
+      "The 'decentralised AGI' narrative is aspirational. Core products (ASI Cloud, ASI-1 Mini) are centrally operated services."
+    ],
+    "key_risks": [
+      "Alliance fragmentation: Ocean Protocol's exit (October 2025) demonstrated the alliance can fracture. The ongoing Fetch.ai vs. Ocean lawsuit creates legal and reputational risk. Further departures (e.g., SingularityNET) would be devastating.",
+      "Token dilution and selling pressure: The Ocean Protocol alleged dumping of 263M FET severely impacted price. Full unlock schedule extends to 2050 with periodic cliff releases. AGIX migration tokens still vesting.",
+      "Key person dependency: Humayun Sheikh (Chairman) and Ben Goertzel (CEO) are critical to the alliance. Their vision alignment and continued involvement is essential. Goertzel's broad research interests (AGI, robotics, philosophy) raise focus risk.",
+      "Execution risk: The alliance is attempting to build multiple complex products simultaneously (ASI Chain, ASI Cloud, ASI-1 Mini, Agentverse, SingularityNET marketplace) across a federated organisation of independent foundations.",
+      "Centralisation risk: Core revenue-generating products are centrally operated by Fetch.ai Inc., undermining the decentralisation narrative.",
+      "Market competition: Competing against well-funded centralised AI (OpenAI, Anthropic, Google) and other DeAI projects (Bittensor, Akash, Render) with clearer value propositions.",
+      "Regulatory risk: AI regulation could impact the marketability and operation of AI-as-a-service offerings, particularly in the EU.",
+      "Legal risk: Active lawsuit against Ocean Protocol Foundation with uncertain outcome. Legal costs and management distraction.",
+      "Ben Goertzel's name appeared in Jeffrey Epstein-related communications -- flagged for editorial review as potential reputational risk."
+    ],
+    "competitive_advantages": [
+      "Breadth of offering: unique combination of AI agents (Fetch.ai), AI marketplace (SingularityNET), and compute (CUDOS/ASI Cloud) under one token",
+      "Strong open-source foundation with 371 public repos across three established GitHub organisations",
+      "Team credibility: Ben Goertzel is a genuine AGI research luminary; Humayun Sheikh is a DeepMind founding investor",
+      "Cosmos ecosystem integration: IBC interoperability, large validator ecosystem, cross-chain composability",
+      "First-mover advantage in the 'AI agents on blockchain' narrative (uAgents framework launched 2022)",
+      "ASI-1 Mini as 'first Web3-native LLM' positions the alliance at the intersection of AI and crypto trends"
+    ],
+    "competitive_disadvantages": [
+      "Complexity: three (formerly four) separate technical platforms under one token creates integration challenges and confusing user experience",
+      "Token price: 96% decline from ATH ($3.45 to $0.15) damages credibility and community morale",
+      "Alliance governance failures: Ocean Protocol exit and alleged token dumping demonstrated structural problems",
+      "Opaque usage metrics: no public data on revenue, active users, or transaction volumes for key products",
+      "ASI Chain still in DevNet -- Fetch.ai remains on existing Cosmos chain with no clear migration timeline",
+      "Limited validator set (70 max) compared to competitors like Bittensor (1,024+ active miners per subnet)",
+      "SingularityNET marketplace has struggled for adoption for years despite being one of the earliest AI x crypto projects (2017)"
+    ],
+    "comparable_projects": [
+      {
+        "project": "Bittensor (TAO)",
+        "comparison": "Both target decentralised AI, but Bittensor uses a competitive mining/validation model across subnets while ASI Alliance uses a federated collaboration model. Bittensor has stronger decentralisation and more transparent usage metrics."
+      },
+      {
+        "project": "Akash Network (AKT)",
+        "comparison": "Akash focuses on decentralised compute marketplace (similar to ASI Cloud/CUDOS component). Akash is more focused and has clearer usage metrics and revenue reporting."
+      },
+      {
+        "project": "Render Network (RENDER)",
+        "comparison": "Render focuses on GPU rendering and compute. Less breadth than ASI Alliance but clearer value proposition and stronger adoption metrics."
+      },
+      {
+        "project": "Ocean Protocol (OCEAN)",
+        "comparison": "Formerly part of the ASI Alliance. Focuses on data marketplace and compute-to-data. Now an independent competitor again following October 2025 exit."
+      }
+    ],
+    "outlook": "The ASI Alliance faces a challenging 2026. The Ocean Protocol departure and associated legal drama have damaged the alliance's credibility and the 'unified AI powerhouse' narrative. The token is down 96% from its March 2024 peak. Execution must improve dramatically: ASI Chain needs to progress beyond DevNet, ASI Cloud needs to demonstrate real adoption metrics, and the alliance needs transparent reporting. The $50M buyback and Earn & Burn mechanism are positive tokenomic signals but cannot offset fundamental questions about product-market fit and decentralisation. The Ben Goertzel / Humayun Sheikh leadership provides genuine AI credibility, but the federated governance model has proven fragile. Key catalysts to watch: ASI Chain testnet and mainnet milestones, ASI Cloud adoption metrics, resolution of the Ocean Protocol lawsuit, and whether any new members join the alliance. The project has real technology (uAgents framework, OpenCog Hyperon, ASI-1 Mini) but needs to prove it can deliver on the ambitious 'superintelligence' vision rather than being remembered as a complex merger that diluted three previously independent projects.",
+    "overall_assessment": "The Artificial Superintelligence Alliance is the crypto industry's most ambitious attempt to unify decentralised AI projects under a single token and governance structure -- and the results so far are a cautionary tale. The individual components have merit: Fetch.ai's uAgents framework is genuinely useful for building autonomous agents, SingularityNET's marketplace was pioneering, Ocean Protocol's compute-to-data was innovative, and CUDOS added compute infrastructure. But the merger has been messy. Ocean Protocol's exit and alleged dumping of 263M FET exposed governance failures, destroyed value for token holders (96% decline from ATH), and resulted in an ongoing lawsuit. The 'Artificial Superintelligence' branding oversells what is currently a collection of AI-adjacent tools and infrastructure. Key products (ASI Cloud, ASI-1 Mini) are centrally operated by Fetch.ai Inc., contradicting the decentralisation narrative. Usage metrics are opaque. The ASI Chain is still in DevNet. For a practitioner perspective: if you are interested in building AI agents on blockchain, the uAgents framework and Agentverse are worth exploring. If you are evaluating FET as an investment, the risk profile is high -- the alliance needs to demonstrate it can execute on its ambitious roadmap, resolve its legal disputes, and deliver transparent evidence of real-world adoption. The freedom score of 50/100 (Grade D) reflects genuine open-source credentials undermined by centralised products, governance dysfunction, and transparency failures."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://fetch.ai/blog/fetch-ai-singularity-net-and-ocean-protocol-unite-to-create-the-superintelligence-alliance",
+      "data_points_sourced": ["Alliance announcement date (March 27, 2024)", "Founding team members and roles", "Governance structure", "Combined valuation ($7.5B)", "Token merger details (2.63B total supply)", "225,000 wallet holders"]
+    },
+    {
+      "id": "S002",
+      "tier": 1,
+      "type": "Official documentation",
+      "url": "https://docs.superintelligence.io/artificial-superintelligence-alliance/archive/navigating-the-asi-token-merger-a-comprehensive-guide",
+      "data_points_sourced": ["Merger phases and timeline", "Conversion ratios (AGIX, OCEAN, FET to ASI)", "Supported chains (Ethereum, BNB Chain, Cardano)", "Migration process details", "Staking migration", "Smart contract details"]
+    },
+    {
+      "id": "S003",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://fetch.ai/blog/june-13-merger",
+      "data_points_sourced": ["Original merger date (June 13, 2024) and revision to July 2024", "Phase 1 and Phase 2 details"]
+    },
+    {
+      "id": "S004",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://fetch.ai/blog/artificial-superintelligence-alliance-token-merger-approved",
+      "data_points_sourced": ["Community vote approval", "Token merger finalisation"]
+    },
+    {
+      "id": "S005",
+      "tier": 2,
+      "type": "Market data aggregator",
+      "url": "https://api.coingecko.com/api/v3/coins/fetch-ai",
+      "data_points_sourced": ["Current price ($0.1475)", "Market cap ($333.68M)", "FDV ($400.60M)", "24h volume ($39.68M)", "Circulating supply (2,260,960,637 FET)", "Total supply (2,714,384,547 FET)", "ATH ($3.45, March 28, 2024)", "ATL ($0.00817, March 13, 2020)", "Contract addresses (Ethereum, BSC, Cardano, Osmosis)"]
+    },
+    {
+      "id": "S006",
+      "tier": 2,
+      "type": "Market data aggregator",
+      "url": "https://coinmarketcap.com/currencies/artificial-superintelligence-alliance/",
+      "data_points_sourced": ["Cross-reference: market cap ranking (#95)", "Circulating supply confirmation", "Price cross-reference"]
+    },
+    {
+      "id": "S007",
+      "tier": 2,
+      "type": "Token analytics",
+      "url": "https://tokenomist.ai/fetch-ai",
+      "data_points_sourced": ["Token distribution breakdown (all 10 categories with percentages)", "Circulating supply (2,260,970,713 FET, 83.30% unlocked)", "Next unlock event (March 28, 2026, 2,705,400 FET)", "Cliff vesting mechanism details"]
+    },
+    {
+      "id": "S008",
+      "tier": 1,
+      "type": "GitHub API",
+      "url": "https://api.github.com/orgs/fetchai",
+      "data_points_sourced": ["Public repos (91)", "Followers (1,474)", "Created date (July 6, 2018)", "Top repos with stars, forks, languages, last updated dates"]
+    },
+    {
+      "id": "S009",
+      "tier": 1,
+      "type": "GitHub API",
+      "url": "https://api.github.com/orgs/singnet",
+      "data_points_sourced": ["Public repos (186)", "Followers (422)", "Created date (October 16, 2017)", "Top repos details"]
+    },
+    {
+      "id": "S010",
+      "tier": 1,
+      "type": "GitHub API",
+      "url": "https://api.github.com/orgs/oceanprotocol",
+      "data_points_sourced": ["Public repos (94)", "Followers (388)", "Created date (August 31, 2017)", "Top repos details", "Note: Ocean Protocol exited alliance October 2025"]
+    },
+    {
+      "id": "S011",
+      "tier": 1,
+      "type": "GitHub API",
+      "url": "https://api.github.com/repos/fetchai/uAgents",
+      "data_points_sourced": ["Stars (1,551)", "Forks (351)", "Open issues (35)", "Created (September 28, 2022)", "Last push (March 2, 2026)", "License (Apache 2.0)", "Top contributors (jrriehl: 222, Archento: 65, Alejandro-Morales: 40)"]
+    },
+    {
+      "id": "S012",
+      "tier": 1,
+      "type": "GitHub API",
+      "url": "https://api.github.com/repos/fetchai/fetchd",
+      "data_points_sourced": ["Stars (123)", "Forks (41)", "Open issues (30)", "Created (June 10, 2020)", "Last push (December 4, 2025)", "Language (Go)"]
+    },
+    {
+      "id": "S013",
+      "tier": 1,
+      "type": "Official project page",
+      "url": "https://superintelligence.io/building-asi-chain/",
+      "data_points_sourced": ["ASI Chain architecture (blockDAG, MeTTa kernel, CBC Casper consensus)", "Rholang compilation target", "Sharded processing", "DevNet launch details"]
+    },
+    {
+      "id": "S014",
+      "tier": 1,
+      "type": "Official project page",
+      "url": "https://superintelligence.io/asi-token-fet/",
+      "data_points_sourced": ["Token utility details", "Staking information", "Alliance member details"]
+    },
+    {
+      "id": "S015",
+      "tier": 3,
+      "type": "News / analysis",
+      "url": "https://www.panewslab.com/en/articles/358d923b-bf25-4c5f-abfc-6a600ebdfbcb",
+      "data_points_sourced": ["Ocean Protocol exit details and timeline", "81% OCEAN conversion rate", "270M unconverted OCEAN tokens (37,334 addresses)", "OCEAN price surge (+30%) post-exit", "FET price drop (-6.9%)", "Strategic misalignment details", "Brand dilution concerns"]
+    },
+    {
+      "id": "S016",
+      "tier": 2,
+      "type": "News / financial",
+      "url": "https://finance.yahoo.com/news/ocean-vs-fetch-ai-turns-212508484.html",
+      "data_points_sourced": ["Lawsuit details ($84M dispute)", "Token flow: 661M OCEAN converted to 286M FET", "263M FET sold via GSR Markets and ExaGroup", "Sheikh's personal funding of class-action lawsuits"]
+    },
+    {
+      "id": "S017",
+      "tier": 2,
+      "type": "News / financial",
+      "url": "https://cryptoslate.com/cryptos-flagship-ai-pact-fracture-fetch-sues-ocean-over-263m-fet-community-sales/",
+      "data_points_sourced": ["Complaint filed November 4, 2025", "Defendants named (Ocean Protocol Foundation Ltd, Ocean Expeditions Ltd, OceanDAO, Bruce Pon, Trent McConaghy, Christina Pon)", "263M FET sold = 10%+ of circulating supply"]
+    },
+    {
+      "id": "S018",
+      "tier": 2,
+      "type": "News / financial",
+      "url": "https://finance.yahoo.com/news/fetch-ai-ocean-end-120m-153752961.html",
+      "data_points_sourced": ["Settlement discussions: Fetch.ai to drop claims if Ocean returns 286M FET", "FET holders 93% crash from peak"]
+    },
+    {
+      "id": "S019",
+      "tier": 3,
+      "type": "News / analysis",
+      "url": "https://www.theblock.co/post/223623/fetch-ai-funding-250-million-valuation-dwf-labs",
+      "data_points_sourced": ["DWF Labs $40M investment (March 2023)", "$250M valuation at time of round", "Mix of equity and FET tokens"]
+    },
+    {
+      "id": "S020",
+      "tier": 2,
+      "type": "News / financial",
+      "url": "https://siliconangle.com/2023/03/29/autonomous-ai-agent-startup-fetch-ai-raises-40m-led-dfw-labs/",
+      "data_points_sourced": ["Total funding: $61.9M over 6 rounds", "Round breakdown (1 Seed, 2 Early-Stage, 2 Late-Stage, 1 ICO)"]
+    },
+    {
+      "id": "S021",
+      "tier": 2,
+      "type": "ICO data",
+      "url": "https://icodrops.com/fetch-ai/",
+      "data_points_sourced": ["IEO price ($0.0867 per FET)", "IEO date (February 25, 2019)", "Amount raised ($6M)", "69,204,152 FET sold", "2,758 participants"]
+    },
+    {
+      "id": "S022",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://medium.com/cudos/cudos-completes-token-merger-with-asi-alliance-bdebcb0fdee2",
+      "data_points_sourced": ["CUDOS merger completion (October 2024)", "Conversion ratio (112.427:1 base, 118.344:1 with 5% fee)", "30 CUDOS validators migrated", "3-10 month vesting for CUDOS tokens"]
+    },
+    {
+      "id": "S023",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://fetch.ai/blog/fetch-ai-inc-introduces-asi-1-mini-the-world-s-first-web3-llm-designed-for-agentic-ai",
+      "data_points_sourced": ["ASI-1 Mini launch and features", "Four reasoning modes", "Web3-native design", "Powered by FET via ASI wallet", "Context window expansion plans (1M to 10M tokens)"]
+    },
+    {
+      "id": "S024",
+      "tier": 1,
+      "type": "Official project page",
+      "url": "https://superintelligence.io/getting-started-with-the-asichain-devnet/",
+      "data_points_sourced": ["ASI Chain DevNet launch (November 2025)", "Development roadmap: DevNet -> testnets -> mainnet"]
+    },
+    {
+      "id": "S025",
+      "tier": 2,
+      "type": "Staking data",
+      "url": "https://www.coinbase.com/earn/staking/fetch",
+      "data_points_sourced": ["Staking APY ~5.5% (Coinbase)", "Staking availability confirmed"]
+    },
+    {
+      "id": "S026",
+      "tier": 2,
+      "type": "Staking data",
+      "url": "https://bitcompare.net/coins/artificial-superintelligence-alliance/staking-rewards",
+      "data_points_sourced": ["APY range 5.5-8.16%", "21-day unbonding period confirmed"]
+    },
+    {
+      "id": "S027",
+      "tier": 1,
+      "type": "Official documentation",
+      "url": "https://network.fetch.ai/docs/introduction/ledger/validators",
+      "data_points_sourced": ["Max 70 validators (sPOS)", "Validator requirements and setup", "Slashing conditions"]
+    },
+    {
+      "id": "S028",
+      "tier": 1,
+      "type": "Official documentation",
+      "url": "https://network.fetch.ai/docs/guides/network/how-to-stake",
+      "data_points_sourced": ["Staking process via ASI Alliance Wallet", "Minimum 1 FET undelegated for fees", "Delegation mechanics", "Commission rates"]
+    },
+    {
+      "id": "S029",
+      "tier": 2,
+      "type": "Staking infrastructure",
+      "url": "https://www.kiln.fi/protocols/fetch-ai",
+      "data_points_sourced": ["Top validator staking amounts (Kiln: 143M FET, Binance: 60M FET)", "Estimated 480-560M FET total staked"]
+    },
+    {
+      "id": "S030",
+      "tier": 1,
+      "type": "Official social",
+      "url": "https://x.com/ASI_Alliance",
+      "data_points_sourced": ["X followers (~96.7K)", "First 5M FET burn announcement (January 10, 2026)"]
+    },
+    {
+      "id": "S031",
+      "tier": 2,
+      "type": "Third-party analysis",
+      "url": "https://crypto.com/us/university/what-is-the-artificial-superintelligence-alliance",
+      "data_points_sourced": ["Overview cross-reference", "Governance model description", "Alliance structure confirmation"]
+    },
+    {
+      "id": "S032",
+      "tier": 2,
+      "type": "Third-party analysis",
+      "url": "https://www.imperator.co/resources/blog/what-is-asi-alliance-presentation",
+      "data_points_sourced": ["300+ experts claim", "Alliance structure details", "Governance model overview"]
+    },
+    {
+      "id": "S033",
+      "tier": 1,
+      "type": "Official blog",
+      "url": "https://fetch.ai/blog/fetch-ai-2024",
+      "data_points_sourced": ["2024 partnerships (Ankr, Imperial College London $10M Innovation Lab, Injective IBC, Alibaba Cloud)", "Product development timeline"]
+    },
+    {
+      "id": "S034",
+      "tier": 1,
+      "type": "Technology platform",
+      "url": "https://singularitynet.io/technology/",
+      "data_points_sourced": ["SingularityNET marketplace architecture", "AI-DSL development", "OpenCog Hyperon description", "Multi-chain (Ethereum + Cardano)"]
+    },
+    {
+      "id": "S035",
+      "tier": 2,
+      "type": "Third-party analysis",
+      "url": "https://coinbureau.com/review/asi-alliance-review/",
+      "data_points_sourced": ["Alliance review and assessment cross-reference"]
+    },
+    {
+      "id": "S036",
+      "tier": 2,
+      "type": "Third-party vesting data",
+      "url": "https://cryptorank.io/price/fetch-ai/vesting",
+      "data_points_sourced": ["Vesting schedule details", "84.83% unlocked confirmation", "Full unlock extending to 2050"]
+    },
+    {
+      "id": "S037",
+      "tier": 1,
+      "type": "Official documentation",
+      "url": "https://docs.oceanprotocol.com/developers/compute-to-data/compute-to-data-architecture",
+      "data_points_sourced": ["Compute-to-data architecture (algorithms sent to data, not vice versa)", "ERC721 data NFTs + ERC20 datatokens", "Privacy-preserving computation design"]
+    },
+    {
+      "id": "S038",
+      "tier": 2,
+      "type": "News / financial",
+      "url": "https://coincentral.com/ocean-protocols-exit-from-asi-alliance-sparks-legal-action-and-market-drop/",
+      "data_points_sourced": ["Legal action context", "Market impact details"]
+    },
+    {
+      "id": "S039",
+      "tier": 2,
+      "type": "Settlement reporting",
+      "url": "https://www.bitget.com/asia/amp/news/detail/12560605037641",
+      "data_points_sourced": ["Settlement near resolution", "Governance implications"]
+    }
+  ],
+
+  "metrics_history": []
+}
