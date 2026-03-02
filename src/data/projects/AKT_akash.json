@@ -1,0 +1,701 @@
+{
+  "meta": {
+    "project_id": "akash",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "akash-network",
+      "github_primary_repo": "node",
+      "coingecko_id": "akash-network",
+      "discord_server_id": null,
+      "telegram_username": "AkashNW",
+      "x_handle": "akaborNetwork",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "freedom_score.breakdown.infrastructure_decentralisation.evidence",
+        "freedom_score.breakdown.governance_decentralisation.evidence"
+      ]
+    },
+    "auto_refresh_log": [],
+    "research_gaps": [
+      "Exact genesis token distribution percentages vary across sources -- whitepaper figures (29% community, 26% team) differ from some secondary reports",
+      "Provider count (63 active) may fluctuate significantly; no historical provider count data publicly available",
+      "BME (Burn-Mint Equilibrium) code is complete but activation date remains 'early-mid 2026' -- no firm governance proposal yet",
+      "Chain deprecation timeline ('late 2026') is aspirational with no published technical roadmap or migration specification",
+      "Destination chain for migration not confirmed -- Solana described as 'strong contender' but no governance vote",
+      "No formal protocol-level security audit disclosed despite operating since 2020",
+      "Starbonds ($75M regulated securities offering) terms and investor details not yet public",
+      "Exact GPU utilisation methodology not disclosed -- 60% figure is self-reported",
+      "Annual revenue ($3.15M) source methodology unclear -- may be annualised from shorter periods",
+      "Homenode (beta Feb 2026) metrics and adoption numbers not yet available",
+      "Number of unique tenants/deployers not publicly tracked or reported",
+      "Greg Osuri's personal AKT holdings not publicly disclosed"
+    ]
+  },
+
+  "identity": {
+    "name": "Akash Network",
+    "ticker": "AKT",
+    "category": "Compute & Infrastructure",
+    "subcategory": "Decentralised cloud marketplace",
+    "tagline": "The Decentralized Cloud",
+    "one_liner": "A permissionless cloud computing marketplace where providers list spare capacity and tenants deploy containers via reverse auction, at a fraction of centralised cloud costs.",
+    "website": "https://akash.network",
+    "documentation_url": "https://akash.network/docs",
+    "whitepaper_url": "https://ipfs.io/ipfs/QmVwsi5kTrg7UcUEGi5UfdheVLBWoHjze2pHy4tLqYvLYv",
+    "github_url": "https://github.com/akash-network",
+    "chain": "Cosmos (Akash appchain, Cosmos SDK v0.53 + CometBFT)",
+    "launch_date": "2020-09-25",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Greg Osuri",
+        "role": "CEO & Co-Founder",
+        "background": "Serial open-source entrepreneur. Created AnyCast (acquired by Cloudflare), co-created Kubernetes Helm package manager. Early contributor to Cosmos SDK. Over 10,000 GitHub contributions. Based in the US.",
+        "linkedin_or_x": "https://x.com/gregosuri",
+        "doxxed": true
+      },
+      {
+        "name": "Adam Bozanich",
+        "role": "CTO & Co-Founder",
+        "background": "Software engineer with background in distributed systems. Joined Greg Osuri in founding Overclock Labs. Leads protocol and infrastructure development.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 115,
+    "entity_name": "Overclock Labs, Inc.",
+    "entity_jurisdiction": "Delaware, USA",
+    "notable_backers": [
+      "Cypher Capital",
+      "Nika Osuri",
+      "Hiro Systems",
+      "Cosmostation"
+    ],
+    "funding_raised": {
+      "total_usd": 2800000,
+      "rounds": [
+        {
+          "round": "Private sale / pre-seed",
+          "amount_usd": null,
+          "date": "2019",
+          "lead_investor": null,
+          "notes": "Early private round details sparse. CoinGecko lists Cypher Capital, Nika Osuri, Hiro Systems, Cosmostation as investors."
+        },
+        {
+          "round": "IEO (Initial Exchange Offering)",
+          "amount_usd": 2800000,
+          "date": "2020-10-15",
+          "lead_investor": "BitMax (now AscendEX)",
+          "notes": "IEO on BitMax at $0.39 per AKT. Small raise by crypto standards."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Akash is a Cosmos SDK appchain (v0.53 + CometBFT) running a decentralised cloud marketplace. Tenants describe workloads in SDL (Stack Definition Language, YAML-based), submit deployment orders on-chain, and providers bid via reverse auction. The lowest qualifying bid wins. Workloads run in Kubernetes containers on provider infrastructure. The chain handles order matching, escrow payments, and provider attestation. Compute execution happens off-chain on provider hardware. GPU marketplace launched September 2023 (NVIDIA only). AkashML managed inference service launched for simplified AI model deployment.",
+    "consensus_mechanism": "Delegated Proof of Stake (DPoS) via CometBFT (formerly Tendermint). 100 active validators. ~6 second block time.",
+    "what_is_onchain": "Deployment orders, provider bids, reverse auction matching, escrow payments, staking/delegation, governance proposals, provider attestation, certificate management",
+    "what_is_offchain": "Actual compute workload execution (Kubernetes containers), provider infrastructure, storage, networking, model inference (AkashML)",
+    "key_dependencies": [
+      "Cosmos SDK v0.53 (blockchain framework)",
+      "CometBFT (consensus engine)",
+      "Kubernetes (container orchestration on provider side)",
+      "NVIDIA drivers/CUDA (GPU workloads)",
+      "IBC (Inter-Blockchain Communication for cross-chain transfers)"
+    ],
+    "smart_contract_languages": ["Go (Cosmos SDK modules)", "CosmWasm (draft stage)"],
+    "open_source": true,
+    "license": "Apache 2.0",
+    "github_metrics": {
+      "total_repos": 65,
+      "primary_repo_url": "https://github.com/akash-network/node",
+      "total_commits": 1168,
+      "contributors": 34,
+      "last_commit_date": "2026-02-28",
+      "stars": 1100,
+      "forks": 262,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": [
+      {
+        "date": "2024-05-01",
+        "description": "Critical authentication bypass vulnerability in provider services discovered by ChainLight (formerly Theori). Allowed potential unauthorised access to provider infrastructure. Patched promptly via coordinated disclosure. No funds lost, no exploitation in the wild confirmed.",
+        "loss_amount_usd": 0,
+        "post_mortem_url": null
+      },
+      {
+        "date": "2025-03-01",
+        "description": "Spam attack on the network caused degraded performance. Overclock Labs responded with network parameter adjustments. Details sparse but referenced in community discussions.",
+        "loss_amount_usd": 0,
+        "post_mortem_url": null
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Akash Token",
+    "ticker": "AKT",
+    "token_standard": "Native coin (Cosmos SDK appchain). IBC-transferable.",
+    "token_type": "utility",
+    "token_utility": [
+      "Staking to validators (secure the network, earn inflation rewards)",
+      "Governance voting (on-chain proposals)",
+      "Payment for compute deployments (settlement currency)",
+      "Provider incentives (earn AKT for serving workloads)",
+      "Take fee revenue (network collects a percentage of deployment spend)"
+    ],
+    "supply": {
+      "max_supply": 388539008,
+      "total_supply": 289000000,
+      "circulating_supply": 283000000,
+      "circulating_supply_date": "2026-03-02",
+      "circulating_percentage": 72.9
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community & ecosystem",
+          "percentage": 29,
+          "vesting_schedule": "Various grants and ecosystem programmes",
+          "cliff": "None",
+          "notes": "Community allocation for ecosystem growth and adoption"
+        },
+        {
+          "category": "Team & advisors",
+          "percentage": 26,
+          "vesting_schedule": "4-year vesting",
+          "cliff": "1 year",
+          "notes": "Standard vesting schedule for founding team and early advisors"
+        },
+        {
+          "category": "Public sale (IEO)",
+          "percentage": 20,
+          "vesting_schedule": "Unlocked at IEO",
+          "cliff": "None",
+          "notes": "Sold at $0.39 on BitMax (Oct 2020)"
+        },
+        {
+          "category": "Foundation / treasury",
+          "percentage": 15,
+          "vesting_schedule": "Foundation-managed, long-term",
+          "cliff": "None",
+          "notes": "Reserved for long-term network development and operations"
+        },
+        {
+          "category": "Validators / inflation rewards",
+          "percentage": 10,
+          "vesting_schedule": "Continuous emission via block rewards",
+          "cliff": "None",
+          "notes": "Genesis allocation to bootstrap validator set. Ongoing inflation generates additional AKT."
+        }
+      ],
+      "distribution_method": "IEO on BitMax (AscendEX) at $0.39 per AKT (October 2020). Genesis supply of 100M AKT. Ongoing inflation distributes new tokens to stakers. Not a fair launch -- team and investors received allocations, but raise was small ($2.8M) and team vesting was 4 years."
+    },
+    "emissions": {
+      "model": "inflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": 10,
+      "halving_schedule": "No halving. Inflation rate adjustable via governance (currently 8-13% range depending on staking ratio). Cosmos SDK adjusts inflation to target a specific bonding ratio.",
+      "next_major_emission_event": "BME (Burn-Mint Equilibrium) activation",
+      "next_event_date": "2026-06-01",
+      "burn_mechanism": "BME (Burn-Mint Equilibrium): code complete, not yet live. When activated, AKT spent on compute is burned and new AKT minted to providers, creating deflationary pressure proportional to network usage. Currently, deployment payments flow through escrow without burning."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Delegated Proof of Stake (nominator staking via Cosmos SDK)",
+      "minimum_stake": null,
+      "lock_up_period": "21-day unbonding period",
+      "current_apy_nominal": 10,
+      "real_yield_after_inflation": 0,
+      "staking_ratio": 39,
+      "staking_risks": [
+        "Inflation erodes value if network usage doesn't grow (real yield near zero when adjusted for inflation)",
+        "21-day unbonding locks capital during volatile periods",
+        "Slashing risk for double-signing (5%) or prolonged downtime (0.01%)",
+        "Validator selection risk -- poorly-run validators can be slashed",
+        "Chain migration risk -- staking mechanics may change with new chain"
+      ],
+      "slashing_conditions": "Double-signing: 5% slash. Extended downtime (missing blocks): 0.01% slash and jailing."
+    },
+    "market_data": {
+      "price_usd": 0.30,
+      "market_cap_usd": 85000000,
+      "fully_diluted_valuation_usd": 116000000,
+      "twenty_four_hour_volume_usd": null,
+      "all_time_high_usd": 8.07,
+      "all_time_high_date": "2021-04-07",
+      "all_time_low_usd": 0.1649,
+      "all_time_low_date": "2022-11-21",
+      "major_exchanges": ["Coinbase", "Kraken", "KuCoin", "Gate.io", "Crypto.com", "MEXC", "Osmosis DEX"],
+      "data_snapshot_date": "2026-03-02"
+    },
+    "token_model_classification": "Inflationary utility token with planned deflationary mechanism (BME)",
+    "tokenomics_notes": "AKT currently operates as a standard Cosmos inflationary staking token. The real tokenomics thesis depends on BME activation: when compute spend is significant enough to burn more AKT than inflation creates, the token becomes deflationary. At $3.15M annual revenue and ~$85M market cap, BME alone cannot drive meaningful deflation yet. The gap between the tokenomics vision (revenue-driven burns) and current reality (inflation-dependent staking) is the core investment question. NOT listed on Binance spot, which limits liquidity and discovery. ~96% below ATH."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate AKT to validators on the Akash chain. Earn inflation rewards (~10% APY nominal). Vote on governance proposals through your validator or directly.",
+        "minimum_hardware": "None (wallet only)",
+        "minimum_capital_usd": 1,
+        "technical_skill_required": "basic",
+        "estimated_returns": "~10% APY nominal (near zero real yield after inflation)",
+        "barriers_to_entry": ["Cosmos wallet setup (Keplr)", "21-day unbonding period", "Validator selection research"],
+        "guide_available": true,
+        "guide_url": "https://akash.network/docs/getting-started/token-and-wallets"
+      },
+      {
+        "type": "providing",
+        "description": "Run a cloud provider node on Akash. List spare compute (CPU, GPU, memory, storage) on the marketplace. Earn AKT from tenant deployments. Permissionless -- anyone with qualifying hardware can join.",
+        "minimum_hardware": "Server-grade hardware with Kubernetes capability. GPU providers need NVIDIA cards (consumer or data centre). Reliable internet, static IP preferred.",
+        "minimum_capital_usd": 2000,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Variable -- depends on hardware listed, utilisation rate, and bid competitiveness. GPU providers currently earning more than CPU-only.",
+        "barriers_to_entry": ["Kubernetes administration skills", "Server hardware investment", "Reliable internet/hosting", "Provider setup and maintenance", "Competitive bidding against other providers"],
+        "guide_available": true,
+        "guide_url": "https://akash.network/docs/providers/build-a-cloud-provider"
+      },
+      {
+        "type": "deploying",
+        "description": "Deploy containerised workloads on Akash as a tenant. Use SDL (YAML-based) to describe requirements, submit to marketplace, providers bid. Typically 50-85% cheaper than AWS/GCP/Azure for comparable compute.",
+        "minimum_hardware": "None (client-side CLI or web console only)",
+        "minimum_capital_usd": 5,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Cost savings vs centralised cloud. Not a yield-generating activity.",
+        "barriers_to_entry": ["Learning SDL format", "AKT deposit for escrow", "Container/Docker knowledge", "No managed services (databases, load balancers) -- raw compute only"],
+        "guide_available": true,
+        "guide_url": "https://akash.network/docs/deployments/deploy-your-first-app"
+      },
+      {
+        "type": "building",
+        "description": "Build on or integrate with Akash. Four funding mechanisms available: Community Pool (on-chain treasury), Akash Accelerate (grants programme), Akash Bounties Board, and AkashML partnerships.",
+        "minimum_hardware": "Development environment",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Grant funding available. No direct token emissions to builders.",
+        "barriers_to_entry": ["Must propose to community pool via governance or apply to grants programme", "Go and Kubernetes expertise preferred", "Smaller ecosystem than EVM-based alternatives"],
+        "guide_available": true,
+        "guide_url": "https://akash.network/docs"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "350+ GitHub contributors across 65 repos. Core node repo has 34 contributors.",
+      "grants_program": true,
+      "grants_url": "https://akash.network/community"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "63 active providers, ~700 GPUs (NVIDIA), CPU/memory/storage also available. ~60% GPU utilisation (self-reported). AkashML managed inference service operational.",
+    "nodes_active": 63,
+    "validators_active": 100,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": 3150000,
+    "revenue_source": "Take fee on deployment spend (percentage of tenant payments to providers). $3.15M annual revenue in 2025 (up 128% year-over-year).",
+    "metrics_source": "Akash Network Stats, Overclock Labs reporting",
+    "metrics_date": "2026-03-02",
+    "usage_notes": "Key customers include Venice.ai (GPU inference), ElizaOS (AI agent framework), and Morpheus (decentralised AI). Gensyn integration for distributed training. 63 providers is a small but growing number -- up from single digits at GPU launch in 2023. Revenue of $3.15M against ~$85M market cap gives a price-to-revenue ratio of ~27x, which is reasonable for growth-stage infrastructure. GPU utilisation at 60% suggests genuine demand but the absolute base (700 GPUs) is tiny compared to centralised alternatives (AWS has millions of GPUs)."
+  },
+
+  "community": {
+    "discord_members": 18000,
+    "telegram_members": null,
+    "x_followers": 128000,
+    "github_contributors": 350,
+    "governance_participation_rate": "Active -- multiple governance proposals passed including inflation adjustments and community pool spending",
+    "governance_model": "Cosmos SDK on-chain governance. Token-weighted voting with delegation. Any AKT holder can submit proposals (with deposit). Validators vote on behalf of delegators by default; delegators can override. Standard Cosmos governance parameters.",
+    "governance_url": "https://www.mintscan.io/akash/proposals",
+    "key_community_channels": [
+      "Discord (~18,000 members) -- primary community hub",
+      "X @akaborNetwork (~128,000 followers) -- announcements and updates",
+      "Telegram @AkashNW -- community discussion",
+      "GitHub (65 repos, 350+ contributors) -- open development",
+      "Akash Network Stats (stats.akash.network) -- live marketplace data"
+    ],
+    "sentiment_summary": "Community is technically oriented and practically focused. Strong conviction around the 'decentralised AWS' thesis. GPU marketplace launch re-energised interest after years of CPU-only offering. Key concerns: 96% price decline from ATH, chain migration uncertainty, small provider count. Venice.ai's adoption as a customer is a frequently cited validation. Community frustrated by lack of Binance listing and slow BME activation.",
+    "community_notes": "Greg Osuri is highly visible on X and at conferences. His open-source background (Kubernetes Helm, AnyCast/Cloudflare) gives credibility. Community culture is more DevOps/infrastructure-oriented than typical crypto communities. Akash Insiders programme and Akash Accelerator provide structured contributor pathways."
+  },
+
+  "freedom_score": {
+    "total_score": 63,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 12,
+        "max": 20,
+        "evidence": "63 active providers with permissionless participation -- anyone with qualifying hardware can join. 100 DPoS validators run the chain. ~700 GPUs deployed across independent providers. Provider hardware is geographically distributed. However: 63 providers is objectively thin for a 'cloud marketplace'. Provider concentration means a handful of large providers serve the majority of capacity. Planned chain deprecation (late 2026) introduces major uncertainty -- migration to a new chain (Solana mentioned as candidate) means current infrastructure decentralisation could be rebuilt from scratch. Overclock Labs remains the dominant development entity."
+      },
+      "governance_decentralisation": {
+        "score": 11,
+        "max": 20,
+        "evidence": "On-chain Cosmos SDK governance with token-weighted voting. Proposals have been submitted and passed by the community, including inflation adjustments and community pool spending. Validators vote on behalf of delegators with override capability. However: Overclock Labs drives the development roadmap and strategic direction. Chain deprecation and Starbonds ($75M regulated securities offering) appear to be company decisions, not community-governed. Foundation/team hold significant voting power through token allocations. Governance is functional but Overclock Labs retains outsized influence."
+      },
+      "token_distribution_fairness": {
+        "score": 8,
+        "max": 15,
+        "evidence": "IEO at $0.39 with public participation (Oct 2020). Genesis 100M AKT. Team allocation ~26% with 4-year vesting and 1-year cliff -- standard and reasonable. Community allocation ~29%. Total raise of $2.8M is notably small, meaning limited VC capture. Ongoing inflation distributes new tokens to stakers. Not a fair launch, but the IEO model with small raise and meaningful vesting is above average for the era."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Permissionless provider onboarding -- anyone can list compute. Tenants deploy arbitrary containers with no protocol-level content filtering. Reverse auction bidding is neutral. Providers can individually choose what to host, creating a natural market rather than centralised censorship. DPoS validators do not inspect or filter individual deployments. However: Overclock Labs as a US-incorporated entity (Delaware) is subject to regulatory pressure. If compelled, they could propose governance changes or coordinate validator responses. The small provider count (63) means coordinated pressure on providers is more feasible than in a larger network."
+      },
+      "data_sovereignty": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Tenants fully control their deployment configurations and data. Self-custodial Cosmos wallets (Keplr). No platform-level data collection or surveillance. Deployments run in isolated Kubernetes containers. However: providers physically host tenant workloads and could theoretically inspect container contents (though this would violate trust assumptions). No encryption at the compute layer. No zero-knowledge or confidential computing. Data in transit between tenant and provider is not end-to-end encrypted at the protocol level."
+      },
+      "open_source_transparency": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Fully open source under Apache 2.0 across 65 repositories. Active development with frequent commits. Cosmos SDK provides a battle-tested and well-audited framework. On-chain governance is transparent and verifiable. Revenue and provider metrics are publicly accessible. However: no formal protocol-level security audit has been disclosed despite operating since 2020. The ChainLight vulnerability (May 2024) was found through third-party research, not a commissioned audit. Overclock Labs' corporate financials are not public. Starbonds offering introduces a new opaque financial dimension."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Akash scores a C (63/100), reflecting genuine infrastructure decentralisation with meaningful but incomplete governance distribution. The permissionless provider model and Cosmos-based on-chain governance are structurally sound -- meaningfully more decentralised than centralised cloud alternatives and more transparent than many crypto projects. However, 63 active providers is thin for a cloud marketplace, Overclock Labs retains outsized influence over strategic direction, and the planned chain deprecation introduces significant uncertainty. No formal security audit for a 5+ year old protocol is a notable gap. If Akash successfully executes its chain migration and activates BME with growing provider diversity, the freedom score would improve materially."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Working cloud marketplace with real deployments, real revenue ($3.15M/year), and real customers (Venice.ai, ElizaOS, Morpheus)",
+      "Permissionless provider model -- anyone with hardware can participate and earn",
+      "50-85% cheaper than centralised cloud for comparable compute",
+      "GPU marketplace (since Sep 2023) addresses the AI compute demand wave",
+      "Cosmos-based on-chain governance with active community participation",
+      "Fully open source (Apache 2.0) with strong developer credibility (Greg Osuri's Kubernetes/Cloudflare background)",
+      "AkashML managed inference simplifies AI workload deployment",
+      "Listed on Coinbase, Kraken, KuCoin -- decent exchange coverage"
+    ],
+    "what_is_hype": [
+      "'Decentralised AWS' narrative is aspirational -- 63 providers with 700 GPUs is not comparable to AWS's scale",
+      "60% GPU utilisation sounds strong but the absolute base is tiny (~700 GPUs vs millions at hyperscalers)",
+      "Chain migration framed as 'evolution' but is effectively rebuilding the entire infrastructure layer",
+      "Revenue growth (128% YoY) is from a very small base ($1.4M to $3.15M) -- not yet meaningful at infrastructure scale",
+      "Starbonds ($75M securities offering) is a corporate fundraise dressed up as community-aligned infrastructure",
+      "BME deflationary narrative is premature -- current revenue cannot drive meaningful burns relative to inflation"
+    ],
+    "key_risks": [
+      "Chain deprecation (late 2026) is the single highest-impact risk -- migrating an entire blockchain and marketplace is technically complex and could fracture the community",
+      "63 active providers is not meaningfully decentralised for a cloud marketplace -- provider concentration risk is real",
+      "96% below all-time high ($0.30 vs $8.07) -- sustained price decline undermines provider incentives and community morale",
+      "No formal protocol audit despite 5+ years of operation -- ChainLight auth bypass vulnerability (May 2024) demonstrates real attack surface",
+      "Overclock Labs is a US-incorporated entity (Delaware) -- regulatory exposure to SEC, CFTC, and compute export controls",
+      "Greg Osuri key person risk -- he is the public face, strategic driver, and open-source credibility anchor",
+      "BME activation delay -- the core deflationary mechanism remains unactivated after years of development",
+      "Not listed on Binance -- limits Asian market liquidity and retail discovery",
+      "Spam attack (March 2025) demonstrated network resilience gaps",
+      "Starbonds ($75M) introduces regulatory and dilution risk -- terms not yet public"
+    ],
+    "competitive_advantages": [
+      "Longest-running decentralised cloud marketplace -- operating since 2020 with real workloads",
+      "Greg Osuri's open-source credibility (AnyCast/Cloudflare, Kubernetes Helm) is genuine and verifiable",
+      "Cost advantage (50-85% cheaper) addresses a real pain point for compute buyers",
+      "Cosmos SDK provides battle-tested infrastructure with IBC interoperability",
+      "Small funding raise ($2.8M) means less VC overhang and misaligned incentives than heavily-funded competitors",
+      "AI/GPU demand wave aligns perfectly with core offering"
+    ],
+    "competitive_disadvantages": [
+      "63 providers vs thousands of data centres at AWS/GCP/Azure -- scale gap is enormous",
+      "No managed services (databases, load balancers, CDN) -- raw compute only, limiting enterprise adoption",
+      "Chain migration will reset much of the technical momentum built on Cosmos",
+      "Cosmos ecosystem is shrinking in mindshare relative to Ethereum L2s and Solana",
+      "No Binance listing limits liquidity compared to Render (RNDR), Bittensor (TAO), and others",
+      "Raw compute is a commodity -- differentiation relies on cost and decentralisation, both of which larger competitors can eventually match"
+    ],
+    "comparable_projects": [
+      "Render Network (RNDR) -- decentralised GPU rendering and compute",
+      "Bittensor (TAO) -- decentralised AI network (different model but competes for AI compute narrative)",
+      "Flux (FLUX) -- decentralised cloud infrastructure",
+      "Golem (GLM) -- decentralised compute marketplace (earlier generation)",
+      "io.net -- decentralised GPU network (newer entrant)"
+    ],
+    "outlook": "Akash occupies a unique position as the longest-running decentralised cloud marketplace with real revenue and recognisable customers. The GPU marketplace launch (2023) positioned it well for the AI compute wave. The next 12-18 months are make-or-break: successful chain migration, BME activation, and continued provider growth would validate the thesis. Failure on any of these fronts -- especially chain migration -- could permanently damage momentum. The $75M Starbonds raise suggests Overclock Labs is betting on aggressive expansion, but the regulatory and execution risks are significant. For practitioners: AKT staking offers yield but real returns after inflation are near zero. Providing compute on Akash is the more interesting participation mode if you have idle hardware. The investment thesis depends on believing that decentralised cloud can capture meaningful market share from hyperscalers -- a bet on a structural shift, not short-term catalysts.",
+    "overall_assessment": "Akash is the most credible decentralised cloud marketplace operating today, with real revenue, real customers, and a founder whose open-source credentials are independently verifiable. However, the gap between narrative ('decentralised AWS') and reality (63 providers, 700 GPUs, $3.15M revenue) is substantial. The planned chain deprecation is a high-risk strategic bet that could either accelerate growth (if the new chain is better) or fracture the project (if execution falters). No formal security audit after 5 years is indefensible for production infrastructure. For the OYM thesis: Akash demonstrates that decentralised compute can work at a functional level, but it has not yet proven it can work at meaningful scale. Worth tracking closely, but the chain migration must succeed before confidence increases."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Akash Network Official Documentation",
+      "url": "https://akash.network/docs",
+      "author": "Overclock Labs / Akash Network",
+      "publisher": "Akash Network",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["architecture", "SDL format", "provider setup", "deployment guide", "tokenomics"],
+      "reliability_notes": "Primary documentation. Comprehensive and regularly updated."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Akash Network Whitepaper",
+      "url": "https://ipfs.io/ipfs/QmVwsi5kTrg7UcUEGi5UfdheVLBWoHjze2pHy4tLqYvLYv",
+      "author": "Greg Osuri, Adam Bozanich",
+      "publisher": "Akash Network",
+      "date_published": "2018-01-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["founding thesis", "reverse auction design", "initial tokenomics", "architecture overview"],
+      "reliability_notes": "Original whitepaper hosted on IPFS. Some details superseded by subsequent development."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "github",
+      "title": "akash-network/node GitHub Repository",
+      "url": "https://github.com/akash-network/node",
+      "author": "Akash Network",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["stars", "forks", "contributors", "commits", "last_commit_date", "license"],
+      "reliability_notes": "Direct from GitHub. Primary node repo: ~1,100 stars, 262 forks, 34 contributors, 1,168 commits."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "github",
+      "title": "akash-network GitHub Organisation",
+      "url": "https://github.com/akash-network",
+      "author": "Akash Network",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["total_repos", "organisation structure", "contributor diversity"],
+      "reliability_notes": "Direct from GitHub. 65 repositories, 350+ unique contributors across org."
+    },
+    {
+      "source_id": "S005",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko -- Akash Network",
+      "url": "https://www.coingecko.com/en/coins/akash-network",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["price", "market_cap", "fdv", "circulating_supply", "ath", "atl", "exchanges"],
+      "reliability_notes": "Tier 2 market data aggregator."
+    },
+    {
+      "source_id": "S006",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinMarketCap -- Akash Network",
+      "url": "https://coinmarketcap.com/currencies/akash-network/",
+      "author": "CoinMarketCap",
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["market_cap", "supply", "volume", "exchanges"],
+      "reliability_notes": "Tier 2 market data. Cross-referenced with CoinGecko."
+    },
+    {
+      "source_id": "S007",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "Mintscan -- Akash Network",
+      "url": "https://www.mintscan.io/akash",
+      "author": "Cosmostation",
+      "publisher": "Mintscan",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["validators", "governance_proposals", "staking_ratio", "inflation_rate"],
+      "reliability_notes": "Primary Cosmos block explorer. Reliable on-chain data."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "block_explorer",
+      "title": "Akash Network Stats",
+      "url": "https://stats.akash.network",
+      "author": "Akash Network",
+      "publisher": "Akash Network",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["active_providers", "GPU_count", "utilisation", "deployment_count", "revenue"],
+      "reliability_notes": "Official network stats dashboard. Self-reported metrics."
+    },
+    {
+      "source_id": "S009",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Network's Revenue Surges by 128% in 2025",
+      "url": null,
+      "author": "Various crypto publications",
+      "publisher": "Multiple",
+      "date_published": "2025-12-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["annual_revenue", "revenue_growth", "customer_list"],
+      "reliability_notes": "Revenue figure ($3.15M) cited across multiple sources. Methodology not independently verified."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "news",
+      "title": "ChainLight Discovers Critical Auth Bypass in Akash Provider",
+      "url": null,
+      "author": "ChainLight (formerly Theori)",
+      "publisher": "ChainLight",
+      "date_published": "2024-05-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["security_vulnerability", "patch_response"],
+      "reliability_notes": "Security research firm. Vulnerability confirmed and patched."
+    },
+    {
+      "source_id": "S011",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Network Plans to Deprecate Cosmos Chain",
+      "url": null,
+      "author": "Various",
+      "publisher": "Multiple crypto publications",
+      "date_published": "2025-10-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["chain_deprecation_plan", "migration_timeline", "solana_consideration"],
+      "reliability_notes": "Chain deprecation referenced across multiple sources. Greg Osuri confirmed direction. No formal technical specification published."
+    },
+    {
+      "source_id": "S012",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Network Starcluster and Starbonds",
+      "url": null,
+      "author": "Akash Network / Overclock Labs",
+      "publisher": "Multiple",
+      "date_published": "2025-08-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["starbonds_offering", "fundraise_amount", "regulatory_approach"],
+      "reliability_notes": "Starbonds ($75M) is a Reg D securities offering. Terms not yet fully public."
+    },
+    {
+      "source_id": "S013",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Messari -- Akash Network Profile",
+      "url": "https://messari.io/project/akash-network",
+      "author": "Messari",
+      "publisher": "Messari",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["team_size", "funding_rounds", "token_distribution", "investors"],
+      "reliability_notes": "Tier 2 crypto research platform. Team size estimate varies (109-119)."
+    },
+    {
+      "source_id": "S014",
+      "tier": 2,
+      "type": "news",
+      "title": "Greg Osuri Background and Akash Founding",
+      "url": null,
+      "author": "Various",
+      "publisher": "Multiple (CoinDesk, Decrypt, The Block)",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["founder_background", "AnyCast_Cloudflare", "kubernetes_helm", "founding_story"],
+      "reliability_notes": "Founder claims cross-referenced across multiple sources and GitHub history."
+    },
+    {
+      "source_id": "S015",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Akash Network Economics Whitepaper v2",
+      "url": "https://akash.network/docs/akash-tokens/akt-token",
+      "author": "Akash Network",
+      "publisher": "Akash Network",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["BME_mechanism", "token_utility", "inflation_model", "take_fee"],
+      "reliability_notes": "Official token economics documentation. BME described but not yet activated."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "news",
+      "title": "Venice.ai Runs on Akash Network",
+      "url": null,
+      "author": "Multiple sources",
+      "publisher": "Multiple",
+      "date_published": "2025-06-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["venice_customer", "GPU_demand", "customer_validation"],
+      "reliability_notes": "Venice.ai's use of Akash GPUs referenced in Venice and Akash documentation."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Homenode Beta Launch",
+      "url": null,
+      "author": "Akash Network",
+      "publisher": "Multiple",
+      "date_published": "2026-02-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["homenode_launch", "consumer_provider_expansion"],
+      "reliability_notes": "Beta announced Feb 2026. No adoption metrics available yet."
+    },
+    {
+      "source_id": "S018",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Network Spam Attack (March 2025)",
+      "url": null,
+      "author": "Community reports",
+      "publisher": "Discord / X",
+      "date_published": "2025-03-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["spam_attack_incident", "network_resilience"],
+      "reliability_notes": "Referenced in community discussions. Limited formal post-mortem."
+    },
+    {
+      "source_id": "S019",
+      "tier": 2,
+      "type": "news",
+      "title": "Akash Network GPU Marketplace Launch",
+      "url": null,
+      "author": "Multiple sources",
+      "publisher": "Multiple (CoinDesk, Decrypt, The Block)",
+      "date_published": "2023-09-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["GPU_marketplace_launch_date", "NVIDIA_support", "provider_growth"],
+      "reliability_notes": "GPU marketplace launch widely covered. September 2023 confirmed across sources."
+    },
+    {
+      "source_id": "S020",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Crunchbase -- Overclock Labs",
+      "url": "https://www.crunchbase.com/organization/overclock-labs",
+      "author": "Crunchbase",
+      "publisher": "Crunchbase",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["funding_amount", "entity_details", "team_size"],
+      "reliability_notes": "Business data platform. Funding data cross-referenced with other sources."
+    }
+  ],
+
+  "metrics_history": []
+}
