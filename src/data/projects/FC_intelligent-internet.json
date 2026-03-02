@@ -1,0 +1,923 @@
+{
+  "meta": {
+    "project_id": "intelligent-internet",
+    "research_date": "2026-03-02",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 2,
+    "last_updated": "2026-03-02",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "Intelligent-Internet",
+      "github_primary_repo": "ii-agent",
+      "coingecko_id": null,
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "ii_posts",
+      "prose_fields_with_embedded_figures": [
+        "usage_metrics.usage_notes",
+        "freedom_score.breakdown.open_source_transparency.evidence"
+      ]
+    },
+    "auto_refresh_log": [],
+    "research_gaps": [
+      "No mainnet, no testnet, no token launched. The blockchain and tokenomics exist only as a whitepaper (published July 2025). All blockchain-related fields are 'planned' status.",
+      "No publicly disclosed fundraising rounds for Intelligent Internet / L42 Ltd. PitchBook has a profile (18 employees) but funding data is paywalled. May be self-funded by Mostaque from personal wealth.",
+      "Exact team size uncertain: PitchBook lists 18 employees, HuggingFace shows 10 team members, GitHub shows 20 unique contributors. No official team page published.",
+      "The Solana token 'II' (address DjwB2SSpLsXwrecQoPnHFn3ki8SbDknurSirxX3oBAGS) on CoinSwitch appears unofficial with zero liquidity. NOT endorsed by the project.",
+      "No mainnet date published. Whitepaper describes phases (0-4) but provides no timeline.",
+      "Exact stake amount for National Champions (S_FC) not specified in whitepaper.",
+      "Validator slashing percentage (N%) not specified.",
+      "Culture Credit reserve requirement percentage not specified.",
+      "Treasury burn-vs-grant split not specified.",
+      "12 National Champions at genesis not identified. No public selection process described.",
+      "II-Agent SWE-Bench Pro score of 45.1% is self-reported and does not appear on the official Scale AI leaderboard. Needs independent verification.",
+      "No public user metrics for II-Agent web app (agent.ii.inc). Blog mentions 'thousands of builders' but no DAU/MAU disclosed.",
+      "Cyrus Hodes v. Mostaque lawsuit status unresolved as of research date.",
+      "Mostaque's personal financial stake in Intelligent Internet not disclosed.",
+      "Several GitHub repos are forks (8 of 22) which should be counted separately from original work.",
+      "Discord member count and X follower count for @ii_posts could not be independently verified via scraping (X blocks, Discord requires joining)."
+    ]
+  },
+
+  "identity": {
+    "name": "Intelligent Internet",
+    "ticker": "FC (Foundation Coin, planned, not yet launched)",
+    "category": "Agent Platforms & Infrastructure",
+    "subcategory": "Sovereign AI protocol with open-source models, agents, datasets and planned blockchain layer",
+    "tagline": "Sovereign AI for a New World",
+    "one_liner": "An open-source AI project producing downloadable models (II-Medical, II-Search), agent frameworks (II-Agent, CommonGround), and training datasets, with a planned three-layer blockchain (Bitcoin Core fork) and dual-currency economy (Foundation Coins and Culture Credits) backed by Proof-of-Benefit consensus. Pre-token, with substantial open-source AI deliverables already shipped.",
+    "website": "https://ii.inc/web",
+    "documentation_url": "https://intelligent-internet.github.io/ii-agent-prod/",
+    "whitepaper_url": "https://ii.inc/web/whitepaper",
+    "github_url": "https://github.com/Intelligent-Internet",
+    "chain": "Planned: custom L0 (Bitcoin Core v25 fork with BFT consensus). L1: sovereign roll-ups per National Champion. Not yet launched.",
+    "launch_date": null,
+    "current_status": "development",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Emad Mostaque",
+        "role": "Founder & CEO, sole director of L42 Ltd",
+        "background": "British-Bangladeshi, born 17 April 1983 in Jordan. BA Mathematics and Computer Science from Oxford University (2005). Diagnosed with Asperger's and ADHD. Son's autism diagnosis (~2011) motivated pivot from finance to AI. 13 years in hedge fund management (Pictet, Capricorn Fund Managers as Co-CIO achieving 20% returns in 2017, ECSTRAT). Co-founded Stability AI (late 2020) with Cyrus Hodes. Stability AI released Stable Diffusion (Aug 2022), downloaded 100M+ times with 300,000+ developers/creators. Raised $174M+ achieving $1B+ valuation. Resigned as CEO March 2024 under investor pressure. Controversies: co-founder Cyrus Hodes filed fraud lawsuit (July 2023) alleging $100 stake purchase before $1B valuation round; Forbes investigation (June 2023) found misleading claims about education credentials, Amazon partnership, and NGO partnerships (UNESCO, OECD, WHO, World Bank denied partnerships); Lightspeed Venture Partners cited mismanagement (Oct 2023); Stability AI had $153M projected losses vs $11M income in 2023. Genuine achievements: Stable Diffusion demonstrably proved open-source AI could compete with proprietary alternatives; consistent open-source advocacy when most frontier labs went proprietary; active in AI governance and policy. Founded Intelligent Internet post-departure. Invested in Prime Intellect (Series A, March 2025). Based in UK/Panama.",
+        "linkedin_or_x": "https://x.com/EMostaque",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 18,
+    "entity_name": "L42 Ltd, trading as Intelligent Internet",
+    "entity_jurisdiction": "England & Wales (Company Number 15644961, incorporated 14 April 2024). Registered office: Suites 404/405, 96 Kensington High Street, London, W8 4SG. SIC 62020: Information technology consultancy activities.",
+    "notable_backers": [],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": [],
+      "notes": "No publicly disclosed fundraising. PitchBook has a profile listing 18 employees but funding data is paywalled. May be self-funded by Mostaque from personal wealth (estimated $200M-$465M, highly speculative). Stability AI was initially self-funded $600k by Mostaque before raising $174M+ externally."
+    },
+    "additional_team_members": [
+      {
+        "name": "Duy Phung (PhungVanDuy)",
+        "role": "ML Engineer, ii-agent lead contributor",
+        "location": "Vietnam",
+        "source": "GitHub, HuggingFace"
+      },
+      {
+        "name": "khoangothe (Ngo The Anh Khoa)",
+        "role": "Developer, ii-agent and ii-researcher",
+        "location": "Vietnam",
+        "source": "GitHub, HuggingFace"
+      },
+      {
+        "name": "baquy96",
+        "role": "Developer, ii-researcher lead contributor",
+        "location": "Vietnam",
+        "source": "GitHub"
+      },
+      {
+        "name": "Dango233",
+        "role": "Developer (employer: ii.inc on GitHub), CoT-Lab, CommonGround",
+        "location": "Remote",
+        "source": "GitHub"
+      },
+      {
+        "name": "Ju Huo (huo-ju)",
+        "role": "Developer, CommonGround lead contributor",
+        "location": "Ottawa, Canada",
+        "source": "GitHub"
+      },
+      {
+        "name": "Sixia 'Leask' Huang",
+        "role": "Developer, II-Commons lead contributor",
+        "location": "Ottawa, Canada",
+        "source": "GitHub, HuggingFace"
+      },
+      {
+        "name": "TueVNguyen",
+        "role": "Developer, ii-thought",
+        "location": "Vietnam",
+        "source": "GitHub"
+      },
+      {
+        "name": "ducphuE10",
+        "role": "Developer, ii-thought and ii-agent-community",
+        "location": "Vietnam",
+        "source": "GitHub"
+      },
+      {
+        "name": "khongtrunght",
+        "role": "Developer, ii-researcher",
+        "location": "Vietnam",
+        "source": "GitHub"
+      },
+      {
+        "name": "Yizhou Zheng",
+        "role": "Team member",
+        "location": "Unknown",
+        "source": "HuggingFace"
+      },
+      {
+        "name": "Quy Pham",
+        "role": "Team member",
+        "location": "Unknown",
+        "source": "HuggingFace"
+      },
+      {
+        "name": "Jimmy Wong (thinkingjimmy)",
+        "role": "Content/Symbioism contributor",
+        "location": "Unknown",
+        "source": "GitHub"
+      },
+      {
+        "name": "Joe Croskey (josephcroskey)",
+        "role": "Blog author, Symbioism-TLE contributor",
+        "location": "Unknown",
+        "source": "GitHub, blog bylines"
+      },
+      {
+        "name": "Miranda AbiDyer",
+        "role": "Chief of Staff to Chief of Communications",
+        "location": "Unknown",
+        "source": "Blog bylines"
+      },
+      {
+        "name": "liujuanjuan1984",
+        "role": "Developer, Common_Chronicle lead",
+        "location": "Unknown",
+        "source": "GitHub"
+      },
+      {
+        "name": "Yongsheng Xu (chux0519)",
+        "role": "Developer, multiple repos",
+        "location": "Unknown",
+        "source": "GitHub"
+      }
+    ]
+  },
+
+  "technical": {
+    "architecture_summary": "Three-layer blockchain architecture (whitepaper design, not yet implemented). Foundation Layer (L0): canonical blockchain ledger, fork of Bitcoin Core v25 with BFT consensus replacing PoW. Records UTXOs, FC issuance, Anchor-Set Merkle roots, and identity hashes. Single-round finality requiring signatures from >=2/3 of validator stake. Culture Layer (L1): sovereign roll-ups operated by National Champions, settling in local Culture Credits (CC) while enforcing data-residency rules. Personal Layer (L2): runs on user devices where II-Agents execute workflows and decide whether to call local models or external APIs. Currently, the L2 tooling and open-source AI outputs are the primary deliverables: II-Agent (open-source agent framework), II-Medical (clinical-grade fine-tuned LLMs downloadable from HuggingFace), II-Search (search-optimised LLMs), CommonGround (multi-agent orchestration), II-Researcher, II-Commons (knowledge base with PostgreSQL + VectorChord), II-Thought (RL training datasets), and SAGE (Sovereign AI Governance Engine, announced at FII9 but not yet shipped). No blockchain infrastructure has been deployed.",
+    "consensus_mechanism": "Planned: Byzantine Fault Tolerant (BFT) consensus with HotStuff safety proofs. Single-round finality. Block validity requires exactly one Proof-of-Benefit receipt meeting Oracle-set evaluation thresholds. Champion Interlink Network maintaining <300ms round-trip latency. Heartbeat signals every second. Not yet implemented.",
+    "what_is_onchain": "Planned: UTXOs, FC issuance, Anchor-Set Merkle roots (pinning datasets, model checkpoints, agent identities on-chain), identity hashes (OP_IDCLAIM via WebAuthn), governance proposals, Treasury transactions, CC-to-FC AMM swaps, PoB receipts. Currently: nothing (no chain exists).",
+    "what_is_offchain": "Currently everything. II-Agent execution, II-Medical inference, II-Search queries, CommonGround orchestration, II-Researcher workflows, II-Commons knowledge base, dataset curation, model training. Planned to remain off-chain post-launch: actual AI inference, model training, agent execution (L2), with on-chain attestation via Proof-of-Benefit receipts only.",
+    "key_dependencies": [
+      "Bitcoin Core v25 (planned L0 fork)",
+      "HotStuff BFT consensus (planned)",
+      "Qwen3 model family (base for all current fine-tuned models: II-Medical-8B, II-Search-4B)",
+      "Claude 3.7 Sonnet / Gemini 3 / GPT-5 (II-Agent LLM backends)",
+      "Python (primary language for agent tooling and ML)",
+      "TypeScript/React (II-Agent frontend)",
+      "Docker (sandbox execution)",
+      "vLLM / SGLang (model serving)",
+      "PostgreSQL + VectorChord (II-Commons knowledge base)"
+    ],
+    "smart_contract_languages": ["Bitcoin Script (planned, extended with OP_IDCLAIM and OP_ANCHOR)"],
+    "open_source": true,
+    "license": "Apache-2.0 (primary repos)",
+    "github_metrics": {
+      "total_repos": 22,
+      "original_repos": 14,
+      "forked_repos": 8,
+      "primary_repo_url": "https://github.com/Intelligent-Internet/ii-agent",
+      "total_commits": null,
+      "contributors": 20,
+      "last_commit_date": "2026-02-17",
+      "stars": 3172,
+      "forks": 488,
+      "open_issues": 3,
+      "notes": "22 repos total but 8 are forks (OpenAI Codex, Google Gemini CLI, PPTist, reveal.js, litellm, verl, and others). Original repos include: ii-agent (3,172 stars), ii-researcher (496 stars), CommonGround-legacy (420 stars), gemini-cli-mcp-openai-bridge (131 stars), CommonGround (95 stars), CoT-Lab-Demo (91 stars), Symbioism-Nextra (53 stars), Symbioism-TLE (52 stars), II-Commons (33 stars), ii-thought (31 stars), Common_Chronicle (28 stars), ii-agent-community (20 stars), CG-Cardbox (1 star). Total org stars approximately 4,600+. 20 unique contributors across all original repos. Core development team appears Vietnam-based (PhungVanDuy, khoangothe, baquy96, TueVNguyen, ducphuE10, khongtrunght) with Canada (huo-ju, Leask) and others globally."
+    },
+    "huggingface_metrics": {
+      "models_published": 9,
+      "datasets_published": 20,
+      "team_members": 10,
+      "total_model_downloads": 3034,
+      "models": [
+        {
+          "name": "II-Medical-8B",
+          "base_model": "Qwen3-8B",
+          "parameters": "8B",
+          "downloads": 1480,
+          "likes": 204,
+          "benchmark_healthbench": 40,
+          "benchmark_avg_medical": 70.49,
+          "notes": "Clinical-grade reasoning. 3-stage training: SFT + RL + Safety RL (DAPO algorithm). Performance comparable to OpenAI o1 and GPT-4.5 on HealthBench. Matches 32B-72B models on medical benchmarks despite 8B size. NOT intended for clinical use."
+        },
+        {
+          "name": "II-Medical-8B-1706",
+          "base_model": "Qwen3-8B",
+          "parameters": "8B",
+          "downloads": 312,
+          "likes": 137,
+          "benchmark_healthbench": 46.8,
+          "notes": "Updated version. 46.8% on HealthBench, comparable to Google MedGemma-27B."
+        },
+        {
+          "name": "II-Medical-32B-Preview",
+          "base_model": "Qwen3-32B",
+          "parameters": "33B",
+          "downloads": 56,
+          "likes": 52,
+          "benchmark_avg_medical": 71.54,
+          "notes": "Preview 32B medical model."
+        },
+        {
+          "name": "II-Medical-8B-1706-GGUF",
+          "base_model": "Qwen3-8B",
+          "parameters": "8B",
+          "downloads": 1010,
+          "likes": 28,
+          "notes": "GGUF quantised format for local running (llama.cpp, Ollama, LM Studio). Confirms local self-hosted operation is supported."
+        },
+        {
+          "name": "II-Medical-7B-Preview",
+          "base_model": "Unknown",
+          "parameters": "8B",
+          "downloads": 16,
+          "likes": 12,
+          "notes": "Early preview version."
+        },
+        {
+          "name": "II-Search-4B",
+          "base_model": "Qwen3-4B",
+          "parameters": "4B",
+          "downloads": 146,
+          "likes": 100,
+          "benchmark_simpleqa": 91.8,
+          "benchmark_frames": 67.5,
+          "notes": "Search-optimised small model. 91.8% SimpleQA pass rate (vs Qwen3-4B: 76.8%). 4-phase training with Code-Integrated Reasoning."
+        },
+        {
+          "name": "II-Search-CIR-4B",
+          "base_model": "Qwen3-4B",
+          "parameters": "4B",
+          "downloads": 7,
+          "likes": 15,
+          "benchmark_frames": 72.2,
+          "notes": "Code-Integrated Reasoning variant. 72.2% on Frames (vs Qwen3-4B: 30.7%)."
+        },
+        {
+          "name": "II-Search-4B-MLX",
+          "base_model": "Qwen3-4B",
+          "parameters": "4B",
+          "downloads": 1,
+          "likes": 7,
+          "notes": "Apple MLX format for Mac Silicon local running."
+        },
+        {
+          "name": "II-Thought-1.5B-Preview",
+          "base_model": "Unknown",
+          "parameters": "1.5B",
+          "downloads": 6,
+          "likes": 13,
+          "notes": "RL-enhanced reasoning model trained on II-Thought-RL-v0 subset."
+        }
+      ],
+      "key_datasets": [
+        {
+          "name": "II-Thought-RL-v0",
+          "downloads": 342000,
+          "likes": 266,
+          "description": "First large-scale multi-task RL dataset. High-quality question-answer pairs filtered via Gemini 2.0 Flash and Qwen 32B. Spans mathematics, coding, medicine, science."
+        },
+        {
+          "name": "II-Medical-Reasoning-SFT",
+          "downloads": 2200000,
+          "likes": 294,
+          "size": "2.2M samples",
+          "description": "Medical reasoning training dataset. Most downloaded original dataset."
+        },
+        {
+          "name": "wikipedia_en",
+          "downloads": 13400000,
+          "likes": 2720,
+          "description": "Curated/processed Wikipedia English. Not original data but processed version."
+        },
+        {
+          "name": "pd12m",
+          "downloads": 11700000,
+          "likes": 1600,
+          "description": "Public domain 12M images dataset. Not original data but curated collection."
+        },
+        {
+          "name": "II-Search-CIR-SFT",
+          "downloads": 85600,
+          "description": "Search training dataset with Code-Integrated Reasoning."
+        },
+        {
+          "name": "II-Thought-RL-v0-Math-50K",
+          "downloads": 53300,
+          "description": "50K math subset for RL training."
+        }
+      ],
+      "notes": "All models are fine-tunes of existing open-source models (primarily Qwen3 family). No foundation models trained from scratch. The training methodologies (3-stage medical RL, 4-phase search training, DAPO safety RL) are original contributions. GGUF and MLX formats available for local self-hosted running. Third-party GGUF quantisations also available (DevQuasar). The wikipedia_en and pd12m datasets account for the majority of downloads but are processed versions of existing public data, not original datasets."
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "Foundation Coin (planned)",
+    "ticker": "FC (planned)",
+    "token_standard": "Planned: native UTXO on custom L0 chain (Bitcoin Core v25 fork). Wrapped representations (wFC) planned as ERC-20 and SPL.",
+    "token_type": "both",
+    "token_utility": [
+      "Foundation layer transaction fees (planned)",
+      "Staking by National Champions to participate as validators (planned)",
+      "Settlement currency between Culture Layer roll-ups (planned)",
+      "Backing reserve for Culture Credits (planned)",
+      "Governance participation (planned)",
+      "Treasury funding via block reward share (planned)"
+    ],
+    "supply": {
+      "max_supply": 21000000,
+      "total_supply": 0,
+      "circulating_supply": 0,
+      "circulating_supply_date": "2026-03-02",
+      "circulating_percentage": 0
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Block rewards (Proof-of-Benefit mining)",
+          "percentage": null,
+          "vesting_schedule": "Halving every 2 epochs (105,000 blocks each). Initial block subsidy: 50 FC. ~99% circulated within 12 years post-launch.",
+          "cliff": "None",
+          "notes": "All FC minted through validated Proof-of-Benefit work. No pre-mine described in whitepaper. Treasury receives a programmable share of block rewards (percentage TBD). Four recognised benefit classes at genesis: compute-inference, compute-training, data-curation, agent-orchestration (>=3-module projects)."
+        }
+      ],
+      "distribution_method": "Proof-of-Benefit mining. Coins minted only when validators attach a signed receipt proving useful compute was performed. Receipt requires: work_root (Merkle root of inputs/outputs/artefacts), benefit_class, eval_score meeting Oracle-set thresholds, producer_id, and timestamp. 21M hard cap mirrors Bitcoin. Initial subsidy 50 FC/block, halving every 210,000 blocks (two epochs). Faster emission than Bitcoin (~99% in 12 years vs Bitcoin's ~2140). Not yet launched."
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "Every 2 epochs (210,000 valid blocks total). Faster than Bitcoin's 4-year cycle. ~99% circulated within 12 years.",
+      "next_major_emission_event": "Genesis block (not yet launched)",
+      "next_event_date": null,
+      "burn_mechanism": "Treasury burns a portion of incoming FC (percentage TBD, set by Oracle Council post-Phase 3). No other burn mechanism described."
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "Planned: National Champion validator staking. Fixed stake amount S_FC (not yet specified). Economic bond required alongside hardware attestation reports. Admission requires posting stake + attestation, one-week public objection period, and Sentinel majority approval.",
+      "minimum_stake": null,
+      "lock_up_period": "Planned: tau-block cooldown on voluntary exit (parameter TBD)",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Equivocation slashing (signing two blocks at same height)",
+        "Missing >k consecutive votes in sliding window",
+        "PoB receipts below threshold for declared benefit class",
+        "License revocation after repeated violations",
+        "All parameters (slashing %, cooldown period, vote window) TBD"
+      ],
+      "slashing_conditions": "Planned: equivocation, missed votes, low-quality PoB receipts. Forfeiture percentage N% and specific window parameters TBD."
+    },
+    "market_data": {
+      "price_usd": null,
+      "market_cap_usd": null,
+      "fully_diluted_valuation_usd": null,
+      "twenty_four_hour_volume_usd": null,
+      "all_time_high_usd": null,
+      "all_time_high_date": null,
+      "all_time_low_usd": null,
+      "all_time_low_date": null,
+      "major_exchanges": [],
+      "data_snapshot_date": "2026-03-02"
+    },
+    "token_model_classification": "Planned: disinflationary Proof-of-Benefit mining with 21M hard cap and dual-currency system (FC + CC). Not yet launched.",
+    "tokenomics_notes": "The tokenomics design is ambitious and well-articulated in the whitepaper but entirely theoretical. No token exists. No chain exists. The 21M hard cap and halving schedule mirror Bitcoin, which is a deliberate design choice. The dual-currency model (FC as hard scarce reserve, CC as elastic national currencies reserve-backed by FC) is novel and untested. The Proof-of-Benefit mechanism ties every minted coin to verified useful AI work (inference, training, data curation, agent orchestration), which is a genuine innovation over Proof-of-Work's computational waste and Proof-of-Stake's capital-weighted consensus. Key parameters (stake amounts, slashing %, CC reserve floor, Treasury splits, evaluation thresholds) are all deferred to governance or future specification. The whitepaper honestly labels these as TBD rather than fabricating numbers. NOTE: An unofficial Solana token using the ticker 'II' exists on CoinSwitch (address DjwB2SSpLsXwrecQoPnHFn3ki8SbDknurSirxX3oBAGS) with zero liquidity and no trading. This is NOT the official project token. No token has been listed on CoinGecko or CoinMarketCap for Intelligent Internet."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "using",
+        "description": "Use II-Agent Chat, a free AI assistant supporting multiple LLM backends (Gemini 3, Claude Sonnet 4.5, GPT-5). Available as web app (agent.ii.inc) or self-hosted via Docker/CLI from GitHub (Apache 2.0). Terminal Bench 2 score: 61.8% (above Claude Code at 58.0%). Self-reported SWE-Bench Pro: 45.1%.",
+        "minimum_hardware": "Web browser (hosted) or modern computer with Docker (self-hosted)",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "basic",
+        "estimated_returns": "N/A (utility, not yield)",
+        "barriers_to_entry": ["API keys required for LLM providers if self-hosting", "II account required for web app"],
+        "guide_available": true,
+        "guide_url": "https://intelligent-internet.github.io/ii-agent-prod/"
+      },
+      {
+        "type": "using",
+        "description": "Download and run II-Medical models locally for private medical reasoning. Available in 8B, 32B sizes. GGUF format available for llama.cpp, Ollama, LM Studio. MLX format for Apple Silicon. vLLM and SGLang serving documented. Runs entirely on your own hardware with no server dependency. II-Medical-8B achieves 70.49% average across 10 medical benchmarks (comparable to 72B models) and 40% on HealthBench (comparable to OpenAI o1). NOT intended for clinical use.",
+        "minimum_hardware": "Computer with 8GB+ RAM for 8B GGUF model. GPU recommended for full-precision serving (16GB+ VRAM for 8B, 48GB+ for 32B).",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "N/A (utility, not yield)",
+        "barriers_to_entry": ["Hardware requirements for larger models", "ML serving knowledge for full-precision deployment"],
+        "guide_available": true,
+        "guide_url": "https://huggingface.co/Intelligent-Internet/II-Medical-8B"
+      },
+      {
+        "type": "using",
+        "description": "Download and run II-Search models locally for private search and research. 4B parameter size. GGUF and MLX formats. 91.8% SimpleQA pass rate. Code-Integrated Reasoning variant achieves 72.2% on Frames benchmark.",
+        "minimum_hardware": "Computer with 4GB+ RAM for 4B GGUF model",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "N/A (utility, not yield)",
+        "barriers_to_entry": ["ML serving knowledge"],
+        "guide_available": true,
+        "guide_url": "https://huggingface.co/Intelligent-Internet/II-Search-4B"
+      },
+      {
+        "type": "using",
+        "description": "Use II-Commons hosted beta (commons.ii.inc) for querying arXiv and PubMed knowledge bases. Free beta access. Or self-host using the open-source II-Commons repository with PostgreSQL + VectorChord.",
+        "minimum_hardware": "Web browser (hosted) or server with PostgreSQL (self-hosted)",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "basic",
+        "estimated_returns": "N/A (utility, not yield)",
+        "barriers_to_entry": ["Beta status means features may be incomplete"],
+        "guide_available": true,
+        "guide_url": "https://github.com/Intelligent-Internet/II-Commons"
+      },
+      {
+        "type": "using",
+        "description": "Use training datasets (II-Thought-RL-v0, II-Medical-Reasoning-SFT, II-Search-SFT and others) to train or fine-tune your own models. 20 datasets published on HuggingFace. II-Thought-RL-v0 (342k examples) is the first large-scale multi-task RL dataset. II-Medical-Reasoning-SFT has 2.2M samples.",
+        "minimum_hardware": "GPU training infrastructure for model training",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "N/A (public goods)",
+        "barriers_to_entry": ["ML expertise", "GPU access for training"],
+        "guide_available": true,
+        "guide_url": "https://huggingface.co/Intelligent-Internet"
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute to open-source repositories. 14 original repos under the Intelligent-Internet GitHub organisation (Apache 2.0). Primary projects: II-Agent (agent framework), II-Researcher (search/research agents), CommonGround (multi-agent orchestration OS), II-Commons (knowledge base), ii-thought (RL dataset tooling).",
+        "minimum_hardware": "Development environment",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Open-source contribution. No token rewards currently.",
+        "barriers_to_entry": ["Python/TypeScript skills", "AI/ML knowledge for meaningful contributions"],
+        "guide_available": true,
+        "guide_url": "https://github.com/Intelligent-Internet"
+      },
+      {
+        "type": "validating",
+        "description": "Planned: become a National Champion validator. Requires economic FC stake (amount TBD), hardware attestation, symmetric >=10 Gbit/s bandwidth on 3 independent physical paths, <300ms interlink latency, signed heartbeats every second. 12 Champions at genesis, long-term target >=1 per sovereign nation. Admission requires stake + attestation + one-week public objection period + Sentinel majority approval. Not yet available.",
+        "minimum_hardware": "Server-grade infrastructure with >=10 Gbit/s symmetric bandwidth on 3 independent paths (planned)",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "expert",
+        "estimated_returns": "Block rewards from Proof-of-Benefit validation (planned)",
+        "barriers_to_entry": ["Network not launched", "Champion admission process", "Unknown capital requirements", "Extreme bandwidth requirements"],
+        "guide_available": false,
+        "guide_url": null
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": false,
+      "api_available": true,
+      "documentation_quality": "adequate",
+      "developer_community_size": "14 original repos, 20 unique contributors across GitHub organisation. 10 HuggingFace team members. Blog mentions 'thousands of builders' using II-Agent in beta.",
+      "grants_program": false,
+      "grants_url": null
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": null,
+    "metrics_source": "GitHub, HuggingFace",
+    "metrics_date": "2026-03-02",
+    "usage_notes": "No blockchain metrics exist because the network has not launched. Measurable outputs are open-source software and AI models. GitHub: ii-agent (3,172 stars, 488 forks), ii-researcher (496 stars, 71 forks), CommonGround-legacy (420 stars, 64 forks), CommonGround (95 stars). Total org stars approximately 4,600+. HuggingFace: 9 models with 3,034 total downloads, 20 datasets with significant download counts (II-Medical-Reasoning-SFT: 2.2M, II-Thought-RL-v0: 342k). Third-party GGUF quantisations exist (DevQuasar), indicating community adoption of the models. II-Agent Chat live as web app (agent.ii.inc). Blog mentions 'thousands of builders' but no DAU/MAU disclosed. CoT-Lab HuggingFace Space has 55 runs. The II-Medical-8B benchmark results (70.49% avg medical, 40% HealthBench matching o1/GPT-4.5) represent the strongest technical output. II-Agent scores 61.8% on Terminal Bench 2, outperforming Claude Code (58.0%) as an open-source alternative."
+  },
+
+  "community": {
+    "discord_members": 884,
+    "telegram_members": null,
+    "x_followers": 20400,
+    "x_followers_founder": 290800,
+    "github_contributors": 20,
+    "governance_participation_rate": "N/A (no governance system deployed)",
+    "governance_model": "Planned: three-phase progressive decentralisation. Phases 0-2: multi-sig controlled by founding Champions, stewards Treasury. Phase 3+: 15-seat Oracle Council (each seat is a Partner-grade II-Agent with Principal/Associate teams). Guardian Lattice enforces rules through three roles: Sentinels (read-only monitors replaying PoB receipts), Advisers (human-readable risk reports), Implementers (time-locked pause key for emergencies). Six-month automatic rotation via stake-weighted election. Living Constitution Assembly with domain experts and sortition-selected jurors. Parameter updates require on-chain proposals, 7-day Sentinel simulation, Oracle Council 2/3 approval, and 30-day grace period. Not yet implemented.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord (884 members noted, may have grown)",
+      "X @ii_posts (~20,400 followers)",
+      "X @EMostaque (~290,800 followers, primary distribution channel)",
+      "GitHub (22 repos, 20 contributors)",
+      "HuggingFace (9 models, 20 datasets, 10 team members)",
+      "YouTube channel (subscriber count unknown)",
+      "LinkedIn (Emad Mostaque active)"
+    ],
+    "sentiment_summary": "Community is small relative to the ambition of the project and Mostaque's personal following. Discord at 884 members is modest for a project led by a figure with 290k X followers. Most public attention flows through Mostaque's personal account rather than the project account. The open-source AI tooling (II-Agent at 3.2k stars) has attracted genuine developer interest. The philosophical framework (Symbioism, The Last Economy, Master Plan) generates intellectual engagement but the blockchain and tokenomics are not yet discussion topics since nothing is live. Podcast appearances on Cognitive Revolution, New Economies, TWiT.TV demonstrate Mostaque actively evangelises the vision.",
+    "community_notes": "FII Institute (Future Investment Initiative, run by Saudi Arabia's Public Investment Fund) connection: SAGE (Sovereign AI Governance Engine) announced at FII9 alongside Peter Diamandis. This is a notable institutional relationship but no formal partnership has been confirmed. 15 blog posts published between May 2025 and February 2026 show consistent content output. 'The Last Economy' book released 22 August 2025 provides the philosophical underpinning. Development team appears primarily Vietnam-based with contributors in Canada and elsewhere globally."
+  },
+
+  "freedom_score": {
+    "total_score": 42,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "No decentralised blockchain infrastructure exists yet. However, the project produces genuinely useful open-source AI models that anyone can download and run on their own hardware. II-Medical-8B (GGUF available for llama.cpp/Ollama/LM Studio), II-Search-4B (GGUF and MLX for Apple Silicon), and II-Thought-1.5B are all self-hostable with zero dependency on Intelligent Internet's servers. Once downloaded, these models run entirely locally. This is functional infrastructure decentralisation at the model layer, even without a blockchain. II-Agent can be self-hosted via Docker. II-Commons can be self-hosted with PostgreSQL. The planned blockchain (Bitcoin Core fork, 12 National Champions, BFT consensus) is ambitious but entirely theoretical. Scoring reflects: real self-hostable AI infrastructure exists today (models, agents, tools), but no distributed network, no validators, no consensus mechanism."
+      },
+      "governance_decentralisation": {
+        "score": 2,
+        "max": 20,
+        "evidence": "All decisions made by Mostaque as sole director of L42 Ltd (Companies House, England & Wales, incorporated 14 April 2024). No governance mechanism exists. No token voting, no DAO, no community decision-making processes. The whitepaper describes ambitious progressive decentralisation (multi-sig -> Oracle Council -> Living Constitution Assembly with sortition-selected jurors) but none is implemented. Apache 2.0 licensing does provide a form of soft governance: anyone can fork any repo and take the project in a different direction without permission. This is meaningful but not governance in the traditional sense. Scoring reflects: single-person control with no governance mechanisms, mitigated slightly by open-source licensing."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "No token launched. The whitepaper design describes Proof-of-Benefit mining with no pre-mine, mirroring Bitcoin's emission model (21M cap, block subsidies, halving). If implemented as described, this would score well: coins minted only through verified useful AI work, not pre-allocated to insiders. The design is structurally fairer than most crypto token launches. However: (1) the Treasury receives a programmable share of block rewards (percentage TBD), which could become a centralisation vector; (2) initial multi-sig control by 'founding Champions' (Phase 0-2) means insiders control funds before decentralisation; (3) key distribution parameters are undefined. Scoring generously for design intent since the PoB mining model, if executed honestly, would be one of the fairest distribution methods in the space. Significant discount for nothing being implemented."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "The open-source models and tools provide meaningful censorship resistance today, independent of any blockchain. Anyone can download II-Medical-8B, II-Search-4B, or II-Thought-1.5B from HuggingFace and run them locally. These are complete model weights, not API access. Once downloaded, no entity can revoke, restrict, or censor the models. II-Agent supports multiple LLM backends (Claude, Gemini, GPT-5) and can be self-hosted. II-Commons can be self-hosted. The models are trained on open-source base models (Qwen3) with open training datasets published on HuggingFace, enabling full reproducibility. The planned blockchain adds censorship-resistant settlement and identity (WebAuthn, no mandatory KYC, daily inference quotas per Champion). But the web app (agent.ii.inc) is a centralised service that could be taken down. Scoring reflects: genuine censorship resistance via downloadable self-hostable models and tools, but no censorship-resistant network layer yet."
+      },
+      "data_sovereignty": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Self-hosted models run entirely on the user's hardware with no data leaving the device. II-Medical-8B GGUF runs in llama.cpp or Ollama without any network calls. II-Agent can be self-hosted via Docker with local model backends. II-Commons can be deployed with a local PostgreSQL database. Training datasets are openly published, enabling users to train their own models. The planned L2 Personal Layer describes privacy-preserving local enclaves where global models fuse with personal data. Anchor-Sets with pubflag allow encrypted data pinning on-chain. However: the web app (agent.ii.inc) processes data through centralised servers; no zero-knowledge proofs implemented (Proof-of-Personhood ZK methodology explicitly TBD); no confidential computing. Scoring reflects: strong data sovereignty via local model execution, but the hosted services do not provide the same guarantees."
+      },
+      "open_source_transparency": {
+        "score": 13,
+        "max": 15,
+        "evidence": "This is the project's strongest dimension. 14 original repositories under Apache-2.0 on GitHub. 9 models published on HuggingFace with full weights downloadable. 20 datasets published openly. Training methodologies documented (3-stage medical RL, 4-phase search training, DAPO safety RL). Model benchmark results published with methodology. GGUF and MLX formats provided for local running. Third-party quantisations exist (DevQuasar), indicating genuine community adoption. The whitepaper and master plan are published in full. Companies House registration is public (L42 Ltd, Company 15644961). Blog publishes 15 posts with technical details. Deductions: (1) 8 of 22 GitHub repos are forks, which somewhat inflates apparent activity; (2) Mostaque's Stability AI track record includes documented misleading claims about credentials and partnerships, which is a transparency concern for the founder; (3) no formal security audit exists (but there is nothing requiring one yet since no smart contracts or blockchain are deployed); (4) corporate financials not disclosed."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "Intelligent Internet scores 42/100 (D grade), reflecting a project with genuinely strong open-source contributions but no decentralised infrastructure or governance. The open-source transparency score (13/15) is among the highest in our portfolio: downloadable models, open datasets, published training methodologies, and Apache 2.0 licensing throughout. The censorship resistance and data sovereignty scores (8/15 and 7/15) reflect the genuine sovereignty value of self-hostable AI models that run locally without server dependencies. Once you download II-Medical-8B, no one can take it away. However, governance (2/20) and infrastructure decentralisation (5/20) remain very low because no blockchain, no validators, no governance mechanisms, and no distributed network exist. The freedom score will need significant reassessment if and when the network launches. As a pre-token project, II is being scored on what it delivers today: open-source AI tools and models that enable individual sovereignty, wrapped in a vision for decentralised infrastructure that has not yet been built."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Open-source AI models that anyone can download and run locally: II-Medical-8B (clinical reasoning matching o1/GPT-4.5 on HealthBench at 8B parameters), II-Search-4B (91.8% SimpleQA), II-Thought-1.5B (RL reasoning). GGUF and MLX formats for consumer hardware.",
+      "II-Agent: functional open-source agent framework scoring 61.8% on Terminal Bench 2 (above Claude Code at 58.0%). Apache 2.0, self-hostable.",
+      "CommonGround: novel multi-agent orchestration protocol with Partner/Principal/Associate hierarchy.",
+      "20 open datasets on HuggingFace including II-Medical-Reasoning-SFT (2.2M samples) and II-Thought-RL-v0 (342k reasoning examples). Genuine contribution to open-source AI training commons.",
+      "Training methodologies documented and reproducible: 3-stage medical RL pipeline, 4-phase search training with Code-Integrated Reasoning, DAPO safety RL.",
+      "II-Medical-8B punches significantly above its weight: 8B model matching 32B-72B models on medical benchmarks (70.49% average). This is technically impressive and genuinely useful.",
+      "Consistent Apache 2.0 licensing across all original work. Real open-source commitment.",
+      "Intellectually coherent economic framework: Proof-of-Benefit tying currency minting to verified useful AI work is a genuine innovation over PoW and PoS.",
+      "The whitepaper is technically detailed and honest about what is TBD rather than fabricating specifications."
+    ],
+    "what_is_hype": [
+      "'Sovereign AI for a New World' framing overstates current reality. The project delivers excellent open-source AI tools. The 'new world' infrastructure does not exist yet.",
+      "The MIND Economy (Material, Intelligence, Network, Diversity capital tracking) is a philosophical framework presented in 'The Last Economy' book, not an implemented economic system.",
+      "'National Champions' as validators is a concept with no identified participants, no selection process, and no operational infrastructure. The geopolitical ambition (one per sovereign nation) is unrealistic in the near term.",
+      "The Living Constitution Assembly, Guardian Lattice, Oracle Council, and progressive decentralisation roadmap exist only as whitepaper descriptions with no implementation timeline.",
+      "SAGE (Sovereign AI Governance Engine) was announced at FII9 alongside Peter Diamandis but has not been shipped or demonstrated publicly.",
+      "8 of 22 GitHub repos are forks (OpenAI Codex, Google Gemini CLI, PPTist, reveal.js, litellm, verl), which inflates the apparent scope of original development.",
+      "The dual-currency model (FC + CC) is novel in theory but entirely untested with multiple undefined parameters."
+    ],
+    "key_risks": [
+      "Emad Mostaque key person risk: sole director of L42 Ltd, primary funder (presumed), public face, and vision-holder. His Stability AI track record is mixed: genuine achievement (Stable Diffusion, open-source advocacy) alongside documented controversies (co-founder fraud lawsuit, misleading credential/partnership claims, investor revolt, financial mismanagement at Stability). The question is whether the pattern from Stability AI repeats or whether lessons were learned.",
+      "No disclosed funding for Intelligent Internet. Building a three-layer blockchain with BFT consensus, 12+ validators, dual-currency AMMs, and Guardian Lattice requires significant capital. Self-funding from personal wealth is possible but unconfirmed.",
+      "No mainnet timeline. The whitepaper describes phases 0-4 but gives no dates. Phase 0 ('spec freeze') may not yet be complete as of March 2026.",
+      "Small team for the ambition: PitchBook lists 18 employees; core development appears to be a Vietnam-based ML team of 6-8 people. Building a novel blockchain on top of shipping AI models is a significant resource challenge.",
+      "The Bitcoin Core fork approach is unconventional. Most DeAI projects build on EVM, Cosmos, or Solana where tooling and ecosystems already exist. A custom L0 from a Bitcoin fork requires building everything from scratch: wallets, explorers, bridges, DeFi integrations.",
+      "Unofficial Solana token 'II' creates confusion and potential for user losses.",
+      "FII Institute connection (Saudi Arabia's sovereign wealth fund via PIF) adds geopolitical complexity. Sovereign AI infrastructure backed by a sovereign wealth fund raises questions about the 'sovereignty' framing.",
+      "II-Agent SWE-Bench Pro score (45.1%) is self-reported and not on the official Scale AI leaderboard. Benchmark claims should be independently verified.",
+      "All models are fine-tunes of Qwen3 (Alibaba). No foundation models trained from scratch. If Qwen3's licence or availability changes, the model pipeline is affected.",
+      "Medical AI (II-Medical) explicitly disclaims clinical use, but real-world usage cannot be controlled once models are downloaded. Liability and ethical risks exist."
+    ],
+    "competitive_advantages": [
+      "Mostaque's AI industry profile and 290k X following provide distribution for ideas and recruitment",
+      "II-Medical-8B demonstrates genuine ML capability: 8B model matching frontier models on medical benchmarks",
+      "II-Agent scores competitively on Terminal Bench (61.8% vs Claude Code 58.0%) as an open-source alternative to proprietary agents",
+      "Open datasets (II-Thought-RL-v0, II-Medical-Reasoning-SFT) are genuine contributions to the AI commons that benefit the entire ecosystem",
+      "Apache 2.0 licensing and GGUF/MLX format support show real commitment to local/self-hosted deployment",
+      "The Proof-of-Benefit design, if implemented, offers a genuinely novel consensus mechanism that aligns token minting with useful AI work",
+      "The whitepaper articulates a more ambitious and intellectually coherent vision than any existing DeAI project"
+    ],
+    "competitive_disadvantages": [
+      "No blockchain, no token, no network vs Morpheus (live), Bittensor (128 subnets), Akash (real revenue), Venice (1.3M users)",
+      "Small team (est. 18) with single director vs Bittensor (OTF + DCG ecosystem), Morpheus (multi-contributor), Akash (115-person Overclock Labs)",
+      "No disclosed funding vs Render ($35M raised), Akash ($2.8M + $75M Starbonds)",
+      "Custom chain approach means no existing ecosystem, DeFi integrations, wallet support, or developer tooling at launch",
+      "Mostaque's mixed reputation may deter institutional participation. Stability AI controversies are well-documented and will follow him.",
+      "All models are Qwen3 fine-tunes, not foundation models. The ML contribution is in training methodology, not base model capability.",
+      "The project must recruit 12+ National Champion validators with extreme hardware requirements (10 Gbit/s symmetric bandwidth) before genesis. No process described."
+    ],
+    "comparable_projects": [
+      "Morpheus (MOR) -- decentralised AI agent infrastructure with live compute marketplace and fair-launch token",
+      "Bittensor (TAO) -- incentivised AI network with subnet architecture and largest DeAI market cap",
+      "Akash Network (AKT) -- decentralised cloud marketplace with real revenue and permissionless providers",
+      "SingularityNET / ASI Alliance -- AI marketplace with governance ambitions and cross-chain deployment",
+      "Ritual -- AI infrastructure protocol for on-chain AI verification and inference",
+      "Prime Intellect -- decentralised AI training (Mostaque is an investor in Series A)",
+      "Open-source agent frameworks: OpenAI Codex CLI, OpenHands -- direct competitors to II-Agent"
+    ],
+    "outlook": "Intelligent Internet is producing genuinely useful open-source AI tools today. The models (II-Medical, II-Search), agent framework (II-Agent), datasets (II-Thought, II-Medical-Reasoning-SFT), and orchestration (CommonGround) are real, downloadable, self-hostable contributions to sovereign AI infrastructure. II-Medical-8B matching frontier models at 8B parameters is technically impressive. The whitepaper describes the most ambitious vision in the DeAI space, but the gap between that vision and current blockchain delivery is total: no chain, no token, no validators, no timeline. The next 12-18 months will determine whether this becomes a live protocol or remains an excellent open-source AI lab with a whitepaper. For practitioners: download and use the models and tools today. They work. They run locally. They contribute to your sovereignty. Do not treat any 'II' token on any chain as an official project token. Wait for concrete blockchain milestones (testnet, validator recruitment, token genesis) before evaluating the economic layer.",
+    "overall_assessment": "Intelligent Internet occupies a unique position in the DeAI landscape: it delivers more functional open-source AI outputs (models, datasets, agents, tools) than most token-bearing projects, but has no token and no decentralised infrastructure. The open-source contributions are genuine and useful. The training methodologies are novel. The philosophical and economic framework is intellectually ambitious. The founder is controversial but undeniably capable in the AI domain. The core question is execution: can a small team build a novel L0 blockchain while continuing to ship competitive AI models? And does Mostaque's track record at Stability AI predict the trajectory here? For the OYM thesis: the open-source model and tool outputs directly serve the sovereignty-first position today, regardless of whether the blockchain ever launches. Use what exists. Watch what comes next."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Intelligent Internet Official Website",
+      "url": "https://ii.inc/web",
+      "author": "Intelligent Internet",
+      "publisher": "Intelligent Internet",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["project overview", "core components (agents, datasets, models, systems)", "key releases", "community links", "copyright L42 Ltd"],
+      "reliability_notes": "Primary project website."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Intelligent Internet Whitepaper",
+      "url": "https://ii.inc/web/whitepaper",
+      "author": "Emad Mostaque",
+      "publisher": "Intelligent Internet",
+      "date_published": "2025-07-24",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["three-layer architecture (L0/L1/L2)", "BFT consensus", "Foundation Coins (21M cap, 50 FC/block, 2-epoch halving)", "Culture Credits", "Proof-of-Benefit (4 genesis benefit classes)", "National Champions (12 at genesis, 10 Gbit/s, <300ms interlink)", "Guardian Lattice (Sentinels, Advisers, Implementers)", "Oracle Council (15-seat, Phase 3+)", "slashing conditions", "Anchor-Sets", "OP_IDCLAIM identity", "post-quantum readiness (Dilithium migration path)", "Universal AI access tiers", "wrapped FC (wFC) on ERC-20/SPL"],
+      "reliability_notes": "Detailed technical whitepaper. All specifications are design-phase. Honestly labels undefined parameters as TBD."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Master Plan (open source, not so secret)",
+      "url": "https://ii.inc/web/blog/post/master-plan",
+      "author": "Intelligent Internet",
+      "publisher": "Intelligent Internet",
+      "date_published": "2025-07-24",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["MIND Economy (Material, Intelligence, Network, Diversity)", "dual-currency architecture", "three flywheels (Capital, Social, Trust)", "Living Constitution Assembly", "S-Curve quality progression (Bronze/Silver/Gold)", "Proof-of-Personhood mechanism"],
+      "reliability_notes": "More philosophical than technical. Describes economic framework at high level."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "github",
+      "title": "Intelligent-Internet GitHub Organisation",
+      "url": "https://github.com/Intelligent-Internet",
+      "author": "Intelligent Internet",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["22 total repos (14 original, 8 forks)", "repo list with stars/forks/languages", "contributor identification (20 unique)", "fork identification (OpenAI Codex, Google Gemini CLI, PPTist, reveal.js, litellm, verl)", "Apache-2.0 licensing", "Vietnam-based core development team"],
+      "reliability_notes": "Direct from GitHub. Repos individually verified as original or forked."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "github",
+      "title": "Intelligent-Internet/ii-agent Repository",
+      "url": "https://github.com/Intelligent-Internet/ii-agent",
+      "author": "Intelligent Internet",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["3,172 stars", "488 forks", "9 contributors on primary repo (2 primary: PhungVanDuy, khoangothe)", "Apache-2.0", "Python 59.8% / TypeScript 37.1%", "Docker support", "WebSocket server"],
+      "reliability_notes": "Direct from GitHub. Primary repo."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "huggingface",
+      "title": "Intelligent-Internet HuggingFace Organisation",
+      "url": "https://huggingface.co/Intelligent-Internet",
+      "author": "Intelligent Internet",
+      "publisher": "HuggingFace",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["9 models (II-Medical-8B, II-Medical-8B-1706, II-Medical-32B-Preview, II-Search-4B, II-Search-CIR-4B, II-Search-4B-MLX, II-Medical-8B-1706-GGUF, II-Medical-7B-Preview, II-Thought-1.5B-Preview)", "20 datasets", "10 team members identified", "download counts per model/dataset", "benchmark results", "GGUF and MLX format availability", "base models (Qwen3 family)"],
+      "reliability_notes": "Direct from HuggingFace. Download counts and team members verified. Third-party GGUF quantisations (DevQuasar) confirm community adoption."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "huggingface",
+      "title": "II-Medical-8B Model Card",
+      "url": "https://huggingface.co/Intelligent-Internet/II-Medical-8B",
+      "author": "Intelligent Internet",
+      "publisher": "HuggingFace",
+      "date_published": "2025-05-15",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["HealthBench: 40%", "avg medical benchmarks: 70.49%", "base model: Qwen3-8B", "3-stage training (SFT + RL + Safety RL, DAPO algorithm)", "1,480 downloads", "NOT for clinical use disclaimer"],
+      "reliability_notes": "Model card with self-reported benchmarks. HealthBench comparison to o1/GPT-4.5 is the project's claim."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "huggingface",
+      "title": "II-Medical-8B-1706 Model Card",
+      "url": "https://huggingface.co/Intelligent-Internet/II-Medical-8B-1706",
+      "author": "Intelligent Internet",
+      "publisher": "HuggingFace",
+      "date_published": "2025-06-17",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["HealthBench: 46.8%", "comparable to MedGemma-27B", "312 downloads"],
+      "reliability_notes": "Updated model version. Self-reported benchmarks."
+    },
+    {
+      "source_id": "S009",
+      "tier": 2,
+      "type": "benchmark",
+      "title": "Terminal Bench 2 Leaderboard",
+      "url": "https://www.tbench.ai/",
+      "author": "Terminal Bench",
+      "publisher": "Terminal Bench",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["II-Agent (Gemini 3 Pro): 61.8%", "Claude Code (Claude Opus 4.6): 58.0%", "Droid (GPT-5.3-Codex): 77.3% (top)", "OpenHands (Opus 4.5): 51.9%"],
+      "reliability_notes": "Third-party benchmark. II-Agent score independently verifiable on public leaderboard."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "benchmark",
+      "title": "Scale AI SWE-Bench Pro Public Leaderboard",
+      "url": "https://scale.com/leaderboard/swe_bench_pro_public",
+      "author": "Scale AI",
+      "publisher": "Scale AI",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["II-Agent NOT listed as a separate entry on the official leaderboard", "Top score (claude-opus-4-5): 45.89%"],
+      "reliability_notes": "II-Agent's claimed 45.1% SWE-Bench Pro score is self-reported and does not appear on the official Scale AI leaderboard. If accurate, would be competitive with frontier models."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "corporate_registry",
+      "title": "Companies House -- L42 Ltd",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15644961",
+      "author": "Companies House",
+      "publisher": "UK Government",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Company Number 15644961", "Incorporated 14 April 2024", "Sole director: Mohammad Emad Mostaque", "Registered office: Kensington High Street, London W8", "SIC 62020", "Active status", "Private limited company"],
+      "reliability_notes": "UK government corporate registry. Authoritative."
+    },
+    {
+      "source_id": "S012",
+      "tier": 2,
+      "type": "news",
+      "title": "TechCrunch -- Stability AI CEO resigns",
+      "url": "https://techcrunch.com/2024/03/22/stability-ai-ceo-resigns-because-youre-not-going-to-beat-centralized-ai-with-more-centralized-ai/",
+      "author": "TechCrunch",
+      "publisher": "TechCrunch",
+      "date_published": "2024-03-22",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Mostaque resignation March 2024", "investor pressure from Coatue and Lightspeed", "stated motivation: pursue decentralised AI"],
+      "reliability_notes": "Tier 1 tech publication."
+    },
+    {
+      "source_id": "S013",
+      "tier": 2,
+      "type": "news",
+      "title": "Fortune -- Stability AI cofounder sold stake for $100",
+      "url": "https://fortune.com/2023/07/21/stability-ai-cofounder-lawsuit-cyrus-hodes-ceo-emad-mostaque-stable-diffusion-tech-startups/",
+      "author": "Fortune",
+      "publisher": "Fortune",
+      "date_published": "2023-07-21",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Cyrus Hodes lawsuit", "$100 stake purchase", "fraud allegations", "$1B valuation timing"],
+      "reliability_notes": "Tier 1 business publication. Lawsuit is public record."
+    },
+    {
+      "source_id": "S014",
+      "tier": 2,
+      "type": "news",
+      "title": "Crunchbase -- Stability AI founder made misleading claims",
+      "url": "https://news.crunchbase.com/ai-robotics/stability-ai-founder-emad-mostaque-false-claims/",
+      "author": "Crunchbase News",
+      "publisher": "Crunchbase",
+      "date_published": "2023-06-01",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Forbes/Bloomberg investigation with 30+ sources", "misleading education claims (BA vs MA)", "Amazon partnership misrepresentation", "NGO partnership denials (UNESCO, OECD, WHO, World Bank)"],
+      "reliability_notes": "Based on Bloomberg reporting with 30+ sources."
+    },
+    {
+      "source_id": "S015",
+      "tier": 2,
+      "type": "news",
+      "title": "Fortune -- Stability AI CEO Mostaque steps down",
+      "url": "https://fortune.com/2024/03/23/stability-ai-ceo-emad-mostaque-steps-down-stable-diffusion/",
+      "author": "Fortune",
+      "publisher": "Fortune",
+      "date_published": "2024-03-23",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["resignation details", "investor pressure context", "$5.4M monthly revenue at departure", "Lightspeed letter October 2023"],
+      "reliability_notes": "Tier 1 business publication."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "news",
+      "title": "Grokipedia -- Emad Mostaque comprehensive biography",
+      "url": "https://grokipedia.com/page/Emad_Mostaque",
+      "author": "Grokipedia",
+      "publisher": "Grokipedia",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["full biography", "career history (Pictet, Capricorn, ECSTRAT)", "personal background (Jordan birth, Asperger's, son's autism)", "Stable Diffusion impact (100M+ downloads)", "Getty Images lawsuit outcome", "Cyrus Hodes lawsuit details"],
+      "reliability_notes": "Comprehensive biography cross-referenced with primary sources."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinSwitch -- Intelligent Internet (II) on Solana",
+      "url": "https://coinswitch.co/web3/ii-DjwB2SSpLsXwrecQoPnHFn3ki8SbDknurSirxX3oBAGS",
+      "author": "CoinSwitch",
+      "publisher": "CoinSwitch",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["unofficial Solana token existence", "zero liquidity", "no trading activity", "buying restricted"],
+      "reliability_notes": "This token appears to be an unofficial/unauthorised Solana memecoin. Zero liquidity, no price data. CoinSwitch notes 'no official description available.' NOT the official project token."
+    },
+    {
+      "source_id": "S018",
+      "tier": 3,
+      "type": "podcast",
+      "title": "The Cognitive Revolution -- Emad Mostaque on the Intelligent Internet and Universal Basic AI",
+      "url": "https://www.cognitiverevolution.ai/emad-mostaque-on-the-intelligent-internet-and-universal-basic-ai/",
+      "author": "The Cognitive Revolution",
+      "publisher": "The Cognitive Revolution",
+      "date_published": "2024-12-25",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["project vision", "Universal Basic AI concept"],
+      "reliability_notes": "Tier 3 podcast. Primary source for Mostaque's stated vision."
+    },
+    {
+      "source_id": "S019",
+      "tier": 3,
+      "type": "podcast",
+      "title": "The Cognitive Revolution -- The Machines Are Taking Our Jobs",
+      "url": "https://www.cognitiverevolution.ai/the-machines-are-taking-our-jobs-thank-god-emad-mostaques-guide-to-the-next-1000-days/",
+      "author": "The Cognitive Revolution",
+      "publisher": "The Cognitive Revolution",
+      "date_published": "2025-09-28",
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["updated project direction", "next-1000-days framing"],
+      "reliability_notes": "Tier 3 podcast."
+    },
+    {
+      "source_id": "S020",
+      "tier": 2,
+      "type": "research_report",
+      "title": "PitchBook -- Intelligent Internet profile",
+      "url": "https://pitchbook.com/profiles/company/844416-46",
+      "author": "PitchBook",
+      "publisher": "PitchBook",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["18 employees listed", "founded 2024", "London HQ", "Database Software category"],
+      "reliability_notes": "Business data platform. Funding details paywalled."
+    },
+    {
+      "source_id": "S021",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Intelligent Internet Terms and Conditions",
+      "url": "https://ii.inc/web/terms-and-conditions",
+      "author": "L42 Ltd",
+      "publisher": "Intelligent Internet",
+      "date_published": null,
+      "date_accessed": "2026-03-02",
+      "data_points_sourced": ["Legal entity: L42 Ltd trading as Intelligent Internet", "Company Number 15644961", "English law governing", "Contact: legal@ii.inc, it@ii.inc"],
+      "reliability_notes": "Official legal terms confirming entity details."
+    }
+  ],
+
+  "metrics_history": []
+}

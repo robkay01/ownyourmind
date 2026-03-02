@@ -63,8 +63,20 @@ Full frontmatter schemas: see `own-your-mind-claude-code-brief.md` lines 169–2
 - Mobile-first responsive layout
 - Ctrl+K search pattern
 
+## Project Research Protocol (MANDATORY)
+
+When researching a new project for the `projects` collection, you **must** follow `own-your-mind-research-plan.md` as a sequential step-by-step checklist. This is not optional guidance. It is a protocol.
+
+- Read the research plan before starting any new project research
+- Execute all seven steps in order, completing each before moving to the next
+- Do not produce the output JSON until all research steps are complete
+- Check all platforms: official docs, GitHub, HuggingFace, on-chain, Companies House/SEC, community channels
+- Follow the source tier hierarchy (Tier 1 > Tier 2 > Tier 3 > Tier 4)
+- Follow the JSON schema in Section 3.1 exactly (field names, enum values, null handling)
+
 ## Key Reference Documents
 
 - `own-your-mind-claude-code-brief.md` — Complete build specification with all decisions
 - `deai_site_structure.md` — Content strategy, editorial guidelines, competitive positioning
+- `own-your-mind-research-plan.md` — **MANDATORY** research protocol for new project research (7-step sequence, source tiers, JSON schema, freedom score rubric)
 - `own-your-mind-claude-code-brief.md` § "Data Maintenance" — Full pipeline docs (automated refresh, sparklines, staleness, quarterly review)
