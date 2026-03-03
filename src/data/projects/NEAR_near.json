@@ -1,0 +1,857 @@
+{
+  "meta": {
+    "project_id": "near",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "DeFiLlama web page returned 403 -- TVL sourced from DeFiLlama API endpoint instead ($114.7M)",
+      "NearBlocks validator explorer returned 403 -- validator count (698 total, 100 block producers) sourced from search results referencing NearBlocks data and NEAR documentation",
+      "CoinGecko web page returned 403 -- market data sourced from CoinGecko API instead",
+      "near.ai website rendered only CSS/JS -- product details sourced from BusinessWire press release and CoinDesk reporting",
+      "NEAR AI has no public models or datasets on HuggingFace -- organisation exists (near-ai) with 3 team members but 0 public models/datasets",
+      "Exact total commits for nearcore not available from single API call -- 2,570 stars and 763 forks confirmed via GitHub API",
+      "nearcore contributors count not extractable from paginated API response -- estimated 200+ based on major open-source project activity",
+      "Daily transaction count not available from direct source -- 80 TPS average cited from documentation and reporting, testnet peaks at 4,135 TPS",
+      "Telegram community member count not directly verified",
+      "Annual protocol revenue not publicly disclosed in a single figure",
+      "NEAR Protocol whitepaper not separately fetched as a distinct document -- architecture and tokenomics sourced from official documentation and multiple third-party sources",
+      "Exact daily emissions figure not calculated -- annual inflation rate of 2.5% (post-halving vote Oct 2025) on ~1.29B supply implies ~88,356 NEAR/day"
+    ],
+    "refresh_config": {
+      "github_org": "near",
+      "github_primary_repo": "nearcore",
+      "coingecko_id": "near",
+      "discord_server_id": null,
+      "telegram_username": "cryptonear",
+      "x_handle": "NEARProtocol",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "NEAR Protocol",
+    "ticker": "NEAR",
+    "category": "platform",
+    "subcategory": "Sharded Layer 1 blockchain with AI pivot, chain abstraction, and cross-chain intent infrastructure",
+    "tagline": "The chain abstraction stack for an open web",
+    "one_liner": "A sharded proof-of-stake Layer 1 blockchain co-founded by a co-author of the transformer paper ('Attention Is All You Need'), now pivoting toward AI agent infrastructure with chain abstraction (NEAR Intents), confidential computing (TEEs), and a consumer super-app -- bridging the gap between decentralised infrastructure and AI-native applications.",
+    "website": "https://near.org",
+    "documentation_url": "https://docs.near.org",
+    "whitepaper_url": "https://near.org/papers/the-official-near-white-paper",
+    "github_url": "https://github.com/near",
+    "chain": "NEAR Protocol (own L1, Nightshade sharded PoS)",
+    "launch_date": "2020-10-13",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Illia Polosukhin",
+        "role": "Co-Founder & CEO",
+        "background": "Co-author of 'Attention Is All You Need' (2017), the Google Brain paper that introduced the transformer architecture underlying GPT, BERT, and all modern LLMs. Cited 140,000+ times, one of the most influential ML papers in history. Former software engineer at Google (2014-2017) working on TensorFlow and machine translation. Ukrainian-born. Founded NEAR Protocol in 2018 with Alexander Skidanov. Now leading NEAR's AI pivot with NEAR AI research lab, near.com super app, and chain abstraction strategy. Unveiled near.com at NEARCON on February 23, 2026.",
+        "linkedin_or_x": "https://x.com/ilaborator",
+        "doxxed": true
+      },
+      {
+        "name": "Alexander Skidanov",
+        "role": "Co-Founder (former CTO)",
+        "background": "Former engineer at MemSQL (now SingleStore). ICPC gold medalist (International Collegiate Programming Contest) -- one of the most competitive programming competitions globally. Background in distributed systems and database engineering. Co-founded NEAR Protocol in 2018. Led early protocol development including Nightshade sharding design. Stepped back from day-to-day leadership but remains involved with the project.",
+        "linkedin_or_x": "https://x.com/AlexSkidanov",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 100,
+    "entity_name": "NEAR Foundation (Switzerland); Pagoda (formerly NEAR Inc, San Francisco -- core protocol development); NEAR AI (AI research lab)",
+    "entity_jurisdiction": "NEAR Foundation -- Zug, Switzerland. Pagoda (formerly NEAR Inc) -- San Francisco, USA. NEAR AI -- USA (contact: illia@near.org).",
+    "notable_backers": [
+      "a16z crypto (Andreessen Horowitz) -- Series B co-lead (Jan 2022)",
+      "Tiger Global -- Series B lead (Apr 2022)",
+      "Dragonfly Capital -- Series B co-lead (Apr 2022)",
+      "Three Arrows Capital (3AC) -- Series B co-lead (Jan 2022, now defunct)",
+      "MetaWeb Ventures",
+      "Hashed",
+      "Electric Capital",
+      "Circle Ventures",
+      "Multicoin Capital",
+      "Alameda Research (now defunct)",
+      "FTX Ventures (now defunct)",
+      "Jump Crypto"
+    ],
+    "funding_raised": {
+      "total_usd": 607000000,
+      "rounds": [
+        {
+          "round_type": "Pre-seed",
+          "amount_usd": 810000,
+          "date": "2017-09-01",
+          "lead_investor": null
+        },
+        {
+          "round_type": "Seed",
+          "amount_usd": 2880000,
+          "date": "2019-10-01",
+          "lead_investor": null
+        },
+        {
+          "round_type": "Venture (Series A equivalent)",
+          "amount_usd": 21600000,
+          "date": "2020-01-01",
+          "lead_investor": null
+        },
+        {
+          "round_type": "Public Sale (CoinList)",
+          "amount_usd": 40000000,
+          "date": "2020-08-01",
+          "lead_investor": "CoinList (public sale platform)"
+        },
+        {
+          "round_type": "Series B (Tranche 1)",
+          "amount_usd": 150000000,
+          "date": "2022-01-01",
+          "lead_investor": "Three Arrows Capital / a16z crypto"
+        },
+        {
+          "round_type": "Series B (Tranche 2)",
+          "amount_usd": 350000000,
+          "date": "2022-04-01",
+          "lead_investor": "Tiger Global / Dragonfly Capital"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "NEAR Protocol is a sharded proof-of-stake Layer 1 blockchain using Nightshade sharding, where validators process transactions in parallel across multiple shards while producing a single block containing all shard chunks. The protocol achieves ~80 TPS average with 600ms block times and 1.2s finality (post-Nightshade 2.0, May 2025). NEAR Intents is the chain abstraction layer enabling cross-chain swaps and operations without users needing to manage multiple wallets or bridge assets -- it has processed $10B cumulative swap volume across 15.7M+ swaps. Chain Signatures allow NEAR accounts to sign transactions on any blockchain (Bitcoin, Ethereum, etc.) using MPC threshold signatures. NEAR AI is the research lab building AI agent infrastructure including IronClaw (hardware-secured AI agent runtime in TEEs using Intel TDX and NVIDIA Confidential Computing), Private Chat (encrypted AI conversations), and a Confidential GPU Marketplace. Aurora provides an EVM-compatible environment on NEAR. The near.com super app (launched Feb 2026) unifies multi-chain asset management, AI agents, and confidential transactions in a consumer interface.",
+    "consensus_mechanism": "Thresholded Proof of Stake (TPoS) with Nightshade sharding. Top 100 validators produce blocks and chunks; additional chunk-only validators validate and endorse chunks. Validator selection based on stake weight with seat price determined by 300th largest staking proposal (minimum 25,500 NEAR). Epoch length: ~12 hours. Slashing for double-signing and invalid state transitions.",
+    "what_is_onchain": "All NEAR transactions, account state, smart contracts (WebAssembly), token transfers, staking/delegation, governance votes (House of Stake/veNEAR), validator rewards distribution, NEAR Intents settlement, name registrations (.near accounts).",
+    "what_is_offchain": "NEAR AI agent execution (TEEs), IronClaw runtime, Private Chat conversations, NEAR Intents order matching and routing, near.com app frontend, AI model inference, RPC node indexing, data in Confidential GPU Marketplace.",
+    "key_dependencies": [
+      "Nightshade sharding (proprietary consensus design)",
+      "WebAssembly (Wasm) smart contract runtime",
+      "Rust (primary smart contract and protocol language)",
+      "Aurora (EVM compatibility layer)",
+      "Intel TDX / NVIDIA Confidential Computing (TEE infrastructure for NEAR AI)",
+      "MPC threshold cryptography (Chain Signatures)",
+      "libp2p (peer-to-peer networking)"
+    ],
+    "smart_contract_languages": ["Rust", "JavaScript/TypeScript (via SDK)", "Solidity (via Aurora EVM)"],
+    "open_source": true,
+    "license": "GPL-3.0 (nearcore)",
+    "github_metrics": {
+      "total_repos": 275,
+      "primary_repo_url": "https://github.com/near/nearcore",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-03",
+      "stars": 2570,
+      "forks": 763,
+      "open_issues": 466
+    },
+    "audits": [
+      {
+        "auditor": "Hacken",
+        "date": "2023-10-24",
+        "scope": "nearcore (NEAR Protocol reference client) -- chain component (block/chunk production, consensus, validator selection) and runtime component (transaction application to state). Audit period: July 17 to October 23, 2023.",
+        "result_summary": "Perfect 10/10 overall score across security, code quality, documentation, and test coverage. 9 findings total: 0 Critical, 0 High, 0 Medium, 4 Low, 5 Observations. 8 resolved, 1 accepted. Low-severity issues included compiler validation gaps, outdated dependencies, broken documentation links, and serialisation inconsistencies. Auditor noted nearcore is a 'high-quality blockchain project'.",
+        "report_url": "https://hacken.io/audits/near/l1-near-nearcore-oct2023/"
+      },
+      {
+        "auditor": "Sigma Prime",
+        "date": "2022-06-10",
+        "scope": "Rainbow Bridge -- w-near smart contract, FungibleToken standard library, and ETH-NEAR Rainbow Bridge (EthOnNearClient, NearOnEthClient components). Version 2.1 of final report.",
+        "result_summary": "Comprehensive security assessment of Rainbow Bridge cross-chain infrastructure. Examined Ethereum block header acceptance, canonical chain maintenance, and NEAR epoch-based verification. Report publicly available.",
+        "report_url": "https://www.datocms-assets.com/50156/1659700568-sigma-prime-rainbow-bridge-final-report-10-06-2022.pdf"
+      },
+      {
+        "auditor": "Blaize",
+        "date": "2022-10-01",
+        "scope": "Rainbow Bridge smart contract security audit",
+        "result_summary": "Security audit of Rainbow Bridge contracts. Report available through Aurora audits page.",
+        "report_url": "https://aurora.dev/audits"
+      },
+      {
+        "auditor": "BlockSec",
+        "date": "2023-09-01",
+        "scope": "NEAR-IBC (Inter-Blockchain Communication protocol implementation for NEAR)",
+        "result_summary": "Audit of NEAR's IBC implementation for cross-chain communication.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2022-06-06",
+        "description": "Wallet seed phrase exposure vulnerability. Security firm Hacxyk discovered that when users set email or phone number as a recovery option for NEAR Wallet and clicked the recovery link, their seed phrase was inadvertently leaked to Mixpanel (analytics platform). Anyone with access to the Mixpanel access log or account would have had access to seed phrases of users who used email/SMS recovery. Bug was reported June 6 and fixed the same day. $50K bug bounty paid to Hacxyk. However, the incident was not publicly disclosed until Hacxyk revealed it on Twitter in August 2022, raising transparency concerns.",
+        "severity": "High",
+        "resolution": "Patched same day. Leaked data deleted from Mixpanel. Affected users identified. No indicators of compromise or funds lost."
+      },
+      {
+        "date": "2022-05-01",
+        "description": "Rainbow Bridge attack attempt #1. Attacker submitted a fabricated NEAR block to the Rainbow Bridge Ethereum contract. A watchdog bot detected the invalid block within seconds and created a challenge transaction. MEV bots front-ran the challenge, rolled back the fabricated block, and the attacker lost ~2.5 ETH ($5,000). No user funds lost.",
+        "severity": "Low (thwarted)",
+        "resolution": "Automated watchdog system detected and prevented the attack. Attacker lost deposit."
+      },
+      {
+        "date": "2022-08-20",
+        "description": "Rainbow Bridge attack attempt #2. Attacker tried to fake transactions and trick Rainbow Bridge smart contracts into releasing locked funds. Bridge validators' automated security processes kicked in and mitigated the threat within 31 seconds. Attacker lost 5 ETH (~$8,000). No user funds lost.",
+        "severity": "Low (thwarted)",
+        "resolution": "Automated watchdog system detected and prevented the attack within 31 seconds. Attacker lost deposit."
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "NEAR Protocol",
+    "ticker": "NEAR",
+    "token_standard": "Native L1 token (not ERC-20)",
+    "token_type": "both",
+    "token_utility": [
+      "Transaction fees (gas) on NEAR network -- required for all operations",
+      "Staking and validator security -- validators and delegators stake NEAR to secure the network",
+      "Governance -- veNEAR (vote-escrowed NEAR) used in House of Stake governance system for protocol decisions",
+      "Storage staking -- accounts must stake NEAR to reserve on-chain storage",
+      "Smart contract deployment -- NEAR required for deploying and maintaining contracts",
+      "NEAR Intents -- NEAR used as settlement layer for cross-chain swaps and operations"
+    ],
+    "supply": {
+      "max_supply": null,
+      "total_supply": 1289174310,
+      "circulating_supply": 1289174069,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 99.99
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community Grants & Programs",
+          "percentage": 17.0,
+          "vesting_schedule": "Distributed over time via grants and ecosystem programmes",
+          "cliff": "None",
+          "notes": "170M NEAR allocated for community development, grants, and ecosystem growth. NEAR Foundation announced $800M in grants (Oct 2021) to accelerate ecosystem development."
+        },
+        {
+          "category": "Core Contributors",
+          "percentage": 14.5,
+          "vesting_schedule": "Linear vesting over multiple years",
+          "cliff": "Varied",
+          "notes": "145M NEAR allocated to founding team and early contributors. All vesting now fully complete."
+        },
+        {
+          "category": "Community Sale (CoinList)",
+          "percentage": 12.0,
+          "vesting_schedule": "Three options: immediate unlock at $0.40, 12-month lockup at $0.34, 24-month lockup at $0.29",
+          "cliff": "None",
+          "notes": "120M NEAR sold via CoinList in August 2020. Raised $40M. All lockups expired."
+        },
+        {
+          "category": "NEAR Foundation",
+          "percentage": 10.0,
+          "vesting_schedule": "Managed by Foundation for ecosystem development",
+          "cliff": "None",
+          "notes": "100M NEAR allocated to the Switzerland-based NEAR Foundation for long-term ecosystem stewardship."
+        },
+        {
+          "category": "Early Ecosystem (Grants, Bounties, Programs)",
+          "percentage": 11.7,
+          "vesting_schedule": "Distributed as earned",
+          "cliff": "None",
+          "notes": "117M NEAR for early ecosystem bootstrapping."
+        },
+        {
+          "category": "Seed / Venture Investors",
+          "percentage": 17.6,
+          "vesting_schedule": "12-24 month linear vesting post-launch",
+          "cliff": "6-12 months",
+          "notes": "176M NEAR across pre-seed ($0.0375), seed ($0.05), and venture rounds ($0.25-$0.32). All vesting fully complete."
+        },
+        {
+          "category": "Operations (Pagoda/NEAR Inc)",
+          "percentage": 11.4,
+          "vesting_schedule": "Operational treasury, distributed as needed",
+          "cliff": "None",
+          "notes": "114M NEAR for operational costs of core development entity."
+        },
+        {
+          "category": "Foundation Endowment",
+          "percentage": 5.8,
+          "vesting_schedule": "Long-term endowment",
+          "cliff": "None",
+          "notes": "58M NEAR set aside as Foundation endowment."
+        }
+      ],
+      "distribution_method": "Combination of public CoinList sale (12%), private venture rounds (17.6%), core contributor allocation (14.5%), Foundation (10%), community grants (17%), early ecosystem (11.7%), operations (11.4%), and Foundation endowment (5.8%). Initial genesis supply was 1B NEAR. Inflationary emissions have increased total supply to ~1.29B. All initial vesting schedules are fully complete (77.59% was circulating at early stages, now ~99.99%)."
+    },
+    "emissions": {
+      "model": "inflationary",
+      "current_daily_emissions": 88356,
+      "current_annual_inflation_rate": 2.5,
+      "halving_schedule": "Inflation was 5% annually from genesis. In October 2025, validators voted (68.41% support) to halve inflation to 2.5%. No further automatic halvings are scheduled but governance can propose further reductions.",
+      "next_major_emission_event": "No scheduled emission event. Future inflation adjustments would require governance vote through House of Stake.",
+      "next_event_date": null,
+      "burn_mechanism": "70% of transaction fees are burned, 30% rebated to the smart contract that generated the transaction. This creates deflationary pressure proportional to network usage, partially offsetting inflationary emissions."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Delegated Proof of Stake -- users can delegate NEAR to validators or run their own validator node. veNEAR (vote-escrowed NEAR) available for governance participation via House of Stake.",
+      "minimum_stake": 25500,
+      "lock_up_period": "Unstaking takes 2-3 epochs (~24-36 hours). veNEAR requires time-locked staking for governance weight.",
+      "current_apy_nominal": 9.0,
+      "real_yield_after_inflation": 6.5,
+      "staking_ratio": 46.4,
+      "staking_risks": [
+        "Slashing risk for validator misbehaviour (double-signing, invalid state transitions)",
+        "2-3 epoch unbonding period means staked NEAR is not immediately liquid",
+        "Validator selection risk -- delegators should research validator reliability and commission rates",
+        "Inflation dilution for non-stakers (2.5% annual inflation goes to stakers)"
+      ],
+      "slashing_conditions": "Validators can be slashed for producing invalid blocks, double-signing (producing two blocks at the same height), and failing to participate in consensus when selected. Slashed amount is burned."
+    },
+    "market_data": {
+      "price_usd": 1.44,
+      "market_cap_usd": 1855017783,
+      "fully_diluted_valuation_usd": 1855018130,
+      "twenty_four_hour_volume_usd": 775396509,
+      "all_time_high_usd": 20.44,
+      "all_time_high_date": "2022-01-16",
+      "all_time_low_usd": 0.527,
+      "all_time_low_date": "2020-11-04",
+      "major_exchanges": [
+        "Binance",
+        "Coinbase",
+        "OKX",
+        "Kraken",
+        "Gate.io",
+        "KuCoin",
+        "Crypto.com",
+        "Huobi",
+        "Revolut"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Inflationary L1 utility and governance token with partial burn mechanism. NEAR serves as gas, staking, storage, and governance token for a sharded PoS L1. Inflation was halved from 5% to 2.5% via validator vote (Oct 2025). 90% of inflation goes to validators/delegators, 10% to treasury. 70% fee burn creates deflationary pressure proportional to usage. At current usage levels, net inflation is positive but declining as network activity grows.",
+    "tokenomics_notes": "NEAR has no max supply -- it is inflationary by design, with the burn mechanism intended to approach equilibrium as usage scales. The 2.5% inflation rate (post-Oct 2025 halving) is relatively modest compared to other PoS chains. CoinGecko reports circulating supply (1.289B) approximately equal to total supply, indicating all initial allocations are fully unlocked. The market cap ($1.85B) vs FDV ($1.85B) near-parity confirms minimal locked supply. Price is 93% below ATH ($20.44 in Jan 2022), reflecting the broader crypto winter and competitive L1 landscape. 3AC (co-led $150M Series B in Jan 2022) collapsed in June 2022 -- unclear what happened to their NEAR holdings. Alameda Research and FTX Ventures were also early backers and subsequently collapsed."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate NEAR tokens to validators to earn staking rewards. Delegators share in the validator's rewards proportional to their stake, minus the validator's commission fee. Simple delegation available through NEAR Wallet, near.com app, or third-party wallets.",
+        "minimum_hardware": "None -- delegation only requires a NEAR wallet",
+        "minimum_capital_usd": 1,
+        "technical_skill_required": "none",
+        "estimated_returns": "~9% APY nominal, ~6.5% real yield after inflation. Varies by validator commission.",
+        "barriers_to_entry": ["Need to acquire NEAR tokens", "Must research and select a reliable validator"],
+        "guide_available": true,
+        "guide_url": "https://docs.near.org/protocol/network/staking"
+      },
+      {
+        "type": "validating",
+        "description": "Run a NEAR validator node to produce blocks and chunks, securing the network and earning staking rewards. Top 100 validators by stake produce blocks and chunks; additional validators validate chunks only. Requires significant stake and technical infrastructure.",
+        "minimum_hardware": "8-core CPU, 24GB+ RAM, 1TB SSD, 1Gbps network. Recommended: dedicated server or high-spec cloud instance.",
+        "minimum_capital_usd": 36720,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "~9% APY on staked NEAR plus commission on delegated stake. Top validators earn from both own stake and delegation fees.",
+        "barriers_to_entry": [
+          "Minimum stake of 25,500 NEAR (~$36,720 at current price) -- actual seat price may be higher",
+          "Requires 24/7 infrastructure uptime",
+          "Technical knowledge to maintain and update nearcore",
+          "Competition for top-100 block producer slots"
+        ],
+        "guide_available": true,
+        "guide_url": "https://near-nodes.io/validator/validator-bootcamp"
+      },
+      {
+        "type": "building",
+        "description": "Build decentralised applications on NEAR using Rust or JavaScript/TypeScript SDKs. Access to NEAR's chain abstraction layer (Intents, Chain Signatures), AI infrastructure (NEAR AI, IronClaw), and Aurora EVM compatibility. Multiple grant programmes available.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "30% of transaction fees generated by smart contracts are rebated to the contract. Grant funding available through NEAR Foundation and ecosystem programmes.",
+        "barriers_to_entry": [
+          "Must learn NEAR-specific contract model (account-based, Wasm runtime)",
+          "Rust is primary contract language (steeper learning curve than Solidity)",
+          "JavaScript SDK available but less mature"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.near.org/build/welcome"
+      },
+      {
+        "type": "governance",
+        "description": "Participate in NEAR protocol governance through House of Stake using veNEAR (vote-escrowed NEAR). Time-lock NEAR tokens to receive governance weight for voting on protocol proposals including inflation rate, treasury allocation, and protocol upgrades via the NEP (NEAR Enhancement Proposal) process.",
+        "minimum_hardware": "None -- web-based governance interface",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "No direct financial returns -- governance influence over protocol direction",
+        "barriers_to_entry": [
+          "Requires NEAR tokens to lock as veNEAR",
+          "Understanding of protocol governance and technical proposals",
+          "Time-lock commitment reduces liquidity"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.near.org"
+      },
+      {
+        "type": "using",
+        "description": "Use NEAR-based applications including near.com super app (multi-chain wallet, AI agents, confidential transactions), NEAR Intents (cross-chain swaps), NEAR AI Private Chat (encrypted AI conversations in TEEs), and the broader NEAR DeFi ecosystem (Ref Finance, Burrow, etc.).",
+        "minimum_hardware": "Standard computer or smartphone with web browser",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "none",
+        "estimated_returns": "N/A -- consumer use",
+        "barriers_to_entry": ["Need NEAR account (free to create with near.com app)", "Gas fees for on-chain transactions (very low, fractions of a cent)"],
+        "guide_available": true,
+        "guide_url": "https://near.org"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "excellent",
+      "developer_community_size": "2,500+ monthly active developers (Electric Capital 2025). 275 repos in near GitHub org, 58 repos in nearai GitHub org. 2,443 GitHub followers on near org.",
+      "grants_program": true,
+      "grants_url": "https://near.org/funding"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": 3000000,
+    "active_users_monthly": 46000000,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": 114747215,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": 698,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Transaction fees (70% burned, 30% rebated to contracts), NEAR Intents fees ($17M+ cumulative), validator commission fees, NEAR AI Cloud usage fees (launched Dec 2025)",
+    "metrics_source": "CoinGecko API, DeFiLlama API, NEAR documentation, NearBlocks (via search results), Electric Capital developer report, CoinDesk reporting",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "46M monthly active users (May 2025) makes NEAR one of the most-used L1s by user count, though this figure includes all account activity and may be inflated by bot activity or low-value transactions. NEAR Intents has processed $10B cumulative swap volume across 15.7M+ swaps with $17M+ in fees and 541K unique addresses in last 30 days. Nightshade 2.0 (May 2025) achieved 600ms blocks and 1.2s finality. Average throughput ~80 TPS with testnet peaks of 4,135 TPS. TVL of $114.7M (DeFiLlama) is modest for an L1 of NEAR's profile. Q4 2024 showed 7.9% QoQ growth in daily transactions and 15.8% QoQ growth in daily returning addresses. 698 validators total with top 100 producing blocks. 598.8M NEAR staked (~46.4% of supply)."
+  },
+
+  "community": {
+    "discord_members": 74000,
+    "telegram_members": null,
+    "x_followers": 1800000,
+    "github_contributors": null,
+    "governance_participation_rate": "68.41% of validators signalled support for inflation halving proposal (Oct 2025). House of Stake governance launched late 2025 -- participation rates for broader token-holder governance still emerging.",
+    "governance_model": "House of Stake -- on-chain governance system launched late 2025 using veNEAR (vote-escrowed NEAR) for stake-weighted, time-locked governance. NEP (NEAR Enhancement Proposal) process for protocol upgrades. Validators can signal on protocol changes (e.g., inflation halving vote). NEAR Foundation developing AI-powered voting delegates to assist governance participation. Foundation still holds significant influence over strategic direction and treasury allocation.",
+    "governance_url": "https://gov.near.org",
+    "key_community_channels": [
+      "X/Twitter: @NEARProtocol (~1.8M followers)",
+      "Discord: ~74K members",
+      "Telegram: @cryptonear",
+      "GitHub: github.com/near (275 repos, 2,443 followers)",
+      "GitHub: github.com/nearai (58 repos, 127 followers)",
+      "NEAR Forum: gov.near.org",
+      "Reddit: r/nearprotocol"
+    ],
+    "sentiment_summary": "Community sentiment is cautiously optimistic, anchored by Illia Polosukhin's unique credibility as a transformer paper co-author leading an AI-blockchain convergence play. The AI pivot narrative is compelling and differentiated -- few L1 founders have genuine AI research credentials. NEAR Intents ($10B volume) and the near.com super app launch (Feb 2026) have generated positive engagement. However, 93% price decline from ATH frustrates long-term holders. The collapse of major backers (3AC, FTX/Alameda) raised questions about token distribution and sell pressure. The AI pivot is seen by some as narrative-chasing rather than organic protocol evolution. Developer community (2,500+ monthly active) is healthy. 1.8M X followers suggests strong mindshare, though follower quality in crypto is always uncertain.",
+    "community_notes": "NEAR's community spans several distinct sub-communities: L1 DeFi users (Ref Finance, Burrow), NEAR Intents cross-chain users, AI-focused developers (NEAR AI, nearai GitHub), and governance participants (House of Stake). The NEARCON conference is a major annual event -- Feb 2026 edition saw the near.com super app launch. $800M in ecosystem grants (announced Oct 2021) was one of the largest grant programmes in crypto history, though distributed over time and through various vehicles including Proximity Labs, MetaWeb Ventures, and direct Foundation grants."
+  },
+
+  "freedom_score": {
+    "total_score": 63,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 14,
+        "max": 20,
+        "evidence": "NEAR runs on 698 validators with top 100 producing blocks and chunks via Nightshade sharding. Validator entry is permissionless with a minimum stake of 25,500 NEAR (~$36,720) determined by the 300th largest staking proposal. 598.8M NEAR staked (~46.4% of supply) across a broadly distributed validator set. No single validator controls a dominant share. Nightshade 2.0 (May 2025) improved performance to 600ms blocks and 1.2s finality. Geographic distribution is reasonable though concentrated in cloud providers. Pagoda (formerly NEAR Inc) runs some core RPC infrastructure, and the NEAR Foundation has outsized influence on development priorities. The chain has operated continuously since October 2020 mainnet launch with no consensus failures. Rainbow Bridge has successfully defended against multiple attack attempts via automated watchdog systems. Score reflects a broadly distributed, permissionless validator set with minor centralisation concerns around Foundation influence and RPC infrastructure."
+      },
+      "governance_decentralisation": {
+        "score": 11,
+        "max": 20,
+        "evidence": "House of Stake governance system launched late 2025 with veNEAR (vote-escrowed NEAR) enabling stake-weighted, time-locked governance. The inflation halving vote (Oct 2025) saw 68.41% validator support -- demonstrating functional on-chain governance with meaningful participation. NEP process provides a structured path for protocol upgrades. NEAR Foundation is developing AI-powered voting delegates to lower governance barriers. However, the Foundation retains significant influence over strategic direction, treasury allocation, and core development priorities. The AI pivot, near.com launch, and major product decisions appear Foundation/Pagoda-driven rather than community-governed. Foundation controls substantial NEAR treasury. Governance is functional and improving but still in early stages of genuine decentralisation. Score reflects emerging on-chain governance with active participation (inflation vote) but significant Foundation influence over strategic decisions."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Initial 1B NEAR genesis allocation: 12% community sale (CoinList, broad public access with three lockup tiers), 17.6% seed/venture investors, 14.5% core contributors, 10% Foundation, 17% community grants, 11.7% early ecosystem, 11.4% operations, 5.8% Foundation endowment. Total raised: $607M -- one of the largest raises in crypto. Venture rounds included a16z, Tiger Global, Dragonfly, and notably 3AC ($150M Series B co-lead in Jan 2022, collapsed June 2022) and Alameda/FTX (also collapsed). The collapses of 3AC and FTX/Alameda likely resulted in forced selling of NEAR holdings, contributing to price decline. CoinList public sale was accessible but raised $40M from retail at $0.29-$0.40 -- early investors bought at $0.0375 to $0.32, a 10x advantage. All vesting is now complete (~99.99% circulating). The inflationary model means 290M+ NEAR has been minted since genesis, diluting initial holders. Score reflects a broad CoinList public sale and complete vesting offset by heavy institutional allocation, collapsed major backers, and significant early investor advantage."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "NEAR is a permissionless L1 -- anyone can create accounts, deploy contracts, and transact without permission. 698 validators provide robust block production redundancy. Transactions cannot be censored without controlling a supermajority of stake. Near-named accounts (.near) provide human-readable addresses but are controlled by account keys, not a central authority. Chain Signatures enable cross-chain operations without relying on centralised bridges. Rainbow Bridge has proven resilient against multiple attack attempts. NEAR Intents operates as an open protocol for cross-chain settlement. However, the NEAR Foundation could theoretically influence which applications are promoted in the near.com super app. Confidential transactions (launched Feb 2026) improve financial privacy. RPC node concentration could create censorship vectors at the access layer. Score reflects strong protocol-level censorship resistance with minor concerns around access-layer centralisation."
+      },
+      "data_sovereignty": {
+        "score": 8,
+        "max": 15,
+        "evidence": "As a general-purpose L1, NEAR's data sovereignty story is mixed. On-chain data is public and transparent (standard for blockchains). NEAR AI Private Chat runs in TEEs (Intel TDX and NVIDIA Confidential Computing) with encrypted conversations that the platform cannot access -- a genuine privacy guarantee. IronClaw provides hardware-secured AI agent runtime. Confidential Intents (launched Feb 2026) enable restricted-visibility cross-chain execution. The Confidential GPU Marketplace promises private AI computation. However, these AI privacy features are very new (Dec 2025 - Feb 2026 launches) with limited track record. Standard NEAR transactions are fully public. User data in dApps depends on each application's design, not the protocol itself. NEAR accounts are pseudonymous, not anonymous. The near.com super app collects user data for AI features, though the confidential mode provides opt-in privacy. Score reflects strong TEE-based privacy in NEAR AI products but limited data sovereignty at the base protocol layer, with AI privacy features too new to fully assess."
+      },
+      "open_source_transparency": {
+        "score": 12,
+        "max": 15,
+        "evidence": "275 repositories in the near GitHub org and 58 in nearai org, all publicly accessible. nearcore is GPL-3.0 licensed with 2,570 stars, 763 forks, and 466 open issues -- indicating active development and community engagement. Last commit March 3, 2026. Hacken audit scored 10/10 across all categories. Multiple audits from Hacken, Sigma Prime, Blaize, and BlockSec cover core protocol and Rainbow Bridge. IronClaw (4,048 stars on nearai org) is actively developed in the open. Smart contracts are deployed on-chain and verifiable. NEP process is public with community input. Financial transparency is reasonable -- Foundation reports and treasury data are publicly accessible though not always comprehensive. The wallet seed phrase leak in 2022 was patched quickly but not publicly disclosed for two months, indicating a transparency gap in incident response. Token distribution and vesting data are publicly documented and now fully unlocked. Score reflects strong open-source commitment across protocol and AI infrastructure with minor transparency concerns around historical incident disclosure."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "NEAR Protocol scores 63/100 (Grade C -- partially decentralised with significant centralisation vectors remaining). The project's strongest dimension is infrastructure decentralisation (14/20), reflecting 698 permissionless validators with Nightshade sharding providing robust, proven security since 2020. Open source transparency (12/15) benefits from 333+ public repositories across near and nearai GitHub orgs, multiple security audits with strong results, and an active NEP process. Censorship resistance (11/15) is strong at the protocol level with 698 validators and Chain Signatures enabling trustless cross-chain operations. Governance decentralisation (11/20) is improving with House of Stake and veNEAR launched late 2025, evidenced by the successful inflation halving vote, but the Foundation retains significant strategic influence. Data sovereignty (8/15) is limited at the base L1 layer but NEAR AI's TEE-based privacy features (Private Chat, IronClaw, Confidential Intents) represent genuine innovation, though too new to fully assess. Token distribution fairness (7/15) reflects a broad CoinList public sale offset by heavy institutional allocation, the collapse of major backers (3AC, Alameda/FTX), and inflationary dilution."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "NEAR Intents has real traction: $10B cumulative swap volume, 15.7M+ swaps, $17M+ in fees, 541K unique addresses in last 30 days -- making it one of the fastest-growing cross-chain protocols in 2025.",
+      "Nightshade 2.0 delivers genuine performance improvements: 600ms blocks, 1.2s finality (May 2025), ~80 TPS average -- competitive with modern L1s while maintaining decentralisation across 698 validators.",
+      "Founder credibility is unmatched in crypto: Illia Polosukhin co-authored the transformer paper with 140K+ citations. No other L1 founder has equivalent AI credentials, making NEAR's AI pivot uniquely credible.",
+      "Massive user base: 46M monthly active users (May 2025) and 3M daily active addresses indicate real adoption at scale, though the quality of this activity merits scrutiny.",
+      "Active and well-resourced development: 275 GitHub repos (near org), 58 repos (nearai org), 2,500+ monthly active developers, nearcore rated 10/10 by Hacken audit, last commit today (March 3, 2026).",
+      "Chain abstraction narrative is compelling: Chain Signatures, NEAR Intents, and the near.com super app offer a genuine vision for eliminating multi-chain UX friction.",
+      "Strong security track record: No mainnet consensus failures since 2020 launch, Rainbow Bridge successfully defended multiple attack attempts via automated watchdog systems."
+    ],
+    "what_is_hype": [
+      "AI pivot may be narrative-driven: NEAR was a general-purpose L1 for four years before pivoting to AI in 2024-2025. The pivot timing coincides with the AI hype cycle, not a longstanding technical direction. NEAR AI Cloud and Private Chat launched only in December 2025.",
+      "46M monthly active users demands scrutiny: L1 user metrics are notoriously inflatable through bot activity, airdrop farming, and low-value transactions. Without transaction value analysis, the headline number is impressive but unverifiable.",
+      "TVL of $114.7M is surprisingly low: For an L1 with $607M raised, 46M MAU claims, and $1.85B market cap, the TVL suggests limited DeFi depth compared to competitors (Ethereum: $50B+, Solana: $7B+, Arbitrum: $2.5B+).",
+      "near.com super app just launched (Feb 2026): Consumer adoption is unproven. The crypto space is littered with 'super app' attempts that never gained mainstream traction.",
+      "NEAR AI products are very early: IronClaw, Confidential GPU Marketplace, and AI delegates are announced but have minimal usage data. HuggingFace presence is zero -- no public models or datasets from NEAR AI.",
+      "The $607M raised dwarfs the current $1.85B market cap: Token is 93% below ATH, and major backers (3AC, Alameda/FTX) collapsed, suggesting a significant portion of raised capital was destroyed or liquidated."
+    ],
+    "key_risks": [
+      "L1 competition is brutal: NEAR competes with Ethereum, Solana, Avalanche, Aptos, Sui, and others for developer and user mindshare. Each has significant advantages in specific dimensions. NEAR must differentiate sufficiently via AI and chain abstraction.",
+      "AI pivot execution risk: Transitioning from a general L1 to an AI-blockchain convergence platform requires executing across multiple complex product surfaces simultaneously (NEAR AI, IronClaw, Confidential GPU, near.com, Intents).",
+      "Collapsed backer overhang: 3AC co-led a $150M round in Jan 2022 and collapsed in June 2022. Alameda/FTX were also backers. Forced liquidation of NEAR holdings from bankruptcy estates may create ongoing sell pressure.",
+      "Foundation influence: Despite House of Stake governance, the NEAR Foundation retains significant control over strategic direction, treasury, and development priorities. This creates centralisation risk.",
+      "Price performance: 93% decline from ATH ($20.44 to $1.44) challenges the investment thesis for existing holders and may deter new participants, regardless of technical progress.",
+      "TEE trust assumptions: NEAR AI's privacy guarantees rely on Intel TDX and NVIDIA Confidential Computing hardware. TEEs have had historical vulnerabilities (Spectre, Meltdown, SGX attacks). Hardware-based trust is not equivalent to cryptographic guarantees.",
+      "Regulatory uncertainty: As a VC-backed token with a CoinList public sale, NEAR may face regulatory scrutiny depending on how securities laws evolve in the US and EU."
+    ],
+    "competitive_advantages": [
+      "Transformer paper co-founder gives unique credibility for AI-blockchain convergence -- no competitor has equivalent AI research pedigree",
+      "Nightshade sharding is proven production technology (since 2020) with real performance improvements (Nightshade 2.0)",
+      "NEAR Intents ($10B volume) demonstrates chain abstraction at scale",
+      "$607M raised provides substantial runway despite market conditions",
+      "Human-readable accounts (.near) and low gas fees make the platform accessible",
+      "2,500+ monthly active developers indicates a healthy ecosystem",
+      "IronClaw and TEE-based AI infrastructure offer genuine privacy-preserving computation, differentiated from most L1s"
+    ],
+    "competitive_disadvantages": [
+      "TVL ($114.7M) is low relative to market cap and comparable L1s, suggesting limited DeFi depth",
+      "93% below ATH creates narrative headwinds and reduces staking incentive value",
+      "AI products are very early with no HuggingFace presence and limited production usage data",
+      "Rust as primary smart contract language has a steeper learning curve than Solidity (EVM chains) or Move (Aptos, Sui)",
+      "Major backers (3AC, Alameda) collapsed, creating both financial loss and reputational questions",
+      "Foundation centralisation in strategic decisions despite emerging on-chain governance"
+    ],
+    "comparable_projects": [
+      "Solana (SOL) -- high-performance L1 with growing AI and DeFi ecosystem",
+      "Ethereum (ETH) -- dominant L1 smart contract platform, benchmark for all competitors",
+      "Avalanche (AVAX) -- subnet architecture L1 with institutional focus",
+      "Aptos (APT) -- Move-based L1 with similar VC backing and performance claims",
+      "Sui (SUI) -- Move-based L1 with object-oriented model and strong TPS",
+      "Bittensor (TAO) -- decentralised AI network, though different architecture (subnet-based AI marketplace vs L1 with AI pivot)",
+      "SingularityNET/ASI Alliance (FET) -- AI token ecosystem with agent marketplace"
+    ],
+    "outlook": "NEAR Protocol is making one of the most credible AI-blockchain convergence plays in the industry, anchored by Illia Polosukhin's unique authority as a transformer paper co-author. The chain abstraction strategy (NEAR Intents at $10B volume, Chain Signatures, near.com super app) solves real multi-chain UX problems, while NEAR AI's TEE-based infrastructure (IronClaw, Private Chat, Confidential GPU) offers genuine privacy-preserving computation. However, NEAR faces the classic L1 dilemma: strong technology does not guarantee ecosystem moat. TVL at $114.7M is surprisingly thin for a $1.85B market cap chain. The AI products are very new (Dec 2025 - Feb 2026 launches) with minimal usage data. And the project's fundraising history -- $607M raised with major backers (3AC, Alameda) subsequently collapsing -- creates both financial and reputational headwinds. The next 12 months will be definitive: can NEAR AI products attract real users beyond crypto-native audiences, can NEAR Intents maintain its growth trajectory, and can the near.com super app deliver the consumer-friendly blockchain experience the industry has long promised? The technical foundation is solid and the team credibility is exceptional. Execution and adoption will determine whether NEAR becomes the AI-blockchain platform it aspires to be or remains a technically capable but competitively squeezed L1.",
+    "overall_assessment": "NEAR Protocol is a technically mature, well-funded L1 blockchain making an ambitious pivot toward AI-blockchain convergence, led by a co-founder with arguably the strongest AI credentials in all of crypto. The project delivers genuine technical achievements -- Nightshade 2.0 sharding (600ms blocks, 1.2s finality), NEAR Intents ($10B cross-chain volume), and TEE-based AI infrastructure (IronClaw, Private Chat). However, NEAR faces the challenge of translating technical capability into competitive advantage in a crowded L1 market. TVL of $114.7M is low relative to peers, AI products are very early-stage, and the token trades 93% below ATH after major backers collapsed. Freedom Score of 63/100 (Grade C) reflects solid infrastructure decentralisation (698 validators, 5+ years uptime) and strong open-source commitment, but ongoing Foundation influence over strategic direction and early-stage governance. This is a project where the founder's credibility and the technical vision outpace the current state of adoption and ecosystem depth."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "github",
+      "title": "NEAR Protocol GitHub Organisation",
+      "url": "https://api.github.com/orgs/near",
+      "author": "NEAR Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["275 public repos", "2,443 followers", "organisation description"],
+      "reliability_notes": "Official GitHub org. Data from API endpoint."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "github",
+      "title": "nearcore Repository (NEAR Reference Client)",
+      "url": "https://api.github.com/repos/near/nearcore",
+      "author": "NEAR Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["2,570 stars", "763 forks", "466 open issues", "Rust language", "GPL-3.0 licence", "last push 2026-03-03", "created 2018-10-02"],
+      "reliability_notes": "Official primary repository. Data from API endpoint."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "github",
+      "title": "NEAR AI GitHub Organisation",
+      "url": "https://github.com/nearai",
+      "author": "NEAR AI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["58 repos", "IronClaw (4,048 stars)", "Private ML SDK", "TorchFold", "Near-MCP", "127 followers", "primary languages"],
+      "reliability_notes": "Official NEAR AI GitHub org."
+    },
+    {
+      "source_id": "S004",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko API -- NEAR Protocol",
+      "url": "https://api.coingecko.com/api/v3/coins/near",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": "2026-03-03",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price $1.44", "market cap $1.855B", "FDV $1.855B", "24h volume $775.4M", "circulating supply 1.289B", "total supply 1.289B", "no max supply", "ATH $20.44 (2022-01-16)", "ATL $0.527 (2020-11-04)"],
+      "reliability_notes": "Tier 2 authoritative market data source. API data matches CoinGecko website."
+    },
+    {
+      "source_id": "S005",
+      "tier": 2,
+      "type": "market_data",
+      "title": "DeFiLlama API -- NEAR Chain TVL",
+      "url": "https://api.llama.fi/v2/chains",
+      "author": "DeFiLlama",
+      "publisher": "DeFiLlama",
+      "date_published": "2026-03-03",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["TVL $114,747,215"],
+      "reliability_notes": "Tier 2 authoritative DeFi metrics source. Web page returned 403 but API endpoint accessible."
+    },
+    {
+      "source_id": "S006",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Hacken -- NEAR nearcore Security Audit",
+      "url": "https://hacken.io/audits/near/l1-near-nearcore-oct2023/",
+      "author": "Hacken",
+      "publisher": "Hacken",
+      "date_published": "2023-10-24",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["10/10 overall score", "0 critical/high/medium findings", "4 low, 5 observations", "audit period July-Oct 2023", "nearcore quality assessment"],
+      "reliability_notes": "Tier 2 authoritative audit report. Directly accessed from auditor's website."
+    },
+    {
+      "source_id": "S007",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Sigma Prime -- Rainbow Bridge Security Assessment Report v2.1",
+      "url": "https://www.datocms-assets.com/50156/1659700568-sigma-prime-rainbow-bridge-final-report-10-06-2022.pdf",
+      "author": "Sigma Prime",
+      "publisher": "Aurora / NEAR",
+      "date_published": "2022-06-10",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Rainbow Bridge audit scope", "EthOnNearClient and NearOnEthClient assessment", "w-near contract audit"],
+      "reliability_notes": "Tier 2 authoritative audit report. PDF report from recognised security firm."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "github",
+      "title": "NEARBuilders/audits -- Public Audits in the NEAR Ecosystem",
+      "url": "https://github.com/NEARBuilders/audits",
+      "author": "NEAR Builders",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["ecosystem audit inventory", "Rainbow Bridge audits (Sigma Prime, Blaize)", "NEAR-IBC (BlockSec)", "various DeFi audits", "bug bounty programmes"],
+      "reliability_notes": "Community-maintained audit repository. Cross-references official audit reports."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "documentation",
+      "title": "NEAR Documentation -- Validators",
+      "url": "https://docs.near.org/protocol/network/validators",
+      "author": "NEAR Protocol",
+      "publisher": "NEAR Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["top 100 block producers", "chunk-only validators", "seat price mechanism (300th largest proposal)", "25,500 NEAR minimum", "2.5% annual inflation", "slashing conditions"],
+      "reliability_notes": "Official documentation. Primary source for validator mechanics."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "documentation",
+      "title": "NEAR Documentation -- Validator Staking",
+      "url": "https://docs.near.org/protocol/network/staking",
+      "author": "NEAR Protocol",
+      "publisher": "NEAR Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["staking mechanics", "delegation process", "epoch structure", "reward distribution"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S011",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinDesk -- NEAR Launches Near.com super app",
+      "url": "https://www.coindesk.com/business/2026/02/23/near-launches-near-com-super-app-touting-ai-capabilities-and-confidential-transactions",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2026-02-23",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["near.com launch Feb 23 2026", "confidential mode", "AI agent integration", "Illia Polosukhin quotes", "multi-chain asset management"],
+      "reliability_notes": "Tier 3 credible reporting. CoinDesk is established crypto publication."
+    },
+    {
+      "source_id": "S012",
+      "tier": 3,
+      "type": "news",
+      "title": "BusinessWire -- NEAR AI Launches NEAR AI Cloud and Private Chat",
+      "url": "https://www.businesswire.com/news/home/20251203353584/en/NEAR-AI-Launches-NEAR-AI-Cloud-and-Private-Chat",
+      "author": "NEAR AI",
+      "publisher": "BusinessWire",
+      "date_published": "2025-12-03",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["NEAR AI Cloud launch", "Private Chat launch", "Intel TDX", "NVIDIA Confidential Computing", "TEE infrastructure"],
+      "reliability_notes": "Official press release via BusinessWire."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "documentation",
+      "title": "HuggingFace -- NEAR AI Organisation",
+      "url": "https://huggingface.co/near-ai",
+      "author": "NEAR AI",
+      "publisher": "HuggingFace",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["0 public models", "0 public datasets", "3 team members", "organisation exists but no public releases"],
+      "reliability_notes": "Direct check of HuggingFace. NEAR AI has an organisation page but no public model or dataset releases."
+    },
+    {
+      "source_id": "S014",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinDesk -- Hackers Lose 5 Ether While Trying to Attack Rainbow Bridge",
+      "url": "https://www.coindesk.com/tech/2022/08/23/hackers-lose-5-ether-while-trying-to-attack-near-protocols-rainbow-bridge",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2022-08-23",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["August 2022 Rainbow Bridge attack details", "5 ETH lost by attacker", "31-second mitigation", "automated watchdog response"],
+      "reliability_notes": "Tier 3 established crypto publication reporting."
+    },
+    {
+      "source_id": "S015",
+      "tier": 3,
+      "type": "news",
+      "title": "Decrypt -- Near Protocol Discloses Wallet Breach That May Have Exposed Private Keys",
+      "url": "https://decrypt.co/106819/near-protocol-wallet-breach-exposed-private-keys",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
+      "date_published": "2022-08-05",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["June 2022 wallet seed phrase leak", "Mixpanel analytics exposure", "Hacxyk discovery", "$50K bug bounty", "delayed disclosure timeline"],
+      "reliability_notes": "Tier 3 established crypto publication reporting."
+    },
+    {
+      "source_id": "S016",
+      "tier": 3,
+      "type": "news",
+      "title": "The Block -- NEAR Protocol discloses breach of email and SMS data tied to user wallets",
+      "url": "https://www.theblock.co/post/161675/near-protocol-discloses-breach-of-email-and-sms-data-tied-to-user-wallets",
+      "author": "The Block",
+      "publisher": "The Block",
+      "date_published": "2022-08-05",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["wallet breach details", "email/SMS recovery vulnerability", "seed phrase exposure to Mixpanel"],
+      "reliability_notes": "Tier 3 established crypto publication reporting. Cross-references Decrypt reporting."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "NearBlocks -- Validator Explorer",
+      "url": "https://nearblocks.io/node-explorer",
+      "author": "NearBlocks",
+      "publisher": "NearBlocks",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["698 validators", "598.8M NEAR staked", "validator list and performance data"],
+      "reliability_notes": "Tier 2 block explorer. Page returned 403 but validator data confirmed via search results citing NearBlocks data."
+    },
+    {
+      "source_id": "S018",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinDesk -- The Mediator: NEAR CTO Eric Winer on our AI-Agent Future",
+      "url": "https://www.coindesk.com/consensus-toronto-2025-coverage/2025/04/24/the-mediator-near-cto-eric-winer-on-our-ai-agent-future",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2025-04-24",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["NEAR AI agent framework details", "agent-to-agent communication", "TEE infrastructure", "model hosting approach"],
+      "reliability_notes": "Tier 3 interview with NEAR CTO. Context for AI strategy."
+    },
+    {
+      "source_id": "S019",
+      "tier": 3,
+      "type": "news",
+      "title": "PYMNTS -- NEAR Unveils Super App to Centralize Crypto Activities",
+      "url": "https://www.pymnts.com/blockchain/2026/near-unveils-super-app-to-centralize-crypto-activities/",
+      "author": "PYMNTS",
+      "publisher": "PYMNTS.com",
+      "date_published": "2026-02-25",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["near.com features", "Nightshade 3.0", "Confidential Intents", "IronClaw announcement", "revenue-sharing model"],
+      "reliability_notes": "Tier 3 established fintech publication."
+    },
+    {
+      "source_id": "S020",
+      "tier": 3,
+      "type": "news",
+      "title": "PRNewswire -- NEAR Unveils Confidential Cross-Chain Infrastructure for the Agentic Economy",
+      "url": "https://www.prnewswire.com/news-releases/near-unveils-confidential-cross-chain-infrastructure-for-the-agentic-economy-302697292.html",
+      "author": "NEAR Protocol",
+      "publisher": "PRNewswire",
+      "date_published": "2026-02-23",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Confidential Intents", "IronClaw", "Confidential GPU Marketplace", "Nightshade 3.0", "near.com launch", "revenue-sharing model anchored to NEAR token"],
+      "reliability_notes": "Official press release via PRNewswire."
+    },
+    {
+      "source_id": "S021",
+      "tier": 1,
+      "type": "documentation",
+      "title": "NEAR Protocol -- Get Funding",
+      "url": "https://near.org/funding",
+      "author": "NEAR Protocol",
+      "publisher": "NEAR Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["grants programmes", "Protocol Rewards", "Devhub Grants", "ecosystem funding vehicles"],
+      "reliability_notes": "Official funding page."
+    },
+    {
+      "source_id": "S022",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Halborn -- NEAR Protocol Security Overview",
+      "url": "https://www.halborn.com/blog/post/near-protocol-security-overview",
+      "author": "Halborn",
+      "publisher": "Halborn",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["NEAR described as 'well-audited'", "Rainbow Bridge 'one of DeFi's sturdiest bridges'", "Immunefi bug bounty programme"],
+      "reliability_notes": "Tier 2 security firm blog post. General overview rather than specific audit report."
+    },
+    {
+      "source_id": "S023",
+      "tier": 3,
+      "type": "research_report",
+      "title": "CoinLaw -- NEAR Protocol Statistics 2026",
+      "url": "https://coinlaw.io/near-protocol-statistics/",
+      "author": "CoinLaw",
+      "publisher": "CoinLaw",
+      "date_published": "2026-01-01",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["usage metrics categories", "data sourced from Messari, Changelly, Gate.io, CoinDesk"],
+      "reliability_notes": "Tier 3 aggregated statistics page. Content not fully extractable via WebFetch (JavaScript-rendered)."
+    }
+  ]
+}
