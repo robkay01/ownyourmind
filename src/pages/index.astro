@@ -6,12 +6,6 @@ import MeshGradient from '../components/MeshGradient.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
 import { getCollection } from 'astro:content';
 
-const journalEntries = (await getCollection('journal'))
-  .filter((e) => !e.data.draft)
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
-
-const latestPost = journalEntries[0];
-
 // Featured projects: top 4 by freedom score
 const allProjects = (await getCollection('projects'))
   .filter((e) => !e.data.draft)
@@ -39,19 +33,7 @@ const sections = [
     href: '/tokenomics/',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M8 10h8M8 14h8"/></svg>`,
   },
-  {
-    title: 'Build',
-    description: 'Hands-on tutorials and guides. Run your own nodes, set up hardware, deploy models.',
-    href: '/build/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-  },
-  {
-    title: 'Journal',
-    description: 'Weekly dispatches from the frontier of decentralised AI.',
-    href: '/journal/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
-  },
-  {
+{
     title: 'Resources',
     description: 'Reference material, directories, and tools for the decentralised AI ecosystem.',
     href: '/resources/',
@@ -84,10 +66,10 @@ const sections = [
             Start here
           </a>
           <a
-            href="/journal/"
+            href="/projects/"
             class="inline-flex items-center px-6 py-3 rounded-lg border border-[var(--color-border)] text-[var(--color-text-secondary)] font-medium hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-primary)] transition-colors no-underline"
           >
-            Latest journal
+            View projects
           </a>
         </div>
       </div>
@@ -153,27 +135,6 @@ const sections = [
             </a>
           ))}
         </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Latest Journal Entry -->
-  {latestPost && (
-    <section class="py-12 border-t border-[var(--color-border)]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-baseline justify-between mb-6">
-          <h2 class="text-2xl font-bold">Latest from the journal</h2>
-          <a href="/journal/" class="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] no-underline transition-colors">
-            View all &rarr;
-          </a>
-        </div>
-        <Card href={`/journal/${latestPost.id}/`}>
-          <div class="text-sm text-[var(--color-text-tertiary)] mb-2">
-            {latestPost.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-          </div>
-          <h3 class="text-xl font-semibold mb-2">{latestPost.data.title}</h3>
-          <p class="text-[var(--color-text-secondary)]">{latestPost.data.description}</p>
-        </Card>
       </div>
     </section>
   )}

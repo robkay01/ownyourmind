@@ -45,29 +45,6 @@ const tokenomics = defineCollection({
   }),
 });
 
-const build = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/build' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    difficulty: z.enum(['beginner', 'intermediate', 'advanced']),
-    category: z.enum(['hardware', 'walkthrough', 'examples']),
-    publishDate: z.coerce.date(),
-    draft: z.boolean().default(false),
-  }),
-});
-
-const journal = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/journal' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    publishDate: z.coerce.date(),
-    tags: z.array(z.string()).default([]),
-    draft: z.boolean().default(false),
-  }),
-});
-
 const resources = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/resources' }),
   schema: z.object({
@@ -82,7 +59,5 @@ export const collections = {
   'why-deai': whyDeai,
   projects,
   tokenomics,
-  build,
-  journal,
-  resources,
+resources,
 };
