@@ -1,0 +1,1007 @@
+{
+  "meta": {
+    "project_id": "vana",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "Whitepaper is a PDF hosted on CDN -- could not be parsed directly via WebFetch. Architecture and tokenomics details reconstructed from official documentation pages, blog posts, and secondary sources",
+      "Vanascan.io (block explorer) is JavaScript-rendered -- on-chain metrics like total transactions, active validators, and address counts could not be extracted via WebFetch",
+      "CoinGecko returned 403 for the web page -- market data sourced from CoinGecko API and CryptoRank instead",
+      "CoinMarketCap page is JavaScript-dependent -- market data not extractable via WebFetch",
+      "DeFiLlama returned 403 -- DataDex TVL ($984K) sourced from search snippets referencing DeFiLlama",
+      "Exact number of active L1 validators on mainnet not publicly disclosed -- docs state validators are currently run by professional node operators (PoSA) with planned transition to permissionless",
+      "Exact number of active Satya validators (TEE data validators) not available from docs or explorer",
+      "No HuggingFace presence found for Vana -- confirmed by prior research agent",
+      "Telegram community member count not verifiable -- official Telegram group exists (@Vana_Offcial_Chat) but member count not extractable",
+      "X (Twitter) follower count for @withvana sourced from search snippets (286K for @vana handle) -- JavaScript-rendered page not directly verifiable",
+      "Exact staking APY is dynamic and approximate -- docs reference ~6% base rate for data validator staking, with variability based on total staked and validator count",
+      "Bug bounty programme listed on ecosystem page as Immunefi integration but no live Vana programme found on Immunefi -- may be forthcoming",
+      "Corsali Inc (dba Open Data Labs) corporate registration details (state, date) not independently verified -- entity name confirmed from opendatalabs.xyz",
+      "Annual revenue figures for the protocol not publicly disclosed",
+      "Exact daily transaction count (1.7M claimed May 2025) not independently verifiable from block explorer due to JS rendering"
+    ],
+    "refresh_config": {
+      "github_org": "vana-com",
+      "github_primary_repo": "personal-server",
+      "coingecko_id": "vana",
+      "discord_server_id": null,
+      "telegram_username": "Vana_Offcial_Chat",
+      "x_handle": "withvana",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "Vana",
+    "ticker": "VANA",
+    "category": "data",
+    "subcategory": "User-owned data and data sovereignty for AI",
+    "tagline": "An open protocol for portable, user-owned data",
+    "one_liner": "A decentralised data ownership network where users contribute personal data to DataDAOs, earn proportional rewards, and collectively train AI models -- all on an EVM-compatible L1 blockchain with privacy-preserving validation via Trusted Execution Environments.",
+    "website": "https://www.vana.org",
+    "documentation_url": "https://docs.vana.org",
+    "whitepaper_url": "https://cdn.prod.website-files.com/662488d48afbf9b21e25c7d2/674f6289079193fb53f7caa1_Vana_whitepaper_Dec24_updated.pdf",
+    "github_url": "https://github.com/vana-com",
+    "chain": "Vana L1 (EVM-compatible Proof-of-Stake chain)",
+    "launch_date": "2024-12-16",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Anna Kazlauskas",
+        "role": "Co-Founder & CEO",
+        "background": "MIT '19 (Economics). Former engineer at Celo (blockchain company). Started in crypto via MIT Bitcoin Club in 2015. Previously worked as a policy advisor in East Timor. Co-created Vana as an MIT Media Lab class project in the 'Emergent Ventures' course taught by Ramesh Raskar. Filipino heritage.",
+        "linkedin_or_x": "https://www.linkedin.com/in/annakaz/",
+        "doxxed": true
+      },
+      {
+        "name": "Art Abal",
+        "role": "Co-Founder & COO",
+        "background": "Harvard graduate. Former data collection lead at Appen. Met Anna Kazlauskas in MIT Media Lab 'Emergent Ventures' class. Filipino heritage. Co-founded Vana in 2021.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 14,
+    "entity_name": "Corsali Inc dba Open Data Labs (core developer); Vana Foundation (protocol steward)",
+    "entity_jurisdiction": "Corsali Inc / Open Data Labs -- San Francisco, USA (state of incorporation not verified). Vana Foundation -- Cayman Islands (registered c/o Highvern Cayman Limited, Elgin Court, Grand Cayman, KY1-1106).",
+    "notable_backers": [
+      "Paradigm -- led $18M Series A (December 2022)",
+      "Coinbase Ventures -- led $5M strategic round (September 2024)",
+      "Polychain Capital -- led $2M seed round (December 2021)",
+      "YZi Labs (prev. Binance Labs) -- strategic investment (February 2025), CZ joined as advisor",
+      "Casey Caruso -- Series A participant",
+      "Packy McCormick -- Series A participant",
+      "GSR -- investor",
+      "Manifold -- investor",
+      "SCB 10X -- investor",
+      "DeFiance Capital -- investor",
+      "Contango Digital Assets -- investor",
+      "Auros Ventures -- investor",
+      "MH Ventures -- investor",
+      "BoxGroup -- investor",
+      "Will Manidis -- investor"
+    ],
+    "funding_raised": {
+      "total_usd": 25000000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": 2000000,
+          "date": "2021-12-01",
+          "lead_investor": "Polychain Capital"
+        },
+        {
+          "round_type": "Series A",
+          "amount_usd": 18000000,
+          "date": "2022-12-01",
+          "lead_investor": "Paradigm"
+        },
+        {
+          "round_type": "Strategic",
+          "amount_usd": 5000000,
+          "date": "2024-09-18",
+          "lead_investor": "Coinbase Ventures"
+        },
+        {
+          "round_type": "Strategic",
+          "amount_usd": null,
+          "date": "2025-02-24",
+          "lead_investor": "YZi Labs (prev. Binance Labs)"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Vana operates a two-layer architecture on an EVM-compatible Proof-of-Stake L1 blockchain. The Data Liquidity Layer validates, tokenises, and facilitates data trading through DataDAOs (decentralised data pools). The Data Portability Layer ensures cross-application data sharing while maintaining user control via Personal Servers -- user-controlled nodes that store plaintext data and serve it to authorised parties through grant-enforced APIs. Users encrypt and sign data contributions with keys they control (OpenPGP password-based encryption with HKDF-SHA256 key derivation). Data validation occurs through the Satya Network -- a group of Trusted Execution Environment (TEE) nodes running Intel TDX hardware that execute Proof-of-Contribution functions. Each DataDAO implements its own PoC function tailored to its data type, validating authenticity, ownership, quality, and uniqueness. On-chain smart contracts (DataPortabilityPermissions, DataPortabilityServers, DataPortabilityGrantees, DataRegistry) manage consent, permissions, server registration, and file records. The Data Portability RPC Gateway provides a caching layer for low-latency reads with eventual consistency to the chain.",
+    "consensus_mechanism": "Proof-of-Stake (PoS). L1 validators stake VANA tokens (max effective balance 35,000 VANA) for block production, transaction validation, and finality. Uses Geth execution client and Prysm beacon chain client. At launch, validators are run by professional node operators (Proof-of-Staked-Authority) with planned transition to permissionless validator set.",
+    "what_is_onchain": "Server registrations, grant permissions, file records, data schemas, DataDAO registrations, reward distribution, VRC-20 data token contracts, staking contracts, consent and revocation records. All permission grants are enforced on-chain -- nobody including Vana core contributors can modify data permissions.",
+    "what_is_offchain": "Plaintext user data (stored in Personal Servers -- desktop, cloud MicroVM, or self-hosted). Encrypted data blobs on storage backends (Vana Storage, Google Drive, Dropbox, or IPFS). Proof-of-Contribution computation inside TEEs (Satya validators). Data Portability RPC Gateway caching layer.",
+    "key_dependencies": [
+      "Intel TDX (Trusted Domain Extensions) for Satya validator TEE hardware",
+      "Geth (execution layer client) and Prysm (consensus layer) for the PoS chain",
+      "OpenPGP for data encryption",
+      "EIP-191 and EIP-712 for authentication signatures",
+      "Stargate and Hyperlane for cross-chain bridging",
+      "The Graph and Goldsky for data indexing"
+    ],
+    "smart_contract_languages": ["Solidity"],
+    "open_source": true,
+    "license": "Apache-2.0 (smart contracts), MIT (personal-server)",
+    "github_metrics": {
+      "total_repos": 83,
+      "primary_repo_url": "https://github.com/vana-com/personal-server",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-02",
+      "stars": 113,
+      "forks": 24,
+      "open_issues": 0
+    },
+    "audits": [
+      {
+        "auditor": "Hashlock",
+        "date": "2024-12-01",
+        "scope": "Data & Treasury Implementation smart contracts",
+        "result_summary": "Rating: Secure. First Hashlock audit covering core data and treasury contracts.",
+        "report_url": "https://hashlock.com/wp-content/uploads/2024/08/Vana-Smart-Contract-Audit-Report-Final-Report-v2.pdf"
+      },
+      {
+        "auditor": "Hashlock",
+        "date": "2024-12-01",
+        "scope": "Updates/DLP/Multisend Implementation smart contracts",
+        "result_summary": "Rating: Secure. Second audit covering DLP updates and multisend functionality.",
+        "report_url": "https://hashlock.com/wp-content/uploads/2024/08/Vana-2nd-Smart-Contract-Audit-Report-Final-Report-v2.pdf"
+      },
+      {
+        "auditor": "Hashlock",
+        "date": "2025-07-01",
+        "scope": "Query/DLP/VanaEpoch Implementation smart contracts",
+        "result_summary": "Rating: Secure. Third audit covering query, DLP, and epoch reward contracts.",
+        "report_url": "https://hashlock.com/wp-content/uploads/2024/08/Vana-3rd-Smart-Contract-Audit-Report-Final-Report-v1.pdf"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "DLPRoot Restructure (NM0451-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "DLPRootV2 (NM0383-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "veVANA Tokens (NM0451-0469-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "Vana Contracts (NM0451-0486-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "Data Access v0 (NM0451-0503-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      },
+      {
+        "auditor": "Nethermind",
+        "date": null,
+        "scope": "DLPReward & VRC20 (NM0451-0519-FINAL)",
+        "result_summary": "Audit completed. Full report available on GitHub.",
+        "report_url": "https://github.com/vana-com/vana-smart-contracts"
+      }
+    ],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "Vana",
+    "ticker": "VANA",
+    "token_standard": "Native L1 token (also available as ERC-20 via OFT cross-chain bridges)",
+    "token_type": "both",
+    "token_utility": [
+      "Network security: validator staking to secure the PoS chain",
+      "Transaction fees: gas for all data operations, smart contracts, and applications on Vana L1",
+      "Data validator staking: staking VANA on Satya validators to earn emissions rewards",
+      "Default data currency: primary payment method for DataDAO data access",
+      "Trading pair: primary pair for VRC-20 DataDAO tokens on DataDex",
+      "Governance: voting on protocol decisions and parameters via Tally and Snapshot"
+    ],
+    "supply": {
+      "max_supply": 120000000,
+      "total_supply": 119880000,
+      "circulating_supply": 30800000,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 25.67
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community",
+          "percentage": 44.0,
+          "vesting_schedule": "20.3% unlocked at TGE, remainder unlocked linearly over 36 months with 6-month unlock frequency",
+          "cliff": "None",
+          "notes": "Includes Binance Launchpool allocation (4% / 4.8M VANA) and airdrops. 46.136% of community allocation unlocked at TGE, then 8.977% every 6 months."
+        },
+        {
+          "category": "Ecosystem",
+          "percentage": 22.9,
+          "vesting_schedule": "4.8% unlocked at TGE, remainder unlocked over 48 months",
+          "cliff": "None",
+          "notes": "Dedicated to grants and rewards that drive long-term growth of the Vana network."
+        },
+        {
+          "category": "Core Contributors",
+          "percentage": 18.8,
+          "vesting_schedule": "5-year vest: 1-year cliff then 4-year linear unlock",
+          "cliff": "13 months",
+          "notes": "0% unlocked at TGE. Allocated to the team responsible for protocol development."
+        },
+        {
+          "category": "Investors",
+          "percentage": 14.2,
+          "vesting_schedule": "4-year vest: 1-year cliff then 3-year linear unlock",
+          "cliff": "13 months",
+          "notes": "0% unlocked at TGE. Allocated to early supporters (Paradigm, Polychain, Coinbase Ventures, etc.)."
+        }
+      ],
+      "distribution_method": "Combination of Binance Launchpool (farming), community airdrop, and vesting schedules for contributors and investors. Community + Ecosystem total 66.9% of supply."
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "None -- fixed supply cap of 120M VANA",
+      "next_major_emission_event": "Ongoing monthly/biannual token unlocks across community, ecosystem, contributor, and investor categories",
+      "next_event_date": null,
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Non-rebasing position staking (L1 validator staking and data validator staking)",
+      "minimum_stake": null,
+      "lock_up_period": "Subject to unlock/cooldown periods set by staking contracts -- specific durations not disclosed",
+      "current_apy_nominal": 6.18,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Cooldown period for unstaking -- specific duration not disclosed",
+        "L1 validator staking requires max effective balance of 35,000 VANA",
+        "Data validator staking rewards are currently fixed at ~6% APY but planned to become dynamic based on data access fees"
+      ],
+      "slashing_conditions": "Not documented in current documentation"
+    },
+    "market_data": {
+      "price_usd": 1.45,
+      "market_cap_usd": 44680000,
+      "fully_diluted_valuation_usd": 174090000,
+      "twenty_four_hour_volume_usd": 2610000,
+      "all_time_high_usd": 35.23,
+      "all_time_high_date": "2024-12-17",
+      "all_time_low_usd": 1.36,
+      "all_time_low_date": "2026-02-19",
+      "major_exchanges": [
+        "Binance",
+        "Coinbase",
+        "Bybit",
+        "KuCoin",
+        "Gate.io",
+        "Bitget",
+        "MEXC",
+        "CoinEx"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Fixed-supply utility and governance token with structured vesting. 66.9% allocated to community and ecosystem. No inflationary emissions or burn mechanism. Revenue model centres on data access fees paid in VANA.",
+    "tokenomics_notes": "TGE listing price on Binance was $27.56 (16 Dec 2024). Current price represents a ~95% decline from ATH. The VRC-20 standard (introduced April 2025) replaced direct VANA emissions to DataDAOs with liquidity-focused incentives for compliant data tokens. ICODrops reports 48.11M VANA (40.09%) currently unlocked with 71.77M (59.81%) still locked as of March 2026."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "contributing",
+        "description": "Contribute personal data to DataDAOs via the Data Connect desktop app or platform-specific data connectors. Export data from platforms like Reddit, Twitter/X, ChatGPT, LinkedIn, Amazon, and health platforms. Data is validated via Proof-of-Contribution in TEEs and users earn proportional rewards.",
+        "minimum_hardware": "Desktop computer (for Data Connect app) or mobile device",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Proportional to data contribution quality and volume -- varies by DataDAO",
+        "barriers_to_entry": ["Requires exporting personal data from platforms", "Must use Data Connect desktop app or platform-specific integrations"],
+        "guide_available": true,
+        "guide_url": "https://docs.vana.org"
+      },
+      {
+        "type": "staking",
+        "description": "Stake VANA tokens via data validator staking at stake.vana.org. Non-rebasing position model where rewards compound automatically. Estimated ~6.18% APY based on recent activity.",
+        "minimum_hardware": "None -- web-based staking portal",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "~6.18% APY (nominal, subject to change based on total staked and validator count)",
+        "barriers_to_entry": ["Must hold VANA tokens", "Unstaking subject to cooldown period"],
+        "guide_available": true,
+        "guide_url": "https://docs.vana.org/network/staking-bridging"
+      },
+      {
+        "type": "validating",
+        "description": "Run an L1 validator node to produce blocks and secure the Vana PoS chain. Requires staking VANA (max effective balance 35,000 VANA). Currently permissioned (PoSA) with planned transition to permissionless.",
+        "minimum_hardware": "Mainnet: 8-core CPU, 32 GB RAM, 1.2 TB SSD, x86-64 architecture",
+        "minimum_capital_usd": 50750,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "VANA token rewards for block production and transaction validation",
+        "barriers_to_entry": ["Currently permissioned -- run by professional node operators", "High hardware requirements", "35,000 VANA stake (~$50,750 at current prices)"],
+        "guide_available": true,
+        "guide_url": "https://github.com/vana-com/vana"
+      },
+      {
+        "type": "validating",
+        "description": "Run a Satya validator (TEE data validator) to validate data contributions for DataDAOs using Intel TDX hardware. Process Proof-of-Contribution jobs and earn VANA rewards per validation.",
+        "minimum_hardware": "Intel TDX-enabled machine (specific specs in Satya documentation)",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "VANA tokens per completed validation job plus data contributor fees",
+        "barriers_to_entry": ["Requires Intel TDX-capable hardware", "Technical setup via Docker", "Limited availability of TDX-enabled machines"],
+        "guide_available": true,
+        "guide_url": "https://docs.vana.org/network/validators"
+      },
+      {
+        "type": "building",
+        "description": "Build applications on Vana using the Vana Connect SDK, Personal Server APIs, or deploy DataDAOs. The protocol supports builder registration, data access via grants, and integration with the Data Portability RPC Gateway.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Access to user-owned data for AI applications; potential DataDAO token rewards",
+        "barriers_to_entry": ["Must understand EVM smart contracts and Vana protocol", "Requires user grant permissions for data access"],
+        "guide_available": true,
+        "guide_url": "https://docs.vana.org/protocol-reference/full-specification"
+      },
+      {
+        "type": "governance",
+        "description": "Participate in Vana governance by voting on protocol proposals via Tally (on-chain) and Snapshot (off-chain). Token holders influence key protocol parameters and DataDAO operations.",
+        "minimum_hardware": "None -- web-based voting",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "No direct financial returns -- governance influence over protocol direction",
+        "barriers_to_entry": ["Must hold VANA tokens to vote"],
+        "guide_available": true,
+        "guide_url": "https://docs.vana.org"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "Vana Builder Garden Discord with 3,619 members",
+      "grants_program": true,
+      "grants_url": "https://www.vana.org"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": 1700000,
+    "tvl_usd": 984100,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Data access fees paid in VANA, transaction fees (gas), DataDAO participation fees",
+    "metrics_source": "Vana blog (May 2025), DeFiLlama (DataDex TVL), CoinGecko API",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "1.3M+ users reported on testnet/mainnet (May 2025 blog post). 1.7M daily transactions claimed (May 2025). 300+ DataDAOs established. 16 DataDAOs in active incubation. 12M+ data points onboarded. 140,000 Reddit users in r/datadao. Daily transaction count not independently verifiable from block explorer due to JS rendering. TVL figure is for DataDex only (the DEX on Vana chain)."
+  },
+
+  "community": {
+    "discord_members": 77548,
+    "telegram_members": null,
+    "x_followers": 286100,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": "Progressive decentralisation. At genesis, Vana Foundation stewards the VANA token and treasury. Governance uses Tally (on-chain) and Snapshot (off-chain) for proposal voting. Phase 3 (12-18 months post-launch) targets transition to full community governance via Vana DAO. DataDAOs have independent governance via their own tokens granting voting rights and profit-sharing. Foundation explicitly states it does not own or control the decentralised Vana Network.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.gg/n78nJVBUsm (77,548 members)",
+      "Vana Builder Garden Discord: discord.gg/vanabuilders (3,619 members)",
+      "X/Twitter: @withvana (also @vana with 286K followers)",
+      "Telegram: @Vana_Offcial_Chat",
+      "GitHub: github.com/vana-com (83 repos)"
+    ],
+    "sentiment_summary": "Strong narrative around user data ownership and AI sovereignty. Community grew rapidly through Binance Launchpool and airdrop campaigns. The r/datadao community (140K users) demonstrates organic interest in data ownership. Developer community is growing with 83 GitHub repos and dedicated Builder Garden Discord. Token price decline from ATH ($35.23 to $1.45, ~95% drop) has dampened short-term sentiment, though the project continues to ship product updates and attract partnerships.",
+    "community_notes": "Community skews towards data contributors rather than DeFi traders. Strong adoption in Southeast Asia, South America, and Europe. Notable partnership with Flower Labs for user-owned foundation model training."
+  },
+
+  "freedom_score": {
+    "total_score": 59,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Vana L1 currently operates under Proof-of-Staked-Authority (PoSA) where validators are run by professional node operators and reputable institutions selected by the team. This is permissioned infrastructure with a stated plan to transition to permissionless validation. Satya validators (TEE nodes) require specialised Intel TDX hardware, creating a hardware dependency bottleneck. Personal Servers offer three hosting options including self-hosted, but the default is ODL Cloud (Vana-operated). Data storage backends include centralised options (Google Drive, Dropbox) alongside IPFS. Cross-chain bridging relies on Stargate and Hyperlane. The chain uses standard Geth/Prysm clients. Score reflects permissioned validator set with credible decentralisation roadmap but current centralisation vectors."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Governance infrastructure exists (Tally on-chain and Snapshot off-chain) but the Vana Foundation currently stewards the token and treasury. Progressive decentralisation is planned with Phase 3 (12-18 months) targeting community governance via Vana DAO. The Foundation is a Cayman Islands entity. DataDAOs have independent governance with their own tokens. No evidence of active on-chain governance votes or participation metrics found during research. The Foundation states it does not control the network, but at this stage team influence over protocol direction remains significant. Score reflects functional governance tools with limited community control at present."
+      },
+      "token_distribution_fairness": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Community + Ecosystem allocation totals 66.9% of supply (44% community + 22.9% ecosystem), which is a strong community-weighted distribution. Core Contributors receive 18.8% with 5-year vesting (1-year cliff). Investors receive 14.2% with 4-year vesting (1-year cliff). No tokens unlocked for insiders at TGE. However, only 25.67% of supply is currently circulating, meaning most community tokens are still locked. Binance Launchpool distributed 4% (4.8M tokens). The ~95% price decline from ATH suggests early holders who received community allocation at TGE had significant advantage. Score reflects reasonable allocation split with meaningful vesting, offset by low current float."
+      },
+      "censorship_resistance": {
+        "score": 9,
+        "max": 15,
+        "evidence": "The protocol design enforces that 'nobody -- not even Vana core contributors -- can modify data permissions; only the data owner' controls access. Permission grants are recorded on-chain and cannot be tampered with. Data revocation takes immediate effect. However, the permissioned validator set means the Foundation could theoretically influence transaction inclusion. Personal Server hosting via ODL Cloud (Vana-operated MicroVMs) creates a censorship vector for users who do not self-host. The Data Connect desktop app acts as the primary interface, creating a client-side dependency. DataDAOs could independently set terms that restrict participation. Score reflects strong architectural censorship resistance offset by current operational centralisation."
+      },
+      "data_sovereignty": {
+        "score": 13,
+        "max": 15,
+        "evidence": "Data sovereignty is Vana's core value proposition and the strongest dimension. Users control their data through EVM wallet keys. Data is encrypted with user-derived keys (OpenPGP + HKDF-SHA256) before upload -- Vana infrastructure never sees plaintext. Personal Servers are the 'only protocol component that sees plaintext data' and users can self-host them. Three-layer security: blockchain (permission grants), server (signature validation), and encryption (user-derived keys). Grant/revocation system gives users real-time control over who accesses their data. Data deletion writes permanent tombstones. Storage backend options include self-custody (IPFS, self-hosted). TEE validation means even data validators process data inside secure enclaves. Score reflects industry-leading data sovereignty design with only minor concerns around default cloud hosting."
+      },
+      "open_source_transparency": {
+        "score": 13,
+        "max": 15,
+        "evidence": "83 repositories in the vana-com GitHub organisation under Apache-2.0 and MIT licences. Key repos actively maintained: personal-server (113 stars, 196 commits, updated Mar 2026), vana-smart-contracts (19 stars, 98 commits, Apache-2.0), data-connect (18 stars, 646 commits). Smart contracts audited by both Hashlock (3 audits, all rated 'Secure') and Nethermind (6 audits). Full protocol specification published in documentation. Contract addresses published for mainnet and testnet. Responsible disclosure programme active (dev@vana.org). Immunefi bug bounty listed as ecosystem partner but no live programme found. Treasury transparency not fully documented. Score reflects comprehensive open source with extensive audit coverage, offset by limited treasury visibility."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Vana scores 59/100 (Grade C -- partially decentralised with significant centralisation vectors). The project excels in data sovereignty (13/15) -- its core value proposition of user-controlled, encrypted, self-custodied data with on-chain permission enforcement is genuinely strong. Open source transparency (13/15) is also excellent with 83 public repos, multiple audits, and published specifications. However, infrastructure decentralisation (8/20) and governance decentralisation (8/20) are the weakest dimensions due to the permissioned validator set (PoSA), Foundation-controlled treasury, and early-stage governance. The project has a credible progressive decentralisation roadmap but at this stage, the team retains significant control over infrastructure and protocol direction. Token distribution (8/15) is reasonable with 66.9% to community/ecosystem but hampered by low circulating supply (25.67%)."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "User data sovereignty architecture is genuinely innovative -- on-chain consent enforcement, user-derived encryption keys, and Personal Server model give users real control over their data",
+      "1.3M+ users and 300+ DataDAOs demonstrate meaningful adoption beyond typical crypto projects, with organic communities like r/datadao (140K Reddit users)",
+      "Strong investor backing (Paradigm, Coinbase Ventures, Polychain, YZi Labs/CZ) provides runway and credibility",
+      "Extensive audit coverage (9 audits across Hashlock and Nethermind) shows serious approach to security",
+      "VRC-20 token standard for data-backed assets creates a novel financial primitive for data tokenisation",
+      "Active development: 83 GitHub repos, multiple repos updated within days of research, new protocol specification recently published"
+    ],
+    "what_is_hype": [
+      "1.7M daily transactions claim (May 2025) cannot be independently verified from the block explorer due to JS rendering -- transaction volume may include protocol-level activity rather than organic user transactions",
+      "Progressive decentralisation roadmap lacks specific timelines or milestones for permissionless validator transition",
+      "Data monetisation returns for individual contributors are likely modest -- the value of individual data points is extremely low and meaningful returns require large-scale collective action",
+      "The gap between 300+ DataDAOs established and 16 in active incubation suggests many DataDAOs are dormant or experimental",
+      "Token price decline of ~95% from ATH ($35.23 to $1.45) indicates market scepticism about near-term value capture despite strong narrative"
+    ],
+    "key_risks": [
+      "Permissioned validator set (PoSA) creates a single point of failure -- the Foundation controls which validators operate the chain",
+      "Intel TDX hardware dependency for Satya validators creates supply chain risk and limits validator decentralisation",
+      "Regulatory risk: user data collection and tokenisation may attract regulatory scrutiny across jurisdictions, particularly under GDPR and similar data protection regimes",
+      "Data quality challenge: Proof-of-Contribution must continuously evolve to prevent gaming and ensure contributed data is genuinely valuable for AI training",
+      "Competitive landscape: Ocean Protocol, Sahara AI, and Near Intents compete in the data sovereignty space, while centralised data marketplaces (Scale AI, Appen) have stronger enterprise relationships",
+      "Low circulating supply (25.67%) with 59.81% still locked means significant sell pressure as tokens unlock over the next 3-4 years",
+      "Foundation in Cayman Islands with operating entity (Corsali Inc) in San Francisco creates complex jurisdictional structure"
+    ],
+    "competitive_advantages": [
+      "Purpose-built L1 chain optimised for data transactions rather than retrofitting data functionality onto existing chains",
+      "Personal Server architecture with three hosting options (desktop, cloud, self-hosted) gives genuine user choice",
+      "TEE-based data validation (Satya network) provides privacy-preserving computation without requiring complex ZK proof systems",
+      "Binance Launchpool listing and CZ advisory relationship provides distribution and credibility advantages",
+      "Strong founding team: MIT + Harvard founders with relevant experience (Celo, Appen), credible legal leadership (ex-Coinbase)"
+    ],
+    "competitive_disadvantages": [
+      "Low TVL ($984K on DataDex) suggests limited DeFi activity on the chain",
+      "Permissioned infrastructure contradicts decentralisation narrative in the near term",
+      "95% price decline from ATH may deter new participants and reduce staking incentive value",
+      "Individual data contribution value is inherently low -- the 'own your data' narrative must translate to meaningful economic returns to sustain user interest",
+      "Intel TDX dependency limits geographic distribution of Satya validators"
+    ],
+    "comparable_projects": [
+      "Ocean Protocol (OCEAN) -- decentralised data exchange and data NFTs",
+      "Sahara AI -- decentralised AI data and model platform",
+      "Oasis Network (ROSE) -- privacy-preserving blockchain with data tokenisation",
+      "Worldcoin (WLD) -- user identity and data ownership (different approach)",
+      "The Graph (GRT) -- data indexing partner, complementary rather than competitive"
+    ],
+    "outlook": "Vana has built a technically sophisticated data sovereignty stack with genuine user adoption (1.3M+ users) and strong institutional backing ($25M raised, Paradigm and Coinbase Ventures). The core thesis -- that user-owned data is a new asset class for AI training -- is timely as AI data scarcity increases. However, the project faces a critical execution challenge: transitioning from permissioned (PoSA) to permissionless infrastructure while maintaining the data quality guarantees that make it valuable. The VRC-20 standard and DataFi vision are compelling but untested at scale. The next 12-18 months are pivotal as the governance transition to Vana DAO is scheduled and token unlocks accelerate. If Vana can demonstrate meaningful data monetisation returns for contributors and attract enterprise AI buyers, it could establish itself as the leading data sovereignty protocol. If not, the 'own your data' narrative risks becoming another unfulfilled crypto promise.",
+    "overall_assessment": "Vana is one of the most technically complete data sovereignty projects in the DeAI space, with a well-designed encryption and consent architecture that gives users genuine control over their data. The project has achieved notable user traction (1.3M+ users, 300+ DataDAOs) and secured strong institutional backing. However, it currently operates with significant centralisation vectors (permissioned validators, Foundation-controlled treasury) and faces the fundamental challenge of making individual data contributions economically meaningful. The 95% price decline from ATH reflects market uncertainty about the project's ability to capture value. Freedom Score of 59/100 (Grade C) reflects excellent data sovereignty and open source credentials offset by infrastructure and governance centralisation. A project to watch closely as it executes on its decentralisation roadmap."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Token Overview",
+      "url": "https://docs.vana.org/network/vana-token",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["token distribution percentages", "vesting schedules", "token utility", "supply figures", "community allocation at TGE"],
+      "reliability_notes": "Official documentation. Primary source for tokenomics."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana L1 Network Documentation",
+      "url": "https://docs.vana.org/network/vana-l1",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["consensus mechanism", "EVM compatibility", "chain IDs", "RPC endpoints", "two-layer architecture"],
+      "reliability_notes": "Official documentation. Primary source for chain architecture."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Validators Documentation",
+      "url": "https://docs.vana.org/network/validators",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["L1 validator requirements", "hardware specs", "max effective balance", "Satya validator details", "Intel TDX requirement"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Staking & Bridging Documentation",
+      "url": "https://docs.vana.org/network/staking-bridging",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["staking mechanism", "non-rebasing position model", "supported bridging assets", "Stargate integration"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Smart Contract Addresses",
+      "url": "https://docs.vana.org/network/smart-contracts-addresses",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["contract addresses for DataPortability contracts", "staking contracts", "chain utilities"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Security & Audit Reports",
+      "url": "https://docs.vana.org/resources/security",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["audit list", "auditors (Nethermind, Hashlock)", "three-layer security architecture", "responsible disclosure programme"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Full Protocol Specification",
+      "url": "https://docs.vana.org/protocol-reference/full-specification",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Personal Server architecture", "Data Portability RPC Gateway", "encryption model", "grant management", "scope taxonomy", "data file format"],
+      "reliability_notes": "Official protocol specification. Detailed technical reference."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Personal Servers Documentation",
+      "url": "https://docs.vana.org/protocol-reference/personal-servers",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["three hosting options", "API structure", "registration on-chain", "data synchronisation"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Storage & Encryption Documentation",
+      "url": "https://docs.vana.org/protocol-reference/storage-encryption",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["OpenPGP encryption", "HKDF-SHA256 key derivation", "storage backends", "encryption requirements by hosting type"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Grants & Permissions Documentation",
+      "url": "https://docs.vana.org/protocol-reference/grants-permissions",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["consent flow", "EIP-712 signatures", "revocation mechanism", "verification checks"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Vana: An Open Protocol for Data Sovereignty (Whitepaper)",
+      "url": "https://cdn.prod.website-files.com/662488d48afbf9b21e25c7d2/674f6289079193fb53f7caa1_Vana_whitepaper_Dec24_updated.pdf",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": "2024-12-01",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["whitepaper URL confirmed"],
+      "reliability_notes": "PDF whitepaper could not be parsed via WebFetch. URL confirmed from docs page."
+    },
+    {
+      "source_id": "S012",
+      "tier": 1,
+      "type": "github",
+      "title": "vana-com GitHub Organisation",
+      "url": "https://github.com/vana-com",
+      "author": "Vana",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["83 total repos", "top repos by stars", "primary languages", "last update dates"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "github",
+      "title": "vana-com/personal-server Repository",
+      "url": "https://github.com/vana-com/personal-server",
+      "author": "Vana",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["196 commits", "113 stars", "24 forks", "0 open issues", "MIT licence", "TypeScript 90.4%"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S014",
+      "tier": 1,
+      "type": "github",
+      "title": "vana-com/vana-smart-contracts Repository",
+      "url": "https://github.com/vana-com/vana-smart-contracts",
+      "author": "Vana",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["98 commits", "19 stars", "23 forks", "Apache-2.0 licence", "TypeScript 67.7% + Solidity 32.3%", "10 releases up to v7.2.0"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S015",
+      "tier": 1,
+      "type": "github",
+      "title": "vana-com/vana Repository (Network specification)",
+      "url": "https://github.com/vana-com/vana",
+      "author": "Vana",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["2 stars", "0 forks", "11 commits", "Docker-based validator setup", "Geth + Prysm clients"],
+      "reliability_notes": "Direct GitHub access. Network specification and validator setup repo."
+    },
+    {
+      "source_id": "S016",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Homepage",
+      "url": "https://www.vana.org",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["1M+ users", "tagline", "product overview", "roadmap link"],
+      "reliability_notes": "Official website."
+    },
+    {
+      "source_id": "S017",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Open Data Labs Website",
+      "url": "https://www.opendatalabs.xyz",
+      "author": "Open Data Labs",
+      "publisher": "Open Data Labs",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Corsali Inc dba Open Data Labs identity", "relationship to Vana", "research focus areas"],
+      "reliability_notes": "Official entity website."
+    },
+    {
+      "source_id": "S018",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Foundation Website",
+      "url": "https://www.vanafoundation.org",
+      "author": "Vana Foundation",
+      "publisher": "Vana Foundation",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Cayman Islands registration", "registered address", "Foundation mission", "Foundation disclaimers about network control"],
+      "reliability_notes": "Official Foundation website with legal disclosures."
+    },
+    {
+      "source_id": "S019",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Ecosystem Partners",
+      "url": "https://docs.vana.org/resources/ecosystem",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["ecosystem partners list", "infrastructure integrations", "governance tools (Tally, Snapshot)", "security partners (Immunefi, Nethermind, Hashlock)"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S020",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Blog: Accelerating the AI Data Revolution",
+      "url": "https://www.vana.org/posts/accelerating-ai-data-revolution",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": "2025-05-15",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["1.3M users", "1.7M daily transactions", "300+ DataDAOs", "16 incubating DataDAOs", "130+ Cohort 2 applicants", "geographic reach"],
+      "reliability_notes": "Official blog post. User and transaction metrics are self-reported and not independently verifiable."
+    },
+    {
+      "source_id": "S021",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Blog: DataDAO Deep Dive",
+      "url": "https://www.vana.org/posts/datadao-deepdive",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["DataDAO mechanics", "top 16 DLPs receiving staking rewards", "proof-of-contribution", "examples of active DataDAOs"],
+      "reliability_notes": "Official blog post."
+    },
+    {
+      "source_id": "S022",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Blog: VRC-20 Future of Data Finance",
+      "url": "https://www.vana.org/posts/vrc-20-future-of-data-finance",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": "2025-05-01",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["VRC-20 standard details", "data validator staking model", "DataFi framework", "12M+ data points"],
+      "reliability_notes": "Official blog post."
+    },
+    {
+      "source_id": "S023",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Vana Blog: Funding Announcement",
+      "url": "https://www.vana.org/posts/vana-raises-funding-to-build-user-owned-ai-and-overcome-the-data-wall",
+      "author": "Vana",
+      "publisher": "Vana",
+      "date_published": "2025-05-15",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["$25M total raised", "$18M Series A (Paradigm)", "$5M strategic (Coinbase Ventures)", "$2M seed (Polychain)", "full investor list"],
+      "reliability_notes": "Official funding announcement."
+    },
+    {
+      "source_id": "S024",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko API: Vana Market Data",
+      "url": "https://api.coingecko.com/api/v3/coins/vana",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price $1.45", "market cap $44.68M", "FDV $174.09M", "24h volume $2.61M", "circulating supply 30.8M", "total supply 120M", "ATH $35.23 (Dec 17 2024)", "ATL $1.36 (Feb 19 2026)"],
+      "reliability_notes": "Tier 2 market data source. API returned full data."
+    },
+    {
+      "source_id": "S025",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CryptoRank: Vana Funding Rounds & Tokenomics",
+      "url": "https://cryptorank.io/ico/vana",
+      "author": "CryptoRank",
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["funding rounds detail", "investor list (16 total)", "round dates and lead investors", "YZi Labs strategic round Feb 2025"],
+      "reliability_notes": "Tier 2 source. Some data behind paywall."
+    },
+    {
+      "source_id": "S026",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CryptoRank: Vana Vesting Schedule",
+      "url": "https://cryptorank.io/price/vana/vesting",
+      "author": "CryptoRank",
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["vesting schedule by category", "unlock progress", "next unlock event"],
+      "reliability_notes": "Tier 2 source. Some detailed data behind paywall."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "market_data",
+      "title": "ICODrops: Vana Token Sale Analytics",
+      "url": "https://icodrops.com/vana/",
+      "author": "ICODrops",
+      "publisher": "ICODrops",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["circulating supply 48.11M", "unlocked 40.09%", "locked 71.77M (59.81%)", "TGE listing price $27.56", "ROI from listing 0.05x", "detailed unlock by category"],
+      "reliability_notes": "Tier 2 source. Data cross-referenced with official docs. ICODrops shows higher circulating (48.11M) vs CoinGecko (30.8M) -- discrepancy may be due to different definitions of 'circulating' vs 'unlocked'."
+    },
+    {
+      "source_id": "S028",
+      "tier": 2,
+      "type": "market_data",
+      "title": "DeFiLlama: DataDex TVL",
+      "url": "https://defillama.com/protocol/datadex",
+      "author": "DeFiLlama",
+      "publisher": "DeFiLlama",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["DataDex TVL $984.1K"],
+      "reliability_notes": "DeFiLlama returned 403 on direct fetch. TVL figure sourced from search snippets referencing DeFiLlama."
+    },
+    {
+      "source_id": "S029",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Hashlock: Vana Smart Contract Audits",
+      "url": "https://hashlock.com/audits/vana",
+      "author": "Hashlock",
+      "publisher": "Hashlock",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["3 audit reports", "all rated Secure", "audit dates (Dec 2024, Jul 2025)", "scope details"],
+      "reliability_notes": "Direct auditor website. Primary source for security assessment."
+    },
+    {
+      "source_id": "S030",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "Vanascan.io (Blockscout-based)",
+      "url": "https://vanascan.io",
+      "author": "Vana",
+      "publisher": "Blockscout",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["explorer exists and is operational"],
+      "reliability_notes": "JavaScript-rendered page -- no stats extractable via WebFetch. Block explorer confirmed operational."
+    },
+    {
+      "source_id": "S031",
+      "tier": 3,
+      "type": "news",
+      "title": "MIT News: Vana is letting users own a piece of the AI models trained on their data",
+      "url": "https://news.mit.edu/2025/vana-lets-users-own-piece-ai-models-trained-on-their-data-0403",
+      "author": "MIT News",
+      "publisher": "Massachusetts Institute of Technology",
+      "date_published": "2025-04-03",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["founding story", "MIT Media Lab origin", "Ramesh Raskar advisory relationship", "1M+ users", "20+ live DataDAOs", "300+ proposed data pools", "140K Reddit DataDAO users"],
+      "reliability_notes": "University news outlet. Credible third-party source for founding story and team background."
+    },
+    {
+      "source_id": "S032",
+      "tier": 3,
+      "type": "news",
+      "title": "Cerebral Valley: Vana is championing user-owned AI for the masses",
+      "url": "https://cerebralvalley.ai/blog/vana-is-championing-user-owned-ai-for-the-masses-6rqTynAdNesQyBZaDEEXjd",
+      "author": "Cerebral Valley",
+      "publisher": "Cerebral Valley",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["team size: 14 people", "Personal Server architecture comparison to Urbit/Solid", "Chirper.ai built on Vana"],
+      "reliability_notes": "Tier 3 interview/profile. Team size of 14 confirmed here."
+    },
+    {
+      "source_id": "S033",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinDesk: EVM-Compatible Vana Blockchain Introduces New Token Standard for Data-Backed Digital Assets",
+      "url": "https://www.coindesk.com/tech/2025/04/02/evm-compatible-vana-blockchain-introduces-new-token-standard-for-data-backed-digital-assets",
+      "author": "CoinDesk",
+      "publisher": "CoinDesk",
+      "date_published": "2025-04-02",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["VRC-20 standard announcement", "12M+ data points", "data validator staking details", "VANA price at $5.58"],
+      "reliability_notes": "Reputable crypto news outlet."
+    },
+    {
+      "source_id": "S034",
+      "tier": 3,
+      "type": "news",
+      "title": "NFTEvening: What is Vana (VANA)? The 62nd Project on Binance Launchpool",
+      "url": "https://nftevening.com/what-is-vana/",
+      "author": "NFTEvening",
+      "publisher": "NFTEvening",
+      "date_published": "2024-12-01",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["genesis token supply 112,641,600", "initial circulating supply 30,084,000 (25.07%)", "Binance Launchpool details", "BNB and FDUSD pool allocations"],
+      "reliability_notes": "Crypto media. Data cross-referenced with Binance announcement."
+    },
+    {
+      "source_id": "S035",
+      "tier": 2,
+      "type": "market_data",
+      "title": "The Org: Stephen Boske, CFA - Head Of Legal at Vana",
+      "url": "https://theorg.com/org/vana/org-chart/stephen-boske-cfa",
+      "author": "The Org",
+      "publisher": "The Org",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Stephen Boske role as Head of Legal", "ex-Coinbase Associate General Counsel background"],
+      "reliability_notes": "Professional directory. Cross-referenced with LinkedIn data from search results."
+    },
+    {
+      "source_id": "S036",
+      "tier": 3,
+      "type": "social_media",
+      "title": "DISBOARD: Vana Discord Server",
+      "url": "https://disboard.org/server/1254378757431492628",
+      "author": "DISBOARD",
+      "publisher": "DISBOARD",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Discord members: 77,548"],
+      "reliability_notes": "Discord server directory. Member count sourced from search snippet."
+    },
+    {
+      "source_id": "S037",
+      "tier": 3,
+      "type": "social_media",
+      "title": "CoinCarp: Vana Twitter Followers",
+      "url": "https://www.coincarp.com/currencies/vana-org/socials/",
+      "author": "CoinCarp",
+      "publisher": "CoinCarp",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["X followers: 286.1K for @vana handle"],
+      "reliability_notes": "Social metrics aggregator. Follower count not independently verified from X directly."
+    }
+  ]
+}
