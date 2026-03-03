@@ -2,6 +2,7 @@
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import MetricCard from '../../components/MetricCard.astro';
 import Sparkline from '../../components/Sparkline.astro';
+import ProjectLogo from '../../components/ProjectLogo.astro';
 import { getCollection } from 'astro:content';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../../data/fetch-market-data';
 
@@ -139,6 +140,7 @@ function downsample(data: number[], targetPoints: number): number[] {
             >
               <td class="td-project">
                 <div class="flex items-center gap-2">
+                  <ProjectLogo slug={entry.id} title={entry.data.title} size={28} class="shrink-0" />
                   <span class="font-semibold text-[var(--color-text-primary)]">{entry.data.title}</span>
                   <span class="text-xs font-mono text-[var(--color-accent)]">{entry.data.token}</span>
                   {entry.data.oymHolds && (
@@ -226,6 +228,7 @@ function downsample(data: number[], targetPoints: number): number[] {
         <div class="dashboard-card" data-category={entry.data.category} data-href={reviewUrl}>
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2">
+              <ProjectLogo slug={entry.id} title={entry.data.title} size={36} class="shrink-0" />
               <span class="font-semibold text-[var(--color-text-primary)]">{entry.data.title}</span>
               <span class="text-xs font-mono text-[var(--color-accent)]">{entry.data.token}</span>
               {entry.data.oymHolds && (

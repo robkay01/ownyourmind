@@ -9,7 +9,8 @@
     "check": "astro check",
     "deploy": "npm run build && npx wrangler pages deploy dist --project-name ownyourmind --commit-dirty=true",
     "refresh:github": "tsx scripts/refresh-github-metrics.ts",
-    "check:staleness": "tsx scripts/flag-stale-records.ts"
+    "check:staleness": "tsx scripts/flag-stale-records.ts",
+    "download:logos": "tsx scripts/download-logos.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

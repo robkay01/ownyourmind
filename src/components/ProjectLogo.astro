@@ -1,0 +1,40 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  slug: string;
+  title: string;
+  size?: number;
+  class?: string;
+}
+
+const { slug, title, size = 32, class: className } = Astro.props;
+
+const logoPath = path.join(process.cwd(), 'public/images/logos', `${slug}.png`);
+const hasLogo = fs.existsSync(logoPath);
+const firstLetter = title.charAt(0).toUpperCase();
+---
+
+{hasLogo ? (
+  <img
+    src={`/images/logos/${slug}.png`}
+    alt={`${title} logo`}
+    width={size}
+    height={size}
+    class:list={['rounded-full object-cover ring-1 ring-[var(--color-border)]', className]}
+    loading="lazy"
+    decoding="async"
+  />
+) : (
+  <span
+    class:list={[
+      'inline-flex items-center justify-center rounded-full bg-[var(--color-bg-tertiary)] ring-1 ring-[var(--color-border)] font-[var(--font-heading)] font-bold text-[var(--color-text-secondary)]',
+      className,
+    ]}
+    style={`width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.45)}px;`}
+    aria-hidden="true"
+  >
+    {firstLetter}
+  </span>
+)}

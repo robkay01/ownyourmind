@@ -30,6 +30,7 @@ const research: ProjectResearchRecord | null = getProjectResearch(entry.id);
   verdict={entry.data.verdict}
   oymHolds={entry.data.oymHolds}
   research={research}
+  slug={entry.id}
 >
   <Content />
 </ProjectLayout>

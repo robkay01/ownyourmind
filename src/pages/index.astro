@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
 import ParticleNetwork from '../components/ParticleNetwork.astro';
 import MeshGradient from '../components/MeshGradient.astro';
+import ProjectLogo from '../components/ProjectLogo.astro';
 import { getCollection } from 'astro:content';
 
 const journalEntries = (await getCollection('journal'))
@@ -129,7 +130,10 @@ const sections = [
               class="card-elevated p-4 no-underline block"
             >
               <div class="flex items-center justify-between mb-3">
-                <span class="font-semibold text-[var(--color-text-primary)]">{project.data.title}</span>
+                <div class="flex items-center gap-2">
+                  <ProjectLogo slug={project.id} title={project.data.title} size={32} class="shrink-0" />
+                  <span class="font-semibold text-[var(--color-text-primary)]">{project.data.title}</span>
+                </div>
                 <span class="text-xs font-mono text-[var(--color-accent)]">{project.data.token}</span>
               </div>
               <div class="flex items-center gap-2 mb-2">

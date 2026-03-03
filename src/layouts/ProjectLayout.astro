@@ -9,6 +9,7 @@ import VestingTimeline from '../components/VestingTimeline.astro';
 import CategoryPattern from '../components/CategoryPattern.astro';
 import MeshGradient from '../components/MeshGradient.astro';
 import Sparkline from '../components/Sparkline.astro';
+import ProjectLogo from '../components/ProjectLogo.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
 import type { ProjectResearchRecord, MetricsSnapshot } from '../data/project-research';
 
@@ -25,9 +26,10 @@ interface Props {
   verdict?: string;
   oymHolds?: boolean;
   research?: ProjectResearchRecord | null;
+  slug: string;
 }
 
-const { title, description, category, token, status, freedomScore, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research } = Astro.props;
+const { title, description, category, token, status, freedomScore, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -208,7 +210,10 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
         <span class="text-sm font-mono text-[var(--color-accent)]">{token}</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">{title}</h1>
+      <div class="flex items-center gap-4 mb-4">
+        <ProjectLogo slug={slug} title={title} size={56} class="shrink-0" />
+        <h1 class="text-3xl sm:text-4xl font-bold leading-tight">{title}</h1>
+      </div>
       <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">{description}</p>
 
       <!-- Freedom Score: radar chart + full breakdown when research exists, simple bar otherwise -->
