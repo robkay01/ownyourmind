@@ -1,0 +1,900 @@
+{
+  "meta": {
+    "project_id": "sahara",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "Sahara AI litepaper PDF (assets.saharaai.com/files/litepaper.pdf) could not be parsed via WebFetch -- content reconstructed from official docs, blog posts, Binance Academy, and secondary sources",
+      "Official website (saharaai.com) is JavaScript-rendered via Framer -- no content extractable via WebFetch. Blog posts similarly inaccessible",
+      "CoinGecko returned 403 for the web page -- market data sourced from CoinGecko search snippets, CryptoRank, and Etherscan",
+      "CoinMarketCap page is JavaScript-dependent -- market data not extractable via WebFetch",
+      "DeFiLlama does not list Sahara AI -- no TVL data available. Confirmed via search: Sahara AI is not a DeFi protocol",
+      "Sahara Chain mainnet (chain ID 3132023, RPC mainnet.saharalabs.ai) is registered on ChainList but no public block explorer exists -- on-chain metrics (transactions, validators, addresses) not verifiable",
+      "No HuggingFace presence found for Sahara AI -- confirmed via direct URL check (404) and multiple searches. Only unrelated 'Sahara' model by Ex-Rockstar found",
+      "Sahara Chain mainnet status unclear -- registered on ChainList as mainnet but multiple sources (CoinMarketCap AI, updated roadmap) describe mainnet launch as 'imminent' or upcoming as of March 2026. Treated as early mainnet / soft launch pending full confirmation",
+      "No published smart contract audit reports found for Sahara AI -- searched CertiK, Hacken, Trail of Bits, and general audit searches yielded no results specific to Sahara",
+      "Telegram community member count not verifiable -- @saharaaiofficial channel exists but member count not extractable",
+      "Exact mainnet staking APY, minimum stake requirements, and validator count not yet disclosed for mainnet -- testnet requires 1000 SAHARA test tokens minimum",
+      "Crunchbase returned 403 -- corporate details sourced from CB Insights, ZoomInfo, and funding announcements",
+      "Binance Academy article about Sahara AI returned empty content via WebFetch -- Binance Research page also failed to render",
+      "Annual revenue figures not publicly disclosed",
+      "Exact daily active user count on Data Services Platform not independently verifiable -- 200K users and 1.4M DAA figures sourced from project claims",
+      "Tyler Zhou's exact title varies across sources (COO in some, Co-Founder without specific title in others) -- using COO based on majority of sources"
+    ],
+    "refresh_config": {
+      "github_org": "SaharaLabsAI",
+      "github_primary_repo": "sahara",
+      "coingecko_id": "sahara-ai",
+      "discord_server_id": null,
+      "telegram_username": "saharaaiofficial",
+      "x_handle": "SaharaLabsAI",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "Sahara AI",
+    "ticker": "SAHARA",
+    "category": "data",
+    "subcategory": "AI data provenance, labelling, and marketplace",
+    "tagline": "The world's first full-stack, AI-native blockchain platform",
+    "one_liner": "A decentralised AI blockchain platform providing end-to-end infrastructure for creating, contributing to, and monetising AI development -- covering data collection, labelling, model training, deployment, and asset trading -- with on-chain provenance tracking, fair contributor compensation via the SAHARA token, and a four-layer architecture spanning an EVM-compatible Tendermint-based L1 chain.",
+    "website": "https://saharaai.com",
+    "documentation_url": "https://docs.saharaai.com",
+    "whitepaper_url": "https://assets.saharaai.com/files/litepaper.pdf",
+    "github_url": "https://github.com/SaharaLabsAI",
+    "chain": "Sahara Chain (EVM-compatible Tendermint-based PoS, chain ID 3132023) with token on Ethereum and BNB Chain",
+    "launch_date": "2025-06-26",
+    "current_status": "testnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Sean Ren",
+        "role": "Co-Founder & CEO",
+        "background": "Associate Professor of Computer Science at USC (University of Southern California), holding the Andrew and Erna Viterbi Early Career Chair. PhD in Computer Science from University of Illinois at Urbana-Champaign. Directs the Intelligence and Knowledge Discovery (INK) Research Lab at USC. Also contributes to Allen Institute for AI (AI2). Previously data science advisor at Snapchat. Accolades include Samsung AI Researcher of the Year, MIT Technology Review Innovator Under 35 (Asia Pacific), and Forbes Asia 30 Under 30. Over 15 years of NLP and AI research experience.",
+        "linkedin_or_x": "https://www.linkedin.com/in/xren7",
+        "doxxed": true
+      },
+      {
+        "name": "Tyler Zhou",
+        "role": "Co-Founder & COO",
+        "background": "UC Berkeley graduate (BBA/Economics from Haas School of Business). Former Investment Director at Binance Labs (2022-2023). Prior experience as Executive Director of Consumer Data & AI at Wells Fargo. Also held positions at JPMorgan Chase, Gaw Capital Partners, and Mars Data Acquisition Control Systems.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 92,
+    "entity_name": "Sahara AI Ltd.",
+    "entity_jurisdiction": "George Town, Cayman Islands (headquartered in Camana Bay). Also referenced as Los Angeles-based in early press coverage.",
+    "notable_backers": [
+      "Pantera Capital -- co-led $43M round (August 2024)",
+      "Polychain Capital -- co-led $43M round and led $6M seed (March 2024)",
+      "YZi Labs (prev. Binance Labs) -- co-led $43M round (August 2024)",
+      "Sequoia Capital -- participated in $43M round",
+      "Samsung NEXT -- participated in $43M round and $6M seed",
+      "Matrix Partners -- participated in $43M round and $6M seed",
+      "dao5 -- participated in $43M round",
+      "Mirana Ventures -- participated in $43M round",
+      "Foresight Ventures -- participated in $43M round",
+      "Canonical Crypto -- participated in $43M round",
+      "Alumni Ventures -- participated in $43M round",
+      "Nomad Capital -- participated in $43M round",
+      "Dispersion Capital -- participated in $43M round",
+      "GeekCartel -- participated in $43M round",
+      "Tangent Ventures -- participated in $43M round",
+      "Aegis Ventures -- participated in $43M round",
+      "SCB 10X -- participated in $43M round and $6M seed",
+      "Motherson Group (Laksh Vaaman Sehgal) -- participated in $6M seed",
+      "Sandeep Nailwal (Polygon co-founder) -- angel investor in seed"
+    ],
+    "funding_raised": {
+      "total_usd": 51500000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": 6000000,
+          "date": "2024-03-05",
+          "lead_investor": "Polychain Capital"
+        },
+        {
+          "round_type": "Series A",
+          "amount_usd": 37000000,
+          "date": "2024-08-14",
+          "lead_investor": "Pantera Capital, Polychain Capital, Binance Labs (co-leads)"
+        },
+        {
+          "round_type": "IDO (Buidlpad)",
+          "amount_usd": 8500000,
+          "date": "2025-06-14",
+          "lead_investor": "Buidlpad (public sale)"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Sahara AI operates a four-layer architecture integrating on-chain and off-chain components. The Application Layer provides user interfaces including Sahara ID, wallets, and development tools. The Transaction Layer features the AI-native Sahara Blockchain (EVM-compatible, Tendermint consensus) with specialised smart contracts, AI-Native Precompiles (SAPs) optimised for AI operations, and the Sahara Cross-chain Communication (SCC) Protocol. The Data Layer manages critical metadata, attributions, and proofs on-chain while large AI datasets and models remain off-chain. The Execution Layer handles high-performance AI computations with privacy-preserving protocols including TEEs and differential privacy. Core abstractions include: Account Abstraction (dedicated on-chain accounts for each AI asset managing metadata, versioning, and licensing), Metadata Abstraction (comprehensive documentation with technical specs and ownership), and a Global Asset Registry. AI assets are registered on-chain as Ownership NFTs (ERC-721) with metadata records and dedicated accounts. A licensing framework supports Partnership Licenses, API Licenses, Full Access, and Long-term Licenses -- all enforced via License Token NFTs. Attribution tracking records TRAINED_ON, FINETUNED_FROM, and DERIVED_FROM relationships for provenance. The Execution Layer coordinates distributed computation across network participants with elastic scaling and fault tolerance.",
+    "consensus_mechanism": "Tendermint-based Proof-of-Stake. Initial validator set comprises professional node operators and established institutions. Phased transition planned: Phase 1 (professional operators) → Phase 2 (expanded qualified validators) → Phase 3 (permissionless participation with stake requirements). Validators stake SAHARA tokens as collateral and earn block rewards; slashing penalises malicious behaviour (jailed after missing ~10,000 blocks / ~14 hours).",
+    "what_is_onchain": "AI asset registrations (Ownership NFTs), metadata records, licensing agreements (License Token NFTs), attribution relationships (TRAINED_ON, FINETUNED_FROM, DERIVED_FROM), revenue distribution, token transfers, governance votes, validator staking. Gas fees paid in SAHARA on native chain.",
+    "what_is_offchain": "Large AI datasets and models (stored off-chain with on-chain references). AI model training and inference execution. Data Services Platform operations (data collection, labelling, annotation). Graph Node infrastructure for data indexing. Off-Chain Scheduler for resource allocation.",
+    "key_dependencies": [
+      "Cosmos SDK and Tendermint for blockchain consensus",
+      "EVM compatibility layer",
+      "TEEs (Trusted Execution Environments) for privacy-preserving computation",
+      "Ethereum and BNB Chain for token deployment",
+      "IAVL+ Merkle tree (forked from Cosmos) for state storage"
+    ],
+    "smart_contract_languages": ["Solidity"],
+    "open_source": false,
+    "license": "Apache-2.0 (selected repos including Verifiable-ClawGuard, x-function). Core platform components appear proprietary. Chain code (sahara repo) has no specified license.",
+    "github_metrics": {
+      "total_repos": 26,
+      "primary_repo_url": "https://github.com/SaharaLabsAI/sahara",
+      "total_commits": 128,
+      "contributors": null,
+      "last_commit_date": "2026-03-02",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0
+    },
+    "audits": [],
+    "security_incidents": [
+      {
+        "date": "2024-08-01",
+        "description": "Sahara AI Official Discord account was compromised. Exact losses unknown but flagged by security watchers.",
+        "source": "https://quadrigainitiative.com/casestudy/saharaaiofficialdiscordaccountcompromised.php"
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Sahara AI",
+    "ticker": "SAHARA",
+    "token_standard": "ERC-20 (Ethereum and BNB Chain)",
+    "token_type": "both",
+    "token_utility": [
+      "AI asset access and licensing payments -- users pay SAHARA for datasets, model rights, and compute resources",
+      "Per-inference payments -- usage-based pricing for each agent inference with automatic fee distribution",
+      "Network operations -- gas fees on the Sahara blockchain",
+      "Validator staking -- PoS collateral for block production, earning network rewards",
+      "Governance -- on-chain voting on protocol decisions",
+      "Ecosystem incentivisation -- rewards for high-quality datasets, models, and infrastructure contributions"
+    ],
+    "supply": {
+      "max_supply": 10000000000,
+      "total_supply": 10000000000,
+      "circulating_supply": 2909166667,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 29.09
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Ecosystem Development",
+          "percentage": 33.93,
+          "vesting_schedule": "25% at TGE, remainder linear over 48 months",
+          "cliff": "None (25% TGE unlock)",
+          "notes": "Developer grants, hackathons, validator rewards, liquidity incentives"
+        },
+        {
+          "category": "Community Incentives",
+          "percentage": 20.75,
+          "vesting_schedule": "25% at TGE, remainder linear over 48 months",
+          "cliff": "None (25% TGE unlock)",
+          "notes": "Dataset rewards, agent development, ambassador programmes"
+        },
+        {
+          "category": "Early Backers",
+          "percentage": 19.75,
+          "vesting_schedule": "1-year cliff, then linear over 36 months",
+          "cliff": "12 months",
+          "notes": "25% unlocks at 12 months, remainder over next 36 months. 0% unlocked as of March 2026."
+        },
+        {
+          "category": "Core Team & Contributors",
+          "percentage": 15.00,
+          "vesting_schedule": "1-year cliff, then linear over 36 months",
+          "cliff": "12 months",
+          "notes": "25% unlocks at 12 months, remainder over next 36 months. 0% unlocked as of March 2026."
+        },
+        {
+          "category": "Airdrops (Knowledge Drop + Binance HODLer + OKX)",
+          "percentage": 8.15,
+          "vesting_schedule": "Phased releases. Knowledge Drop: 42% at TGE, linear over 5 months. Binance HODLer: 6 and 9-month marks.",
+          "cliff": "Varies by campaign",
+          "notes": "Includes Knowledge Drop (5%), Binance HODLer Airdrops (1.25%), OKX Campaign (0.4%)"
+        },
+        {
+          "category": "Buidlpad Community Distribution (IDO)",
+          "percentage": 1.42,
+          "vesting_schedule": "100% unlocked at TGE",
+          "cliff": "None",
+          "notes": "IDO price $0.06. 141.67M tokens. Fully vested."
+        },
+        {
+          "category": "Liquidity & Market Stability",
+          "percentage": 1.00,
+          "vesting_schedule": "100% unlocked at TGE",
+          "cliff": "None",
+          "notes": "100M tokens for exchange liquidity"
+        }
+      ],
+      "distribution_method": "IDO via Buidlpad ($0.06 per token), Binance HODLer Airdrop (1.25% to BNB stakers), Knowledge Drop airdrops, OKX campaign, and exchange listings"
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "None -- fixed supply of 10B tokens with vesting unlocks only",
+      "next_major_emission_event": "Investor and team cliff unlock at 12 months post-TGE (June 26, 2026) -- approximately 1.03B tokens (25% of combined investor + team allocation)",
+      "next_event_date": "2026-06-26",
+      "burn_mechanism": "None currently active"
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "Planned: Validator staking on Sahara Chain mainnet (Tendermint PoS). Not yet live for mainnet.",
+      "minimum_stake": null,
+      "lock_up_period": "Not yet disclosed for mainnet",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Slashing for missing blocks (jailed after ~10,000 missed blocks / ~14 hours)",
+        "Mainnet staking not yet live -- details may change"
+      ],
+      "slashing_conditions": "Validators jailed after missing approximately 10,000 blocks (~14 hours). Unjail transaction required to resume."
+    },
+    "market_data": {
+      "price_usd": 0.0304,
+      "market_cap_usd": 88350000,
+      "fully_diluted_valuation_usd": 304000000,
+      "twenty_four_hour_volume_usd": 225572947,
+      "all_time_high_usd": 0.1631,
+      "all_time_high_date": "2025-07-24",
+      "all_time_low_usd": 0.01338,
+      "all_time_low_date": "2026-02-06",
+      "major_exchanges": [
+        "Binance",
+        "OKX",
+        "KuCoin",
+        "Bitget",
+        "MEXC",
+        "HTX",
+        "CoinW",
+        "Bitrue",
+        "XT.COM",
+        "Upbit",
+        "Bithumb"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Utility and governance token with fixed supply and vesting-based unlock schedule. No inflationary emissions. Value tied to platform usage (gas, licensing, inference payments) once Sahara Chain mainnet is fully live.",
+    "tokenomics_notes": "64.25% of total supply allocated to community-oriented categories (ecosystem development, community incentives, airdrops, IDO, liquidity). However, the 34.75% insider allocation (19.75% early backers + 15% team) with 1-year cliff means a significant unlock event on June 26, 2026 when ~1.03B tokens (25% of combined insider allocation) enter circulation. As of March 2026, 0% of investor and team tokens have unlocked. IDO ROI is currently -49.4% from $0.06 IDO price. The token was Binance's 25th HODLer Airdrop project. Initial FDV at IDO was $600M versus current FDV of ~$304M."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "contributing",
+        "description": "Data Services Platform: Contribute to AI dataset creation through data collection, labelling, annotation, and quality assurance tasks. Earn SAHARA token rewards. Season 1 produced 289K approved datapoints (92% accuracy). Season 2 produced 2.55M approved datapoints (95% accuracy).",
+        "minimum_hardware": "Internet-connected device with web browser",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable, based on task completion and quality",
+        "barriers_to_entry": ["Waitlist/invitation may be required", "Quality requirements enforced via internal QA"],
+        "guide_available": true,
+        "guide_url": "https://docs.saharaai.com"
+      },
+      {
+        "type": "building",
+        "description": "AI Developer Platform: Build, train, deploy, and monetise AI models and agents using Sahara's development tools including SDKs and APIs. Deploy models (Llama, Mistral, Gemma supported) and create AI agents. List assets on the AI Marketplace for licensing revenue.",
+        "minimum_hardware": "Development machine with internet access",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Revenue from licensing and usage fees on AI Marketplace",
+        "barriers_to_entry": ["Platform still in development/beta", "Sahara Chain mainnet not fully live"],
+        "guide_available": true,
+        "guide_url": "https://docs.saharaai.com/blockchain-developer-docs/overview/quickstart"
+      },
+      {
+        "type": "validating",
+        "description": "Run a Sahara Chain validator node to participate in Tendermint PoS consensus. Earn SAHARA block rewards. Currently permissioned (professional operators only) with planned transition to permissionless.",
+        "minimum_hardware": "Testnet: 8-core CPU, 32GB RAM, 2TB NVMe SSD, 100Mbps network. Production recommended: 32-core CPU, 128GB ECC RAM, 8TB NVMe RAID, 1Gbps network, UPS.",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "expert",
+        "estimated_returns": "Up to ~10% APY (estimated, not confirmed for mainnet)",
+        "barriers_to_entry": [
+          "Currently permissioned -- must be approved professional node operator",
+          "Substantial hardware requirements for production",
+          "24/7 monitoring required",
+          "Mainnet staking not yet fully live"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.saharaai.com/blockchain-developer-docs/basics/images-and-media"
+      },
+      {
+        "type": "using",
+        "description": "Use Sahara Knowledge Agents for business or personal AI tasks. Enterprise clients can train custom agents on proprietary data with compensation for training data contributors. Sahara Data provides privacy-preserving data services.",
+        "minimum_hardware": "Internet-connected device",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "none",
+        "estimated_returns": "N/A -- consumer/enterprise usage",
+        "barriers_to_entry": ["Some products in beta or waitlisted", "Enterprise tier may require contracts"],
+        "guide_available": true,
+        "guide_url": "https://saharaai.com"
+      },
+      {
+        "type": "governance",
+        "description": "SAHARA token holders can participate in DAO governance, proposing and voting on protocol upgrades, funding allocations, and key policies. Staking grants voting rights.",
+        "minimum_hardware": "Internet-connected device with crypto wallet",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "N/A -- governance participation",
+        "barriers_to_entry": ["Governance not yet active on mainnet", "Must hold SAHARA tokens"],
+        "guide_available": false,
+        "guide_url": ""
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "adequate",
+      "developer_community_size": "26 public GitHub repos, 96 GitHub followers. Developer community size not independently verifiable.",
+      "grants_program": true,
+      "grants_url": "https://saharaai.com"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": 92443,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "",
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Platform fees from AI asset licensing, inference payments, and data services (planned)",
+    "metrics_source": "Etherscan (ERC-20 token transactions), project claims for Data Services Platform",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "Project claims 3.2M total testnet accounts, 1.4M daily active accounts on private testnet, and 200K+ Data Services Platform users. Season 2 produced 2.55M approved datapoints at 95% accuracy. These figures are self-reported and not independently verifiable. Etherscan shows 92,443 total ERC-20 token transfers and 1,838 holders for the Ethereum contract. The Sahara Chain mainnet is not fully operational, so native chain metrics are not available. Over 40 ecosystem partners including Microsoft, AWS, Google Cloud, MIT, UC Berkeley, Snap, Together AI."
+  },
+
+  "community": {
+    "discord_members": 341738,
+    "telegram_members": null,
+    "x_followers": 913000,
+    "github_contributors": null,
+    "governance_participation_rate": "No governance proposals have been submitted yet -- mainnet governance not active",
+    "governance_model": "Planned DAO governance with SAHARA token-based voting. Token holders can propose and vote on protocol upgrades, funding allocations, and key governance policies. Staking required for voting rights. Not yet operational.",
+    "governance_url": "",
+    "key_community_channels": [
+      "Discord: discord.com/invite/sahara-ai",
+      "X/Twitter: @SaharaLabsAI (913K followers)",
+      "Telegram: @saharaaiofficial",
+      "GitHub: github.com/SaharaLabsAI"
+    ],
+    "sentiment_summary": "Large community following (913K X, 342K Discord) driven by airdrop campaigns and Binance HODLer Airdrop listing. Active Data Services Platform with real user participation in data labelling tasks. However, significant price decline from ATH (-81%) has dampened sentiment. Token unlock concerns for June 2026 cliff event. Enterprise partnerships (Microsoft, AWS, Google Cloud) provide credibility but details of these partnerships are vague.",
+    "community_notes": "Community growth significantly boosted by the Binance HODLer Airdrop programme and Galxe quest campaigns. Discord 342K members is substantial but likely includes many inactive airdrop hunters. The 913K X followers figure could not be independently verified due to JavaScript rendering but was sourced from multiple search results."
+  },
+
+  "freedom_score": {
+    "total_score": 33,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Sahara Chain mainnet is registered (chain ID 3132023, RPC mainnet.saharalabs.ai) but not fully operational as of March 2026 -- multiple sources describe mainnet as 'imminent' or 'upcoming.' No public block explorer. Initial validator set is permissioned, limited to 'professional node operators and established institutions.' Phased decentralisation plan exists (professional → qualified → permissionless) but currently in Phase 1. Token deployed on Ethereum and BNB Chain (centralised, not under Sahara's control). Data Services Platform and AI development tools run on centralised infrastructure operated by Sahara AI Ltd. No evidence of distributed infrastructure beyond the planned chain."
+      },
+      "governance_decentralisation": {
+        "score": 4,
+        "max": 20,
+        "evidence": "DAO governance with token-based voting is documented in tokenomics and multiple sources. However, no governance proposals have been submitted or voted on as of March 2026. Mainnet governance not yet active. All decisions currently made by the founding team and Sahara AI Ltd. Token distribution gives 64.25% to community categories but Ecosystem Development (33.93%) and Community Incentives (20.75%) are controlled by the team/foundation. Team and investor tokens (34.75%) have not yet unlocked (1-year cliff). No governance forum or on-chain voting record exists."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Distribution: 64.25% community-oriented (Ecosystem Development 33.93%, Community Incentives 20.75%, Airdrops 8.15%, IDO 1.42%, Liquidity 1%). Insider allocation: 19.75% early backers + 15% team = 34.75%. Vesting: 1-year cliff then linear over 36 months for insiders. IDO at $0.06 via Buidlpad raised $8.5M (1.42% of supply). Binance HODLer airdrop distributed 1.25%. The community percentage is headline-good, but Ecosystem Development and Community Incentives are effectively team-controlled allocations. IDO buyers are currently -49.4% underwater."
+      },
+      "censorship_resistance": {
+        "score": 4,
+        "max": 15,
+        "evidence": "Platform is enterprise-focused with partnerships with Microsoft, AWS, Google Cloud. Data Services Platform operates with KYC/registration requirements (Sahara ID). The platform can restrict access, modify services, and control who contributes data. Token contract includes Pausable functionality (owner can pause all transfers). Permissioned validator set. No evidence of permissionless participation in core platform functions beyond testnet tasks. Terms of service govern usage."
+      },
+      "data_sovereignty": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Data provenance and ownership are core to Sahara's mission. On-chain attribution tracking (TRAINED_ON, FINETUNED_FROM, DERIVED_FROM relationships). Ownership NFTs for AI assets. Licensing framework with License Token NFTs. Privacy features claimed including TEEs, differential privacy, and encrypted data handling. Contributors maintain ownership records on-chain. However: the chain is not fully live, so these features are aspirational. Actual data is stored off-chain on centralised infrastructure. Privacy guarantees not independently auditable (no audits found). The platform intermediates all data interactions."
+      },
+      "open_source_transparency": {
+        "score": 6,
+        "max": 15,
+        "evidence": "26 GitHub repos under SaharaLabsAI. Key open-source repos: sahara (blockchain node, Go, 128 commits, no license specified), Verifiable-ClawGuard (Apache-2.0, TEE attestation for agents), x-function (open-source agentic protocol, Rust/TS/Java). sahara-store (Go, 167 commits). However: main chain repo has 0 stars and 0 forks suggesting minimal external engagement. Many repos have very few commits. Core platform components (Data Services Platform, AI Marketplace, Knowledge Agent) appear proprietary. No published audit reports. ERC-20 token contract is verified on Etherscan. Organisation has only 96 GitHub followers. Funding and team information is transparent via press releases and official announcements."
+      }
+    },
+    "freedom_grade": "F",
+    "freedom_summary": "Sahara AI scores 33/100 (Grade F), reflecting a project that markets decentralisation heavily but currently operates as a centralised VC-backed AI platform with a token attached. The Sahara Chain mainnet is not yet fully operational, the validator set is permissioned, governance is not active, and core platform services run on centralised infrastructure. The token contract includes owner-controlled pause functionality. The data provenance vision is compelling and the team is credentialed, but nearly every decentralisation feature is either planned, in testnet, or aspirational rather than operational. The 64.25% community token allocation looks good on paper but most of it (Ecosystem Development 33.93%, Community Incentives 20.75%) is controlled by the team/foundation. This is a pre-decentralisation project wearing decentralised clothing."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Strong academic leadership: Sean Ren is a tenured USC professor with genuine AI research credentials (INK Lab, AI2, 15+ years NLP experience)",
+      "Significant VC backing ($51.5M total from Pantera, Polychain, Sequoia, Binance Labs, Samsung NEXT) providing long runway and institutional credibility",
+      "Data Services Platform has real traction: 200K+ users, 2.55M approved datapoints in Season 2 at 95% accuracy rate -- this is genuine data labelling work, not vapourware",
+      "Listed on major exchanges (Binance, OKX, KuCoin, Bitget, MEXC, HTX, Upbit) providing strong liquidity for a relatively new token",
+      "Enterprise partnerships with recognisable names (Microsoft, AWS, Google Cloud, Snap, MIT, USC, UCLA) though depth of these partnerships is unclear",
+      "Open-sourced agentic protocols (x-function, Verifiable-ClawGuard) show commitment to building in public"
+    ],
+    "what_is_hype": [
+      "'World's first full-stack AI-native blockchain' -- the chain isn't fully live and mainnet launch has been delayed past the Q3 2025 target. Calling it a blockchain platform when the blockchain barely functions is misleading",
+      "'Decentralised AI' framing -- the platform is currently fully centralised. Permissioned validators, team-controlled token allocations, centralised data services, pausable token contract. Decentralisation is a roadmap item, not a current state",
+      "40+ ecosystem partners including Microsoft and AWS -- the nature and depth of these partnerships is never specified. Are they customers, integrations, or just logo placements? Microsoft and AWS partner with thousands of companies",
+      "3.2M testnet accounts and 1.4M DAA -- these are likely inflated by airdrop farming activity. Private testnet metrics are not equivalent to genuine usage",
+      "'AI sovereignty' narrative -- while the vision of fair data contributor compensation is compelling, the current implementation requires trusting Sahara AI Ltd. with all data and infrastructure. There is no sovereignty without a functioning decentralised system"
+    ],
+    "key_risks": [
+      "Mainnet delay: Q3 2025 target missed, now described as 'imminent' in March 2026. Core value proposition depends on a blockchain that isn't fully operational",
+      "Major token unlock June 2026: ~1.03B tokens (25% of investor + team allocation) unlocking could create significant sell pressure on a token already -81% from ATH",
+      "No published security audits: For a project handling AI data and deploying smart contracts, the absence of any public audit reports from recognised firms is a notable gap",
+      "Discord compromise (August 2024): Official Discord was hacked, indicating security vulnerabilities in community management",
+      "Execution risk: Attempting to build an entire AI stack (data labelling, model training, deployment, marketplace, agents, blockchain) is extremely ambitious. Most projects struggle with one layer",
+      "Regulatory risk: Data labelling workforce compensation across jurisdictions, securities classification of SAHARA token, and AI regulation could all pose challenges",
+      "Pausable token: ERC20Pausable implementation means the contract owner can halt all token transfers, creating a centralisation vector",
+      "Academic founder risk: Sean Ren maintains his USC professorship while being CEO -- potential split attention"
+    ],
+    "competitive_advantages": [
+      "End-to-end AI infrastructure vision covering data → models → agents → marketplace (most competitors focus on one layer)",
+      "Academic credibility through Sean Ren's USC position and AI research background",
+      "Real data labelling platform with measurable quality metrics (95% accuracy rate)",
+      "Strong VC syndicate providing capital, connections, and exchange listing support",
+      "EVM-compatible chain with Tendermint consensus provides familiar developer tooling"
+    ],
+    "competitive_disadvantages": [
+      "Blockchain not yet fully operational -- competitors like Ocean Protocol and Vana have live mainnets",
+      "Attempting to be everything (data, models, agents, chain, marketplace) risks being mediocre at all of them",
+      "No published audits puts it behind competitors who have been audited (Vana has 7+ audits from Hashlock and Nethermind)",
+      "Minimal GitHub engagement: primary chain repo has 0 stars, 0 forks despite being public -- suggests limited developer interest",
+      "Token significantly underwater from IDO (-49.4%) and ATH (-81%), eroding community trust",
+      "Permissioned validator set in an era when competitors offer permissionless participation"
+    ],
+    "comparable_projects": [
+      "Vana -- user-owned data network with DataDAOs and live mainnet (closer to live decentralisation)",
+      "Ocean Protocol -- decentralised data marketplace with longer track record",
+      "SingularityNET (ASI Alliance) -- AI marketplace and services on blockchain",
+      "Fetch.ai -- AI agent platform (now part of ASI Alliance)",
+      "Bittensor (TAO) -- decentralised AI network with permissionless mining"
+    ],
+    "outlook": "Sahara AI has assembled impressive ingredients: credentialed founders, top-tier VC backing, enterprise partnerships, and a working data labelling platform. The vision of a full-stack AI blockchain with fair contributor compensation addresses a real market need. However, the gap between vision and execution is wide. The core blockchain isn't fully live, governance is nonexistent, decentralisation is a roadmap item, and the token has lost significant value. The June 2026 cliff unlock ($30M+ at current prices) could pressure the token further. If the team delivers a functioning mainnet with genuine decentralisation features in 2026, the score could improve significantly. But today, this is a well-funded centralised AI platform with blockchain aspirations, not a decentralised network.",
+    "overall_assessment": "Sahara AI is a heavily VC-backed ($51.5M) AI data and infrastructure platform founded by a credentialed USC professor. It has a real data labelling product with measurable traction (200K users, 2.55M datapoints at 95% accuracy) and listings on major exchanges. However, its core blockchain isn't fully operational, all decentralisation features are aspirational, the validator set is permissioned, governance is inactive, and the token contract can be paused by the owner. Freedom Score of 33/100 (F) reflects the significant gap between the decentralisation narrative and current centralised reality. Watch for mainnet delivery and the June 2026 token unlock as key inflection points."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Sahara AI Official Documentation",
+      "url": "https://docs.saharaai.com",
+      "author": "Sahara AI",
+      "publisher": "Sahara AI",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["architecture", "blockchain protocols", "licensing framework", "asset management", "execution layer"],
+      "reliability_notes": "Official documentation. Content extracted successfully from blockchain-developer-docs section."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "$SAHARA Tokenomics | Sahara Documentation",
+      "url": "https://docs.saharaai.com/tokenomics",
+      "author": "Sahara AI",
+      "publisher": "Sahara AI",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["token utility", "distribution breakdown", "vesting schedule", "staking details", "governance"],
+      "reliability_notes": "Official tokenomics documentation. Content extracted successfully."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Sahara Blockchain Validator Guide | Sahara Documentation",
+      "url": "https://docs.saharaai.com/blockchain-developer-docs/basics/images-and-media",
+      "author": "Sahara AI",
+      "publisher": "Sahara AI",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["consensus mechanism", "validator requirements", "hardware specs", "slashing conditions", "phased decentralisation"],
+      "reliability_notes": "Official validator documentation. Detailed hardware requirements and consensus mechanism."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Sahara AI Litepaper",
+      "url": "https://assets.saharaai.com/files/litepaper.pdf",
+      "author": "Sahara AI",
+      "publisher": "Sahara AI",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": [],
+      "reliability_notes": "PDF could not be parsed via WebFetch. Content reconstructed from other official sources."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "github",
+      "title": "Sahara AI GitHub Organisation",
+      "url": "https://github.com/SaharaLabsAI",
+      "author": "SaharaLabsAI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["repo count", "languages", "activity", "stars", "forks", "followers"],
+      "reliability_notes": "Direct GitHub check. 26 repos, 96 followers. Primary repos examined individually."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "github",
+      "title": "SaharaLabsAI/sahara - Blockchain Node Repository",
+      "url": "https://github.com/SaharaLabsAI/sahara",
+      "author": "SaharaLabsAI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["commits", "languages", "release version", "last commit", "description"],
+      "reliability_notes": "128 commits, Go 91.6% / Solidity 7.3%. Latest release 0.3.2-testnet-beta (Sept 2025). 0 stars, 0 forks."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "github",
+      "title": "SaharaLabsAI/Verifiable-ClawGuard",
+      "url": "https://github.com/SaharaLabsAI/Verifiable-ClawGuard",
+      "author": "SaharaLabsAI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["TEE attestation", "guardrail verification", "open source license"],
+      "reliability_notes": "Apache-2.0, 10 commits, 3 stars. Proof-of-concept for demonstrative purposes."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "github",
+      "title": "SaharaLabsAI/x-function - Sahara x402 Protocol",
+      "url": "https://github.com/SaharaLabsAI/x-function",
+      "author": "SaharaLabsAI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["agentic protocol", "open source", "serverless/verifiable/policy extensions"],
+      "reliability_notes": "Open source agentic framework. 14 commits, 1 star. Rust/TypeScript/Java."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "github",
+      "title": "SaharaLabsAI/sahara-store",
+      "url": "https://github.com/SaharaLabsAI/sahara-store",
+      "author": "SaharaLabsAI",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["state storage", "Go implementation"],
+      "reliability_notes": "167 commits, Go 99.4%. Latest release v1.0.0-beta.6 (May 2025). No README."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "block_explorer",
+      "title": "Sahara AI (SAHARA) Token on Etherscan",
+      "url": "https://etherscan.io/token/0xFDFfB411C4A70AA7C95D5C981a6Fb4Da867e1111",
+      "author": null,
+      "publisher": "Etherscan",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["total supply", "circulating supply", "holders", "transfers", "contract verification", "deployer", "price", "market cap"],
+      "reliability_notes": "On-chain data. Contract verified. Max supply 10B, circulating 2.91B, 1,838 holders, 92,443 transactions. ERC20Pausable confirmed."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "block_explorer",
+      "title": "Sahara AI Contract Address on Etherscan",
+      "url": "https://etherscan.io/address/0xfdffb411c4a70aa7c95d5c981a6fb4da867e1111",
+      "author": null,
+      "publisher": "Etherscan",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["deployer address", "creation date", "transaction count", "contract features"],
+      "reliability_notes": "On-chain. Deployer: 0xc355594b3a279152396a1fd6b4f387a2ab9d8c5e. Created ~259 days ago (approx June 2025)."
+    },
+    {
+      "source_id": "S012",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Sahara AI on CryptoRank - Price and Market Data",
+      "url": "https://cryptorank.io/price/sahara",
+      "author": null,
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price", "market cap", "FDV", "circulating supply", "total supply", "ATH", "ATL", "volume", "IDO price", "listing date"],
+      "reliability_notes": "Tier 2 market data source. Cross-referenced with Etherscan and CoinGecko snippets."
+    },
+    {
+      "source_id": "S013",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Sahara AI on CryptoRank - Vesting Schedule",
+      "url": "https://cryptorank.io/price/sahara/vesting",
+      "author": null,
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["vesting schedule", "unlock events", "allocation breakdown"],
+      "reliability_notes": "Vesting data. Some allocation categories differ slightly from DropsTab; cross-referenced with official docs."
+    },
+    {
+      "source_id": "S014",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Sahara AI on CryptoRank - Funding Rounds",
+      "url": "https://cryptorank.io/ico/sahara",
+      "author": null,
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["total raised", "funding rounds", "investors", "IDO details", "initial FDV"],
+      "reliability_notes": "Comprehensive funding data. Total raised $51.5M across seed ($6M), Series A ($37M), and IDO ($8.5M)."
+    },
+    {
+      "source_id": "S015",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Sahara AI on Tokenomist - Supply and Vesting",
+      "url": "https://tokenomist.ai/sahara-ai",
+      "author": null,
+      "publisher": "Tokenomist",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["allocation breakdown", "vesting details", "unlock schedule", "FDV", "market cap"],
+      "reliability_notes": "Detailed allocation data including 7-category breakdown. Cross-referenced with official docs and DropsTab."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Sahara AI on DropsTab - Vesting",
+      "url": "https://dropstab.com/coins/sahara-ai/vesting",
+      "author": null,
+      "publisher": "DropsTab",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["vesting progress", "locked vs unlocked", "allocation breakdown with unlock percentages", "next unlock"],
+      "reliability_notes": "Detailed vesting breakdown. 27.91% vested, 72.09% locked. Investor and Core Contributor allocations 0% unlocked."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko Sahara AI Page (via search snippets)",
+      "url": "https://www.coingecko.com/en/coins/sahara-ai",
+      "author": null,
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price", "market cap", "circulating supply", "volume", "ATH", "ATL", "next unlock"],
+      "reliability_notes": "CoinGecko page returned 403. Data sourced from search result snippets only. Cross-referenced with CryptoRank."
+    },
+    {
+      "source_id": "S018",
+      "tier": 2,
+      "type": "research_report",
+      "title": "Sahara AI - Paul Veradittakit (Pantera Capital) Analysis",
+      "url": "https://www.veradiverdict.com/p/sahara-ai",
+      "author": "Paul Veradittakit",
+      "publisher": "VeradiVerdict (Substack)",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["architecture analysis", "competitive positioning", "team assessment", "advisory board", "investment thesis"],
+      "reliability_notes": "Pantera Capital partner analysis. Informative but note conflict of interest -- Pantera co-led the $43M round."
+    },
+    {
+      "source_id": "S019",
+      "tier": 3,
+      "type": "news",
+      "title": "MEXC Complete Guide to Sahara AI",
+      "url": "https://blog.mexc.com/what-is-sahara-ai/",
+      "author": null,
+      "publisher": "MEXC Blog",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["platform overview", "architecture", "tokenomics", "products", "team", "partnerships"],
+      "reliability_notes": "Exchange marketing content but comprehensive overview. Cross-referenced with official docs."
+    },
+    {
+      "source_id": "S020",
+      "tier": 1,
+      "type": "news",
+      "title": "Sahara AI Raises $43M to Build a Collaborative AI Economy",
+      "url": "https://www.prnewswire.com/news-releases/sahara-ai-raises-43m-to-build-a-collaborative-ai-economy-302222316.html",
+      "author": "Sahara AI",
+      "publisher": "PR Newswire",
+      "date_published": "2024-08-14",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["funding amount", "all investors", "advisors", "team", "founding date", "partnerships", "use of funds"],
+      "reliability_notes": "Official press release via PR Newswire. Primary source for $43M round details."
+    },
+    {
+      "source_id": "S021",
+      "tier": 3,
+      "type": "news",
+      "title": "USC Professor's Crypto Startup 'Sahara' Raises $6M",
+      "url": "https://www.coindesk.com/tech/2024/03/05/crypto-ai-startup-sahara-raises-6m-to-reward-ai-trainers",
+      "author": null,
+      "publisher": "CoinDesk",
+      "date_published": "2024-03-05",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["seed funding", "investors", "team backgrounds", "product description", "existing clients"],
+      "reliability_notes": "CoinDesk reporting on seed round. Confirmed Sean Ren as USC (not UCLA) professor."
+    },
+    {
+      "source_id": "S022",
+      "tier": 3,
+      "type": "interview",
+      "title": "Sean Ren, Associate Professor at USC - Interview Series",
+      "url": "https://www.unite.ai/sean-ren-associate-professor-in-computer-science-at-usc-interview-series/",
+      "author": "Unite.AI",
+      "publisher": "Unite.AI",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Sean Ren background", "education", "research focus", "AI sovereignty vision"],
+      "reliability_notes": "Direct interview with Sean Ren. Confirmed USC INK Lab, AI2 affiliation, research focus."
+    },
+    {
+      "source_id": "S023",
+      "tier": 3,
+      "type": "news",
+      "title": "Sahara AI Testnet and Mainnet Launch - Bitget Academy",
+      "url": "https://web3.bitget.com/en/academy/sahara-ai-testnet-and-mainnet-launch-a-new-era-for-decentralized-ai-and-blockchain-ownership",
+      "author": null,
+      "publisher": "Bitget",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["SIWA testnet launch date (March 10 2025)", "mainnet timeline", "testnet features"],
+      "reliability_notes": "Exchange-published educational content. SIWA public testnet date confirmed as March 10, 2025."
+    },
+    {
+      "source_id": "S024",
+      "tier": 2,
+      "type": "documentation",
+      "title": "Sahara AI Testnet on ChainList",
+      "url": "https://chainlist.org/chain/313313",
+      "author": null,
+      "publisher": "ChainList",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["testnet chain ID", "RPC URL", "native currency", "EIP support"],
+      "reliability_notes": "ChainList registry. Testnet chain ID 313313, RPC testnet.saharalabs.ai."
+    },
+    {
+      "source_id": "S025",
+      "tier": 2,
+      "type": "documentation",
+      "title": "Sahara AI Mainnet on ChainList",
+      "url": "https://chainlist.org/chain/3132023",
+      "author": null,
+      "publisher": "ChainList",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["mainnet chain ID", "RPC URL", "native currency", "EIP support"],
+      "reliability_notes": "ChainList registry. Mainnet chain ID 3132023, RPC mainnet.saharalabs.ai. No explorer listed."
+    },
+    {
+      "source_id": "S026",
+      "tier": 3,
+      "type": "news",
+      "title": "Binance Reveals Major SAHARA Airdrop for BNB Holders",
+      "url": "https://www.cryptoninjas.net/news/binance-reveals-major-sahara-airdrop-for-bnb-holders-ahead-of-june-26-token-listing/",
+      "author": null,
+      "publisher": "CryptoNinjas",
+      "date_published": "2025-06-23",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Binance listing date", "HODLer airdrop details", "trading pairs", "initial circulating supply"],
+      "reliability_notes": "News report confirmed by Binance support page. TGE June 26, 2025."
+    },
+    {
+      "source_id": "S027",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinMarketCap AI - Sahara AI Latest Updates",
+      "url": "https://coinmarketcap.com/cmc-ai/sahara-ai/latest-updates/",
+      "author": null,
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["mainnet status (not yet launched)", "recent news", "Danal Fintech partnership", "token unlock schedule", "DeFi CoPilot timeline"],
+      "reliability_notes": "CoinMarketCap AI summary. Confirmed mainnet NOT yet launched as of March 2026."
+    },
+    {
+      "source_id": "S028",
+      "tier": 3,
+      "type": "social_media",
+      "title": "Sahara AI Discord Server",
+      "url": "https://discord.com/invite/sahara-ai",
+      "author": null,
+      "publisher": "Discord",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Discord member count"],
+      "reliability_notes": "341,738 members per discordbotlist.com listing. Likely includes inactive airdrop farmers."
+    },
+    {
+      "source_id": "S029",
+      "tier": 3,
+      "type": "social_media",
+      "title": "Sahara AI X/Twitter (@SaharaLabsAI)",
+      "url": "https://x.com/saharalabsai",
+      "author": null,
+      "publisher": "X/Twitter",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["X follower count", "ecosystem partners"],
+      "reliability_notes": "913K followers per search snippets. JavaScript-rendered -- not directly verifiable via WebFetch."
+    },
+    {
+      "source_id": "S030",
+      "tier": 3,
+      "type": "news",
+      "title": "What is Sahara AI (SAHARA)? - OSL Academy",
+      "url": "https://www.osl.com/hk-en/academy/article/what-is-sahara-ai-sahara",
+      "author": null,
+      "publisher": "OSL",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["platform overview", "token functions", "architecture layers", "governance model"],
+      "reliability_notes": "Exchange-published educational content. Provided governance and architecture details."
+    },
+    {
+      "source_id": "S031",
+      "tier": 4,
+      "type": "news",
+      "title": "Sahara AI Discord Account Compromised (Aug 2024)",
+      "url": "https://quadrigainitiative.com/casestudy/saharaaiofficialdiscordaccountcompromised.php",
+      "author": null,
+      "publisher": "Quadriga Initiative",
+      "date_published": "2024-08-01",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["security incident - Discord compromise"],
+      "reliability_notes": "Security incident tracker. Losses listed as unknown."
+    },
+    {
+      "source_id": "S032",
+      "tier": 3,
+      "type": "news",
+      "title": "HuggingFace search for Sahara AI",
+      "url": "https://huggingface.co/SaharaLabsAI",
+      "author": null,
+      "publisher": "HuggingFace",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["No HuggingFace presence (404)"],
+      "reliability_notes": "Direct URL check returned 404. Confirmed no official Sahara AI organisation on HuggingFace."
+    }
+  ]
+}

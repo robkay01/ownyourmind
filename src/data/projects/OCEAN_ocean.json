@@ -1,0 +1,997 @@
+{
+  "meta": {
+    "project_id": "ocean",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "Ocean Protocol official blog (blog.oceanprotocol.com) returned SSL certificate error -- blog posts referenced via search snippets and third-party reporting instead",
+      "DeFiLlama returned 403 -- Ocean Protocol does not appear to be tracked on DeFiLlama as a protocol with TVL",
+      "CoinGecko web page returned 403 -- market data sourced from CoinGecko API instead",
+      "CoinMarketCap web page is JavaScript-dependent -- market data not extractable via WebFetch. Figures cross-referenced with CoinGecko API and Etherscan",
+      "HuggingFace presence is minimal -- only one third-party dataset (AlgoveraAI/CryptoPunks) references Ocean Protocol. No official Ocean Protocol organisation or models found",
+      "Exact number of active Ocean Nodes not available from dashboard (nodes.oceanprotocol.com) as it renders via JavaScript. Ocean Protocol targets 2M+ nodes by 2026 but current count unknown",
+      "Ocean Protocol official website (oceanprotocol.com) rendered only CSS/JS -- substantive content not extractable via WebFetch for several pages",
+      "Halborn audit report is a PDF hosted on GitHub -- scope and detailed findings not fully extractable. Audit existence confirmed from GitHub repository",
+      "OpenZeppelin vesting wallet audit referenced in search but full page content not extractable",
+      "Settlement status between Ocean Protocol and Fetch.ai was 'agreement in principle' as of late October 2025 -- formal token return not confirmed as completed. Legal complaint filed November 4, 2025 naming Ocean Protocol Foundation, Ocean Expeditions Ltd, OceanDAO, and co-founders as defendants",
+      "Exact Discord member count sourced from search snippets -- JavaScript-rendered page not directly verifiable",
+      "Telegram community member count not directly verifiable from Telegram page",
+      "Annual revenue figures for the protocol not publicly disclosed",
+      "Data Farming passive and active DF streams ended May 2024 with airdrop to veOCEAN holders -- only Predictoor DF (500 USDC/week) remains active",
+      "Total number of data NFTs minted and datasets published on Ocean Market not available from current documentation",
+      "Exact current Predictoor volume and user count not available -- historical ATH of $20.5M daily volume cited from Oasis blog (early 2024 figures)"
+    ],
+    "refresh_config": {
+      "github_org": "oceanprotocol",
+      "github_primary_repo": "ocean-node",
+      "coingecko_id": "ocean-protocol",
+      "discord_server_id": null,
+      "telegram_username": "OceanProtocol_Community",
+      "x_handle": "oceanprotocol",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "Ocean Protocol",
+    "ticker": "OCEAN",
+    "category": "data",
+    "subcategory": "Decentralised data marketplace and compute-to-data infrastructure for AI",
+    "tagline": "Tokenized AI & Data",
+    "one_liner": "A decentralised protocol enabling privacy-preserving data sharing and monetisation through data NFTs, datatokens, and compute-to-data -- where algorithms travel to data rather than data travelling to algorithms -- deployed across Ethereum and compatible networks with a four-layer architecture of smart contracts, middleware libraries, Ocean Nodes, and marketplace applications.",
+    "website": "https://oceanprotocol.com",
+    "documentation_url": "https://docs.oceanprotocol.com",
+    "whitepaper_url": "https://oceanprotocol.com/tech-whitepaper.pdf",
+    "github_url": "https://github.com/oceanprotocol",
+    "chain": "Ethereum mainnet (primary), Oasis Sapphire (Predictoor), multi-chain support via Ocean Nodes",
+    "launch_date": "2019-05-03",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Trent McConaghy",
+        "role": "Co-Founder",
+        "background": "PhD in Electrical Engineering from KU Leuven (#1 thesis worldwide). AI researcher since 1990s (Canada Dept. of National Defense). Founded ADA (acquired by Synopsys 2004), Solido (acquired by Siemens 2017). Founded ascribe (2013), BigchainDB (2015), Ocean Protocol (2017). 35+ academic papers, 20 patents. Advisory roles with Estonian, German, and Dutch governments. Currently also working on brain-computer interfaces (bci/acc).",
+        "linkedin_or_x": "https://trent.st/",
+        "doxxed": true
+      },
+      {
+        "name": "Bruce Pon",
+        "role": "Co-Founder & CEO",
+        "background": "Founder and CEO of BigchainDB GmbH (Berlin). Background in consulting at Accenture, project management at Daimler AG. Founded ascribe.io (NFT platform, 2013) and BigchainDB (blockchain database, 2015). Co-founded Ocean Protocol in 2017. Named as defendant in Fetch.ai's November 2025 legal complaint regarding the ASI Alliance dispute.",
+        "linkedin_or_x": "https://www.crunchbase.com/person/bruce-pon",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 8,
+    "entity_name": "Ocean Protocol Foundation Ltd. (Singapore non-profit); BigchainDB GmbH (Berlin, core development)",
+    "entity_jurisdiction": "Ocean Protocol Foundation Ltd. -- Singapore (Company Registration No. 201729912W, registered at Mapletree Business City, 20 Pasir Panjang Rd, East Wing #03-22/24, Singapore 117439). BigchainDB GmbH -- Berlin, Germany (HRB 160856B, Chausseestraße 19, 10115 Berlin). DEX Pte. Ltd. (Singapore) and BigchainDB GmbH are the founding entities of the Foundation.",
+    "notable_backers": [
+      "Digital Currency Group (DCG) -- seed investor",
+      "Outlier Ventures -- seed investor",
+      "Fabric Ventures -- investor",
+      "BlockVc -- seed investor",
+      "IOSG Ventures -- investor",
+      "Cypher Capital -- $5M round (May 2022)",
+      "Kosmos Ventures -- investor"
+    ],
+    "funding_raised": {
+      "total_usd": 39190000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": 4230000,
+          "date": "2017-12-01",
+          "lead_investor": "Outlier Ventures / BlockVc"
+        },
+        {
+          "round_type": "Private Token Sale",
+          "amount_usd": 21390000,
+          "date": "2018-03-01",
+          "lead_investor": null
+        },
+        {
+          "round_type": "ICO (CoinList)",
+          "amount_usd": 1800000,
+          "date": "2019-03-06",
+          "lead_investor": null
+        },
+        {
+          "round_type": "IEO (Bittrex International)",
+          "amount_usd": 6770000,
+          "date": "2019-05-03",
+          "lead_investor": null
+        },
+        {
+          "round_type": "Strategic",
+          "amount_usd": 5000000,
+          "date": "2022-05-23",
+          "lead_investor": "Cypher Capital"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Ocean Protocol employs a four-layer architecture. Layer 1 (Blockchain Foundation) consists of smart contracts on Ethereum and compatible networks handling asset publishing, consumption, pricing, and access control via ERC721 data NFTs (representing base IP/copyright) and ERC20 datatokens (representing access licenses). Layer 2 (Middleware) includes Ocean.js (JavaScript) and Ocean.py (Python) libraries for developer interaction, plus Ocean Nodes -- a unified component replacing the previous Provider, Aquarius, and Subgraph services. Ocean Nodes handle asset downloads, on-chain permission verification, metadata caching via Typesense, and Compute-to-Data job orchestration. The Compute-to-Data (C2D) paradigm transports algorithms to data sources rather than moving data, enabling privacy-preserving analysis. Layer 3 (Applications) includes Ocean Market and third-party dApps for data discovery and trading. Layer 4 (Web3 Wallets) provides the user interface for transactions. Predictoor, a separate product, runs on Oasis Sapphire for confidential on-chain prediction feeds.",
+    "consensus_mechanism": "Relies on Ethereum PoS for smart contract execution. Ocean Nodes are permissionless middleware -- not validators. Predictoor uses Oasis Sapphire (PoS with confidential computing).",
+    "what_is_onchain": "Data NFTs (ERC721), datatokens (ERC20), fixed-rate exchanges, dispenser contracts, pricing schemas, access control permissions, consume transactions, Predictoor prediction feeds and staking (on Oasis Sapphire), Data Farming reward distribution.",
+    "what_is_offchain": "Actual data files (stored by data providers), metadata caching (Ocean Nodes Indexer via Typesense), data streaming/delivery (Ocean Nodes Provider), Compute-to-Data execution environments (Docker/Kubernetes), prediction bot logic, Ocean Market frontend.",
+    "key_dependencies": [
+      "Ethereum mainnet (primary smart contract deployment)",
+      "Oasis Sapphire (Predictoor confidential compute)",
+      "libp2p (Ocean Nodes peer-to-peer communication)",
+      "Typesense (metadata caching in Ocean Nodes)",
+      "Docker / Kubernetes (Compute-to-Data environments)",
+      "OpenZeppelin (smart contract libraries and security patterns)",
+      "Gnosis Safe (multi-sig wallet governance)"
+    ],
+    "smart_contract_languages": ["Solidity", "Vyper"],
+    "open_source": true,
+    "license": "Apache-2.0",
+    "github_metrics": {
+      "total_repos": 94,
+      "primary_repo_url": "https://github.com/oceanprotocol/ocean-node",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-03",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 19
+    },
+    "audits": [
+      {
+        "auditor": "CertiK",
+        "date": null,
+        "scope": "Ocean Protocol Token (OCEAN) smart contract",
+        "result_summary": "No critical vulnerabilities detected. Code style well-written, achieving correctness by aligning implementation with specification. Advisory: contract owner has authority to pause, mint, and kill -- token holders should be aware of administrative authority.",
+        "report_url": null
+      },
+      {
+        "auditor": "Halborn",
+        "date": null,
+        "scope": "Ocean Protocol v4 smart contracts",
+        "result_summary": "Audit completed. Full report available as PDF in the oceanprotocol/contracts GitHub repository.",
+        "report_url": "https://github.com/oceanprotocol/contracts/blob/main/docs/Ocean_Protocol_Smart_Contract_Security_Audit_Report_Halborn_Final%20(1).pdf"
+      },
+      {
+        "auditor": "OpenZeppelin",
+        "date": null,
+        "scope": "Ocean Protocol vesting wallet (Splitter and VestingWalletHalving contracts for DF Rewards distribution)",
+        "result_summary": "Audit focused on vw-cli repository. Chief concern: administrative features in Splitter and VestingWalletHalving contracts introduce race-like behaviour and turn untrusted relationships into trusted ones.",
+        "report_url": "https://www.openzeppelin.com/news/ocean-vesting-wallet-audit"
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2022-02-27",
+        "description": "Configuration vulnerability in Compute-to-Data (C2D) Kubernetes infrastructure discovered by security researchers Christopher Bleckmann-Dreher and Daniel Matesic. Researchers found infrastructure appeared completely compromised -- able to get a shell and call underlying AWS metaservice. Bug bounty programme was retired at the time, making responsible disclosure difficult. Bruce Pon acknowledged 'a configuration issue on Ocean compute-to-data' on Feb 27, and a patch was released the same day. No user funds were lost.",
+        "severity": "High",
+        "resolution": "Patched via new release of operator engine same day."
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Ocean Token",
+    "ticker": "OCEAN",
+    "token_standard": "ERC-20 (Ethereum)",
+    "token_type": "other",
+    "token_utility": [
+      "Historically: staking (veOCEAN), governance (OceanDAO quadratic voting), data curation, Data Farming rewards, and transaction fee medium",
+      "Currently: Predictoor Data Farming rewards (earning USDC by running prediction bots)",
+      "Community fee distribution: a portion of consume transaction fees goes to the Ocean community",
+      "Buy-and-burn: a portion of ecosystem revenue is earmarked for buyback and burn of OCEAN tokens",
+      "Post-ASI withdrawal: Ocean Protocol officially states OCEAN has 'no intended utility value' and is explicitly NOT a staking, platform, governance, payment, NFT, DeFi, meme, reward, or security token"
+    ],
+    "supply": {
+      "max_supply": 1410000000,
+      "total_supply": 267798450,
+      "circulating_supply": 200081035,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 74.71
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Network Reward (Emissions)",
+          "percentage": 60.0,
+          "vesting_schedule": "Distributed over time as network rewards",
+          "cliff": "None",
+          "notes": "The largest allocation intended for long-term network incentives. However, 81% of total OCEAN supply (~1.13B tokens) was converted to FET/ASI during the ASI Alliance merger (July 2024), and the remaining OCEAN max supply is effectively ~267.8M."
+        },
+        {
+          "category": "Founding Team",
+          "percentage": 20.0,
+          "vesting_schedule": "5-year vesting in 6 equal tranches",
+          "cliff": "None specified",
+          "notes": "Allocated to BigchainDB and DEX founding teams (10% each). 122.62M OCEAN -- now fully unlocked per ICODrops."
+        },
+        {
+          "category": "Pre-launch Sale (Acquirors)",
+          "percentage": 6.6,
+          "vesting_schedule": "6 months linear from network launch",
+          "cliff": "None",
+          "notes": "93M OCEAN at $0.23/token. Raised $21.39M. Fully unlocked."
+        },
+        {
+          "category": "Foundation",
+          "percentage": 5.0,
+          "vesting_schedule": "Distributed as data credits and community incentives",
+          "cliff": "None",
+          "notes": "Ocean tokens for community distribution, data credits for buying data and services."
+        },
+        {
+          "category": "IEO (Bittrex International)",
+          "percentage": 4.0,
+          "vesting_schedule": "Fully unlocked at TGE",
+          "cliff": "None",
+          "notes": "56.4M OCEAN at $0.12/token. Raised $6.77M."
+        },
+        {
+          "category": "Seed Sale",
+          "percentage": 3.32,
+          "vesting_schedule": "1 year linear from network launch",
+          "cliff": "None",
+          "notes": "47M OCEAN at $0.09/token. Raised $4.23M. Fully unlocked."
+        },
+        {
+          "category": "Network Launch Sale (CoinList)",
+          "percentage": 1.08,
+          "vesting_schedule": "Fully unlocked at TGE",
+          "cliff": "None",
+          "notes": "15.42M OCEAN at $0.25/token. Raised $1.8M."
+        }
+      ],
+      "distribution_method": "Combination of seed sale, pre-launch private sale, IEO (Bittrex International), ICO (CoinList), and ongoing network emissions. Approximately 25% of total tokens went to acquirors across three initial sale phases. 60% allocated as network reward emissions."
+    },
+    "emissions": {
+      "model": "deflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "None -- fixed max supply of 1.41B OCEAN (though effective supply is now ~267.8M after ASI conversion)",
+      "next_major_emission_event": "Buyback-and-burn programme using profits from spin-out ventures. Approximately 1.4M OCEAN tokens burned as of September 2023.",
+      "next_event_date": null,
+      "burn_mechanism": "A portion of consume transaction revenue and profits from spin-out ventures are earmarked for continuous buyback and burn of OCEAN tokens, creating permanent supply reduction."
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "veOCEAN staking (lock OCEAN for 2 weeks to 4 years to earn veOCEAN) was the primary staking mechanism. Passive DF and Active DF ended May 3, 2024 with an airdrop to veOCEAN holders. Locked OCEAN will unlock according to its schedule (up to 4 years). Only Predictoor DF remains active (500 USDC/week rewards).",
+      "minimum_stake": null,
+      "lock_up_period": "2 weeks to 4 years (veOCEAN lock period -- now only relevant for existing locked positions)",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "veOCEAN staking programmes (Passive DF and Active DF) have ended -- locked tokens will unlock on schedule but new staking is not incentivised",
+        "Predictoor DF requires running prediction bots with stake-at-risk (stake slashed when predictions are wrong)",
+        "Token price has declined 94.6% from ATH, eroding historical staking returns"
+      ],
+      "slashing_conditions": "Predictoor: stake is slashed when predictions are incorrect. Predictoor DF rewards are calculated as total sales minus stake slashed due to being wrong."
+    },
+    "market_data": {
+      "price_usd": 0.1037,
+      "market_cap_usd": 20743160,
+      "fully_diluted_valuation_usd": 27763682,
+      "twenty_four_hour_volume_usd": 77176,
+      "all_time_high_usd": 1.93,
+      "all_time_high_date": "2021-04-10",
+      "all_time_low_usd": 0.01284832,
+      "all_time_low_date": "2019-08-11",
+      "major_exchanges": [
+        "Coinbase",
+        "Kraken",
+        "Binance US",
+        "UpBit",
+        "Uniswap V2",
+        "Uniswap V4",
+        "SushiSwap"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Originally a fixed-supply utility and governance token with veTokenomics (veOCEAN lock-and-earn model). Post-ASI Alliance withdrawal, OCEAN has been officially stripped of utility -- the Foundation states it has 'no intended utility value'. Effective supply dramatically reduced from 1.41B max to ~267.8M after 81% conversion to FET/ASI. Buyback-and-burn programme creates deflationary pressure on remaining supply. Token now trades primarily as a speculative asset with legacy community attachment.",
+    "tokenomics_notes": "The ASI Alliance merger (March 2024) and subsequent withdrawal (October 2025) fundamentally altered OCEAN tokenomics. 81% of supply (~1.13B tokens) was converted to FET at 0.433226 FET per OCEAN, leaving ~270M OCEAN across 37,334 addresses. The Foundation was accused of converting 661M minted OCEAN into 286M FET and allegedly selling ~263M FET via exchanges and OTC desks (GSR Markets, Binance). A legal complaint was filed November 4, 2025. Settlement negotiations were underway as of late October 2025 with agreement in principle to return tokens. CoinGecko shows current circulating supply of 200.08M with total supply of 267.8M. Etherscan shows max total supply of 1.41B (original contract) but on-chain market cap of $146.2M vs CoinGecko market cap of $20.7M -- discrepancy reflects the difference between total and circulating supply accounting."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run an Ocean Node to serve as middleware infrastructure for the Ocean Protocol network. Ocean Nodes replace the previous Provider, Aquarius, and Subgraph components. Node operators handle asset downloads, permission verification, metadata caching, and Compute-to-Data job orchestration. Eligible nodes can earn incentive rewards (OCEAN + ROSE tokens).",
+        "minimum_hardware": "1 vCPU, 2 GB RAM, 4 GB storage. Supported: Ubuntu LTS, macOS, Windows. Requires public IP, exposed HTTP API and P2P ports.",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "360,000 ROSE per epoch for eligible nodes with 90%+ uptime. Additional fees from Compute-to-Data usage.",
+        "barriers_to_entry": ["Requires public IP address and open ports", "90%+ uptime required for reward eligibility", "Docker deployment recommended for incentive eligibility"],
+        "guide_available": true,
+        "guide_url": "https://docs.oceanprotocol.com/developers/ocean-node"
+      },
+      {
+        "type": "using",
+        "description": "Publish data assets on Ocean Market as data NFTs (ERC721) with datatokens (ERC20) for access control. Data providers can offer downloadable datasets or Compute-to-Data access where algorithms run on the provider's data without the data leaving its location. Pricing via fixed-rate exchanges or free dispensers.",
+        "minimum_hardware": "Standard computer with web browser and Web3 wallet",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Revenue from datatoken sales. Community fee of 0.1-0.2% on swaps.",
+        "barriers_to_entry": ["Requires valuable data to publish", "Must understand data NFT/datatoken model", "Gas fees for Ethereum transactions"],
+        "guide_available": true,
+        "guide_url": "https://docs.oceanprotocol.com/user-guides/using-ocean-market"
+      },
+      {
+        "type": "using",
+        "description": "Run Predictoor AI prediction bots on Oasis Sapphire to submit predictions on crypto price movements (BTC, ETH, top 10 tokens) over 5-minute and 1-hour timeframes. Stake on predictions and earn when correct; lose stake when wrong. Part of Predictoor Data Farming programme with 500 USDC weekly rewards.",
+        "minimum_hardware": "Standard computer capable of running Python scripts",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "500 USDC weekly rewards distributed pro-rata among predictoors based on net earnings (sales minus slashed stake). Organic purchase revenue from traders buying prediction feeds.",
+        "barriers_to_entry": ["Requires AI/ML knowledge to build effective prediction models", "Stake-at-risk model means capital can be lost on incorrect predictions", "Must operate on Oasis Sapphire chain"],
+        "guide_available": true,
+        "guide_url": "https://docs.oceanprotocol.com/data-farming/predictoordf"
+      },
+      {
+        "type": "building",
+        "description": "Build data-driven dApps using Ocean.js (JavaScript/TypeScript) or Ocean.py (Python) libraries. Create custom data marketplaces, integrate data NFTs and datatokens, implement Compute-to-Data workflows, or build on top of the Predictoor ecosystem.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Revenue from data marketplace fees and application usage",
+        "barriers_to_entry": ["Must understand EVM smart contracts and Ocean Protocol architecture", "Ocean Shipyard grants programme provides early-stage funding but application required"],
+        "guide_available": true,
+        "guide_url": "https://docs.oceanprotocol.com/developers"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "94 repositories in oceanprotocol GitHub org, 389 GitHub followers, 8 listed team members",
+      "grants_program": true,
+      "grants_url": "https://oceanprotocol.com/shipyard"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Consume transaction fees (community fee on each data access), Predictoor feed sales, Compute-to-Data fees charged by node operators",
+    "metrics_source": "CoinGecko API, Etherscan, Ocean Protocol documentation, Oasis blog",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "Predictoor achieved ATH of $20.5M daily volume and $174.97M 30-day aggregate (early 2024, per Oasis blog). Over 4.5M transactions processed on Predictoor since launch (as of early 2024). 20 active Predictoor feeds (10 x 5min, 10 x 1h). Ocean Nodes incentives programme launched with 90%+ uptime requirement. Target of 2M+ nodes globally by 2026. Phase 2 (September 2025) introduced GPU support for large-scale model training. OceanDAO grants programme ran 23 rounds (2021-Nov 2022) before being superseded. Data Farming passive/active streams ended May 2024; only Predictoor DF (500 USDC/week) remains active. Ocean Market is operational but specific dataset counts and marketplace activity metrics not publicly disclosed."
+  },
+
+  "community": {
+    "discord_members": 56066,
+    "telegram_members": null,
+    "x_followers": 170727,
+    "github_contributors": null,
+    "governance_participation_rate": null,
+    "governance_model": "OceanDAO governance (quadratic voting using OCEAN across Ethereum, Polygon, BSC via Snapshot) operated from 2021-2022 (23 rounds) before being superseded by more automated approaches. veOCEAN holders had curation power over data assets. Post-ASI withdrawal, governance model is unclear -- the Foundation states OCEAN is not a governance token and OceanDAO grants ended. Decision-making appears to rest primarily with the Ocean Protocol Foundation and BigchainDB GmbH founding team.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.com/invite/TnXjkR5 (~56K members)",
+      "X/Twitter: @oceanprotocol (~171K followers)",
+      "Telegram: @OceanProtocol_Community",
+      "Telegram News: @oceanprotocol",
+      "GitHub: github.com/oceanprotocol (94 repos, 389 followers)",
+      "Reddit: r/oceanprotocol (~5K members)"
+    ],
+    "sentiment_summary": "Community sentiment is deeply divided following the ASI Alliance withdrawal and dispute with Fetch.ai. Long-term holders who did not convert to FET/ASI are stuck with a token that the Foundation now describes as having 'no intended utility value'. The legal dispute involving accusations of token misappropriation ($120M+ in FET) has damaged trust. However, the core technology (Compute-to-Data, Ocean Nodes, Predictoor) continues development with active GitHub commits. The project's pivot away from token utility toward a buyback-and-burn model represents a fundamental shift that many community members did not anticipate. X followers at 171K and Discord at 56K represent a significantly smaller community than peak periods.",
+    "community_notes": "The community has split between those who converted OCEAN to FET/ASI (81% of supply) and the ~37,334 addresses still holding ~270M OCEAN. The ASI Alliance dispute has been the dominant community narrative since October 2025. OceanDAO grants programme (23 rounds) built a developer community but ended in November 2022. Data Farming programmes further incentivised community participation until May 2024. Current active community engagement centres on Predictoor DF and Ocean Nodes incentives."
+  },
+
+  "freedom_score": {
+    "total_score": 55,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 11,
+        "max": 20,
+        "evidence": "Ocean Nodes are permissionless -- anyone can deploy one with minimal hardware (1 vCPU, 2GB RAM, 4GB storage). The node architecture uses libp2p for P2P communication and supports multiple deployment methods (Docker, Kubernetes, PM2). Nodes handle metadata caching, data delivery, and Compute-to-Data orchestration. The network targets 2M+ nodes globally by 2026, and incentive programmes are active (ROSE token rewards for 90%+ uptime). However, the actual number of active nodes is unknown (dashboard is JS-rendered). Critical infrastructure still includes Foundation-operated components. Compute-to-Data relies on data providers running their own infrastructure. Predictoor runs on Oasis Sapphire (a separate chain), creating dependency on that network. Smart contracts deployed primarily on Ethereum provide strong base-layer decentralisation. Score reflects permissionless node operation with meaningful centralisation vectors in coordination and Compute-to-Data environments."
+      },
+      "governance_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "OceanDAO governance using quadratic voting operated from 2021-2022 across 23 rounds and was then superseded. veOCEAN provided governance weight for data curation. However, both OceanDAO grants and veOCEAN staking programmes have ended. The Foundation now explicitly states OCEAN has 'no intended utility value' and is not a governance token. Decision-making appears to rest with Ocean Protocol Foundation (Singapore) and BigchainDB GmbH (Berlin). The CertiK audit noted contract owner has authority to pause, mint, and kill tokens. Multi-sig wallets (Gnosis Safe) control upgrades but are ultimately Foundation-controlled. No active on-chain governance mechanism exists post-ASI withdrawal. Score reflects historical governance infrastructure that has been effectively dismantled, with current centralisation in Foundation decision-making."
+      },
+      "token_distribution_fairness": {
+        "score": 6,
+        "max": 15,
+        "evidence": "Initial allocation gave 60% to network rewards (long-term emissions), 20% to founding team (5-year vest), and 15% to acquirors across seed ($0.09), pre-launch ($0.23), CoinList ($0.25), and Bittrex IEO ($0.12). Foundation received 5%. The 20% founding team allocation with 5-year vesting is reasonable but significant. Total raised was $39.19M across 5 rounds. However, the ASI Alliance events fundamentally distort the distribution picture: 81% of supply was converted to FET, and the Foundation allegedly minted 719M OCEAN in 2023, converting 661M into 286M FET and allegedly selling ~263M FET through exchanges and OTC desks. This is the subject of active litigation. The remaining ~270M OCEAN across 37,334 addresses represents a small fraction of original holders. Token price has declined 94.6% from ATH ($1.93 to $0.10). Score reflects initially reasonable distribution severely compromised by alleged Foundation token actions during and after the ASI Alliance merger."
+      },
+      "censorship_resistance": {
+        "score": 10,
+        "max": 15,
+        "evidence": "The Compute-to-Data model is inherently censorship-resistant for data providers -- algorithms travel to data, data stays put. Data providers retain full control over their data and can choose which algorithms to permit. Data NFTs (ERC721) and datatokens (ERC20) on Ethereum provide censorship-resistant ownership and access control through smart contracts on a public blockchain. Anyone can publish data assets on Ocean Market or build their own marketplace using Ocean.js/Ocean.py. Predictoor runs on Oasis Sapphire with end-to-end prediction privacy. However, the Ocean Market frontend is centrally operated and could theoretically censor listings. The CertiK audit noted contract owner can pause and kill contracts. The Foundation's ability to mint tokens (719M allegedly minted in 2023) represents a centralisation vector. Score reflects strong architectural censorship resistance at the protocol level offset by operational centralisation risks."
+      },
+      "data_sovereignty": {
+        "score": 13,
+        "max": 15,
+        "evidence": "Data sovereignty is Ocean Protocol's core value proposition and strongest dimension. The Compute-to-Data model ensures data never leaves the provider's premises -- algorithms are transported to data sources. Data providers maintain full custody and control of their data at all times. Data NFTs represent copyright/IP ownership on-chain, and datatokens represent access licenses that can be revoked. Providers can set custom terms for data access including which algorithms are permitted. Consumers receive computation results, not raw data. This architecture resolves the fundamental tension between data monetisation and data privacy. The ERC721/ERC20 standard provides verifiable, on-chain proof of data ownership and access rights. Multiple marketplace instances can exist, preventing single-point data control. Score reflects industry-leading data sovereignty architecture that genuinely keeps data with its owner."
+      },
+      "open_source_transparency": {
+        "score": 10,
+        "max": 15,
+        "evidence": "94 repositories in the oceanprotocol GitHub organisation, all under Apache-2.0 licence. Key repos actively maintained: ocean-node (72 stars, 3,367 commits, v1.0.3 released March 2026), ocean.js (117 stars, 3,640 commits, v6.0.0 released Feb 2026), contracts (86 stars, 1,661 commits), pdr-backend (51 stars, 962 commits, v0.4.1 March 2026). Multiple audits from CertiK, Halborn, and OpenZeppelin. Smart contracts verified on Etherscan. However, the OpenZeppelin audit raised concerns about administrative features creating trusted relationships in vesting contracts. The 2022 security incident revealed the bug bounty programme was retired at the time of discovery, raising transparency concerns. The ASI Alliance dispute raised questions about treasury transparency -- token minting and conversion activities were not publicly disclosed before Fetch.ai's allegations. Score reflects strong open-source credentials with significant transparency gaps around treasury operations and administrative controls."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Ocean Protocol scores 55/100 (Grade C -- partially decentralised with significant centralisation vectors). The project's strongest dimension is data sovereignty (13/15), reflecting the genuinely innovative Compute-to-Data model that keeps data with its provider while enabling monetisation. Censorship resistance (10/15) is also strong at the protocol level through ERC721/ERC20 standards on Ethereum. Open source transparency (10/15) benefits from 94 public repositories and multiple audits but is undermined by treasury opacity revealed during the ASI Alliance dispute. Infrastructure decentralisation (11/20) reflects permissionless Ocean Nodes offset by coordination centralisation. The weakest dimensions are governance decentralisation (5/20) -- with OceanDAO and veOCEAN governance effectively dismantled post-ASI withdrawal and no current governance mechanism -- and token distribution fairness (6/15), severely impacted by the alleged minting and selling of hundreds of millions of tokens during the ASI Alliance period."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Compute-to-Data model is a genuinely innovative privacy-preserving architecture -- algorithms travel to data rather than data travelling to algorithms. This solves a real problem for sensitive data monetisation.",
+      "Active and maintained codebase: 94 GitHub repos with ocean-node (v1.0.3, March 2026), ocean.js (v6.0.0, Feb 2026), and pdr-backend (v0.4.1, March 2026) all recently updated. 8 listed team members contributing.",
+      "Predictoor product has demonstrated real traction -- ATH of $20.5M daily volume, 4.5M+ transactions, and ongoing 500 USDC/week Data Farming rewards through 2026 on Oasis Sapphire.",
+      "Ocean Nodes represent a meaningful infrastructure evolution -- consolidating Provider, Aquarius, and Subgraph into a single permissionless deployable node with low hardware requirements (1 vCPU, 2GB RAM).",
+      "Pioneer project (2017) with 7+ years of development, multiple smart contract audits (CertiK, Halborn, OpenZeppelin), and real-world deployments across multiple chains.",
+      "Founding team has deep technical credentials -- Trent McConaghy (PhD, 35+ papers, 20 patents, two successful exits) and Bruce Pon (BigchainDB, Gaia-X Federation Services contracts)."
+    ],
+    "what_is_hype": [
+      "2M+ nodes target by 2026 is aspirational -- current active node count is undisclosed and the dashboard is not publicly readable. Similar targets in crypto rarely materialise on schedule.",
+      "OCEAN token described as having 'no intended utility value' by the Foundation itself -- yet it still trades on major exchanges. The buyback-and-burn narrative relies on profits from unspecified 'spin-out ventures' with no disclosed timeline or revenue projections.",
+      "The 1.41B max supply figure is misleading -- 81% has been converted to FET/ASI. The effective OCEAN supply is ~267.8M, but original supply figures still appear in some documentation creating confusion.",
+      "Data Farming programme -- once the primary community engagement mechanism -- has largely been wound down. Passive and Active DF ended May 2024. Only Predictoor DF remains at a modest 500 USDC/week.",
+      "Ocean Market marketplace activity and data NFT adoption metrics are not publicly disclosed, making it impossible to assess actual marketplace traction beyond the protocol layer."
+    ],
+    "key_risks": [
+      "ASI Alliance dispute and litigation: Fetch.ai filed a legal complaint on November 4, 2025, naming Ocean Protocol Foundation, Ocean Expeditions Ltd, OceanDAO, and co-founders as defendants over alleged misappropriation of 286M FET tokens (~$120M). Settlement was 'agreement in principle' but formal resolution unconfirmed.",
+      "Token utility void: OCEAN officially has 'no intended utility value' per the Foundation. This creates an existential question about why the token should have any value beyond speculative interest and buyback-burn mechanics.",
+      "Extreme price decline: 94.6% down from ATH ($1.93 to $0.10). 24h volume of ~$77K is extremely low for a project of this history and profile, suggesting thin liquidity and limited market interest.",
+      "Governance vacuum: OceanDAO grants ended (Nov 2022), veOCEAN staking ended (May 2024), and no replacement governance mechanism exists. The Foundation controls all strategic decisions with no community input mechanism.",
+      "Reputational damage: Allegations of minting 719M OCEAN in 2023, converting 661M to FET, and selling ~263M FET through exchanges and OTC desks have severely damaged community trust, regardless of legal outcome.",
+      "Team continuity risk: Small team (~8 listed GitHub members) with co-founders named as defendants in litigation. BigchainDB GmbH in Berlin and Foundation in Singapore create jurisdictional complexity.",
+      "Competitive landscape: Vana (user-owned data, $25M raised, 1.3M+ users), The Graph (data indexing), Oasis Network (privacy), and centralised data marketplaces all compete for the same use cases."
+    ],
+    "competitive_advantages": [
+      "First-mover in decentralised data marketplace space (2017) with 7+ years of development and battle-tested smart contracts",
+      "Compute-to-Data model is a genuine technical innovation that competing projects have not replicated at the same maturity level",
+      "Multi-chain deployment across Ethereum, Oasis Sapphire, and other networks provides broad accessibility",
+      "Data NFT + datatoken model (ERC721 + ERC20) creates a composable, DeFi-compatible framework for data asset ownership and access control",
+      "Strong founding team technical credentials (PhD, patents, prior exits, government advisory roles)"
+    ],
+    "competitive_disadvantages": [
+      "Token stripped of all utility -- 'no intended utility value' is the Foundation's own description. Competing projects (Vana, The Graph) have active token utility",
+      "Community fragmented: 81% of token supply converted to FET/ASI. Remaining ~37K holders represent a fraction of historical community",
+      "Governance dismantled: no active on-chain voting, no DAO, no community decision-making mechanism. Competing projects have active governance",
+      "Extremely low trading volume ($77K/24h) and market cap ($20.7M) compared to projects with similar history and technology maturity",
+      "ASI Alliance dispute has created lasting reputational damage and legal uncertainty that deters new participants and partners",
+      "Data marketplace adoption metrics are opaque -- no public dashboard showing datasets, users, or transaction volume on Ocean Market"
+    ],
+    "comparable_projects": [
+      "Vana (VANA) -- user-owned data sovereignty network with DataDAOs and Proof-of-Contribution",
+      "The Graph (GRT) -- decentralised indexing protocol for blockchain data",
+      "Oasis Network (ROSE) -- privacy-preserving computation, also hosts Ocean's Predictoor",
+      "Filecoin (FIL) -- decentralised storage with data marketplace capabilities",
+      "ASI Alliance (FET) -- former partner, now competitor in the decentralised AI space"
+    ],
+    "outlook": "Ocean Protocol is at a critical inflection point. The project possesses genuinely innovative technology -- Compute-to-Data remains one of the most elegant solutions to the data privacy-monetisation tension in the Web3 space, and the Ocean Nodes evolution toward a permissionless infrastructure network shows technical ambition. However, the project is burdened by the fallout from the ASI Alliance merger and withdrawal, which resulted in 81% token supply conversion, active litigation, reputational damage, and a token that the Foundation itself describes as having 'no intended utility value'. The path forward depends on three factors: (1) resolution of the Fetch.ai legal dispute without further damage, (2) whether the buyback-and-burn mechanism and spin-out venture profits can sustain OCEAN token value without active utility, and (3) whether Ocean Nodes and Predictoor can drive meaningful adoption and revenue. The technology deserves attention; the token situation demands caution.",
+    "overall_assessment": "Ocean Protocol is a technically sophisticated pioneer in the decentralised data economy that has been severely undermined by its own token management decisions and the ASI Alliance fallout. The Compute-to-Data model, data NFT/datatoken architecture, and Ocean Nodes infrastructure represent genuine innovation with 7+ years of development and multiple security audits. However, the project faces an existential token identity crisis: OCEAN has been officially stripped of all utility, 81% of supply was converted to a different token, and the Foundation is embroiled in a $120M+ legal dispute with former alliance partner Fetch.ai. The community has fractured, governance has been dismantled, and trading volume has collapsed to ~$77K daily. Freedom Score of 55/100 (Grade C) reflects strong data sovereignty and open-source credentials offset by governance vacuum and token distribution concerns. This is a project where the technology substantially outperforms the tokenomics and governance situation."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Protocol Documentation Hub",
+      "url": "https://docs.oceanprotocol.com",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["documentation structure", "product categories", "user types"],
+      "reliability_notes": "Official documentation. Landing page with links to detailed sections."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Protocol Discover Overview",
+      "url": "https://docs.oceanprotocol.com/discover",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["data NFTs", "datatokens", "Compute-to-Data overview", "Ocean Nodes overview", "stakeholder types"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Architecture Overview",
+      "url": "https://docs.oceanprotocol.com/developers/architecture",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["four-layer architecture", "smart contracts layer", "middleware layer", "Ocean.js", "Ocean.py", "Ocean Nodes", "Compute-to-Data", "applications layer", "wallets layer"],
+      "reliability_notes": "Official documentation. Primary source for technical architecture."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Data NFTs and Datatokens",
+      "url": "https://docs.oceanprotocol.com/developers/contracts/datanft-and-datatoken",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["ERC721 data NFTs", "ERC20 datatokens", "publishing process", "consumption process", "pricing schemas"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Compute-to-Data",
+      "url": "https://docs.oceanprotocol.com/developers/compute-to-data",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["C2D concept", "privacy model", "algorithm-to-data approach", "use cases"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Token",
+      "url": "https://docs.oceanprotocol.com/discover/ocean-token",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["supply capped at ~270M", "no intended utility value", "buybacks and burns", "exchange listings", "historical utility vs current status"],
+      "reliability_notes": "Official documentation. Critical source for post-ASI token status."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Data Farming",
+      "url": "https://docs.oceanprotocol.com/data-farming",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Predictoor DF active (500 USDC/week)", "Passive/Active DF ended May 2024", "veOCEAN airdrop", "Challenge DF ended Nov 2023", "weekly round structure"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Predictoor Data Farming",
+      "url": "https://docs.oceanprotocol.com/data-farming/predictoordf",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["500 USDC weekly rewards", "pro-rata distribution", "20 active feeds", "DF buyer bot mechanics", "reward calculation"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Nodes Documentation",
+      "url": "https://docs.oceanprotocol.com/developers/ocean-node",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["replaces Provider/Aquarius/Subgraph", "eligibility requirements", "incentive programme", "installation steps", "C2D V2 roadmap"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Node Architecture",
+      "url": "https://docs.oceanprotocol.com/developers/ocean-node/node-architecture",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["three-tier architecture", "libp2p P2P communication", "HTTP API", "Indexer component", "Provider component", "C2D deployment options"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "documentation",
+      "title": "FAQ",
+      "url": "https://docs.oceanprotocol.com/discover/faq",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["1.41B total supply", "buy-and-burn mechanism", "1.4M tokens burned as of Sep 2023", "Predictoor as primary OCEAN usage", "Ocean Shipyard grants", "360K ROSE per epoch node rewards"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S012",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Infrastructure Overview",
+      "url": "https://docs.oceanprotocol.com/infrastructure",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Docker deployment", "Kubernetes for production", "Provider/Aquarius/Subgraph components", "Linux requirement"],
+      "reliability_notes": "Official documentation."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Ocean Protocol: Tools for the Web3 Data Economy (Technical Whitepaper)",
+      "url": "https://oceanprotocol.com/tech-whitepaper.pdf",
+      "author": "Ocean Protocol",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["whitepaper URL confirmed"],
+      "reliability_notes": "PDF whitepaper. URL confirmed from documentation. Also published by Springer Nature."
+    },
+    {
+      "source_id": "S014",
+      "tier": 1,
+      "type": "github",
+      "title": "oceanprotocol GitHub Organisation",
+      "url": "https://github.com/oceanprotocol",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["94 repos", "389 followers", "Singapore location", "verified domain", "primary languages", "8 team members listed", "recent activity dates"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S015",
+      "tier": 1,
+      "type": "github",
+      "title": "oceanprotocol/ocean-node Repository",
+      "url": "https://github.com/oceanprotocol/ocean-node",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["72 stars", "19 forks", "3,367 commits", "v1.0.3 release March 2, 2026", "14 releases", "TypeScript 96%", "Apache-2.0 licence", "19 open issues", "1 vCPU 2GB RAM 4GB storage requirements"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S016",
+      "tier": 1,
+      "type": "github",
+      "title": "oceanprotocol/ocean.js Repository",
+      "url": "https://github.com/oceanprotocol/ocean.js",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["117 stars", "71 forks", "3,640 commits", "v6.0.0 released Feb 27 2026", "244 total releases", "TypeScript 99.1%", "Apache-2.0 licence", "6 open issues"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S017",
+      "tier": 1,
+      "type": "github",
+      "title": "oceanprotocol/contracts Repository",
+      "url": "https://github.com/oceanprotocol/contracts",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["86 stars", "65 forks", "1,661 commits", "JavaScript 50.9% Solidity 43.5% Vyper 5.4%", "Apache-2.0 licence", "v4 architecture", "ERC721/ERC20 template system"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S018",
+      "tier": 1,
+      "type": "github",
+      "title": "oceanprotocol/pdr-backend Repository",
+      "url": "https://github.com/oceanprotocol/pdr-backend",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["51 stars", "27 forks", "962 commits", "v0.4.1 March 2 2026", "10 releases", "Python 98.3%", "Apache-2.0 licence"],
+      "reliability_notes": "Direct GitHub access."
+    },
+    {
+      "source_id": "S019",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Trent McConaghy Personal Website",
+      "url": "https://trent.st/",
+      "author": "Trent McConaghy",
+      "publisher": "Personal",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["PhD KU Leuven", "ADA acquired by Synopsys 2004", "Solido acquired by Siemens 2017", "35+ papers 20 patents", "current bci/acc focus", "career timeline"],
+      "reliability_notes": "Founder's personal website. Primary source for background verification."
+    },
+    {
+      "source_id": "S020",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "Etherscan: Ocean Token (OCEAN)",
+      "url": "https://etherscan.io/token/0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
+      "author": "Etherscan",
+      "publisher": "Etherscan",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["max total supply 1.41B OCEAN", "36,848 holders", "149 transfers/24h", "price $0.10", "market cap $20.74M", "on-chain market cap $146.18M", "circulating supply 200.08M", "contract address 0x967da4048cd07ab37855c090aaf366e4ce1b9f48"],
+      "reliability_notes": "Tier 2 on-chain data source. Primary verification for supply and holder data."
+    },
+    {
+      "source_id": "S021",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko API: Ocean Protocol Market Data",
+      "url": "https://api.coingecko.com/api/v3/coins/ocean-protocol",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price $0.1037", "market cap $20.74M", "FDV $27.76M", "24h volume $77.2K", "circulating supply 200.08M", "total supply 267.8M", "max supply 1.41B", "ATH $1.93 (Apr 10 2021)", "ATL $0.01285 (Aug 11 2019)", "market cap rank #786", "exchange listings"],
+      "reliability_notes": "Tier 2 market data source. API returned full data."
+    },
+    {
+      "source_id": "S022",
+      "tier": 2,
+      "type": "market_data",
+      "title": "ICODrops: Ocean Protocol Token Sale",
+      "url": "https://icodrops.com/oceanprotocol/",
+      "author": "ICODrops",
+      "publisher": "ICODrops",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["seed sale $0.09 (47M OCEAN)", "pre-launch $0.23 (93M OCEAN)", "network launch $0.25 (15.42M)", "IEO $0.12 (56.4M)", "Cypher Capital $5M (May 2022)", "total raised $39.19M", "TGE May 3 2019", "listing price $0.0311", "founding team 122.62M fully unlocked"],
+      "reliability_notes": "Tier 2 source for ICO and vesting data."
+    },
+    {
+      "source_id": "S023",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CryptoRank: Ocean Protocol Funding & Tokenomics",
+      "url": "https://cryptorank.io/ico/ocean-protocol",
+      "author": "CryptoRank",
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["total raised $39.19M", "public sale $8.57M", "funding rounds $30.62M", "token allocation breakdown", "initial supply 71.628M", "investor list"],
+      "reliability_notes": "Tier 2 source. Cross-references ICODrops data."
+    },
+    {
+      "source_id": "S024",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinCarp: Ocean Protocol Social Metrics",
+      "url": "https://www.coincarp.com/currencies/ocean-protocol/socials/",
+      "author": "CoinCarp",
+      "publisher": "CoinCarp",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["X followers 170,727", "Reddit followers 5,091"],
+      "reliability_notes": "Social metrics aggregator. Follower count not independently verified from X directly."
+    },
+    {
+      "source_id": "S025",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "CertiK: Ocean Protocol Token Audit",
+      "url": null,
+      "author": "CertiK",
+      "publisher": "CertiK",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["no critical vulnerabilities", "well-written code", "contract owner pause/mint/kill authority noted"],
+      "reliability_notes": "Audit referenced from CertiK Medium post and CertiK Security Leaderboard. Full report URL not located."
+    },
+    {
+      "source_id": "S026",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Halborn: Ocean Protocol Smart Contract Audit",
+      "url": "https://github.com/oceanprotocol/contracts/blob/main/docs/Ocean_Protocol_Smart_Contract_Security_Audit_Report_Halborn_Final%20(1).pdf",
+      "author": "Halborn",
+      "publisher": "Halborn / GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["audit report exists", "scope: Ocean Protocol v4 smart contracts"],
+      "reliability_notes": "PDF hosted in GitHub repository. Full findings not extractable via WebFetch."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "OpenZeppelin: Ocean Vesting Wallet Audit",
+      "url": "https://www.openzeppelin.com/news/ocean-vesting-wallet-audit",
+      "author": "OpenZeppelin",
+      "publisher": "OpenZeppelin",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["vw-cli repository scope", "Splitter and VestingWalletHalving contracts", "concern about administrative features creating trusted relationships"],
+      "reliability_notes": "Tier 2 auditor source. Full report page not fully extractable."
+    },
+    {
+      "source_id": "S028",
+      "tier": 3,
+      "type": "news",
+      "title": "Yellow Research: Fetch.ai-Ocean Protocol Dispute Complete Breakdown",
+      "url": "https://yellow.com/research/what-caused-the-fetchai-ocean-protocol-dispute-a-complete-breakdown",
+      "author": "Yellow Research",
+      "publisher": "Yellow",
+      "date_published": "2025-10-25",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["full dispute timeline", "661M OCEAN converted to 286M FET", "90M FET to GSR Markets", "160M FET to Binance", "109M FET to OTC providers", "FET peak $3.47 (Mar 28 2024)", "93% price decline", "Sheikh $250K bounty", "arbitration status", "settlement terms"],
+      "reliability_notes": "Tier 3 research article. Comprehensive timeline with blockchain forensics references. Cross-referenced with other news sources."
+    },
+    {
+      "source_id": "S029",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinCentral: Ocean Protocol's Exit from ASI Alliance Sparks Legal Action",
+      "url": "https://coincentral.com/ocean-protocols-exit-from-asi-alliance-sparks-legal-action-and-market-drop/",
+      "author": "CoinCentral",
+      "publisher": "CoinCentral",
+      "date_published": "2025-10-16",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["no official explanation for departure", "internal disagreements", "OCEAN decline to ~$0.26", "FET 10% drop", "class action lawsuit plans", "buyback-and-burn announcement"],
+      "reliability_notes": "Crypto news outlet."
+    },
+    {
+      "source_id": "S030",
+      "tier": 3,
+      "type": "news",
+      "title": "CoinTribune: Fetch.ai and Ocean Protocol Near Settlement",
+      "url": "https://www.cointribune.com/en/fetch-ai-and-ocean-protocol-near-settlement-in-120m-fet-token-dispute/",
+      "author": "CoinTribune",
+      "publisher": "CoinTribune",
+      "date_published": "2025-10-25",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["286M FET return demand", "GeoStaking mediation", "Ocean Protocol willingness to return tokens", "formal proposal requirement", "Sheikh legal cost coverage offer"],
+      "reliability_notes": "Crypto news outlet."
+    },
+    {
+      "source_id": "S031",
+      "tier": 3,
+      "type": "news",
+      "title": "Bankless: Ocean Protocol Withdraws from ASI Alliance",
+      "url": "https://www.bankless.com/read/news/ocean-protocol-withdraws-from-artificial-superintelligence-alliance",
+      "author": "Bankless",
+      "publisher": "Bankless",
+      "date_published": "2025-10-09",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["immediate withdrawal effective date", "independent tokenomics rationale", "0.433226 FET per OCEAN conversion rate", "270M unconverted OCEAN across 37K+ addresses", "exchange listings post-withdrawal", "buyback-and-burn spin-out ventures"],
+      "reliability_notes": "Reputable crypto media outlet."
+    },
+    {
+      "source_id": "S032",
+      "tier": 3,
+      "type": "news",
+      "title": "TradingView/Coinpedia: Fetch.ai and Ocean Protocol End $120M Token Dispute",
+      "url": "https://www.tradingview.com/news/coinpedia:ae4291a3d094b:0-fetch-ai-and-ocean-protocol-end-120m-token-dispute-avoid-legal-battle/",
+      "author": "Coinpedia via TradingView",
+      "publisher": "TradingView",
+      "date_published": "2025-10-25",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["agreement in principle not finalised", "conditional on formal legal proposal", "GeoStaking mediation", "Ocean Protocol defence claims"],
+      "reliability_notes": "Financial news aggregator."
+    },
+    {
+      "source_id": "S033",
+      "tier": 3,
+      "type": "news",
+      "title": "Phemex: Ocean Protocol Settles $120M FET Dispute",
+      "url": "https://phemex.com/news/article/ocean-protocol-settles-120m-fet-token-dispute-with-fetchai-29981",
+      "author": "Phemex",
+      "publisher": "Phemex",
+      "date_published": "2025-10-25",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["$120M FET return agreement", "ASI facilitated settlement", "SingularityNET excluded", "on-chain FET transfers observed"],
+      "reliability_notes": "Exchange news outlet."
+    },
+    {
+      "source_id": "S034",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Ocean Protocol Terms: Token Launch Distribution",
+      "url": "https://oceanprotocol.com/terms-launch",
+      "author": "Ocean Protocol Foundation",
+      "publisher": "Ocean Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Foundation registration details", "Singapore entity", "Company Registration No. 201729912W", "BigchainDB GmbH HRB 160856B", "DEX Pte. Ltd. founding entity"],
+      "reliability_notes": "Official legal documentation. Primary source for entity registration details."
+    },
+    {
+      "source_id": "S035",
+      "tier": 3,
+      "type": "news",
+      "title": "Oasis Network: Ocean Predictoor on Sapphire",
+      "url": "https://oasis.net/blog/ocean-predictoor-on-sapphire",
+      "author": "Oasis Network",
+      "publisher": "Oasis Network",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["ATH $20.5M daily volume", "$174.97M 30-day aggregate", "4.5M+ transactions", "end-to-end prediction privacy on Sapphire"],
+      "reliability_notes": "Partner network blog. Predictoor metrics are self-reported but from a credible partner."
+    },
+    {
+      "source_id": "S036",
+      "tier": 3,
+      "type": "news",
+      "title": "web3isgoinggreat: Ocean Protocol C2D Security Incident (Feb 2022)",
+      "url": "https://www.web3isgoinggreat.com/?id=2022-02-22-0",
+      "author": "web3isgoinggreat",
+      "publisher": "web3isgoinggreat",
+      "date_published": "2022-02-22",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Kubernetes infrastructure compromised", "AWS metaservice accessible", "bug bounty retired", "difficulty reporting vulnerability", "patched Feb 27 by Bruce Pon"],
+      "reliability_notes": "Incident tracking site. Cross-referenced with search results."
+    },
+    {
+      "source_id": "S037",
+      "tier": 1,
+      "type": "github",
+      "title": "OceanDAO Wiki: Voting",
+      "url": "https://github.com/oceanprotocol/oceandao/wiki/Voting",
+      "author": "Ocean Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["quadratic voting mechanism", "Snapshot-based voting", "multi-chain OCEAN counting", "Round 23 final round (Nov 2022)"],
+      "reliability_notes": "Official GitHub wiki. Now archived (oceanprotocol-archive)."
+    },
+    {
+      "source_id": "S038",
+      "tier": 3,
+      "type": "social_media",
+      "title": "Discord: Ocean Protocol Server",
+      "url": "https://discord.com/invite/TnXjkR5",
+      "author": "Ocean Protocol",
+      "publisher": "Discord",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Discord members ~56,066"],
+      "reliability_notes": "Member count sourced from search snippets."
+    },
+    {
+      "source_id": "S039",
+      "tier": 2,
+      "type": "market_data",
+      "title": "HuggingFace: Ocean Protocol Presence",
+      "url": "https://huggingface.co/datasets/AlgoveraAI/CryptoPunks",
+      "author": "AlgoveraAI",
+      "publisher": "HuggingFace",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["minimal HuggingFace presence", "one third-party dataset referencing Ocean Protocol"],
+      "reliability_notes": "Only indirect reference found. No official Ocean Protocol organisation on HuggingFace."
+    }
+  ]
+}
