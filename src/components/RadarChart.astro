@@ -1,0 +1,146 @@
+---
+import type { FreedomScoreBreakdown } from '../data/project-research';
+
+interface Props {
+  breakdown: FreedomScoreBreakdown;
+  size?: number;
+}
+
+const { breakdown, size = 280 } = Astro.props;
+
+const dimensions = [
+  { key: 'infrastructure_decentralisation', label: 'Infrastructure', short: 'Infra' },
+  { key: 'governance_decentralisation', label: 'Governance', short: 'Gov' },
+  { key: 'token_distribution_fairness', label: 'Token Dist.', short: 'Dist' },
+  { key: 'censorship_resistance', label: 'Censorship Res.', short: 'Censor' },
+  { key: 'data_sovereignty', label: 'Data Sovereignty', short: 'Data' },
+  { key: 'open_source_transparency', label: 'Open Source', short: 'OSS' },
+] as const;
+
+const cx = size / 2;
+const cy = size / 2;
+const radius = size * 0.34;
+const labelRadius = radius + 24;
+
+// Calculate point positions on hexagonal axes
+function polarToXY(angle: number, r: number): [number, number] {
+  return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+}
+
+// 6 axes at 60-degree intervals, starting from top (-PI/2)
+const angles = dimensions.map((_, i) => -Math.PI / 2 + (2 * Math.PI * i) / 6);
+
+// Normalise scores: score/max for each dimension
+const normalisedValues = dimensions.map((dim) => {
+  const d = breakdown[dim.key as keyof FreedomScoreBreakdown];
+  if (!d || d.score == null || d.max == null || d.max === 0) return 0;
+  return d.score / d.max;
+});
+
+// Generate hexagonal gridlines at 33%, 66%, 100%
+const gridLevels = [0.33, 0.66, 1.0];
+const gridPaths = gridLevels.map((level) => {
+  const points = angles.map((angle) => polarToXY(angle, radius * level));
+  return points.map((p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+});
+
+// Data polygon
+const dataPoints = angles.map((angle, i) => polarToXY(angle, radius * normalisedValues[i]));
+const dataPath = dataPoints.map((p) => `${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+
+// Axis endpoints
+const axisEnds = angles.map((angle) => polarToXY(angle, radius));
+
+// Label positions
+const labelPositions = angles.map((angle) => polarToXY(angle, labelRadius));
+
+// Raw scores for display
+const rawScores = dimensions.map((dim) => {
+  const d = breakdown[dim.key as keyof FreedomScoreBreakdown];
+  if (!d || d.score == null) return null;
+  return `${d.score}/${d.max ?? '?'}`;
+});
+---
+
+<div class="chart-container" aria-label="Freedom Score radar chart showing six dimensions">
+  <svg
+    width={size}
+    height={size}
+    viewBox={`0 0 ${size} ${size}`}
+    class="mx-auto block"
+    role="img"
+  >
+    <title>Freedom Score breakdown across six dimensions</title>
+
+    {/* Gridlines */}
+    {gridPaths.map((points) => (
+      <polygon
+        points={points}
+        fill="none"
+        stroke="var(--color-border)"
+        stroke-width="1"
+        opacity="0.5"
+      />
+    ))}
+
+    {/* Axis lines */}
+    {axisEnds.map(([ex, ey]) => (
+      <line
+        x1={cx}
+        y1={cy}
+        x2={ex.toFixed(1)}
+        y2={ey.toFixed(1)}
+        stroke="var(--color-border)"
+        stroke-width="1"
+        opacity="0.4"
+      />
+    ))}
+
+    {/* Data polygon */}
+    <polygon
+      points={dataPath}
+      fill="rgba(13, 148, 136, 0.2)"
+      stroke="var(--color-accent)"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+
+    {/* Data points */}
+    {dataPoints.map(([px, py]) => (
+      <circle
+        cx={px.toFixed(1)}
+        cy={py.toFixed(1)}
+        r="3"
+        fill="var(--color-accent)"
+      />
+    ))}
+
+    {/* Dimension labels */}
+    {labelPositions.map(([lx, ly], i) => {
+      const anchor = lx < cx - 5 ? 'end' : lx > cx + 5 ? 'start' : 'middle';
+      const dy = ly < cy - 5 ? '-0.3em' : ly > cy + 5 ? '1em' : '0.35em';
+      return (
+        <text
+          x={lx.toFixed(1)}
+          y={ly.toFixed(1)}
+          text-anchor={anchor}
+          dy={dy}
+          fill="var(--color-text-secondary)"
+          font-size="11"
+          font-family="var(--font-body)"
+        >
+          {dimensions[i].short}
+          {rawScores[i] && (
+            <tspan
+              fill="var(--color-text-tertiary)"
+              font-size="9"
+              dx="3"
+            >
+              {rawScores[i]}
+            </tspan>
+          )}
+        </text>
+      );
+    })}
+  </svg>
+</div>

@@ -1,8 +1,19 @@
 ---
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import MetricCard from '../../components/MetricCard.astro';
 import Sparkline from '../../components/Sparkline.astro';
 import { getCollection } from 'astro:content';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../../data/fetch-market-data';
+
+const categoryColors: Record<string, string> = {
+  compute: 'var(--color-chart-1)',
+  inference: 'var(--color-chart-2)',
+  agent: 'var(--color-chart-4)',
+  data: 'var(--color-chart-3)',
+  platform: 'var(--color-chart-5)',
+  storage: 'var(--color-chart-6)',
+  other: 'var(--color-chart-7)',
+};
 
 const entries = (await getCollection('projects'))
   .filter((e) => !e.data.draft || e.data.coingeckoId)
@@ -63,22 +74,10 @@ function downsample(data: number[], targetPoints: number): number[] {
 
   <!-- Stats Bar -->
   <div class="dashboard-stats">
-    <div class="stat-card">
-      <span class="stat-value">{totalProjects}</span>
-      <span class="stat-label">Projects tracked</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-value">{avgFreedomScore}</span>
-      <span class="stat-label">Avg freedom score</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-value">{formatMarketCap(totalMarketCap)}</span>
-      <span class="stat-label">Total market cap</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-value">{categories.length}</span>
-      <span class="stat-label">Categories</span>
-    </div>
+    <MetricCard value={String(totalProjects)} label="Projects tracked" />
+    <MetricCard value={avgFreedomScore} label="Avg freedom score" />
+    <MetricCard value={formatMarketCap(totalMarketCap)} label="Total market cap" />
+    <MetricCard value={String(categories.length)} label="Categories" />
   </div>
 
   <!-- Category Filter Tabs -->
@@ -143,6 +142,7 @@ function downsample(data: number[], targetPoints: number): number[] {
               </td>
               <td>
                 <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">
+                  <span class="inline-block w-2 h-2 rounded-full mr-1" style={`background-color: ${categoryColors[entry.data.category] || categoryColors.other};`} />
                   {entry.data.category}
                 </span>
               </td>
@@ -266,6 +266,7 @@ function downsample(data: number[], targetPoints: number): number[] {
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">
+                <span class="inline-block w-2 h-2 rounded-full mr-1" style={`background-color: ${categoryColors[entry.data.category] || categoryColors.other};`} />
                 {entry.data.category}
               </span>
               {entry.data.launchType && (

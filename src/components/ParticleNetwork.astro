@@ -1,0 +1,70 @@
+---
+interface Props {
+  particleCount?: number;
+  connectionCount?: number;
+  height?: string;
+}
+
+const { particleCount = 24, connectionCount = 12, height = '100%' } = Astro.props;
+
+// Generate random particles with seeded positions (Astro builds at build time)
+const particles = Array.from({ length: particleCount }, (_, i) => ({
+  id: i,
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  size: 1.5 + Math.random() * 2.5,
+  duration: 15 + Math.random() * 20,
+  delay: Math.random() * -30,
+  opacity: 0.15 + Math.random() * 0.25,
+}));
+
+// Generate connections between nearby particles
+const connections: { x1: number; y1: number; x2: number; y2: number }[] = [];
+for (let i = 0; i < Math.min(connectionCount, particleCount * 2); i++) {
+  const a = particles[Math.floor(Math.random() * particleCount)];
+  const b = particles[Math.floor(Math.random() * particleCount)];
+  if (a.id !== b.id) {
+    const dist = Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
+    if (dist < 40) {
+      connections.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+    }
+  }
+}
+---
+
+<div
+  class="particle-network absolute inset-0 overflow-hidden pointer-events-none"
+  style={`height: ${height};`}
+  aria-hidden="true"
+>
+  {/* Connection lines */}
+  <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+    {connections.map((c) => (
+      <line
+        x1={`${c.x1}%`}
+        y1={`${c.y1}%`}
+        x2={`${c.x2}%`}
+        y2={`${c.y2}%`}
+        stroke="var(--color-accent)"
+        stroke-width="0.5"
+        opacity="0.08"
+      />
+    ))}
+  </svg>
+
+  {/* Particles */}
+  {particles.map((p) => (
+    <span
+      class="particle absolute rounded-full"
+      style={`
+        left: ${p.x}%;
+        top: ${p.y}%;
+        width: ${p.size}px;
+        height: ${p.size}px;
+        background-color: var(--color-accent);
+        opacity: ${p.opacity};
+        animation: particle-float ${p.duration}s ease-in-out ${p.delay}s infinite;
+      `}
+    />
+  ))}
+</div>

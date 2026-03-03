@@ -1,6 +1,13 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
+import RadarChart from '../components/RadarChart.astro';
+import AllocationBar from '../components/AllocationBar.astro';
+import DonutChart from '../components/DonutChart.astro';
+import MetricCard from '../components/MetricCard.astro';
+import VestingTimeline from '../components/VestingTimeline.astro';
+import CategoryPattern from '../components/CategoryPattern.astro';
+import MeshGradient from '../components/MeshGradient.astro';
 import Sparkline from '../components/Sparkline.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
 import type { ProjectResearchRecord, MetricsSnapshot } from '../data/project-research';
@@ -124,6 +131,55 @@ function tierColor(tier: number | null | undefined): string {
     default: return 'badge-dormant';
   }
 }
+
+// --- Chart data prep ---
+const hasRadarData = !!(r?.freedom_score?.breakdown && Object.values(r.freedom_score.breakdown).some(d => d?.score != null));
+
+const hasAllocationData = !!(r?.tokenomics?.distribution?.initial_allocation?.some(a => a.category && a.percentage != null));
+
+// Donut chart: supply breakdown
+const donutSegments: { label: string; value: number; color: string }[] = [];
+if (r?.tokenomics?.supply) {
+  const s = r.tokenomics.supply;
+  const circ = s.circulating_supply ?? 0;
+  const max = s.max_supply ?? s.total_supply ?? 0;
+  const locked = max > 0 ? max - circ : 0;
+  if (circ > 0) donutSegments.push({ label: 'Circulating', value: circ, color: 'var(--color-chart-1)' });
+  if (locked > 0) donutSegments.push({ label: 'Locked / Unmined', value: locked, color: 'var(--color-chart-2)' });
+}
+const hasDonutData = donutSegments.length >= 2;
+
+// Vesting timeline events
+const vestingEvents: { date: string; label: string; percentage?: number; completed?: boolean }[] = [];
+if (r?.tokenomics?.emissions) {
+  const e = r.tokenomics.emissions;
+  if (e.next_major_emission_event && e.next_event_date) {
+    vestingEvents.push({ date: e.next_event_date, label: e.next_major_emission_event, completed: false });
+  }
+  if (e.halving_schedule) {
+    // Add a general halving marker if available
+    vestingEvents.push({ date: 'TBD', label: e.halving_schedule, completed: false });
+  }
+}
+// Also extract vesting milestones from distribution
+if (r?.tokenomics?.distribution?.initial_allocation) {
+  for (const alloc of r.tokenomics.distribution.initial_allocation) {
+    if (alloc.cliff && alloc.category) {
+      vestingEvents.push({ date: alloc.cliff, label: `${alloc.category} cliff`, percentage: alloc.percentage ?? undefined, completed: false });
+    }
+  }
+}
+const hasVestingTimeline = vestingEvents.length >= 2;
+
+// Category for pattern background
+const categorySlug = (category?.toLowerCase() || 'other') as 'compute' | 'data' | 'inference' | 'agent' | 'platform' | 'storage' | 'other';
+
+// Donut center labels
+const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
+  ? `${r.tokenomics.supply.circulating_percentage}%`
+  : donutSegments.length > 0
+    ? `${((donutSegments[0].value / donutSegments.reduce((s, d) => s + d.value, 0)) * 100).toFixed(0)}%`
+    : undefined;
 ---
 
 <ContentLayout
@@ -134,8 +190,14 @@ function tierColor(tier: number | null | undefined): string {
     { label: title },
   ]}
 >
-  <article class="max-w-3xl">
-    <header class="mb-10">
+  <article class="max-w-4xl">
+    <header class="mb-10 relative">
+      {/* Category-themed background */}
+      <div class="absolute -inset-x-6 -top-6 bottom-0 -z-10 rounded-xl overflow-hidden">
+        <CategoryPattern category={categorySlug} opacity={0.04} />
+        <MeshGradient variant="subtle" />
+      </div>
+
       <div class="flex flex-wrap items-center gap-3 mb-4">
         <span class:list={['badge', statusColors[status] || 'badge-dormant']}>
           {status}
@@ -149,7 +211,12 @@ function tierColor(tier: number | null | undefined): string {
       <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-4">{title}</h1>
       <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">{description}</p>
 
-      <!-- Freedom Score: full breakdown when research exists, simple bar otherwise -->
+      <!-- Freedom Score: radar chart + full breakdown when research exists, simple bar otherwise -->
+      {hasRadarData && r!.freedom_score!.breakdown && (
+        <div class="mb-4">
+          <RadarChart breakdown={r!.freedom_score!.breakdown} />
+        </div>
+      )}
       {hasFreedomBreakdown ? (
         <FreedomScoreBreakdown freedomScore={r!.freedom_score} />
       ) : (
@@ -170,24 +237,10 @@ function tierColor(tier: number | null | undefined): string {
       <!-- Market Data -->
       {market && (
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
-          <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-            <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Price</span>
-            <span class="font-mono text-sm text-[var(--color-text-primary)]">{formatPrice(market.price)}</span>
-          </div>
-          <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-            <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Market Cap</span>
-            <span class="font-mono text-sm text-[var(--color-text-primary)]">{formatMarketCap(market.marketCap)}</span>
-          </div>
-          <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-            <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">FDV</span>
-            <span class="font-mono text-sm text-[var(--color-text-primary)]">{formatMarketCap(market.fdv)}</span>
-          </div>
-          <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-            <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">24h Change</span>
-            <span class="font-mono text-sm" style={`color: ${market.priceChange24h >= 0 ? '#10B981' : '#EF4444'};`}>
-              {formatPercent(market.priceChange24h)}
-            </span>
-          </div>
+          <MetricCard value={formatPrice(market.price)} label="Price" />
+          <MetricCard value={formatMarketCap(market.marketCap)} label="Market Cap" />
+          <MetricCard value={formatMarketCap(market.fdv)} label="FDV" />
+          <MetricCard value={formatPercent(market.priceChange24h)} label="24h Change" change={market.priceChange24h} />
         </div>
       )}
 
@@ -352,37 +405,31 @@ function tierColor(tier: number | null | undefined): string {
             {r!.technical!.github_metrics && (r!.technical!.github_metrics.contributors != null || r!.technical!.github_metrics.stars != null) && (
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                 {r!.technical!.github_metrics.contributors != null && (
-                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Contributors</span>
-                    <span class="flex items-center gap-2">
-                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.contributors)}</span>
-                      <Sparkline data={getTrend('contributors')} width={48} height={16} />
-                    </span>
-                  </div>
+                  <MetricCard
+                    value={fmtNum(r!.technical!.github_metrics.contributors)}
+                    label="Contributors"
+                    sparklineData={getTrend('contributors')}
+                  />
                 )}
                 {r!.technical!.github_metrics.stars != null && (
-                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Stars</span>
-                    <span class="flex items-center gap-2">
-                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.stars)}</span>
-                      <Sparkline data={getTrend('stars')} width={48} height={16} />
-                    </span>
-                  </div>
+                  <MetricCard
+                    value={fmtNum(r!.technical!.github_metrics.stars)}
+                    label="Stars"
+                    sparklineData={getTrend('stars')}
+                  />
                 )}
                 {r!.technical!.github_metrics.forks != null && (
-                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Forks</span>
-                    <span class="flex items-center gap-2">
-                      <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.technical!.github_metrics.forks)}</span>
-                      <Sparkline data={getTrend('forks')} width={48} height={16} />
-                    </span>
-                  </div>
+                  <MetricCard
+                    value={fmtNum(r!.technical!.github_metrics.forks)}
+                    label="Forks"
+                    sparklineData={getTrend('forks')}
+                  />
                 )}
                 {r!.technical!.github_metrics.last_commit_date && (
-                  <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                    <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Last commit</span>
-                    <span class="text-sm text-[var(--color-text-primary)]">{r!.technical!.github_metrics.last_commit_date}</span>
-                  </div>
+                  <MetricCard
+                    value={r!.technical!.github_metrics.last_commit_date}
+                    label="Last commit"
+                  />
                 )}
               </div>
             )}
@@ -425,35 +472,54 @@ function tierColor(tier: number | null | undefined): string {
               </div>
             )}
 
-            {/* Supply table */}
+            {/* Supply: donut chart + table */}
             {r!.tokenomics!.supply && (r!.tokenomics!.supply.max_supply != null || r!.tokenomics!.supply.circulating_supply != null) && (
-              <div class="mb-6 overflow-x-auto">
-                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Supply</h3>
-                <table class="research-table">
-                  <thead>
-                    <tr>
-                      <th>Max supply</th>
-                      <th>Total supply</th>
-                      <th>Circulating</th>
-                      <th>Circ. %</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.max_supply)}</td>
-                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.total_supply)}</td>
-                      <td class="font-mono">{fmtNum(r!.tokenomics!.supply.circulating_supply)}</td>
-                      <td class="font-mono">{r!.tokenomics!.supply.circulating_percentage != null ? `${r!.tokenomics!.supply.circulating_percentage}%` : '--'}</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="mb-6">
+                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">Supply</h3>
+                <div class={`${hasDonutData ? 'flex flex-col md:flex-row gap-6 items-start' : ''}`}>
+                  {hasDonutData && (
+                    <div class="md:w-1/3 shrink-0">
+                      <DonutChart
+                        segments={donutSegments}
+                        centerLabel={donutCenterLabel}
+                        centerSubLabel="circulating"
+                        size={160}
+                      />
+                    </div>
+                  )}
+                  <div class={`${hasDonutData ? 'md:w-2/3' : ''} overflow-x-auto`}>
+                    <table class="research-table">
+                      <thead>
+                        <tr>
+                          <th>Max supply</th>
+                          <th>Total supply</th>
+                          <th>Circulating</th>
+                          <th>Circ. %</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="font-mono">{fmtNum(r!.tokenomics!.supply.max_supply)}</td>
+                          <td class="font-mono">{fmtNum(r!.tokenomics!.supply.total_supply)}</td>
+                          <td class="font-mono">{fmtNum(r!.tokenomics!.supply.circulating_supply)}</td>
+                          <td class="font-mono">{r!.tokenomics!.supply.circulating_percentage != null ? `${r!.tokenomics!.supply.circulating_percentage}%` : '--'}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             )}
 
-            {/* Distribution table */}
+            {/* Distribution: allocation bar + table */}
             {r!.tokenomics!.distribution?.initial_allocation && r!.tokenomics!.distribution.initial_allocation.length > 0 && r!.tokenomics!.distribution.initial_allocation.some(a => a.category) && (
-              <div class="mb-6 overflow-x-auto">
-                <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">Distribution</h3>
+              <div class="mb-6">
+                {hasAllocationData && (
+                  <div class="mb-4">
+                    <AllocationBar allocations={r!.tokenomics!.distribution!.initial_allocation!} />
+                  </div>
+                )}
+                <div class="overflow-x-auto">
                 {r!.tokenomics!.distribution.distribution_method && (
                   <p class="text-sm text-[var(--color-text-secondary)] mb-2">Method: {r!.tokenomics!.distribution.distribution_method}</p>
                 )}
@@ -477,6 +543,7 @@ function tierColor(tier: number | null | undefined): string {
                     ))}
                   </tbody>
                 </table>
+                </div>
               </div>
             )}
 
@@ -522,6 +589,13 @@ function tierColor(tier: number | null | undefined): string {
                     </div>
                   )}
                 </div>
+
+                {/* Vesting timeline */}
+                {hasVestingTimeline && (
+                  <div class="mt-4">
+                    <VestingTimeline events={vestingEvents} />
+                  </div>
+                )}
               </div>
             )}
 
@@ -695,52 +769,28 @@ function tierColor(tier: number | null | undefined): string {
 
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
               {r!.usage_metrics!.nodes_active != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Active nodes</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.nodes_active)}</span>
-                </div>
+                <MetricCard value={fmtNum(r!.usage_metrics!.nodes_active)} label="Active nodes" />
               )}
               {r!.usage_metrics!.validators_active != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Validators</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.validators_active)}</span>
-                </div>
+                <MetricCard value={fmtNum(r!.usage_metrics!.validators_active)} label="Validators" />
               )}
               {r!.usage_metrics!.miners_active != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Miners</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.miners_active)}</span>
-                </div>
+                <MetricCard value={fmtNum(r!.usage_metrics!.miners_active)} label="Miners" />
               )}
               {r!.usage_metrics!.active_users_daily != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Daily active users</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.active_users_daily)}</span>
-                </div>
+                <MetricCard value={fmtNum(r!.usage_metrics!.active_users_daily)} label="Daily active users" />
               )}
               {r!.usage_metrics!.daily_transactions != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Daily transactions</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.usage_metrics!.daily_transactions)}</span>
-                </div>
+                <MetricCard value={fmtNum(r!.usage_metrics!.daily_transactions)} label="Daily transactions" />
               )}
               {r!.usage_metrics!.tvl_usd != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">TVL</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtUsd(r!.usage_metrics!.tvl_usd)}</span>
-                </div>
+                <MetricCard value={fmtUsd(r!.usage_metrics!.tvl_usd)} label="TVL" />
               )}
               {r!.usage_metrics!.revenue_annual_usd != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Annual revenue</span>
-                  <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtUsd(r!.usage_metrics!.revenue_annual_usd)}</span>
-                </div>
+                <MetricCard value={fmtUsd(r!.usage_metrics!.revenue_annual_usd)} label="Annual revenue" />
               )}
               {r!.usage_metrics!.compute_delivered && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Compute</span>
-                  <span class="text-sm text-[var(--color-text-primary)]">{r!.usage_metrics!.compute_delivered}</span>
-                </div>
+                <MetricCard value={r!.usage_metrics!.compute_delivered} label="Compute" />
               )}
             </div>
 
@@ -766,40 +816,32 @@ function tierColor(tier: number | null | undefined): string {
 
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {r!.community!.discord_members != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Discord</span>
-                  <span class="flex items-center gap-2">
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.discord_members)}</span>
-                    <Sparkline data={getTrend('discord_members')} width={48} height={16} />
-                  </span>
-                </div>
+                <MetricCard
+                  value={fmtNum(r!.community!.discord_members)}
+                  label="Discord"
+                  sparklineData={getTrend('discord_members')}
+                />
               )}
               {r!.community!.telegram_members != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">Telegram</span>
-                  <span class="flex items-center gap-2">
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.telegram_members)}</span>
-                    <Sparkline data={getTrend('telegram_members')} width={48} height={16} />
-                  </span>
-                </div>
+                <MetricCard
+                  value={fmtNum(r!.community!.telegram_members)}
+                  label="Telegram"
+                  sparklineData={getTrend('telegram_members')}
+                />
               )}
               {r!.community!.x_followers != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">X followers</span>
-                  <span class="flex items-center gap-2">
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.x_followers)}</span>
-                    <Sparkline data={getTrend('x_followers')} width={48} height={16} />
-                  </span>
-                </div>
+                <MetricCard
+                  value={fmtNum(r!.community!.x_followers)}
+                  label="X followers"
+                  sparklineData={getTrend('x_followers')}
+                />
               )}
               {r!.community!.github_contributors != null && (
-                <div class="p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
-                  <span class="text-xs text-[var(--color-text-tertiary)] block mb-1">GitHub contributors</span>
-                  <span class="flex items-center gap-2">
-                    <span class="font-mono text-sm text-[var(--color-text-primary)]">{fmtNum(r!.community!.github_contributors)}</span>
-                    <Sparkline data={getTrend('contributors')} width={48} height={16} />
-                  </span>
-                </div>
+                <MetricCard
+                  value={fmtNum(r!.community!.github_contributors)}
+                  label="GitHub contributors"
+                  sparklineData={getTrend('contributors')}
+                />
               )}
             </div>
 

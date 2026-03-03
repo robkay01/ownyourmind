@@ -1,0 +1,114 @@
+---
+interface TimelineEvent {
+  date: string;
+  label: string;
+  percentage?: number;
+  completed?: boolean;
+}
+
+interface Props {
+  events: TimelineEvent[];
+  title?: string;
+}
+
+const { events, title = 'Vesting timeline' } = Astro.props;
+
+// Only render if 2+ events
+if (events.length < 2) return;
+
+// Sort by date
+const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
+
+const svgWidth = Math.max(sorted.length * 140, 400);
+const svgHeight = 80;
+const lineY = 30;
+const markerRadius = 6;
+const padding = 40;
+const usableWidth = svgWidth - padding * 2;
+---
+
+<div class="chart-container-compact" aria-label={title}>
+  <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">{title}</h3>
+
+  <div class="overflow-x-auto -mx-4 px-4 pb-2">
+    <svg
+      width={svgWidth}
+      height={svgHeight}
+      viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+      role="img"
+      class="block"
+    >
+      <title>{title}: {sorted.map((e) => `${e.label} (${e.date})`).join(', ')}</title>
+
+      {/* Axis line */}
+      <line
+        x1={padding}
+        y1={lineY}
+        x2={svgWidth - padding}
+        y2={lineY}
+        stroke="var(--color-border)"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+
+      {/* Events */}
+      {sorted.map((evt, i) => {
+        const x = padding + (i / (sorted.length - 1)) * usableWidth;
+        const isCompleted = evt.completed ?? false;
+
+        return (
+          <g>
+            {/* Marker */}
+            <circle
+              cx={x}
+              cy={lineY}
+              r={markerRadius}
+              fill={isCompleted ? 'var(--color-accent)' : 'var(--color-bg-primary)'}
+              stroke="var(--color-accent)"
+              stroke-width="2"
+            />
+
+            {/* Date label */}
+            <text
+              x={x}
+              y={lineY + 20}
+              text-anchor="middle"
+              fill="var(--color-text-tertiary)"
+              font-size="10"
+              font-family="var(--font-mono)"
+            >
+              {evt.date}
+            </text>
+
+            {/* Event label */}
+            <text
+              x={x}
+              y={lineY + 34}
+              text-anchor="middle"
+              fill="var(--color-text-secondary)"
+              font-size="11"
+              font-family="var(--font-body)"
+            >
+              {evt.label}
+            </text>
+
+            {/* Percentage */}
+            {evt.percentage != null && (
+              <text
+                x={x}
+                y={lineY - 14}
+                text-anchor="middle"
+                fill="var(--color-accent)"
+                font-size="11"
+                font-family="var(--font-mono)"
+                font-weight="600"
+              >
+                {evt.percentage}%
+              </text>
+            )}
+          </g>
+        );
+      })}
+    </svg>
+  </div>
+</div>

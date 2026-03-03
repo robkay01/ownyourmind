@@ -1,0 +1,103 @@
+---
+interface Props {
+  category: 'compute' | 'data' | 'inference' | 'agent' | 'platform' | 'storage' | 'other';
+  opacity?: number;
+}
+
+const { category, opacity = 0.05 } = Astro.props;
+
+// Each category gets a unique SVG pattern
+const patterns: Record<string, { id: string; content: string; size: number }> = {
+  compute: {
+    id: 'pat-compute',
+    size: 40,
+    content: `
+      <line x1="0" y1="20" x2="40" y2="20" stroke="var(--color-accent)" stroke-width="0.5"/>
+      <line x1="20" y1="0" x2="20" y2="40" stroke="var(--color-accent)" stroke-width="0.5"/>
+      <circle cx="20" cy="20" r="2" fill="var(--color-accent)"/>
+      <circle cx="0" cy="0" r="1" fill="var(--color-accent)"/>
+      <circle cx="40" cy="0" r="1" fill="var(--color-accent)"/>
+      <circle cx="0" cy="40" r="1" fill="var(--color-accent)"/>
+      <circle cx="40" cy="40" r="1" fill="var(--color-accent)"/>
+    `,
+  },
+  data: {
+    id: 'pat-data',
+    size: 60,
+    content: `
+      <path d="M0 30 Q15 20 30 30 Q45 40 60 30" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+      <path d="M0 45 Q15 35 30 45 Q45 55 60 45" fill="none" stroke="var(--color-accent)" stroke-width="0.4"/>
+    `,
+  },
+  inference: {
+    id: 'pat-inference',
+    size: 50,
+    content: `
+      <circle cx="25" cy="10" r="3" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+      <circle cx="10" cy="40" r="3" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+      <circle cx="40" cy="40" r="3" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+      <line x1="25" y1="13" x2="12" y2="37" stroke="var(--color-accent)" stroke-width="0.5"/>
+      <line x1="25" y1="13" x2="38" y2="37" stroke="var(--color-accent)" stroke-width="0.5"/>
+      <line x1="13" y1="40" x2="37" y2="40" stroke="var(--color-accent)" stroke-width="0.5"/>
+    `,
+  },
+  agent: {
+    id: 'pat-agent',
+    size: 48,
+    content: `
+      <polygon points="24,2 44,14 44,34 24,46 4,34 4,14" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+      <polygon points="24,10 36,17 36,31 24,38 12,31 12,17" fill="none" stroke="var(--color-accent)" stroke-width="0.3"/>
+    `,
+  },
+  platform: {
+    id: 'pat-platform',
+    size: 40,
+    content: `
+      <rect x="5" y="5" width="30" height="6" rx="1" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+      <rect x="5" y="17" width="30" height="6" rx="1" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+      <rect x="5" y="29" width="30" height="6" rx="1" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+    `,
+  },
+  storage: {
+    id: 'pat-storage',
+    size: 36,
+    content: `
+      <rect x="4" y="4" width="28" height="8" rx="2" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+      <rect x="4" y="14" width="28" height="8" rx="2" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+      <rect x="4" y="24" width="28" height="8" rx="2" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+    `,
+  },
+  other: {
+    id: 'pat-other',
+    size: 30,
+    content: `
+      <circle cx="15" cy="15" r="8" fill="none" stroke="var(--color-accent)" stroke-width="0.5"/>
+      <circle cx="15" cy="15" r="3" fill="none" stroke="var(--color-accent)" stroke-width="0.5"/>
+    `,
+  },
+};
+
+const pat = patterns[category] || patterns.other;
+---
+
+<div
+  class="absolute inset-0 pointer-events-none overflow-hidden"
+  style={`opacity: ${opacity};`}
+  aria-hidden="true"
+>
+  <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+    <defs>
+      <pattern
+        id={pat.id}
+        x="0"
+        y="0"
+        width={pat.size}
+        height={pat.size}
+        patternUnits="userSpaceOnUse"
+      >
+        <Fragment set:html={pat.content} />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill={`url(#${pat.id})`} />
+  </svg>
+</div>

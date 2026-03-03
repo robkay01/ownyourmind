@@ -1,0 +1,78 @@
+---
+import type { TokenAllocation } from '../data/project-research';
+
+interface Props {
+  allocations: TokenAllocation[];
+  height?: number;
+  showLabels?: boolean;
+}
+
+const { allocations, height = 32, showLabels = true } = Astro.props;
+
+const chartColors = [
+  'var(--color-chart-1)',
+  'var(--color-chart-2)',
+  'var(--color-chart-3)',
+  'var(--color-chart-4)',
+  'var(--color-chart-5)',
+  'var(--color-chart-6)',
+  'var(--color-chart-7)',
+];
+
+// Filter valid allocations with percentages
+const validAllocations = allocations.filter((a) => a.category && a.percentage != null);
+if (validAllocations.length === 0) return;
+
+// Normalise percentages to ensure they sum to 100
+const totalPct = validAllocations.reduce((sum, a) => sum + (a.percentage ?? 0), 0);
+const segments = validAllocations.map((a, i) => ({
+  category: a.category!,
+  percentage: totalPct > 0 ? ((a.percentage ?? 0) / totalPct) * 100 : 0,
+  rawPercentage: a.percentage ?? 0,
+  color: chartColors[i % chartColors.length],
+}));
+---
+
+<div class="chart-container-compact" aria-label="Token allocation breakdown">
+  <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">Allocation</h3>
+
+  {/* Stacked bar */}
+  <div
+    class="flex w-full overflow-hidden rounded-md"
+    style={`height: ${height}px;`}
+    role="img"
+    aria-label={`Token allocation: ${segments.map((s) => `${s.category} ${s.rawPercentage}%`).join(', ')}`}
+  >
+    {segments.map((seg) => (
+      <div
+        style={`width: ${seg.percentage}%; background-color: ${seg.color}; min-width: ${seg.percentage > 2 ? '0' : '2px'};`}
+        class="relative group transition-opacity hover:opacity-80"
+        title={`${seg.category}: ${seg.rawPercentage}%`}
+      >
+        {seg.percentage >= 8 && (
+          <span class="absolute inset-0 flex items-center justify-center text-xs font-mono font-semibold text-white/90 truncate px-1">
+            {seg.rawPercentage}%
+          </span>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {/* Legend */}
+  {showLabels && (
+    <div class="flex flex-wrap gap-x-4 gap-y-1.5 mt-3">
+      {segments.map((seg) => (
+        <div class="flex items-center gap-1.5">
+          <span
+            class="inline-block w-2.5 h-2.5 rounded-full shrink-0"
+            style={`background-color: ${seg.color};`}
+          />
+          <span class="text-xs text-[var(--color-text-secondary)]">
+            {seg.category}
+            <span class="font-mono text-[var(--color-text-tertiary)] ml-1">{seg.rawPercentage}%</span>
+          </span>
+        </div>
+      ))}
+    </div>
+  )}
+</div>

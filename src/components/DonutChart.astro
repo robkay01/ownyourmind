@@ -1,0 +1,132 @@
+---
+interface Segment {
+  label: string;
+  value: number;
+  color: string;
+}
+
+interface Props {
+  segments: Segment[];
+  centerLabel?: string;
+  centerSubLabel?: string;
+  size?: number;
+}
+
+const { segments, centerLabel, centerSubLabel, size = 180 } = Astro.props;
+
+const validSegments = segments.filter((s) => s.value > 0);
+if (validSegments.length === 0) return;
+
+const total = validSegments.reduce((sum, s) => sum + s.value, 0);
+
+const cx = size / 2;
+const cy = size / 2;
+const outerRadius = size * 0.42;
+const innerRadius = size * 0.28;
+const strokeWidth = outerRadius - innerRadius;
+const midRadius = (outerRadius + innerRadius) / 2;
+const circumference = 2 * Math.PI * midRadius;
+
+// Build segments with offsets
+let accumulated = 0;
+const arcs = validSegments.map((seg) => {
+  const fraction = seg.value / total;
+  const dashLength = fraction * circumference;
+  const gap = circumference - dashLength;
+  // Offset: rotate so first segment starts at top (-90deg equivalent)
+  const offset = circumference * 0.25 - accumulated;
+  accumulated += dashLength;
+
+  return {
+    ...seg,
+    fraction,
+    dashArray: `${dashLength.toFixed(2)} ${gap.toFixed(2)}`,
+    dashOffset: offset.toFixed(2),
+    percentage: ((fraction * 100).toFixed(1)),
+  };
+});
+---
+
+<div class="flex items-center gap-6 flex-wrap" aria-label="Supply breakdown donut chart">
+  <svg
+    width={size}
+    height={size}
+    viewBox={`0 0 ${size} ${size}`}
+    class="shrink-0"
+    role="img"
+  >
+    <title>Supply breakdown: {validSegments.map((s) => `${s.label} ${((s.value / total) * 100).toFixed(1)}%`).join(', ')}</title>
+
+    {/* Background ring */}
+    <circle
+      cx={cx}
+      cy={cy}
+      r={midRadius}
+      fill="none"
+      stroke="var(--color-bg-tertiary)"
+      stroke-width={strokeWidth}
+    />
+
+    {/* Segment arcs */}
+    {arcs.map((arc) => (
+      <circle
+        cx={cx}
+        cy={cy}
+        r={midRadius}
+        fill="none"
+        stroke={arc.color}
+        stroke-width={strokeWidth}
+        stroke-dasharray={arc.dashArray}
+        stroke-dashoffset={arc.dashOffset}
+        stroke-linecap="butt"
+      />
+    ))}
+
+    {/* Centre text */}
+    {centerLabel && (
+      <text
+        x={cx}
+        y={centerSubLabel ? cy - 4 : cy}
+        text-anchor="middle"
+        dominant-baseline="central"
+        fill="var(--color-text-primary)"
+        font-family="var(--font-heading)"
+        font-size={size * 0.14}
+        font-weight="700"
+      >
+        {centerLabel}
+      </text>
+    )}
+    {centerSubLabel && (
+      <text
+        x={cx}
+        y={cy + size * 0.1}
+        text-anchor="middle"
+        dominant-baseline="central"
+        fill="var(--color-text-tertiary)"
+        font-family="var(--font-body)"
+        font-size={size * 0.065}
+      >
+        {centerSubLabel}
+      </text>
+    )}
+  </svg>
+
+  {/* Legend */}
+  <div class="flex flex-col gap-2">
+    {arcs.map((arc) => (
+      <div class="flex items-center gap-2">
+        <span
+          class="inline-block w-3 h-3 rounded-sm shrink-0"
+          style={`background-color: ${arc.color};`}
+        />
+        <span class="text-sm text-[var(--color-text-secondary)]">
+          {arc.label}
+        </span>
+        <span class="text-sm font-mono text-[var(--color-text-tertiary)]">
+          {arc.percentage}%
+        </span>
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+interface Row {
+  label: string;
+  values: (string | number)[];
+}
+
+interface Props {
+  rows: Row[];
+  headers?: string[];
+  title?: string;
+}
+
+const { rows, headers, title } = Astro.props;
+
+if (rows.length === 0) return;
+
+// For numeric values, render a score bar
+function isNumeric(val: string | number): boolean {
+  return typeof val === 'number' || (!isNaN(Number(val)) && val !== '');
+}
+---
+
+<div class="chart-container" aria-label={title || 'Comparison table'}>
+  {title && (
+    <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">{title}</h3>
+  )}
+
+  <div class="overflow-x-auto">
+    <table class="research-table w-full">
+      {headers && headers.length > 0 && (
+        <thead>
+          <tr>
+            {headers.map((h) => (
+              <th>{h}</th>
+            ))}
+          </tr>
+        </thead>
+      )}
+      <tbody>
+        {rows.map((row) => (
+          <tr>
+            <td class="font-medium text-[var(--color-text-primary)]">{row.label}</td>
+            {row.values.map((val) => (
+              <td>
+                {isNumeric(val) ? (
+                  <div class="flex items-center gap-2">
+                    <div class="w-16 h-1.5 rounded-full bg-[var(--color-bg-primary)] overflow-hidden">
+                      <div
+                        class="h-full rounded-full bg-[var(--color-accent)]"
+                        style={`width: ${Math.min(Number(val), 100)}%;`}
+                      />
+                    </div>
+                    <span class="font-mono text-sm">{val}</span>
+                  </div>
+                ) : (
+                  <span>{val}</span>
+                )}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>

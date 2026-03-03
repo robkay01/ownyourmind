@@ -1,11 +1,14 @@
 ---
+import MeshGradient from './MeshGradient.astro';
+
 interface Props {
-  image: string;
+  image?: string;
   alt?: string;
   height?: 'sm' | 'md' | 'lg';
+  gradient?: boolean;
 }
 
-const { image, alt = '', height = 'sm' } = Astro.props;
+const { image, alt = '', height = 'sm', gradient = false } = Astro.props;
 
 const heightClasses: Record<string, string> = {
   sm: 'h-24 sm:h-32',
@@ -15,11 +18,14 @@ const heightClasses: Record<string, string> = {
 ---
 
 <div class={`relative overflow-hidden ${heightClasses[height]} my-0`}>
-  <img
-    src={image}
-    alt={alt}
-    class="w-full h-full object-cover opacity-30"
-    loading="lazy"
-  />
+  {image && (
+    <img
+      src={image}
+      alt={alt}
+      class="w-full h-full object-cover opacity-30"
+      loading="lazy"
+    />
+  )}
+  {gradient && <MeshGradient variant="section" />}
   <div class="absolute inset-0 bg-gradient-to-b from-[var(--color-bg-primary)] via-transparent to-[var(--color-bg-primary)]"></div>
 </div>
