@@ -1,0 +1,897 @@
+{
+  "meta": {
+    "project_id": "virtuals",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "Basescan returned 403 -- token holder count, transfer count, and exact on-chain circulating supply not directly verifiable from block explorer in this session",
+      "CoinGecko returned 403 -- market data reconstructed from CryptoRank and web search snippets",
+      "CoinMarketCap returned 403 -- market data reconstructed from search snippets",
+      "DeFiLlama returned 403 -- TVL, daily fees, and daily revenue not directly verifiable; revenue figures sourced from third-party analysis",
+      "Exact daily active users and monthly active users not publicly disclosed by Virtuals Protocol",
+      "Telegram member count not directly verifiable -- JavaScript-rendered page",
+      "Exact PeckShield audit findings not available -- audit reports hosted as PDFs on GitBook, not directly parseable",
+      "Exact number of agents currently active (vs total created) not disclosed -- 17,000+ total created but many likely inactive",
+      "Virtuals entity jurisdiction listed as Kuala Lumpur (Malaysia) per Tracxn, but no Companies House or official registry verification performed",
+      "Staking APY/APR not available -- Virtuals uses a non-traditional staking model based on Virgen points and Genesis airdrops rather than fixed yields",
+      "Annual revenue figure estimated from cumulative $39.5M protocol revenue over approximately 1.5 years of operation",
+      "Exact team size beyond the 11 direct reports on TheOrg not independently verified",
+      "Code4rena competitive audit (April 2025) findings details not fully available from search results",
+      "Exact circulating supply discrepancy: CoinMarketCap shows 656.3M, project docs state 600M public + ongoing ecosystem emissions"
+    ],
+    "refresh_config": {
+      "github_org": "Virtual-Protocol",
+      "github_primary_repo": "protocol-contracts",
+      "coingecko_id": "virtuals-protocol",
+      "discord_server_id": null,
+      "telegram_username": "virtuals",
+      "x_handle": "virtuals_io",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "Virtuals Protocol",
+    "ticker": "VIRTUAL",
+    "category": "agent",
+    "subcategory": "AI agent launchpad and tokenisation platform",
+    "tagline": "A society of productive AI agents",
+    "one_liner": "A decentralised platform on Base (Ethereum L2) for creating, tokenising, and monetising autonomous AI agents, featuring bonding curve launches, the GAME decision-making framework, and an Agent Commerce Protocol for agent-to-agent economic activity.",
+    "website": "https://www.virtuals.io",
+    "documentation_url": "https://whitepaper.virtuals.io",
+    "whitepaper_url": "https://whitepaper.virtuals.io",
+    "github_url": "https://github.com/Virtual-Protocol",
+    "chain": "Base (primary), Ethereum mainnet, Solana",
+    "launch_date": "2024-01-01",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Jansen Teng",
+        "role": "Co-Founder & CEO",
+        "background": "Imperial College London graduate (Biotechnology with Business Management). Former consultant at Boston Consulting Group (August 2018 - November 2021), where he developed deep learning models and assisted organisations in obtaining digital banking licenses. Co-founded DIAM Digital Marketing (2019), Aidaro (2020, home search), ThinAir Water (sustainable water harvesting), and CIPTA. Early Ethereum miner (2016). Previously co-founded PathDAO (2021), the gaming guild that pivoted to become Virtuals Protocol.",
+        "linkedin_or_x": "https://www.linkedin.com/in/jansenteng/",
+        "doxxed": true
+      },
+      {
+        "name": "Wee Kee Tiew",
+        "role": "Co-Founder",
+        "background": "Imperial College London and London Business School graduate. Background in private equity, consulting, and AI-driven ventures. Worked at Creador (PE), AnaCap Financial Partners, and Boston Consulting Group. Co-founded DIAM Digital Marketing (2019) and Aidaro (2020) before co-founding PathDAO/Virtuals Protocol.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 15,
+    "entity_name": "Virtuals Protocol (operating entity); previously PathDAO",
+    "entity_jurisdiction": "Kuala Lumpur, Malaysia (per Tracxn company profile). No independent registry verification performed.",
+    "notable_backers": [
+      "DeFiance Capital -- co-led PathDAO seed round (December 2021)",
+      "Merit Circle (Beam) -- co-led PathDAO seed round (December 2021)",
+      "MV Global -- seed round participant",
+      "Stakez Capital -- seed round participant",
+      "NewTribe Capital -- seed round participant",
+      "LongHash Ventures -- seed round participant",
+      "AITECH Labs -- seed round participant",
+      "Alpha Moon Capital -- investor",
+      "Arcanum Ventures -- investor",
+      "Assembly Partners -- investor"
+    ],
+    "funding_raised": {
+      "total_usd": 16610000,
+      "rounds": [
+        {
+          "round_type": "seed",
+          "amount_usd": null,
+          "date": "2021-12-01",
+          "lead_investor": "DeFiance Capital, Merit Circle"
+        },
+        {
+          "round_type": "IDO (Fjord Foundry LBP)",
+          "amount_usd": 16230000,
+          "date": "2021-12-04",
+          "lead_investor": "Public LBP"
+        },
+        {
+          "round_type": "IDO (Enjinstarter)",
+          "amount_usd": 125000,
+          "date": "2021-12-03",
+          "lead_investor": "Public IDO"
+        },
+        {
+          "round_type": "IDO (PAID Network)",
+          "amount_usd": 250000,
+          "date": "2021-12-01",
+          "lead_investor": "Public IDO"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Virtuals Protocol is built on Base (Ethereum L2) and operates as a platform for creating, tokenising, and deploying AI agents. The core architecture comprises four pillars: (1) Agent Tokenisation Platform -- enables agent creation via bonding curves, minting agent-specific ERC-20 tokens paired with VIRTUAL in Uniswap V2 liquidity pools; (2) GAME Framework (Generative Autonomous Multimodal Entities) -- a hierarchical decision-making engine with a High-Level Planner (task generator) and Low-Level Planners (workers) powered by hosted LLMs (Llama 3.1 405B, DeepSeek R1/V3, Qwen 2.5 72B); (3) Agent Commerce Protocol (ACP) -- enables autonomous agent-to-agent commerce through smart contract escrow with request, negotiation, transaction, and evaluation phases; (4) Butler -- a user-facing interface translating human intent into coordinated agent execution. Each agent is represented by an on-chain NFT, an ERC-20 token (1B supply), and an Immutable Contribution Vault (ICV) as an ERC-1155 token-bound address. The GAME framework runs off-chain (AI inference) with on-chain settlement for token transactions and governance.",
+    "consensus_mechanism": "Delegated Proof of Stake (DPoS) for agent model validation. LPs delegate tokens to validators who evaluate AI model quality using an Elo Rating System. Relies on Base L2 consensus (Optimistic Rollup) for settlement.",
+    "what_is_onchain": "Agent NFT minting, ERC-20 agent token creation and trading, Uniswap V2 liquidity pool management, LP token staking (10-year lock), veVIRTUAL governance voting, Agent SubDAO governance, contribution recording (ContributionNft), reward distribution, ACP escrow and settlement, bonding curve mechanics",
+    "what_is_offchain": "AI inference and agent decision-making (GAME engine runs on hosted servers using Llama, DeepSeek, Qwen models), Stateful AI Runner (agent personality/voice/visual hosting), Long-Term Memory Processor, agent-platform integrations (Twitter/X, Telegram, TikTok), GAME Cloud infrastructure",
+    "key_dependencies": [
+      "Base (Ethereum L2) -- primary blockchain",
+      "Uniswap V2 -- agent token liquidity pools",
+      "Meta Llama, DeepSeek, Qwen -- hosted LLM models for GAME framework",
+      "OpenAI / Anthropic APIs -- potential model providers",
+      "Twitter/X Enterprise API -- for social agent interactions",
+      "Solana -- secondary chain deployment"
+    ],
+    "smart_contract_languages": ["Solidity"],
+    "open_source": true,
+    "license": "Not specified in repositories",
+    "github_metrics": {
+      "total_repos": 32,
+      "primary_repo_url": "https://github.com/Virtual-Protocol/protocol-contracts",
+      "total_commits": 260,
+      "contributors": null,
+      "last_commit_date": "2026-02-26",
+      "stars": 91,
+      "forks": 59,
+      "open_issues": 1
+    },
+    "audits": [
+      {
+        "auditor": "PeckShield",
+        "date": "2024-03-10",
+        "scope": "Smart contract security audit -- coding bugs, semantic consistency, DeFi security",
+        "result_summary": "Initial security audit completed. Detailed findings not publicly available from parsed sources.",
+        "report_url": "https://whitepaper.virtuals.io/info-hub/security/security-audit-reports"
+      },
+      {
+        "auditor": "PeckShield",
+        "date": "2024-10-31",
+        "scope": "Smart contract security audit -- coding bugs, semantic consistency, advanced DeFi security for all protocol smart contracts",
+        "result_summary": "Follow-up security audit completed covering expanded contract suite. Detailed findings not publicly available from parsed sources.",
+        "report_url": "https://whitepaper.virtuals.io/info-hub/security/security-audit-reports"
+      },
+      {
+        "auditor": "Cantina",
+        "date": "2025-05-24",
+        "scope": "Security assessment of protocol-contracts repository -- cross-chain agent architecture, smart contract best practices",
+        "result_summary": "5 findings total: 0 critical, 0 high, 0 medium, 0 low, 3 informational (NatSpec docs, custom errors, upgradeable patterns), 2 gas optimisations. No security vulnerabilities identified.",
+        "report_url": "https://cantina.xyz/portfolio/45ea09fa-a4bc-4044-9185-1a8e891ef2db"
+      },
+      {
+        "auditor": "Code4rena",
+        "date": "2025-04-01",
+        "scope": "Competitive audit of Virtuals Protocol smart contracts",
+        "result_summary": "Competitive audit completed. Detailed findings referenced but not fully available from search results.",
+        "report_url": "https://code4rena.com/reports/2025-04-virtuals-protocol"
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2025-01-04",
+        "type": "Smart contract vulnerability",
+        "description": "Security researcher Jinu identified a critical vulnerability where AgentToken creation used predictable contract addresses via the Clones library. An attacker could preemptively create a Uniswap pair, preventing the protocol from launching new agent tokens. Virtuals initially did not respond and closed the Discord vulnerability reporting channel. After public disclosure on X, Virtuals implemented a fix and relaunched its bug bounty programme.",
+        "impact": "No funds lost. Vulnerability could have prevented new agent token creation if exploited.",
+        "resolution": "Smart contract patched, bug bounty programme reinstated"
+      },
+      {
+        "date": "2025-01-08",
+        "type": "Discord server compromise",
+        "description": "A private key leak led to a breach of a Discord administrator account. Users were exposed to fake links distributed via the server.",
+        "impact": "Social engineering risk to Discord members. No smart contract funds affected.",
+        "resolution": "Server recovered, security measures enhanced"
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "Virtual Protocol",
+    "ticker": "VIRTUAL",
+    "token_standard": "ERC-20 (Base)",
+    "token_type": "both",
+    "token_utility": [
+      "Agent creation fee -- 100 VIRTUAL tokens required to launch a new AI agent",
+      "Base liquidity pair -- all agent tokens are paired against VIRTUAL in Uniswap V2 pools",
+      "Transaction routing -- all agent token trades route through VIRTUAL",
+      "Inference payments -- users pay for AI agent services in VIRTUAL",
+      "Governance -- lock VIRTUAL to receive veVIRTUAL for protocol governance voting",
+      "Staking -- lock VIRTUAL for up to 2 years for veVIRTUAL, earning Virgen points and Genesis airdrops",
+      "Agent SubDAO participation -- stake to validators for model quality governance"
+    ],
+    "supply": {
+      "max_supply": 1000000000,
+      "total_supply": 1000000000,
+      "circulating_supply": 656300000,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 65.63
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Public Circulation",
+          "percentage": 60,
+          "vesting_schedule": "Fully unlocked",
+          "cliff": "None",
+          "notes": "600M tokens in public circulation. Originally distributed via PathDAO IDOs (Fjord Foundry LBP, Enjinstarter, PAID Network) in December 2021, with PATH-to-VIRTUAL token migration in late 2023/early 2024."
+        },
+        {
+          "category": "Ecosystem Treasury",
+          "percentage": 35,
+          "vesting_schedule": "Maximum 10% annual emission for 3 years, subject to DAO governance approval",
+          "cliff": "None",
+          "notes": "350M tokens held in DAO-controlled multi-signature wallet. Distributions require community governance voting. Used for community incentives, protocol growth, grants, and ecosystem development."
+        },
+        {
+          "category": "Liquidity Pool",
+          "percentage": 5,
+          "vesting_schedule": "Fully unlocked",
+          "cliff": "None",
+          "notes": "50M tokens allocated for initial liquidity provision."
+        }
+      ],
+      "distribution_method": "IDO via Fjord Foundry LBP, Enjinstarter, and PAID Network (December 2021 as PathDAO). Token migration from PATH to VIRTUAL in late 2023/early 2024."
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "N/A -- fixed supply with no halving",
+      "next_major_emission_event": "Ecosystem treasury emissions capped at 10% per year for 3 years, subject to governance votes",
+      "next_event_date": null,
+      "burn_mechanism": "Agent token revenue triggers buyback-and-burn on agent tokens. No direct VIRTUAL burn mechanism documented."
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Vote-escrowed locking (veVIRTUAL) -- lock VIRTUAL for up to 2 years to receive veVIRTUAL voting power and rewards",
+      "minimum_stake": null,
+      "lock_up_period": "Up to 2 years (user-selected). Auto Max-Lock mode available for continuous 2-year lock with 1:1 voting power.",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "veVIRTUAL decays linearly over time, reaching zero at unlock",
+        "No fixed APY/APR -- rewards come from Virgen points and Genesis airdrops, which vary based on ecosystem activity",
+        "Locked tokens are illiquid for the chosen lock period",
+        "Reward value depends on market price of airdropped Genesis agent tokens"
+      ],
+      "slashing_conditions": "Validators in Agent SubDAO governance face staked token loss or voting power reduction for approving poor-quality models"
+    },
+    "market_data": {
+      "price_usd": 0.781,
+      "market_cap_usd": 512250000,
+      "fully_diluted_valuation_usd": 780510000,
+      "twenty_four_hour_volume_usd": 67930000,
+      "all_time_high_usd": 5.07,
+      "all_time_high_date": "2025-01-02",
+      "all_time_low_usd": 0.0197,
+      "all_time_low_date": "2024-07-05",
+      "major_exchanges": [
+        "Binance",
+        "Coinbase",
+        "OKX",
+        "Bybit",
+        "Gate.io",
+        "MEXC",
+        "KuCoin",
+        "HTX",
+        "Kraken"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Fixed-supply utility and governance token serving as the base currency layer for an AI agent tokenisation ecosystem. All agent token liquidity pools pair against VIRTUAL, creating sustained demand as the ecosystem grows. No direct inflation, but 35% ecosystem treasury releases are capped at 10% annually with governance approval.",
+    "tokenomics_notes": "The VIRTUAL token derives its value primarily from being the mandatory base pair for all agent token liquidity pools, creating a network effect where every new agent launched increases demand. Agent creation requires 100 VIRTUAL tokens as a creation fee. The 1% trading fee on agent tokens is split between protocol and agent SubDAOs. All tokens are fully unlocked and vested. The token migrated from PATH (PathDAO) in late 2023/early 2024. Circulating supply discrepancy exists between CoinMarketCap (656.3M) and project documentation (600M public + ecosystem emissions)."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "using",
+        "description": "Create AI agents on the Virtuals platform. Connect a wallet, fill in agent details (name, ticker, image, description), deposit 100 VIRTUAL tokens, and launch on the bonding curve. Agent graduates to Uniswap V2 when 42,000 VIRTUAL accumulates on the bonding curve.",
+        "minimum_hardware": "Web browser, crypto wallet (MetaMask or similar)",
+        "minimum_capital_usd": 78,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Returns depend on agent token price performance and agent revenue generation. Highly speculative.",
+        "barriers_to_entry": [
+          "Need 100 VIRTUAL tokens (~$78 at current price) to create an agent",
+          "Need to understand bonding curve mechanics",
+          "Agent success depends on community adoption and utility"
+        ],
+        "guide_available": true,
+        "guide_url": "https://whitepaper.virtuals.io/builders-hub/build-with-virtuals/agent-creation"
+      },
+      {
+        "type": "staking",
+        "description": "Lock VIRTUAL tokens to receive veVIRTUAL, which grants governance voting power, Virgen points (daily), and eligibility for Genesis airdrops. Lock period up to 2 years. veVIRTUAL decays linearly over time.",
+        "minimum_hardware": "Web browser, crypto wallet",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "No fixed APY. Returns come from Virgen points allocation, Genesis token airdrops, and governance influence. Variable and non-guaranteed.",
+        "barriers_to_entry": [
+          "Tokens locked for chosen period (up to 2 years)",
+          "veVIRTUAL decays linearly, reducing voting power over time",
+          "Airdrop value depends on Genesis agent performance"
+        ],
+        "guide_available": true,
+        "guide_url": "https://whitepaper.virtuals.io/info-hub/usdvirtual/staking"
+      },
+      {
+        "type": "building",
+        "description": "Build AI agents and applications using the GAME SDK (Python or TypeScript). The SDK provides a modular framework with High-Level Planner (task generator) and Low-Level Planners (workers). Supports custom plugins, platform integrations, and the Agent Commerce Protocol (ACP) for agent-to-agent transactions.",
+        "minimum_hardware": "Development machine, API access",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Revenue from agent token appreciation and inference fees if agent gains adoption. Highly variable.",
+        "barriers_to_entry": [
+          "Need Python or TypeScript development skills",
+          "Understanding of LLM-based agent architecture",
+          "Need to create compelling agent use case for adoption"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.game.virtuals.io/game-overview"
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute to AI agent improvement through the Agent SubDAO governance system. Submit model improvements, voice models, visual assets, or personality datasets. Contributions are validated by validators using an Elo Rating System. Approved contributions earn rewards from the agent SubDAO treasury.",
+        "minimum_hardware": "AI/ML expertise for model contributions; creative skills for visual/voice contributions",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Rewards from agent SubDAO treasury based on contribution impact scores",
+        "barriers_to_entry": [
+          "Contributions must pass validator quality assessment",
+          "Requires technical expertise in AI model fine-tuning for model contributions",
+          "Validator approval required before contributions are deployed"
+        ],
+        "guide_available": true,
+        "guide_url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance"
+      },
+      {
+        "type": "governance",
+        "description": "Participate in protocol governance by holding veVIRTUAL. Any wallet holding at least 0.10% of total veVIRTUAL supply can create proposals. Proposals have a 72-hour comment window followed by 72-hour voting. Requires 25% quorum of total veVIRTUAL supply and simple majority (50% + 1) to pass.",
+        "minimum_hardware": "Web browser, crypto wallet with veVIRTUAL",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "No direct returns from governance participation. Influence over protocol direction, treasury allocation, and fee parameters.",
+        "barriers_to_entry": [
+          "Need veVIRTUAL (locked VIRTUAL) to vote",
+          "Need 0.10% of veVIRTUAL supply to create proposals (high threshold)",
+          "25% quorum requirement for proposals to be valid"
+        ],
+        "guide_available": true,
+        "guide_url": "https://gov.virtuals.io/"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "302 GitHub followers, 8 contributors on ACP repo, active open-source development across 32 repositories",
+      "grants_program": true,
+      "grants_url": "https://whitepaper.virtuals.io"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "AI inference for 17,000+ agents across Base, Solana, and Ethereum. Hosted GAME engine provides LLM inference via Llama 3.1 405B, DeepSeek R1/V3, and Qwen 2.5 72B.",
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": 26000000,
+    "revenue_source": "1% trading fee on agent tokens (split between protocol and agent SubDAOs), agent creation fees (100 VIRTUAL per agent), inference payments for AI services. Cumulative protocol revenue exceeds $39.5M as of early 2026.",
+    "metrics_source": "VentureBurn analysis, DeFiLlama (fees page), CryptoRank, whitepaper documentation",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "Over 17,000 AI agents created total. Platform tracks 'Agentic GDP' (aGDP) rather than traditional TVL -- aGDP exceeded $466M. Nearly 1 million agent jobs completed. Over $8 billion cumulative DEX volume for agent tokens. Base accounts for over 90% of daily active wallets and $28.4M daily volume. Revenue showed sharp decline from $1.02M daily in January 2025 to $34.8K by late February 2025, though activity rebounded with ACP and Genesis launches. Notable agents include AIXBT ($500M peak market cap, 458K X followers), Luna ($130M+ market cap, 500K+ TikTok followers), and Game."
+  },
+
+  "community": {
+    "discord_members": 11865,
+    "telegram_members": null,
+    "x_followers": 281000,
+    "github_contributors": null,
+    "governance_participation_rate": "veVIRTUAL governance launched with 0.10% supply threshold for proposals, 25% quorum requirement. Participation rate not quantified.",
+    "governance_model": "Dual-layer governance: (1) Protocol-level governance via veVIRTUAL -- permissionless proposal submission (0.10% threshold), 72-hour comment window, 72-hour voting, 25% quorum, simple majority. (2) Agent SubDAO governance via DPoS -- LPs delegate to validators who evaluate AI model quality. Ecosystem treasury controlled by DAO multi-sig with governance voting on fund deployment.",
+    "governance_url": "https://gov.virtuals.io/",
+    "key_community_channels": [
+      "X/Twitter: @virtuals_io (281K followers)",
+      "Discord: discord.gg/virtualsio (11,865 members)",
+      "Telegram: t.me/virtuals",
+      "Governance Forum: gov.virtuals.io"
+    ],
+    "sentiment_summary": "Strong enthusiasm during the AI agent narrative cycle in late 2024/early 2025, with VIRTUAL experiencing a 16,000% rally. Community has cooled significantly with the 80%+ price correction from ATH. Criticism around pump-and-dump dynamics in agent tokens, with comparisons to Pump.fun memecoin launchpad. The protocol's pivot to ACP and Genesis mechanisms has renewed some developer interest. Notable backlash around the handling of the January 2025 smart contract vulnerability (initially closing the Discord reporting channel). Agent creators and holders benefit from a revenue-sharing model, but most agent tokens have lost significant value post-hype.",
+    "community_notes": "Individual AI agents have substantial followings: AIXBT has 458K X followers (more than the protocol itself), Luna has 500K+ TikTok followers. The community is fragmented across many individual agent communities rather than centralised around the protocol. Virtuals Protocol established a Virtuals Foundation through governance vote."
+  },
+
+  "freedom_score": {
+    "total_score": 42,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "The GAME inference engine runs on centralised hosted servers operated by Virtuals Protocol, constituting a significant single point of failure. AI agents depend entirely on Virtuals-hosted LLMs (Llama, DeepSeek, Qwen) with no permissionless node operation for inference. The on-chain components (token contracts, governance, ACP settlement) inherit Base L2 decentralisation, which itself depends on a centralised sequencer operated by Coinbase. Agent data (personality, memory, voice, visuals) is stored on Virtuals-hosted infrastructure, not on decentralised storage. There is no permissionless way to run GAME infrastructure. The SDK offers local development but production deployment requires Virtuals-hosted endpoints. Multiple operators do exist at the validator level for model quality assessment, but core infrastructure remains controlled by the founding entity."
+      },
+      "governance_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "Functional veVIRTUAL governance exists with permissionless participation -- any veVIRTUAL holder can vote, and wallets with 0.10% of supply can create proposals. The 72-hour comment window and 72-hour voting period with 25% quorum are well-structured. Agent SubDAO governance with DPoS model adds a second governance layer. However, the team retains significant influence: the 0.10% proposal threshold is high, the 35% ecosystem treasury provides substantial team-aligned resources, and the founding team controls core infrastructure decisions (which LLMs to host, GAME engine updates, platform deployments). The governance portal launched relatively recently and track record is limited. The Virtuals Foundation establishment via governance vote shows some maturation."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "60% of tokens went to public circulation via IDOs (Fjord Foundry LBP, Enjinstarter, PAID Network) in December 2021 -- this is a relatively fair public distribution method. 5% to liquidity pools. However, 35% ecosystem treasury controlled by DAO represents a large pool of team-aligned tokens, even with the 10% annual emission cap. The original PathDAO IDO at $0.015 gave very early investors a 338x ATH ROI, suggesting significant insider advantage. All tokens are fully unlocked. The IDO structure (LBP format) is more fair than typical VC-heavy allocations, but the ecosystem treasury is large and governance control over it is still maturing."
+      },
+      "censorship_resistance": {
+        "score": 5,
+        "max": 15,
+        "evidence": "The platform can effectively censor agents -- the GAME Cloud is a hosted service with terms of service. The team controls which LLMs are available, can modify agent deployments, and controls the Agent Runner infrastructure. Agent tokens trade on Uniswap V2 (censorship-resistant), but the AI inference layer (which gives agents their functionality) is fully centralised. Twitter/X integration depends on X Enterprise API (centralised platform). The GAME SDK offers some client-side autonomy, but production agent deployment still requires Virtuals infrastructure. An agent without GAME inference is just a token with no utility. Smart contracts on Base are upgradeable (noted in Cantina audit), allowing the team to modify contract behaviour."
+      },
+      "data_sovereignty": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Agent personality data, voice models, visual assets, and long-term memory are stored on Virtuals-hosted infrastructure (Stateful AI Runner, Long-Term Memory Processor). Users do not have self-custody of their agent data. Token holdings are self-custodied on-chain, but the intellectual property and functional components of agents are platform-hosted. The Immutable Contribution Vault (ICV) stores approved contributions on-chain as ERC-1155 tokens, providing some data sovereignty for contribution records. However, the actual AI model weights and inference data remain on Virtuals servers. No zero-knowledge or encryption mechanisms for agent interactions are documented."
+      },
+      "open_source_transparency": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Strong open-source presence: 32 public GitHub repositories including protocol-contracts (91 stars, 260 commits), virtuals-python SDK, openclaw-acp, and acp-node. Smart contracts are verified on Basescan. Four security audits completed (2x PeckShield, Cantina, Code4rena) with reports published. GAME SDK is open-source. Governance operates transparently via on-chain voting with public proposals and results. The governance forum is public. Treasury is in a multi-sig wallet. However, the GAME Cloud engine (core inference infrastructure) is proprietary and hosted -- the decision-making engine code is not fully open. The HuggingFace presence is minimal (1 model). Some key operational components remain opaque (validator selection process, infrastructure hosting details)."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "Virtuals Protocol scores 42/100 (D grade), placing it in the 'largely centralised with decentralisation narrative' category. While the project has genuinely innovative on-chain governance mechanisms (veVIRTUAL, Agent SubDAOs) and strong open-source contract transparency, the core value proposition -- AI agent inference and decision-making -- runs on centralised, team-operated infrastructure with no permissionless alternative. The GAME engine, LLM hosting, agent memory, and platform integrations all constitute centralisation vectors that give the team effective control over agent functionality. Token distribution is relatively fair (60% public via IDOs), but the 35% ecosystem treasury remains a significant team-aligned resource. The project is building towards decentralisation but is currently a centralised platform with tokenised governance and open-source contracts bolted on."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Innovative agent tokenisation model -- bonding curve to Uniswap V2 migration with 10-year LP locks creates genuine liquidity infrastructure for AI agents",
+      "Real revenue generation -- over $39.5M cumulative protocol revenue and $8B+ DEX volume demonstrates market traction, not just narrative",
+      "GAME framework provides accessible agent creation -- 100 VIRTUAL tokens and no coding knowledge needed to launch a basic agent, dramatically lowering barriers",
+      "Agent Commerce Protocol (ACP) is a genuinely novel contribution -- autonomous agent-to-agent commerce via smart contract escrow has few equivalents in the space",
+      "Strong open-source presence with 32 GitHub repos, 4 security audits, and verified on-chain contracts",
+      "Multi-chain expansion (Base, Solana, Ethereum mainnet) demonstrates execution beyond single-chain dependency"
+    ],
+    "what_is_hype": [
+      "Agentic GDP ($466M) and agent economy narrative massively inflated by speculative agent token trading volume rather than genuine productive output",
+      "17,000+ agents created but vast majority are inactive or zero-revenue -- quality is severely diluted by low-barrier entry",
+      "Comparison to 'pump.fun for AI agents' is apt -- most agent tokens follow memecoin pump-and-dump dynamics rather than utility-driven value accrual",
+      "$1 trillion agent economy projection by 2035 is marketing aspiration without credible basis in current usage metrics",
+      "AI agents like Luna ($700 per TikTok stream) generate negligible revenue relative to token market caps ($130M+), suggesting massive speculative premium",
+      "Decentralisation narrative is premature -- core infrastructure (GAME engine, inference, memory) is entirely centralised and team-operated"
+    ],
+    "key_risks": [
+      "Infrastructure centralisation -- GAME engine going down disables all agents instantly; no failover or distributed hosting",
+      "Regulatory risk -- tokenised AI agents may face securities classification scrutiny, particularly given speculative trading dynamics",
+      "Agent token pump-and-dump dynamics -- over 60% of memecoin traders lose money and similar patterns apply to agent tokens",
+      "Revenue sustainability -- daily revenue dropped from $1.02M to $34.8K (-97%) in 2 months during early 2025, showing extreme cyclicality",
+      "Competitive threat from free open-source frameworks -- LangChain (118K+ GitHub stars), CrewAI, AutoGPT offer similar agent capabilities without tokens",
+      "Smart contract vulnerability handling concerns -- initially closed Discord reporting channel before researcher went public",
+      "Team concentration risk -- small team (15 estimated) controlling critical centralised infrastructure",
+      "Base L2 dependency -- centralised sequencer operated by Coinbase; not the same as Ethereum mainnet security"
+    ],
+    "competitive_advantages": [
+      "First-mover in agent tokenisation -- established the bonding curve agent launch model that others now copy",
+      "Network effects via VIRTUAL base pair -- every new agent increases demand for VIRTUAL token",
+      "Low barrier to agent creation (100 VIRTUAL, no coding required) vs enterprise-grade alternatives",
+      "Agent Commerce Protocol (ACP) for autonomous agent-to-agent transactions is genuinely differentiated",
+      "Strong brand recognition in AI x crypto narrative with 281K X followers and notable agent successes (AIXBT, Luna)"
+    ],
+    "competitive_disadvantages": [
+      "Centralised inference infrastructure competes poorly on decentralisation metrics vs Autonolas or Bittensor",
+      "No proprietary AI models -- relies on open-source LLMs (Llama, DeepSeek, Qwen) available to any competitor",
+      "Agent quality control is weak -- low creation barrier leads to spam and low-quality agents diluting the ecosystem",
+      "Free alternatives (LangChain, CrewAI, AutoGPT) offer comparable agent frameworks without token overhead",
+      "Heavy reliance on speculative token trading for revenue rather than genuine AI utility"
+    ],
+    "comparable_projects": [
+      "Autonolas (OLAS) -- autonomous agent protocol with stronger decentralisation but different approach (no agent tokenisation launchpad)",
+      "ElizaOS (ai16z) -- open-source AI agent framework on Solana, competing for developer mindshare",
+      "pump.fun -- memecoin launchpad on Solana, comparable tokenisation model but without AI utility layer",
+      "LangChain -- open-source agent framework (no token), 118K+ GitHub stars, $160M+ venture funded",
+      "CrewAI -- multi-agent framework claiming 60% Fortune 500 adoption (no token)",
+      "AutoGPT -- open-source autonomous agent (no token), 181.5K GitHub stars"
+    ],
+    "outlook": "Virtuals Protocol occupies a unique niche as the pioneer of tokenised AI agent launches. The ACP and Genesis mechanisms show genuine protocol evolution beyond simple token speculation. However, the project faces a fundamental tension: its competitive advantage (easy tokenised agent creation) also attracts low-quality speculation that undermines credibility. The sharp revenue decline in early 2025 exposed the protocol's dependence on hype cycles. For the project to deliver lasting value, it needs to demonstrate that AI agent utility -- not just token speculation -- drives sustainable revenue. The infrastructure centralisation is a significant freedom concern but may be necessary for current-stage execution. Multi-chain expansion and the move towards an 'agent economy' framework show ambition, but the 17,000+ agent figure masks a quality problem that governance mechanisms have not yet solved.",
+    "overall_assessment": "Virtuals Protocol is a pioneering but fundamentally centralised AI agent platform that has successfully created the dominant tokenised agent launchpad model. Its revenue generation ($39.5M+ cumulative) and ecosystem scale (17,000+ agents, $8B+ DEX volume) are real achievements, but these metrics are heavily inflated by speculative trading. The GAME framework and ACP represent genuine technical innovation, while the governance mechanisms (veVIRTUAL, SubDAOs) show decentralisation intent. However, the core AI infrastructure remains entirely centralised, agent quality is poor across the ecosystem, and revenue is highly cyclical. Freedom score of 42/100 (D) reflects a project that talks decentralisation but operates as a centralised platform with tokens. Worth watching for ACP development and governance maturation, but current state is closer to a tokenised AI SaaS platform than a decentralised protocol."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Protocol Official Website",
+      "url": "https://www.virtuals.io/",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["identity.tagline", "identity.one_liner", "technical.architecture_summary"],
+      "reliability_notes": "Official website. Four-pillar architecture described: ACP, Butler, Capital Markets, Robotics."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Virtuals Protocol Whitepaper -- Root",
+      "url": "https://whitepaper.virtuals.io/",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["identity.one_liner", "technical.architecture_summary", "tokenomics.token_utility"],
+      "reliability_notes": "Official whitepaper. Defines Agentic GDP and four-pillar ecosystem."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- GAME Framework",
+      "url": "https://whitepaper.virtuals.io/about-virtuals/agentic-framework-game",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "technical.what_is_offchain", "technical.key_dependencies"],
+      "reliability_notes": "Official documentation. Details GAME Cloud vs GAME SDK, supported LLMs."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Agent Creation",
+      "url": "https://whitepaper.virtuals.io/builders-hub/build-with-virtuals/agent-creation",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["participation.methods", "technical.what_is_onchain", "tokenomics.token_utility"],
+      "reliability_notes": "Official docs. Details bonding curve (42,000 VIRTUAL graduation), NFT minting, ICV creation, 10-year LP lock."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "documentation",
+      "title": "GAME by Virtuals -- Documentation",
+      "url": "https://docs.game.virtuals.io/game-overview",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "participation.developer_resources"],
+      "reliability_notes": "Official GAME SDK documentation. Details HLP/LLP architecture, agent configuration, worker definitions."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Token Distribution",
+      "url": "https://whitepaper.virtuals.io/about-virtuals-1/usdvirtual-tokenomics/token-distribution",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.distribution", "tokenomics.supply", "tokenomics.emissions"],
+      "reliability_notes": "Official tokenomics documentation. 60/35/5 split confirmed. All tokens fully unlocked."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "github",
+      "title": "Virtual-Protocol GitHub Organisation",
+      "url": "https://github.com/Virtual-Protocol",
+      "author": "Virtuals Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.github_metrics.total_repos", "technical.open_source"],
+      "reliability_notes": "32 public repositories, 302 followers. Active development across TypeScript, Python, Solidity."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "github",
+      "title": "Virtual-Protocol/protocol-contracts",
+      "url": "https://github.com/Virtual-Protocol/protocol-contracts",
+      "author": "Virtuals Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.github_metrics", "technical.smart_contract_languages", "technical.what_is_onchain"],
+      "reliability_notes": "91 stars, 59 forks, 260 commits, 1 open issue. Solidity 51.8%, JavaScript 41.2%, TypeScript 7%. Last commit Feb 26, 2026."
+    },
+    {
+      "source_id": "S009",
+      "tier": 1,
+      "type": "github",
+      "title": "Virtual-Protocol/virtuals-python",
+      "url": "https://github.com/Virtual-Protocol/virtuals-python",
+      "author": "Virtuals Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["participation.developer_resources"],
+      "reliability_notes": "136 stars, 52 forks. DEPRECATED -- migrated to game-by-virtuals/game-python. 45 commits, Python 100%."
+    },
+    {
+      "source_id": "S010",
+      "tier": 1,
+      "type": "github",
+      "title": "Virtual-Protocol/openclaw-acp",
+      "url": "https://github.com/Virtual-Protocol/openclaw-acp",
+      "author": "Virtuals Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "participation.developer_resources"],
+      "reliability_notes": "114 stars, 34 forks, 8 contributors. TypeScript 92%. Agent Commerce Protocol CLI tool."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "github",
+      "title": "Virtual-Protocol/game-agentic-engine-module",
+      "url": "https://github.com/Virtual-Protocol/game-agentic-engine-module",
+      "author": "Virtuals Protocol",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary"],
+      "reliability_notes": "13 stars, 4 forks. Contains GAME Core framework PDF documentation."
+    },
+    {
+      "source_id": "S012",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Agent SubDAO Governance",
+      "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["community.governance_model", "technical.consensus_mechanism", "participation.methods"],
+      "reliability_notes": "Official docs. Details DPoS validator model, Elo Rating System, reward distribution, penalty mechanisms."
+    },
+    {
+      "source_id": "S013",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Governance",
+      "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual/governance",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["community.governance_model", "community.governance_url"],
+      "reliability_notes": "Official docs. 0.10% proposal threshold, 25% quorum, 72hr comment + 72hr voting windows."
+    },
+    {
+      "source_id": "S014",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Staking",
+      "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual/staking",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.staking", "participation.methods"],
+      "reliability_notes": "Official docs. veVIRTUAL mechanism, 2-year max lock, linear decay, Virgen points, 7-day voting cycles."
+    },
+    {
+      "source_id": "S015",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Whitepaper -- Security Audit Reports",
+      "url": "https://whitepaper.virtuals.io/info-hub/security/security-audit-reports",
+      "author": "Virtuals Protocol",
+      "publisher": "Virtuals Protocol",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.audits"],
+      "reliability_notes": "Lists 5 audit reports: Launchpad suite, Genesis (Zenith), Genesis Token, Staking Contract, Code4rena competitive audit."
+    },
+    {
+      "source_id": "S016",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CryptoRank -- Virtuals Protocol Price",
+      "url": "https://cryptorank.io/price/virtual-protocol",
+      "author": "CryptoRank",
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.market_data"],
+      "reliability_notes": "Tier 2 market data. Price $0.781, MCap $512.25M, FDV $780.51M, 24h vol $67.93M, ATH $5.07, ATL $0.0200."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CryptoRank -- Virtuals Protocol IDO/Funding",
+      "url": "https://cryptorank.io/ico/virtual-protocol",
+      "author": "CryptoRank",
+      "publisher": "CryptoRank",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["team.funding_raised", "tokenomics.distribution.distribution_method"],
+      "reliability_notes": "Detailed IDO information. $16.61M total raised. Fjord Foundry LBP $16.23M, Enjinstarter $125K, PAID $250K."
+    },
+    {
+      "source_id": "S018",
+      "tier": 2,
+      "type": "audit_report",
+      "title": "Cantina Security Assessment -- Virtuals Protocol",
+      "url": "https://cantina.xyz/portfolio/45ea09fa-a4bc-4044-9185-1a8e891ef2db",
+      "author": "Joran Honig, Kankodu",
+      "publisher": "Cantina",
+      "date_published": "2025-05-24",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.audits"],
+      "reliability_notes": "Recognised audit firm. 5 findings (0 critical/high/medium/low, 3 informational, 2 gas). Clean security result."
+    },
+    {
+      "source_id": "S019",
+      "tier": 2,
+      "type": "market_data",
+      "title": "DeFiLlama -- Virtuals Protocol Fees",
+      "url": "https://defillama.com/fees/virtuals-protocol",
+      "author": "DeFiLlama",
+      "publisher": "DeFiLlama",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["usage_metrics.revenue_source"],
+      "reliability_notes": "403 on direct fetch. Fee structure sourced from search snippet: 4 revenue streams on Base plus Ethereum and Solana fees."
+    },
+    {
+      "source_id": "S020",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Virtuals Protocol -- HuggingFace Organisation",
+      "url": "https://huggingface.co/virtuals-protocol",
+      "author": "Virtuals Protocol",
+      "publisher": "Hugging Face",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.open_source"],
+      "reliability_notes": "Minimal HuggingFace presence. 1 member (Ern/erniechiew), 1 public model (mario-videogamegen), 0 datasets."
+    },
+    {
+      "source_id": "S021",
+      "tier": 3,
+      "type": "research_report",
+      "title": "Bitstamp -- What is Virtuals Protocol?",
+      "url": "https://www.bitstamp.net/learn/cryptocurrency-guide/what-is-virtuals-protocol-virtual/",
+      "author": "Bitstamp",
+      "publisher": "Bitstamp",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["team.founding_team", "identity.launch_date", "tokenomics.distribution"],
+      "reliability_notes": "Exchange-published educational content. Useful for team background and PathDAO history verification."
+    },
+    {
+      "source_id": "S022",
+      "tier": 3,
+      "type": "research_report",
+      "title": "VentureBurn -- Virtuals Protocol Analysis",
+      "url": "https://ventureburn.com/virtuals-protocol-explained-the-ai-agent-launchpad-taking-crypto-by-storm/",
+      "author": "VentureBurn",
+      "publisher": "VentureBurn",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["usage_metrics", "team.funding_raised", "assessment"],
+      "reliability_notes": "Third-party analysis. 17,000+ agents, $39.5M+ cumulative revenue, $16M PathDAO seed. Includes risk analysis."
+    },
+    {
+      "source_id": "S023",
+      "tier": 3,
+      "type": "research_report",
+      "title": "CryptoPotato -- What is Virtuals Protocol?",
+      "url": "https://cryptopotato.com/what-is-virtuals-the-launchpad-for-ai-agents/",
+      "author": "CryptoPotato",
+      "publisher": "CryptoPotato",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "participation.methods", "assessment.key_risks"],
+      "reliability_notes": "Third-party analysis. Details Composer Stack architecture, agent creation process, LUNA and AIXBT agent data."
+    },
+    {
+      "source_id": "S024",
+      "tier": 3,
+      "type": "research_report",
+      "title": "Tiger Research -- Virtuals Protocol ACP Report",
+      "url": "https://reports.tiger-research.com/p/virtuals-protocol-acp-eng",
+      "author": "Tiger Research",
+      "publisher": "Tiger Research",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "usage_metrics"],
+      "reliability_notes": "Partially funded by Virtuals Protocol but claims independent production. Details ACP four-phase model, real-world applications."
+    },
+    {
+      "source_id": "S025",
+      "tier": 3,
+      "type": "research_report",
+      "title": "Shoal Research -- Virtuals Protocol: Launching AI Agents with Pump.fun Model",
+      "url": "https://www.shoal.gg/p/virtuals-protocol-launching-ai-agents",
+      "author": "Shoal Research",
+      "publisher": "Shoal Research",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.architecture_summary", "tokenomics", "usage_metrics", "assessment"],
+      "reliability_notes": "Independent analysis. Details SAR architecture, IAO mechanics, revenue examples (Luna $700/stream, PocketWaifuGame $20.2K in 13 days)."
+    },
+    {
+      "source_id": "S026",
+      "tier": 3,
+      "type": "social_media",
+      "title": "The Org -- Jansen Teng, Virtuals Protocol",
+      "url": "https://theorg.com/org/virtuals-io/org-chart/jansen-teng",
+      "author": "The Org",
+      "publisher": "The Org",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["team.founding_team", "team.team_size_estimate"],
+      "reliability_notes": "Org chart shows 11 direct reports including COO, VP Gaming, AI Contributor, Advisors. Self-reported company data."
+    },
+    {
+      "source_id": "S027",
+      "tier": 2,
+      "type": "block_explorer",
+      "title": "BaseScan -- VIRTUAL Token Contract",
+      "url": "https://basescan.org/token/0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+      "author": "BaseScan",
+      "publisher": "BaseScan",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.supply"],
+      "reliability_notes": "Block explorer returned 403 on direct fetch. Contract address verified via search results. ERC-20 on Base."
+    },
+    {
+      "source_id": "S028",
+      "tier": 3,
+      "type": "news",
+      "title": "Cointelegraph -- Virtuals Protocol Fixes Bug",
+      "url": "https://cointelegraph.com/news/virtuals-protocol-fixes-bug-plans-researcher-bounty",
+      "author": "Cointelegraph",
+      "publisher": "Cointelegraph",
+      "date_published": "2025-01-05",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["technical.security_incidents"],
+      "reliability_notes": "Major crypto news outlet. Details January 2025 smart contract vulnerability and Discord closure controversy."
+    },
+    {
+      "source_id": "S029",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinMarketCap -- Virtuals Protocol (search snippet)",
+      "url": "https://coinmarketcap.com/currencies/virtual-protocol/",
+      "author": "CoinMarketCap",
+      "publisher": "CoinMarketCap",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.supply.circulating_supply", "tokenomics.market_data"],
+      "reliability_notes": "403 on direct fetch. Circulating supply 656.3M sourced from search snippet. Cross-referenced with CryptoRank."
+    },
+    {
+      "source_id": "S030",
+      "tier": 2,
+      "type": "market_data",
+      "title": "CoinGecko -- Virtuals Protocol (search snippet)",
+      "url": "https://www.coingecko.com/en/coins/virtuals-protocol",
+      "author": "CoinGecko",
+      "publisher": "CoinGecko",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["tokenomics.market_data.all_time_high_usd", "tokenomics.market_data.all_time_high_date"],
+      "reliability_notes": "403 on direct fetch. ATH $5.07 on Jan 2, 2025 confirmed via search snippet, cross-referenced with CryptoRank."
+    }
+  ]
+}
