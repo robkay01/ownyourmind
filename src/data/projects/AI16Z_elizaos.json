@@ -1,0 +1,793 @@
+{
+  "meta": {
+    "project_id": "elizaos",
+    "research_date": "2026-03-03",
+    "researcher": "Claude (OYM Research Agent)",
+    "version": 1,
+    "last_updated": "2026-03-03",
+    "status": "draft",
+    "research_gaps": [
+      "CoinGecko returned 403 -- market data reconstructed from LiveCoinWatch, MarketCapOf, and web search snippets",
+      "Solscan returned 403 -- on-chain holder count, transfer count, and exact supply data not directly verifiable from Solana block explorer in this session",
+      "Etherscan timed out -- EVM token contract data not directly verifiable from block explorer in this session",
+      "DeFiLlama returned 403 -- ElizaOS does not appear to be listed as a DeFi protocol; this is expected as it is primarily a framework, not a protocol with TVL",
+      "Exact Discord member count sourced from a single web search snippet (2,683 members) -- not independently verified by visiting Discord directly",
+      "X/Twitter follower count not retrievable -- JavaScript-rendered page; estimated from website claims",
+      "Exact team size at Eliza Labs not publicly disclosed -- whitepaper lists 14 co-authors but distinction between core employees and contributors is unclear",
+      "Eliza Labs entity jurisdiction not publicly disclosed in any available source -- no Companies House, SEC, or equivalent registry check possible",
+      "No formal third-party security audit report publicly available for the ElizaOS framework code; token migration contracts reportedly audited but reports not published at time of research",
+      "SAFT allocation details (15% of total supply) -- specific investors and terms not publicly disclosed",
+      "DAO treasury exact current value not independently verifiable -- estimates range from $10M to $25M across sources of varying age",
+      "Staking mechanism does not exist for ELIZAOS token as of research date -- future staking referenced in roadmap but not yet implemented",
+      "Daily/monthly active users of ElizaOS framework not tracked publicly -- '50,000+ agents deployed' is a project claim not independently verified",
+      "Annual revenue for Eliza Labs not publicly disclosed",
+      "Telegram community size not found in any available source",
+      "All-time low for ELIZAOS token (post-swap) not precisely dated -- approximately $0.001193 per CoinGecko, date not specified"
+    ],
+    "refresh_config": {
+      "github_org": "elizaOS",
+      "github_primary_repo": "eliza",
+      "coingecko_id": "elizaos",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "elizaOS",
+      "prose_fields_with_embedded_figures": []
+    },
+    "auto_refresh_log": []
+  },
+
+  "identity": {
+    "name": "ElizaOS",
+    "ticker": "ELIZAOS",
+    "category": "agent",
+    "subcategory": "AI agent framework and operating system",
+    "tagline": "Autonomous agents for everyone",
+    "one_liner": "An open-source TypeScript framework for building, deploying, and managing autonomous AI agents across blockchains and social platforms, with a multi-chain token (Solana, Ethereum, Base, BNB Chain) and DAO-managed treasury originally launched as ai16z.",
+    "website": "https://elizaos.ai",
+    "documentation_url": "https://docs.elizaos.ai",
+    "whitepaper_url": "https://arxiv.org/abs/2501.06781",
+    "github_url": "https://github.com/elizaOS",
+    "chain": "Solana (primary), Ethereum, Base, BNB Chain (via Chainlink CCIP)",
+    "launch_date": "2024-10-24",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Shaw Walters",
+        "role": "Founder & CEO, Eliza Labs",
+        "background": "AI developer and serial entrepreneur based in San Francisco. Originally a musician ('Sean Makes Music'), transitioned to game development and blockchain. Explored NFTs and Solidity before joining Webaverse as lead developer, which collapsed after a treasury security breach. Co-founded MagicML, an open-source AI agent initiative. Built the original Eliza framework as an example within Magic, which evolved into ElizaOS. Published arXiv paper on Eliza (2501.06781). Known online as @shawmakesmagic. Self-described 'comedian and performance artist'. Background spans AI/ML, blockchain development, and DAOs.",
+        "linkedin_or_x": "https://x.com/shawmakesmagic",
+        "doxxed": true
+      },
+      {
+        "name": "Sam Gao",
+        "role": "Co-author / Advisor",
+        "background": "Listed as co-author on the Eliza arXiv paper. Connected to Andreessen Horowitz (a16z) as advisor. Announced release of technical whitepaper.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 20,
+    "entity_name": "Eliza Labs",
+    "entity_jurisdiction": "Not publicly disclosed. Shaw Walters is based in San Francisco; project mentions expansion across multiple countries.",
+    "notable_backers": [
+      "DAOs.fun (initial token launch platform -- raised 420.69 SOL in October 2024)",
+      "Stanford University FDCI (research partnership; grant exceeding $250,000 from Eliza Labs to Stanford)",
+      "Chainlink (cross-chain infrastructure partner for CCIP token migration)",
+      "Doodles / Dreamnet (ecosystem partner)",
+      "a16z -- NOT an investor; acknowledged the project but requested rebranding due to name confusion"
+    ],
+    "funding_raised": {
+      "total_usd": null,
+      "rounds": [
+        {
+          "round_type": "Community token launch (DAOs.fun)",
+          "amount_usd": null,
+          "date": "2024-10-24",
+          "lead_investor": "Community (raised 420.69 SOL via DAOs.fun)"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "ElizaOS is a modular TypeScript-based agentic framework organised as a monorepo. The core architecture consists of: (1) Runtime Core -- manages memory, events, planning, and state transitions for agents; (2) Character Files -- JSON definitions for agent personality, knowledge, and behaviour; (3) Plugin System -- 90+ official npm plugins covering LLM providers (OpenAI, Anthropic, Google, Ollama), platform connectors (Discord, Telegram, X/Twitter, Farcaster), blockchain integrations (Solana, EVM chains), and data tools (RAG, database, knowledge); (4) Unified Message Bus -- supports Discord, Telegram, X, HTTP, and on-chain communications via swappable transport adapters; (5) Composable Swarms -- Worlds (servers/workspaces) and Rooms (channels/DMs) allow multi-agent coordination with delegation, consensus, and load-balancing; (6) Strategic Action Chaining -- LLM-driven tool calls enabling parallel execution, conditional branching, and user input pausing. The framework supports deployment via local installation, Docker containers, or Eliza Cloud. Implementations exist in TypeScript (primary), Rust, and Python.",
+    "consensus_mechanism": "N/A -- ElizaOS is a framework, not a blockchain. The ELIZAOS token operates on Solana (PoS/PoH), Ethereum (PoS), Base (PoS L2), and BNB Chain (PoS/PoA).",
+    "what_is_onchain": "ELIZAOS token (SPL on Solana, ERC-20 on Ethereum/Base, BEP-20 on BNB Chain). Vesting contracts via Streamflow. DAO treasury holdings. Agent token launches on auto.fun (bonding curves). Cross-chain bridging via Chainlink CCIP.",
+    "what_is_offchain": "The entire ElizaOS framework and agent runtime. Agent logic, memory, and state management. LLM inference. Social media integrations. Plugin execution. Character files and agent configuration. Agent-to-agent messaging within Worlds/Rooms.",
+    "key_dependencies": [
+      "TypeScript / Node.js / Bun runtime",
+      "LLM providers (OpenAI, Anthropic, Google, Ollama -- model-agnostic)",
+      "Solana blockchain (primary token chain)",
+      "Chainlink CCIP (cross-chain token bridging)",
+      "Raydium (auto.fun bonding curve DEX integration)",
+      "Streamflow (vesting contract enforcement)"
+    ],
+    "smart_contract_languages": ["Rust (Solana programs)", "Solidity (EVM contracts)"],
+    "open_source": true,
+    "license": "MIT",
+    "github_metrics": {
+      "total_repos": 60,
+      "primary_repo_url": "https://github.com/elizaOS/eliza",
+      "total_commits": 17545,
+      "contributors": 583,
+      "last_commit_date": "2026-02-27",
+      "stars": 17662,
+      "forks": 5439,
+      "open_issues": 141
+    },
+    "audits": [
+      {
+        "auditor": "Unknown (third-party, per Eliza Labs claims)",
+        "date": null,
+        "scope": "Token migration smart contracts (ai16z to ELIZAOS swap)",
+        "result_summary": "Eliza Labs committed to third-party security audits of all migration smart contracts with findings to be publicly disclosed, but no published audit report has been located as of research date.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": [
+      "Princeton University and Sentient Foundation researchers (lead researcher Atharv Singh Patlan) identified a memory injection vulnerability in ElizaOS agents in Q1 2025. Attackers with communication privileges (Discord, web portals) can inject fabricated context into an agent's persistent memory, causing it to act on false information. The attack can be amplified via Sybil attacks on social platforms to manipulate agent trading decisions. Eliza Labs Director Sebastian Quinn stated 'no direct updates were made as a result' of the research, though continuous community-driven updates address some concerns. The team developed CrAIBench benchmarking framework to measure resilience to context manipulation.",
+      "Shaw Walters' prior project Webaverse collapsed due to a treasury security breach, though this is not directly an ElizaOS incident."
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "elizaOS",
+    "ticker": "ELIZAOS",
+    "token_standard": "SPL (Solana), ERC-20 (Ethereum/Base), BEP-20 (BNB Chain)",
+    "token_type": "governance",
+    "token_utility": [
+      "DAO governance -- token holders participate in proposals related to investment decisions, token buybacks, and strategic initiatives (voting module still under development)",
+      "Medium of exchange for autonomous agents executing DeFi operations",
+      "Access token for DAO treasury investment influence via 'Marketplace of Trust'",
+      "Ecosystem incentives and liquidity provision",
+      "Future potential utility as native token if Layer 1 blockchain launches (under discussion with Saga)"
+    ],
+    "supply": {
+      "max_supply": 11000000000,
+      "total_supply": 9377383307,
+      "circulating_supply": 7482544314,
+      "circulating_supply_date": "2026-03-03",
+      "circulating_percentage": 68.0
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community (AI16Z holders conversion)",
+          "percentage": 60.0,
+          "vesting_schedule": "Immediate upon migration (1:6 swap ratio)",
+          "cliff": "None",
+          "notes": "Original AI16Z holders received 6 ELIZAOS per 1 AI16Z held at snapshot. Migration window: 6 Nov 2025 to 4 Feb 2026."
+        },
+        {
+          "category": "SAFT (Simple Agreement for Future Tokens)",
+          "percentage": 15.0,
+          "vesting_schedule": "Locked multisig, minimum 12-month cliff",
+          "cliff": "12 months",
+          "notes": "Specific investors not publicly disclosed."
+        },
+        {
+          "category": "Team and Contributors",
+          "percentage": 10.0,
+          "vesting_schedule": "12-month cliff (from Oct 2024) + 24-month linear vesting",
+          "cliff": "12 months",
+          "notes": "Vesting enforced by Streamflow smart contracts with no early unlock discretion."
+        },
+        {
+          "category": "Liquidity and Exchange Listings",
+          "percentage": 5.5,
+          "vesting_schedule": "Programmatic release for market-making",
+          "cliff": "None",
+          "notes": "607 million tokens allocated for liquidity and listing purposes."
+        },
+        {
+          "category": "Foundation",
+          "percentage": 4.5,
+          "vesting_schedule": "24-month linear vesting",
+          "cliff": "None",
+          "notes": "Foundation allocation for long-term ecosystem stewardship."
+        },
+        {
+          "category": "Ecosystem",
+          "percentage": 2.5,
+          "vesting_schedule": "3-month cliff + 9-month linear vesting",
+          "cliff": "3 months",
+          "notes": "Dedicated ecosystem fund for early-stage builders developing AI/Web3 tools."
+        },
+        {
+          "category": "Protocol-Owned Liquidity (POL)",
+          "percentage": 2.5,
+          "vesting_schedule": "Programmatic deployment",
+          "cliff": "None",
+          "notes": "275 million tokens designated for protocol-held liquidity."
+        }
+      ],
+      "distribution_method": "Fair launch via DAOs.fun (October 2024) for original AI16Z token. Token migration to ELIZAOS via 1:6 swap (November 2025) with 40% supply expansion from 6.6B to 11B. Supply expansion funded the generative treasury, ecosystem, SAFT, team, and liquidity allocations."
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "N/A -- fixed supply cap of 11B",
+      "next_major_emission_event": "Ongoing vesting unlocks for Team (cliff Oct 2025 + 24-month linear), SAFT (12-month cliff + linear), and Foundation (24-month linear). Generative Treasury activation in Q1 2026 may deploy treasury assets but does not create new tokens.",
+      "next_event_date": null,
+      "burn_mechanism": "No burn mechanism documented."
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "Not yet available. Staking is referenced in future roadmap plans contingent on potential Layer 1 blockchain launch.",
+      "minimum_stake": null,
+      "lock_up_period": null,
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [],
+      "slashing_conditions": "N/A"
+    },
+    "market_data": {
+      "price_usd": 0.001237,
+      "market_cap_usd": 9257329,
+      "fully_diluted_valuation_usd": 11601605,
+      "twenty_four_hour_volume_usd": 3600000,
+      "all_time_high_usd": 0.013537,
+      "all_time_high_date": "2025-11-12",
+      "all_time_low_usd": 0.001193,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Binance (Binance Alpha 2.0)",
+        "Bybit",
+        "MEXC",
+        "KuCoin",
+        "Gate.io",
+        "Bitget",
+        "Kraken",
+        "DigiFinex"
+      ],
+      "data_snapshot_date": "2026-03-03"
+    },
+    "token_model_classification": "Fixed-supply governance token with front-loaded distribution via fair launch and migration swap. 40% supply expansion during migration created new allocations for team, SAFT investors, ecosystem, and liquidity. Vesting schedules enforced on-chain via Streamflow. No staking, no burns, limited current utility beyond governance signalling. Value accrual mechanism unclear -- potential future utility via L1 blockchain or auto.fun launchpad fees.",
+    "tokenomics_notes": "The original AI16Z token launched via DAOs.fun on 24 October 2024 with a total supply of approximately 1.1B tokens and reached an all-time high of $2.45 on 2 January 2025. In January 2025, the project rebranded from ai16z to ElizaOS. In September-November 2025, Eliza Labs executed a token migration from AI16Z to ELIZAOS at a 1:6 ratio, expanding total supply from approximately 6.6B (post-redenomination) to 11B tokens. The pre-swap AI16Z ATH of $2.45 equates to approximately $0.408 per ELIZAOS token at the 1:6 ratio, meaning ELIZAOS is currently trading approximately 99.7% below its effective ATH. CoinGecko reports a separate post-swap ATH of $0.01354 on 12 November 2025, shortly after the swap completed. Significant confusion exists around supply figures due to the redenomination."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "building",
+        "description": "Build autonomous AI agents using the ElizaOS framework. Install via npm/bun, create character files, add plugins for social media, blockchain, and LLM integrations, and deploy agents locally or via Docker/Eliza Cloud.",
+        "minimum_hardware": "Standard development machine; Node.js/Bun runtime. LLM API keys or local Ollama instance for model inference.",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "No direct financial returns from building agents; potential to create agent-based products or services",
+        "barriers_to_entry": ["TypeScript/JavaScript development skills required", "Understanding of AI/LLM concepts", "API keys for LLM providers (or local hardware for Ollama)"],
+        "guide_available": true,
+        "guide_url": "https://docs.elizaos.ai"
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute to the open-source ElizaOS framework via GitHub. The project has 583 contributors and accepts pull requests. Plugin development is a key contribution avenue.",
+        "minimum_hardware": "Standard development machine",
+        "minimum_capital_usd": 0,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Potential ecosystem fund grants; contributor recognition; possible future token allocation via team/contributor vesting pool",
+        "barriers_to_entry": ["TypeScript, Rust, or Python proficiency", "Understanding of agent architecture and plugin systems"],
+        "guide_available": true,
+        "guide_url": "https://github.com/elizaOS/eliza"
+      },
+      {
+        "type": "governance",
+        "description": "Hold ELIZAOS tokens to participate in DAO governance proposals covering investment decisions, token buybacks, and strategic initiatives. Currently governance operates through informal Discord/community signalling alongside the AI agent 'Marc AIndreessen'. A formal DAO voting module is under development.",
+        "minimum_hardware": "Solana or EVM wallet",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "No direct financial returns from governance participation",
+        "barriers_to_entry": ["DAO voting module not yet launched -- governance is currently informal", "Token price volatility risk"],
+        "guide_available": false,
+        "guide_url": null
+      },
+      {
+        "type": "using",
+        "description": "Use the auto.fun platform to create and deploy no-code AI agents for social media management, DeFi automation, and other tasks. Launch agent tokens via bonding curve mechanics. Available since April 2025.",
+        "minimum_hardware": "Web browser and Solana wallet",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Agent token launches can generate fees; swap fee distribution via liquidity NFT mechanics",
+        "barriers_to_entry": ["Platform still early-stage", "Understanding of token mechanics and bonding curves"],
+        "guide_available": true,
+        "guide_url": "https://auto.fun"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "583 GitHub contributors; Discord development community of approximately 2,683 members",
+      "grants_program": true,
+      "grants_url": null
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "auto.fun launchpad fees; potential future L1 transaction fees",
+    "metrics_source": "Project claims: 50,000+ agents deployed, $20B+ combined value of projects using ElizaOS, 200+ plugins. These figures are from Eliza Labs marketing materials and not independently verified.",
+    "metrics_date": "2026-03-03",
+    "usage_notes": "ElizaOS is primarily a development framework, not a protocol with on-chain TVL. Usage metrics are difficult to independently verify because agent deployments happen on users' own infrastructure. The 50,000+ agents claim and $20B+ combined value figure appear in marketing materials during the token migration announcement but lack independent verification. The framework's 17,700 GitHub stars and 5,400 forks demonstrate strong developer interest. The 583 contributors represent genuine open-source engagement, though bot/CI commits inflate the raw commit count."
+  },
+
+  "community": {
+    "discord_members": 2683,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": 583,
+    "governance_participation_rate": "Low -- formal DAO voting module not yet launched. Current governance operates through informal Discord proposals and signalling alongside AI agent 'Marc AIndreessen' which maintains final investment decision authority.",
+    "governance_model": "Hybrid AI-human DAO governance. An AI agent called 'Marc AIndreessen' autonomously manages the DAO's treasury and investment decisions. Community members can suggest investments based on their token stake size, but the AI maintains final decision authority. A formal on-chain voting module is under development but not yet launched. Token holders can propose investments, token buybacks, and strategic initiatives.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: https://discord.com/invite/elizaOS",
+      "X/Twitter: https://x.com/elizaOS",
+      "GitHub: https://github.com/elizaOS",
+      "GitHub Discussions enabled on main repo"
+    ],
+    "sentiment_summary": "Developer community is generally positive and technically focused, praising the TypeScript foundation, plugin ecosystem, and rapid iteration. Sentiment on crypto social media is more mixed -- significant price decline (99.7% from effective ATH) has generated frustration among token holders. The rebranding from ai16z and 40% supply expansion via token migration created controversy. The Princeton memory injection vulnerability disclosure raised security concerns. The project is widely recognised as a leading AI agent framework in the web3 space but faces questions about sustainable token value accrual.",
+    "community_notes": "The GitHub organisation has 3,200+ followers. The Discord appears to be development-focused (2,683 members is relatively small compared to project market cap history). The project benefits from association with the ai16z meme/brand even after rebranding. Community includes both developers building on the framework and speculative token holders with different expectations and interests."
+  },
+
+  "freedom_score": {
+    "total_score": 52,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 6,
+        "max": 20,
+        "evidence": "ElizaOS is a framework that runs on users' own infrastructure, which is philosophically decentralised -- anyone can run agents anywhere. However, the framework itself has no decentralised infrastructure layer. There is no permissionless node network, no decentralised compute marketplace, and no on-chain execution environment. The ELIZAOS token operates on existing blockchains (Solana, Ethereum, Base, BNB Chain) but ElizaOS does not operate its own network. The DAO treasury is managed by a single AI agent ('Marc AIndreessen') with significant centralisation in Eliza Labs. The auto.fun launchpad appears centrally operated. Planned L1 blockchain (via Saga) would improve this score but is not yet built. Score reflects that the framework is self-hostable but the project's economic infrastructure is highly centralised."
+      },
+      "governance_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Governance is currently informal and heavily centralised around Shaw Walters and Eliza Labs. The DAO voting module has been promised but not yet launched. The AI agent 'Marc AIndreessen' maintains final decision authority over treasury investments. The 40% token supply expansion (migration from AI16Z to ELIZAOS) was decided by the team without formal on-chain governance vote. Ticker and branding decisions similarly made unilaterally. Token holders can suggest investments but have no binding vote mechanism. A forthcoming voting module will reportedly let token holders adjust algorithms or override AI decisions, but this is future-state. The SAFT allocation (15% of supply) was arranged without community governance. Score reflects token voting exists in theory but team controls all major decisions."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "The original AI16Z token launched via DAOs.fun community sale (raised 420.69 SOL) which was a relatively fair launch mechanism with no pre-mine or VC allocation. However, the subsequent migration to ELIZAOS expanded supply by 40% and created new allocations: 15% SAFT (investors), 10% team, 4.5% foundation, 2.5% ecosystem -- these were not part of the original fair launch. The community retained 60% (original holders at 1:6 ratio). Vesting is enforced on-chain via Streamflow, which is positive. Overall, the project started with fair launch principles but the migration diluted original holders to fund insider allocations. The 75% 'community' figure cited in marketing is somewhat misleading as it includes ecosystem and foundation allocations."
+      },
+      "censorship_resistance": {
+        "score": 10,
+        "max": 15,
+        "evidence": "The ElizaOS framework is fully open-source (MIT licence) and can be self-hosted, meaning anyone can deploy agents without permission. Code is on GitHub with 5,400+ forks, making it practically uncensorable from a framework perspective. However, agents built on ElizaOS typically depend on centralised LLM APIs (OpenAI, Anthropic, Google) which can censor or restrict usage. The Ollama integration supports local model execution, which improves censorship resistance. The ELIZAOS token itself operates on public blockchains and is listed on multiple exchanges. The auto.fun launchpad appears centrally operated and could theoretically censor agent launches. Overall, strong censorship resistance at the framework layer but dependencies on centralised LLM providers create realistic attack vectors."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Self-hosted ElizaOS agents store all data locally -- memory, state, conversation history, and character files are under the user's control. The framework supports local database storage and does not require data to be sent to ElizaOS/Eliza Labs servers. Users who run agents on their own infrastructure have full data sovereignty. However, the Princeton memory injection vulnerability demonstrated that agent memory can be corrupted through social media interactions. Agents using cloud LLM APIs send conversation data to third-party providers. The Eliza Cloud deployment option (centralised hosting) would reduce data sovereignty. For self-hosted deployments, data sovereignty is strong."
+      },
+      "open_source_transparency": {
+        "score": 14,
+        "max": 15,
+        "evidence": "ElizaOS scores very highly on open-source transparency. The entire framework is MIT-licensed with 60 public repositories on GitHub. The primary repo has 17,700 stars, 583 contributors, and 17,545 commits as of March 2026. A peer-reviewed arXiv paper (2501.06781) describes the architecture. Vesting wallets are publicly tracked with blockchain explorer links. Streamflow contracts enforce vesting schedules transparently. The documentation at docs.elizaos.ai is comprehensive. Plugin ecosystem is open and extensible. The main gap is that token migration smart contract audit reports are 'committed to be published' but not yet available. Additionally, the DAO treasury and AI agent investment decision-making process could be more transparent."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "ElizaOS scores 52/100 (Grade D: 'Largely centralised with decentralisation narrative'). The framework itself is genuinely open-source and self-hostable, earning strong scores for open-source transparency (14/15) and solid scores for censorship resistance (10/15) and data sovereignty (10/15). However, the project's economic and governance infrastructure is heavily centralised around Eliza Labs and founder Shaw Walters. Key weaknesses include: (1) no decentralised infrastructure layer -- it is a framework, not a network; (2) governance is de facto controlled by the team with no functioning on-chain voting; (3) the token migration expanded supply by 40% to fund insider allocations without formal community governance approval. The fair launch origin is partially offset by the subsequent dilutive migration. ElizaOS is best understood as a well-built open-source project with a centralised token economy, not a decentralised protocol."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "The ElizaOS framework is the most popular open-source AI agent framework in the web3 space, with 17,700 GitHub stars, 583 contributors, and genuine developer adoption across 5,400+ forks.",
+      "The plugin ecosystem (90+ plugins) provides real-world utility: developers can build agents that interact with Discord, Telegram, X, Solana, Ethereum, and multiple LLM providers out of the box.",
+      "MIT licence and TypeScript foundation make the framework accessible to a large developer pool. Installation is genuinely simple (3 commands to first agent).",
+      "Multi-agent orchestration (Worlds, Rooms, Swarms) is a technically differentiated feature for complex agent coordination.",
+      "The Stanford FDCI research partnership lends academic credibility and is producing real research on agent trust and governance.",
+      "auto.fun provides a no-code path for non-developers to create and deploy AI agents, expanding the addressable market beyond developers."
+    ],
+    "what_is_hype": [
+      "The '50,000+ agents deployed' and '$20B+ combined value' claims are unverifiable marketing figures used during the token migration. The combined value metric likely refers to market caps of all projects tangentially using ElizaOS, not direct framework value.",
+      "The 'operating system for AI agents' branding implies a level of infrastructure that does not exist -- it is a framework/library, not an operating system in any technical sense.",
+      "The potential Layer 1 blockchain launch (via Saga) has been discussed since early 2025 but no concrete implementation exists. This is vapourware until proven otherwise.",
+      "The 'generative treasury' concept -- AI agents autonomously managing liquidity and yield -- is aspirational. No evidence of consistent autonomous treasury management performance.",
+      "Token utility is extremely thin. Governance voting module is not yet live. The token is effectively a speculative asset with a narrative attached.",
+      "The 40% supply expansion was framed as 'ecosystem growth' but functionally diluted existing holders to fund team and SAFT investor allocations."
+    ],
+    "key_risks": [
+      "Token value: ELIZAOS is trading 99.7% below its effective ATH. Limited token utility and unclear value accrual mechanism make recovery uncertain.",
+      "Security: Princeton researchers demonstrated memory injection attacks that can manipulate agent trading decisions. Eliza Labs acknowledged the research but stated 'no direct updates were made as a result'. This is a fundamental architectural concern for agents handling financial transactions.",
+      "Governance centralisation: All major decisions (rebranding, supply expansion, token migration, SAFT deals) have been made unilaterally by Eliza Labs without formal on-chain community governance.",
+      "Founder risk: High dependence on Shaw Walters. His prior project (Webaverse) collapsed after a treasury security breach. Another prior project was 'sold for $75 million without compensation' to him.",
+      "Competition: Competes with Virtuals Protocol (more complete tokenisation model), Autonolas (more decentralised), and increasingly with mainstream AI agent frameworks (LangChain, CrewAI) that are adding web3 integrations.",
+      "Regulatory: AI agents executing autonomous financial transactions create novel regulatory exposure across multiple jurisdictions.",
+      "Framework dependency: Agents built on ElizaOS depend on centralised LLM providers. If major LLM providers restrict crypto/DeFi use cases, the entire agent ecosystem could be impacted."
+    ],
+    "competitive_advantages": [
+      "First-mover advantage as the most adopted web3 AI agent framework (by GitHub metrics and developer mindshare)",
+      "Largest open-source contributor base in the web3 agent space (583 contributors vs competitors with far fewer)",
+      "Model-agnostic design supports OpenAI, Anthropic, Google, Ollama, and others -- no vendor lock-in",
+      "Stanford FDCI partnership provides academic validation rare in the meme coin / agent space",
+      "auto.fun no-code platform expands market beyond developer audience",
+      "Multi-chain token presence (Solana, Ethereum, Base, BNB Chain) via Chainlink CCIP"
+    ],
+    "competitive_disadvantages": [
+      "Token economics are weak compared to competitors -- no staking, no burns, no fee accrual, no clear value capture mechanism",
+      "Governance is less mature than competitors like Autonolas which has functioning on-chain governance",
+      "The framework lacks a decentralised infrastructure layer (unlike Autonolas' on-chain agent registry or Virtuals' bonding curves)",
+      "Origin as a meme/parody project (ai16z) creates lasting reputational overhang with institutional investors and serious developers",
+      "99.7% price decline from effective ATH signals potential structural issues with token demand",
+      "Memory injection vulnerability is publicly documented and not yet addressed, which may deter security-conscious enterprise adoption"
+    ],
+    "comparable_projects": [
+      "Virtuals Protocol (VIRTUAL) -- competing AI agent launchpad on Base with more complete tokenisation model",
+      "Autonolas (OLAS) -- decentralised autonomous agent framework with on-chain agent registry and more mature governance",
+      "LangChain -- mainstream AI agent framework (not web3-native, no token)",
+      "CrewAI -- multi-agent orchestration framework (not web3-native, no token)",
+      "SingularityNET / ASI Alliance -- broader AI marketplace with agent capabilities"
+    ],
+    "outlook": "ElizaOS has established itself as the dominant AI agent framework in the web3 space by developer adoption metrics. However, the gap between the framework's genuine technical quality and the token's collapsing value highlights a fundamental disconnect: building a great open-source tool does not automatically create a great token investment. The project needs to ship concrete token utility -- whether through the L1 blockchain, auto.fun fee revenue, or functioning governance -- to justify any token valuation. The framework will likely continue to be widely used regardless of token price, similar to how many valuable open-source projects exist without token economies. The biggest risk is that the 'agent meta' narrative fades before ElizaOS can establish sustainable token demand drivers.",
+    "overall_assessment": "ElizaOS is a genuinely well-built, widely adopted open-source AI agent framework that has been bolted onto a speculative token economy with unclear value accrual. The framework deserves respect: 17,700 GitHub stars, 583 contributors, 90+ plugins, and a Stanford research partnership represent real achievement. However, the project scores only 52/100 on the Freedom Score because its economic and governance infrastructure is heavily centralised around Eliza Labs, the token migration diluted original holders, and governance voting is not yet live. Token holders should understand they are effectively investing in Eliza Labs' ability to monetise the framework, not in a decentralised protocol. The framework is freedom-enabling; the token economy is not."
+  },
+
+  "sources": [
+    {
+      "source_id": "S001",
+      "tier": 1,
+      "type": "documentation",
+      "title": "ElizaOS Official Website",
+      "url": "https://elizaos.ai",
+      "author": "Eliza Labs",
+      "publisher": "Eliza Labs",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["project overview", "tagline", "core features", "plugin count", "community stats (1352+ contributors, 200+ plugins, 5.3K+ forks)", "partner list (Stanford, Chainlink, Doodles)"],
+      "reliability_notes": "Tier 1 primary source. Marketing-oriented but factual for stated features. Community stats on website lag behind live GitHub data."
+    },
+    {
+      "source_id": "S002",
+      "tier": 1,
+      "type": "documentation",
+      "title": "ElizaOS Documentation (docs.elizaos.ai)",
+      "url": "https://docs.elizaos.ai",
+      "author": "Eliza Labs",
+      "publisher": "Eliza Labs",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["framework architecture", "plugin ecosystem details", "installation process", "quickstart guide", "deployment options"],
+      "reliability_notes": "Tier 1 primary documentation. Comprehensive and well-maintained. Tokenomics page provides supply and vesting data."
+    },
+    {
+      "source_id": "S003",
+      "tier": 1,
+      "type": "documentation",
+      "title": "ElizaOS Tokenomics Documentation",
+      "url": "https://docs.elizaos.ai/tokenomics",
+      "author": "Eliza Labs",
+      "publisher": "Eliza Labs",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["total supply (11B)", "circulating supply (7.48B)", "contract addresses (Solana SPL, EVM ERC-20)", "vesting schedules by category", "Streamflow enforcement", "allocation details (607M liquidity, 275M POL)"],
+      "reliability_notes": "Tier 1 primary source for tokenomics. Vesting wallets publicly tracked. No allocation pie chart with explicit percentages; these reconstructed from multiple sub-sources."
+    },
+    {
+      "source_id": "S004",
+      "tier": 1,
+      "type": "github",
+      "title": "ElizaOS GitHub Organisation",
+      "url": "https://github.com/elizaOS",
+      "author": "ElizaOS",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["60 repositories", "organisation description", "3.2K followers", "primary languages (TypeScript, Rust, Python)", "key repos list"],
+      "reliability_notes": "Tier 1 direct source. GitHub org page data is authoritative for repository counts and languages."
+    },
+    {
+      "source_id": "S005",
+      "tier": 1,
+      "type": "github",
+      "title": "ElizaOS/eliza Main Repository",
+      "url": "https://github.com/elizaOS/eliza",
+      "author": "ElizaOS contributors",
+      "publisher": "GitHub",
+      "date_published": "2024-07-09",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["17,662 stars", "5,439 forks", "141 open issues", "583 contributors", "MIT licence", "created 2024-07-09", "last push 2026-02-27", "TypeScript primary language", "17,545 commits", "295 releases", "latest release v1.7.2 (Jan 2026)"],
+      "reliability_notes": "Tier 1 direct source. GitHub API data is authoritative. Note: latest alpha release v2.0.0-alpha.27 on develop branch."
+    },
+    {
+      "source_id": "S006",
+      "tier": 1,
+      "type": "github",
+      "title": "ElizaOS/eliza Repository API Data",
+      "url": "https://api.github.com/repos/elizaOS/eliza",
+      "author": "GitHub API",
+      "publisher": "GitHub",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["stars (17,662)", "forks (5,439)", "open issues (141)", "subscribers (156)", "created date (2024-07-09)", "pushed (2026-02-27)", "size (~1.6GB)", "topics"],
+      "reliability_notes": "Tier 1 direct API source. Most authoritative for repository metrics."
+    },
+    {
+      "source_id": "S007",
+      "tier": 1,
+      "type": "whitepaper",
+      "title": "Eliza: A Web3 Friendly AI Agent Operating System (arXiv paper)",
+      "url": "https://arxiv.org/abs/2501.06781",
+      "author": "Shaw Walters, Sam Gao, Shakker Nerd, Feng Da, Warren Williams, Ting-Chien Meng, Amie Chow, Hunter Han, Frank He, Allen Zhang, Ming Wu, Timothy Shen, Maxwell Hu, Jerry Yan",
+      "publisher": "arXiv",
+      "date_published": "2025-01-12",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["paper title and description", "author list (14 co-authors)", "architecture overview", "Web3 integration approach", "CC BY-SA 4.0 licence"],
+      "reliability_notes": "Tier 1 primary source. Peer-accessible preprint. Note: 14 co-authors listed but unclear which are Eliza Labs employees vs external contributors."
+    },
+    {
+      "source_id": "S008",
+      "tier": 1,
+      "type": "documentation",
+      "title": "ElizaOS Documentation Index (llms.txt)",
+      "url": "https://docs.elizaos.ai/llms.txt",
+      "author": "Eliza Labs",
+      "publisher": "Eliza Labs",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["complete documentation structure", "plugin list", "REST API reference", "WebSocket integration", "TEE support", "multi-agent features", "deployment options"],
+      "reliability_notes": "Tier 1 primary source. Comprehensive index of all documentation pages."
+    },
+    {
+      "source_id": "S009",
+      "tier": 2,
+      "type": "market_data",
+      "title": "ElizaOS (ELIZAOS) Market Data -- LiveCoinWatch",
+      "url": "https://www.livecoinwatch.com/price/elizaOS-ELIZAOS",
+      "author": "LiveCoinWatch",
+      "publisher": "LiveCoinWatch",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price ($0.001237)", "24h volume ($3.6M)", "total cap ($12.41M)", "total supply (10.03B)", "ATH ($0.013537 on 12 Nov 2025)", "ranking (#1015)", "exchange volumes (DigiFinex, Bybit, HIBT)", "liquidity ($86K at ±2%)", "contract address (Solana)"],
+      "reliability_notes": "Tier 2 third-party market data aggregator. Supply figures may differ slightly from on-chain due to timing."
+    },
+    {
+      "source_id": "S010",
+      "tier": 2,
+      "type": "market_data",
+      "title": "ElizaOS (ELIZAOS) Market Data -- MarketCapOf",
+      "url": "https://marketcapof.com/crypto/elizaos/",
+      "author": "MarketCapOf",
+      "publisher": "MarketCapOf",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["price ($0.00123719)", "market cap ($9,257,329)", "FDV ($11,601,605)", "circulating supply (7,482,544,314)", "total supply (9,377,383,307)", "ranking (#1194)"],
+      "reliability_notes": "Tier 2 third-party market data. Provides circulating and total supply figures. Total supply (9.37B) differs from max supply (11B) suggesting not all tokens minted yet."
+    },
+    {
+      "source_id": "S011",
+      "tier": 1,
+      "type": "documentation",
+      "title": "HuggingFace -- ElizaOS (elizaos) Organisation",
+      "url": "https://huggingface.co/elizaOS",
+      "author": "Eliza Labs",
+      "publisher": "Hugging Face",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["0 public models", "2 datasets (enkidu-trajectories-raw: 721 downloads, 12 likes; babylon-game-data: 12 downloads, 1 like)", "3 team members listed (sayo/wtfsayo, Shaw/shawmakesmagic, Dev/revlentless)", "no Spaces"],
+      "reliability_notes": "Tier 1 direct source. Minimal HuggingFace presence -- 2 datasets, no models. Activity limited."
+    },
+    {
+      "source_id": "S012",
+      "tier": 3,
+      "type": "interview",
+      "title": "ElizaOS & the Age of AI Agents: A Conversation with Shaw Walters",
+      "url": "https://joetechnologist.com/elizaos-the-age-of-ai-agents-a-conversation-with-shaw-walters/",
+      "author": "JT Consulting & Media",
+      "publisher": "JT Consulting & Media",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Shaw Walters background", "vision for ElizaOS", "a16z backing mentioned (NOTE: misleading -- a16z did not invest)", "future outlook"],
+      "reliability_notes": "Tier 3 interview. Contains some inaccuracies (implies a16z backing which is incorrect). Useful for founder vision and quotes."
+    },
+    {
+      "source_id": "S013",
+      "tier": 3,
+      "type": "news",
+      "title": "What Is ElizaOS? (Crypto.com University)",
+      "url": "https://crypto.com/en/university/what-is-elizaos",
+      "author": "Crypto.com",
+      "publisher": "Crypto.com",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["project overview", "launch date (October 2024)", "initial fundraise ($75K goal)", "whitepaper date (January 2025)", "rebranding date (28 Jan 2025)", "pre-swap circulating supply (1.1B)", "pre-swap ATH ($2.45 on 2 Jan 2025)", "governance model", "Layer 1 blockchain discussion", "Saga partnership", "risk assessment"],
+      "reliability_notes": "Tier 3 exchange educational content. Generally reliable but data may lag. Useful for historical context."
+    },
+    {
+      "source_id": "S014",
+      "tier": 3,
+      "type": "news",
+      "title": "ElizaOS: The AI Agent Framework Transforming Web3 Automation (Ventureburn)",
+      "url": "https://ventureburn.com/what-is-elizaos/",
+      "author": "Ventureburn",
+      "publisher": "Ventureburn",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["timeline (Oct 2024 launch, Q1 2025 v2 beta, Nov 2025 migration)", "circulating supply (7.48B as of Nov 2025)", "total supply (11B)", "Chainlink CCIP integration", "Questflow $6.5M seed funding", "key risks", "airdrop details (240 Alpha Points)"],
+      "reliability_notes": "Tier 3 news article. Comprehensive overview with timeline and risk assessment."
+    },
+    {
+      "source_id": "S015",
+      "tier": 3,
+      "type": "news",
+      "title": "Meet AI16z DAO: An AI-Based Investment Project (Decrypt)",
+      "url": "https://decrypt.co/295717/meet-ai16z-dao-an-ai-based-investment-project-that-aims-to-upend-silicon-valley",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["founding story", "Marc AIndreessen AI agent governance", "treasury AUM (~$10M)", "market cap (>$500M at time)", "token surge (1,660%+ since Nov 2024)", "testing phase status", "Eddy Lazzarin acknowledgement"],
+      "reliability_notes": "Tier 3 news article. Early coverage; market cap and AUM figures are historical, not current."
+    },
+    {
+      "source_id": "S016",
+      "tier": 3,
+      "type": "news",
+      "title": "Ai16z Is Rebranding as ElizaOS (Unchained Crypto)",
+      "url": "https://unchainedcrypto.com/ai16z-is-rebranding-as-elizaos-after-request-from-venture-firm-a16z/",
+      "author": "Unchained",
+      "publisher": "Unchained Crypto",
+      "date_published": "2025-01-26",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["rebranding announcement date (26 Jan 2025)", "Chris Dixon quote", "market cap ($645.6M at time)", "ticker retention decision", "no new tokens created at rebrand", "a16z's direct request for name change"],
+      "reliability_notes": "Tier 3 credible crypto news. Direct quotes from a16z's Chris Dixon. Factual reporting."
+    },
+    {
+      "source_id": "S017",
+      "tier": 2,
+      "type": "research_report",
+      "title": "ElizaOS Vulnerability Shows How AI Can Be Gaslit (Decrypt)",
+      "url": "https://decrypt.co/318200/elizaos-vulnerability-ai-gaslit-losing-millions",
+      "author": "Decrypt",
+      "publisher": "Decrypt",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["memory injection vulnerability details", "attack vector (Sybil attacks via fake social accounts)", "lead researcher (Atharv Singh Patlan, Princeton)", "CrAIBench framework", "Eliza Labs response (Sebastian Quinn: 'no direct updates made')", "authentication improvements claim"],
+      "reliability_notes": "Tier 2 reporting on peer-reviewed security research. High reliability for vulnerability details."
+    },
+    {
+      "source_id": "S018",
+      "tier": 3,
+      "type": "news",
+      "title": "Eliza Labs unveils auto.fun (Cointelegraph)",
+      "url": "https://cointelegraph.com/news/ai16z-s-eliza-labs-launches-ai-powered-pump-fun-alternative-auto-fun",
+      "author": "Cointelegraph",
+      "publisher": "Cointelegraph",
+      "date_published": "2025-04-17",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["auto.fun launch date (17 April 2025)", "no-code features", "'fairer than fair' bonding curve model", "Raydium integration", "initial launch partners (FightFi, Secret, Sigma, Astra)", "Shaw Walters quote on democratising access", "50% token pre-reserve mechanism"],
+      "reliability_notes": "Tier 3 major crypto news outlet. Factual reporting on product launch."
+    },
+    {
+      "source_id": "S019",
+      "tier": 3,
+      "type": "news",
+      "title": "Eliza Labs Token Migration Announcement (CryptoBriefing)",
+      "url": "https://cryptobriefing.com/elizaos-token-migration-ecosystem/",
+      "author": "CryptoBriefing",
+      "publisher": "CryptoBriefing",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["migration overview", "50,000+ agents claim", "$20B+ combined value claim", "Chainlink CCIP cross-chain functionality", "migration portal operational 25 Sept 2025", "third-party audit commitment"],
+      "reliability_notes": "Tier 3 crypto news. Reports project claims without independent verification of agent/value figures."
+    },
+    {
+      "source_id": "S020",
+      "tier": 2,
+      "type": "market_data",
+      "title": "PANews -- ELIZAOS Token Supply Expansion Analysis",
+      "url": "https://www.panewslab.com/en/articles/f166a587-ca54-49f1-8b0f-a15a80ff997a",
+      "author": "PANews",
+      "publisher": "PANews",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["supply expansion from 6.6B to 11B (+40%)", "circulating supply increase to 7.4B", "allocation breakdown (Community 75%, SAFT 15%, Team 10%, Liquidity 5.5%, Foundation 4.5%, Ecosystem 2.5%, POL 2.5%)", "607M tokens for liquidity", "275M tokens for POL"],
+      "reliability_notes": "Tier 2 research/analysis outlet. Provides the most detailed allocation breakdown found across sources."
+    },
+    {
+      "source_id": "S021",
+      "tier": 3,
+      "type": "interview",
+      "title": "Shaw Walters Interview (BlockchainGamerBiz)",
+      "url": "https://www.blockchaingamer.biz/features/interviews/41648/shaw-walters-elizaos-ai-agents-blockchain-gaming/",
+      "author": "BlockchainGamerBiz",
+      "publisher": "BlockchainGamerBiz",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Shaw's career path (game dev -> NFTs -> Webaverse -> MagicML -> ElizaOS)", "Webaverse collapse (treasury security breach)", "250+ plugins", "Hyperscape MMORPG project", "self-description as 'comedian and performance artist'"],
+      "reliability_notes": "Tier 3 interview. First-person account useful for founder background and career history."
+    },
+    {
+      "source_id": "S022",
+      "tier": 3,
+      "type": "news",
+      "title": "Eliza Labs Partners Stanford University (multiple sources)",
+      "url": "https://zycrypto.com/eliza-labs-partners-stanford-university-to-study-how-ai-agents-impact-digital-currency/",
+      "author": "Various",
+      "publisher": "ZyCrypto, The Block, Blockworks, CryptoBriefing",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Stanford FDCI partnership", "first AI x Web3 Lab at Stanford", "grant exceeding $250K", "Q1 2025 commencement", "3-phase research program (Agent Trust, Multi-Agent Economics, Agent Governance)"],
+      "reliability_notes": "Tier 3 multiple news outlets reporting same partnership. Cross-verified across sources."
+    },
+    {
+      "source_id": "S023",
+      "tier": 2,
+      "type": "market_data",
+      "title": "Phemex Academy -- ElizaOS Guide",
+      "url": "https://phemex.com/academy/what-is-elizaos-guide-ai-agent-revolution",
+      "author": "Phemex",
+      "publisher": "Phemex",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["circulating supply (7.48B)", "total/max supply (11B)", "market cap (~$88M -- NOTE: likely stale)", "ERC-20 token standard", "Stanford/Chainlink/Doodles partnerships"],
+      "reliability_notes": "Tier 2 exchange educational content. Market cap figure ($88M) appears stale and does not match current data ($9.3M). Supply figures consistent with other sources."
+    },
+    {
+      "source_id": "S024",
+      "tier": 1,
+      "type": "documentation",
+      "title": "DAOs.fun -- ai16z DAO Page",
+      "url": "https://www.daos.fun/HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC",
+      "author": "DAOs.fun",
+      "publisher": "DAOs.fun",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["DAO description ('first AI VC fund')", "mint address", "VC/Hedgefun DAO classification", "Marc Andreessen AI agent management"],
+      "reliability_notes": "Tier 1 primary source for DAO structure. JavaScript-rendered page limited data extraction."
+    },
+    {
+      "source_id": "S025",
+      "tier": 1,
+      "type": "documentation",
+      "title": "Solana Compass -- ElizaOS Project Page",
+      "url": "https://solanacompass.com/projects/elizaos",
+      "author": "Solana Compass",
+      "publisher": "Solana Compass",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["ai16z token address (HeLp6...)", "degenai token address", "product list (pmairca, Degen Spartan AI, My Eliza Platform, ElizaOS Framework)", "launch date (October 2024)"],
+      "reliability_notes": "Tier 1 Solana ecosystem directory. Useful for on-chain token addresses and product inventory."
+    },
+    {
+      "source_id": "S026",
+      "tier": 1,
+      "type": "github",
+      "title": "GitHub API -- ElizaOS/eliza Latest Commit",
+      "url": "https://api.github.com/repos/elizaOS/eliza/commits?per_page=1",
+      "author": "GitHub API",
+      "publisher": "GitHub",
+      "date_published": "2026-02-27",
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["latest commit date (27 Feb 2026)", "latest commit: 'chore: release v2.0.0-alpha.27'", "automated release by github-actions bot"],
+      "reliability_notes": "Tier 1 direct API source. Confirms active development on develop branch."
+    },
+    {
+      "source_id": "S027",
+      "tier": 3,
+      "type": "news",
+      "title": "Binance AI16Z to ELIZAOS Token Swap Announcement",
+      "url": "https://www.binance.com/en/price/elizaos",
+      "author": "Binance",
+      "publisher": "Binance",
+      "date_published": null,
+      "date_accessed": "2026-03-03",
+      "data_points_sourced": ["Binance support for token swap", "1:6 conversion ratio confirmed", "exchange listing status"],
+      "reliability_notes": "Tier 2 major exchange. Confirms swap ratio and listing status."
+    }
+  ]
+}
