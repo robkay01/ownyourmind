@@ -1,6 +1,7 @@
 ---
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import Card from '../../components/Card.astro';
+import MeshGradient from '../../components/MeshGradient.astro';
 import { getCollection } from 'astro:content';
 
 const entries = (await getCollection('journal'))
@@ -13,11 +14,18 @@ const entries = (await getCollection('journal'))
   description="Weekly dispatches from the frontier of decentralised AI."
   breadcrumbs={[{ label: 'Journal' }]}
 >
-  <div class="mb-8">
-    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Journal</h1>
-    <p class="text-lg text-[var(--color-text-secondary)]">
-      Weekly dispatches from the frontier of decentralised AI.
-    </p>
+  <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-10 overflow-hidden rounded-xl">
+    <img src="/images/journal-header.webp" alt="" class="w-full h-48 sm:h-56 object-cover opacity-40" loading="eager" />
+    <MeshGradient variant="subtle" />
+    <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/60 to-transparent"></div>
+    <div class="absolute inset-0 flex items-end p-6 sm:p-8">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2">Journal</h1>
+        <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl">
+          Weekly dispatches from the frontier of decentralised AI.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="grid gap-6">
