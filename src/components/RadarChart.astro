@@ -17,8 +17,13 @@ const dimensions = [
   { key: 'open_source_transparency', label: 'Open Source' },
 ] as const;
 
-const cx = size / 2;
-const cy = size / 2;
+// Padding around the hexagon for labels
+const padX = 100;
+const padY = 30;
+const vbWidth = size + padX * 2;
+const vbHeight = size + padY * 2;
+const cx = padX + size / 2;
+const cy = padY + size / 2;
 const radius = size * 0.28;
 const labelRadius = radius + 32;
 
@@ -72,9 +77,9 @@ function scoreBadgeColor(score: number, max: number): string {
 <div class="chart-container" aria-label="Freedom Score radar chart showing six dimensions">
   <svg
     width="100%"
-    viewBox={`0 0 ${size} ${size}`}
+    viewBox={`0 0 ${vbWidth} ${vbHeight}`}
     class="mx-auto block"
-    style={`max-width: ${size}px;`}
+    style={`max-width: ${vbWidth}px;`}
     role="img"
   >
     <title>Freedom Score breakdown across six dimensions</title>
