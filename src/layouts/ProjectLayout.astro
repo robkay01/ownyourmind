@@ -10,6 +10,7 @@ import CategoryPattern from '../components/CategoryPattern.astro';
 import MeshGradient from '../components/MeshGradient.astro';
 import Sparkline from '../components/Sparkline.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
+import ProjectInfoBar from '../components/ProjectInfoBar.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
 import type { ProjectResearchRecord, MetricsSnapshot } from '../data/project-research';
 
@@ -78,6 +79,21 @@ const hasSources = !!(r?.sources?.some(s => s.title || s.url));
 const hasFreedomBreakdown = !!(r?.freedom_score?.total_score != null);
 const hasAnyResearch = hasTeam || hasTechnical || hasTokenomics || hasParticipation || hasUsage || hasCommunity;
 const researchDate = r?.meta?.last_updated || r?.meta?.research_date || null;
+
+// Extract project links from research data
+const projectLinks = {
+  website: r?.identity?.website ?? undefined,
+  xHandle: r?.meta?.refresh_config?.x_handle ?? undefined,
+  githubUrl: r?.identity?.github_url ?? undefined,
+  docsUrl: r?.identity?.documentation_url ?? undefined,
+  whitepaperUrl: r?.identity?.whitepaper_url ?? undefined,
+  chain: r?.identity?.chain ?? undefined,
+  tokenStandard: r?.tokenomics?.token_standard ?? undefined,
+  discordUrl: r?.community?.key_community_channels
+    ?.find(c => /discord/i.test(c))?.match(/https?:\/\/\S+/)?.[0] ?? undefined,
+  telegramUrl: r?.community?.key_community_channels
+    ?.find(c => /telegram/i.test(c))?.match(/https?:\/\/\S+/)?.[0] ?? undefined,
+};
 
 // Extract trend data from metrics_history for sparklines
 function getTrend(key: keyof MetricsSnapshot): number[] {
@@ -263,6 +279,11 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
           <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
           OYM holds {token}. This review reflects genuine assessment, not promotional interest.
         </div>
+      )}
+
+      {/* Project Info Bar */}
+      {(projectLinks.website || projectLinks.githubUrl || projectLinks.xHandle || projectLinks.chain) && (
+        <ProjectInfoBar {...projectLinks} token={token} />
       )}
 
       <div class="flex items-center gap-3 text-sm text-[var(--color-text-tertiary)] mt-4">
