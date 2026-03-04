@@ -4,7 +4,7 @@ interface Props {
   opacity?: number;
 }
 
-const { category, opacity = 0.05 } = Astro.props;
+const { category, opacity = 0.10 } = Astro.props;
 
 // Each category gets a unique SVG pattern
 const patterns: Record<string, { id: string; content: string; size: number }> = {
