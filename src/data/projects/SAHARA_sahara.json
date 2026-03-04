@@ -35,7 +35,6 @@
     },
     "auto_refresh_log": []
   },
-
   "identity": {
     "name": "Sahara AI",
     "ticker": "SAHARA",
@@ -52,7 +51,6 @@
     "current_status": "testnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -118,7 +116,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Sahara AI operates a four-layer architecture integrating on-chain and off-chain components. The Application Layer provides user interfaces including Sahara ID, wallets, and development tools. The Transaction Layer features the AI-native Sahara Blockchain (EVM-compatible, Tendermint consensus) with specialised smart contracts, AI-Native Precompiles (SAPs) optimised for AI operations, and the Sahara Cross-chain Communication (SCC) Protocol. The Data Layer manages critical metadata, attributions, and proofs on-chain while large AI datasets and models remain off-chain. The Execution Layer handles high-performance AI computations with privacy-preserving protocols including TEEs and differential privacy. Core abstractions include: Account Abstraction (dedicated on-chain accounts for each AI asset managing metadata, versioning, and licensing), Metadata Abstraction (comprehensive documentation with technical specs and ownership), and a Global Asset Registry. AI assets are registered on-chain as Ownership NFTs (ERC-721) with metadata records and dedicated accounts. A licensing framework supports Partnership Licenses, API Licenses, Full Access, and Long-term Licenses -- all enforced via License Token NFTs. Attribution tracking records TRAINED_ON, FINETUNED_FROM, and DERIVED_FROM relationships for provenance. The Execution Layer coordinates distributed computation across network participants with elastic scaling and fault tolerance.",
     "consensus_mechanism": "Tendermint-based Proof-of-Stake. Initial validator set comprises professional node operators and established institutions. Phased transition planned: Phase 1 (professional operators) → Phase 2 (expanded qualified validators) → Phase 3 (permissionless participation with stake requirements). Validators stake SAHARA tokens as collateral and earn block rewards; slashing penalises malicious behaviour (jailed after missing ~10,000 blocks / ~14 hours).",
@@ -131,7 +128,9 @@
       "Ethereum and BNB Chain for token deployment",
       "IAVL+ Merkle tree (forked from Cosmos) for state storage"
     ],
-    "smart_contract_languages": ["Solidity"],
+    "smart_contract_languages": [
+      "Solidity"
+    ],
     "open_source": false,
     "license": "Apache-2.0 (selected repos including Verifiable-ClawGuard, x-function). Core platform components appear proprietary. Chain code (sahara repo) has no specified license.",
     "github_metrics": {
@@ -153,7 +152,6 @@
       }
     ]
   },
-
   "tokenomics": {
     "token_name": "Sahara AI",
     "ticker": "SAHARA",
@@ -199,7 +197,7 @@
         },
         {
           "category": "Core Team & Contributors",
-          "percentage": 15.00,
+          "percentage": 15.0,
           "vesting_schedule": "1-year cliff, then linear over 36 months",
           "cliff": "12 months",
           "notes": "25% unlocks at 12 months, remainder over next 36 months. 0% unlocked as of March 2026."
@@ -220,7 +218,7 @@
         },
         {
           "category": "Liquidity & Market Stability",
-          "percentage": 1.00,
+          "percentage": 1.0,
           "vesting_schedule": "100% unlocked at TGE",
           "cliff": "None",
           "notes": "100M tokens for exchange liquidity"
@@ -276,9 +274,9 @@
       "data_snapshot_date": "2026-03-03"
     },
     "token_model_classification": "Utility and governance token with fixed supply and vesting-based unlock schedule. No inflationary emissions. Value tied to platform usage (gas, licensing, inference payments) once Sahara Chain mainnet is fully live.",
-    "tokenomics_notes": "64.25% of total supply allocated to community-oriented categories (ecosystem development, community incentives, airdrops, IDO, liquidity). However, the 34.75% insider allocation (19.75% early backers + 15% team) with 1-year cliff means a significant unlock event on June 26, 2026 when ~1.03B tokens (25% of combined insider allocation) enter circulation. As of March 2026, 0% of investor and team tokens have unlocked. IDO ROI is currently -49.4% from $0.06 IDO price. The token was Binance's 25th HODLer Airdrop project. Initial FDV at IDO was $600M versus current FDV of ~$304M."
+    "tokenomics_notes": "64.25% of total supply allocated to community-oriented categories (ecosystem development, community incentives, airdrops, IDO, liquidity). However, the 34.75% insider allocation (19.75% early backers + 15% team) with 1-year cliff means a significant unlock event on June 26, 2026 when ~1.03B tokens (25% of combined insider allocation) enter circulation. As of March 2026, 0% of investor and team tokens have unlocked. IDO ROI is currently -49.4% from $0.06 IDO price. The token was Binance's 25th HODLer Airdrop project. Initial FDV at IDO was $600M versus current FDV of ~$304M.",
+    "contract_address": "0xFDFfB411C4A70AA7C95D5C981a6Fb4Da867e1111"
   },
-
   "participation": {
     "methods": [
       {
@@ -288,7 +286,10 @@
         "minimum_capital_usd": 0,
         "technical_skill_required": "basic",
         "estimated_returns": "Variable, based on task completion and quality",
-        "barriers_to_entry": ["Waitlist/invitation may be required", "Quality requirements enforced via internal QA"],
+        "barriers_to_entry": [
+          "Waitlist/invitation may be required",
+          "Quality requirements enforced via internal QA"
+        ],
         "guide_available": true,
         "guide_url": "https://docs.saharaai.com"
       },
@@ -299,7 +300,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "intermediate",
         "estimated_returns": "Revenue from licensing and usage fees on AI Marketplace",
-        "barriers_to_entry": ["Platform still in development/beta", "Sahara Chain mainnet not fully live"],
+        "barriers_to_entry": [
+          "Platform still in development/beta",
+          "Sahara Chain mainnet not fully live"
+        ],
         "guide_available": true,
         "guide_url": "https://docs.saharaai.com/blockchain-developer-docs/overview/quickstart"
       },
@@ -326,7 +330,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "none",
         "estimated_returns": "N/A -- consumer/enterprise usage",
-        "barriers_to_entry": ["Some products in beta or waitlisted", "Enterprise tier may require contracts"],
+        "barriers_to_entry": [
+          "Some products in beta or waitlisted",
+          "Enterprise tier may require contracts"
+        ],
         "guide_available": true,
         "guide_url": "https://saharaai.com"
       },
@@ -337,7 +344,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "basic",
         "estimated_returns": "N/A -- governance participation",
-        "barriers_to_entry": ["Governance not yet active on mainnet", "Must hold SAHARA tokens"],
+        "barriers_to_entry": [
+          "Governance not yet active on mainnet",
+          "Must hold SAHARA tokens"
+        ],
         "guide_available": false,
         "guide_url": ""
       }
@@ -351,7 +361,6 @@
       "grants_url": "https://saharaai.com"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -369,7 +378,6 @@
     "metrics_date": "2026-03-03",
     "usage_notes": "Project claims 3.2M total testnet accounts, 1.4M daily active accounts on private testnet, and 200K+ Data Services Platform users. Season 2 produced 2.55M approved datapoints at 95% accuracy. These figures are self-reported and not independently verifiable. Etherscan shows 92,443 total ERC-20 token transfers and 1,838 holders for the Ethereum contract. The Sahara Chain mainnet is not fully operational, so native chain metrics are not available. Over 40 ecosystem partners including Microsoft, AWS, Google Cloud, MIT, UC Berkeley, Snap, Together AI."
   },
-
   "community": {
     "discord_members": 341738,
     "telegram_members": null,
@@ -387,7 +395,6 @@
     "sentiment_summary": "Large community following (913K X, 342K Discord) driven by airdrop campaigns and Binance HODLer Airdrop listing. Active Data Services Platform with real user participation in data labelling tasks. However, significant price decline from ATH (-81%) has dampened sentiment. Token unlock concerns for June 2026 cliff event. Enterprise partnerships (Microsoft, AWS, Google Cloud) provide credibility but details of these partnerships are vague.",
     "community_notes": "Community growth significantly boosted by the Binance HODLer Airdrop programme and Galxe quest campaigns. Discord 342K members is substantial but likely includes many inactive airdrop hunters. The 913K X followers figure could not be independently verified due to JavaScript rendering but was sourced from multiple search results."
   },
-
   "freedom_score": {
     "total_score": 33,
     "max_possible": 100,
@@ -426,7 +433,6 @@
     "freedom_grade": "F",
     "freedom_summary": "Sahara AI scores 33/100 (Grade F), reflecting a project that markets decentralisation heavily but currently operates as a centralised VC-backed AI platform with a token attached. The Sahara Chain mainnet is not yet fully operational, the validator set is permissioned, governance is not active, and core platform services run on centralised infrastructure. The token contract includes owner-controlled pause functionality. The data provenance vision is compelling and the team is credentialed, but nearly every decentralisation feature is either planned, in testnet, or aspirational rather than operational. The 64.25% community token allocation looks good on paper but most of it (Ecosystem Development 33.93%, Community Incentives 20.75%) is controlled by the team/foundation. This is a pre-decentralisation project wearing decentralised clothing."
   },
-
   "assessment": {
     "what_works_today": [
       "Strong academic leadership: Sean Ren is a tenured USC professor with genuine AI research credentials (INK Lab, AI2, 15+ years NLP experience)",
@@ -478,7 +484,6 @@
     "outlook": "Sahara AI has assembled impressive ingredients: credentialed founders, top-tier VC backing, enterprise partnerships, and a working data labelling platform. The vision of a full-stack AI blockchain with fair contributor compensation addresses a real market need. However, the gap between vision and execution is wide. The core blockchain isn't fully live, governance is nonexistent, decentralisation is a roadmap item, and the token has lost significant value. The June 2026 cliff unlock ($30M+ at current prices) could pressure the token further. If the team delivers a functioning mainnet with genuine decentralisation features in 2026, the score could improve significantly. But today, this is a well-funded centralised AI platform with blockchain aspirations, not a decentralised network.",
     "overall_assessment": "Sahara AI is a heavily VC-backed ($51.5M) AI data and infrastructure platform founded by a credentialed USC professor. It has a real data labelling product with measurable traction (200K users, 2.55M datapoints at 95% accuracy) and listings on major exchanges. However, its core blockchain isn't fully operational, all decentralisation features are aspirational, the validator set is permissioned, governance is inactive, and the token contract can be paused by the owner. Freedom Score of 33/100 (F) reflects the significant gap between the decentralisation narrative and current centralised reality. Watch for mainnet delivery and the June 2026 token unlock as key inflection points."
   },
-
   "sources": [
     {
       "source_id": "S001",
@@ -490,7 +495,13 @@
       "publisher": "Sahara AI",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["architecture", "blockchain protocols", "licensing framework", "asset management", "execution layer"],
+      "data_points_sourced": [
+        "architecture",
+        "blockchain protocols",
+        "licensing framework",
+        "asset management",
+        "execution layer"
+      ],
       "reliability_notes": "Official documentation. Content extracted successfully from blockchain-developer-docs section."
     },
     {
@@ -503,7 +514,13 @@
       "publisher": "Sahara AI",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["token utility", "distribution breakdown", "vesting schedule", "staking details", "governance"],
+      "data_points_sourced": [
+        "token utility",
+        "distribution breakdown",
+        "vesting schedule",
+        "staking details",
+        "governance"
+      ],
       "reliability_notes": "Official tokenomics documentation. Content extracted successfully."
     },
     {
@@ -516,7 +533,13 @@
       "publisher": "Sahara AI",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["consensus mechanism", "validator requirements", "hardware specs", "slashing conditions", "phased decentralisation"],
+      "data_points_sourced": [
+        "consensus mechanism",
+        "validator requirements",
+        "hardware specs",
+        "slashing conditions",
+        "phased decentralisation"
+      ],
       "reliability_notes": "Official validator documentation. Detailed hardware requirements and consensus mechanism."
     },
     {
@@ -542,7 +565,14 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["repo count", "languages", "activity", "stars", "forks", "followers"],
+      "data_points_sourced": [
+        "repo count",
+        "languages",
+        "activity",
+        "stars",
+        "forks",
+        "followers"
+      ],
       "reliability_notes": "Direct GitHub check. 26 repos, 96 followers. Primary repos examined individually."
     },
     {
@@ -555,7 +585,13 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["commits", "languages", "release version", "last commit", "description"],
+      "data_points_sourced": [
+        "commits",
+        "languages",
+        "release version",
+        "last commit",
+        "description"
+      ],
       "reliability_notes": "128 commits, Go 91.6% / Solidity 7.3%. Latest release 0.3.2-testnet-beta (Sept 2025). 0 stars, 0 forks."
     },
     {
@@ -568,7 +604,11 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["TEE attestation", "guardrail verification", "open source license"],
+      "data_points_sourced": [
+        "TEE attestation",
+        "guardrail verification",
+        "open source license"
+      ],
       "reliability_notes": "Apache-2.0, 10 commits, 3 stars. Proof-of-concept for demonstrative purposes."
     },
     {
@@ -581,7 +621,11 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["agentic protocol", "open source", "serverless/verifiable/policy extensions"],
+      "data_points_sourced": [
+        "agentic protocol",
+        "open source",
+        "serverless/verifiable/policy extensions"
+      ],
       "reliability_notes": "Open source agentic framework. 14 commits, 1 star. Rust/TypeScript/Java."
     },
     {
@@ -594,7 +638,10 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["state storage", "Go implementation"],
+      "data_points_sourced": [
+        "state storage",
+        "Go implementation"
+      ],
       "reliability_notes": "167 commits, Go 99.4%. Latest release v1.0.0-beta.6 (May 2025). No README."
     },
     {
@@ -607,7 +654,16 @@
       "publisher": "Etherscan",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["total supply", "circulating supply", "holders", "transfers", "contract verification", "deployer", "price", "market cap"],
+      "data_points_sourced": [
+        "total supply",
+        "circulating supply",
+        "holders",
+        "transfers",
+        "contract verification",
+        "deployer",
+        "price",
+        "market cap"
+      ],
       "reliability_notes": "On-chain data. Contract verified. Max supply 10B, circulating 2.91B, 1,838 holders, 92,443 transactions. ERC20Pausable confirmed."
     },
     {
@@ -620,7 +676,12 @@
       "publisher": "Etherscan",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["deployer address", "creation date", "transaction count", "contract features"],
+      "data_points_sourced": [
+        "deployer address",
+        "creation date",
+        "transaction count",
+        "contract features"
+      ],
       "reliability_notes": "On-chain. Deployer: 0xc355594b3a279152396a1fd6b4f387a2ab9d8c5e. Created ~259 days ago (approx June 2025)."
     },
     {
@@ -633,7 +694,18 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["price", "market cap", "FDV", "circulating supply", "total supply", "ATH", "ATL", "volume", "IDO price", "listing date"],
+      "data_points_sourced": [
+        "price",
+        "market cap",
+        "FDV",
+        "circulating supply",
+        "total supply",
+        "ATH",
+        "ATL",
+        "volume",
+        "IDO price",
+        "listing date"
+      ],
       "reliability_notes": "Tier 2 market data source. Cross-referenced with Etherscan and CoinGecko snippets."
     },
     {
@@ -646,7 +718,11 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["vesting schedule", "unlock events", "allocation breakdown"],
+      "data_points_sourced": [
+        "vesting schedule",
+        "unlock events",
+        "allocation breakdown"
+      ],
       "reliability_notes": "Vesting data. Some allocation categories differ slightly from DropsTab; cross-referenced with official docs."
     },
     {
@@ -659,7 +735,13 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["total raised", "funding rounds", "investors", "IDO details", "initial FDV"],
+      "data_points_sourced": [
+        "total raised",
+        "funding rounds",
+        "investors",
+        "IDO details",
+        "initial FDV"
+      ],
       "reliability_notes": "Comprehensive funding data. Total raised $51.5M across seed ($6M), Series A ($37M), and IDO ($8.5M)."
     },
     {
@@ -672,7 +754,13 @@
       "publisher": "Tokenomist",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["allocation breakdown", "vesting details", "unlock schedule", "FDV", "market cap"],
+      "data_points_sourced": [
+        "allocation breakdown",
+        "vesting details",
+        "unlock schedule",
+        "FDV",
+        "market cap"
+      ],
       "reliability_notes": "Detailed allocation data including 7-category breakdown. Cross-referenced with official docs and DropsTab."
     },
     {
@@ -685,7 +773,12 @@
       "publisher": "DropsTab",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["vesting progress", "locked vs unlocked", "allocation breakdown with unlock percentages", "next unlock"],
+      "data_points_sourced": [
+        "vesting progress",
+        "locked vs unlocked",
+        "allocation breakdown with unlock percentages",
+        "next unlock"
+      ],
       "reliability_notes": "Detailed vesting breakdown. 27.91% vested, 72.09% locked. Investor and Core Contributor allocations 0% unlocked."
     },
     {
@@ -698,7 +791,15 @@
       "publisher": "CoinGecko",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["price", "market cap", "circulating supply", "volume", "ATH", "ATL", "next unlock"],
+      "data_points_sourced": [
+        "price",
+        "market cap",
+        "circulating supply",
+        "volume",
+        "ATH",
+        "ATL",
+        "next unlock"
+      ],
       "reliability_notes": "CoinGecko page returned 403. Data sourced from search result snippets only. Cross-referenced with CryptoRank."
     },
     {
@@ -711,7 +812,13 @@
       "publisher": "VeradiVerdict (Substack)",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["architecture analysis", "competitive positioning", "team assessment", "advisory board", "investment thesis"],
+      "data_points_sourced": [
+        "architecture analysis",
+        "competitive positioning",
+        "team assessment",
+        "advisory board",
+        "investment thesis"
+      ],
       "reliability_notes": "Pantera Capital partner analysis. Informative but note conflict of interest -- Pantera co-led the $43M round."
     },
     {
@@ -724,7 +831,14 @@
       "publisher": "MEXC Blog",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["platform overview", "architecture", "tokenomics", "products", "team", "partnerships"],
+      "data_points_sourced": [
+        "platform overview",
+        "architecture",
+        "tokenomics",
+        "products",
+        "team",
+        "partnerships"
+      ],
       "reliability_notes": "Exchange marketing content but comprehensive overview. Cross-referenced with official docs."
     },
     {
@@ -737,7 +851,15 @@
       "publisher": "PR Newswire",
       "date_published": "2024-08-14",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["funding amount", "all investors", "advisors", "team", "founding date", "partnerships", "use of funds"],
+      "data_points_sourced": [
+        "funding amount",
+        "all investors",
+        "advisors",
+        "team",
+        "founding date",
+        "partnerships",
+        "use of funds"
+      ],
       "reliability_notes": "Official press release via PR Newswire. Primary source for $43M round details."
     },
     {
@@ -750,7 +872,13 @@
       "publisher": "CoinDesk",
       "date_published": "2024-03-05",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["seed funding", "investors", "team backgrounds", "product description", "existing clients"],
+      "data_points_sourced": [
+        "seed funding",
+        "investors",
+        "team backgrounds",
+        "product description",
+        "existing clients"
+      ],
       "reliability_notes": "CoinDesk reporting on seed round. Confirmed Sean Ren as USC (not UCLA) professor."
     },
     {
@@ -763,7 +891,12 @@
       "publisher": "Unite.AI",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Sean Ren background", "education", "research focus", "AI sovereignty vision"],
+      "data_points_sourced": [
+        "Sean Ren background",
+        "education",
+        "research focus",
+        "AI sovereignty vision"
+      ],
       "reliability_notes": "Direct interview with Sean Ren. Confirmed USC INK Lab, AI2 affiliation, research focus."
     },
     {
@@ -776,7 +909,11 @@
       "publisher": "Bitget",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["SIWA testnet launch date (March 10 2025)", "mainnet timeline", "testnet features"],
+      "data_points_sourced": [
+        "SIWA testnet launch date (March 10 2025)",
+        "mainnet timeline",
+        "testnet features"
+      ],
       "reliability_notes": "Exchange-published educational content. SIWA public testnet date confirmed as March 10, 2025."
     },
     {
@@ -789,7 +926,12 @@
       "publisher": "ChainList",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["testnet chain ID", "RPC URL", "native currency", "EIP support"],
+      "data_points_sourced": [
+        "testnet chain ID",
+        "RPC URL",
+        "native currency",
+        "EIP support"
+      ],
       "reliability_notes": "ChainList registry. Testnet chain ID 313313, RPC testnet.saharalabs.ai."
     },
     {
@@ -802,7 +944,12 @@
       "publisher": "ChainList",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["mainnet chain ID", "RPC URL", "native currency", "EIP support"],
+      "data_points_sourced": [
+        "mainnet chain ID",
+        "RPC URL",
+        "native currency",
+        "EIP support"
+      ],
       "reliability_notes": "ChainList registry. Mainnet chain ID 3132023, RPC mainnet.saharalabs.ai. No explorer listed."
     },
     {
@@ -815,7 +962,12 @@
       "publisher": "CryptoNinjas",
       "date_published": "2025-06-23",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Binance listing date", "HODLer airdrop details", "trading pairs", "initial circulating supply"],
+      "data_points_sourced": [
+        "Binance listing date",
+        "HODLer airdrop details",
+        "trading pairs",
+        "initial circulating supply"
+      ],
       "reliability_notes": "News report confirmed by Binance support page. TGE June 26, 2025."
     },
     {
@@ -828,7 +980,13 @@
       "publisher": "CoinMarketCap",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["mainnet status (not yet launched)", "recent news", "Danal Fintech partnership", "token unlock schedule", "DeFi CoPilot timeline"],
+      "data_points_sourced": [
+        "mainnet status (not yet launched)",
+        "recent news",
+        "Danal Fintech partnership",
+        "token unlock schedule",
+        "DeFi CoPilot timeline"
+      ],
       "reliability_notes": "CoinMarketCap AI summary. Confirmed mainnet NOT yet launched as of March 2026."
     },
     {
@@ -841,7 +999,9 @@
       "publisher": "Discord",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Discord member count"],
+      "data_points_sourced": [
+        "Discord member count"
+      ],
       "reliability_notes": "341,738 members per discordbotlist.com listing. Likely includes inactive airdrop farmers."
     },
     {
@@ -854,7 +1014,10 @@
       "publisher": "X/Twitter",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["X follower count", "ecosystem partners"],
+      "data_points_sourced": [
+        "X follower count",
+        "ecosystem partners"
+      ],
       "reliability_notes": "913K followers per search snippets. JavaScript-rendered -- not directly verifiable via WebFetch."
     },
     {
@@ -867,7 +1030,12 @@
       "publisher": "OSL",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["platform overview", "token functions", "architecture layers", "governance model"],
+      "data_points_sourced": [
+        "platform overview",
+        "token functions",
+        "architecture layers",
+        "governance model"
+      ],
       "reliability_notes": "Exchange-published educational content. Provided governance and architecture details."
     },
     {
@@ -880,7 +1048,9 @@
       "publisher": "Quadriga Initiative",
       "date_published": "2024-08-01",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["security incident - Discord compromise"],
+      "data_points_sourced": [
+        "security incident - Discord compromise"
+      ],
       "reliability_notes": "Security incident tracker. Losses listed as unknown."
     },
     {
@@ -893,7 +1063,9 @@
       "publisher": "HuggingFace",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["No HuggingFace presence (404)"],
+      "data_points_sourced": [
+        "No HuggingFace presence (404)"
+      ],
       "reliability_notes": "Direct URL check returned 404. Confirmed no official Sahara AI organisation on HuggingFace."
     }
   ]

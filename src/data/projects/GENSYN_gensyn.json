@@ -244,7 +244,8 @@
       "all_time_low_date": null,
       "major_exchanges": [],
       "data_snapshot_date": "2026-03-02"
-    }
+    },
+    "contract_address": null
   },
   "participation": {
     "methods": [

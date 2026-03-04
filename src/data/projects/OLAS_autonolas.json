@@ -33,7 +33,6 @@
     },
     "auto_refresh_log": []
   },
-
   "identity": {
     "name": "Olas (Autonolas)",
     "ticker": "OLAS",
@@ -50,7 +49,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -124,7 +122,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Olas is an autonomous agent protocol built on a three-layer architecture: (1) On-chain Registry -- NFT-based registration system for components, agents, and services, enabling composable software reuse and tracking contributions; (2) Protocol Tokenomics -- OLAS token coordinates permissionless capital-code pairing through bonding (protocol-owned liquidity), developer staking incentives (code top-ups), and Proof-of-Active-Agent staking emissions; (3) Governance -- veOLAS (vote-escrowed OLAS) holders guide protocol evolution through Snapshot (off-chain) and on-chain voting. The execution layer uses the Open Autonomy Framework (built atop Open AEA, a fork of Fetch.ai's AEA framework) enabling multi-agent systems that run off-chain but are secured on-chain. Agent services operate as decentralised multi-agent systems replicated on a temporary consensus gadget (Tendermint) while being crypto-economically secured on public blockchains. The protocol is deployed across 9 chains: Ethereum, Gnosis Chain, Polygon, Solana, Arbitrum, Optimism, Base, Celo, and Mode. Key products include Pearl (consumer AI agent app store), Mech Marketplace (agent-to-agent service marketplace), and Olas Predict (autonomous prediction market trading agents).",
     "consensus_mechanism": "Agent services use Tendermint v0.34.19 as a temporary consensus gadget for off-chain multi-agent coordination. On-chain settlement uses the consensus mechanisms of deployed chains (Ethereum PoS, Gnosis Chain GBC, Solana PoH, etc.). Safe multisig wallets serve as the on-chain representation of agent services.",
@@ -173,7 +170,6 @@
     ],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "Autonolas",
     "ticker": "OLAS",
@@ -267,9 +263,9 @@
         "Uphold"
       ],
       "data_snapshot_date": "2026-03-02"
-    }
+    },
+    "contract_address": "0x0001a500a6b18995b03f44bb040a5ffc28e45cb0"
   },
-
   "participation": {
     "methods": [
       {
@@ -314,7 +310,6 @@
       "grants_url": "https://olas.network/accelerator"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -332,7 +327,6 @@
     "metrics_date": "2026-03-02",
     "usage_notes": "3,176 agents deployed across 9 chains. 542 daily active agents. 14,543,449 total transactions. 11,101,413 agent-to-agent transactions. $89,000 marketplace turnover. 3,773,512 OLAS staked. On Gnosis Chain specifically: Olas agents responsible for 35%+ of all Safe transactions, with 300+ daily active agents and 340,000+ monthly transactions. 79% prediction accuracy for Olas Predict agents. Q1 2025 showed 599 daily active agents across 9 chains and 5.25M total transactions. By Q3 2025, 9M+ agent-to-agent Mech transactions. CoinDesk reported ~2,000 agents deployed and ~500 daily active agents as of Feb 2025. These figures demonstrate genuine usage, particularly the dominance on Gnosis Chain prediction markets."
   },
-
   "community": {
     "discord_members": 5462,
     "telegram_members": null,
@@ -371,7 +365,6 @@
     "sentiment_summary": "Community is technically oriented and developer-focused rather than retail-speculative. Sentiment appears pragmatic -- the project has genuine usage metrics (Gnosis Chain dominance) but the token has suffered a 99.6% drawdown from ATH, which creates frustration among holders. The agent products (Pearl, Predict) show real traction but the marketplace turnover ($89K total) is modest. Developer community is small but active with 4 Academy cohorts completed.",
     "community_notes": "Olas has built a relatively small but technically engaged community. The Discord (5,462 members) is modest compared to larger AI/crypto projects. The project's strength lies in developer engagement and actual protocol usage rather than retail hype. The Olas Accelerator programme (up to $1M per team) is actively recruiting builders. The Q3 2025 Agents Unleashed event attracted 4,000+ signups and 450+ attendees, suggesting growing interest. No active Telegram group was found. The pseudonymous co-founder (Oaksprout) is typical of DeFi culture but may concern institutional participants."
   },
-
   "freedom_score": {
     "total_score": 62,
     "max_possible": 100,
@@ -410,7 +403,6 @@
     "freedom_grade": "C",
     "freedom_summary": "Olas scores 62/100 (C grade), reflecting a protocol with strong open-source credentials and genuinely permissionless agent infrastructure, but significant concerns around token distribution and governance centralisation. The open-source output is excellent -- 146 repos, multiple audits, verified contracts, and a working bug bounty. The permissionless agent framework and multi-chain deployment demonstrate real infrastructure decentralisation. However, the 42.65% insider allocation with no enforced vesting is a serious governance concentration risk. Valory's 10% has no lock-up, and founding members' 32.65% uses buOLAS with gradual releases but no smart contract enforcement. The public LBP was small (1.5% of supply, $547K raised). The project is on mainnet with real usage (14.5M transactions, Gnosis Chain dominance), which partially offsets these concerns. Freedom grade should improve if governance participation broadens and the developer incentive pool (47.35%) is effectively distributed to a wide base of contributors."
   },
-
   "assessment": {
     "what_works_today": [
       "Real on-chain agent activity: 14.5M total transactions, 542 daily active agents across 9 chains, 11.1M agent-to-agent transactions -- these are genuine usage metrics, not testnet figures",
@@ -463,7 +455,6 @@
     "outlook": "Olas occupies a credible position as one of the earliest and most usage-proven autonomous agent protocols in crypto. The Gnosis Chain prediction market dominance is real and demonstrates genuine product-market fit. However, the project faces serious headwinds: the token has collapsed 99.6% from ATH, market cap is now only $8.5M, and the marketplace economy generates volume but not meaningful revenue. The $13.8M OTC raise (Feb 2025) provides runway, and the Pearl v1 launch shows consumer product ambition. The critical path forward is: (1) diversifying beyond prediction markets into DeFi, social, and enterprise agent use cases; (2) expanding Pearl to Windows/Linux to broaden the user base; (3) growing marketplace turnover from $89K to meaningful economic activity; and (4) stabilising the token price to attract developers to the incentive model. The 47.35% developer incentive pool is a long-term structural advantage if the ecosystem grows. Watch for: Pearl multi-platform launch, new agent verticals beyond prediction markets, developer adoption metrics, and whether the 2026 audit results reveal significant new vulnerabilities.",
     "overall_assessment": "Olas is a technically serious autonomous agent protocol with genuine on-chain usage that most AI/crypto projects cannot match -- 14.5M transactions, 542 daily active agents, and Gnosis Chain prediction market dominance are real metrics. The founding team combines academic rigour (Cambridge PhD, Birmingham cryptography professor) with practical DeFi experience, and the open-source output (146 repos, 13K+ commits) demonstrates sustained development effort. However, the project sits in an uncomfortable position: the usage is real but the economics are not yet working. A $8.5M market cap, $89K marketplace turnover, and 99.6% price decline from ATH tell a story of a protocol that has found product-market fit in one vertical (prediction market bots) but has not yet translated that into sustainable economic value or token demand. The no-vesting insider allocation (42.65%) and Valory's unencumbered 10% add trust concerns. For practitioners, the Open Autonomy framework is a legitimate tool for building autonomous agents, and Pearl makes agent ownership accessible. But economic exposure via OLAS carries substantial risk given the price trend and low liquidity. This is a technically credible project with a real usage base that needs to solve its tokenomics and economic sustainability problems."
   },
-
   "sources": [
     {
       "source_id": "S001",
@@ -736,6 +727,5 @@
       "reliability_notes": "Bug bounty covers Governance, Registry, and Tokenomics. Up to $50K for critical bugs. KYC required for rewards. Proof of concept mandatory."
     }
   ],
-
   "metrics_history": []
 }

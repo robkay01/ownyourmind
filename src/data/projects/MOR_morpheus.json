@@ -35,7 +35,6 @@
       "Total MOR emitted to date vs circulating supply discrepancy suggests significant unclaimed or locked MOR."
     ]
   },
-
   "identity": {
     "name": "Morpheus",
     "ticker": "MOR",
@@ -52,7 +51,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -96,7 +94,6 @@
       "rounds": []
     }
   },
-
   "technical": {
     "architecture_summary": "Morpheus is not a blockchain but a chain-agnostic protocol using the Techno Capital Machine (TCM) to fund open-source AI development. Users deposit yield-generating assets (stETH, USDC, USDT, WBTC). 50% of the yield buys MOR tokens via an AMM; the other 50% pairs with the purchased MOR as Protocol-Owned Liquidity (PoL). Daily MOR emissions (starting at 14,400, decaying linearly to zero over 16 years) are split across four contributor pools (24% each) plus a 4% protection fund. The compute layer uses the Yellowstone model: a Lumerin-based proxy router negotiates a two-sided market between AI users and GPU providers. Users submit signed Requests for Compute specifying LLM and throughput requirements. The router selects providers by lowest cost per inference, performs liveness checks, and routes TCP/IP connections directly. Smart Agents run locally on user machines and interact with Web3 wallets, DApps, and smart contracts.",
     "consensus_mechanism": "Atomic Governance (not PoS or PoW). Each contributor category operates independently: Compute uses the Yellowstone model with Lumerin proxy router selecting providers by cost and performance. Code consensus is maintainer-merge-gated on GitHub with FTE-weighted rewards. Capital is fully automated by smart contracts. Community builders prove contribution via MOR transaction fees burned through their frontends/tools.",
@@ -115,7 +112,9 @@
       "Lumerin Protocol (compute routing)",
       "IPFS / Kubo (distributed storage)"
     ],
-    "smart_contract_languages": ["Solidity"],
+    "smart_contract_languages": [
+      "Solidity"
+    ],
     "open_source": true,
     "license": "MIT",
     "github_metrics": {
@@ -162,7 +161,6 @@
       "No confirmed hacks, exploits, or security incidents on MOR token or smart contract infrastructure as of March 2026. Contracts live since February 2024."
     ]
   },
-
   "tokenomics": {
     "token_name": "MOR",
     "ticker": "MOR",
@@ -267,9 +265,9 @@
       "data_snapshot_date": "2026-03-01"
     },
     "token_model_classification": "Work token with burn-and-mint mechanics. MOR is earned through provable contributions (capital yield, compute served, code merged, community fees burned) and consumed by burning when accessing network services.",
-    "tokenomics_notes": "Market data shows significant discrepancies across aggregators. CoinGecko reports ~$5.1M market cap while DropsTab showed ~$21M. FDV calculated as $0.75 x 42M = $31.5M. 24h volume is very low (~$29K), indicating thin liquidity. Token is primarily DEX-traded with minimal CEX presence. The CoinGecko ID is 'morpheusai' (NOT 'morpheus-network' which is a different project — Morpheus Network / MNW)."
+    "tokenomics_notes": "Market data shows significant discrepancies across aggregators. CoinGecko reports ~$5.1M market cap while DropsTab showed ~$21M. FDV calculated as $0.75 x 42M = $31.5M. 24h volume is very low (~$29K), indicating thin liquidity. Token is primarily DEX-traded with minimal CEX presence. The CoinGecko ID is 'morpheusai' (NOT 'morpheus-network' which is a different project — Morpheus Network / MNW).",
+    "contract_address": "0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86"
   },
-
   "participation": {
     "methods": [
       {
@@ -345,7 +343,6 @@
       "grants_url": "https://mor.org/ecosystem"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -363,7 +360,6 @@
     "metrics_date": "2026-03-01",
     "usage_notes": "mor.org claims 1M+ users and 100+ ecosystem projects. 20,000 MOR token holders. 6,500+ capital providers with over 320,000 ETH flowed through contracts. 566,000+ MOR staked (~12% of circulating). Peak stETH deposits: 150,403 stETH. $3B total value staked claimed by mor.org. Active compute node count not publicly reported. Protocol designed to minimise on-chain writes, so daily transaction counts are not meaningful as a usage metric."
   },
-
   "community": {
     "discord_members": 5300,
     "telegram_members": null,
@@ -383,7 +379,6 @@
     "sentiment_summary": "Community sentiment is cautiously optimistic among committed participants. Strong alignment with sovereignty and fair-launch values. Concerns about thin liquidity, low trading volume, and gap between ambitious vision and current agent capabilities. The fair-launch ethos and TCM model attract ideologically motivated participants. Token price decline from ATH ($139 to ~$0.75) has tested conviction.",
     "community_notes": "Community operates without formal leadership. David Johnston is the most visible public figure. Erik Voorhees provides high-profile advocacy through Venice.ai integration. Weekly community digests published on Substack and mor.org blog."
   },
-
   "freedom_score": {
     "total_score": 76,
     "max_possible": 100,
@@ -422,7 +417,6 @@
     "freedom_grade": "B",
     "freedom_summary": "Morpheus scores a B (76/100) for genuine decentralisation with meaningful concerns. Its standout strength is token distribution fairness — one of the fairest launches in crypto, with zero insider allocation and all tokens earned through provable contributions. Open-source transparency is strong with MIT licensing and multiple tier-1 audits. The main concerns are governance maturity (bootstrap-phase multisig controls and maintainer-gated code decisions) and the early-stage compute provider network. The project demonstrates genuine commitment to sovereignty principles but still has centralisation vectors that need addressing as it matures."
   },
-
   "assessment": {
     "what_works_today": [
       "Techno Capital Machine (TCM) — genuinely novel yield-redirect model that has attracted $3B+ in total value staked from 6,500+ capital providers. No other DeAI project has replicated this mechanism at scale.",
@@ -477,7 +471,6 @@
     "outlook": "Morpheus has built genuine infrastructure — the TCM funding model works, the compute network is live, and the fair launch gives it credibility that VC-funded competitors lack. The critical question is whether decentralised AI inference can attract real demand when centralised alternatives are faster, cheaper, and more capable. The 99.5% token price decline suggests the market is sceptical. The next 12 months will determine whether the compute marketplace generates enough usage to justify the incentive structure, or whether Morpheus becomes another well-engineered protocol that could not find product-market fit.",
     "overall_assessment": "Genuine infrastructure project with best-in-class tokenomics fairness, hampered by thin liquidity, early-stage compute network, and the enormous gap between its sovereign AI vision and current capabilities. Worth watching for the TCM model alone. Not yet proven as a competitive AI inference platform."
   },
-
   "sources": [
     {
       "source_id": "S001",
@@ -489,7 +482,12 @@
       "publisher": "MorpheusAIs GitHub",
       "date_published": "2023-09-02",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity", "tokenomics.distribution", "tokenomics.supply.max_supply", "technical.architecture_summary"],
+      "data_points_sourced": [
+        "identity",
+        "tokenomics.distribution",
+        "tokenomics.supply.max_supply",
+        "technical.architecture_summary"
+      ],
       "reliability_notes": "Primary source. Published by project pseudonymous founders."
     },
     {
@@ -502,7 +500,11 @@
       "publisher": "Morpheus",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics.distribution", "tokenomics.emissions", "tokenomics.supply"],
+      "data_points_sourced": [
+        "tokenomics.distribution",
+        "tokenomics.emissions",
+        "tokenomics.supply"
+      ],
       "reliability_notes": "Official project documentation."
     },
     {
@@ -515,7 +517,10 @@
       "publisher": "Morpheus",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity", "team.entity_name"],
+      "data_points_sourced": [
+        "identity",
+        "team.entity_name"
+      ],
       "reliability_notes": "Official project documentation."
     },
     {
@@ -528,7 +533,11 @@
       "publisher": "GitHub",
       "date_published": "2023-09-14",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.github_metrics", "technical.license", "technical.open_source"],
+      "data_points_sourced": [
+        "technical.github_metrics",
+        "technical.license",
+        "technical.open_source"
+      ],
       "reliability_notes": "Direct GitHub data. 52 public repos confirmed via GitHub API."
     },
     {
@@ -541,7 +550,11 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity.tagline", "technical.github_metrics.stars", "technical.github_metrics.forks"],
+      "data_points_sourced": [
+        "identity.tagline",
+        "technical.github_metrics.stars",
+        "technical.github_metrics.forks"
+      ],
       "reliability_notes": "Primary repo. 219 stars, 142 forks confirmed."
     },
     {
@@ -554,7 +567,10 @@
       "publisher": "OpenZeppelin",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.audits", "tokenomics.token_standard"],
+      "data_points_sourced": [
+        "technical.audits",
+        "tokenomics.token_standard"
+      ],
       "reliability_notes": "Tier-1 auditor. Scope limited to MOROFT.sol only."
     },
     {
@@ -567,7 +583,10 @@
       "publisher": "CodeHawks",
       "date_published": "2024-01-01",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.audits", "assessment.key_risks"],
+      "data_points_sourced": [
+        "technical.audits",
+        "assessment.key_risks"
+      ],
       "reliability_notes": "Competitive public audit. Multiple findings including privileged role risks."
     },
     {
@@ -580,7 +599,9 @@
       "publisher": "Code4rena",
       "date_published": "2025-08-25",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.audits"],
+      "data_points_sourced": [
+        "technical.audits"
+      ],
       "reliability_notes": "Competitive audit, $20K USDC bounty. 4 unique vulnerabilities found."
     },
     {
@@ -593,7 +614,10 @@
       "publisher": "CoinGecko",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics.market_data", "tokenomics.supply.circulating_supply"],
+      "data_points_sourced": [
+        "tokenomics.market_data",
+        "tokenomics.supply.circulating_supply"
+      ],
       "reliability_notes": "Primary market data source. Noted discrepancies with other aggregators."
     },
     {
@@ -606,7 +630,10 @@
       "publisher": "CoinMarketCap",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics.market_data", "tokenomics.emissions"],
+      "data_points_sourced": [
+        "tokenomics.market_data",
+        "tokenomics.emissions"
+      ],
       "reliability_notes": "Secondary market data source for cross-reference."
     },
     {
@@ -619,7 +646,10 @@
       "publisher": "CoinDesk",
       "date_published": "2024-11-18",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity.current_status", "identity.chain"],
+      "data_points_sourced": [
+        "identity.current_status",
+        "identity.chain"
+      ],
       "reliability_notes": "Reputable crypto news outlet."
     },
     {
@@ -632,7 +662,10 @@
       "publisher": "GlobeNewsWire",
       "date_published": "2024-11-20",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity.current_status", "technical.architecture_summary"],
+      "data_points_sourced": [
+        "identity.current_status",
+        "technical.architecture_summary"
+      ],
       "reliability_notes": "Press release from Lumerin (key infrastructure partner)."
     },
     {
@@ -645,7 +678,9 @@
       "publisher": "GlobeNewsWire",
       "date_published": "2024-12-12",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["participation.methods"],
+      "data_points_sourced": [
+        "participation.methods"
+      ],
       "reliability_notes": "Press release."
     },
     {
@@ -658,7 +693,10 @@
       "publisher": "GlobeNewsWire",
       "date_published": "2025-09-18",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics.staking", "participation.methods"],
+      "data_points_sourced": [
+        "tokenomics.staking",
+        "participation.methods"
+      ],
       "reliability_notes": "Press release confirming v2 capital contracts expansion."
     },
     {
@@ -671,7 +709,10 @@
       "publisher": "The Defiant",
       "date_published": "2024-02-08",
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity.launch_date", "usage_metrics.usage_notes"],
+      "data_points_sourced": [
+        "identity.launch_date",
+        "usage_metrics.usage_notes"
+      ],
       "reliability_notes": "Reputable DeFi news outlet. Confirms first-day deposit figures."
     },
     {
@@ -684,7 +725,9 @@
       "publisher": "Medium",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["team.founding_team"],
+      "data_points_sourced": [
+        "team.founding_team"
+      ],
       "reliability_notes": "Written by the project's lead technologist."
     },
     {
@@ -697,7 +740,9 @@
       "publisher": "Decrypt",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["team.founding_team"],
+      "data_points_sourced": [
+        "team.founding_team"
+      ],
       "reliability_notes": "Credible crypto outlet. Contextualises Voorhees/Morpheus relationship."
     },
     {
@@ -710,7 +755,11 @@
       "publisher": "Morpheus",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["usage_metrics.usage_notes", "community", "team.entity_name"],
+      "data_points_sourced": [
+        "usage_metrics.usage_notes",
+        "community",
+        "team.entity_name"
+      ],
       "reliability_notes": "Self-reported metrics from project. Claims should be cross-referenced."
     },
     {
@@ -723,7 +772,10 @@
       "publisher": "Morpheus",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity.launch_date", "tokenomics.distribution"],
+      "data_points_sourced": [
+        "identity.launch_date",
+        "tokenomics.distribution"
+      ],
       "reliability_notes": "Official project page confirming fair launch details."
     },
     {
@@ -736,7 +788,10 @@
       "publisher": "Morpheus",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics", "technical.audits"],
+      "data_points_sourced": [
+        "tokenomics",
+        "technical.audits"
+      ],
       "reliability_notes": "Official page confirming auditors and token details."
     },
     {
@@ -749,7 +804,10 @@
       "publisher": "IQ.wiki",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["identity", "technical"],
+      "data_points_sourced": [
+        "identity",
+        "technical"
+      ],
       "reliability_notes": "Community wiki. Cross-referenced against primary sources."
     },
     {
@@ -762,7 +820,10 @@
       "publisher": "Arbiscan",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["tokenomics.token_standard", "tokenomics.market_data"],
+      "data_points_sourced": [
+        "tokenomics.token_standard",
+        "tokenomics.market_data"
+      ],
       "reliability_notes": "On-chain data. Primary source for contract verification."
     },
     {
@@ -775,7 +836,10 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.architecture_summary", "participation.methods"],
+      "data_points_sourced": [
+        "technical.architecture_summary",
+        "participation.methods"
+      ],
       "reliability_notes": "Active development. v5.14.0 released Feb 2026."
     },
     {
@@ -788,7 +852,9 @@
       "publisher": "MorpheusAIs GitHub",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["technical.audits"],
+      "data_points_sourced": [
+        "technical.audits"
+      ],
       "reliability_notes": "Official bug bounty programme documentation."
     },
     {
@@ -801,7 +867,9 @@
       "publisher": "DeFiLlama",
       "date_published": null,
       "date_accessed": "2026-03-01",
-      "data_points_sourced": ["usage_metrics.tvl_usd"],
+      "data_points_sourced": [
+        "usage_metrics.tvl_usd"
+      ],
       "reliability_notes": "Industry standard TVL tracker. Live data not programmatically fetched; verify directly."
     }
   ]

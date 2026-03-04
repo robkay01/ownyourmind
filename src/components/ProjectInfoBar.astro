@@ -10,14 +10,10 @@ interface Props {
   token?: string;
   discordUrl?: string;
   telegramUrl?: string;
+  contractAddress?: string;
 }
 
-const { website, xHandle, githubUrl, docsUrl, whitepaperUrl, chain, tokenStandard, token, discordUrl, telegramUrl } = Astro.props;
-
-// Extract contract address from token_standard string
-const hexMatch = tokenStandard?.match(/0x[a-fA-F0-9]{40}/);
-const solMatch = !hexMatch && tokenStandard?.match(/\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/);
-const contractAddress = hexMatch?.[0] ?? solMatch?.[0] ?? null;
+const { website, xHandle, githubUrl, docsUrl, whitepaperUrl, chain, tokenStandard, token, discordUrl, telegramUrl, contractAddress } = Astro.props;
 
 const truncateAddress = (addr: string) =>
   addr.length > 12 ? `${addr.slice(0, 6)}...${addr.slice(-4)}` : addr;

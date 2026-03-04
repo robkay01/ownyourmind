@@ -35,7 +35,6 @@
     },
     "auto_refresh_log": []
   },
-
   "identity": {
     "name": "ElizaOS",
     "ticker": "ELIZAOS",
@@ -52,7 +51,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -92,7 +90,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "ElizaOS is a modular TypeScript-based agentic framework organised as a monorepo. The core architecture consists of: (1) Runtime Core -- manages memory, events, planning, and state transitions for agents; (2) Character Files -- JSON definitions for agent personality, knowledge, and behaviour; (3) Plugin System -- 90+ official npm plugins covering LLM providers (OpenAI, Anthropic, Google, Ollama), platform connectors (Discord, Telegram, X/Twitter, Farcaster), blockchain integrations (Solana, EVM chains), and data tools (RAG, database, knowledge); (4) Unified Message Bus -- supports Discord, Telegram, X, HTTP, and on-chain communications via swappable transport adapters; (5) Composable Swarms -- Worlds (servers/workspaces) and Rooms (channels/DMs) allow multi-agent coordination with delegation, consensus, and load-balancing; (6) Strategic Action Chaining -- LLM-driven tool calls enabling parallel execution, conditional branching, and user input pausing. The framework supports deployment via local installation, Docker containers, or Eliza Cloud. Implementations exist in TypeScript (primary), Rust, and Python.",
     "consensus_mechanism": "N/A -- ElizaOS is a framework, not a blockchain. The ELIZAOS token operates on Solana (PoS/PoH), Ethereum (PoS), Base (PoS L2), and BNB Chain (PoS/PoA).",
@@ -106,7 +103,10 @@
       "Raydium (auto.fun bonding curve DEX integration)",
       "Streamflow (vesting contract enforcement)"
     ],
-    "smart_contract_languages": ["Rust (Solana programs)", "Solidity (EVM contracts)"],
+    "smart_contract_languages": [
+      "Rust (Solana programs)",
+      "Solidity (EVM contracts)"
+    ],
     "open_source": true,
     "license": "MIT",
     "github_metrics": {
@@ -133,7 +133,6 @@
       "Shaw Walters' prior project Webaverse collapsed due to a treasury security breach, though this is not directly an ElizaOS incident."
     ]
   },
-
   "tokenomics": {
     "token_name": "elizaOS",
     "ticker": "ELIZAOS",
@@ -249,9 +248,9 @@
       "data_snapshot_date": "2026-03-03"
     },
     "token_model_classification": "Fixed-supply governance token with front-loaded distribution via fair launch and migration swap. 40% supply expansion during migration created new allocations for team, SAFT investors, ecosystem, and liquidity. Vesting schedules enforced on-chain via Streamflow. No staking, no burns, limited current utility beyond governance signalling. Value accrual mechanism unclear -- potential future utility via L1 blockchain or auto.fun launchpad fees.",
-    "tokenomics_notes": "The original AI16Z token launched via DAOs.fun on 24 October 2024 with a total supply of approximately 1.1B tokens and reached an all-time high of $2.45 on 2 January 2025. In January 2025, the project rebranded from ai16z to ElizaOS. In September-November 2025, Eliza Labs executed a token migration from AI16Z to ELIZAOS at a 1:6 ratio, expanding total supply from approximately 6.6B (post-redenomination) to 11B tokens. The pre-swap AI16Z ATH of $2.45 equates to approximately $0.408 per ELIZAOS token at the 1:6 ratio, meaning ELIZAOS is currently trading approximately 99.7% below its effective ATH. CoinGecko reports a separate post-swap ATH of $0.01354 on 12 November 2025, shortly after the swap completed. Significant confusion exists around supply figures due to the redenomination."
+    "tokenomics_notes": "The original AI16Z token launched via DAOs.fun on 24 October 2024 with a total supply of approximately 1.1B tokens and reached an all-time high of $2.45 on 2 January 2025. In January 2025, the project rebranded from ai16z to ElizaOS. In September-November 2025, Eliza Labs executed a token migration from AI16Z to ELIZAOS at a 1:6 ratio, expanding total supply from approximately 6.6B (post-redenomination) to 11B tokens. The pre-swap AI16Z ATH of $2.45 equates to approximately $0.408 per ELIZAOS token at the 1:6 ratio, meaning ELIZAOS is currently trading approximately 99.7% below its effective ATH. CoinGecko reports a separate post-swap ATH of $0.01354 on 12 November 2025, shortly after the swap completed. Significant confusion exists around supply figures due to the redenomination.",
+    "contract_address": "HeLp6NuQkmYB4pYWo2zYs22mESHXPQYzXbB8n4V98jwC"
   },
-
   "participation": {
     "methods": [
       {
@@ -261,7 +260,11 @@
         "minimum_capital_usd": 0,
         "technical_skill_required": "intermediate",
         "estimated_returns": "No direct financial returns from building agents; potential to create agent-based products or services",
-        "barriers_to_entry": ["TypeScript/JavaScript development skills required", "Understanding of AI/LLM concepts", "API keys for LLM providers (or local hardware for Ollama)"],
+        "barriers_to_entry": [
+          "TypeScript/JavaScript development skills required",
+          "Understanding of AI/LLM concepts",
+          "API keys for LLM providers (or local hardware for Ollama)"
+        ],
         "guide_available": true,
         "guide_url": "https://docs.elizaos.ai"
       },
@@ -272,7 +275,10 @@
         "minimum_capital_usd": 0,
         "technical_skill_required": "intermediate",
         "estimated_returns": "Potential ecosystem fund grants; contributor recognition; possible future token allocation via team/contributor vesting pool",
-        "barriers_to_entry": ["TypeScript, Rust, or Python proficiency", "Understanding of agent architecture and plugin systems"],
+        "barriers_to_entry": [
+          "TypeScript, Rust, or Python proficiency",
+          "Understanding of agent architecture and plugin systems"
+        ],
         "guide_available": true,
         "guide_url": "https://github.com/elizaOS/eliza"
       },
@@ -283,7 +289,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "basic",
         "estimated_returns": "No direct financial returns from governance participation",
-        "barriers_to_entry": ["DAO voting module not yet launched -- governance is currently informal", "Token price volatility risk"],
+        "barriers_to_entry": [
+          "DAO voting module not yet launched -- governance is currently informal",
+          "Token price volatility risk"
+        ],
         "guide_available": false,
         "guide_url": null
       },
@@ -294,7 +303,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "basic",
         "estimated_returns": "Agent token launches can generate fees; swap fee distribution via liquidity NFT mechanics",
-        "barriers_to_entry": ["Platform still early-stage", "Understanding of token mechanics and bonding curves"],
+        "barriers_to_entry": [
+          "Platform still early-stage",
+          "Understanding of token mechanics and bonding curves"
+        ],
         "guide_available": true,
         "guide_url": "https://auto.fun"
       }
@@ -308,7 +320,6 @@
       "grants_url": null
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -326,7 +337,6 @@
     "metrics_date": "2026-03-03",
     "usage_notes": "ElizaOS is primarily a development framework, not a protocol with on-chain TVL. Usage metrics are difficult to independently verify because agent deployments happen on users' own infrastructure. The 50,000+ agents claim and $20B+ combined value figure appear in marketing materials during the token migration announcement but lack independent verification. The framework's 17,700 GitHub stars and 5,400 forks demonstrate strong developer interest. The 583 contributors represent genuine open-source engagement, though bot/CI commits inflate the raw commit count."
   },
-
   "community": {
     "discord_members": 2683,
     "telegram_members": null,
@@ -344,7 +354,6 @@
     "sentiment_summary": "Developer community is generally positive and technically focused, praising the TypeScript foundation, plugin ecosystem, and rapid iteration. Sentiment on crypto social media is more mixed -- significant price decline (99.7% from effective ATH) has generated frustration among token holders. The rebranding from ai16z and 40% supply expansion via token migration created controversy. The Princeton memory injection vulnerability disclosure raised security concerns. The project is widely recognised as a leading AI agent framework in the web3 space but faces questions about sustainable token value accrual.",
     "community_notes": "The GitHub organisation has 3,200+ followers. The Discord appears to be development-focused (2,683 members is relatively small compared to project market cap history). The project benefits from association with the ai16z meme/brand even after rebranding. Community includes both developers building on the framework and speculative token holders with different expectations and interests."
   },
-
   "freedom_score": {
     "total_score": 52,
     "max_possible": 100,
@@ -383,7 +392,6 @@
     "freedom_grade": "D",
     "freedom_summary": "ElizaOS scores 52/100 (Grade D: 'Largely centralised with decentralisation narrative'). The framework itself is genuinely open-source and self-hostable, earning strong scores for open-source transparency (14/15) and solid scores for censorship resistance (10/15) and data sovereignty (10/15). However, the project's economic and governance infrastructure is heavily centralised around Eliza Labs and founder Shaw Walters. Key weaknesses include: (1) no decentralised infrastructure layer -- it is a framework, not a network; (2) governance is de facto controlled by the team with no functioning on-chain voting; (3) the token migration expanded supply by 40% to fund insider allocations without formal community governance approval. The fair launch origin is partially offset by the subsequent dilutive migration. ElizaOS is best understood as a well-built open-source project with a centralised token economy, not a decentralised protocol."
   },
-
   "assessment": {
     "what_works_today": [
       "The ElizaOS framework is the most popular open-source AI agent framework in the web3 space, with 17,700 GitHub stars, 583 contributors, and genuine developer adoption across 5,400+ forks.",
@@ -436,7 +444,6 @@
     "outlook": "ElizaOS has established itself as the dominant AI agent framework in the web3 space by developer adoption metrics. However, the gap between the framework's genuine technical quality and the token's collapsing value highlights a fundamental disconnect: building a great open-source tool does not automatically create a great token investment. The project needs to ship concrete token utility -- whether through the L1 blockchain, auto.fun fee revenue, or functioning governance -- to justify any token valuation. The framework will likely continue to be widely used regardless of token price, similar to how many valuable open-source projects exist without token economies. The biggest risk is that the 'agent meta' narrative fades before ElizaOS can establish sustainable token demand drivers.",
     "overall_assessment": "ElizaOS is a genuinely well-built, widely adopted open-source AI agent framework that has been bolted onto a speculative token economy with unclear value accrual. The framework deserves respect: 17,700 GitHub stars, 583 contributors, 90+ plugins, and a Stanford research partnership represent real achievement. However, the project scores only 52/100 on the Freedom Score because its economic and governance infrastructure is heavily centralised around Eliza Labs, the token migration diluted original holders, and governance voting is not yet live. Token holders should understand they are effectively investing in Eliza Labs' ability to monetise the framework, not in a decentralised protocol. The framework is freedom-enabling; the token economy is not."
   },
-
   "sources": [
     {
       "source_id": "S001",
@@ -448,7 +455,14 @@
       "publisher": "Eliza Labs",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["project overview", "tagline", "core features", "plugin count", "community stats (1352+ contributors, 200+ plugins, 5.3K+ forks)", "partner list (Stanford, Chainlink, Doodles)"],
+      "data_points_sourced": [
+        "project overview",
+        "tagline",
+        "core features",
+        "plugin count",
+        "community stats (1352+ contributors, 200+ plugins, 5.3K+ forks)",
+        "partner list (Stanford, Chainlink, Doodles)"
+      ],
       "reliability_notes": "Tier 1 primary source. Marketing-oriented but factual for stated features. Community stats on website lag behind live GitHub data."
     },
     {
@@ -461,7 +475,13 @@
       "publisher": "Eliza Labs",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["framework architecture", "plugin ecosystem details", "installation process", "quickstart guide", "deployment options"],
+      "data_points_sourced": [
+        "framework architecture",
+        "plugin ecosystem details",
+        "installation process",
+        "quickstart guide",
+        "deployment options"
+      ],
       "reliability_notes": "Tier 1 primary documentation. Comprehensive and well-maintained. Tokenomics page provides supply and vesting data."
     },
     {
@@ -474,7 +494,14 @@
       "publisher": "Eliza Labs",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["total supply (11B)", "circulating supply (7.48B)", "contract addresses (Solana SPL, EVM ERC-20)", "vesting schedules by category", "Streamflow enforcement", "allocation details (607M liquidity, 275M POL)"],
+      "data_points_sourced": [
+        "total supply (11B)",
+        "circulating supply (7.48B)",
+        "contract addresses (Solana SPL, EVM ERC-20)",
+        "vesting schedules by category",
+        "Streamflow enforcement",
+        "allocation details (607M liquidity, 275M POL)"
+      ],
       "reliability_notes": "Tier 1 primary source for tokenomics. Vesting wallets publicly tracked. No allocation pie chart with explicit percentages; these reconstructed from multiple sub-sources."
     },
     {
@@ -487,7 +514,13 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["60 repositories", "organisation description", "3.2K followers", "primary languages (TypeScript, Rust, Python)", "key repos list"],
+      "data_points_sourced": [
+        "60 repositories",
+        "organisation description",
+        "3.2K followers",
+        "primary languages (TypeScript, Rust, Python)",
+        "key repos list"
+      ],
       "reliability_notes": "Tier 1 direct source. GitHub org page data is authoritative for repository counts and languages."
     },
     {
@@ -500,7 +533,19 @@
       "publisher": "GitHub",
       "date_published": "2024-07-09",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["17,662 stars", "5,439 forks", "141 open issues", "583 contributors", "MIT licence", "created 2024-07-09", "last push 2026-02-27", "TypeScript primary language", "17,545 commits", "295 releases", "latest release v1.7.2 (Jan 2026)"],
+      "data_points_sourced": [
+        "17,662 stars",
+        "5,439 forks",
+        "141 open issues",
+        "583 contributors",
+        "MIT licence",
+        "created 2024-07-09",
+        "last push 2026-02-27",
+        "TypeScript primary language",
+        "17,545 commits",
+        "295 releases",
+        "latest release v1.7.2 (Jan 2026)"
+      ],
       "reliability_notes": "Tier 1 direct source. GitHub API data is authoritative. Note: latest alpha release v2.0.0-alpha.27 on develop branch."
     },
     {
@@ -513,7 +558,16 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["stars (17,662)", "forks (5,439)", "open issues (141)", "subscribers (156)", "created date (2024-07-09)", "pushed (2026-02-27)", "size (~1.6GB)", "topics"],
+      "data_points_sourced": [
+        "stars (17,662)",
+        "forks (5,439)",
+        "open issues (141)",
+        "subscribers (156)",
+        "created date (2024-07-09)",
+        "pushed (2026-02-27)",
+        "size (~1.6GB)",
+        "topics"
+      ],
       "reliability_notes": "Tier 1 direct API source. Most authoritative for repository metrics."
     },
     {
@@ -526,7 +580,13 @@
       "publisher": "arXiv",
       "date_published": "2025-01-12",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["paper title and description", "author list (14 co-authors)", "architecture overview", "Web3 integration approach", "CC BY-SA 4.0 licence"],
+      "data_points_sourced": [
+        "paper title and description",
+        "author list (14 co-authors)",
+        "architecture overview",
+        "Web3 integration approach",
+        "CC BY-SA 4.0 licence"
+      ],
       "reliability_notes": "Tier 1 primary source. Peer-accessible preprint. Note: 14 co-authors listed but unclear which are Eliza Labs employees vs external contributors."
     },
     {
@@ -539,7 +599,15 @@
       "publisher": "Eliza Labs",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["complete documentation structure", "plugin list", "REST API reference", "WebSocket integration", "TEE support", "multi-agent features", "deployment options"],
+      "data_points_sourced": [
+        "complete documentation structure",
+        "plugin list",
+        "REST API reference",
+        "WebSocket integration",
+        "TEE support",
+        "multi-agent features",
+        "deployment options"
+      ],
       "reliability_notes": "Tier 1 primary source. Comprehensive index of all documentation pages."
     },
     {
@@ -552,7 +620,17 @@
       "publisher": "LiveCoinWatch",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["price ($0.001237)", "24h volume ($3.6M)", "total cap ($12.41M)", "total supply (10.03B)", "ATH ($0.013537 on 12 Nov 2025)", "ranking (#1015)", "exchange volumes (DigiFinex, Bybit, HIBT)", "liquidity ($86K at ±2%)", "contract address (Solana)"],
+      "data_points_sourced": [
+        "price ($0.001237)",
+        "24h volume ($3.6M)",
+        "total cap ($12.41M)",
+        "total supply (10.03B)",
+        "ATH ($0.013537 on 12 Nov 2025)",
+        "ranking (#1015)",
+        "exchange volumes (DigiFinex, Bybit, HIBT)",
+        "liquidity ($86K at ±2%)",
+        "contract address (Solana)"
+      ],
       "reliability_notes": "Tier 2 third-party market data aggregator. Supply figures may differ slightly from on-chain due to timing."
     },
     {
@@ -565,7 +643,14 @@
       "publisher": "MarketCapOf",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["price ($0.00123719)", "market cap ($9,257,329)", "FDV ($11,601,605)", "circulating supply (7,482,544,314)", "total supply (9,377,383,307)", "ranking (#1194)"],
+      "data_points_sourced": [
+        "price ($0.00123719)",
+        "market cap ($9,257,329)",
+        "FDV ($11,601,605)",
+        "circulating supply (7,482,544,314)",
+        "total supply (9,377,383,307)",
+        "ranking (#1194)"
+      ],
       "reliability_notes": "Tier 2 third-party market data. Provides circulating and total supply figures. Total supply (9.37B) differs from max supply (11B) suggesting not all tokens minted yet."
     },
     {
@@ -578,7 +663,12 @@
       "publisher": "Hugging Face",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["0 public models", "2 datasets (enkidu-trajectories-raw: 721 downloads, 12 likes; babylon-game-data: 12 downloads, 1 like)", "3 team members listed (sayo/wtfsayo, Shaw/shawmakesmagic, Dev/revlentless)", "no Spaces"],
+      "data_points_sourced": [
+        "0 public models",
+        "2 datasets (enkidu-trajectories-raw: 721 downloads, 12 likes; babylon-game-data: 12 downloads, 1 like)",
+        "3 team members listed (sayo/wtfsayo, Shaw/shawmakesmagic, Dev/revlentless)",
+        "no Spaces"
+      ],
       "reliability_notes": "Tier 1 direct source. Minimal HuggingFace presence -- 2 datasets, no models. Activity limited."
     },
     {
@@ -591,7 +681,12 @@
       "publisher": "JT Consulting & Media",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Shaw Walters background", "vision for ElizaOS", "a16z backing mentioned (NOTE: misleading -- a16z did not invest)", "future outlook"],
+      "data_points_sourced": [
+        "Shaw Walters background",
+        "vision for ElizaOS",
+        "a16z backing mentioned (NOTE: misleading -- a16z did not invest)",
+        "future outlook"
+      ],
       "reliability_notes": "Tier 3 interview. Contains some inaccuracies (implies a16z backing which is incorrect). Useful for founder vision and quotes."
     },
     {
@@ -604,7 +699,19 @@
       "publisher": "Crypto.com",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["project overview", "launch date (October 2024)", "initial fundraise ($75K goal)", "whitepaper date (January 2025)", "rebranding date (28 Jan 2025)", "pre-swap circulating supply (1.1B)", "pre-swap ATH ($2.45 on 2 Jan 2025)", "governance model", "Layer 1 blockchain discussion", "Saga partnership", "risk assessment"],
+      "data_points_sourced": [
+        "project overview",
+        "launch date (October 2024)",
+        "initial fundraise ($75K goal)",
+        "whitepaper date (January 2025)",
+        "rebranding date (28 Jan 2025)",
+        "pre-swap circulating supply (1.1B)",
+        "pre-swap ATH ($2.45 on 2 Jan 2025)",
+        "governance model",
+        "Layer 1 blockchain discussion",
+        "Saga partnership",
+        "risk assessment"
+      ],
       "reliability_notes": "Tier 3 exchange educational content. Generally reliable but data may lag. Useful for historical context."
     },
     {
@@ -617,7 +724,15 @@
       "publisher": "Ventureburn",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["timeline (Oct 2024 launch, Q1 2025 v2 beta, Nov 2025 migration)", "circulating supply (7.48B as of Nov 2025)", "total supply (11B)", "Chainlink CCIP integration", "Questflow $6.5M seed funding", "key risks", "airdrop details (240 Alpha Points)"],
+      "data_points_sourced": [
+        "timeline (Oct 2024 launch, Q1 2025 v2 beta, Nov 2025 migration)",
+        "circulating supply (7.48B as of Nov 2025)",
+        "total supply (11B)",
+        "Chainlink CCIP integration",
+        "Questflow $6.5M seed funding",
+        "key risks",
+        "airdrop details (240 Alpha Points)"
+      ],
       "reliability_notes": "Tier 3 news article. Comprehensive overview with timeline and risk assessment."
     },
     {
@@ -630,7 +745,15 @@
       "publisher": "Decrypt",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["founding story", "Marc AIndreessen AI agent governance", "treasury AUM (~$10M)", "market cap (>$500M at time)", "token surge (1,660%+ since Nov 2024)", "testing phase status", "Eddy Lazzarin acknowledgement"],
+      "data_points_sourced": [
+        "founding story",
+        "Marc AIndreessen AI agent governance",
+        "treasury AUM (~$10M)",
+        "market cap (>$500M at time)",
+        "token surge (1,660%+ since Nov 2024)",
+        "testing phase status",
+        "Eddy Lazzarin acknowledgement"
+      ],
       "reliability_notes": "Tier 3 news article. Early coverage; market cap and AUM figures are historical, not current."
     },
     {
@@ -643,7 +766,14 @@
       "publisher": "Unchained Crypto",
       "date_published": "2025-01-26",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["rebranding announcement date (26 Jan 2025)", "Chris Dixon quote", "market cap ($645.6M at time)", "ticker retention decision", "no new tokens created at rebrand", "a16z's direct request for name change"],
+      "data_points_sourced": [
+        "rebranding announcement date (26 Jan 2025)",
+        "Chris Dixon quote",
+        "market cap ($645.6M at time)",
+        "ticker retention decision",
+        "no new tokens created at rebrand",
+        "a16z's direct request for name change"
+      ],
       "reliability_notes": "Tier 3 credible crypto news. Direct quotes from a16z's Chris Dixon. Factual reporting."
     },
     {
@@ -656,7 +786,14 @@
       "publisher": "Decrypt",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["memory injection vulnerability details", "attack vector (Sybil attacks via fake social accounts)", "lead researcher (Atharv Singh Patlan, Princeton)", "CrAIBench framework", "Eliza Labs response (Sebastian Quinn: 'no direct updates made')", "authentication improvements claim"],
+      "data_points_sourced": [
+        "memory injection vulnerability details",
+        "attack vector (Sybil attacks via fake social accounts)",
+        "lead researcher (Atharv Singh Patlan, Princeton)",
+        "CrAIBench framework",
+        "Eliza Labs response (Sebastian Quinn: 'no direct updates made')",
+        "authentication improvements claim"
+      ],
       "reliability_notes": "Tier 2 reporting on peer-reviewed security research. High reliability for vulnerability details."
     },
     {
@@ -669,7 +806,15 @@
       "publisher": "Cointelegraph",
       "date_published": "2025-04-17",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["auto.fun launch date (17 April 2025)", "no-code features", "'fairer than fair' bonding curve model", "Raydium integration", "initial launch partners (FightFi, Secret, Sigma, Astra)", "Shaw Walters quote on democratising access", "50% token pre-reserve mechanism"],
+      "data_points_sourced": [
+        "auto.fun launch date (17 April 2025)",
+        "no-code features",
+        "'fairer than fair' bonding curve model",
+        "Raydium integration",
+        "initial launch partners (FightFi, Secret, Sigma, Astra)",
+        "Shaw Walters quote on democratising access",
+        "50% token pre-reserve mechanism"
+      ],
       "reliability_notes": "Tier 3 major crypto news outlet. Factual reporting on product launch."
     },
     {
@@ -682,7 +827,14 @@
       "publisher": "CryptoBriefing",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["migration overview", "50,000+ agents claim", "$20B+ combined value claim", "Chainlink CCIP cross-chain functionality", "migration portal operational 25 Sept 2025", "third-party audit commitment"],
+      "data_points_sourced": [
+        "migration overview",
+        "50,000+ agents claim",
+        "$20B+ combined value claim",
+        "Chainlink CCIP cross-chain functionality",
+        "migration portal operational 25 Sept 2025",
+        "third-party audit commitment"
+      ],
       "reliability_notes": "Tier 3 crypto news. Reports project claims without independent verification of agent/value figures."
     },
     {
@@ -695,7 +847,13 @@
       "publisher": "PANews",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["supply expansion from 6.6B to 11B (+40%)", "circulating supply increase to 7.4B", "allocation breakdown (Community 75%, SAFT 15%, Team 10%, Liquidity 5.5%, Foundation 4.5%, Ecosystem 2.5%, POL 2.5%)", "607M tokens for liquidity", "275M tokens for POL"],
+      "data_points_sourced": [
+        "supply expansion from 6.6B to 11B (+40%)",
+        "circulating supply increase to 7.4B",
+        "allocation breakdown (Community 75%, SAFT 15%, Team 10%, Liquidity 5.5%, Foundation 4.5%, Ecosystem 2.5%, POL 2.5%)",
+        "607M tokens for liquidity",
+        "275M tokens for POL"
+      ],
       "reliability_notes": "Tier 2 research/analysis outlet. Provides the most detailed allocation breakdown found across sources."
     },
     {
@@ -708,7 +866,13 @@
       "publisher": "BlockchainGamerBiz",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Shaw's career path (game dev -> NFTs -> Webaverse -> MagicML -> ElizaOS)", "Webaverse collapse (treasury security breach)", "250+ plugins", "Hyperscape MMORPG project", "self-description as 'comedian and performance artist'"],
+      "data_points_sourced": [
+        "Shaw's career path (game dev -> NFTs -> Webaverse -> MagicML -> ElizaOS)",
+        "Webaverse collapse (treasury security breach)",
+        "250+ plugins",
+        "Hyperscape MMORPG project",
+        "self-description as 'comedian and performance artist'"
+      ],
       "reliability_notes": "Tier 3 interview. First-person account useful for founder background and career history."
     },
     {
@@ -721,7 +885,13 @@
       "publisher": "ZyCrypto, The Block, Blockworks, CryptoBriefing",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Stanford FDCI partnership", "first AI x Web3 Lab at Stanford", "grant exceeding $250K", "Q1 2025 commencement", "3-phase research program (Agent Trust, Multi-Agent Economics, Agent Governance)"],
+      "data_points_sourced": [
+        "Stanford FDCI partnership",
+        "first AI x Web3 Lab at Stanford",
+        "grant exceeding $250K",
+        "Q1 2025 commencement",
+        "3-phase research program (Agent Trust, Multi-Agent Economics, Agent Governance)"
+      ],
       "reliability_notes": "Tier 3 multiple news outlets reporting same partnership. Cross-verified across sources."
     },
     {
@@ -734,7 +904,13 @@
       "publisher": "Phemex",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["circulating supply (7.48B)", "total/max supply (11B)", "market cap (~$88M -- NOTE: likely stale)", "ERC-20 token standard", "Stanford/Chainlink/Doodles partnerships"],
+      "data_points_sourced": [
+        "circulating supply (7.48B)",
+        "total/max supply (11B)",
+        "market cap (~$88M -- NOTE: likely stale)",
+        "ERC-20 token standard",
+        "Stanford/Chainlink/Doodles partnerships"
+      ],
       "reliability_notes": "Tier 2 exchange educational content. Market cap figure ($88M) appears stale and does not match current data ($9.3M). Supply figures consistent with other sources."
     },
     {
@@ -747,7 +923,12 @@
       "publisher": "DAOs.fun",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["DAO description ('first AI VC fund')", "mint address", "VC/Hedgefun DAO classification", "Marc Andreessen AI agent management"],
+      "data_points_sourced": [
+        "DAO description ('first AI VC fund')",
+        "mint address",
+        "VC/Hedgefun DAO classification",
+        "Marc Andreessen AI agent management"
+      ],
       "reliability_notes": "Tier 1 primary source for DAO structure. JavaScript-rendered page limited data extraction."
     },
     {
@@ -760,7 +941,12 @@
       "publisher": "Solana Compass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["ai16z token address (HeLp6...)", "degenai token address", "product list (pmairca, Degen Spartan AI, My Eliza Platform, ElizaOS Framework)", "launch date (October 2024)"],
+      "data_points_sourced": [
+        "ai16z token address (HeLp6...)",
+        "degenai token address",
+        "product list (pmairca, Degen Spartan AI, My Eliza Platform, ElizaOS Framework)",
+        "launch date (October 2024)"
+      ],
       "reliability_notes": "Tier 1 Solana ecosystem directory. Useful for on-chain token addresses and product inventory."
     },
     {
@@ -773,7 +959,11 @@
       "publisher": "GitHub",
       "date_published": "2026-02-27",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["latest commit date (27 Feb 2026)", "latest commit: 'chore: release v2.0.0-alpha.27'", "automated release by github-actions bot"],
+      "data_points_sourced": [
+        "latest commit date (27 Feb 2026)",
+        "latest commit: 'chore: release v2.0.0-alpha.27'",
+        "automated release by github-actions bot"
+      ],
       "reliability_notes": "Tier 1 direct API source. Confirms active development on develop branch."
     },
     {
@@ -786,7 +976,11 @@
       "publisher": "Binance",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Binance support for token swap", "1:6 conversion ratio confirmed", "exchange listing status"],
+      "data_points_sourced": [
+        "Binance support for token swap",
+        "1:6 conversion ratio confirmed",
+        "exchange listing status"
+      ],
       "reliability_notes": "Tier 2 major exchange. Confirms swap ratio and listing status."
     }
   ]

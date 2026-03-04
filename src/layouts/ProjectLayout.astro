@@ -1,13 +1,12 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
-import RadarChart from '../components/RadarChart.astro';
+
 import AllocationBar from '../components/AllocationBar.astro';
 import DonutChart from '../components/DonutChart.astro';
 import MetricCard from '../components/MetricCard.astro';
 import VestingTimeline from '../components/VestingTimeline.astro';
-import CategoryPattern from '../components/CategoryPattern.astro';
-import MeshGradient from '../components/MeshGradient.astro';
+
 import Sparkline from '../components/Sparkline.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
 import ProjectInfoBar from '../components/ProjectInfoBar.astro';
@@ -89,6 +88,7 @@ const projectLinks = {
   whitepaperUrl: r?.identity?.whitepaper_url ?? undefined,
   chain: r?.identity?.chain ?? undefined,
   tokenStandard: r?.tokenomics?.token_standard ?? undefined,
+  contractAddress: r?.tokenomics?.contract_address ?? undefined,
   discordUrl: r?.community?.key_community_channels
     ?.find(c => /discord/i.test(c))?.match(/https?:\/\/\S+/)?.[0] ?? undefined,
   telegramUrl: r?.community?.key_community_channels
@@ -151,7 +151,7 @@ function tierColor(tier: number | null | undefined): string {
 }
 
 // --- Chart data prep ---
-const hasRadarData = !!(r?.freedom_score?.breakdown && Object.values(r.freedom_score.breakdown).some(d => d?.score != null));
+
 
 const hasAllocationData = !!(r?.tokenomics?.distribution?.initial_allocation?.some(a => a.category && a.percentage != null));
 
@@ -189,8 +189,7 @@ if (r?.tokenomics?.distribution?.initial_allocation) {
 }
 const hasVestingTimeline = vestingEvents.length >= 2;
 
-// Category for pattern background
-const categorySlug = (category?.toLowerCase() || 'other') as 'compute' | 'data' | 'inference' | 'agent' | 'platform' | 'storage' | 'other';
+
 
 // Donut center labels
 const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
@@ -210,10 +209,16 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
 >
   <article class="max-w-4xl">
     <header class="mb-10 relative">
-      {/* Category-themed background */}
-      <div class="absolute -inset-x-6 -top-6 bottom-0 -z-10 rounded-xl overflow-hidden">
-        <CategoryPattern category={categorySlug} opacity={0.10} />
-        <MeshGradient variant="subtle" />
+      {/* Project artwork hero */}
+      <div class="relative -mx-4 sm:-mx-6 -mt-6 mb-6 rounded-xl overflow-hidden">
+        <img
+          src={`/images/project-${slug}.webp`}
+          alt=""
+          class="w-full h-48 sm:h-56 object-cover"
+          loading="eager"
+          onerror="this.parentElement.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-secondary)] via-transparent to-transparent" />
       </div>
 
       <div class="flex flex-wrap items-center gap-3 mb-4">
@@ -232,12 +237,7 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
       </div>
       <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">{description}</p>
 
-      <!-- Freedom Score: radar chart + full breakdown when research exists, simple bar otherwise -->
-      {hasRadarData && r!.freedom_score!.breakdown && (
-        <div class="mb-4">
-          <RadarChart breakdown={r!.freedom_score!.breakdown} />
-        </div>
-      )}
+      <!-- Freedom Score breakdown -->
       {hasFreedomBreakdown ? (
         <FreedomScoreBreakdown freedomScore={r!.freedom_score} />
       ) : (

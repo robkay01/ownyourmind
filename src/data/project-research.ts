@@ -291,6 +291,8 @@ export interface TokenomicsInfo {
   ticker?: string | null;
   /** Token standard (ERC-20, SPL, native, etc.) */
   token_standard?: string | null;
+  /** Primary token contract address (hex for EVM, base58 for Solana, null for native L1 coins) */
+  contract_address?: string | null;
   /** Primary function of the token */
   token_type?: 'utility' | 'governance' | 'both' | 'work' | 'other' | null;
   /** List of things the token is used for */

@@ -274,7 +274,7 @@
       "initial_allocation": [
         {
           "category": "Emissions (Worker & Staker Rewards)",
-          "percentage": 37.50,
+          "percentage": 37.5,
           "vesting_schedule": "300M IO distributed as hourly rewards over 20 years, disinflationary schedule",
           "cliff": "None — emissions began at TGE",
           "notes": "Starting at 8% annual inflation, decreasing ~1.02% per month until full supply reached. Daily emission rate ~103,000 IO (as of Q1 2025)."
@@ -288,7 +288,7 @@
         },
         {
           "category": "Early Backers: Seed Sale",
-          "percentage": 12.50,
+          "percentage": 12.5,
           "vesting_schedule": "2-year linear monthly vesting after cliff",
           "cliff": "12-month cliff from TGE",
           "notes": "100M IO tokens. Unlock begins June/July 2025."
@@ -309,14 +309,14 @@
         },
         {
           "category": "Community",
-          "percentage": 10.00,
+          "percentage": 10.0,
           "vesting_schedule": "Monthly linear vesting over 3 years starting January 2025",
           "cliff": "TGE unlock of 22.61%",
           "notes": "80M IO tokens. Includes Ignition/Galxe airdrop (32.5M tokens). Next unlock: 13.29M IO on March 11, 2026."
         },
         {
           "category": "Binance Launchpool",
-          "percentage": 2.50,
+          "percentage": 2.5,
           "vesting_schedule": "Fully unlocked at TGE",
           "cliff": "None",
           "notes": "20M IO tokens distributed June 7-10, 2024 via BNB/FDUSD staking pools"
@@ -374,7 +374,8 @@
       "notes": "Price down 98.3% from ATH. Token trades across 34 exchanges with 24 tickers. Primary pair IO/USDT. Market cap figures vary by source due to circulating supply discrepancy. CryptoRank: $18.24M mcap (using 168.77M circulating), DropsTab: $31.98M mcap (using 298.34M circulating)."
     },
     "token_model_classification": "Disinflationary utility token with work-reward emissions. Fixed 800M max supply with 20-year emission tail. Insider-heavy genesis allocation (34% to seed/Series A/team) with 12-month cliffs and 2-3 year vesting. Community share grows to ~50% at full emission.",
-    "tokenomics_notes": "Major unlock event began July 2025 when seed, Series A, and team tokens started linear vesting. This creates sustained sell pressure over 2-3 years. Tokenomist reports no active burn or buyback programme despite Nansen report mentioning one. The disinflationary emission model is well-designed in theory but real yield for stakers is difficult to calculate given opaque staking ratios and the absence of publicly reported APY figures."
+    "tokenomics_notes": "Major unlock event began July 2025 when seed, Series A, and team tokens started linear vesting. This creates sustained sell pressure over 2-3 years. Tokenomist reports no active burn or buyback programme despite Nansen report mentioning one. The disinflationary emission model is well-designed in theory but real yield for stakers is difficult to calculate given opaque staking ratios and the absence of publicly reported APY figures.",
+    "contract_address": "BZLbGTNCSFfoth2GYDtwr7e4imWzpR5jqcUuGEwr646K"
   },
   "participation": {
     "methods": [
@@ -457,7 +458,13 @@
       "verified_gpus_march_2025": 327000,
       "cluster_ready_march_2025": 5350,
       "countries": 138,
-      "gpu_models_available": ["NVIDIA H100", "NVIDIA A100", "RTX 4090", "RTX 3090", "RTX 3080"],
+      "gpu_models_available": [
+        "NVIDIA H100",
+        "NVIDIA A100",
+        "RTX 4090",
+        "RTX 3090",
+        "RTX 3080"
+      ],
       "cpus_available": 80000
     }
   },
@@ -583,7 +590,13 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["tagline", "GPU count", "CPU count", "cost savings claims", "product offerings"],
+      "data_points_sourced": [
+        "tagline",
+        "GPU count",
+        "CPU count",
+        "cost savings claims",
+        "product offerings"
+      ],
       "reliability_notes": "Primary source. Marketing-oriented — claims should be cross-referenced."
     },
     {
@@ -596,7 +609,11 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Leonardo.ai case study", "partnership details", "GPU vs CPU content"],
+      "data_points_sourced": [
+        "Leonardo.ai case study",
+        "partnership details",
+        "GPU vs CPU content"
+      ],
       "reliability_notes": "Primary source. Leonardo.ai case study provides third-party validation of cost savings claims."
     },
     {
@@ -609,7 +626,12 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["founding story", "origin from quantitative trading", "Ray.io integration", "cost per A100"],
+      "data_points_sourced": [
+        "founding story",
+        "origin from quantitative trading",
+        "Ray.io integration",
+        "cost per A100"
+      ],
       "reliability_notes": "Primary source. Provides historical context for project genesis."
     },
     {
@@ -622,7 +644,12 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["7-layer architecture", "tech stack details", "IO-SDK Ray fork", "on-chain vs off-chain components"],
+      "data_points_sourced": [
+        "7-layer architecture",
+        "tech stack details",
+        "IO-SDK Ray fork",
+        "on-chain vs off-chain components"
+      ],
       "reliability_notes": "Primary source. Detailed technical architecture. Confirms centralised backend infrastructure."
     },
     {
@@ -635,7 +662,12 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["500M genesis supply", "800M max supply", "5 allocation categories", "circulating supply definition"],
+      "data_points_sourced": [
+        "500M genesis supply",
+        "800M max supply",
+        "5 allocation categories",
+        "circulating supply definition"
+      ],
       "reliability_notes": "Primary source. Percentages in embedded images not extractable — supplemented by third-party sources."
     },
     {
@@ -648,7 +680,12 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["14-day unstaking cooldown", "no auto-compounding", "no extra rewards for overstaking", "staking contract address"],
+      "data_points_sourced": [
+        "14-day unstaking cooldown",
+        "no auto-compounding",
+        "no extra rewards for overstaking",
+        "staking contract address"
+      ],
       "reliability_notes": "Primary source. Notably lacks APY figures and specific minimum stake amounts."
     },
     {
@@ -661,7 +698,11 @@
       "publisher": "io.net",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["mission statement", "DePIN positioning", "product list"],
+      "data_points_sourced": [
+        "mission statement",
+        "DePIN positioning",
+        "product list"
+      ],
       "reliability_notes": "Primary source. Marketing-oriented. No team details despite being 'About Us' page."
     },
     {
@@ -674,7 +715,12 @@
       "publisher": "io.net",
       "date_published": "2025-06-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$20M+ annualised revenue", "139K GPU supply", "138+ countries", "70% cost advantage claim"],
+      "data_points_sourced": [
+        "$20M+ annualised revenue",
+        "139K GPU supply",
+        "138+ countries",
+        "70% cost advantage claim"
+      ],
       "reliability_notes": "Primary source. Self-reported revenue — claims 'verifiable on-chain' but no independent verification tool provided."
     },
     {
@@ -687,7 +733,12 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["9 total repos", "187 followers", "US location", "repo details and activity"],
+      "data_points_sourced": [
+        "9 total repos",
+        "187 followers",
+        "US location",
+        "repo details and activity"
+      ],
       "reliability_notes": "Primary source. Directly fetched and verified. Only 9 public repos — core platform code not open source."
     },
     {
@@ -700,7 +751,13 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["75 stars", "49 forks", "90 commits", "v2.1.0 latest release", "closed-source binary distribution"],
+      "data_points_sourced": [
+        "75 stars",
+        "49 forks",
+        "90 commits",
+        "v2.1.0 latest release",
+        "closed-source binary distribution"
+      ],
       "reliability_notes": "Primary source. Confirms worker software is distributed as pre-compiled binary, not source code."
     },
     {
@@ -713,7 +770,13 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["44 stars", "35 forks", "33 commits", "Shell/CUDA composition", "supported platforms"],
+      "data_points_sourced": [
+        "44 stars",
+        "35 forks",
+        "33 commits",
+        "Shell/CUDA composition",
+        "supported platforms"
+      ],
       "reliability_notes": "Primary source. Setup automation script is open but not the core worker software."
     },
     {
@@ -726,7 +789,14 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["MIT license", "100 commits", "17 releases", "Intel TDX + NVIDIA H200 attestation", "Sigstore signing", "SLSA Level 3"],
+      "data_points_sourced": [
+        "MIT license",
+        "100 commits",
+        "17 releases",
+        "Intel TDX + NVIDIA H200 attestation",
+        "Sigstore signing",
+        "SLSA Level 3"
+      ],
       "reliability_notes": "Primary source. Most technically sophisticated public repo. Demonstrates serious security engineering for confidential computing."
     },
     {
@@ -739,7 +809,12 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["552 commits", "MDX 99.7%", "Mintlify-based", "1 star"],
+      "data_points_sourced": [
+        "552 commits",
+        "MDX 99.7%",
+        "Mintlify-based",
+        "1 star"
+      ],
       "reliability_notes": "Primary source. Active documentation maintenance."
     },
     {
@@ -752,7 +827,16 @@
       "publisher": "Tokenomist",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["800M total supply", "298.34M circulating (37.29%)", "$0.108 price", "$32.13M mcap", "$86.16M FDV", "allocation percentages", "next unlock March 11 2026", "$30M raised"],
+      "data_points_sourced": [
+        "800M total supply",
+        "298.34M circulating (37.29%)",
+        "$0.108 price",
+        "$32.13M mcap",
+        "$86.16M FDV",
+        "allocation percentages",
+        "next unlock March 11 2026",
+        "$30M raised"
+      ],
       "reliability_notes": "Tier 2 — reputable token unlock tracker. Circulating supply figure higher than CryptoRank's, likely includes all unlocked tokens regardless of transfer restrictions."
     },
     {
@@ -765,7 +849,12 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["168.77M circulating (21.1%)", "vesting categories breakdown", "next unlock date", "category-level lock/unlock status"],
+      "data_points_sourced": [
+        "168.77M circulating (21.1%)",
+        "vesting categories breakdown",
+        "next unlock date",
+        "category-level lock/unlock status"
+      ],
       "reliability_notes": "Tier 2 — reputable aggregator. Uses more conservative circulating supply definition than Tokenomist."
     },
     {
@@ -778,7 +867,17 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$0.108 price", "$18.24M mcap", "$86.44M FDV", "$4.62M 24h volume", "ATH $6.43 (June 12, 2024)", "ATL $0.0917 (Feb 6, 2026)", "34 exchanges", "24 tickers", "Market rank #727"],
+      "data_points_sourced": [
+        "$0.108 price",
+        "$18.24M mcap",
+        "$86.44M FDV",
+        "$4.62M 24h volume",
+        "ATH $6.43 (June 12, 2024)",
+        "ATL $0.0917 (Feb 6, 2026)",
+        "34 exchanges",
+        "24 tickers",
+        "Market rank #727"
+      ],
       "reliability_notes": "Tier 2 — cross-referenced with DropsTab and search results. ATH/ATL dates confirmed across multiple sources."
     },
     {
@@ -791,7 +890,16 @@
       "publisher": "DropsTab",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$0.109 price", "$31.98M mcap (rank #709)", "$87.20M FDV (rank #397)", "$5.82M 24h volume", "ATH $6.44", "ATL $0.09078", "contract address confirmed", "exchange list"],
+      "data_points_sourced": [
+        "$0.109 price",
+        "$31.98M mcap (rank #709)",
+        "$87.20M FDV (rank #397)",
+        "$5.82M 24h volume",
+        "ATH $6.44",
+        "ATL $0.09078",
+        "contract address confirmed",
+        "exchange list"
+      ],
       "reliability_notes": "Tier 2 — confirms data from CryptoRank with minor variation in ATH ($6.44 vs $6.43) likely due to exchange data differences."
     },
     {
@@ -804,7 +912,13 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$30M Series A", "March 5, 2024 date", "Hack VC lead", "investor list (24 total)", "Binance Launchpool details"],
+      "data_points_sourced": [
+        "$30M Series A",
+        "March 5, 2024 date",
+        "Hack VC lead",
+        "investor list (24 total)",
+        "Binance Launchpool details"
+      ],
       "reliability_notes": "Tier 2 — funding data cross-referenced with The Block and CoinCarp."
     },
     {
@@ -817,7 +931,21 @@
       "publisher": "Nansen",
       "date_published": "2025-03-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["327K verified GPUs (March 2025)", "5,350 cluster-ready", "445% YoY GPU growth", "7.11M compute hours (Jan 2025)", "1.39M compute hours (Sep 2024)", "$18.4M annualised TNE (Nov 2024)", "$64K daily average TNE (Jan 2025)", "January 2025 monthly revenue >$1M", "85+ partnerships", "emission model details", "competitive analysis vs Akash", "co-staking marketplace details", "IO Intelligence platform"],
+      "data_points_sourced": [
+        "327K verified GPUs (March 2025)",
+        "5,350 cluster-ready",
+        "445% YoY GPU growth",
+        "7.11M compute hours (Jan 2025)",
+        "1.39M compute hours (Sep 2024)",
+        "$18.4M annualised TNE (Nov 2024)",
+        "$64K daily average TNE (Jan 2025)",
+        "January 2025 monthly revenue >$1M",
+        "85+ partnerships",
+        "emission model details",
+        "competitive analysis vs Akash",
+        "co-staking marketplace details",
+        "IO Intelligence platform"
+      ],
       "reliability_notes": "Tier 2 — Nansen is a reputable on-chain analytics firm. Free research report with detailed quantitative analysis. Most comprehensive independent analysis found."
     },
     {
@@ -830,7 +958,13 @@
       "publisher": "ChainCatcher (republished)",
       "date_published": "2024-03-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Multicoin led seed round", "57,000+ compute hours at investment time", "market opportunity analysis", "team assessment", "Ray/Ludwig/Kubernetes stack"],
+      "data_points_sourced": [
+        "Multicoin led seed round",
+        "57,000+ compute hours at investment time",
+        "market opportunity analysis",
+        "team assessment",
+        "Ray/Ludwig/Kubernetes stack"
+      ],
       "reliability_notes": "Tier 2 — investor thesis from lead seed investor. Inherently biased (they have financial interest) but provides validated early metrics."
     },
     {
@@ -843,7 +977,18 @@
       "publisher": "DePIN Scan",
       "date_published": "2025-03-06",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Q4 2024: $3.1M revenue", "565% QoQ growth", "$12.5M annualised", "7,600 avg daily GPUs", "1,200 avg daily CPUs", "Q1 2025: 9.3M IO planned distribution", "103K IO daily emission", "13 new partnerships", "Dell Technologies", "market cap doubled Q3->Q4"],
+      "data_points_sourced": [
+        "Q4 2024: $3.1M revenue",
+        "565% QoQ growth",
+        "$12.5M annualised",
+        "7,600 avg daily GPUs",
+        "1,200 avg daily CPUs",
+        "Q1 2025: 9.3M IO planned distribution",
+        "103K IO daily emission",
+        "13 new partnerships",
+        "Dell Technologies",
+        "market cap doubled Q3->Q4"
+      ],
       "reliability_notes": "Tier 2 — DePIN Scan is a DePIN-focused data aggregator. Data likely sourced from io.net's own reporting."
     },
     {
@@ -856,7 +1001,11 @@
       "publisher": "The Block",
       "date_published": "2024-03-06",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$1B FDV at Series A", "$500M valuation for earlier tranche", "SAFE + token warrant structure"],
+      "data_points_sourced": [
+        "$1B FDV at Series A",
+        "$500M valuation for earlier tranche",
+        "SAFE + token warrant structure"
+      ],
       "reliability_notes": "Tier 1 news source — The Block is a reputable crypto publication."
     },
     {
@@ -869,7 +1018,14 @@
       "publisher": "The Block, CoinTelegraph, CryptoPotato, Blocmates, Binance",
       "date_published": "2024-06-09",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Shadid resigned June 9, 2024", "2 days before token launch", "Tory Green replacement", "allegations acknowledged but unspecified", "4-year token lock", "1M IO donated to Foundation"],
+      "data_points_sourced": [
+        "Shadid resigned June 9, 2024",
+        "2 days before token launch",
+        "Tory Green replacement",
+        "allegations acknowledged but unspecified",
+        "4-year token lock",
+        "1M IO donated to Foundation"
+      ],
       "reliability_notes": "Multiple Tier 1-2 news sources confirm core facts. Shadid's own statement confirms 'allegations regarding my past' without detailing them."
     },
     {
@@ -882,7 +1038,13 @@
       "publisher": "Chainwire, Decrypt",
       "date_published": "2025-04-23",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Gaurav Sharma CEO appointment", "Tory Green Foundation Chair role", "Basem Oubah COO role", "Foundation grants programme", "Sharma background details"],
+      "data_points_sourced": [
+        "Gaurav Sharma CEO appointment",
+        "Tory Green Foundation Chair role",
+        "Basem Oubah COO role",
+        "Foundation grants programme",
+        "Sharma background details"
+      ],
       "reliability_notes": "Press release distributed via Chainwire — company-controlled messaging but factual leadership data confirmed by Decrypt republication."
     },
     {
@@ -895,7 +1057,11 @@
       "publisher": "Unchained",
       "date_published": "2024-05-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Shkreli questioned GPU count legitimacy", "1.8M fake GPUs attempted connection", "io.net suggested Shkreli had competing product motives"],
+      "data_points_sourced": [
+        "Shkreli questioned GPU count legitimacy",
+        "1.8M fake GPUs attempted connection",
+        "io.net suggested Shkreli had competing product motives"
+      ],
       "reliability_notes": "Tier 2 — podcast discussion. Multiple sources confirm Shkreli's involvement in questioning metrics."
     },
     {
@@ -908,7 +1074,13 @@
       "publisher": "Medium",
       "date_published": "2024-04-28",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Attack timeline", "1.8M fake GPUs", "API vulnerability details", "PoW mechanism introduction", "120+ hours remediation"],
+      "data_points_sourced": [
+        "Attack timeline",
+        "1.8M fake GPUs",
+        "API vulnerability details",
+        "PoW mechanism introduction",
+        "120+ hours remediation"
+      ],
       "reliability_notes": "Primary source — official post-mortem. Could not fetch page content (403), but data confirmed through multiple news reports citing this source."
     },
     {
@@ -921,7 +1093,10 @@
       "publisher": "io.net blog",
       "date_published": "2025-01-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["SOC 2 compliance achieved", "enterprise security controls validated"],
+      "data_points_sourced": [
+        "SOC 2 compliance achieved",
+        "enterprise security controls validated"
+      ],
       "reliability_notes": "Primary source — company announcement. SOC 2 confirmed by third-party references."
     },
     {
@@ -934,7 +1109,12 @@
       "publisher": "Invezz, Finbold, io.net Medium, CoinCheckup, DePIN Scan",
       "date_published": "2025-02-19",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Co-staking mechanism details", "marketplace filtering options", "reward sharing model", "February 2025 launch"],
+      "data_points_sourced": [
+        "Co-staking mechanism details",
+        "marketplace filtering options",
+        "reward sharing model",
+        "February 2025 launch"
+      ],
       "reliability_notes": "Multiple sources confirm co-staking launch and mechanics."
     },
     {
@@ -947,7 +1127,11 @@
       "publisher": "SolanaFloor, KuCoin, Phemex, Blockster, BitNewsBot",
       "date_published": "2025-09-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$20M+ total network earnings", "49M IO tokens distributed", "101,000+ unique workers"],
+      "data_points_sourced": [
+        "$20M+ total network earnings",
+        "49M IO tokens distributed",
+        "101,000+ unique workers"
+      ],
       "reliability_notes": "Multiple sources confirm cumulative earnings milestone. Original data from io.net."
     },
     {
@@ -960,7 +1144,18 @@
       "publisher": "blocmates",
       "date_published": "2025-02-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["320K+ verified GPUs", "80K CPUs", "7K cluster-ready", "mesh VPN architecture", "IO Intelligence details", "Dell partnership", "Nillion partnership", "SOC 2 compliance", "payment model details", "competitive positioning"],
+      "data_points_sourced": [
+        "320K+ verified GPUs",
+        "80K CPUs",
+        "7K cluster-ready",
+        "mesh VPN architecture",
+        "IO Intelligence details",
+        "Dell partnership",
+        "Nillion partnership",
+        "SOC 2 compliance",
+        "payment model details",
+        "competitive positioning"
+      ],
       "reliability_notes": "Tier 3 — crypto media outlet. Comprehensive overview but likely sourced primarily from io.net's own materials."
     },
     {
@@ -973,7 +1168,11 @@
       "publisher": "Solscan",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Contract address confirmed", "84,720 token holders", "Solana SPL token standard"],
+      "data_points_sourced": [
+        "Contract address confirmed",
+        "84,720 token holders",
+        "Solana SPL token standard"
+      ],
       "reliability_notes": "Primary on-chain data source. Direct fetch returned 403 but token data confirmed through search results showing Solscan page details."
     },
     {
@@ -986,7 +1185,9 @@
       "publisher": "X/Twitter",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["447.2K followers"],
+      "data_points_sourced": [
+        "447.2K followers"
+      ],
       "reliability_notes": "Primary source for social following metric."
     },
     {
@@ -999,7 +1200,10 @@
       "publisher": "CryptoSlate",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Shadid background details", "career history"],
+      "data_points_sourced": [
+        "Shadid background details",
+        "career history"
+      ],
       "reliability_notes": "Tier 3 — aggregated profile data."
     },
     {
@@ -1012,7 +1216,11 @@
       "publisher": "IQ.wiki",
       "date_published": null,
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["Basem Oubah education", "career timeline", "Dubai location"],
+      "data_points_sourced": [
+        "Basem Oubah education",
+        "career timeline",
+        "Dubai location"
+      ],
       "reliability_notes": "Tier 3 — wiki-style profile. Cross-referenced with LinkedIn data."
     },
     {
@@ -1025,7 +1233,10 @@
       "publisher": "DePIN Scan",
       "date_published": "2025-05-23",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["82.6% quarterly revenue increase", "$5.7M quarterly revenue"],
+      "data_points_sourced": [
+        "82.6% quarterly revenue increase",
+        "$5.7M quarterly revenue"
+      ],
       "reliability_notes": "Tier 3 — DePIN-focused aggregator. Data likely from io.net reporting."
     },
     {
@@ -1038,7 +1249,9 @@
       "publisher": "Daily Political",
       "date_published": "2026-03-01",
       "date_accessed": "2026-03-02",
-      "data_points_sourced": ["$31.92M self-reported market cap"],
+      "data_points_sourced": [
+        "$31.92M self-reported market cap"
+      ],
       "reliability_notes": "Tier 3 — confirms market cap range from other sources."
     }
   ]

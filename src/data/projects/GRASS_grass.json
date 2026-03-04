@@ -32,7 +32,6 @@
     },
     "auto_refresh_log": []
   },
-
   "identity": {
     "name": "Grass",
     "ticker": "GRASS",
@@ -49,7 +48,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -115,7 +113,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Grass operates a distributed bandwidth-sharing network where users run lightweight nodes (browser extension, desktop app, or Android mobile app) that contribute unused internet bandwidth to scrape public web data. The architecture comprises: (1) Grass Nodes -- user-operated lightweight clients that relay web traffic using residential IP addresses; (2) Routers -- intermediary infrastructure that connects nodes to validators, maintains network accountability, and relays bandwidth; (3) Validators -- process and verify web transactions from routers, generating zero-knowledge proofs to checkpoint session data on-chain; (4) ZK Processor -- batches validity proofs of session data and submits them to the L1 blockchain (Solana); (5) Grass Data Ledger -- an immutable data structure hosting full datasets and linking data to on-chain proofs; (6) Edge Embedding Models -- convert unstructured web data into structured formats through preprocessing (cleaning, normalising, structuring) for AI compatibility. The system is building toward a Sovereign Data Rollup on Solana that provides verified, structured web data with full provenance tracking. Live Context Retrieval (LCR) enables real-time data retrieval for AI models -- when a prompt is sent to an AI model, Grass retrieves relevant current information from the web to supplement the prompt before it reaches the model.",
     "consensus_mechanism": "Not applicable in the traditional sense. Grass is not a standalone blockchain but a data network settling on Solana. Validation is performed by validators who generate ZK proofs of web scraping sessions, which are then batched and submitted to Solana L1. Currently transitioning from a single centralised validator to a decentralised validator committee.",
@@ -128,7 +125,9 @@
       "Browser extension / desktop app / Android app infrastructure for node operation",
       "Zero-knowledge proof generation for data verification"
     ],
-    "smart_contract_languages": ["Rust (Solana/Anchor framework)"],
+    "smart_contract_languages": [
+      "Rust (Solana/Anchor framework)"
+    ],
     "open_source": false,
     "license": "No open-source license. Wynd-Network GitHub organisation has 0 public repositories. GrassFoundation GitHub account has 1 repo (GrassDownload, HTML). Core protocol code, node software, router software, and validator software are all closed-source. The Cantina security competition (June 2024) reviewed three program repositories (router-staking, grass-token, token-airdrop) suggesting Solana programs exist but are not publicly available. The VALID dataset collaboration with LAION and Ontocord is open (CC-BY). ClipTagger-12b model is Apache-2.0.",
     "github_metrics": {
@@ -152,7 +151,6 @@
     ],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "Grass",
     "ticker": "GRASS",
@@ -270,9 +268,9 @@
       "data_snapshot_date": "2026-03-03"
     },
     "token_model_classification": "Utility and governance token with fixed 1B supply and vesting-based unlock schedule. No inflationary emissions. Value accrual tied to LCR call demand (every AI query requires GRASS), staking delegation to routers, and data marketplace fees. The Grass Foundation collects all customer revenue and the GRASS token is described as 'the primary vehicle for value accrual.'",
-    "tokenomics_notes": "The 47.2% insider allocation (25.2% early investors + 22% contributors) with cliff vesting is significant. The October 2025 cliff unlock released ~181M tokens (50% of early investor allocation). Contributors' cliff also reached in October 2025. Monthly linear unlocks continue through 2028-2029. Airdrop One was genuinely large-scale (2.8M recipients, 10% of supply) with no lockup. Season 2 allocates 17% for future incentives. The 22.8% Foundation allocation is controlled by the Grass Foundation entity. No burn mechanism exists. Token price is -92.3% from ATH ($3.89 on Nov 8, 2024) but has recovered +80% from ATL ($0.167 on Feb 6, 2026). Volume-to-market-cap ratio of 0.30 suggests reasonable liquidity."
+    "tokenomics_notes": "The 47.2% insider allocation (25.2% early investors + 22% contributors) with cliff vesting is significant. The October 2025 cliff unlock released ~181M tokens (50% of early investor allocation). Contributors' cliff also reached in October 2025. Monthly linear unlocks continue through 2028-2029. Airdrop One was genuinely large-scale (2.8M recipients, 10% of supply) with no lockup. Season 2 allocates 17% for future incentives. The 22.8% Foundation allocation is controlled by the Grass Foundation entity. No burn mechanism exists. Token price is -92.3% from ATH ($3.89 on Nov 8, 2024) but has recovered +80% from ATL ($0.167 on Feb 6, 2026). Volume-to-market-cap ratio of 0.30 suggests reasonable liquidity.",
+    "contract_address": "Grass7B4RdKfBCjTKgSqnXkqjwiGvQyFbuSCUJr3XXjs"
   },
-
   "participation": {
     "methods": [
       {
@@ -282,7 +280,11 @@
         "minimum_capital_usd": 0,
         "technical_skill_required": "none",
         "estimated_returns": "Variable -- based on bandwidth contributed, uptime, and geographic location. Historical context: Season 1 distributed 100M GRASS across 2.8M users. 5,000 points ≈ 50 GRASS tokens.",
-        "barriers_to_entry": ["Requires residential IP address (data centre IPs not eligible)", "Android mobile app launched July 2025; iOS not yet available", "Rewards are epoch-based and retrospective, not real-time payments"],
+        "barriers_to_entry": [
+          "Requires residential IP address (data centre IPs not eligible)",
+          "Android mobile app launched July 2025; iOS not yet available",
+          "Rewards are epoch-based and retrospective, not real-time payments"
+        ],
         "guide_available": true,
         "guide_url": "https://www.grass.io/download"
       },
@@ -293,7 +295,11 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "basic",
         "estimated_returns": "~7.49% APR (Stakin estimate, March 2026). Variable based on router performance and network conditions.",
-        "barriers_to_entry": ["Must hold GRASS tokens", "Must choose a router operator (router performance varies)", "7-day lockup when unstaking"],
+        "barriers_to_entry": [
+          "Must hold GRASS tokens",
+          "Must choose a router operator (router performance varies)",
+          "7-day lockup when unstaking"
+        ],
         "guide_available": true,
         "guide_url": "https://stakin.com/blog/how-to-stake-grass-grass-with-phantom-wallet"
       },
@@ -304,7 +310,11 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "advanced",
         "estimated_returns": "Commission on delegator rewards plus direct router rewards from the 30M Router Rewards allocation",
-        "barriers_to_entry": ["Router operation details not fully public", "Requires infrastructure investment", "Competition from established router operators"],
+        "barriers_to_entry": [
+          "Router operation details not fully public",
+          "Requires infrastructure investment",
+          "Competition from established router operators"
+        ],
         "guide_available": false,
         "guide_url": ""
       },
@@ -315,7 +325,11 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "intermediate",
         "estimated_returns": "N/A -- consumer/enterprise usage",
-        "barriers_to_entry": ["Must go through vetting process and sign service agreement", "Activity monitored for compliance", "Pricing not publicly disclosed"],
+        "barriers_to_entry": [
+          "Must go through vetting process and sign service agreement",
+          "Activity monitored for compliance",
+          "Pricing not publicly disclosed"
+        ],
         "guide_available": false,
         "guide_url": ""
       },
@@ -326,7 +340,10 @@
         "minimum_capital_usd": null,
         "technical_skill_required": "basic",
         "estimated_returns": "N/A -- governance participation",
-        "barriers_to_entry": ["Must hold GRASS tokens", "Governance maturity unclear -- no public governance forum or proposal history found"],
+        "barriers_to_entry": [
+          "Must hold GRASS tokens",
+          "Governance maturity unclear -- no public governance forum or proposal history found"
+        ],
         "guide_available": false,
         "guide_url": ""
       }
@@ -340,7 +357,6 @@
       "grants_url": ""
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": 8300000,
@@ -358,7 +374,6 @@
     "metrics_date": "2026-03-03",
     "usage_notes": "8.3M monthly active node operators (30-day window) with 1M+ concurrent connections. 3 PB daily data retrieval. Network spans 190+ countries. Over 2.8M unique wallets received Airdrop One. ~20 enterprise customers including nonprofits, universities, and 'the largest AI labs.' VALID dataset collaboration (with LAION and Ontocord) produced 14TB multimodal dataset from 720K CC-BY YouTube videos with 30M audio snippets and 15M images. ClipTagger-12b model (12B parameter VLM developed with Inference.net) benchmarks favourably against GPT-4.1 and Claude 4 Sonnet at 15x lower cost. Installed on two-thirds of Solana Saga phones. Android app launched July 2025 with 3x points bonus. Note: DeFiLlama lists Grass with $0 TVL as it is a DePIN/data protocol, not a DeFi protocol."
   },
-
   "community": {
     "discord_members": 466819,
     "telegram_members": null,
@@ -376,7 +391,6 @@
     "sentiment_summary": "Large and active community driven by the accessible bandwidth-sharing model (anyone with internet can participate) and airdrop incentives. 8.3M monthly active nodes demonstrates genuine mass adoption. CoinGecko sentiment is 77% positive. However, token price is -92% from ATH ($3.89), which has dampened sentiment. The airdrop model attracts both genuine participants and farmers. Discord at 467K members is substantial but likely inflated by airdrop hunters. Community enthusiasm around the AI/DePIN narrative remains strong.",
     "community_notes": "Community grew rapidly from the simple value proposition: install an app, earn passive income from unused bandwidth. The referral programme (20%/10%/5% tiered referral rewards) drove viral growth. Season 1 airdrop to 2.8M recipients was genuinely wide distribution. The 500-point minimum threshold was accessible (roughly 100+ hours of uptime). Android launch in July 2025 expanded access beyond desktop users. Community-built Docker images and bot scripts on GitHub (unofficial) indicate technical engagement despite closed-source core code."
   },
-
   "freedom_score": {
     "total_score": 37,
     "max_possible": 100,
@@ -415,7 +429,6 @@
     "freedom_grade": "F",
     "freedom_summary": "Grass scores 37/100 (Grade F), reflecting a project with genuinely impressive distributed infrastructure at the node level (8.3M participants) but fundamentally centralised control over data, revenue, validation, and governance. The network achieves remarkable scale -- millions of nodes across 190 countries contributing petabytes of data daily -- but the Grass Foundation and Wynd Labs control who accesses the data, how revenue flows, and all protocol decisions. Code is entirely closed-source (0 public repos). Governance exists in documentation but not in practice. Users contribute bandwidth but have no sovereignty over the data produced or the value captured. The wide airdrop distribution (2.8M recipients) and permissionless node participation are genuine positives that prevent a lower score. The 47.2% insider token allocation and team-controlled 22.8% Foundation allocation further concentrate control. This is a well-executed centralised data business with a token incentive layer and impressive community distribution, but it is not currently a decentralised network in any meaningful governance or data sovereignty sense."
   },
-
   "assessment": {
     "what_works_today": [
       "Genuinely massive network scale: 8.3M monthly active nodes across 190+ countries with 1M+ concurrent connections is among the largest DePIN networks by participant count",
@@ -472,7 +485,6 @@
     "outlook": "Grass has achieved something genuinely rare in crypto: real scale. 8.3M monthly active nodes providing petabytes of daily data to paying enterprise clients is a working business, not vapourware. The AI training data market is massive and growing, and Grass's residential IP network provides a genuine competitive moat that is hard to replicate. However, the project's freedom credentials are weak. It operates as a well-funded centralised data business (Wynd Labs + Grass Foundation) with a token incentive layer bolted on. Users provide the bandwidth but have no sovereignty over the data, no meaningful governance, and no visibility into the closed-source code. The 47.2% insider token allocation, opaque revenue, and non-functional DAO undermine the decentralisation narrative. The key risk is whether the enterprise revenue model can sustain token value as vesting unlocks continue through 2028. The key opportunity is if Grass successfully launches its Sovereign Data Rollup, decentralises validation, opens source code, and transitions to genuine community governance -- but there is no concrete timeline for any of these.",
     "overall_assessment": "Grass is the leading bandwidth-sharing DePIN project by network scale, with 8.3M monthly active nodes across 190 countries and real enterprise revenue from AI companies. The technical proposition -- converting residential bandwidth into AI training data with ZK-verified provenance -- is sound and addresses genuine market demand. Token distribution included one of the widest airdrops in crypto history (2.8M recipients). However, Freedom Score of 37/100 (F) reflects that the project is fundamentally centralised: code is entirely closed-source (0 public repos), governance is non-functional, data sovereignty for users is essentially non-existent, validation is centralised, and all revenue flows through the Grass Foundation with no transparency. Users rent their bandwidth to an opaque intermediary rather than participating in a decentralised network. Grass works as a business; it does not yet work as a decentralised protocol. Watch for: Sovereign Data Rollup launch, validator decentralisation, code open-sourcing, and whether enterprise revenue can sustain token value through ongoing vesting unlocks."
   },
-
   "sources": [
     {
       "source_id": "S001",
@@ -484,7 +496,11 @@
       "publisher": "Grass Foundation",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["project overview", "mission statement", "network description"],
+      "data_points_sourced": [
+        "project overview",
+        "mission statement",
+        "network description"
+      ],
       "reliability_notes": "Official documentation. Landing page with links to architecture, FAQ, and tokenomics sections."
     },
     {
@@ -497,7 +513,16 @@
       "publisher": "Grass Foundation",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["architecture components", "nodes", "routers", "validators", "ZK processor", "data ledger", "edge embedding models", "data flow"],
+      "data_points_sourced": [
+        "architecture components",
+        "nodes",
+        "routers",
+        "validators",
+        "ZK processor",
+        "data ledger",
+        "edge embedding models",
+        "data flow"
+      ],
       "reliability_notes": "Official documentation. Comprehensive architecture description including all network components and data flow."
     },
     {
@@ -510,7 +535,15 @@
       "publisher": "Grass Foundation",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["total supply", "allocation breakdown", "vesting schedules", "investor cliff", "contributor vesting", "airdrop allocation", "router rewards"],
+      "data_points_sourced": [
+        "total supply",
+        "allocation breakdown",
+        "vesting schedules",
+        "investor cliff",
+        "contributor vesting",
+        "airdrop allocation",
+        "router rewards"
+      ],
       "reliability_notes": "Official tokenomics documentation. 1B total supply, 6-category allocation."
     },
     {
@@ -523,7 +556,14 @@
       "publisher": "Grass Foundation",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["staking mechanics", "delegation to routers", "rewards distribution", "unstaking period", "slashing plans", "commission model"],
+      "data_points_sourced": [
+        "staking mechanics",
+        "delegation to routers",
+        "rewards distribution",
+        "unstaking period",
+        "slashing plans",
+        "commission model"
+      ],
       "reliability_notes": "Official staking documentation. No minimum stake, 7-day unstaking, rewards every second."
     },
     {
@@ -536,7 +576,14 @@
       "publisher": "Grass Foundation",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["airdrop allocation", "eligibility criteria", "distribution tiers", "GigaBuds allocation", "claiming dates", "wallet requirements"],
+      "data_points_sourced": [
+        "airdrop allocation",
+        "eligibility criteria",
+        "distribution tiers",
+        "GigaBuds allocation",
+        "claiming dates",
+        "wallet requirements"
+      ],
       "reliability_notes": "Official airdrop documentation. 100M tokens, 9% to network snapshot, 0.5% to GigaBuds, 0.5% to desktop/Saga users."
     },
     {
@@ -549,7 +596,12 @@
       "publisher": "Grass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["how it works", "bandwidth sharing model", "user experience", "privacy safeguards"],
+      "data_points_sourced": [
+        "how it works",
+        "bandwidth sharing model",
+        "user experience",
+        "privacy safeguards"
+      ],
       "reliability_notes": "Official blog post. Basic overview of how Grass works from user perspective."
     },
     {
@@ -562,7 +614,14 @@
       "publisher": "Grass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["data collection policy", "privacy architecture", "AppEsteem certification", "security partners", "AMTSO membership", "cookie policy"],
+      "data_points_sourced": [
+        "data collection policy",
+        "privacy architecture",
+        "AppEsteem certification",
+        "security partners",
+        "AMTSO membership",
+        "cookie policy"
+      ],
       "reliability_notes": "Official privacy/security documentation. Details on what data is collected and AppEsteem certification."
     },
     {
@@ -575,7 +634,12 @@
       "publisher": "Grass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["AppEsteem details", "security partners", "encryption", "AMTSO membership"],
+      "data_points_sourced": [
+        "AppEsteem details",
+        "security partners",
+        "encryption",
+        "AMTSO membership"
+      ],
       "reliability_notes": "Official security page. AppEsteem 24/7 monitoring, partnerships with Avast, Microsoft Defender, McAfee, AVG."
     },
     {
@@ -588,7 +652,12 @@
       "publisher": "Grass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["how AI labs use Grass", "data pipeline", "what data is scraped", "compensation model"],
+      "data_points_sourced": [
+        "how AI labs use Grass",
+        "data pipeline",
+        "what data is scraped",
+        "compensation model"
+      ],
       "reliability_notes": "Official blog post. Describes middleware function between AI labs and public web content."
     },
     {
@@ -601,7 +670,12 @@
       "publisher": "Grass",
       "date_published": "2025-07-02",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Android launch date", "battery usage", "3x points bonus", "download availability"],
+      "data_points_sourced": [
+        "Android launch date",
+        "battery usage",
+        "3x points bonus",
+        "download availability"
+      ],
       "reliability_notes": "Official announcement. Android app launched July 2, 2025."
     },
     {
@@ -614,7 +688,12 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["public repos count", "followers", "creation date", "org description"],
+      "data_points_sourced": [
+        "public repos count",
+        "followers",
+        "creation date",
+        "org description"
+      ],
       "reliability_notes": "Direct GitHub API check. 0 public repositories. 254 followers. Created March 20, 2023. All code is private/closed-source."
     },
     {
@@ -627,7 +706,10 @@
       "publisher": "GitHub",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["public repos count", "repo details"],
+      "data_points_sourced": [
+        "public repos count",
+        "repo details"
+      ],
       "reliability_notes": "Direct GitHub API check. 1 public repo (GrassDownload, HTML, 0 stars, 0 forks). Created July 24, 2025."
     },
     {
@@ -640,7 +722,23 @@
       "publisher": "CoinGecko",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["price", "market cap", "FDV", "volume", "total supply", "circulating supply", "max supply", "ATH", "ATH date", "ATL", "ATL date", "exchanges", "contract address", "categories", "sentiment"],
+      "data_points_sourced": [
+        "price",
+        "market cap",
+        "FDV",
+        "volume",
+        "total supply",
+        "circulating supply",
+        "max supply",
+        "ATH",
+        "ATH date",
+        "ATL",
+        "ATL date",
+        "exchanges",
+        "contract address",
+        "categories",
+        "sentiment"
+      ],
       "reliability_notes": "Tier 1 market data API. Price $0.300, market cap $162.9M, FDV $300.5M, supply 542.2M/1B, ATH $3.89, ATL $0.167. Contract: Grass7B4RdKfBCjTKgSqnXkqjwiGvQyFbuSCUJr3XXjs on Solana."
     },
     {
@@ -653,7 +751,12 @@
       "publisher": "DeFiLlama",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["TVL", "category", "chain", "market cap"],
+      "data_points_sourced": [
+        "TVL",
+        "category",
+        "chain",
+        "market cap"
+      ],
       "reliability_notes": "DeFiLlama lists Grass as DePIN category on Solana with $0 TVL. Not a DeFi protocol, so TVL measurement not applicable. Market cap $163.7M. 0 audits listed."
     },
     {
@@ -666,7 +769,16 @@
       "publisher": "CryptoRank",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["total raised", "funding rounds", "investors", "tokenomics allocation", "circulating supply", "FDV", "market cap", "Gate.io Launchpool"],
+      "data_points_sourced": [
+        "total raised",
+        "funding rounds",
+        "investors",
+        "tokenomics allocation",
+        "circulating supply",
+        "FDV",
+        "market cap",
+        "Gate.io Launchpool"
+      ],
       "reliability_notes": "Tier 2 source. Total raised $14.5M across 4 rounds. 15 investors listed. Allocation breakdown matches official docs."
     },
     {
@@ -679,7 +791,12 @@
       "publisher": "DropsTab",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["vesting progress by category", "unlocked vs locked amounts", "vesting structure per round", "next unlock event"],
+      "data_points_sourced": [
+        "vesting progress by category",
+        "unlocked vs locked amounts",
+        "vesting structure per round",
+        "next unlock event"
+      ],
       "reliability_notes": "Detailed vesting breakdown. 443.1M unlocked (44.31%), 556.9M locked (55.69%). 1,699 days remaining on full schedule."
     },
     {
@@ -692,7 +809,14 @@
       "publisher": "Tokenomist",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["circulating supply", "locked supply", "allocation breakdown", "cliff vesting details", "FDV", "market cap"],
+      "data_points_sourced": [
+        "circulating supply",
+        "locked supply",
+        "allocation breakdown",
+        "cliff vesting details",
+        "FDV",
+        "market cap"
+      ],
       "reliability_notes": "Tier 2 supply tracker. 542.2M circulating (54.22%), 457.8M locked (45.78%). Cliff vesting confirmed for Early Investors."
     },
     {
@@ -705,7 +829,20 @@
       "publisher": "Nansen",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["network metrics", "3M+ active nodes", "1.1M GB daily", "57M GB Q1 2025", "market cap", "FDV", "Sion upgrade", "multimodal search", "competitive landscape", "risk assessment", "Masa competitor", "Helium precedent"],
+      "data_points_sourced": [
+        "network metrics",
+        "3M+ active nodes",
+        "1.1M GB daily",
+        "57M GB Q1 2025",
+        "market cap",
+        "FDV",
+        "Sion upgrade",
+        "multimodal search",
+        "competitive landscape",
+        "risk assessment",
+        "Masa competitor",
+        "Helium precedent"
+      ],
       "reliability_notes": "Tier 2 institutional research. Comprehensive analysis covering technology, metrics, competition, and risks. Positions Grass as market leader in DePIN data category."
     },
     {
@@ -718,7 +855,15 @@
       "publisher": "Cantina",
       "date_published": "2024-07-01",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["audit scope", "prize pool", "findings count", "staking program details", "token contract scope", "airdrop program scope", "slashing mechanism details"],
+      "data_points_sourced": [
+        "audit scope",
+        "prize pool",
+        "findings count",
+        "staking program details",
+        "token contract scope",
+        "airdrop program scope",
+        "slashing mechanism details"
+      ],
       "reliability_notes": "Competitive security review, not a formal audit. $15K prize pool, 116 findings submitted. Scope covered three Solana programs. High/Medium severity findings qualified for prizes. Results not publicly detailed."
     },
     {
@@ -731,7 +876,14 @@
       "publisher": "Blockworks",
       "date_published": "2025-10-08",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["$10M bridge round", "8.5M MAU", "~20 companies", "seven-figure clients", "revenue model", "inference data vision"],
+      "data_points_sourced": [
+        "$10M bridge round",
+        "8.5M MAU",
+        "~20 companies",
+        "seven-figure clients",
+        "revenue model",
+        "inference data vision"
+      ],
       "reliability_notes": "Tier 3 crypto media. Direct quotes from Andrej Radonjic and Josh Rosenthal (Polychain). Key metrics: 8.5M MAU, ~20 clients, revenue goes to Grass Foundation."
     },
     {
@@ -744,7 +896,16 @@
       "publisher": "Blockworks",
       "date_published": "2024-09-21",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["Series A details", "HackVC lead", "2M DAU", "500K Discord", "400K X followers", "100M user target", "founding timeline", "co-founder count"],
+      "data_points_sourced": [
+        "Series A details",
+        "HackVC lead",
+        "2M DAU",
+        "500K Discord",
+        "400K X followers",
+        "100M user target",
+        "founding timeline",
+        "co-founder count"
+      ],
       "reliability_notes": "Tier 3 crypto media. Radonjic quotes on live context retrieval and open-source data strategy. Metrics as of September 2024."
     },
     {
@@ -757,7 +918,14 @@
       "publisher": "DL News",
       "date_published": "2023-12-19",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["$3.5M seed", "investor list", "Chris Nguyen CTO", "103K app downloads", "Android plans", "earnings estimate"],
+      "data_points_sourced": [
+        "$3.5M seed",
+        "investor list",
+        "Chris Nguyen CTO",
+        "103K app downloads",
+        "Android plans",
+        "earnings estimate"
+      ],
       "reliability_notes": "Tier 3 crypto media. Early-stage coverage with Chris Nguyen identified as CTO."
     },
     {
@@ -770,7 +938,13 @@
       "publisher": "Ventureburn",
       "date_published": "2025-10-08",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["$10M bridge details", "8.5M MAU", "~20 clients", "seven-figure revenue", "GRASS as value accrual vehicle"],
+      "data_points_sourced": [
+        "$10M bridge details",
+        "8.5M MAU",
+        "~20 clients",
+        "seven-figure revenue",
+        "GRASS as value accrual vehicle"
+      ],
       "reliability_notes": "Tier 3 news coverage. Confirms bridge round details and enterprise metrics."
     },
     {
@@ -783,7 +957,15 @@
       "publisher": "Backblaze",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["2-3 PB daily uploads", "10s of PB monthly egress", "Chris Nguyen CTO identified", "3M users", "190 countries", "Backblaze B2 storage", "Fortune 1000 clients"],
+      "data_points_sourced": [
+        "2-3 PB daily uploads",
+        "10s of PB monthly egress",
+        "Chris Nguyen CTO identified",
+        "3M users",
+        "190 countries",
+        "Backblaze B2 storage",
+        "Fortune 1000 clients"
+      ],
       "reliability_notes": "Tier 2 enterprise case study from storage provider. Independent confirmation of data volumes and CTO identity. 2-3 PB daily storage uploads is a verifiable operational metric."
     },
     {
@@ -796,7 +978,14 @@
       "publisher": "HuggingFace",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["team members (5)", "models (1: ClipTagger-12b)", "datasets (2)", "spaces (1)", "website grasscrawl.com", "contact email discover@wyndlabs.ai"],
+      "data_points_sourced": [
+        "team members (5)",
+        "models (1: ClipTagger-12b)",
+        "datasets (2)",
+        "spaces (1)",
+        "website grasscrawl.com",
+        "contact email discover@wyndlabs.ai"
+      ],
       "reliability_notes": "Direct HuggingFace check. 'Making the public web public again.' Team: Andrej Radonjic, Pro, Aidan Erickson, Ashik Shezan, Alex Zhanov. 19 followers."
     },
     {
@@ -809,7 +998,15 @@
       "publisher": "HuggingFace",
       "date_published": "2025-08-14",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["model architecture", "12B params", "Gemma-12B base", "Apache-2.0 license", "benchmark results vs GPT-4.1 and Claude 4 Sonnet", "cost comparison", "1M curated training samples"],
+      "data_points_sourced": [
+        "model architecture",
+        "12B params",
+        "Gemma-12B base",
+        "Apache-2.0 license",
+        "benchmark results vs GPT-4.1 and Claude 4 Sonnet",
+        "cost comparison",
+        "1M curated training samples"
+      ],
       "reliability_notes": "Open-source model. Apache-2.0 license. Developed with Inference.net. Claims to exceed GPT-4.1 and Claude 4 Sonnet on video understanding at 15x lower cost. Only 9 downloads."
     },
     {
@@ -822,7 +1019,13 @@
       "publisher": "HuggingFace",
       "date_published": "2025-08-22",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["dataset format", "25 rows", "CLIP embeddings", "768-dimensional vectors", "MIT license"],
+      "data_points_sourced": [
+        "dataset format",
+        "25 rows",
+        "CLIP embeddings",
+        "768-dimensional vectors",
+        "MIT license"
+      ],
       "reliability_notes": "Small sample dataset. 25 rows, MIT license. YouTube video clickstream embeddings."
     },
     {
@@ -835,7 +1038,17 @@
       "publisher": "HuggingFace",
       "date_published": "2024-12-01",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["14TB total", "720K CC-BY videos", "30M audio snippets", "15M images", "7M records", "12K shards", "partner organisations", "SafeLLM/Aurora-M2 project", "EU AI Act compliance"],
+      "data_points_sourced": [
+        "14TB total",
+        "720K CC-BY videos",
+        "30M audio snippets",
+        "15M images",
+        "7M records",
+        "12K shards",
+        "partner organisations",
+        "SafeLLM/Aurora-M2 project",
+        "EU AI Act compliance"
+      ],
       "reliability_notes": "Collaborative dataset by Ontocord, Grass, LAION, Alignment Lab AI. CC-BY license. 7,072 monthly downloads. Built using Grass Video Repository. Andrej Radonjic listed as co-author."
     },
     {
@@ -848,7 +1061,15 @@
       "publisher": "Solana Compass",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["600K+ nodes", "190 countries", "100TB daily", "LCR engine", "token contract address", "earning mechanisms", "Saga phone partnership"],
+      "data_points_sourced": [
+        "600K+ nodes",
+        "190 countries",
+        "100TB daily",
+        "LCR engine",
+        "token contract address",
+        "earning mechanisms",
+        "Saga phone partnership"
+      ],
       "reliability_notes": "Tier 3 Solana ecosystem resource. Metrics may be outdated (600K nodes vs current 8.3M)."
     },
     {
@@ -861,7 +1082,15 @@
       "publisher": "DataWallet",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["team founding", "co-founders named", "staking APR 47.43%", "25.29M staked", "airdrop claim rate 88.36%", "2.06M wallets claimed", "referral programme details"],
+      "data_points_sourced": [
+        "team founding",
+        "co-founders named",
+        "staking APR 47.43%",
+        "25.29M staked",
+        "airdrop claim rate 88.36%",
+        "2.06M wallets claimed",
+        "referral programme details"
+      ],
       "reliability_notes": "Tier 3 analysis. Names Connor White and Chris Gordon as co-founders alongside Andrej Radonjic -- NOT confirmed by official sources. Chris Nguyen (CTO) confirmed separately. Discrepancy noted in research gaps."
     },
     {
@@ -874,7 +1103,14 @@
       "publisher": "Stakin",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["APR 7.49%", "4% fee", "reward distribution every second", "7-day lockup", "auto-compounding", "no slashing"],
+      "data_points_sourced": [
+        "APR 7.49%",
+        "4% fee",
+        "reward distribution every second",
+        "7-day lockup",
+        "auto-compounding",
+        "no slashing"
+      ],
       "reliability_notes": "Tier 2 institutional staking provider. Router operator for Grass. APR 7.49% as of March 2026."
     },
     {
@@ -887,7 +1123,13 @@
       "publisher": "Stakin",
       "date_published": null,
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["token utility details", "staking delegation model", "Season 1 and 2 details", "earning mechanism", "reward factors"],
+      "data_points_sourced": [
+        "token utility details",
+        "staking delegation model",
+        "Season 1 and 2 details",
+        "earning mechanism",
+        "reward factors"
+      ],
       "reliability_notes": "Tier 2 staking provider analysis. Detailed breakdown of token utility and staking economics."
     },
     {
@@ -900,7 +1142,13 @@
       "publisher": "AInvest",
       "date_published": "2026-03-03",
       "date_accessed": "2026-03-03",
-      "data_points_sourced": ["38.5% price surge", "market cap $127.6M", "volume $59.36M", "node expansion", "institutional buying"],
+      "data_points_sourced": [
+        "38.5% price surge",
+        "market cap $127.6M",
+        "volume $59.36M",
+        "node expansion",
+        "institutional buying"
+      ],
       "reliability_notes": "Recent price action coverage. Attributes surge to DePIN network expansion and institutional buying."
     }
   ]
