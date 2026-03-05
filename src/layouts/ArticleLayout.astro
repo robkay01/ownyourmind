@@ -8,9 +8,10 @@ interface Props {
   updatedDate?: Date;
   section: string;
   sectionHref: string;
+  heroImage?: string;
 }
 
-const { title, description, publishDate, updatedDate, section, sectionHref } = Astro.props;
+const { title, description, publishDate, updatedDate, section, sectionHref, heroImage } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -25,6 +26,18 @@ const formatDate = (date: Date) =>
   ]}
 >
   <article class="max-w-3xl">
+    {heroImage && (
+      <div class="relative -mx-4 sm:-mx-6 mb-8 rounded-xl overflow-hidden">
+        <img
+          src={heroImage}
+          alt=""
+          class="w-full h-48 sm:h-64 object-cover"
+          loading="eager"
+          onerror="this.parentElement.style.display='none'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-secondary)] via-transparent to-transparent" />
+      </div>
+    )}
     <header class="mb-10">
       <div class="flex items-center gap-3 text-sm text-[var(--color-text-tertiary)] mb-4">
         <time datetime={publishDate.toISOString()}>

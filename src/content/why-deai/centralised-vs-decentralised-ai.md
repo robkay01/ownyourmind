@@ -49,6 +49,17 @@ I use both daily. Centralised AI for most of my professional work. Decentralised
 
 The choice between centralised and decentralised is not binary. It is a spectrum, and the right position depends on what you are doing.
 
+|  | Centralised | Decentralised | Local |
+|---|---|---|---|
+| **Best for** | Frontier quality, low latency | Cost, privacy, censorship resistance | Sensitive data, offline, zero ongoing cost |
+| **Model quality** | Best available | Good enough for most tasks | Depends on hardware |
+| **Cost** | Pay per token | 50-80% cheaper | Free after hardware |
+| **Privacy** | Your data on their servers | Better, varies by network | Complete |
+| **Censorship** | Content policies apply | Uncensored | Uncensored |
+| **Reliability** | High (uptime SLAs) | Improving | Depends on your setup |
+| **Latency** | Fast | Higher (network overhead) | Fast (no network) |
+| **Ownership** | Customer | Stakeholder (tokens) | Full |
+
 **Use centralised when:**
 - You need frontier model quality (complex reasoning, long-context analysis)
 - Latency matters (real-time applications, interactive tools)
@@ -69,6 +80,8 @@ The choice between centralised and decentralised is not binary. It is a spectrum
 - You want to experiment with models without API costs
 
 I run all three. Centralised for professional work where I need the best model available. Local for sensitive tasks, experimentation and daily utility. Decentralised networks for yield generation and building conviction in the infrastructure I write about.
+
+> **The point is not to pick a side.** The point is to have the option. Sovereignty means choosing where to be sovereign and where to accept the trade-offs of convenience.
 
 ## The trajectory
 

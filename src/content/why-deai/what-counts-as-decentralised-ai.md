@@ -43,6 +43,8 @@ Filecoin is in the same position. CoinMarketCap lists it as the fourth largest A
 
 The removal test exposes the difference between AI as the foundation and AI as a customer.
 
+> **Being useful to AI is not the same as being AI.** If the project works fine without AI, the AI label is describing a customer, not the product.
+
 ### The mechanism test
 
 This one comes from [Vitalik Buterin's taxonomy of crypto-AI intersections](https://vitalik.eth.limo/general/2024/01/30/cryptoai.html). The question is: what role does AI play in the protocol's mechanism?

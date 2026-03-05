@@ -21,7 +21,7 @@ Decentralised AI is infrastructure that no single entity can shut down, censor o
 
 **Decentralised compute.** GPU networks where anyone can contribute hardware and earn for it. Instead of renting from AWS or Azure, you access a marketplace of independent providers competing on price and performance. Akash, Render and io.net are building this now.
 
-**Open models.** Weights you can download, inspect, modify and run yourself. No content filters imposed by a corporation. No API rate limits. No sudden deprecation. Llama, Mistral, Qwen and dozens of others already exist and are competitive with closed alternatives for most tasks.
+**Open models.** Weights you can download, inspect, modify and run yourself. No content filters imposed by a corporation. No API rate limits. No sudden deprecation. Llama 4, Mistral 3, Qwen 3.5, DeepSeek V3 and dozens of others already exist and are competitive with closed alternatives for most tasks.
 
 **Token-aligned incentives.** Economic mechanisms that reward participation over extraction. When you contribute compute, data or code to a network, you earn tokens that represent ownership in that network. The incentive structure drives decentralisation rather than concentration.
 
@@ -53,6 +53,8 @@ Full AI sovereignty is a stack, not a single product. From the bottom up:
 
 Most people will not run the full stack. That is fine. The point is that each layer exists as an option. You can choose where to be sovereign and where to accept the trade-offs of centralisation. The choice itself is what matters.
 
+> **Sovereignty is not about rejecting centralised tools.** It is about making sure they are not the only option. The moment there is no alternative, the terms change.
+
 ## Why now
 
 The window for decentralised AI infrastructure is open. It will not stay open indefinitely.
@@ -61,6 +63,6 @@ As models get more expensive to train and run, the barrier to entry rises. The p
 
 I am building this site because I could not find what I was looking for. Most DeAI coverage is either protocol marketing or trader speculation. Almost nobody writes about it from the perspective of someone actually running the nodes, staking the tokens and testing the tools.
 
-That is what Own Your Mind is. Practitioner-led coverage. What works, what does not, what the real economics look like. Freedom and returns.
+That is what Own Your Mind is. Independent, hands-on coverage. What works, what does not, what the real economics look like. Freedom and returns.
 
 Own your compute. Own your models. Own your mind.
