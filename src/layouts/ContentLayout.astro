@@ -11,9 +11,10 @@ interface Props {
   title: string;
   description?: string;
   breadcrumbs: Crumb[];
+  ogImage?: string;
 }
 
-const { title, description, breadcrumbs } = Astro.props;
+const { title, description, breadcrumbs, ogImage } = Astro.props;
 
 const breadcrumbLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -27,7 +28,7 @@ const breadcrumbLd = JSON.stringify({
 });
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogImage={ogImage}>
   <script type="application/ld+json" set:html={breadcrumbLd} />
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <Breadcrumbs items={breadcrumbs} />
