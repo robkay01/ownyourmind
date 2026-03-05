@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 4
   revenueSustainability: 4
   liquidityAccess: 7
+returnsScoreEvidence:
+  tokenUtility: "Staking for agent rewards, bonding, governance. Real utility exists."
+  valueAccrual: "$89K marketplace turnover. 99.6% token decline. Mechanics not working."
+  supplyDynamics: "1B cap with 42.65% insider allocation. No enforced vesting."
+  revenueSustainability: "Tiny marketplace volume. Emission-dependent entirely."
+  liquidityAccess: "Thin liquidity. Daily volume <$1M. 99% drawdown hurts."
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "autonolas"

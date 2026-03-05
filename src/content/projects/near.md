@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 12
   revenueSustainability: 10
   liquidityAccess: 10
+returnsScoreEvidence:
+  tokenUtility: "Staking, governance, chain fees. Strong L1 utility."
+  valueAccrual: "Fee burn mechanism (70%). But AI value capture unclear."
+  supplyDynamics: "No max supply, inflationary. But controlled via burn."
+  revenueSustainability: "$115M TVL. Real chain usage. AI pivot is recent."
+  liquidityAccess: "Tier-1 CEX. High liquidity. $100M+ daily volume."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "near"

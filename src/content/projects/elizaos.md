@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 6
   revenueSustainability: 2
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Framework is great. Token connection is weak. Speculative."
+  valueAccrual: "No clear mechanism. Framework adoption doesn't drive token value."
+  supplyDynamics: "40% dilutive expansion. 11B cap. Highly diluted."
+  revenueSustainability: "No revenue model for token. Framework is open source."
+  liquidityAccess: "Multi-chain. Volume declined 99.7% from ATH. Thin."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "elizaos"

@@ -31,6 +31,13 @@ interface Props {
     revenueSustainability?: number;
     liquidityAccess?: number;
   };
+  returnsScoreEvidence?: {
+    tokenUtility?: string;
+    valueAccrual?: string;
+    supplyDynamics?: string;
+    revenueSustainability?: string;
+    liquidityAccess?: string;
+  };
   publishDate: Date;
   updatedDate?: Date;
   coingeckoId?: string;
@@ -40,7 +47,7 @@ interface Props {
   slug: string;
 }
 
-const { title, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
+const { title, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, returnsScoreEvidence, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -272,7 +279,7 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
 
       <!-- Returns Score breakdown -->
       {returnsScore != null && (
-        <ReturnsScoreBreakdown returnsScore={returnsScore} breakdown={returnsScoreBreakdown} />
+        <ReturnsScoreBreakdown returnsScore={returnsScore} breakdown={returnsScoreBreakdown} evidence={returnsScoreEvidence} />
       )}
 
       <!-- Market Data -->

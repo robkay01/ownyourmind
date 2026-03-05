@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 16
   revenueSustainability: 6
   liquidityAccess: 4
+returnsScoreEvidence:
+  tokenUtility: "Multiple utilities: staking for yield, compute access, agent services. Essential to protocol."
+  valueAccrual: "MOR burned for compute but burn minimal vs emissions. No fee distribution yet."
+  supplyDynamics: "Fair launch, no insider allocation, 16-year decay. Moderate inflation."
+  revenueSustainability: "Minimal external revenue. Compute marketplace active but emission-dependent."
+  liquidityAccess: "DEX-primary, limited CEX. Daily volume ~$30K. Very thin liquidity."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "morpheusai"

@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 10
   revenueSustainability: 0
   liquidityAccess: 6
+returnsScoreEvidence:
+  tokenUtility: "Pre-token. Planned for Proof-of-Benefit consensus."
+  valueAccrual: "Conceptual. Whitepaper only. No working implementation."
+  supplyDynamics: "Planned 21M cap mimicking Bitcoin. Scarcity model."
+  revenueSustainability: "No blockchain, no token, no revenue. Models are free."
+  liquidityAccess: "No token. Cannot assess."
 publishDate: 2025-03-02
 draft: false
 coingeckoId: ""

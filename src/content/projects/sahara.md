@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 6
   revenueSustainability: 8
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Planned for Sahara Chain. Currently on Ethereum/BNB."
+  valueAccrual: "Unclear. Blockchain not operational. Aspirational."
+  supplyDynamics: "10B cap. Pausable contract. Insider-heavy."
+  revenueSustainability: "Real data labelling business. But not on-chain."
+  liquidityAccess: "Tier-1 CEX (Binance). But 81% below ATH. Weak."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "sahara-ai"

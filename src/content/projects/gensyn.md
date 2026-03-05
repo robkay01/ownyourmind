@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 6
   revenueSustainability: 2
   liquidityAccess: 14
+returnsScoreEvidence:
+  tokenUtility: "Pre-token. Intended for compute payment and staking."
+  valueAccrual: "Pre-mainnet. Mechanism designed but unproven."
+  supplyDynamics: "10B cap with 54.6% insider allocation. Heavy dilution."
+  revenueSustainability: "Pre-mainnet. No revenue yet."
+  liquidityAccess: "Not yet tradeable. Score based on VC backing and expected listing."
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "gensyn"

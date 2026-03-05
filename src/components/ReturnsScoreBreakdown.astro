@@ -1,8 +1,8 @@
 ---
 /**
  * Returns Score breakdown — mirrors FreedomScoreBreakdown layout.
- * Shows 5 dimension bars with scores, grade badge, auto-generated summary,
- * and methodology link.
+ * Shows 5 dimension bars with scores, grade badge, evidence dropdowns,
+ * auto-generated summary, and methodology link.
  */
 interface Props {
   returnsScore: number;          // 1-10 scale from frontmatter
@@ -13,19 +13,28 @@ interface Props {
     revenueSustainability?: number; // /20
     liquidityAccess?: number;     // /15
   };
+  evidence?: {
+    tokenUtility?: string;
+    valueAccrual?: string;
+    supplyDynamics?: string;
+    revenueSustainability?: string;
+    liquidityAccess?: string;
+  };
 }
 
-const { returnsScore, breakdown } = Astro.props;
+const { returnsScore, breakdown, evidence } = Astro.props;
 
 const raw = Math.round(returnsScore * 10);
 const grade = raw >= 90 ? 'A' : raw >= 75 ? 'B' : raw >= 60 ? 'C' : raw >= 45 ? 'D' : 'F';
 
-const dimensions = breakdown ? [
-  { label: 'Token utility', score: breakdown.tokenUtility, max: 20 },
-  { label: 'Value accrual', score: breakdown.valueAccrual, max: 25 },
-  { label: 'Supply dynamics', score: breakdown.supplyDynamics, max: 20 },
-  { label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 20 },
-  { label: 'Liquidity & access', score: breakdown.liquidityAccess, max: 15 },
+type DimKey = 'tokenUtility' | 'valueAccrual' | 'supplyDynamics' | 'revenueSustainability' | 'liquidityAccess';
+
+const dimensions: { key: DimKey; label: string; score: number | undefined; max: number }[] = breakdown ? [
+  { key: 'tokenUtility', label: 'Token utility', score: breakdown.tokenUtility, max: 20 },
+  { key: 'valueAccrual', label: 'Value accrual', score: breakdown.valueAccrual, max: 25 },
+  { key: 'supplyDynamics', label: 'Supply dynamics', score: breakdown.supplyDynamics, max: 20 },
+  { key: 'revenueSustainability', label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 20 },
+  { key: 'liquidityAccess', label: 'Liquidity & access', score: breakdown.liquidityAccess, max: 15 },
 ] : [];
 
 // Auto-generate summary from breakdown data
@@ -87,11 +96,12 @@ function gradeColor(g: string): string {
 
   <!-- Sub-score bars -->
   {dimensions.length > 0 && (
-    <div class="freedom-breakdown-bars returns-breakdown-bars">
+    <div class="freedom-breakdown-bars">
       {dimensions.map(dim => {
         if (dim.score == null) return null;
         const pct = dim.max > 0 ? (dim.score / dim.max) * 100 : 0;
         const color = barColor(dim.score, dim.max);
+        const dimEvidence = evidence?.[dim.key];
 
         return (
           <div class="freedom-breakdown-row">
@@ -107,6 +117,17 @@ function gradeColor(g: string): string {
                 {dim.score}<span class="freedom-breakdown-dim-max">/{dim.max}</span>
               </span>
             </div>
+            {dimEvidence && (
+              <details class="freedom-breakdown-evidence">
+                <summary class="freedom-breakdown-evidence-toggle">
+                  Evidence
+                  <svg class="freedom-breakdown-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </summary>
+                <div class="freedom-breakdown-evidence-text">
+                  {dimEvidence}
+                </div>
+              </details>
+            )}
           </div>
         );
       })}

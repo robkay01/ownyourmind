@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 8
   revenueSustainability: 12
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Payment for compute, staking for providers. But centralized platform."
+  valueAccrual: "Unclear mechanism. Platform takes fees but how much flows to token?"
+  supplyDynamics: "800M cap. Significant insider allocation. Inflation through rewards."
+  revenueSustainability: "$20M+ annualized revenue. Real customers."
+  liquidityAccess: "Binance listing. But volume has declined significantly since launch."
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "io-net"

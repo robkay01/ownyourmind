@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 12
   revenueSustainability: 16
   liquidityAccess: 12
+returnsScoreEvidence:
+  tokenUtility: "Payment for render services. Staking exists but unclear purpose. Limited governance."
+  valueAccrual: "Burn mechanism for services. Real Hollywood customers. Proven demand."
+  supplyDynamics: "Capped but foundation holds significant tokens. Inflation through rewards."
+  revenueSustainability: "Real revenue from real customers. Product-market fit demonstrated."
+  liquidityAccess: "Major CEX listings. Good DEX liquidity. $50M+ daily volume."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "render-token"

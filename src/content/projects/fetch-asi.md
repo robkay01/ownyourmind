@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 10
   revenueSustainability: 8
   liquidityAccess: 13
+returnsScoreEvidence:
+  tokenUtility: "Staking, governance, service payment. But merger created confusion."
+  valueAccrual: "Messy merger with Ocean withdrawal. Unclear post-merger mechanics."
+  supplyDynamics: "2.71B cap. Merger-diluted. Ocean lawsuit over token sales."
+  revenueSustainability: "Real agent framework but usage metrics opaque. Centrally operated."
+  liquidityAccess: "Major CEX listings. Good liquidity. $30-50M volume."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "fetch-ai"

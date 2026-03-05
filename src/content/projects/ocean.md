@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 6
   revenueSustainability: 8
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Foundation says 'no intended utility value'. Data token use cases limited."
+  valueAccrual: "81% converted to FET. No clear path for remaining OCEAN."
+  supplyDynamics: "Fragmented after ASI withdrawal. Litigation over $120M."
+  revenueSustainability: "Compute-to-Data is great tech. But token economics broken."
+  liquidityAccess: "Major CEX but declining. Post-merger confusion."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "ocean-protocol"

@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 10
   revenueSustainability: 10
   liquidityAccess: 12
+returnsScoreEvidence:
+  tokenUtility: "Staking for discounted inference. Access to pro features required."
+  valueAccrual: "Burn mechanism for API calls. Growing user base drives demand."
+  supplyDynamics: "Fixed supply. Airdrop launch. But team allocation unclear."
+  revenueSustainability: "Privacy-focused inference with real users. Revenue model emerging."
+  liquidityAccess: "Good liquidity on Base and major CEX. $50M+ daily volume."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "venice-token"

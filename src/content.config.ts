@@ -29,6 +29,13 @@ const projects = defineCollection({
       revenueSustainability: z.number().min(0).max(20).optional(),
       liquidityAccess: z.number().min(0).max(15).optional(),
     }).optional(),
+    returnsScoreEvidence: z.object({
+      tokenUtility: z.string().optional(),
+      valueAccrual: z.string().optional(),
+      supplyDynamics: z.string().optional(),
+      revenueSustainability: z.string().optional(),
+      liquidityAccess: z.string().optional(),
+    }).optional(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     draft: z.boolean().default(false),

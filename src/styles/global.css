@@ -724,10 +724,6 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
-/* Returns bars: wider gap to match freedom bars (which have evidence dropdowns) */
-.returns-breakdown-bars {
-  gap: 16px;
-}
 
 /* Grade badges */
 .freedom-breakdown-grade-a {

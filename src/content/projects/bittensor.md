@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 18
   revenueSustainability: 5
   liquidityAccess: 14
+returnsScoreEvidence:
+  tokenUtility: "Staking required for participation. Burn for registration. Governance. Essential."
+  valueAccrual: "Stake to participate. No direct fee distribution. dTAO creates market-based allocation."
+  supplyDynamics: "Bitcoin model: 21M cap, halving done. Fair launch technically. Strong."
+  revenueSustainability: "No external revenue. Entirely emission-driven. Subnets compete for emissions."
+  liquidityAccess: "Binance, Coinbase, Kraken. $100M+ daily volume. Highly liquid."
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "bittensor"

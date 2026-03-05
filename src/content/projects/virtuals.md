@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 8
   revenueSustainability: 14
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Agent launchpad. Bonding curve participation. Governance."
+  valueAccrual: "Fee capture from launches. But agent tokens are speculative."
+  supplyDynamics: "Fixed supply. But launchpad dynamics dilute participants."
+  revenueSustainability: "Dominant launchpad with real revenue. 97% revenue collapse from peak."
+  liquidityAccess: "Base chain. Good liquidity. But speculative dynamics."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "virtuals-protocol"

@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 12
   revenueSustainability: 14
   liquidityAccess: 10
+returnsScoreEvidence:
+  tokenUtility: "Payment for compute, staking for governance/security, validator requirement."
+  valueAccrual: "Take rate on compute fees. Staking rewards from inflation + fees. But take rate is small."
+  supplyDynamics: "Uncapped supply with inflation. BME burn not yet active. Moderate dilution."
+  revenueSustainability: "Real customers using decentralized cloud. Revenue growing, still emission-heavy."
+  liquidityAccess: "Tier-2 CEX listings. Moderate DEX liquidity. $1-5M daily volume."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "akash-network"

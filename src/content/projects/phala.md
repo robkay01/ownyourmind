@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 10
   revenueSustainability: 8
   liquidityAccess: 8
+returnsScoreEvidence:
+  tokenUtility: "Payment for confidential compute. Staking. Worker bonding."
+  valueAccrual: "Fee mechanism exists but centralized service dominates."
+  supplyDynamics: "1B cap. Inflationary via staking rewards. Moderate allocation."
+  revenueSustainability: "Real product. Growing enterprise interest. Early stage."
+  liquidityAccess: "Tier-2 CEX. Moderate liquidity. <$5M daily volume."
 publishDate: 2025-03-05
 draft: false
 coingeckoId: "pha"

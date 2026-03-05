@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 8
   revenueSustainability: 12
   liquidityAccess: 10
+returnsScoreEvidence:
+  tokenUtility: "Token used for enterprise LCR product. Users earn via bandwidth sharing."
+  valueAccrual: "Enterprise demand buys tokens. But foundation controls revenue flows opaquely."
+  supplyDynamics: "1B cap. Team/investor allocation significant. Wide airdrop but insider heavy."
+  revenueSustainability: "Real enterprise customers (AI companies). Growing revenue."
+  liquidityAccess: "Tier-1 CEX (Binance). Moderate liquidity. $50-100M volume."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "grass"

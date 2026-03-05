@@ -12,6 +12,12 @@ returnsScoreBreakdown:
   supplyDynamics: 8
   revenueSustainability: 10
   liquidityAccess: 11
+returnsScoreEvidence:
+  tokenUtility: "Data DAO staking, governance, data contribution rewards."
+  valueAccrual: "Data contributed earns tokens. But model unproven at scale."
+  supplyDynamics: "Foundation controls treasury. Permissioned validators. 95% price decline."
+  revenueSustainability: "Real user adoption for data contribution. Early traction."
+  liquidityAccess: "Major CEX. Good initial liquidity. But volume declining."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "vana"
