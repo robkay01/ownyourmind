@@ -138,6 +138,14 @@ Execute research in this order for each project:
 - Complete the Freedom Score rubric (Section 3.2)
 - Document evidence for each sub-score
 
+**Step 8: Returns Score Assessment (20 mins)**
+- Complete the Returns Score rubric (Section 3.3)
+- Score all five dimensions with evidence for each
+- Cross-reference every evidence statement against the editorial body text and research data
+- Run the scoring checklist (Section 3.3.2) before finalising
+- Verify revenue claims against DeFiLlama, Token Terminal, or on-chain data (see Revenue Estimation Guidance in the Returns Score Methodology)
+- For pre-token projects: set Liquidity & Access to 0/15 and Revenue Sustainability to 0 if no revenue exists
+
 ---
 
 ## Section 3: Structured Output Schema
@@ -470,6 +478,101 @@ Each sub-score is assessed against specific criteria. The researcher must provid
 | D | 40-54 | Largely centralised with decentralisation narrative |
 | F | 0-39 | Centralised project with a token bolted on |
 
+### 3.3 Returns Score Rubric
+
+The Returns Score assesses whether the token has a credible structural path to value appreciation based on protocol activity. It is scored across five dimensions. Full methodology is published at `/resources/returns-score-methodology/`.
+
+#### 3.3.1 Dimensions
+
+| Dimension | Max Score | What It Measures |
+|-----------|----------|------------------|
+| Token Utility | /20 | What can holders actually do with the token? |
+| Value Accrual | /20 | Is there a mechanical link between usage and token value? |
+| Supply Dynamics | /20 | Is the supply schedule sustainable? |
+| Revenue Sustainability | /25 | Does the protocol generate real revenue from paying customers? |
+| Liquidity & Access | /15 | Can holders actually buy and sell without significant slippage? |
+
+**Revenue Sustainability carries the highest weight** because revenue from paying customers is the hardest metric to fake and the strongest signal of real value creation.
+
+**Scoring rubric tables** are in the published methodology document. The researcher must cite the specific rubric band for each dimension score.
+
+**Evidence requirements:** Each dimension score must include:
+- The specific score (integer, within the max)
+- A 1-2 sentence evidence statement citing verifiable facts
+- The source for any quantitative claims (DeFiLlama, CoinGecko, block explorer, protocol dashboard)
+
+**Pre-token projects:**
+- Liquidity & Access: 0/15 (no tradeable token exists)
+- Revenue Sustainability: 0 if no revenue exists
+- Other dimensions scored on current verifiable state
+- Total score is preliminary and should be flagged as such
+
+**Vesting and unlock adjustments (Supply Dynamics):**
+- Cliff unlock >10% of circulating supply within 6 months: deduct 2-3 points
+- Circulating supply below 30% of total: score 6-9 maximum unless vesting is 10+ years
+- Top 10 wallets hold >50% of circulating supply: deduct 1-2 points
+
+#### 3.3.2 Pre-Submission Scoring Checklist
+
+Before finalising the Returns Score, the researcher must verify:
+
+- [ ] All five dimension scores are integers within their respective maximums
+- [ ] Dimension scores sum exactly to the total Returns Score
+- [ ] The grade matches the score (A: 85+, B: 70-84, C: 55-69, D: 40-54, F: 0-39)
+- [ ] Every evidence statement is verified against the project's editorial body text
+- [ ] Every evidence statement citing a number includes the source
+- [ ] Revenue claims cite DeFiLlama, Token Terminal, protocol dashboard, or on-chain data
+- [ ] Pre-token projects have 0/15 for liquidity and 0 for revenue if applicable
+- [ ] Vesting cliff deductions applied where unlock >10% circ. supply within 6 months
+- [ ] Circulating supply percentage checked against 30% threshold
+- [ ] No evidence statement contradicts the editorial review text
+- [ ] Exchange listings and volume data are from within 7 days
+
+#### 3.3.3 Returns Score Schema (JSON)
+
+Add to the project research JSON under a new top-level `returns_score` key:
+
+```json
+{
+  "returns_score": {
+    "total_score": null,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": null,
+        "max": 20,
+        "evidence": ""
+      },
+      "value_accrual": {
+        "score": null,
+        "max": 20,
+        "evidence": ""
+      },
+      "supply_dynamics": {
+        "score": null,
+        "max": 20,
+        "evidence": ""
+      },
+      "revenue_sustainability": {
+        "score": null,
+        "max": 25,
+        "evidence": ""
+      },
+      "liquidity_access": {
+        "score": null,
+        "max": 15,
+        "evidence": ""
+      }
+    },
+    "returns_grade": "A | B | C | D | F",
+    "risk_flags": [],
+    "returns_summary": ""
+  }
+}
+```
+
+**Risk flags** are strings from this set: `"regulatory_risk"`, `"pausable_contract"`, `"pre_token"`. Include any that apply.
+
 ---
 
 ## Section 4: Fact-Checking Protocol
@@ -561,6 +664,11 @@ Run these automated checks against the output JSON:
 2. **All top-level sections present** — meta, identity, team, technical, tokenomics, participation, usage_metrics, community, freedom_score, assessment, sources
 3. **Freedom score dimensions sum correctly** — individual dimension scores must sum to total_score (tolerance ±1 for rounding)
 4. **Freedom grade matches score** — F: 0-39, D: 40-54, C: 55-69, B: 70-84, A: 85-100
+5. **Returns score dimensions sum correctly** — five dimension scores must sum exactly to total_score (no rounding tolerance)
+6. **Returns grade matches score** — same bands as Freedom: F: 0-39, D: 40-54, C: 55-69, B: 70-84, A: 85-100
+7. **Returns evidence cross-referenced** — every evidence statement checked against editorial body text for contradictions
+8. **Revenue claims sourced** — Revenue Sustainability evidence must cite DeFiLlama, Token Terminal, protocol dashboard, or on-chain data
+9. **Pre-token handling correct** — if no tradeable token, Liquidity & Access is 0/15
 5. **Token distribution percentages** — initial_allocation percentages should sum to approximately 100% (tolerance ±5%). If not, a note must explain the gap.
 6. **No empty evidence fields** — every freedom_score breakdown dimension must have non-empty evidence
 7. **Sources array populated** — minimum 15 sources with sequential IDs
@@ -596,6 +704,12 @@ After running the check, document the result as a brief checklist before proceed
 - [ ] Research gaps documented for null fields: yes/no
 - [ ] Market data within 7 days: yes/no
 - [ ] Assessment balanced (3+ works, 3+ hype): yes/no
+- [ ] Returns score dimensions sum correctly: yes/no
+- [ ] Returns grade matches score: yes/no
+- [ ] Returns evidence cross-referenced against editorial: yes/no
+- [ ] Revenue claims cite DeFiLlama/Token Terminal/on-chain: yes/no
+- [ ] Pre-token handling correct (0 liquidity if no token): yes/no or N/A
+- [ ] `npm run check:returns` passes: yes/no
 - RESULT: PASS / FAIL (reason)
 ```
 
@@ -605,13 +719,23 @@ If FAIL, re-run the research agent with specific instructions addressing the fai
 
 After writing the editorial, verify that the research JSON freedom score dimensions **exactly match** the editorial body text. If editorial judgement changed any dimension score from the research phase, the JSON must be updated before committing.
 
-Checklist:
-- [ ] Each of the 6 dimension scores in the JSON matches the editorial body text
+Freedom Score checklist:
+- [ ] Each of the 6 freedom dimension scores in the JSON matches the editorial body text
 - [ ] The JSON `total_score` equals the sum of its dimension scores
 - [ ] The JSON `total_score` matches the `/100` figure in the editorial body text
 - [ ] The JSON `freedom_grade` matches the letter grade in the editorial body text
 - [ ] The JSON `freedom_summary` references the correct total score
 - [ ] The frontmatter `freedomScore` (1-10) is consistent with the `/100` score (divide by 10, round to nearest integer)
+
+Returns Score checklist:
+- [ ] Each of the 5 returns dimension scores in the JSON matches the editorial body text
+- [ ] The JSON `total_score` equals the exact sum of its dimension scores (no rounding tolerance)
+- [ ] The JSON `total_score` matches the `/100` figure in the editorial Returns Score heading
+- [ ] The JSON `returns_grade` matches the grade bands (A: 85+, B: 70-84, C: 55-69, D: 40-54, F: 0-39)
+- [ ] The frontmatter `returnsScore` (1-10 scale) equals total/10 rounded to one decimal
+- [ ] The frontmatter `returnsScoreBreakdown` dimensions match the JSON exactly
+- [ ] The frontmatter `returnsScoreEvidence` statements do not contradict the editorial text
+- [ ] `npm run check:returns` passes with zero errors
 
 **Rationale:** The research JSON drives the visual chart at the top of the project page. The editorial body text contains the prose breakdown. If these diverge, readers see contradictory scores on the same page. This check was added after discovering a 70 vs 76 discrepancy on the Morpheus page (first project researched, JSON never updated when editorial adjusted scores).
 
@@ -764,15 +888,25 @@ When given a project to research, follow these instructions exactly:
 
 7. **Run the fact-checking checklist** in Section 4.2 before marking the report as complete.
 
-8. **Output two files:** the JSON database record and the markdown research summary.
+8. **Complete the Returns Score** using the rubric in Section 3.3. For every dimension:
+   - Score it as an integer within the maximum
+   - Write a 1-2 sentence evidence statement citing verifiable facts
+   - Cite the specific source for any quantitative claim
+   - Cross-reference the evidence against the editorial body text to ensure no contradictions
+   - For Revenue Sustainability, check DeFiLlama, Token Terminal, or on-chain fee data directly. Do not estimate revenue without citing a source.
+   - Run the pre-submission checklist in Section 3.3.2 before finalising
 
-9. **The orchestrating agent runs the compliance check** in Section 4.5 on the output JSON before proceeding to write the editorial. If the check fails, re-run the research with specific instructions to address the gaps. Do not write an editorial from non-compliant research.
+9. **Output two files:** the JSON database record and the markdown research summary.
 
-10. **If you encounter a red flag** from Section 4.4, note it prominently in both the research_gaps array and the research summary. Do not bury concerns.
+10. **The orchestrating agent runs the compliance check** in Section 4.5 on the output JSON before proceeding to write the editorial. If the check fails, re-run the research with specific instructions to address the gaps. Do not write an editorial from non-compliant research.
 
-11. **Time-sensitive data** (price, market cap, volume, TVL, community size) should note the exact date and time of access.
+11. **If you encounter a red flag** from Section 4.4, note it prominently in both the research_gaps array and the research summary. Do not bury concerns.
 
-12. **When in doubt, leave it null and flag it** rather than guessing. Gaps are acceptable. Inaccuracies are not.
+12. **Time-sensitive data** (price, market cap, volume, TVL, community size) should note the exact date and time of access.
+
+13. **When in doubt, leave it null and flag it** rather than guessing. Gaps are acceptable. Inaccuracies are not.
+
+14. **After editorial is written, run `npm run check:returns`** to validate all Returns Score data is consistent across frontmatter, breakdown, and editorial text. Fix any errors before committing.
 
 ### Prompt Template for Initiating Research
 

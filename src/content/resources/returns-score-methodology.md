@@ -247,4 +247,80 @@ These flags appear in project reviews alongside the Returns Score. They are not 
 
 ---
 
-*Last updated: March 2026. Methodology version 2.0.*
+## Scoring Checklist (For Researchers)
+
+Before submitting a Returns Score, the scorer must verify every item on this checklist. This is mandatory for both human researchers and AI agents.
+
+### Pre-Submission Checks
+
+1. **Breakdown sums to headline.** Add up all five dimension scores. The total must exactly match the Returns Score headline (/100). No rounding tolerance.
+2. **Grade matches score.** Apply the grade bands (85/70/55/40) to the total. The letter grade in the editorial must match.
+3. **Evidence cross-referenced against review.** Every evidence statement must be verified against the project's editorial body text. If the evidence says "staking exists" but the review says "there is no native staking," the evidence is wrong. Fix it before submitting.
+4. **Pre-token projects checked.** If the project has no tradeable token, Liquidity & Access must be 0/15. Revenue Sustainability must be 0 if no revenue exists. Do not score hypothetical future states.
+5. **Vesting cliffs accounted for.** Check for upcoming unlocks >10% of circulating supply within 6 months. Apply the deduction guidance from Supply Dynamics. Check circulating supply percentage against the 30% threshold.
+6. **Revenue claims sourced.** Every revenue claim must cite a specific source (DeFiLlama, protocol dashboard, on-chain data). "The protocol generates revenue" without a source is not acceptable.
+7. **Liquidity data current.** Exchange listings and volume figures must be from within 7 days. Check CoinGecko or CoinMarketCap directly.
+8. **Frontmatter matches editorial.** The frontmatter `returnsScore` (/10 scale) must equal the total score divided by 10 (rounded to one decimal). The breakdown dimensions in frontmatter must match the editorial body text exactly.
+9. **No false precision.** Do not use decimal points in dimension scores. All sub-scores are integers.
+
+### Post-Submission Automated Check
+
+Run `npm run check:returns` before committing. This script validates:
+- Breakdown dimensions sum to the headline score
+- No dimension exceeds its maximum
+- Editorial heading matches frontmatter
+- Pre-token projects have 0 for liquidity
+- Freedom Score heading matches frontmatter (cross-check)
+- Grade is consistent with score
+
+The build should not proceed if errors are found.
+
+---
+
+## Revenue Estimation Guidance
+
+Revenue Sustainability is the most important and most subjective dimension. This guidance standardises how revenue is estimated when protocols do not publish exact figures.
+
+### Where to Find Revenue Data
+
+Check these sources in order. Use the highest-quality source available.
+
+| Source | What It Shows | Reliability |
+|--------|--------------|-------------|
+| **DeFiLlama Fees/Revenue** | Protocol fees and revenue, often split by supply-side and protocol revenue | High. Community-maintained, cross-verified. |
+| **Token Terminal** | Revenue, earnings, P/E ratios for crypto protocols | High. Professional data provider. |
+| **Protocol dashboards** | Self-reported metrics (e.g., Akash dashboard, Render network stats) | Medium. Self-reported but usually accurate for usage data. |
+| **On-chain fee data** | Transaction fees collected by the protocol contract | High. Verifiable but requires calculation. |
+| **Dune Analytics** | Community-built dashboards tracking protocol metrics | Medium. Methodology varies by dashboard author. |
+| **Annual reports or blog posts** | Team-published financial summaries | Medium. Self-reported, check for independent verification. |
+
+### How to Estimate When No Direct Source Exists
+
+If none of the above sources provide revenue data:
+
+1. **Calculate from on-chain activity.** If you know the fee per transaction and the transaction count, multiply. Document the calculation explicitly.
+2. **Infer from emissions ratio.** If the protocol pays out X in emissions and collects Y in fees, the revenue-to-emission ratio is Y/X. This ratio is more useful than the absolute revenue figure for scoring Revenue Sustainability.
+3. **Check for paying customers.** Count unique addresses paying for services (not receiving emissions). Even a rough count distinguishes "has revenue" from "emission-only."
+4. **If no revenue data exists at all,** score in the 4-6 range ("Speculative") or 0-3 range ("Pre-revenue") and document the gap. Do not guess.
+
+### Revenue vs Emissions
+
+This distinction is critical and commonly confused:
+
+- **Revenue:** Fees paid by external users for services the protocol provides.
+- **Emissions:** Tokens minted and distributed to participants (miners, stakers, node operators).
+
+Emissions are a cost, not revenue. A protocol paying $10M in emissions and collecting $1M in fees has a revenue-to-emission ratio of 0.1, which places it in the 7-11 range ("Emission-dependent"). Many DeAI projects are in this category.
+
+A protocol where revenue exceeds emissions has achieved sustainability. This is rare in DeAI and scores 22-25.
+
+### Common Mistakes
+
+- Counting staking yield as revenue (it is usually emissions redistribution)
+- Using TVL as a proxy for revenue (TVL measures capital locked, not fees earned)
+- Confusing transaction volume with fee revenue (volume is gross, fees are a fraction)
+- Treating token burns from emissions as "deflationary" revenue (burns from emissions are not revenue; burns from user-paid fees are)
+
+---
+
+*Last updated: March 2026. Methodology version 2.1.*
