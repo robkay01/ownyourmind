@@ -1,0 +1,168 @@
+---
+title: "Privacy Is the Killer App for Decentralised AI"
+description: "Every prompt you send to OpenAI is training data. Every query to Claude is logged indefinitely. Privacy is not a feature — it is the wedge that makes decentralised AI essential, not just ideological."
+publishDate: 2026-03-06
+draft: true
+---
+
+import PullQuote from '../../components/PullQuote.astro';
+
+## The invisible cost of free
+
+When you send a prompt to ChatGPT, you are not just paying with money. You are paying with data. Your queries, your documents, your code, your confidential business strategies — all of it flows through OpenAI's servers, gets logged, and may be used to train future models.
+
+OpenAI's enterprise privacy page is 2,400 words long. That is the length it takes to explain all the ways your data moves through their infrastructure. The page exists because corporate legal teams demanded it. Samsung employees leaked source code. Amazon staff shared confidential documents. Banks discovered their analysts were pasting financial data into chatbots.
+
+<PullQuote>Every prompt you send to a centralised AI provider is a data breach waiting to happen.</PullQuote>
+
+The centralised AI companies will tell you they do not train on enterprise data. They have settings for that now. But those settings are toggles on their infrastructure, not architectural guarantees. When the next data breach happens, or the next government subpoena arrives, those toggles will not protect you. The data exists. It is stored. It can be accessed.
+
+Privacy in AI is not about hiding wrongdoing. It is about the fundamental difference between renting intelligence and owning it. When you run inference on infrastructure you control, your prompts exist only on your terms. That is sovereignty.
+
+## The privacy technologies, honestly evaluated
+
+Three cryptographic approaches dominate the conversation around private AI inference. Each works. Each has tradeoffs that matter in practice.
+
+### Trusted Execution Environments (TEE)
+
+TEE-based inference runs your prompts inside a hardware-enforced enclave. The GPU processes your data, but even the server operator cannot see the contents. Intel SGX, AMD SEV, NVIDIA Confidential Compute — these are the hardware primitives.
+
+The performance overhead is minimal. Phala Network's GPU TEE documentation claims less than 2% throughput penalty for large model inference on NVIDIA H100 and B200 hardware. This is near-native performance for private inference.
+
+The tradeoff is trust. TEEs rely on hardware manufacturers to implement isolation correctly. When Intel's SGX was compromised in 2022, Secret Network had to coordinate a network-wide key update. Phala itself responded to a similar SGX key extraction attack by shutting down all SGX workers and migrating to Intel TDX — competent handling of a real vulnerability, but a reminder that hardware trust is not absolute. You are trading trust in a cloud provider for trust in a hardware vendor.
+
+### Fully Homomorphic Encryption (FHE)
+
+FHE allows computation on encrypted data. Your prompt stays encrypted from your machine through the entire inference process. The server computes the answer without ever seeing the question.
+
+The technology is genuine magic. It is also practically unusable for most AI workloads today. Current FHE implementations impose 100-1000x computational overhead. GPU acceleration has pushed throughput to 20-30 transactions per second for simple operations, but that is orders of magnitude below what inference demands.
+
+FHE is the future. For today, it is research infrastructure, not production inference.
+
+### Multi-Party Computation (MPC)
+
+MPC distributes computation across multiple parties, none of whom see the complete data. Your prompt gets split into fragments, processed separately, and recombined.
+
+The limitation is network latency, not compute. Every operation requires coordination between parties. For inference on large models, MPC currently adds 10-100x latency compared to plaintext execution. It works best when you already have a distributed network with economic alignment between parties, but for a single user wanting private inference on a single prompt, MPC is overkill.
+
+### The practical verdict
+
+| Technology | Overhead | Production Ready | Trust Model |
+|------------|----------|------------------|-------------|
+| TEE | <5% | Yes | Hardware vendor |
+| FHE | 100-1000x | Research stage | Mathematical |
+| MPC | 10-100x (latency) | Limited use cases | Network participants |
+
+For private inference today, TEE is the only option with acceptable performance. The trust tradeoff is real, but it is a better tradeoff than sending your data to OpenAI.
+
+## The enterprise compliance tailwind
+
+GDPR. HIPAA. The EU AI Act. California's CCPA. The regulatory landscape for AI data processing is expanding, not contracting.
+
+Every enterprise legal team is asking the same question: can we send patient data to OpenAI? Can we process financial records through Claude? Can we let engineers paste source code into ChatGPT?
+
+The answer, increasingly, is no. Or more precisely: only with a BAA, a DPA, and written guarantees about data handling that may or may not survive a government subpoena.
+
+Google and OpenAI now offer HIPAA-compliant deployments for enterprise. But compliance is not the same as privacy. HIPAA allows data processing under agreement. It does not prevent the data from being processed on someone else's infrastructure.
+
+<PullQuote>Compliance is not the same as privacy. A BAA does not magically delete your data from OpenAI's logs.</PullQuote>
+
+This is the opening for decentralised AI. When you run inference on a TEE-enabled GPU network or on your own hardware, the compliance question simplifies dramatically. Your data never leaves infrastructure you control. No third party can be compelled to produce records they never possessed.
+
+[Venice](/projects/venice/), the privacy-focused inference platform, has grown to 1.3 million registered users and processes 45 billion tokens daily. That is not traffic funnelled through a single provider. That is inference demand from users who explicitly chose not to send their prompts to OpenAI. The signal is clear.
+
+## What private inference actually costs
+
+The assumption is that privacy costs more. The pricing data tells a different story.
+
+Venice API pricing (per 1M tokens):
+
+| Model Category | Input | Output |
+|----------------|-------|--------|
+| Budget (Llama 3.2, Gemma, Nemotron) | $0.07-0.15 | $0.20-0.60 |
+| Mid-range (Llama 3.3 70B, Qwen 3) | $0.70-0.75 | $2.80-3.20 |
+| Premium (Claude Opus, GPT-5.2) | $2.00-6.00 | $15.00-30.00 |
+
+For comparison, OpenAI's GPT-5.2 costs $1.75 per 1M input tokens. Claude Opus 4.6 costs $5.00 per 1M input tokens through Anthropic directly.
+
+Private inference through decentralised networks is often cheaper than centralised APIs. [Akash Network](/projects/akash/) offers GPU compute at 50-85% below AWS, GCP and Azure pricing for comparable workloads — the reverse auction model drives prices down because providers compete for your deployment. Remove the premium for OpenAI's brand and infrastructure margin, and inference is fundamentally cheap. Privacy is not the premium. Centralisation is.
+
+The real cost of centralised AI is not the API fee. It is the implicit cost of data exposure, compliance overhead, and platform dependency.
+
+## Who is actually shipping private inference
+
+### Venice
+
+[Venice](/projects/venice/) routes prompts through a privacy proxy to distributed GPU providers sourced from Akash, Hyperbolic, and Prime Intellect. No logs, no conversation history, no stored prompts. Everything stays in your browser's local storage.
+
+The architecture is not fully decentralised — Venice runs a centralised proxy. But the privacy model is auditable: prompts are anonymised through the proxy, GPU providers see individual requests without user identity, and no persistent data is stored. For most users, this is a meaningful improvement over sending everything to OpenAI.
+
+Pricing: Pro subscription at $18/month for unlimited text with premium model access, or API access starting at $0.07 per 1M tokens for budget models. The VVV token staking model offers pro-rata inference capacity without per-token fees.
+
+### Phala Network
+
+[Phala](/projects/phala/) has pivoted from general-purpose confidential computing to AI agent infrastructure. GPU TEE inference on NVIDIA H100, H200, and B200 hardware is live, with SOC 2 Type I and HIPAA compliance certifications that most crypto projects cannot match. The open-source dstack SDK, donated to the Linux Foundation's Confidential Computing Consortium, converts standard containers into confidential VMs.
+
+The commercial traction is early — 398 paid users and a partially verified $2M+ ARR. That is more than most DePIN projects can demonstrate, but it is a very small base for a cloud infrastructure business. The TEE technology is credible and differentiated. Whether Phala converts its compliance positioning into meaningful adoption is the open question.
+
+### Other privacy-adjacent projects
+
+Nillion (NIL) and Oasis (ROSE) are general-purpose privacy infrastructure that has pivoted toward AI as a use case. Nillion offers "blind computation" through MPC and secret sharing; Oasis provides the ROFL framework for verifiable off-chain inference via TEEs. Both are earlier stage for AI-specific workloads than Venice or Phala.
+
+### Local inference
+
+The most private inference is inference that never touches a network. Running Llama 3.3 70B on a Mac Studio with 64GB unified memory requires no external API, no data transmission, no logs on anyone else's server.
+
+The tradeoffs are real:
+- Hardware cost: $3,000-6,000 for a capable local machine
+- Model selection: open weights only, no Claude or GPT-5
+- Performance: quantised models run at 80-90% quality but slower than cloud inference
+
+For sensitive work — legal documents, medical analysis, confidential code — local inference is the gold standard. For everything else, private cloud inference through TEE-enabled providers offers a practical middle ground.
+
+## The practitioner's framework
+
+Not every workflow requires private inference. But the decision should be intentional, not accidental.
+
+**Run locally when:**
+- Working with confidential client data (legal, medical, financial)
+- Processing proprietary code or trade secrets
+- Operating in regulated industries with data residency requirements
+- You want zero ongoing costs after hardware investment
+
+**Use TEE-enabled inference when:**
+- You need model quality that open weights cannot match
+- Latency matters but privacy also matters
+- You want API convenience without the data exposure
+- Compliance requires data to stay within certain jurisdictions
+
+**Use decentralised compute (non-TEE) when:**
+- Privacy is not a primary concern
+- Cost savings are the priority
+- You are running batch workloads without sensitive data
+- You want to participate in the network economics (staking, earning)
+
+**Stick with centralised APIs when:**
+- The data is already public or non-sensitive
+- You need frontier model capabilities not available elsewhere
+- The convenience-privacy tradeoff is acceptable for your use case
+
+## The privacy premium is negative
+
+The market has decided that centralised AI deserves a premium. You pay more for OpenAI's brand, for their frontier models, for their polished developer experience. That is a reasonable premium for quality and convenience.
+
+But the market has not yet priced the privacy discount. When you send data to a centralised provider, you are giving them something valuable — your training data, your usage patterns, your competitive intelligence. You should be paid for that, not charged extra.
+
+Venice's pricing is already there. Budget models at $0.07 per 1M tokens undercut GPT-4 by 97%, and the privacy is included at no extra charge. The decentralised AI projects that will win are the ones that flip this equation — not "private inference at a premium" but "private inference at a discount, because we are not extracting value from your data."
+
+## What changes in six months
+
+TEE-enabled inference is production-ready now. FHE is 18-24 months from competitive throughput. Local inference hardware improves every generation.
+
+The regulatory pressure is not going to decrease. GDPR enforcement is increasing. The EU AI Act is in effect. State-level privacy laws in the US are multiplying. Every enterprise legal team that has not already restricted ChatGPT usage will do so within two years.
+
+The decentralised AI projects positioning themselves for this moment — Venice, Phala, and the TEE-enabled compute networks — are building the infrastructure that enterprise AI adoption will require. Not because ideology demands it. Because compliance demands it.
+
+By the time FHE achieves the performance needed for mainstream inference, the private inference market will already be established. The winners will be the projects shipping today with TEE, solving real problems for real users, and building the trust that cryptographic proofs alone cannot provide.
+
+Privacy is the killer app. Not because it sounds good in a whitepaper. Because every prompt you send to a centralised provider is a liability you are choosing to accept.
