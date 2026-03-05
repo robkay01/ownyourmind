@@ -1,0 +1,700 @@
+{
+  "meta": {
+    "project_id": "phala-network",
+    "research_date": "2026-03-05",
+    "researcher": "0xBobski",
+    "version": 1,
+    "last_updated": "2026-03-05",
+    "status": "draft",
+    "research_gaps": [
+      "Exact amount of DWF Labs investment (Jan 2024) not publicly disclosed",
+      "Staking minimum not specified in documentation",
+      "Phala Cloud revenue not separately disclosed from treasury spending",
+      "Legacy Builders Program status unclear post-migration to Ethereum L2",
+      "Exact last commit date on phala-blockchain repo (approximate: 2025-12-XX)",
+      "Logo URL assumed from phala.com \u2014 may differ"
+    ]
+  },
+  "identity": {
+    "name": "Phala Network",
+    "ticker": "PHA",
+    "category": "compute",
+    "subcategory": "Confidential AI / TEE Cloud",
+    "tagline": "Build AI People Can Trust",
+    "one_liner": "Decentralised confidential computing cloud using hardware TEEs for private AI inference and agent execution",
+    "website": "https://phala.com",
+    "documentation_url": "https://docs.phala.com",
+    "whitepaper_url": "https://files.phala.network/phala-paper.pdf",
+    "github_url": "https://github.com/Phala-Network",
+    "chain": "Ethereum L2 (Op-Succinct rollup via Conduit, migrated from Polkadot Nov 2025)",
+    "launch_date": "2020-09-12",
+    "current_status": "mainnet",
+    "logo_url": "https://phala.com/logo.svg"
+  },
+  "team": {
+    "founding_team": [
+      {
+        "name": "Marvin Tong",
+        "role": "CEO",
+        "background": "Ex-Tencent product manager, Didi senior product manager",
+        "linkedin_or_x": "https://x.com/aspect_marvin",
+        "doxxed": true
+      },
+      {
+        "name": "Hang Yin",
+        "role": "Co-founder / CTO / Chief Scientist",
+        "background": "Ex-Google software engineer, Bitcoin Gold co-founder",
+        "linkedin_or_x": "",
+        "doxxed": true
+      },
+      {
+        "name": "Zhe Wang",
+        "role": "Co-founder",
+        "background": "Serial entrepreneur with 20+ patents",
+        "linkedin_or_x": "",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 25,
+    "entity_name": "Hashforest Technology Pte. Ltd. (parent); Hashforest Technology LLC (subsidiary)",
+    "entity_jurisdiction": "Singapore (parent); California, USA (subsidiary)",
+    "notable_backers": [
+      "IOSG Ventures",
+      "SNZ Holding",
+      "Waterdrip Capital",
+      "Candaq Fintech",
+      "Incuba Alpha",
+      "Gagra Ventures",
+      "DWF Labs",
+      "Alameda Research (defunct)",
+      "Web3 Foundation (3x grants)"
+    ],
+    "funding_raised": {
+      "total_usd": 11430000,
+      "rounds": [
+        {
+          "round_type": "strategic",
+          "amount_usd": 10000000,
+          "date": "2020-09-01",
+          "lead_investor": "IOSG Ventures"
+        },
+        {
+          "round_type": "private",
+          "amount_usd": 28000,
+          "date": "2021-02-01",
+          "lead_investor": ""
+        },
+        {
+          "round_type": "private",
+          "amount_usd": 1400000,
+          "date": "2021-01-01",
+          "lead_investor": ""
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": null,
+          "date": "2024-01-01",
+          "lead_investor": "DWF Labs"
+        }
+      ]
+    }
+  },
+  "technical": {
+    "architecture_summary": "Three-layer system: (1) Ethereum L2 via Op-Succinct rollup with SP1 ZK proofs deployed through Conduit, (2) TEE compute layer running dstack Confidential VMs on Intel TDX and NVIDIA H100/H200/B200 GPUs, (3) Decentralised KMS using P2P with MPC key sharing. The L2 handles token transfers, staking, governance, and worker registration, while actual computation runs off-chain inside hardware TEEs with remote attestation.",
+    "consensus_mechanism": "Op-Succinct ZK rollup (validity proofs via SP1 zkVM)",
+    "what_is_onchain": "Token transfers, staking, governance votes (Snapshot), worker registration, attestation records",
+    "what_is_offchain": "TEE computation (confidential VMs), AI inference, agent execution, key management (MPC), GPU workloads",
+    "key_dependencies": [
+      "Intel TDX",
+      "NVIDIA Confidential Computing",
+      "Conduit (RaaS)",
+      "Succinct Labs (SP1)",
+      "Ethereum L1"
+    ],
+    "smart_contract_languages": [
+      "Solidity",
+      "Rust (legacy Substrate/ink!)",
+      "TypeScript (SDK)"
+    ],
+    "open_source": true,
+    "license": "Apache-2.0",
+    "github_metrics": {
+      "total_repos": 100,
+      "primary_repo_url": "https://github.com/Phala-Network/phala-blockchain",
+      "total_commits": 6385,
+      "contributors": 30,
+      "last_commit_date": "2025-12-01",
+      "stars": 368,
+      "forks": 162,
+      "open_issues": null
+    },
+    "audits": [
+      {
+        "auditor": "zkSecurity",
+        "date": "2025-06-01",
+        "scope": "dstack + meta-dstack (remote attestation, key management, Yocto configuration)",
+        "result_summary": "12 findings (1 high, 6 medium); all remediated",
+        "report_url": "https://phala.com/dstack/dstack-audit.pdf"
+      },
+      {
+        "auditor": "Code4rena",
+        "date": "2024-03-01",
+        "scope": "Phat Contract Runtime (Pink Runtime, ink! contracts, 2711 LoC)",
+        "result_summary": "0 high / 4 medium / 7 low findings",
+        "report_url": "https://code4rena.com/reports/2024-03-phala-network"
+      },
+      {
+        "auditor": "EtherAuthority",
+        "date": "2024-06-01",
+        "scope": "PHA Token Contract (ERC-20)",
+        "result_summary": "Token contract audit completed",
+        "report_url": "https://etherauthority.io/wp-content/uploads/2024/06/Phala-PHAToken.pdf"
+      }
+    ],
+    "security_incidents": [
+      {
+        "date": "2025-10-01",
+        "description": "WireTap SGX Attack: Academic researchers extracted SGX keys in lab environment. No real-world exploitation, no funds lost. Phala shut down all SGX workers and migrated to Intel TDX. Only affects DDR4 systems.",
+        "severity": "medium",
+        "funds_lost_usd": 0,
+        "post_mortem_url": ""
+      },
+      {
+        "date": "2025-04-01",
+        "description": "Worker Node Cloning: Theoretical enclave cloning vulnerability identified by Ruhr University Bochum. Low severity, no data loss, Phala Cloud unaffected. Fixed with sync metadata.",
+        "severity": "low",
+        "funds_lost_usd": 0,
+        "post_mortem_url": ""
+      }
+    ]
+  },
+  "tokenomics": {
+    "token_name": "PHA",
+    "ticker": "PHA",
+    "token_standard": "ERC-20 (Ethereum) + native on legacy Phala parachain",
+    "token_type": "utility + governance",
+    "token_utility": [
+      "Compute payments",
+      "Staking / collateral (vPHA)",
+      "Governance (Snapshot voting)",
+      "L2 access"
+    ],
+    "contract_address": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+    "supply": {
+      "max_supply": 1000000000,
+      "total_supply": 1000000000,
+      "circulating_supply": 831483000,
+      "circulating_percent": 83.1
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Mining / Compute Rewards",
+          "percentage": 70,
+          "vesting": "Disinflationary emissions \u2014 25% reduction every 180 days"
+        },
+        {
+          "category": "Private Sale",
+          "percentage": 15,
+          "vesting": "100% at TGE (no lock-up); fully vested"
+        },
+        {
+          "category": "Airdrop",
+          "percentage": 9,
+          "vesting": "Distributed"
+        },
+        {
+          "category": "Team & Founding Devs",
+          "percentage": 5,
+          "vesting": "Fully vested"
+        },
+        {
+          "category": "Rewards",
+          "percentage": 1,
+          "vesting": "Distributed"
+        }
+      ],
+      "distribution_method": "Private sale + airdrop + mining emissions"
+    },
+    "distribution_method": "Private sale + airdrop + mining emissions",
+    "emissions": {
+      "model": "disinflationary",
+      "initial_daily": 720000,
+      "current_daily": 135000,
+      "halving_schedule": "25% reduction every 180 days",
+      "annual_inflation_percent": 5,
+      "burn_mechanism": "Unmined PHA burned before mainnet; no ongoing burn"
+    },
+    "staking": {
+      "available": true,
+      "type": "PHA \u2192 vPHA liquid staking on Ethereum",
+      "minimum": null,
+      "lock_up": "21-day unstaking period",
+      "nominal_apy_percent": 8.31,
+      "real_yield_percent": 3.3,
+      "staking_ratio_percent": 6.05,
+      "risks": [
+        "21-day illiquidity during unstaking",
+        "Smart contract risk",
+        "Inflation erosion (~5% annual)"
+      ],
+      "slashing": "Gatekeepers can be slashed; GPU workers removed for non-compliance"
+    },
+    "market_data_snapshot": {
+      "date": "2026-03-05",
+      "price_usd": 0.044,
+      "market_cap_usd": 36400000,
+      "fully_diluted_valuation_usd": 51500000,
+      "volume_24h_usd": 80000000,
+      "ath_usd": 1.41,
+      "ath_date": "2021-05-15",
+      "atl_usd": 0.021,
+      "atl_date": "2026-02-06",
+      "major_exchanges": [
+        "Binance",
+        "Kraken",
+        "OKX",
+        "Coinbase",
+        "Bybit"
+      ]
+    },
+    "classification": "Disinflationary utility token with compute-backed demand",
+    "notes": "CoinCarp reports 961M circulating vs Etherscan 831M \u2014 discrepancy likely due to CoinCarp counting legacy parachain tokens. All investor vesting fully complete. DWF Labs is both investor and market maker.",
+    "market_data": {
+      "price_usd": 0.044,
+      "market_cap_usd": 36400000,
+      "fully_diluted_valuation_usd": 51500000,
+      "twenty_four_hour_volume_usd": 100000000,
+      "all_time_high_usd": 1.41,
+      "all_time_high_date": "2021-05-15",
+      "all_time_low_usd": 0.021,
+      "all_time_low_date": "2026-02-06",
+      "major_exchanges": [
+        "Binance",
+        "Kraken",
+        "OKX",
+        "Coinbase",
+        "Bybit"
+      ],
+      "data_snapshot_date": "2026-03-05"
+    }
+  },
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake PHA for vPHA via liquid staking on Ethereum",
+        "minimum_cost": null,
+        "expected_return": "~8.31% nominal APY (~3.3% real after inflation)",
+        "technical_skill": "basic",
+        "barriers": "21-day unstaking period",
+        "guide_url": "https://docs.phala.com/network/overview/phala-staking"
+      },
+      {
+        "type": "node_operation",
+        "description": "Run GPU worker node with Intel TDX CPU and NVIDIA H100/H200/B200 GPU",
+        "minimum_cost": "~$25,000-40,000 per GPU + 1,250-2,250 vPHA collateral",
+        "expected_return": "Mining rewards (disinflationary schedule)",
+        "technical_skill": "advanced",
+        "barriers": "Intel TDX CPU required, NVIDIA CC GPU required, email registration (not self-service)",
+        "guide_url": "https://docs.phala.com/network/compute-providers/run-GPU-on-phala/gpu-deployment-guide"
+      },
+      {
+        "type": "building",
+        "description": "Deploy applications on Phala Cloud using dstack and Docker",
+        "minimum_cost": "$0 ($20 free credits)",
+        "expected_return": "N/A",
+        "technical_skill": "intermediate",
+        "barriers": "Docker familiarity needed",
+        "guide_url": "https://docs.phala.com/phala-cloud/getting-started/overview"
+      },
+      {
+        "type": "using",
+        "description": "Use Phala Cloud for confidential AI inference (H200 $3.50/hr on-demand)",
+        "minimum_cost": "$3.50/hr (H200 on-demand)",
+        "expected_return": "N/A",
+        "technical_skill": "basic",
+        "barriers": "None \u2014 on-demand pricing",
+        "guide_url": "https://docs.phala.com/phala-cloud/pricing"
+      }
+    ],
+    "developer_resources": {
+      "sdk": "@phala/cloud npm package (TypeScript, 60+ methods)",
+      "api": "REST API with OpenAPI spec",
+      "documentation_quality": "Good \u2014 100+ pages, comprehensive",
+      "grants_programme": "Legacy Builders Program (up to $50K, status unclear post-migration); Monthly Builders Challenge ($2,500 prizes)",
+      "grants_url": null
+    }
+  },
+  "usage_metrics": {
+    "snapshot_date": "2026-03-05",
+    "daily_active_users": 42900,
+    "daily_active_users_note": "On-chain addresses on legacy parachain (Dec 2024) \u2014 mostly worker nodes, not human users",
+    "phala_cloud_total_users": 10004,
+    "phala_cloud_paid_users": 398,
+    "daily_agent_executions_peak": 758270,
+    "daily_agent_executions_note": "Dec 2024 peak on now-retired parachain",
+    "active_devices": 29478,
+    "running_cvms": 813,
+    "llm_tokens_daily_peak": 1340000000,
+    "l2_tvs_usd": 632913,
+    "l2_uops_daily": 0,
+    "mining_rewards_2024_pha": 110600000,
+    "daily_mining_rewards_pha": 135000,
+    "revenue_arr_claimed_usd": 2000000,
+    "revenue_note": "Partially verified \u2014 treasury spending was $2.1M in 2024 but Cloud revenue not separately disclosed",
+    "sources": [
+      "Phala 2024 Year in Review",
+      "Phala 2025 Report",
+      "L2Beat",
+      "DePIN Scan",
+      "StakingRewards"
+    ]
+  },
+  "community": {
+    "discord_members": 12068,
+    "telegram_members": 10552,
+    "twitter_followers": 143000,
+    "twitter_handle": "@PhalaNetwork",
+    "github_contributors": 30,
+    "forum_topics": 617,
+    "forum_url": "https://forum.phala.network",
+    "governance_type": "Snapshot + Safe multisig on Ethereum L1 (migrated from Polkadot on-chain governance)",
+    "governance_url": "https://forum.phala.network",
+    "governance_legacy_url": "https://phala.subsquare.io",
+    "sentiment": "Moderately bullish; developer-focused; strong Chinese-language community",
+    "key_channels": [
+      "Discord",
+      "Telegram",
+      "Forum",
+      "X/Twitter"
+    ]
+  },
+  "freedom_score": {
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "L2 Stage 0 with centralised sequencer, permissioned proposer, instant-upgradable contracts. GPU worker registration requires emailing the team (not self-service). 87.4% single-developer concentration on dstack (kvinwang). 29,478 active devices provides hardware distribution but chain-level infrastructure is heavily centralised."
+      },
+      "governance_decentralisation": {
+        "score": 7,
+        "max": 20,
+        "evidence": "Snapshot + Safe multisig controlled by team. Governance downgraded from Polkadot on-chain system with council/referenda to off-chain Snapshot voting. No evidence of community override ability. Forum exists (617+ topics) but decision-making is team-led."
+      },
+      "token_distribution_fairness": {
+        "score": 10,
+        "max": 15,
+        "evidence": "70% allocated to mining/compute rewards is genuinely community-oriented. 5% team allocation is low. However, 15% private sale had zero lock-up (100% at TGE). All investor vesting now fully complete. 83.1% circulating. DWF Labs dual role as investor and market maker is a concern."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "TEE provides genuine computation-level censorship resistance \u2014 workloads inside enclaves cannot be inspected or modified. However, centralised sequencer is a chokepoint for L2 transactions. GPU onboarding is gated (email-based). California ToS apply via Hashforest Technology LLC subsidiary."
+      },
+      "data_sovereignty": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Strongest dimension. TEE ensures zero-knowledge of user data during computation. Remote attestation is verifiable. dstack enables self-hosted deployment for maximum sovereignty. SOC 2 Type I and HIPAA compliance certifications. Gaps: sequencer has metadata visibility, Cloud registration requires account creation."
+      },
+      "open_source_and_transparency": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Apache-2.0 licensed. dstack donated to Linux Foundation for neutral governance. Two professional audits (zkSecurity, Code4rena) plus token audit. Annual transparency reports published (2024 Year in Review, 2025 Report). Held back by instant-upgradable L2 contracts without timelock and single-developer concentration on core repo."
+      }
+    },
+    "total_score": 55,
+    "max_possible": 100,
+    "freedom_grade": "C",
+    "freedom_summary": "Phala's TEE architecture delivers genuinely strong data sovereignty and privacy guarantees at the computation layer. However, the migration to an Ethereum L2 has introduced significant centralisation across infrastructure, governance, and censorship resistance. The gap between Phala's privacy promise and its current chain-level decentralisation is the core tension."
+  },
+  "assessment": {
+    "what_works_today": [
+      "TEE-based confidential computing is real and differentiated \u2014 genuinely private AI inference",
+      "SOC 2 Type I and HIPAA compliance position the project for enterprise adoption",
+      "ElizaOS V2 integration and NEAR partnership provide real usage channels",
+      "398 paid users and $2M+ claimed ARR show early commercial traction",
+      "dstack donation to Linux Foundation is a credibility signal for open-source commitment",
+      "Proactive WireTap response (shutting down all SGX workers, migrating to TDX) showed competent security handling"
+    ],
+    "what_is_hype": [
+      "'758,000 daily agent executions' was on the now-retired parachain, not the current L2",
+      "'35,000+ workers' are legacy SGX miners, most decommissioned; current active is 29,478 but L2 has near-zero activity",
+      "'$2M ARR' is partially verified \u2014 treasury spending was $2.1M but Cloud revenue not separately disclosed",
+      "'Decentralised' cloud is Stage 0 with centralised sequencer and team-controlled upgrades",
+      "42,900 'DAU' are on-chain addresses (mostly worker nodes), not human users"
+    ],
+    "key_risks": [
+      "L2 Stage 0 \u2014 instant-upgradable contracts with no exit window; users trust the operator entirely",
+      "87.4% single-developer concentration on dstack (kvinwang) \u2014 extreme bus factor",
+      "Hardware vendor dependency on Intel TDX and NVIDIA Confidential Computing",
+      "Very low L2 TVL ($633K) suggests limited real economic activity on current chain",
+      "Multiple simultaneous migrations (SGX\u2192TDX, Polkadot\u2192Ethereum, Phat Contracts\u2192dstack) create execution risk",
+      "DWF Labs as both investor and market maker"
+    ],
+    "competitive_advantages": [
+      "Only TEE cloud with SOC 2 Type I and HIPAA compliance certifications",
+      "First TEE platform for ElizaOS V2 agent swarms",
+      "dstack in Linux Foundation provides neutral governance for core infrastructure",
+      "Multi-hardware TEE support (Intel TDX + NVIDIA Confidential Computing)",
+      "Real enterprise compliance certifications differentiate from narrative-only competitors"
+    ],
+    "competitive_disadvantages": [
+      "L2 significantly less decentralised than competitors (Stage 0)",
+      "Small paid user base (398) vs. larger compute networks",
+      "Low TVL ($633K) signals limited DeFi/economic activity",
+      "Heavy dependency on two hardware vendors (Intel, NVIDIA)",
+      "Governance downgraded from on-chain (Polkadot) to Snapshot \u2014 a regression"
+    ],
+    "comparable_projects": [
+      "Akash (general compute)",
+      "io.net (GPU compute)",
+      "Render (GPU rendering)",
+      "Nillion (blind computation)",
+      "Oasis (confidential computing)",
+      "Secret Network (TEE-based privacy)"
+    ],
+    "outlook": "Phala has genuine technology in TEE-based confidential computing and is making a credible push into enterprise AI infrastructure. The SOC 2 + HIPAA certifications and ElizaOS integration differentiate it from pure narrative plays. However, the L2 is very early (Stage 0) and the project faces execution risk from multiple simultaneous platform migrations. Success depends on whether the enterprise compliance positioning converts to meaningful paid adoption beyond the current 398 users.",
+    "overall": "A technically credible confidential computing platform with real enterprise ambitions, held back by significant L2 centralisation and early-stage commercial traction. Better classified as DeAI-adjacent (general-purpose confidential compute pivoting to AI) than Core DeAI."
+  },
+  "sources": [
+    {
+      "id": "S001",
+      "type": "official",
+      "url": "https://phala.com",
+      "title": "Phala Network \u2014 Official Website",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S002",
+      "type": "documentation",
+      "url": "https://docs.phala.com",
+      "title": "Phala Documentation",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S003",
+      "type": "whitepaper",
+      "url": "https://files.phala.network/phala-paper.pdf",
+      "title": "Phala Network Whitepaper",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S004",
+      "type": "github",
+      "url": "https://github.com/Phala-Network/phala-blockchain",
+      "title": "phala-blockchain \u2014 Primary GitHub Repository",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S005",
+      "type": "github",
+      "url": "https://github.com/aspect-build/dstack",
+      "title": "dstack \u2014 Confidential VM Framework Repository",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S006",
+      "type": "github",
+      "url": "https://github.com/Phala-Network",
+      "title": "Phala Network GitHub Organisation",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S007",
+      "type": "on-chain",
+      "url": "https://etherscan.io/token/0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
+      "title": "PHA Token on Etherscan",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S008",
+      "type": "analytics",
+      "url": "https://l2beat.com/scaling/projects/phala-network",
+      "title": "Phala Network on L2Beat",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S009",
+      "type": "market-data",
+      "url": "https://www.coingecko.com/en/coins/phala-network",
+      "title": "Phala Network on CoinGecko",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S010",
+      "type": "market-data",
+      "url": "https://coinmarketcap.com/currencies/phala-network/",
+      "title": "Phala Network on CoinMarketCap",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S011",
+      "type": "analytics",
+      "url": "https://depinscan.io/project/phala-network",
+      "title": "Phala Network on DePIN Scan",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S012",
+      "type": "analytics",
+      "url": "https://www.stakingrewards.com/asset/phala-network",
+      "title": "Phala Network on StakingRewards",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S013",
+      "type": "analytics",
+      "url": "https://cryptorank.io/price/phala-network",
+      "title": "Phala Network on CryptoRank",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S014",
+      "type": "analytics",
+      "url": "https://icodrops.com/phala-network/",
+      "title": "Phala Network on ICO Drops",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S015",
+      "type": "analytics",
+      "url": "https://chainbroker.io/projects/phala-network/",
+      "title": "Phala Network on ChainBroker",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S016",
+      "type": "analytics",
+      "url": "https://www.coincarp.com/currencies/phalanetwork/",
+      "title": "Phala Network on CoinCarp",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S017",
+      "type": "audit",
+      "url": "https://phala.com/dstack/dstack-audit.pdf",
+      "title": "zkSecurity Audit \u2014 dstack + meta-dstack (May-June 2025)",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S018",
+      "type": "audit",
+      "url": "https://code4rena.com/reports/2024-03-phala-network",
+      "title": "Code4rena Audit \u2014 Phat Contract Runtime (March 2024)",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S019",
+      "type": "audit",
+      "url": "https://etherauthority.io/wp-content/uploads/2024/06/Phala-PHAToken.pdf",
+      "title": "EtherAuthority Audit \u2014 PHA Token Contract",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S020",
+      "type": "blog",
+      "url": "https://phala.network/posts/wiretap-sgx-response",
+      "title": "Phala WireTap SGX Attack Response",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S021",
+      "type": "blog",
+      "url": "https://phala.network/posts/2024-year-in-review",
+      "title": "Phala 2024 Year in Review",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S022",
+      "type": "blog",
+      "url": "https://phala.network/posts/2025-report",
+      "title": "Phala 2025 Annual Report",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S023",
+      "type": "blog",
+      "url": "https://phala.network/posts/elizaos-v2-integration",
+      "title": "Phala x ElizaOS V2 Integration Announcement",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S024",
+      "type": "blog",
+      "url": "https://phala.network/posts/phala-cloud-launch",
+      "title": "Phala Cloud Launch Announcement",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S025",
+      "type": "blog",
+      "url": "https://phala.network/posts/soc2-type1-compliance",
+      "title": "Phala SOC 2 Type I Compliance Announcement",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S026",
+      "type": "governance",
+      "url": "https://forum.phala.network",
+      "title": "Phala Network Governance Forum",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S027",
+      "type": "governance",
+      "url": "https://phala.subsquare.io",
+      "title": "Phala Subsquare (Legacy Polkadot Governance)",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S028",
+      "type": "media",
+      "url": "https://www.cryptopolitan.com/phala-network-governance-vote/",
+      "title": "Cryptopolitan \u2014 Phala Network Governance Vote Article",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S029",
+      "type": "documentation",
+      "url": "https://docs.phala.com/network/overview/phala-staking",
+      "title": "Phala Staking Documentation",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S030",
+      "type": "documentation",
+      "url": "https://docs.phala.com/network/compute-providers/run-GPU-on-phala/gpu-deployment-guide",
+      "title": "Phala GPU Worker Deployment Guide",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S031",
+      "type": "documentation",
+      "url": "https://docs.phala.com/phala-cloud/getting-started/overview",
+      "title": "Phala Cloud Getting Started Guide",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S032",
+      "type": "documentation",
+      "url": "https://docs.phala.com/phala-cloud/pricing",
+      "title": "Phala Cloud Pricing",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S033",
+      "type": "analytics",
+      "url": "https://www.defillama.com/protocol/phala-network",
+      "title": "Phala Network on DeFiLlama",
+      "accessed": "2026-03-05"
+    },
+    {
+      "id": "S034",
+      "type": "npm",
+      "url": "https://www.npmjs.com/package/@phala/cloud",
+      "title": "@phala/cloud npm Package",
+      "accessed": "2026-03-05"
+    }
+  ]
+}
