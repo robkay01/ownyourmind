@@ -1,0 +1,28 @@
+---
+/**
+ * Mobile Table of Contents — collapsible disclosure.
+ * Populated by the same initTOC script from TableOfContents.astro.
+ */
+---
+
+<details class="toc-mobile lg:hidden mb-6 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+  <summary class="flex items-center justify-between px-4 py-3 cursor-pointer text-sm font-medium text-[var(--color-text-secondary)] select-none">
+    On this page
+    <svg class="toc-chevron w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 9l6 6 6-6" />
+    </svg>
+  </summary>
+  <nav class="px-4 pb-3">
+    <ul class="toc-list space-y-1" id="toc-mobile-list"></ul>
+  </nav>
+</details>
+
+<style>
+  .toc-mobile[open] .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  .toc-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

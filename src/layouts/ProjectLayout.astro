@@ -1,6 +1,8 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import MobileTOC from '../components/MobileTOC.astro';
 
 import AllocationBar from '../components/AllocationBar.astro';
 import DonutChart from '../components/DonutChart.astro';
@@ -218,7 +220,8 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
     { label: title },
   ]}
 >
-  <article class="max-w-4xl">
+  <div class="lg:flex lg:gap-8">
+  <article class="max-w-4xl min-w-0 flex-1" data-toc-content>
     <header class="mb-10 relative">
       {/* Project artwork hero */}
       <div class="relative -mx-4 sm:-mx-6 -mt-6 mb-6 rounded-xl overflow-hidden">
@@ -325,6 +328,8 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
         )}
       </div>
     </header>
+
+    <MobileTOC />
 
     <div class="prose">
       <slot />
@@ -963,6 +968,13 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
     )}
 
   </article>
+
+  <!-- Sidebar TOC (desktop: sticky sidebar, mobile: rendered inside article) -->
+  <div class="hidden lg:block lg:w-56 lg:shrink-0">
+    <TableOfContents />
+  </div>
+
+  </div>
 </ContentLayout>
 
 <style>
