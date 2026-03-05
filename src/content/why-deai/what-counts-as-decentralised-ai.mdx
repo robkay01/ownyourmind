@@ -5,6 +5,9 @@ publishDate: 2025-03-05
 draft: false
 ---
 
+import DeaiSpectrum from '../../components/DeaiSpectrum.astro';
+import PullQuote from '../../components/PullQuote.astro';
+
 ## The problem with the AI label
 
 There are 911 tokens in [CoinMarketCap's AI & Big Data category](https://coinmarketcap.com/view/ai-big-data/). That number was under 100 two years ago. So what happened? Did 800 teams suddenly crack decentralised AI, or did 800 teams update their website copy?
@@ -30,6 +33,8 @@ Others arrived at AI through genuine technical evolution. [Render](/projects/ren
 Then there are the projects where the timing tells the story. PathDAO was a gaming guild whose token fell 99%. It pivoted to social apps, then NFT fashion, then music. Nothing worked. In December 2023, it relaunched as [Virtuals Protocol](/projects/virtuals/), an AI agent creation platform. The AI agent category then grew 322% in Q4 2024 and Virtuals rode the wave. I am not saying Virtuals has no product. It does. But ask yourself: was the founding question "what technical problem needs solving" or "what narrative will save this token"?
 
 APENFT rebranding to AINFT in October 2025, a full year after the AI agent peak, with zero pre-existing AI work? That is not a pivot. That is a costume change. Justin Sun's TRON ecosystem adding "AI infrastructure" to what was an NFT marketplace is pure narrative arbitrage.
+
+<PullQuote>That is not a pivot. That is a costume change.</PullQuote>
 
 ### The removal test
 
@@ -59,35 +64,25 @@ The problematic case is AI as marketing for the game. The blockchain has its own
 
 These three tests produce a spectrum, not a binary. Here is how I categorise it.
 
-### Core DeAI
+<DeaiSpectrum />
 
-AI is the founding thesis. The protocol was designed around AI workloads. The token incentives exist to produce, coordinate or distribute intelligence. Remove AI and the project has no reason to exist.
+**Core DeAI** projects like [Bittensor](/projects/bittensor/), [Gensyn](/projects/gensyn/), [Venice](/projects/venice/), [io.net](/projects/io-net/), [Morpheus](/projects/morpheus/), [Grass](/projects/grass/), [Ocean Protocol](/projects/ocean/) and [Vana](/projects/vana/) range in quality and maturity. Some are live with real usage. Some are still building. But AI is what they are, not a feature they added.
 
-**Examples:** [Bittensor](/projects/bittensor/), [Gensyn](/projects/gensyn/), [Venice](/projects/venice/), [io.net](/projects/io-net/), [Morpheus](/projects/morpheus/), [Grass](/projects/grass/), [Ocean Protocol](/projects/ocean/), [Vana](/projects/vana/)
-
-These projects range in quality and maturity. Some are live with real usage. Some are still building. But AI is what they are, not a feature they added.
-
-### DeAI-adjacent
-
-Real technology that serves AI workloads, but the protocol is general-purpose. AI is a primary use case, possibly the largest, but not the only one. The project would still function without AI.
-
-**Examples:** [Akash](/projects/akash/) (general-purpose compute), [Render](/projects/render/) (GPU rendering expanded to inference), Phala (confidential computing pivoting to AI agents), Nillion (blind computation with AI inference as one application)
+**DeAI-adjacent** projects like [Akash](/projects/akash/) (general-purpose compute), [Render](/projects/render/) (GPU rendering expanded to inference), Phala (confidential computing pivoting to AI agents) and Nillion (blind computation with AI inference as one application) have real technology serving AI workloads, but the protocol is general-purpose.
 
 I reviewed four privacy/confidential computing projects recently. All four, Nillion, Phala, Secret Network and Oasis, are general-purpose privacy infrastructure that has pivoted toward AI as a use case. Phala is the furthest along, with GPU TEE inference live on H100/H200/B200 hardware, 758,000 daily AI agent contract executions, and an integration with the Eliza V2 agent framework. But the underlying tech is horizontal. It runs trading bots, healthcare analytics and LLM inference on the same infrastructure.
 
 DeAI-adjacent projects can be excellent investments and excellent infrastructure. They deserve coverage. But calling them DeAI projects without noting the general-purpose origin would be dishonest.
 
-### AI-washed
-
-Existing crypto project with "AI" added to the marketing after the narrative shifted. The AI component is either non-existent, embryonic, or incidental to the actual product. The project existed before AI and would continue to exist without it.
-
-**Examples:** AINFT (formerly APENFT), SuperVerse (added AI to a list alongside gaming, NFTs, DeFi), Secret Network (DeFi ecosystem collapsed with TVL down 94%, AI is the replacement narrative), the hundreds of "GPT" tokens with no underlying technology
+**AI-washed** projects are the ones where "AI" was added to the marketing after the narrative shifted. The AI component is either non-existent, embryonic, or incidental to the actual product. AINFT (formerly APENFT), SuperVerse, Secret Network (DeFi ecosystem collapsed with TVL down 94%, AI is the replacement narrative), and the hundreds of "GPT" tokens with no underlying technology all fall here.
 
 I should be upfront here: I was an early adopter on Secret Network. Privacy is a first principle for me and Secret's confidential computing thesis was exactly what I wanted to support. I staked SCRT, used the ecosystem, and genuinely wanted it to succeed. That makes this harder to write, but it does not change the analysis.
 
 Secret Network is worth looking at closely because it has real technology. Its TEE-based confidential computing genuinely can run private AI inference. The SecretAI SDK exists. But the context matters: the DeFi ecosystem that was the original product failed. TVL went from $118 million to $7 million. The "confidential AI" positioning filled a vacuum left by a collapsing core business. The SDK has 9 GitHub stars. The team is "actively seeking customers and partners," which is their own language for having infrastructure without adoption.
 
 Having real tech does not get you off the hook if the pivot is narrative-driven rather than product-driven.
+
+<PullQuote>Having real tech does not get you off the hook if the pivot is narrative-driven rather than product-driven.</PullQuote>
 
 ## Why this matters
 

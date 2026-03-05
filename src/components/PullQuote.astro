@@ -1,0 +1,41 @@
+---
+/**
+ * Pull quote component for highlighting key lines in articles.
+ * Use in MDX: <PullQuote>That is not a pivot. That is a costume change.</PullQuote>
+ */
+---
+
+<aside class="pull-quote" role="presentation">
+  <span class="pull-quote-mark" aria-hidden="true">"</span>
+  <p class="pull-quote-text">
+    <slot />
+  </p>
+</aside>
+
+<style>
+  .pull-quote {
+    position: relative;
+    margin: 2.5rem 0;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    border-left: none;
+    text-align: center;
+  }
+
+  .pull-quote-mark {
+    display: block;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--color-accent);
+    opacity: 0.4;
+    font-family: Georgia, serif;
+    margin-bottom: -0.5rem;
+  }
+
+  .pull-quote-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+</style>

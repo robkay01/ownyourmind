@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const whyDeai = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/why-deai' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/why-deai' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),

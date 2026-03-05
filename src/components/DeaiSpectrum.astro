@@ -1,0 +1,152 @@
+---
+/**
+ * Three-tier DeAI classification spectrum.
+ * Core DeAI → DeAI-adjacent → AI-washed
+ */
+interface Tier {
+  label: string;
+  description: string;
+  color: string;
+  bgColor: string;
+  examples: string[];
+}
+
+const tiers: Tier[] = [
+  {
+    label: 'Core DeAI',
+    description: 'AI is the founding thesis. Remove it and the project has no reason to exist.',
+    color: '#10B981',
+    bgColor: 'rgba(16, 185, 129, 0.1)',
+    examples: ['Bittensor', 'Gensyn', 'Venice', 'Morpheus', 'io.net'],
+  },
+  {
+    label: 'DeAI-adjacent',
+    description: 'Real tech that serves AI workloads, but the protocol is general-purpose.',
+    color: '#F59E0B',
+    bgColor: 'rgba(245, 158, 11, 0.1)',
+    examples: ['Akash', 'Render', 'Phala', 'Nillion'],
+  },
+  {
+    label: 'AI-washed',
+    description: 'Existing project with "AI" added to the marketing after the narrative shifted.',
+    color: '#EF4444',
+    bgColor: 'rgba(239, 68, 68, 0.1)',
+    examples: ['AINFT', 'SuperVerse', 'Secret Network'],
+  },
+];
+---
+
+<div class="spectrum-container">
+  <!-- Gradient bar -->
+  <div class="spectrum-bar">
+    <div class="spectrum-gradient" />
+    <div class="spectrum-labels">
+      <span style={`color: ${tiers[0].color};`}>Genuine</span>
+      <span style={`color: ${tiers[2].color};`}>Narrative</span>
+    </div>
+  </div>
+
+  <!-- Tier cards -->
+  <div class="spectrum-tiers">
+    {tiers.map((tier) => (
+      <div class="spectrum-tier" style={`border-color: ${tier.color}; background: ${tier.bgColor};`}>
+        <div class="tier-header">
+          <span class="tier-dot" style={`background: ${tier.color};`} />
+          <span class="tier-label" style={`color: ${tier.color};`}>{tier.label}</span>
+        </div>
+        <p class="tier-description">{tier.description}</p>
+        <div class="tier-examples">
+          {tier.examples.map((ex) => (
+            <span class="tier-tag">{ex}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .spectrum-container {
+    margin: 2rem 0;
+  }
+
+  .spectrum-bar {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .spectrum-gradient {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #10B981, #F59E0B, #EF4444);
+  }
+
+  .spectrum-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .spectrum-tiers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .spectrum-tiers {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .spectrum-tier {
+    border-left: 3px solid;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem;
+  }
+
+  .tier-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .tier-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .tier-description {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .tier-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+
+  .tier-tag {
+    font-size: 0.6875rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    background: var(--color-bg-primary);
+    color: var(--color-text-tertiary);
+    border: 1px solid var(--color-border);
+  }
+</style>
