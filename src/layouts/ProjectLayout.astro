@@ -1,6 +1,7 @@
 ---
 import ContentLayout from './ContentLayout.astro';
 import FreedomScoreBreakdown from '../components/FreedomScoreBreakdown.astro';
+import ReturnsScoreBreakdown from '../components/ReturnsScoreBreakdown.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import MobileTOC from '../components/MobileTOC.astro';
 
@@ -264,26 +265,14 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
             />
           </div>
           <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${scoreColor};`}>
-            {freedomScore}/10
+            {freedomScore * 10}/100
           </span>
         </div>
       )}
 
-      <!-- Returns Score -->
+      <!-- Returns Score breakdown -->
       {returnsScore != null && (
-        <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] mt-3">
-          <span class="text-sm font-medium text-[var(--color-text-secondary)]">Returns Score</span>
-          <div class="flex-1 h-2 rounded-full bg-[var(--color-bg-primary)]">
-            <div
-              class="h-full rounded-full transition-all"
-              style={`width: ${returnsScore * 10}%; background-color: ${returnsColor};`}
-            />
-          </div>
-          <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${returnsColor};`}>
-            {returnsScore.toFixed(1)}/10
-          </span>
-          <a href="/resources/returns-score-methodology/" class="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] ml-1" title="Returns Score Methodology">?</a>
-        </div>
+        <ReturnsScoreBreakdown returnsScore={returnsScore} breakdown={returnsScoreBreakdown} />
       )}
 
       <!-- Market Data -->

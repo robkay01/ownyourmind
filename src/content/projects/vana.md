@@ -102,7 +102,7 @@ The competitive landscape includes [Ocean Protocol](/projects/ocean/) (establish
 
 **My position.** I do not hold VANA. The data sovereignty architecture is genuinely impressive, and I respect the user adoption metrics. But permissioned validators, Foundation-controlled governance, and a 95% price decline tell me the project has not yet delivered on its decentralisation thesis. I would reconsider if the validator set becomes permissionless, if governance participation materialises, and if DataDAO economics demonstrate sustainable returns for contributors.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 Vana scores 59/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -126,7 +126,7 @@ Three changes would materially increase Vana's score:
 2. **Activate governance.** Governance tools exist but are not being used. Running the first binding on-chain votes, publishing participation metrics, and demonstrating that the Foundation is ceding decision-making authority to token holders would transform governance from infrastructure to practice.
 3. **Demonstrate data economics.** The "own your data" thesis is compelling in theory. Publishing anonymised data on per-user earnings across DataDAOs, total data access fee revenue, and enterprise buyer adoption would prove that contributing personal data generates meaningful returns. Without this, the value proposition remains aspirational.
 
-## Returns score: 6/10
+## Returns score: 60/100
 
 VANA scores 55/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

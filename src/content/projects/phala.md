@@ -87,7 +87,7 @@ Market snapshot: PHA trades at approximately $0.044 with a $36.4M market cap ($5
 
 **My position.** I do not hold PHA. I covered Phala extensively in [What Counts as Decentralised AI?](/why-deai/what-counts-as-decentralised-ai/) as a DeAI-adjacent project — genuine technology serving AI workloads from a general-purpose privacy infrastructure base. The TEE technology is credible. The decentralisation is not. At current prices ($0.044, 97% below ATH), the market has already expressed scepticism. Whether Phala converts its enterprise compliance positioning into meaningful adoption beyond 398 paid users is the core investment question.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 Phala scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -111,7 +111,7 @@ Three changes would materially increase Phala's score:
 2. **Reduce dstack bus-factor risk.** 87.4% commit concentration in one developer is untenable for infrastructure that enterprises are supposed to trust. The Linux Foundation donation is a governance fix, not a contributor fix. The project needs more core contributors to dstack, urgently.
 3. **Separate Cloud revenue from treasury spending.** If Phala is claiming $2M+ ARR, publish the breakdown. External customer revenue and treasury-funded spending are fundamentally different metrics. Transparency here would strengthen the commercial traction narrative considerably.
 
-## Returns score: 5/10
+## Returns score: 50/100
 
 PHA scores 50/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

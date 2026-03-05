@@ -77,7 +77,7 @@ MOR is consumed when users access compute on the network, creating burn pressure
 
 **My position.** I am a capital provider with stETH staked in the Morpheus contracts. I earn daily MOR emissions. I believe in the thesis but I size the position according to the risk. This is early-stage infrastructure, not a blue chip.
 
-## Freedom score: 8/10
+## Freedom score: 80/100
 
 Morpheus scores 76/100 (B grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -101,7 +101,7 @@ Three changes would materially increase Morpheus's score:
 2. **Commission a formal security audit.** The smart contracts handle real capital (stETH deposits, MOR emissions). A third-party audit by a credible firm would strengthen confidence in the infrastructure that underpins the entire network.
 3. **Grow the compute provider base.** More providers means more redundancy, lower latency and stronger censorship resistance. The compute marketplace is functional but needs scale to deliver on the sovereign agent vision.
 
-## Returns score: 5.8/10
+## Returns score: 58/100
 
 MOR scores 58/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

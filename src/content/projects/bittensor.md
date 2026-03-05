@@ -83,7 +83,7 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 **My experience.** I have explored Bittensor mining and found the barrier to entry on established subnets too high for my hardware. Newer subnets offer better opportunities but come with the risk of lower and more volatile emissions. I hold TAO as a network exposure position but do not actively mine.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 Bittensor scores 56/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -107,7 +107,7 @@ Three changes would materially increase Bittensor's score:
 2. **Commission a third-party security audit.** A network with a $1.9 billion market cap and a history of a $28-30 million insider hack has no disclosed security audit. This is indefensible. An audit of the core protocol, consensus mechanism and smart contracts by a credible firm would address the most obvious gap.
 3. **Reform governance beyond the Triumvirate.** Three OTF employees controlling governance proposals for a network of this scale is not decentralised governance. Expanding proposal rights to the broader validator set or implementing a community proposal mechanism would distribute decision-making power meaningfully.
 
-## Returns score: 6.8/10
+## Returns score: 68/100
 
 TAO scores 68/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

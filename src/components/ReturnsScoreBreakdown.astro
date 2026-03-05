@@ -1,0 +1,90 @@
+---
+/**
+ * Returns Score breakdown — mirrors FreedomScoreBreakdown layout.
+ * Shows 5 dimension bars with scores, grade badge, and methodology link.
+ */
+interface Props {
+  returnsScore: number;          // 1-10 scale from frontmatter
+  breakdown?: {
+    tokenUtility?: number;        // /20
+    valueAccrual?: number;        // /25
+    supplyDynamics?: number;      // /20
+    revenueSustainability?: number; // /20
+    liquidityAccess?: number;     // /15
+  };
+}
+
+const { returnsScore, breakdown } = Astro.props;
+
+const raw = Math.round(returnsScore * 10);
+const grade = raw >= 90 ? 'A' : raw >= 75 ? 'B' : raw >= 60 ? 'C' : raw >= 45 ? 'D' : 'F';
+
+const dimensions = breakdown ? [
+  { label: 'Token utility', score: breakdown.tokenUtility, max: 20 },
+  { label: 'Value accrual', score: breakdown.valueAccrual, max: 25 },
+  { label: 'Supply dynamics', score: breakdown.supplyDynamics, max: 20 },
+  { label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 20 },
+  { label: 'Liquidity & access', score: breakdown.liquidityAccess, max: 15 },
+] : [];
+
+function barColor(score: number | undefined, max: number): string {
+  if (score == null || max === 0) return '#64748B';
+  const pct = score / max;
+  if (pct >= 0.75) return '#10B981';
+  if (pct >= 0.5) return '#F59E0B';
+  return '#EF4444';
+}
+
+function gradeColor(g: string): string {
+  switch (g) {
+    case 'A': return 'freedom-breakdown-grade-a';
+    case 'B': return 'freedom-breakdown-grade-b';
+    case 'C': return 'freedom-breakdown-grade-c';
+    case 'D': return 'freedom-breakdown-grade-d';
+    case 'F': return 'freedom-breakdown-grade-f';
+    default: return 'badge-dormant';
+  }
+}
+---
+
+<div class="freedom-breakdown-container">
+  <!-- Header -->
+  <div class="freedom-breakdown-header">
+    <span class="freedom-breakdown-label">Returns Score</span>
+    <div class="flex items-center gap-2">
+      <span class:list={['badge', gradeColor(grade)]}>
+        {grade}
+      </span>
+      <span class="freedom-breakdown-total">{raw}<span class="freedom-breakdown-max">/100</span></span>
+      <a href="/resources/returns-score-methodology/" class="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)]" title="Returns Score Methodology">?</a>
+    </div>
+  </div>
+
+  <!-- Sub-score bars -->
+  {dimensions.length > 0 && (
+    <div class="freedom-breakdown-bars">
+      {dimensions.map(dim => {
+        if (dim.score == null) return null;
+        const pct = dim.max > 0 ? (dim.score / dim.max) * 100 : 0;
+        const color = barColor(dim.score, dim.max);
+
+        return (
+          <div class="freedom-breakdown-row">
+            <div class="freedom-breakdown-row-inner">
+              <span class="freedom-breakdown-dim-label">{dim.label}</span>
+              <div class="freedom-breakdown-bar-track">
+                <div
+                  class="freedom-breakdown-bar-fill"
+                  style={`width: ${pct}%; background-color: ${color};`}
+                />
+              </div>
+              <span class="freedom-breakdown-dim-score" style={`color: ${color};`}>
+                {dim.score}<span class="freedom-breakdown-dim-max">/{dim.max}</span>
+              </span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  )}
+</div>

@@ -105,7 +105,7 @@ Competitive pressure is real. [Vana](/projects/vana/) has a live mainnet with 1.
 
 **My position.** I do not hold OCEAN. The Compute-to-Data model is genuinely impressive and I use it as a reference point when evaluating other data sovereignty projects. But a token without stated utility, an 81% supply conversion to another token, dismantled governance, active litigation, and $77,000 daily volume collectively represent too many red flags. I would reconsider if the litigation resolves clearly, if a new governance mechanism is implemented, and if the buyback-and-burn programme demonstrates concrete revenue. The technology is worth studying; the token is not worth holding.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 Ocean Protocol scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -129,7 +129,7 @@ Three changes would materially increase Ocean Protocol's score:
 2. **Resolve the Fetch.ai litigation transparently.** Publish the settlement terms when agreed. Disclose what happened with the token minting and conversion. Whether the allegations are true, exaggerated, or false, the current ambiguity is worse than clarity in either direction. The community cannot make informed decisions about OCEAN without understanding what actually happened with their token supply.
 3. **Define token utility or commit to pure buyback-and-burn.** "No intended utility value" is honest but fatal for a token. Either implement concrete utility (staking for Ocean Node rewards, governance rights, data marketplace fee discount) or publish a detailed buyback-and-burn plan with auditable revenue sources, timelines, and burn targets. The current position of neither utility nor clear deflationary mechanism satisfies no one.
 
-## Returns score: 3.8/10
+## Returns score: 38/100
 
 OCEAN scores 38/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

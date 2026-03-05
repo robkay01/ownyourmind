@@ -107,7 +107,7 @@ Competitive positioning is challenging. [Vana](/projects/vana/) has a live mainn
 
 **My position.** I do not hold SAHARA. The academic credentials and data labelling traction are genuine differentiators. But a blockchain that is not live, governance that does not exist, a pausable token contract, no published audits, and an 81% price decline tell me the market has already priced in the gap between narrative and delivery. I would reconsider if the mainnet launches with permissionless validators, if an independent security audit is published, and if governance materialises beyond documentation. Until then, this is a well-funded centralised AI company, not a decentralised network.
 
-## Freedom score: 3/10
+## Freedom score: 30/100
 
 Sahara AI scores 33/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -131,7 +131,7 @@ Three changes would materially increase Sahara's score:
 2. **Publish a security audit.** $51.5 million raised and zero public audits is an indefensible gap. Commissioning audits from recognised firms (Trail of Bits, OpenZeppelin, Hashlock) for both the smart contracts and the chain itself would demonstrate the security maturity that the funding level implies. This is table stakes, not an advanced requirement.
 3. **Remove the token pause function.** A project promoting AI sovereignty and decentralisation should not have an owner-controlled kill switch on the token. Either renounce the pause capability or transfer it to a timelock controlled by on-chain governance. This single change would improve both censorship resistance and the project's credibility with sovereignty-focused users.
 
-## Returns score: 4/10
+## Returns score: 40/100
 
 SAHARA scores 42/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

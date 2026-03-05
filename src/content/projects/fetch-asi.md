@@ -109,7 +109,7 @@ Core revenue-generating products (ASI Cloud, ASI-1 Mini, Agentverse) are central
 
 **My position.** I do not hold FET. The governance failures demonstrated by the Ocean Protocol exit, the opaque usage metrics, and the 96% price decline from the merger-hype peak make this a wait-and-see proposition. The uAgents framework is worth exploring as a developer tool. The token requires demonstrated execution, lawsuit resolution and transparent adoption metrics before the risk profile becomes acceptable.
 
-## Freedom score: 5/10
+## Freedom score: 50/100
 
 The ASI Alliance scores 50/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -133,7 +133,7 @@ Three changes would materially increase the ASI Alliance's score:
 2. **Resolve the Ocean Protocol lawsuit and reform governance.** The messy exit and alleged token dumping destroyed holder value and exposed structural governance failures. Resolving the lawsuit transparently, publishing a post-mortem, and implementing governance reforms (clear exit procedures, transparent treasury operations, community veto mechanisms) would address the most damaging narrative around the project.
 3. **Open-source ASI-1 Mini and ASI Cloud.** The core AI products are centrally operated and not open source. Open-sourcing ASI-1 Mini model weights and the ASI Cloud orchestration layer would align the products with the open-source credentials of the underlying infrastructure. The "decentralised AI" narrative cannot hold when the AI itself is proprietary.
 
-## Returns score: 5.5/10
+## Returns score: 55/100
 
 FET scores 55/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

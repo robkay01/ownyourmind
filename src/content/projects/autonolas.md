@@ -104,7 +104,7 @@ Low liquidity ($228,000 daily volume, primarily DEX) creates execution risk for 
 
 **My position.** I do not hold OLAS. The genuine on-chain usage is worth monitoring, and the protocol architecture is technically credible. But the 99.6% price decline, the no-vesting insider allocation, and the $89,000 total marketplace turnover tell a story of a project that has solved the technical problem but not the economic one. I would reconsider if the token stabilises, Pearl launches on Windows/Linux, and marketplace turnover reaches meaningful levels.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 Olas scores 62/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -128,7 +128,7 @@ Three changes would materially increase Olas's score:
 2. **Diversify beyond Gnosis Chain prediction markets.** Over 35% of Safe transactions on Gnosis Chain is impressive but creates dangerous concentration. Demonstrating real agent activity across multiple verticals (DeFi, social, enterprise) and chains would reduce single-point-of-failure risk and broaden the protocol's value proposition.
 3. **Grow marketplace economics.** $89,000 total marketplace turnover is not a functioning economy. The transaction volume (14.5 million) proves the infrastructure works. The next step is translating that volume into meaningful economic value through higher-value agent services, enterprise use cases, and broader marketplace adoption.
 
-## Returns score: 3.5/10
+## Returns score: 35/100
 
 OLAS scores 35/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

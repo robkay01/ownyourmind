@@ -103,7 +103,7 @@ The 84.6% decline from ATH reflects market scepticism about the sustainability o
 
 **My position.** I do not hold VIRTUAL. The tokenisation infrastructure and ACP are technically interesting, and the no-VC distribution model is commendable. But the centralised inference engine, the pump-and-dump agent dynamics, and the 97% revenue collapse represent structural problems, not cyclical ones. I would reconsider if the GAME engine were open-sourced or made permissionless, if agent quality improved meaningfully, and if revenue demonstrated cycle-independent sustainability.
 
-## Freedom score: 4/10
+## Freedom score: 40/100
 
 Virtuals Protocol scores 42/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -127,7 +127,7 @@ Three changes would materially increase Virtuals' score:
 2. **Implement agent quality curation without censorship.** The 17,000-plus agent count is meaningless if the majority are inactive or spam. A reputation system, community curation layer, or minimum activity threshold for visibility (not existence) would improve ecosystem quality without compromising permissionless creation. The current approach of unrestricted creation with no quality signal serves neither creators nor users.
 3. **Decentralise agent data storage.** Moving agent personality data, memory, and assets from Virtuals-hosted infrastructure to decentralised storage (IPFS, Arweave, or similar) would give agent creators genuine ownership of their agents' intellectual property. Currently, "owning" an agent means owning a token; the actual agent lives on Virtuals' servers.
 
-## Returns score: 6/10
+## Returns score: 60/100
 
 VIRTUAL scores 58/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

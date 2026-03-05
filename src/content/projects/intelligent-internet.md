@@ -95,7 +95,7 @@ The FII Institute connection (Future Investment Initiative, run by Saudi Arabia'
 
 **My position.** I do not hold any Intelligent Internet tokens because no token exists. I have downloaded and tested II-Medical-8B locally. The models work. The agent framework works. Whether the blockchain vision materialises is a separate question from whether the open-source AI output is useful, and on the latter, the answer is yes.
 
-## Freedom score: 4/10
+## Freedom score: 40/100
 
 Intelligent Internet scores 42/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -119,7 +119,7 @@ Three changes would materially increase Intelligent Internet's score:
 2. **Publish a funded roadmap with milestones.** No mainnet timeline exists. No disclosed funding exists. A transparent roadmap with funded milestones and verifiable deliverable dates would address the most obvious gap between the ambition and the evidence. Construction projects do not get built without a programme. Neither do blockchains.
 3. **Identify the genesis National Champions.** Twelve validators at genesis is a specific claim. Who are they? What hardware do they have? Where are they located? Publishing even a shortlist with hardware attestation would convert a whitepaper concept into a concrete commitment.
 
-## Returns score: 3/10
+## Returns score: 30/100
 
 FC scores 30/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

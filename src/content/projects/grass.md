@@ -110,7 +110,7 @@ The Sovereign Data Rollup has been "launching soon" for over a year. Without it,
 
 **My position.** I do not hold GRASS. The scale is genuine and the enterprise traction is real; those are not in dispute. But I cannot hold a token where the code is entirely closed-source, governance does not exist in practice, users have no sovereignty over the data their bandwidth produces, and all revenue flows through an opaque Foundation. I would reconsider if the core code is open-sourced, if governance materialises with real proposals and votes, if the Sovereign Data Rollup ships with verifiable ZK proofs, and if revenue transparency improves. The business works; the decentralisation does not.
 
-## Freedom score: 4/10
+## Freedom score: 40/100
 
 Grass scores 37/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -134,7 +134,7 @@ Three changes would materially increase Grass's score:
 2. **Ship functional governance.** Launch a governance forum, publish the first proposals, run the first votes. The documentation already describes DAO governance; deliver it. Even modest governance, letting token holders vote on Foundation spending priorities or router selection criteria, would demonstrate the project is serious about decentralisation. Currently it is pure narrative.
 3. **Publish revenue and data transparency.** Disclose aggregate revenue figures, number of enterprise clients, and how Foundation funds are allocated. If GRASS is "the primary vehicle for value accrual" as stated, token holders deserve visibility into what value is being accrued and where it flows. Quarterly transparency reports would be table stakes for a project claiming to be community-owned.
 
-## Returns score: 5.2/10
+## Returns score: 52/100
 
 GRASS scores 52/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

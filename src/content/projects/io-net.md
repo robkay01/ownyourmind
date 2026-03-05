@@ -98,7 +98,7 @@ The competitive position is squeezed. [Akash](/projects/akash/) is more decentra
 
 **My position.** I do not hold IO. The closed-source core, absence of governance, founder scandal, inflated GPU metrics, and 98% price decline from ATH put this firmly in the "show me" category. The revenue growth is genuine and worth monitoring, but the decentralisation credentials are too weak for the sovereignty thesis. If you want decentralised GPU compute, [Akash](/projects/akash/) is the more honest option. If you want cheap GPUs without caring about decentralisation, Lambda Labs and Vast.ai do not require a token.
 
-## Freedom score: 4/10
+## Freedom score: 40/100
 
 io.net scores 38/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -122,7 +122,7 @@ Three changes would materially increase io.net's score:
 2. **Implement governance.** Token holders have zero governance rights. No DAO, no proposals, no voting. Even a basic governance framework with proposal submission, quorum thresholds and on-chain voting would demonstrate that IO is more than a payment rail for a centralised company. The io.net Foundation controls all strategic decisions without community input.
 3. **Publish a real-time network dashboard with verified metrics.** The gap between 327,000 "registered" GPUs and 6,720 daily active verified GPUs, combined with the 2024 Sybil attack history, has destroyed metric credibility. A real-time, independently verifiable dashboard showing actual active GPUs, compute hours delivered, revenue and burn amounts would rebuild trust. Self-reported quarterly figures filtered through Messari reports are not enough.
 
-## Returns score: 4.8/10
+## Returns score: 48/100
 
 IO scores 48/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

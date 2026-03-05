@@ -105,7 +105,7 @@ The thin liquidity ($86,000 within 2% of spot) creates execution risk for any me
 
 **My position.** I do not hold ELIZAOS. The framework is genuinely good, and I respect the developer adoption metrics. But good open-source software does not require a token, and ElizaOS has not demonstrated why this one needs one. I would reconsider if the governance voting module ships, if the Layer 1 blockchain materialises with clear token utility, and if the memory injection vulnerability is addressed. For now, the framework is worth using; the token is not worth holding.
 
-## Freedom score: 5/10
+## Freedom score: 50/100
 
 ElizaOS scores 52/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -129,7 +129,7 @@ Three changes would materially increase ElizaOS's score:
 2. **Address the memory injection vulnerability.** Princeton researchers publicly disclosed a mechanism to manipulate agent trading decisions via memory injection, and Eliza Labs responded with "no direct updates were made." For a framework whose agents handle financial transactions, this is unacceptable. Publishing a formal security response, implementing mitigations, and commissioning a third-party audit of the core framework would demonstrate the security maturity that institutional adopters require.
 3. **Establish clear token utility.** The ELIZAOS token currently has no value capture mechanism: no staking, no fee accrual, no burns, no governance voting. Either the L1 blockchain needs to ship with ELIZAOS as its native token, or auto.fun fees need to accrue to token holders, or some other concrete mechanism needs to create sustained demand beyond speculation. Great open-source software does not need a token; if you issue one, it needs a reason to exist.
 
-## Returns score: 2.8/10
+## Returns score: 28/100
 
 ELIZAOS scores 28/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

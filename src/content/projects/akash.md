@@ -90,7 +90,7 @@ Overclock Labs is a US-incorporated entity (Delaware), exposing the project to S
 
 **My position.** I do not hold AKT. I have indirect exposure through Venice (which uses Akash GPUs) and Morpheus (which routes compute through Akash providers). I find the project technically credible but the chain migration introduces too much uncertainty for a direct position at current prices.
 
-## Freedom score: 7/10
+## Freedom score: 70/100
 
 Akash scores 66/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -114,7 +114,7 @@ Three changes would materially increase Akash's score:
 2. **Execute the chain migration transparently.** Publish a technical specification. Run a governance vote on the destination chain. Provide a detailed migration timeline with milestones. The current state, aspirational timelines with no published roadmap, creates justified uncertainty.
 3. **Grow the provider count.** Roughly 69 providers, declining through 2025, is not decentralised cloud. Homenode is a step in the right direction. The target should be hundreds of active providers across multiple geographies before claiming the "decentralised AWS" positioning with a straight face.
 
-## Returns score: 6.5/10
+## Returns score: 65/100
 
 AKT scores 65/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

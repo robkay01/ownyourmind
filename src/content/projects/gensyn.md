@@ -109,7 +109,7 @@ No security audits have been published for the smart contracts or protocol, desp
 
 **My position.** I do not hold $AI tokens. The project has not launched a token for public trading. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a practitioner perspective; economic exposure requires a high tolerance for uncertainty.
 
-## Freedom score: 5/10
+## Freedom score: 50/100
 
 Gensyn scores 52/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -133,7 +133,7 @@ Three changes would materially increase Gensyn's score:
 2. **Implement governance before or at TGE.** Token holders spending real money on $AI tokens should have governance rights from day one. An elected council "initially mapped to core team members" is not decentralisation. Deploying on-chain governance with community-elected council members, proposal submission, and transparent voting before TGE would demonstrate genuine commitment to decentralisation.
 3. **Publish security audits.** $66.74 million in funding, 90 million testnet transactions, and a public token sale, yet no published audit from a recognised firm. Before mainnet handles real economic value, smart contract and protocol audits are essential. This is a straightforward gap to close with available resources.
 
-## Returns score: 4/10
+## Returns score: 40/100
 
 AI scores 40/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

@@ -92,7 +92,7 @@ Solana single-chain dependency means its seven separate outage incidents (with a
 
 **My position.** I do not hold RENDER. The permissioned network model and proprietary core are fundamentally incompatible with the sovereignty thesis that drives this site's editorial position. Render is a good product. It may be a reasonable investment on the rendering demand thesis. But it is not decentralised infrastructure in any meaningful sense, and calling it such is misleading.
 
-## Freedom score: 3/10
+## Freedom score: 30/100
 
 Render scores 32/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -116,7 +116,7 @@ Three changes would materially increase Render's score:
 2. **Move to permissionless operator onboarding.** The permissioned model is the clearest centralisation vector. Akash proves that permissionless compute marketplaces work. The Foundation's approval process serves OTOY's quality control interests, not decentralisation. A reputation and staking-based operator model would distribute control away from the Foundation.
 3. **Commission a current security audit.** The only verified audit covers deprecated 2017 Ethereum contracts. The current Solana infrastructure, including BME emission contracts, escrow mechanisms and the SPL token programme, has no publicly verifiable audit. For a network handling enterprise production workloads and a $701 million market cap, this is a significant gap.
 
-## Returns score: 7.2/10
+## Returns score: 72/100
 
 RENDER scores 72/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

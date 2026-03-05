@@ -114,7 +114,7 @@ The price performance creates a perception problem. 93% below ATH, with the peak
 
 **My position.** I do not hold NEAR. The founder credentials are genuinely unique, the chain infrastructure is proven, and NEAR Intents is a standout product. But I need to see the AI pivot produce measurable results, not just launches. TVL should grow meaningfully if 46 million monthly users are real. NEAR AI products need usage data and, ideally, published models. I would reconsider if TVL doubles, if NEAR AI demonstrates production traction with verifiable metrics, and if the Foundation continues ceding control to the House of Stake governance system. The bones are excellent; the execution is what I am watching.
 
-## Freedom score: 6/10
+## Freedom score: 60/100
 
 NEAR Protocol scores 63/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
@@ -138,7 +138,7 @@ Three changes would materially increase NEAR Protocol's score:
 2. **Grow TVL relative to market cap.** $114.7 million TVL on a $1.85 billion market cap chain is a 6.2% ratio. For context, Solana's ratio is roughly 3.5x higher. Either incentivise DeFi migration to NEAR, build native financial primitives that leverage chain abstraction, or acknowledge that DeFi depth is not the growth vector. The current figure undercuts the 46 million MAU claim.
 3. **Continue decentralising governance.** The inflation halving vote was a strong start. Extend House of Stake governance to cover treasury allocation, AI product strategy, and Foundation expenditure. The more strategic decisions that flow through veNEAR voting rather than Foundation directives, the higher the governance score. AI-powered voting delegates are an interesting initiative; ship them and demonstrate they increase participation.
 
-## Returns score: 6.0/10
+## Returns score: 60/100
 
 NEAR scores 60/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
