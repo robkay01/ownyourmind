@@ -1,19 +1,19 @@
 ---
 title: "Centralised AI vs Decentralised AI"
-description: "An honest comparison. What centralised does better today, where decentralised wins, and where the gap is closing. No ideology, just practitioner observations."
+description: "An honest comparison. What centralised does better today, where decentralised wins, and where the gap is closing. No ideology, just hands-on observations."
 publishDate: 2025-03-02
 draft: false
 ---
 
 ## The honest version
 
-Most comparisons between centralised and decentralised AI read like marketing material for one side or the other. Centralised advocates dismiss DeAI as slow, expensive and impractical. DeAI advocates pretend their tools already match GPT-4. Both are wrong.
+Most comparisons between centralised and decentralised AI read like marketing material for one side or the other. Centralised advocates dismiss DeAI as slow, expensive and impractical. DeAI advocates pretend their tools already match GPT-5. Both are wrong.
 
 I use both daily. Centralised AI for most of my professional work. Decentralised infrastructure for experimentation, sovereignty-sensitive tasks and earning yield. Here is what actually holds up in practice.
 
 ## Where centralised AI wins today
 
-**Model quality at the frontier.** Claude, GPT-4 and Gemini are the best general-purpose models available. They are better than any open-weight alternative for complex reasoning, long-context tasks and nuanced instruction following. This is not close right now.
+**Model quality at the frontier.** Claude, GPT-5 and Gemini are the best general-purpose models available. They are better than any open-weight alternative for complex reasoning, long-context tasks and nuanced instruction following. This is not close right now.
 
 **Ease of use.** Sign up, get an API key, start building. The developer experience on centralised platforms is polished. Documentation is thorough. Libraries work out of the box. You can go from zero to a working prototype in an afternoon.
 
@@ -39,9 +39,9 @@ I use both daily. Centralised AI for most of my professional work. Decentralised
 
 ## Where the gap is closing
 
-**Open model quality.** Llama 3, Mistral, Qwen 2.5 and DeepSeek are competitive with closed models for most practical tasks. The gap at the frontier persists but the frontier is not where most work happens. For code generation, summarisation, classification and structured extraction, open models are good enough right now.
+**Open model quality.** Llama 4, Mistral 3, Qwen 3.5 and DeepSeek V3 are competitive with closed models for most practical tasks. Qwen 3.5 uses a mixture-of-experts architecture with 397 billion parameters but only activates 17 billion per prompt, matching frontier closed models on benchmarks while running on open weights under Apache 2.0. The gap at the frontier persists but the frontier is not where most work happens. For code generation, summarisation, classification and structured extraction, open models are good enough right now.
 
-**Local inference performance.** Apple Silicon changed the equation. A Mac Studio with 64GB of unified memory runs 70B parameter models at usable speeds. Quantised models (GGUF format via llama.cpp or Ollama) deliver 80-90% of full-precision quality at a fraction of the compute cost. I run local models for first-draft work, code review and data processing daily.
+**Local inference performance.** Apple Silicon changed the equation. A Mac Studio with 64GB of unified memory runs quantised 70B parameter models at usable speeds. Quantised models (GGUF format via llama.cpp or Ollama) deliver 80-90% of full-precision quality at a fraction of the compute cost. I run local models for first-draft work, code review and data processing daily.
 
 **Network infrastructure.** Decentralised compute networks are maturing. Morpheus launched its compute marketplace. Akash has thousands of active deployments. Bittensor processes real inference workloads across dozens of subnets. These are no longer whitepapers. They are functioning systems with measurable usage.
 
