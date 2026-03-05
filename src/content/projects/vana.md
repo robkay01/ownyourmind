@@ -132,7 +132,7 @@ Three changes would materially increase Vana's score:
 2. **Activate governance.** Governance tools exist but are not being used. Running the first binding on-chain votes, publishing participation metrics, and demonstrating that the Foundation is ceding decision-making authority to token holders would transform governance from infrastructure to practice.
 3. **Demonstrate data economics.** The "own your data" thesis is compelling in theory. Publishing anonymised data on per-user earnings across DataDAOs, total data access fee revenue, and enterprise buyer adoption would prove that contributing personal data generates meaningful returns. Without this, the value proposition remains aspirational.
 
-## Returns score: 60/100
+## Returns score: 55/100
 
 VANA scores 55/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

@@ -133,7 +133,7 @@ Three changes would materially increase Virtuals' score:
 2. **Implement agent quality curation without censorship.** The 17,000-plus agent count is meaningless if the majority are inactive or spam. A reputation system, community curation layer, or minimum activity threshold for visibility (not existence) would improve ecosystem quality without compromising permissionless creation. The current approach of unrestricted creation with no quality signal serves neither creators nor users.
 3. **Decentralise agent data storage.** Moving agent personality data, memory, and assets from Virtuals-hosted infrastructure to decentralised storage (IPFS, Arweave, or similar) would give agent creators genuine ownership of their agents' intellectual property. Currently, "owning" an agent means owning a token; the actual agent lives on Virtuals' servers.
 
-## Returns score: 60/100
+## Returns score: 58/100
 
 VIRTUAL scores 58/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 

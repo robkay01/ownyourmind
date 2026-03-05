@@ -137,7 +137,7 @@ Three changes would materially increase Sahara's score:
 2. **Publish a security audit.** $51.5 million raised and zero public audits is an indefensible gap. Commissioning audits from recognised firms (Trail of Bits, OpenZeppelin, Hashlock) for both the smart contracts and the chain itself would demonstrate the security maturity that the funding level implies. This is table stakes, not an advanced requirement.
 3. **Remove the token pause function.** A project promoting AI sovereignty and decentralisation should not have an owner-controlled kill switch on the token. Either renounce the pause capability or transfer it to a timelock controlled by on-chain governance. This single change would improve both censorship resistance and the project's credibility with sovereignty-focused users.
 
-## Returns score: 40/100
+## Returns score: 42/100
 
 SAHARA scores 42/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
