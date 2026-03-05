@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "scored_date": "2026-03-05",
+    "scored_by": "Agent Zero",
+    "methodology_version": "1.0",
+    "note": "Returns Scores complement Freedom Scores. Scale: 0-100 raw, divided by 10 for display (1-10). Grades: A(90+), B(75-89), C(60-74), D(45-59), F(0-44)."
+  },
+  "projects": [
+    {
+      "id": "morpheus",
+      "ticker": "MOR",
+      "returnsScoreRaw": 58,
+      "returnsScore": 5.8,
+      "grade": "D",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 18,
+        "valueAccrual": 14,
+        "supplyDynamics": 16,
+        "revenueSustainability": 6,
+        "liquidityAccess": 4
+      },
+      "reasoning": {
+        "tokenUtility": "Multiple utilities: staking for yield, compute access, agent services. Essential to protocol.",
+        "valueAccrual": "MOR burned for compute but burn minimal vs emissions. No fee distribution yet.",
+        "supplyDynamics": "Fair launch, no insider allocation, 16-year decay. Moderate inflation.",
+        "revenueSustainability": "Minimal external revenue. Compute marketplace active but emission-dependent.",
+        "liquidityAccess": "DEX-primary, limited CEX. Daily volume ~$30K. Very thin liquidity."
+      }
+    },
+    {
+      "id": "akash",
+      "ticker": "AKT",
+      "returnsScoreRaw": 65,
+      "returnsScore": 6.5,
+      "grade": "C",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 16,
+        "valueAccrual": 13,
+        "supplyDynamics": 12,
+        "revenueSustainability": 14,
+        "liquidityAccess": 10
+      },
+      "reasoning": {
+        "tokenUtility": "Payment for compute, staking for governance/security, validator requirement.",
+        "valueAccrual": "Take rate on compute fees. Staking rewards from inflation + fees. But take rate is small.",
+        "supplyDynamics": "Uncapped supply with inflation. BME burn not yet active. Moderate dilution.",
+        "revenueSustainability": "Real customers using decentralized cloud. Revenue growing, still emission-heavy.",
+        "liquidityAccess": "Tier-2 CEX listings. Moderate DEX liquidity. $1-5M daily volume."
+      }
+    },
+    {
+      "id": "bittensor",
+      "ticker": "TAO",
+      "returnsScoreRaw": 68,
+      "returnsScore": 6.8,
+      "grade": "C",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 17,
+        "valueAccrual": 14,
+        "supplyDynamics": 18,
+        "revenueSustainability": 5,
+        "liquidityAccess": 14
+      },
+      "reasoning": {
+        "tokenUtility": "Staking required for participation. Burn for registration. Governance. Essential.",
+        "valueAccrual": "Stake to participate. No direct fee distribution. dTAO creates market-based allocation.",
+        "supplyDynamics": "Bitcoin model: 21M cap, halving done. Fair launch technically. Strong.",
+        "revenueSustainability": "No external revenue. Entirely emission-driven. Subnets compete for emissions.",
+        "liquidityAccess": "Binance, Coinbase, Kraken. $100M+ daily volume. Highly liquid."
+      }
+    },
+    {
+      "id": "render",
+      "ticker": "RENDER",
+      "returnsScoreRaw": 72,
+      "returnsScore": 7.2,
+      "grade": "C",
+      "quadrant": "C",
+      "breakdown": {
+        "tokenUtility": 14,
+        "valueAccrual": 18,
+        "supplyDynamics": 12,
+        "revenueSustainability": 16,
+        "liquidityAccess": 12
+      },
+      "reasoning": {
+        "tokenUtility": "Payment for render services. Staking exists but unclear purpose. Limited governance.",
+        "valueAccrual": "Burn mechanism for services. Real Hollywood customers. Proven demand.",
+        "supplyDynamics": "Capped but foundation holds significant tokens. Inflation through rewards.",
+        "revenueSustainability": "Real revenue from real customers. Product-market fit demonstrated.",
+        "liquidityAccess": "Major CEX listings. Good DEX liquidity. $50M+ daily volume."
+      }
+    },
+    {
+      "id": "grass",
+      "ticker": "GRASS",
+      "returnsScoreRaw": 52,
+      "returnsScore": 5.2,
+      "grade": "D",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 12,
+        "valueAccrual": 10,
+        "supplyDynamics": 8,
+        "revenueSustainability": 12,
+        "liquidityAccess": 10
+      },
+      "reasoning": {
+        "tokenUtility": "Token used for enterprise LCR product. Users earn via bandwidth sharing.",
+        "valueAccrual": "Enterprise demand buys tokens. But foundation controls revenue flows opaquely.",
+        "supplyDynamics": "1B cap. Team/investor allocation significant. Wide airdrop but insider heavy.",
+        "revenueSustainability": "Real enterprise customers (AI companies). Growing revenue.",
+        "liquidityAccess": "Tier-1 CEX (Binance). Moderate liquidity. $50-100M volume."
+      }
+    },
+    {
+      "id": "io-net",
+      "ticker": "IO",
+      "returnsScoreRaw": 48,
+      "returnsScore": 4.8,
+      "grade": "D",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 12,
+        "valueAccrual": 8,
+        "supplyDynamics": 8,
+        "revenueSustainability": 12,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Payment for compute, staking for providers. But centralized platform.",
+        "valueAccrual": "Unclear mechanism. Platform takes fees but how much flows to token?",
+        "supplyDynamics": "800M cap. Significant insider allocation. Inflation through rewards.",
+        "revenueSustainability": "$20M+ annualized revenue. Real customers.",
+        "liquidityAccess": "Binance listing. But volume has declined significantly since launch."
+      }
+    },
+    {
+      "id": "venice",
+      "ticker": "VVV",
+      "returnsScoreRaw": 62,
+      "returnsScore": 6.2,
+      "grade": "C",
+      "quadrant": "C",
+      "breakdown": {
+        "tokenUtility": 16,
+        "valueAccrual": 14,
+        "supplyDynamics": 10,
+        "revenueSustainability": 10,
+        "liquidityAccess": 12
+      },
+      "reasoning": {
+        "tokenUtility": "Staking for discounted inference. Access to pro features required.",
+        "valueAccrual": "Burn mechanism for API calls. Growing user base drives demand.",
+        "supplyDynamics": "Fixed supply. Airdrop launch. But team allocation unclear.",
+        "revenueSustainability": "Privacy-focused inference with real users. Revenue model emerging.",
+        "liquidityAccess": "Good liquidity on Base and major CEX. $50M+ daily volume."
+      }
+    },
+    {
+      "id": "autonolas",
+      "ticker": "OLAS",
+      "returnsScoreRaw": 35,
+      "returnsScore": 3.5,
+      "grade": "F",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 14,
+        "valueAccrual": 6,
+        "supplyDynamics": 4,
+        "revenueSustainability": 4,
+        "liquidityAccess": 7
+      },
+      "reasoning": {
+        "tokenUtility": "Staking for agent rewards, bonding, governance. Real utility exists.",
+        "valueAccrual": "$89K marketplace turnover. 99.6% token decline. Mechanics not working.",
+        "supplyDynamics": "1B cap with 42.65% insider allocation. No enforced vesting.",
+        "revenueSustainability": "Tiny marketplace volume. Emission-dependent entirely.",
+        "liquidityAccess": "Thin liquidity. Daily volume <$1M. 99% drawdown hurts."
+      }
+    },
+    {
+      "id": "elizaos",
+      "ticker": "ELIZAOS",
+      "returnsScoreRaw": 28,
+      "returnsScore": 2.8,
+      "grade": "F",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 8,
+        "valueAccrual": 4,
+        "supplyDynamics": 6,
+        "revenueSustainability": 2,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Framework is great. Token connection is weak. Speculative.",
+        "valueAccrual": "No clear mechanism. Framework adoption doesn't drive token value.",
+        "supplyDynamics": "40% dilutive expansion. 11B cap. Highly diluted.",
+        "revenueSustainability": "No revenue model for token. Framework is open source.",
+        "liquidityAccess": "Multi-chain. Volume declined 99.7% from ATH. Thin."
+      }
+    },
+    {
+      "id": "fetch-asi",
+      "ticker": "FET",
+      "returnsScoreRaw": 55,
+      "returnsScore": 5.5,
+      "grade": "D",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 14,
+        "valueAccrual": 10,
+        "supplyDynamics": 10,
+        "revenueSustainability": 8,
+        "liquidityAccess": 13
+      },
+      "reasoning": {
+        "tokenUtility": "Staking, governance, service payment. But merger created confusion.",
+        "valueAccrual": "Messy merger with Ocean withdrawal. Unclear post-merger mechanics.",
+        "supplyDynamics": "2.71B cap. Merger-diluted. Ocean lawsuit over token sales.",
+        "revenueSustainability": "Real agent framework but usage metrics opaque. Centrally operated.",
+        "liquidityAccess": "Major CEX listings. Good liquidity. $30-50M volume."
+      }
+    },
+    {
+      "id": "gensyn",
+      "ticker": "AI",
+      "returnsScoreRaw": 40,
+      "returnsScore": 4.0,
+      "grade": "D",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 10,
+        "valueAccrual": 8,
+        "supplyDynamics": 6,
+        "revenueSustainability": 2,
+        "liquidityAccess": 14
+      },
+      "reasoning": {
+        "tokenUtility": "Pre-token. Intended for compute payment and staking.",
+        "valueAccrual": "Pre-mainnet. Mechanism designed but unproven.",
+        "supplyDynamics": "10B cap with 54.6% insider allocation. Heavy dilution.",
+        "revenueSustainability": "Pre-mainnet. No revenue yet.",
+        "liquidityAccess": "Not yet tradeable. Score based on VC backing and expected listing."
+      }
+    },
+    {
+      "id": "intelligent-internet",
+      "ticker": "FC",
+      "returnsScoreRaw": 30,
+      "returnsScore": 3.0,
+      "grade": "F",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 8,
+        "valueAccrual": 6,
+        "supplyDynamics": 10,
+        "revenueSustainability": 0,
+        "liquidityAccess": 6
+      },
+      "reasoning": {
+        "tokenUtility": "Pre-token. Planned for Proof-of-Benefit consensus.",
+        "valueAccrual": "Conceptual. Whitepaper only. No working implementation.",
+        "supplyDynamics": "Planned 21M cap mimicking Bitcoin. Scarcity model.",
+        "revenueSustainability": "No blockchain, no token, no revenue. Models are free.",
+        "liquidityAccess": "No token. Cannot assess."
+      }
+    },
+    {
+      "id": "near",
+      "ticker": "NEAR",
+      "returnsScoreRaw": 60,
+      "returnsScore": 6.0,
+      "grade": "C",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 16,
+        "valueAccrual": 12,
+        "supplyDynamics": 12,
+        "revenueSustainability": 10,
+        "liquidityAccess": 10
+      },
+      "reasoning": {
+        "tokenUtility": "Staking, governance, chain fees. Strong L1 utility.",
+        "valueAccrual": "Fee burn mechanism (70%). But AI value capture unclear.",
+        "supplyDynamics": "No max supply, inflationary. But controlled via burn.",
+        "revenueSustainability": "$115M TVL. Real chain usage. AI pivot is recent.",
+        "liquidityAccess": "Tier-1 CEX. High liquidity. $100M+ daily volume."
+      }
+    },
+    {
+      "id": "ocean",
+      "ticker": "OCEAN",
+      "returnsScoreRaw": 38,
+      "returnsScore": 3.8,
+      "grade": "F",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 10,
+        "valueAccrual": 6,
+        "supplyDynamics": 6,
+        "revenueSustainability": 8,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Foundation says 'no intended utility value'. Data token use cases limited.",
+        "valueAccrual": "81% converted to FET. No clear path for remaining OCEAN.",
+        "supplyDynamics": "Fragmented after ASI withdrawal. Litigation over $120M.",
+        "revenueSustainability": "Compute-to-Data is great tech. But token economics broken.",
+        "liquidityAccess": "Major CEX but declining. Post-merger confusion."
+      }
+    },
+    {
+      "id": "phala",
+      "ticker": "PHA",
+      "returnsScoreRaw": 50,
+      "returnsScore": 5.0,
+      "grade": "D",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 14,
+        "valueAccrual": 10,
+        "supplyDynamics": 10,
+        "revenueSustainability": 8,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Payment for confidential compute. Staking. Worker bonding.",
+        "valueAccrual": "Fee mechanism exists but centralized service dominates.",
+        "supplyDynamics": "1B cap. Inflationary via staking rewards. Moderate allocation.",
+        "revenueSustainability": "Real product. Growing enterprise interest. Early stage.",
+        "liquidityAccess": "Tier-2 CEX. Moderate liquidity. <$5M daily volume."
+      }
+    },
+    {
+      "id": "sahara",
+      "ticker": "SAHARA",
+      "returnsScoreRaw": 42,
+      "returnsScore": 4.2,
+      "grade": "D",
+      "quadrant": "D",
+      "breakdown": {
+        "tokenUtility": 12,
+        "valueAccrual": 8,
+        "supplyDynamics": 6,
+        "revenueSustainability": 8,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Planned for Sahara Chain. Currently on Ethereum/BNB.",
+        "valueAccrual": "Unclear. Blockchain not operational. Aspirational.",
+        "supplyDynamics": "10B cap. Pausable contract. Insider-heavy.",
+        "revenueSustainability": "Real data labelling business. But not on-chain.",
+        "liquidityAccess": "Tier-1 CEX (Binance). But 81% below ATH. Weak."
+      }
+    },
+    {
+      "id": "vana",
+      "ticker": "VANA",
+      "returnsScoreRaw": 55,
+      "returnsScore": 5.5,
+      "grade": "D",
+      "quadrant": "B",
+      "breakdown": {
+        "tokenUtility": 14,
+        "valueAccrual": 12,
+        "supplyDynamics": 8,
+        "revenueSustainability": 10,
+        "liquidityAccess": 11
+      },
+      "reasoning": {
+        "tokenUtility": "Data DAO staking, governance, data contribution rewards.",
+        "valueAccrual": "Data contributed earns tokens. But model unproven at scale.",
+        "supplyDynamics": "Foundation controls treasury. Permissioned validators. 95% price decline.",
+        "revenueSustainability": "Real user adoption for data contribution. Early traction.",
+        "liquidityAccess": "Major CEX. Good initial liquidity. But volume declining."
+      }
+    },
+    {
+      "id": "virtuals",
+      "ticker": "VIRTUAL",
+      "returnsScoreRaw": 58,
+      "returnsScore": 5.8,
+      "grade": "D",
+      "quadrant": "C",
+      "breakdown": {
+        "tokenUtility": 16,
+        "valueAccrual": 12,
+        "supplyDynamics": 8,
+        "revenueSustainability": 14,
+        "liquidityAccess": 8
+      },
+      "reasoning": {
+        "tokenUtility": "Agent launchpad. Bonding curve participation. Governance.",
+        "valueAccrual": "Fee capture from launches. But agent tokens are speculative.",
+        "supplyDynamics": "Fixed supply. But launchpad dynamics dilute participants.",
+        "revenueSustainability": "Dominant launchpad with real revenue. 97% revenue collapse from peak.",
+        "liquidityAccess": "Base chain. Good liquidity. But speculative dynamics."
+      }
+    }
+  ],
+  "quadrant_summary": {
+    "A": {
+      "description": "High Freedom + High Returns (ideal, doesn't exist yet)",
+      "projects": []
+    },
+    "B": {
+      "description": "High Freedom + Low Returns (sovereignty plays, early-stage)",
+      "projects": ["morpheus", "akash", "bittensor", "near", "phala", "vana"]
+    },
+    "C": {
+      "description": "Low Freedom + High Returns (profitable but centralized)",
+      "projects": ["render", "venice", "virtuals"]
+    },
+    "D": {
+      "description": "Low Freedom + Low Returns (avoid)",
+      "projects": ["grass", "io-net", "autonolas", "elizaos", "fetch-asi", "gensyn", "intelligent-internet", "ocean", "sahara"]
+    }
+  }
+}
