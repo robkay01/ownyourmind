@@ -110,7 +110,7 @@ Low liquidity ($228,000 daily volume, primarily DEX) creates execution risk for 
 
 **My position.** I do not hold OLAS. The genuine on-chain usage is worth monitoring, and the protocol architecture is technically credible. But the 99.6% price decline, the no-vesting insider allocation, and the $89,000 total marketplace turnover tell a story of a project that has solved the technical problem but not the economic one. I would reconsider if the token stabilises, Pearl launches on Windows/Linux, and marketplace turnover reaches meaningful levels.
 
-## Freedom score: 60/100
+## Freedom score: 62/100
 
 Olas scores 62/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

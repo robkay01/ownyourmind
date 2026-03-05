@@ -101,7 +101,7 @@ The FII Institute connection (Future Investment Initiative, run by Saudi Arabia'
 
 **My position.** I do not hold any Intelligent Internet tokens because no token exists. I have downloaded and tested II-Medical-8B locally. The models work. The agent framework works. Whether the blockchain vision materialises is a separate question from whether the open-source AI output is useful, and on the latter, the answer is yes.
 
-## Freedom score: 40/100
+## Freedom score: 42/100
 
 Intelligent Internet scores 42/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

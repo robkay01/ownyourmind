@@ -108,7 +108,7 @@ The competitive landscape includes [Ocean Protocol](/projects/ocean/) (establish
 
 **My position.** I do not hold VANA. The data sovereignty architecture is genuinely impressive, and I respect the user adoption metrics. But permissioned validators, Foundation-controlled governance, and a 95% price decline tell me the project has not yet delivered on its decentralisation thesis. I would reconsider if the validator set becomes permissionless, if governance participation materialises, and if DataDAO economics demonstrate sustainable returns for contributors.
 
-## Freedom score: 60/100
+## Freedom score: 59/100
 
 Vana scores 59/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

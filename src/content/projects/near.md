@@ -120,7 +120,7 @@ The price performance creates a perception problem. 93% below ATH, with the peak
 
 **My position.** I do not hold NEAR. The founder credentials are genuinely unique, the chain infrastructure is proven, and NEAR Intents is a standout product. But I need to see the AI pivot produce measurable results, not just launches. TVL should grow meaningfully if 46 million monthly users are real. NEAR AI products need usage data and, ideally, published models. I would reconsider if TVL doubles, if NEAR AI demonstrates production traction with verifiable metrics, and if the Foundation continues ceding control to the House of Stake governance system. The bones are excellent; the execution is what I am watching.
 
-## Freedom score: 60/100
+## Freedom score: 63/100
 
 NEAR Protocol scores 63/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

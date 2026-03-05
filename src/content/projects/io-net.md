@@ -104,7 +104,7 @@ The competitive position is squeezed. [Akash](/projects/akash/) is more decentra
 
 **My position.** I do not hold IO. The closed-source core, absence of governance, founder scandal, inflated GPU metrics, and 98% price decline from ATH put this firmly in the "show me" category. The revenue growth is genuine and worth monitoring, but the decentralisation credentials are too weak for the sovereignty thesis. If you want decentralised GPU compute, [Akash](/projects/akash/) is the more honest option. If you want cheap GPUs without caring about decentralisation, Lambda Labs and Vast.ai do not require a token.
 
-## Freedom score: 40/100
+## Freedom score: 38/100
 
 io.net scores 38/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

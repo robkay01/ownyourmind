@@ -83,7 +83,7 @@ MOR is consumed when users access compute on the network, creating burn pressure
 
 **My position.** I am a capital provider with stETH staked in the Morpheus contracts. I earn daily MOR emissions. I believe in the thesis but I size the position according to the risk. This is early-stage infrastructure, not a blue chip.
 
-## Freedom score: 80/100
+## Freedom score: 76/100
 
 Morpheus scores 76/100 (B grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

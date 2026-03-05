@@ -111,7 +111,7 @@ Competitive pressure is real. [Vana](/projects/vana/) has a live mainnet with 1.
 
 **My position.** I do not hold OCEAN. The Compute-to-Data model is genuinely impressive and I use it as a reference point when evaluating other data sovereignty projects. But a token without stated utility, an 81% supply conversion to another token, dismantled governance, active litigation, and $77,000 daily volume collectively represent too many red flags. I would reconsider if the litigation resolves clearly, if a new governance mechanism is implemented, and if the buyback-and-burn programme demonstrates concrete revenue. The technology is worth studying; the token is not worth holding.
 
-## Freedom score: 60/100
+## Freedom score: 55/100
 
 Ocean Protocol scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

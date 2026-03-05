@@ -116,7 +116,7 @@ The Sovereign Data Rollup has been "launching soon" for over a year. Without it,
 
 **My position.** I do not hold GRASS. The scale is genuine and the enterprise traction is real; those are not in dispute. But I cannot hold a token where the code is entirely closed-source, governance does not exist in practice, users have no sovereignty over the data their bandwidth produces, and all revenue flows through an opaque Foundation. I would reconsider if the core code is open-sourced, if governance materialises with real proposals and votes, if the Sovereign Data Rollup ships with verifiable ZK proofs, and if revenue transparency improves. The business works; the decentralisation does not.
 
-## Freedom score: 40/100
+## Freedom score: 37/100
 
 Grass scores 37/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

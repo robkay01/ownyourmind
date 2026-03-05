@@ -115,7 +115,7 @@ No security audits have been published for the smart contracts or protocol, desp
 
 **My position.** I do not hold $AI tokens. The project has not launched a token for public trading. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a practitioner perspective; economic exposure requires a high tolerance for uncertainty.
 
-## Freedom score: 50/100
+## Freedom score: 52/100
 
 Gensyn scores 52/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

@@ -109,7 +109,7 @@ The 84.6% decline from ATH reflects market scepticism about the sustainability o
 
 **My position.** I do not hold VIRTUAL. The tokenisation infrastructure and ACP are technically interesting, and the no-VC distribution model is commendable. But the centralised inference engine, the pump-and-dump agent dynamics, and the 97% revenue collapse represent structural problems, not cyclical ones. I would reconsider if the GAME engine were open-sourced or made permissionless, if agent quality improved meaningfully, and if revenue demonstrated cycle-independent sustainability.
 
-## Freedom score: 40/100
+## Freedom score: 42/100
 
 Virtuals Protocol scores 42/100 (D grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

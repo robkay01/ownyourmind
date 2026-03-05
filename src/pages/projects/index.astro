@@ -180,7 +180,7 @@ function downsample(data: number[], targetPoints: number): number[] {
                       <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
                     </div>
                     <span class="text-sm font-bold whitespace-nowrap" style={`color: ${scoreColor(entry.data.returnsScore)};`}>
-                      {entry.data.returnsScore.toFixed(1)}
+                      {Math.round(entry.data.returnsScore)}
                     </span>
                   </div>
                 ) : (
@@ -277,7 +277,7 @@ function downsample(data: number[], targetPoints: number): number[] {
                 <div class="freedom-bar-container flex-1">
                   <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
                 </div>
-                <span class="text-sm font-bold" style={`color: ${scoreColor(entry.data.returnsScore)};`}>{entry.data.returnsScore.toFixed(1)}/10</span>
+                <span class="text-sm font-bold" style={`color: ${scoreColor(entry.data.returnsScore)};`}>{Math.round(entry.data.returnsScore)}</span>
               </>
             ) : (
               <>

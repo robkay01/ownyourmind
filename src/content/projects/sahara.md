@@ -113,7 +113,7 @@ Competitive positioning is challenging. [Vana](/projects/vana/) has a live mainn
 
 **My position.** I do not hold SAHARA. The academic credentials and data labelling traction are genuine differentiators. But a blockchain that is not live, governance that does not exist, a pausable token contract, no published audits, and an 81% price decline tell me the market has already priced in the gap between narrative and delivery. I would reconsider if the mainnet launches with permissionless validators, if an independent security audit is published, and if governance materialises beyond documentation. Until then, this is a well-funded centralised AI company, not a decentralised network.
 
-## Freedom score: 30/100
+## Freedom score: 33/100
 
 Sahara AI scores 33/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

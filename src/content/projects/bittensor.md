@@ -89,7 +89,7 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 **My experience.** I have explored Bittensor mining and found the barrier to entry on established subnets too high for my hardware. Newer subnets offer better opportunities but come with the risk of lower and more volatile emissions. I hold TAO as a network exposure position but do not actively mine.
 
-## Freedom score: 60/100
+## Freedom score: 56/100
 
 Bittensor scores 56/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

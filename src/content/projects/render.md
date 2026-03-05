@@ -98,7 +98,7 @@ Solana single-chain dependency means its seven separate outage incidents (with a
 
 **My position.** I do not hold RENDER. The permissioned network model and proprietary core are fundamentally incompatible with the sovereignty thesis that drives this site's editorial position. Render is a good product. It may be a reasonable investment on the rendering demand thesis. But it is not decentralised infrastructure in any meaningful sense, and calling it such is misleading.
 
-## Freedom score: 30/100
+## Freedom score: 32/100
 
 Render scores 32/100 (F grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

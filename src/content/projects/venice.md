@@ -92,7 +92,7 @@ The closed-source proxy is both the product and the vulnerability. If it goes do
 
 **My position.** I hold VVV and DIEM. I stake VVV for API access and use Venice daily for both the web interface and API calls. I find the product genuinely useful. I also recognise that I am trusting a roughly six-person company with my inference privacy, and that trust is not the same as a cryptographic guarantee.
 
-## Freedom score: 60/100
+## Freedom score: 57/100
 
 Venice scores 57/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 

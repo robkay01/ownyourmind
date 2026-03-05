@@ -140,7 +140,7 @@ const sections = [
                     />
                   </div>
                   <span class="text-sm font-bold" style={`color: ${scoreColor(project.data.returnsScore)};`}>
-                    {project.data.returnsScore.toFixed(1)}
+                    {Math.round(project.data.returnsScore)}
                   </span>
                 </div>
               )}

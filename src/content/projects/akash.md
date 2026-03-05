@@ -96,7 +96,7 @@ Overclock Labs is a US-incorporated entity (Delaware), exposing the project to S
 
 **My position.** I do not hold AKT. I have indirect exposure through Venice (which uses Akash GPUs) and Morpheus (which routes compute through Akash providers). I find the project technically credible but the chain migration introduces too much uncertainty for a direct position at current prices.
 
-## Freedom score: 70/100
+## Freedom score: 66/100
 
 Akash scores 66/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
