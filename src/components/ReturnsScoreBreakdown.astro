@@ -8,9 +8,9 @@ interface Props {
   returnsScore: number;          // 1-10 scale from frontmatter
   breakdown?: {
     tokenUtility?: number;        // /20
-    valueAccrual?: number;        // /25
+    valueAccrual?: number;        // /20
     supplyDynamics?: number;      // /20
-    revenueSustainability?: number; // /20
+    revenueSustainability?: number; // /25
     liquidityAccess?: number;     // /15
   };
   evidence?: {
@@ -25,15 +25,15 @@ interface Props {
 const { returnsScore, breakdown, evidence } = Astro.props;
 
 const raw = Math.round(returnsScore * 10);
-const grade = raw >= 90 ? 'A' : raw >= 75 ? 'B' : raw >= 60 ? 'C' : raw >= 45 ? 'D' : 'F';
+const grade = raw >= 85 ? 'A' : raw >= 70 ? 'B' : raw >= 55 ? 'C' : raw >= 40 ? 'D' : 'F';
 
 type DimKey = 'tokenUtility' | 'valueAccrual' | 'supplyDynamics' | 'revenueSustainability' | 'liquidityAccess';
 
 const dimensions: { key: DimKey; label: string; score: number | undefined; max: number }[] = breakdown ? [
   { key: 'tokenUtility', label: 'Token utility', score: breakdown.tokenUtility, max: 20 },
-  { key: 'valueAccrual', label: 'Value accrual', score: breakdown.valueAccrual, max: 25 },
+  { key: 'valueAccrual', label: 'Value accrual', score: breakdown.valueAccrual, max: 20 },
   { key: 'supplyDynamics', label: 'Supply dynamics', score: breakdown.supplyDynamics, max: 20 },
-  { key: 'revenueSustainability', label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 20 },
+  { key: 'revenueSustainability', label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 25 },
   { key: 'liquidityAccess', label: 'Liquidity & access', score: breakdown.liquidityAccess, max: 15 },
 ] : [];
 

@@ -24,9 +24,9 @@ const projects = defineCollection({
     returnsScore: z.number().min(1).max(10).optional(),
     returnsScoreBreakdown: z.object({
       tokenUtility: z.number().min(0).max(20).optional(),
-      valueAccrual: z.number().min(0).max(25).optional(),
+      valueAccrual: z.number().min(0).max(20).optional(),
       supplyDynamics: z.number().min(0).max(20).optional(),
-      revenueSustainability: z.number().min(0).max(20).optional(),
+      revenueSustainability: z.number().min(0).max(25).optional(),
       liquidityAccess: z.number().min(0).max(15).optional(),
     }).optional(),
     returnsScoreEvidence: z.object({

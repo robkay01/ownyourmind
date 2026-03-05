@@ -5,10 +5,10 @@ category: "platform"
 token: "FC"
 status: "upcoming"
 freedomScore: 4
-returnsScore: 2.4
+returnsScore: 2.3
 returnsScoreBreakdown:
   tokenUtility: 8
-  valueAccrual: 6
+  valueAccrual: 5
   supplyDynamics: 10
   revenueSustainability: 0
   liquidityAccess: 0
@@ -125,9 +125,9 @@ Three changes would materially increase Intelligent Internet's score:
 2. **Publish a funded roadmap with milestones.** No mainnet timeline exists. No disclosed funding exists. A transparent roadmap with funded milestones and verifiable deliverable dates would address the most obvious gap between the ambition and the evidence. Construction projects do not get built without a programme. Neither do blockchains.
 3. **Identify the genesis National Champions.** Twelve validators at genesis is a specific claim. Who are they? What hardware do they have? Where are they located? Publishing even a shortlist with hardware attestation would convert a whitepaper concept into a concrete commitment.
 
-## Returns score: 24/100
+## Returns score: 23/100
 
-FC scores 24/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+FC scores 23/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (8/20):** No token exists. The whitepaper describes Foundation Coins as the medium for Proof-of-Benefit consensus, where every minted coin proves useful AI work was performed. Four genesis benefit classes are defined: compute-inference, compute-training, data-curation, and agent-orchestration. The design is intellectually coherent and more purposeful than most token utility models. But it is a design in a PDF, not a functioning token in a live economy. Scoring reflects the quality of the concept with a heavy discount for the fact that none of it has been built.
 

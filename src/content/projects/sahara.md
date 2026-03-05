@@ -8,9 +8,9 @@ freedomScore: 3
 returnsScore: 4.5
 returnsScoreBreakdown:
   tokenUtility: 12
-  valueAccrual: 8
+  valueAccrual: 6
   supplyDynamics: 6
-  revenueSustainability: 8
+  revenueSustainability: 10
   liquidityAccess: 11
 returnsScoreEvidence:
   tokenUtility: "Planned for Sahara Chain. Currently on Ethereum/BNB."

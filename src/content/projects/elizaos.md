@@ -5,10 +5,10 @@ category: "agent"
 token: "ELIZAOS"
 status: "active"
 freedomScore: 5
-returnsScore: 2.8
+returnsScore: 2.7
 returnsScoreBreakdown:
   tokenUtility: 8
-  valueAccrual: 4
+  valueAccrual: 3
   supplyDynamics: 6
   revenueSustainability: 2
   liquidityAccess: 8
@@ -135,9 +135,9 @@ Three changes would materially increase ElizaOS's score:
 2. **Address the memory injection vulnerability.** Princeton researchers publicly disclosed a mechanism to manipulate agent trading decisions via memory injection, and Eliza Labs responded with "no direct updates were made." For a framework whose agents handle financial transactions, this is unacceptable. Publishing a formal security response, implementing mitigations, and commissioning a third-party audit of the core framework would demonstrate the security maturity that institutional adopters require.
 3. **Establish clear token utility.** The ELIZAOS token currently has no value capture mechanism: no staking, no fee accrual, no burns, no governance voting. Either the L1 blockchain needs to ship with ELIZAOS as its native token, or auto.fun fees need to accrue to token holders, or some other concrete mechanism needs to create sustained demand beyond speculation. Great open-source software does not need a token; if you issue one, it needs a reason to exist.
 
-## Returns score: 28/100
+## Returns score: 27/100
 
-ELIZAOS scores 28/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+ELIZAOS scores 27/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (8/20):** The framework is genuinely excellent — 17,600-plus GitHub stars, 583 contributors, MIT licensed, three minutes to a running agent. None of that has anything to do with the token. ELIZAOS has no staking mechanism, no fee accrual, no burns, and governance voting is not yet live. The token exists alongside the framework rather than being integrated into it. A planned L1 blockchain would change this, but plans are not products. Today, you can use the entire ElizaOS framework without ever touching the token.
 

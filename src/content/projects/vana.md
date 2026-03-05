@@ -8,9 +8,9 @@ freedomScore: 6
 returnsScore: 5.5
 returnsScoreBreakdown:
   tokenUtility: 14
-  valueAccrual: 12
+  valueAccrual: 10
   supplyDynamics: 8
-  revenueSustainability: 10
+  revenueSustainability: 12
   liquidityAccess: 11
 returnsScoreEvidence:
   tokenUtility: "Data DAO staking, governance, data contribution rewards."
@@ -134,7 +134,7 @@ Three changes would materially increase Vana's score:
 
 ## Returns score: 55/100
 
-VANA scores 55/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+VANA scores 55/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (14/20):** VANA has well-structured multi-layered utility. Data DAO staking aligns participants with data pool quality. Governance voting gives token holders protocol influence. Data contribution rewards create a direct link between productive activity and token demand. The staking mechanism (approximately 6.18% APY, non-rebasing) provides a baseline yield for passive holders. The 35,000 VANA requirement for L1 validators creates meaningful demand at the infrastructure level. These are real, functioning utility vectors on a live mainnet — not whitepaper promises. The deduction reflects the fact that individual data contribution rewards are likely modest, and the gap between 300+ DataDAOs established and 16 in active incubation suggests most of the ecosystem is dormant.
 

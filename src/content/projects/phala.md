@@ -8,9 +8,9 @@ freedomScore: 6
 returnsScore: 5.0
 returnsScoreBreakdown:
   tokenUtility: 14
-  valueAccrual: 10
+  valueAccrual: 8
   supplyDynamics: 10
-  revenueSustainability: 8
+  revenueSustainability: 10
   liquidityAccess: 8
 returnsScoreEvidence:
   tokenUtility: "Payment for confidential compute. Staking. Worker bonding."

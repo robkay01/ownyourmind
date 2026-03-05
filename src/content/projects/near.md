@@ -8,9 +8,9 @@ freedomScore: 6
 returnsScore: 6.3
 returnsScoreBreakdown:
   tokenUtility: 16
-  valueAccrual: 12
+  valueAccrual: 10
   supplyDynamics: 12
-  revenueSustainability: 10
+  revenueSustainability: 12
   liquidityAccess: 13
 returnsScoreEvidence:
   tokenUtility: "Staking, governance, chain fees. Strong L1 utility."

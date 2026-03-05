@@ -5,12 +5,12 @@ category: "compute"
 token: "IO"
 status: "active"
 freedomScore: 4
-returnsScore: 4.8
+returnsScore: 4.9
 returnsScoreBreakdown:
   tokenUtility: 12
-  valueAccrual: 8
+  valueAccrual: 6
   supplyDynamics: 8
-  revenueSustainability: 12
+  revenueSustainability: 15
   liquidityAccess: 8
 returnsScoreEvidence:
   tokenUtility: "Payment for compute, staking for providers. But centralized platform."
@@ -128,9 +128,9 @@ Three changes would materially increase io.net's score:
 2. **Implement governance.** Token holders have zero governance rights. No DAO, no proposals, no voting. Even a basic governance framework with proposal submission, quorum thresholds and on-chain voting would demonstrate that IO is more than a payment rail for a centralised company. The io.net Foundation controls all strategic decisions without community input.
 3. **Publish a real-time network dashboard with verified metrics.** The gap between 327,000 "registered" GPUs and 6,720 daily active verified GPUs, combined with the 2024 Sybil attack history, has destroyed metric credibility. A real-time, independently verifiable dashboard showing actual active GPUs, compute hours delivered, revenue and burn amounts would rebuild trust. Self-reported quarterly figures filtered through Messari reports are not enough.
 
-## Returns score: 48/100
+## Returns score: 49/100
 
-IO scores 48/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+IO scores 49/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (12/20):** IO functions as payment for GPU compute and as staking collateral for providers, which gives it more utility than most DePIN tokens. The Co-Staking Marketplace adds a passive participation layer. But the platform itself is entirely centralised — io.net controls orchestration, matching, and billing. The token is a payment rail for a company's services, not a protocol-native necessity. If io.net decided to accept USDC-only tomorrow, the token's utility would evaporate overnight.
 

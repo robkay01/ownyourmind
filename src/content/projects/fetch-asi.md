@@ -8,9 +8,9 @@ freedomScore: 5
 returnsScore: 5.5
 returnsScoreBreakdown:
   tokenUtility: 14
-  valueAccrual: 10
+  valueAccrual: 8
   supplyDynamics: 10
-  revenueSustainability: 8
+  revenueSustainability: 10
   liquidityAccess: 13
 returnsScoreEvidence:
   tokenUtility: "Staking, governance, service payment. But merger created confusion."
@@ -141,7 +141,7 @@ Three changes would materially increase the ASI Alliance's score:
 
 ## Returns score: 55/100
 
-FET scores 55/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+FET scores 55/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (14/20):** FET serves as the staking token for Fetchhub-4 validators, the governance token for alliance-wide decisions, and the payment token for agent services and ASI Cloud compute. Those are three genuine utility layers, which is more than most projects in this space can claim. The complication is the merger. Three separate communities — Fetch.ai, SingularityNET, and CUDOS — were funnelled into one token, and the AGIX and CUDOS migration ratios created confusion about what FET actually represents. The utility is real but the identity is muddled.
 

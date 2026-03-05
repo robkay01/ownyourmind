@@ -8,9 +8,9 @@ freedomScore: 3
 returnsScore: 7.0
 returnsScoreBreakdown:
   tokenUtility: 12
-  valueAccrual: 18
+  valueAccrual: 14
   supplyDynamics: 12
-  revenueSustainability: 16
+  revenueSustainability: 20
   liquidityAccess: 12
 returnsScoreEvidence:
   tokenUtility: "Payment for render services. No native staking. Holders earn nothing by simply holding. Limited governance role."
@@ -124,7 +124,7 @@ Three changes would materially increase Render's score:
 
 ## Returns score: 70/100
 
-RENDER scores 70/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+RENDER scores 70/100 (B grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (14/20):** RENDER is the settlement currency for rendering jobs and, increasingly, AI compute through the Dispersed subnet. Creators pay in RENDER or Render Credits for GPU rendering, and node operators receive newly minted RENDER as compensation. The utility is clear but narrow — there is no meaningful staking mechanism, no governance weight tied to holdings, and no additional demand sink beyond job settlement. Unlike most DePIN tokens, simply holding RENDER earns you nothing. The token exists to settle transactions, full stop.
 

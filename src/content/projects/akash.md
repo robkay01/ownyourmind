@@ -5,12 +5,12 @@ category: "compute"
 token: "AKT"
 status: "active"
 freedomScore: 7
-returnsScore: 6.5
+returnsScore: 6.6
 returnsScoreBreakdown:
   tokenUtility: 16
-  valueAccrual: 13
+  valueAccrual: 10
   supplyDynamics: 12
-  revenueSustainability: 14
+  revenueSustainability: 18
   liquidityAccess: 10
 returnsScoreEvidence:
   tokenUtility: "Payment for compute, staking for governance/security, validator requirement."
@@ -120,9 +120,9 @@ Three changes would materially increase Akash's score:
 2. **Execute the chain migration transparently.** Publish a technical specification. Run a governance vote on the destination chain. Provide a detailed migration timeline with milestones. The current state, aspirational timelines with no published roadmap, creates justified uncertainty.
 3. **Grow the provider count.** Roughly 69 providers, declining through 2025, is not decentralised cloud. Homenode is a step in the right direction. The target should be hundreds of active providers across multiple geographies before claiming the "decentralised AWS" positioning with a straight face.
 
-## Returns score: 65/100
+## Returns score: 66/100
 
-AKT scores 65/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+AKT scores 66/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (16/20):** AKT serves three clear functions: payment for compute on the marketplace, staking for validator security and governance, and a requirement for running validator infrastructure. Tenants pay in AKT (or USDC, with AKT settlement), and validators must bond AKT to participate. The utility is genuine and structurally necessary — the network cannot function without the token. The gap to a perfect score is the lack of a broader demand sink beyond compute settlement and staking.
 

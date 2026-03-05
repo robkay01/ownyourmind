@@ -5,12 +5,12 @@ category: "data"
 token: "OCEAN"
 status: "active"
 freedomScore: 6
-returnsScore: 3.8
+returnsScore: 3.9
 returnsScoreBreakdown:
   tokenUtility: 10
-  valueAccrual: 6
+  valueAccrual: 5
   supplyDynamics: 6
-  revenueSustainability: 8
+  revenueSustainability: 10
   liquidityAccess: 8
 returnsScoreEvidence:
   tokenUtility: "Foundation says 'no intended utility value'. Data token use cases limited."
@@ -135,9 +135,9 @@ Three changes would materially increase Ocean Protocol's score:
 2. **Resolve the Fetch.ai litigation transparently.** Publish the settlement terms when agreed. Disclose what happened with the token minting and conversion. Whether the allegations are true, exaggerated, or false, the current ambiguity is worse than clarity in either direction. The community cannot make informed decisions about OCEAN without understanding what actually happened with their token supply.
 3. **Define token utility or commit to pure buyback-and-burn.** "No intended utility value" is honest but fatal for a token. Either implement concrete utility (staking for Ocean Node rewards, governance rights, data marketplace fee discount) or publish a detailed buyback-and-burn plan with auditable revenue sources, timelines, and burn targets. The current position of neither utility nor clear deflationary mechanism satisfies no one.
 
-## Returns score: 38/100
+## Returns score: 39/100
 
-OCEAN scores 38/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+OCEAN scores 39/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (10/20):** The Foundation itself says OCEAN has "no intended utility value." That is an extraordinary statement for a project with seven years of development. OCEAN is not a staking token, not a governance token (veOCEAN and OceanDAO are both discontinued), not a payment token in any enforced sense. Data NFTs and datatokens exist on Ethereum, but the connection between OCEAN the token and the data marketplace has never been tightly coupled. Predictoor on Oasis Sapphire uses OCEAN for staking on predictions, which is the most concrete remaining utility — and it runs on a separate chain.
 

@@ -5,12 +5,12 @@ category: "platform"
 token: "MOR"
 status: "active"
 freedomScore: 8
-returnsScore: 5.8
+returnsScore: 5.7
 returnsScoreBreakdown:
   tokenUtility: 18
-  valueAccrual: 14
+  valueAccrual: 11
   supplyDynamics: 16
-  revenueSustainability: 6
+  revenueSustainability: 8
   liquidityAccess: 4
 returnsScoreEvidence:
   tokenUtility: "Multiple utilities: staking for yield, compute access, agent services. Essential to protocol."
@@ -107,9 +107,9 @@ Three changes would materially increase Morpheus's score:
 2. **Commission a formal security audit.** The smart contracts handle real capital (stETH deposits, MOR emissions). A third-party audit by a credible firm would strengthen confidence in the infrastructure that underpins the entire network.
 3. **Grow the compute provider base.** More providers means more redundancy, lower latency and stronger censorship resistance. The compute marketplace is functional but needs scale to deliver on the sovereign agent vision.
 
-## Returns score: 58/100
+## Returns score: 57/100
 
-MOR scores 58/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+MOR scores 57/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (18/20):** MOR does real work across the protocol. Staking stETH earns daily emissions, compute access requires MOR, and agent services consume it. This is not a governance-only token bolted onto an existing product — MOR is structurally embedded in every interaction layer. Capital providers, compute providers, code contributors and community builders all earn and spend MOR through distinct mechanisms. The multi-sided utility is among the strongest in the DeAI space.
 

@@ -5,12 +5,12 @@ category: "agent"
 token: "VIRTUAL"
 status: "active"
 freedomScore: 4
-returnsScore: 6.2
+returnsScore: 6.4
 returnsScoreBreakdown:
   tokenUtility: 16
-  valueAccrual: 12
+  valueAccrual: 10
   supplyDynamics: 8
-  revenueSustainability: 14
+  revenueSustainability: 18
   liquidityAccess: 12
 returnsScoreEvidence:
   tokenUtility: "Agent launchpad. Bonding curve participation. Governance."
@@ -133,9 +133,9 @@ Three changes would materially increase Virtuals' score:
 2. **Implement agent quality curation without censorship.** The 17,000-plus agent count is meaningless if the majority are inactive or spam. A reputation system, community curation layer, or minimum activity threshold for visibility (not existence) would improve ecosystem quality without compromising permissionless creation. The current approach of unrestricted creation with no quality signal serves neither creators nor users.
 3. **Decentralise agent data storage.** Moving agent personality data, memory, and assets from Virtuals-hosted infrastructure to decentralised storage (IPFS, Arweave, or similar) would give agent creators genuine ownership of their agents' intellectual property. Currently, "owning" an agent means owning a token; the actual agent lives on Virtuals' servers.
 
-## Returns score: 62/100
+## Returns score: 64/100
 
-VIRTUAL scores 62/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+VIRTUAL scores 64/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (16/20):** VIRTUAL has the strongest utility mechanics in the AI agent space. Every agent token is paired against VIRTUAL in its Uniswap V2 pool, creating mandatory demand that scales with ecosystem activity. Agent creation costs 100 VIRTUAL. The veVIRTUAL locking mechanism (up to two years) grants governance voting, daily Virgen points, and Genesis airdrop eligibility. The bonding curve graduation threshold of 42,000 VIRTUAL creates sustained buy pressure during agent launches. These are not theoretical demand sinks — they are live, functioning mechanisms processing real volume. The deduction reflects the fact that utility is heavily tied to speculative agent launches rather than productive AI output.
 

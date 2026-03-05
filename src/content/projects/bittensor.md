@@ -5,12 +5,12 @@ category: "platform"
 token: "TAO"
 status: "active"
 freedomScore: 6
-returnsScore: 6.5
+returnsScore: 6.3
 returnsScoreBreakdown:
   tokenUtility: 17
-  valueAccrual: 14
+  valueAccrual: 11
   supplyDynamics: 15
-  revenueSustainability: 5
+  revenueSustainability: 6
   liquidityAccess: 14
 returnsScoreEvidence:
   tokenUtility: "Staking required for participation. Burn for registration. Governance. Essential."
@@ -113,9 +113,9 @@ Three changes would materially increase Bittensor's score:
 2. **Commission a third-party security audit.** A network with a $1.9 billion market cap and a history of a $28-30 million insider hack has no disclosed security audit. This is indefensible. An audit of the core protocol, consensus mechanism and smart contracts by a credible firm would address the most obvious gap.
 3. **Reform governance beyond the Triumvirate.** Three OTF employees controlling governance proposals for a network of this scale is not decentralised governance. Expanding proposal rights to the broader validator set or implementing a community proposal mechanism would distribute decision-making power meaningfully.
 
-## Returns score: 65/100
+## Returns score: 63/100
 
-TAO scores 65/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+TAO scores 63/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (17/20):** TAO is structurally essential to every layer of the network. Miners and validators must stake TAO to participate. Registering on popular subnets requires burning TAO, creating a direct cost barrier that ties network growth to token demand. dTAO alpha tokens create a market-based allocation mechanism where stakers vote with capital on which subnets deserve emissions. Governance participation requires stake. The token is not an optional add-on — without TAO, the entire incentive architecture collapses.
 

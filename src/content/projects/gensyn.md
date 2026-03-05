@@ -5,10 +5,10 @@ category: "compute"
 token: "AI"
 status: "upcoming"
 freedomScore: 5
-returnsScore: 2.6
+returnsScore: 2.4
 returnsScoreBreakdown:
   tokenUtility: 10
-  valueAccrual: 8
+  valueAccrual: 6
   supplyDynamics: 6
   revenueSustainability: 2
   liquidityAccess: 0
@@ -139,9 +139,9 @@ Three changes would materially increase Gensyn's score:
 2. **Implement governance before or at TGE.** Token holders spending real money on $AI tokens should have governance rights from day one. An elected council "initially mapped to core team members" is not decentralisation. Deploying on-chain governance with community-elected council members, proposal submission, and transparent voting before TGE would demonstrate genuine commitment to decentralisation.
 3. **Publish security audits.** $66.74 million in funding, 90 million testnet transactions, and a public token sale, yet no published audit from a recognised firm. Before mainnet handles real economic value, smart contract and protocol audits are essential. This is a straightforward gap to close with available resources.
 
-## Returns score: 26/100
+## Returns score: 24/100
 
-AI scores 26/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+AI scores 24/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (10/20):** There is no live token. The $AI token is planned for April 2026 with intended use cases spanning compute payments, verification staking, Delphi prediction market stakes, governance voting, and a programmatic buy-and-burn mechanism. These are reasonable utility vectors on paper, but none of them can be evaluated in practice because the token does not exist yet. Scoring generously for design intent, but design intent is not utility.
 

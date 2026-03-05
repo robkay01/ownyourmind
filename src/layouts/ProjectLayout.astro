@@ -61,7 +61,7 @@ const statusColors: Record<string, string> = {
 const scoreColor = freedomScore >= 7 ? '#10B981' : freedomScore >= 4 ? '#F59E0B' : '#EF4444';
 const returnsColor = returnsScore != null ? (returnsScore >= 7 ? '#10B981' : returnsScore >= 4 ? '#F59E0B' : '#EF4444') : null;
 const returnsRaw = returnsScore != null ? Math.round(returnsScore * 10) : null;
-const returnsGrade = returnsRaw != null ? (returnsRaw >= 90 ? 'A' : returnsRaw >= 75 ? 'B' : returnsRaw >= 60 ? 'C' : returnsRaw >= 45 ? 'D' : 'F') : null;
+const returnsGrade = returnsRaw != null ? (returnsRaw >= 85 ? 'A' : returnsRaw >= 70 ? 'B' : returnsRaw >= 55 ? 'C' : returnsRaw >= 40 ? 'D' : 'F') : null;
 
 // Fetch market data if coingeckoId exists
 let market: { price: number; marketCap: number; fdv: number; priceChange24h: number } | null = null;

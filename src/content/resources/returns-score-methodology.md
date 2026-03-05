@@ -2,6 +2,7 @@
 title: "Returns Score Methodology"
 description: "How we assess whether a DeAI token captures value from its protocol. Five dimensions, scored criteria, and why the exact number matters less than the reasoning behind it."
 publishDate: 2025-03-05
+updatedDate: 2026-03-05
 draft: false
 ---
 
@@ -43,14 +44,18 @@ A high Returns Score does not guarantee returns. A low Returns Score does not gu
 
 Returns Score is calculated across five dimensions, weighted by importance:
 
-| Dimension | Max Score |
-|-----------|----------|
-| Token Utility | /20 |
-| Value Accrual | /25 |
-| Supply Dynamics | /20 |
-| Revenue Sustainability | /20 |
-| Liquidity & Access | /15 |
-| **Total** | **/100** |
+| Dimension | Max Score | Rationale |
+|-----------|----------|-----------|
+| Revenue Sustainability | /25 | The heaviest weight. Revenue is the strongest signal of real value creation. |
+| Token Utility | /20 | What can holders do with the token? |
+| Value Accrual | /20 | Is there a mechanical link between usage and token value? |
+| Supply Dynamics | /20 | Is the supply schedule sustainable? |
+| Liquidity & Access | /15 | Can holders enter and exit positions? |
+| **Total** | **/100** | |
+
+**Why Revenue is weighted highest:** A token can have five utilities but if none generate revenue, those utilities are cosmetic. Revenue from paying customers is the hardest metric to fake and the strongest signal that a protocol creates real value.
+
+**Dimension overlap with Freedom Score:** Token Distribution Fairness (Freedom) and Supply Dynamics (Returns) both assess token supply structure from different angles. Freedom cares about concentration of power. Returns cares about dilution of value. The same allocation can score differently on each.
 
 ---
 
@@ -62,7 +67,7 @@ Returns Score is calculated across five dimensions, weighted by importance:
 |-------|----------|
 | **18-20** | **Essential utility.** Multiple functions: staking for yield, governance rights, access to services, payment currency, collateral, required for node operation. Token is structurally essential. |
 | **14-17** | **Strong utility.** 2-3 clear utilities. Token has genuine purpose but protocol could function partially without it. |
-| **10-13** | **Moderate utility.** Single meaningful utility (governance only, or staking emissions only). Token feels like it could be replaced by USDC. |
+| **10-13** | **Moderate utility.** Single meaningful utility (governance only, or staking emissions only). No structural requirement to hold the token beyond the single use case. |
 | **6-9** | **Weak utility.** Utility exists on paper but not in practice. "Governance" with no real decisions. "Staking" with no purpose beyond emissions. |
 | **0-5** | **No real utility.** Pure speculation vehicle. |
 
@@ -84,17 +89,17 @@ Returns Score is calculated across five dimensions, weighted by importance:
 
 ---
 
-## Dimension 2: Value Accrual (/25)
+## Dimension 2: Value Accrual (/20)
 
-**What it measures:** Is there a mechanical link between protocol activity and token value? This is the most important dimension.
+**What it measures:** Is there a mechanical link between protocol activity and token value?
 
 | Score | Criteria |
 |-------|----------|
-| **22-25** | **Direct accrual.** Clear mechanical link: fees to buy/burn to holders. Revenue-sharing to stakers. More activity = unambiguously good for holders. |
-| **17-21** | **Indirect accrual.** Token needed for access, so demand increases with usage. Staking yields from real revenue. |
-| **12-16** | **Speculative accrual.** Token benefits from network effects and attention, but no direct mechanism. |
-| **6-11** | **Weak accrual.** Token may benefit from future governance decisions or theoretical fee switches. Aspirational, not implemented. |
-| **0-5** | **No accrual path.** Token has no relationship to protocol success. |
+| **18-20** | **Direct accrual.** Clear mechanical link: fees distributed to holders, revenue-sharing to stakers, buy-and-burn from protocol revenue. More activity = unambiguously good for holders. |
+| **14-17** | **Indirect accrual.** Token needed for access, so demand increases with usage. Staking yields from real revenue. |
+| **10-13** | **Speculative accrual.** No implemented fee distribution or burn mechanism. Token value depends on narrative and ecosystem growth rather than mechanical linkage. |
+| **5-9** | **Weak accrual.** Token may benefit from future governance decisions or theoretical fee switches. Aspirational, not implemented. |
+| **0-4** | **No accrual path.** Token has no relationship to protocol success. |
 
 ### Accrual Mechanisms (Strongest to Weakest)
 
@@ -120,19 +125,29 @@ Returns Score is calculated across five dimensions, weighted by importance:
 | **6-9** | **Dilutive.** Very high inflation (>20%). Major insider unlocks ahead. Emissions far exceed demand. |
 | **0-5** | **Supply shock risk.** Infinite supply or runaway inflation. Large token overhang (50%+ locked/unvested). |
 
+### Vesting and Lock-up Scoring Guidance
+
+Supply Dynamics must account for upcoming unlock events, not just annualised inflation:
+
+- **Cliff events:** A large unlock (>10% of circulating supply) within 6 months warrants a 2-3 point deduction from the base score. Multiple cliffs compound the risk.
+- **Linear vesting:** Predictable and priced in by markets. Score based on the annualised dilution rate, not the total locked amount.
+- **Circulating supply percentage:** If less than 30% of total supply is circulating, the overhang risk is material regardless of the annual emission rate. Score in the 6-9 range maximum unless the vesting schedule is exceptionally long (10+ years).
+- **Insider concentration:** If top 10 wallets hold >50% of circulating supply (excluding protocol-owned liquidity), apply a 1-2 point deduction for sell-pressure risk.
+
 ---
 
-## Dimension 4: Revenue Sustainability (/20)
+## Dimension 4: Revenue Sustainability (/25)
 
-**What it measures:** Does the protocol generate real revenue from paying customers?
+**What it measures:** Does the protocol generate real revenue from paying customers? This is the most important dimension.
 
 | Score | Criteria |
 |-------|----------|
-| **18-20** | **Product-market fit.** Real revenue from external customers. Revenue covers or exceeds emissions. Sustainable without inflation. |
-| **13-17** | **Revenue-generating.** Meaningful revenue but does not yet cover emissions. Real users, not just yield farmers. |
-| **8-12** | **Emission-dependent.** Minimal external revenue. Participants are primarily emission farmers. |
-| **4-7** | **Speculative.** No revenue. Pure incentive layer. |
-| **0-3** | **Extractive or broken.** Protocol loses money on every transaction. No path to sustainability. |
+| **22-25** | **Product-market fit.** Real revenue from external customers. Revenue covers or exceeds emissions. Sustainable without inflation. |
+| **17-21** | **Strong revenue.** Meaningful revenue growing quarter-on-quarter. Real users, not just yield farmers. Revenue does not yet cover emissions but trajectory is clear. |
+| **12-16** | **Early revenue.** Revenue exists but is small relative to emissions. Growing customer base with evidence of demand. Revenue-to-emission ratio below 0.5. |
+| **7-11** | **Emission-dependent.** Minimal external revenue. Participants are primarily emission farmers. |
+| **4-6** | **Speculative.** No revenue. Pure incentive layer. |
+| **0-3** | **Extractive, broken, or pre-revenue.** Protocol loses money on every transaction, no path to sustainability, or project has not launched yet. |
 
 ### What Counts as Revenue
 
@@ -152,51 +167,73 @@ Returns Score is calculated across five dimensions, weighted by importance:
 
 ## Dimension 5: Liquidity & Access (/15)
 
-**What it measures:** Can holders actually buy and sell without destroying themselves with slippage?
+**What it measures:** Can holders actually buy and sell without significant slippage?
 
 | Score | Criteria |
 |-------|----------|
-| **13-15** | **Tier-1 liquid.** Listed on Binance, Coinbase, Kraken. High DEX liquidity. Daily volume >$10M. |
-| **10-12** | **Tier-2 liquid.** Mid-tier CEXs (Gate, KuCoin, Bybit). Moderate DEX liquidity. Daily volume $1-10M. |
-| **6-9** | **Thin liquidity.** DEX-only or low-tier CEX. Daily volume $100K-$1M. Significant slippage on moderate trades. |
-| **0-5** | **Illiquid.** Minimal liquidity. Daily volume <$100K. Functionally trapped. |
+| **13-15** | **Tier-1 liquid.** Listed on 3+ major CEXs (Binance, Coinbase, Kraken, OKX, Bybit). Daily volume >$50M. Institutional-grade depth. |
+| **10-12** | **Well-listed.** 2+ tier-1 CEXs or multiple tier-2 CEXs. Daily volume $10-50M. Good retail access. |
+| **7-9** | **Moderate liquidity.** 1-2 mid-tier CEXs. DEX liquidity. Daily volume $1-10M. |
+| **4-6** | **Thin liquidity.** DEX-only or low-tier CEX. Daily volume $100K-$1M. Significant slippage on moderate trades. |
+| **0-3** | **Illiquid or non-existent.** Daily volume below $100K, or no tradeable token exists. |
+
+### Pre-Token Projects
+
+Projects without a tradeable token receive **0/15** for Liquidity & Access. VC backing and expected exchange listings are not assessed - liquidity is scored on what exists today, not what may exist in the future.
+
+Pre-token projects also receive 0 for Revenue Sustainability if no revenue exists. Their total Returns Score is capped by the dimensions that can be assessed and should be interpreted as preliminary.
 
 ---
 
 ## Grade Bands
 
-The total produces a score from 0 to 100, mapped to letter grades:
+The total produces a score from 0 to 100, mapped to letter grades. These bands are aligned with the Freedom Score methodology:
 
 | Score | Grade | Interpretation |
 |-------|-------|----------------|
-| 90-100 | **A** | Exceptional value capture. Token structurally aligned with protocol success. |
-| 75-89 | **B** | Strong fundamentals. Minor concerns but credible accrual path. |
-| 60-74 | **C** | Adequate. Some value capture but significant gaps or risks. |
-| 45-59 | **D** | Weak. Token economics misaligned or unsustainable. |
-| 0-44 | **F** | Failing. Little to no connection between protocol success and token value. |
+| 85-100 | **A** | Exceptional value capture. Token structurally aligned with protocol success. |
+| 70-84 | **B** | Strong fundamentals. Minor concerns but credible accrual path. |
+| 55-69 | **C** | Adequate. Some value capture but significant gaps or risks. |
+| 40-54 | **D** | Weak. Token economics misaligned or unsustainable. |
+| 0-39 | **F** | Failing. Little to no connection between protocol success and token value. |
 
 ---
 
 ## The Quadrant Model
 
-The two scores together produce four quadrants:
+The two scores together produce four quadrants, using the raw /100 scores for placement:
 
 | Quadrant | Freedom | Returns | Interpretation |
 |----------|---------|---------|----------------|
-| **A** | High (6+) | High (6+) | The ideal. Does not meaningfully exist in DeAI yet. |
-| **B** | High (6+) | Low (<6) | Sovereignty plays. Early-stage networks with genuine decentralisation but unproven economics. |
-| **C** | Low (<6) | High (6+) | Profitable but centralised. Functional businesses with tokens attached. |
-| **D** | Low (<6) | Low (<6) | Avoid. Neither decentralised nor economically viable. |
+| **A** | High (55+) | High (55+) | The ideal. Decentralised with credible economics. Rare in DeAI today. |
+| **B** | High (55+) | Low (<55) | Sovereignty plays. Genuine decentralisation but unproven economics. |
+| **C** | Low (<55) | High (55+) | Profitable but centralised. Functional businesses with tokens attached. |
+| **D** | Low (<55) | Low (<55) | Neither decentralised nor economically viable. |
+
+---
+
+## Risk Flags
+
+Some risks materially affect returns but are better flagged than scored:
+
+| Flag | Trigger | Implication |
+|------|---------|-------------|
+| **Regulatory risk** | Active SEC/regulatory action, security classification risk | Potential delisting, liquidity destruction |
+| **Pausable contract** | Token contract includes owner-controlled pause function | Centralised kill switch on trading |
+| **Pre-token** | No tradeable token exists | Returns Score is preliminary and incomplete |
+
+These flags appear in project reviews alongside the Returns Score. They are not scored numerically because their impact is binary (the risk either materialises or it does not) rather than graduated.
 
 ---
 
 ## Limitations
 
-1. **Point-in-time.** Scores are updated periodically, not in real time.
+1. **Point-in-time.** Scores are updated periodically, not in real time. Market data (volume, price) is a snapshot.
 2. **Subjective.** Despite the rubric, scoring requires judgement.
 3. **No price prediction.** A high Returns Score does not mean the price will go up.
-4. **Does not capture everything.** Team quality, competitive landscape, regulatory risk, and technical execution are covered in project reviews, not the score.
+4. **Does not capture everything.** Team quality, competitive landscape, and technical execution are covered in project reviews, not the score.
 5. **Early-stage uncertainty.** Many DeAI projects are pre-revenue or pre-product. Scores reflect current state, not future potential.
+6. **Market correlation.** Most DeAI tokens are highly correlated with BTC/ETH. The Returns Score assesses structural alignment, not whether you will make money in a bear market.
 
 ---
 
@@ -210,4 +247,4 @@ The two scores together produce four quadrants:
 
 ---
 
-*Last updated: March 2026. Methodology version 1.0.*
+*Last updated: March 2026. Methodology version 2.0.*

@@ -8,9 +8,9 @@ freedomScore: 6
 returnsScore: 3.5
 returnsScoreBreakdown:
   tokenUtility: 14
-  valueAccrual: 6
+  valueAccrual: 5
   supplyDynamics: 4
-  revenueSustainability: 4
+  revenueSustainability: 5
   liquidityAccess: 7
 returnsScoreEvidence:
   tokenUtility: "Staking for agent rewards, bonding, governance. Real utility exists."
