@@ -127,3 +127,25 @@ Three changes would materially increase Olas's score:
 1. **Enforce vesting on insider tokens.** 42.65% insider allocation with no smart contract-enforced vesting is the single biggest credibility gap. Implementing on-chain lock-ups for the remaining founding member and Valory allocations would demonstrate genuine commitment to long-term alignment. The buOLAS annual release schedule is insufficient because it is not enforced by smart contracts.
 2. **Diversify beyond Gnosis Chain prediction markets.** Over 35% of Safe transactions on Gnosis Chain is impressive but creates dangerous concentration. Demonstrating real agent activity across multiple verticals (DeFi, social, enterprise) and chains would reduce single-point-of-failure risk and broaden the protocol's value proposition.
 3. **Grow marketplace economics.** $89,000 total marketplace turnover is not a functioning economy. The transaction volume (14.5 million) proves the infrastructure works. The next step is translating that volume into meaningful economic value through higher-value agent services, enterprise use cases, and broader marketplace adoption.
+
+## Returns score: 3.5/10
+
+OLAS scores 35/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+
+**Token utility (14/20):** Credit where it is due — OLAS has more token utility than most agent protocols. Staking earns rewards tied to actual agent activity via Proof-of-Active-Agent, not just passive lockup. Bonding provides protocol-owned liquidity. veOLAS governance gives holders voting weight on emissions and protocol direction. The utility mechanisms are well-designed on paper. The problem is not the design; it is the scale at which they operate.
+
+**Value accrual (6/25):** The marketplace has turned over $89,000. Total. Not per day, not per month — total lifetime turnover. The Mech Marketplace has processed 11.1 million agent-to-agent transactions, but the economic value flowing through those transactions is negligible. The 99.6% token decline from ATH tells you the market's verdict on the value accrual mechanics. Bonding modelled on Olympus DAO has not created meaningful protocol-owned liquidity at these volumes. The architecture for value capture exists; the value itself does not.
+
+**Supply dynamics (4/20):** One billion token cap with 42.65% allocated to insiders — founding members and Valory — with no smart contract-enforced vesting. That is the single most damaging fact in the entire tokenomics. The buOLAS annual release schedule is a promise, not a lock. The 77.9 million token burn in early 2025 was a positive signal, but it does not offset the structural overhang of nearly half the supply sitting with insiders who can sell at any time without on-chain constraints.
+
+**Revenue sustainability (4/20):** The protocol is almost entirely emission-dependent. Agent rewards come from token emissions, not from external revenue. The marketplace generates trivial fees. Pearl is free. There is no subscription model, no enterprise licensing, no compute fees flowing back to the protocol. If emissions stopped tomorrow, the economic incentive to run agents would collapse. This is the fundamental challenge: impressive transaction volume built on a subsidy, not on sustainable economics.
+
+**Liquidity and access (7/15):** Daily trading volume under $1 million, primarily on DEXs. No major CEX listing beyond MEXC. The 99.6% drawdown from ATH means any holder who bought above $0.50 is sitting on catastrophic losses, which suppresses new buyer confidence. Thin liquidity creates severe slippage risk — even a $50,000 market sell would move the price meaningfully. For a protocol with genuine technical merit, the market access is remarkably poor.
+
+### Path to improvement
+
+Three changes would materially increase Olas's returns score:
+
+1. **Generate real marketplace revenue.** The protocol needs transactions that produce fees, not just agent-to-agent messages. Higher-value agent services — enterprise automation, cross-chain DeFi strategies, data analysis — priced in meaningful amounts would create the fee base that makes the tokenomics work. $89,000 lifetime turnover is a prototype, not an economy.
+2. **Enforce insider vesting on-chain.** Convert the buOLAS annual release schedule into smart contract-enforced vesting with transparent unlock dates. This single change would eliminate the largest source of structural sell pressure uncertainty and signal genuine long-term alignment from the founding team.
+3. **Secure a Tier-1 CEX listing.** Thin DEX liquidity and sub-$1 million daily volume make OLAS practically uninvestable for anyone beyond small retail positions. A Binance or Coinbase listing would dramatically improve price discovery, reduce slippage, and broaden the holder base beyond the current niche audience.

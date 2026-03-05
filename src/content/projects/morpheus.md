@@ -100,3 +100,25 @@ Three changes would materially increase Morpheus's score:
 1. **Transition smart contract controls to community governance.** The bootstrap-phase multisig controls are the primary freedom score deduction. Publishing a concrete timeline for transitioning key contract controls to on-chain governance would signal commitment to full decentralisation.
 2. **Commission a formal security audit.** The smart contracts handle real capital (stETH deposits, MOR emissions). A third-party audit by a credible firm would strengthen confidence in the infrastructure that underpins the entire network.
 3. **Grow the compute provider base.** More providers means more redundancy, lower latency and stronger censorship resistance. The compute marketplace is functional but needs scale to deliver on the sovereign agent vision.
+
+## Returns score: 5.8/10
+
+MOR scores 58/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+
+**Token utility (18/20):** MOR does real work across the protocol. Staking stETH earns daily emissions, compute access requires MOR, and agent services consume it. This is not a governance-only token bolted onto an existing product — MOR is structurally embedded in every interaction layer. Capital providers, compute providers, code contributors and community builders all earn and spend MOR through distinct mechanisms. The multi-sided utility is among the strongest in the DeAI space.
+
+**Value accrual (14/25):** MOR gets burned when users purchase compute on the marketplace, which creates deflationary pressure in theory. In practice, burn volumes are minimal relative to daily emissions. The protocol does not yet distribute fees to holders or stakers — value accrual relies almost entirely on the future assumption that compute demand will outpace token issuance. The mechanism is sound; the scale is not there yet.
+
+**Supply dynamics (16/20):** The fair launch with zero insider allocation is genuinely rare. No VC unlock schedule, no team vesting cliff, no foundation treasury dump risk. The 16-year emission decay curve follows a declining trajectory roughly modelled on Bitcoin's halving schedule, with moderate inflation in the early years. The 90-day lock-up on earned MOR also constrains sell pressure. The main concern is that current inflation runs ahead of demand-driven burns by a wide margin.
+
+**Revenue sustainability (6/20):** This is where the thesis gets uncomfortable. The compute marketplace is live and functional, but external revenue is negligible. Almost all economic activity within the protocol is funded by emissions rather than outside capital flowing in. Without meaningful revenue from compute customers paying market rates, the token economy is circular — participants earn MOR from a pool that is only valuable if others want to buy MOR. The marketplace needs to attract substantial non-native demand to break this cycle.
+
+**Liquidity and access (4/15):** MOR trades primarily on decentralised exchanges with very limited centralised exchange coverage. Daily volume sits around $30K, which is dangerously thin. A position of any meaningful size is difficult to enter or exit without moving the price. This is a practical constraint that most project assessments gloss over: it does not matter how good the fundamentals are if you cannot trade the token without 5-10% slippage.
+
+### Path to improvement
+
+Three changes would materially increase Morpheus's returns score:
+
+1. **Secure centralised exchange listings.** The $30K daily volume on DEX-only trading is the most immediate constraint on capital formation. Even a single tier-2 CEX listing would meaningfully improve liquidity and discoverability.
+2. **Grow compute marketplace revenue from external customers.** The burn mechanism only matters at scale. Attracting paying customers who are not already MOR holders would create genuine demand-side pressure and break the circular emissions dependency.
+3. **Implement fee distribution to stakers.** A portion of compute fees flowing to capital providers or MOR stakers would create a yield mechanism backed by real revenue rather than inflation, giving holders a reason to stay beyond speculation.

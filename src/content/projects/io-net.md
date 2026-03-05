@@ -121,3 +121,25 @@ Three changes would materially increase io.net's score:
 1. **Open-source the core platform.** The IO-SDK (Ray fork), GPU orchestration engine, and IO Worker node software are all closed-source. Publishing this code under a permissive licence would address the most fundamental credibility gap. If the code is good, open-sourcing it costs nothing. If it is not good enough to open-source, that tells you something. [Akash](/projects/akash/) publishes everything and it has not hurt their competitive position.
 2. **Implement governance.** Token holders have zero governance rights. No DAO, no proposals, no voting. Even a basic governance framework with proposal submission, quorum thresholds and on-chain voting would demonstrate that IO is more than a payment rail for a centralised company. The io.net Foundation controls all strategic decisions without community input.
 3. **Publish a real-time network dashboard with verified metrics.** The gap between 327,000 "registered" GPUs and 6,720 daily active verified GPUs, combined with the 2024 Sybil attack history, has destroyed metric credibility. A real-time, independently verifiable dashboard showing actual active GPUs, compute hours delivered, revenue and burn amounts would rebuild trust. Self-reported quarterly figures filtered through Messari reports are not enough.
+
+## Returns score: 4.8/10
+
+IO scores 48/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+
+**Token utility (12/20):** IO functions as payment for GPU compute and as staking collateral for providers, which gives it more utility than most DePIN tokens. The Co-Staking Marketplace adds a passive participation layer. But the platform itself is entirely centralised — io.net controls orchestration, matching, and billing. The token is a payment rail for a company's services, not a protocol-native necessity. If io.net decided to accept USDC-only tomorrow, the token's utility would evaporate overnight.
+
+**Value accrual (8/25):** This is where it gets murky. io.net takes platform fees on compute transactions, but the mechanism by which that revenue flows back to IO token holders is poorly defined. The burn-and-mint structure exists on paper, but roughly $10 million in annual burn pressure against continuous emission and insider unlocks is a net negative. There is no clear flywheel where more platform usage translates into sustained token demand beyond the burn offset.
+
+**Supply dynamics (8/20):** The 800 million cap sounds reasonable until you look at the distribution. Seed investors hold 12.5%, team 11.3%, Series A 10.15% — that is a third of supply in insider hands. Vesting unlocks began in July 2025 and continue through 2028, creating persistent sell pressure. Emissions for provider rewards add inflationary supply on top. The token is down 98% from ATH, and the unlock schedule means there is more selling ahead, not less.
+
+**Revenue sustainability (12/20):** This is io.net's genuine bright spot. $20 million-plus annualised revenue with 82.6% quarter-on-quarter growth in Q1 2025 is real traction by any DePIN standard. 7.1 million compute hours delivered in January 2025 alone. These are not projections or "potential" revenue — actual customers are paying for actual GPU time. The question is whether the growth rate holds and whether margins survive competition from Akash and centralised providers.
+
+**Liquidity and access (8/15):** Binance listing provides baseline accessibility, and the token trades on major exchanges. But daily volume has declined significantly since the June 2024 launch hype, and the 98% drawdown from ATH means most holders are deeply underwater. Thin volume relative to market cap creates slippage risk for any meaningful position. The liquidity is adequate for retail but not for institutional-scale entry or exit.
+
+### Path to improvement
+
+Three changes would materially increase io.net's returns score:
+
+1. **Publish a transparent fee-to-burn ratio and demonstrate net deflationary periods.** The burn mechanism exists but is overwhelmed by emissions and insider unlocks. Showing months where burns exceed new supply would prove the tokenomics can work at scale.
+2. **Introduce revenue-sharing or staking yield tied to platform revenue.** Co-Staking is a start, but token holders need a direct, auditable link between platform revenue growth and token value. A percentage of compute fees distributed to stakers would create genuine demand.
+3. **Accelerate the insider unlock schedule or commit to no further raises.** Two to three more years of continuous insider selling at current prices will suppress any organic price recovery. A compressed unlock with a commitment to no further dilutive funding rounds would signal confidence in the revenue trajectory.

@@ -132,3 +132,25 @@ Three changes would materially increase Gensyn's score:
 1. **Launch mainnet with transparent metrics.** The testnet has been running for a year. Mainnet launch with a public, real-time dashboard showing active nodes, compute hours delivered, revenue, and verification metrics would be the single biggest credibility signal. Self-reported testnet figures from press releases are not enough.
 2. **Implement governance before or at TGE.** Token holders spending real money on $AI tokens should have governance rights from day one. An elected council "initially mapped to core team members" is not decentralisation. Deploying on-chain governance with community-elected council members, proposal submission, and transparent voting before TGE would demonstrate genuine commitment to decentralisation.
 3. **Publish security audits.** $66.74 million in funding, 90 million testnet transactions, and a public token sale, yet no published audit from a recognised firm. Before mainnet handles real economic value, smart contract and protocol audits are essential. This is a straightforward gap to close with available resources.
+
+## Returns score: 4/10
+
+AI scores 40/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+
+**Token utility (10/20):** There is no live token. The $AI token is planned for April 2026 with intended use cases spanning compute payments, verification staking, Delphi prediction market stakes, governance voting, and a programmatic buy-and-burn mechanism. These are reasonable utility vectors on paper, but none of them can be evaluated in practice because the token does not exist yet. Scoring generously for design intent, but design intent is not utility.
+
+**Value accrual (8/25):** The buy-and-burn mechanism from transaction fees is the primary value accrual path, and it is a sensible design — protocol revenue destroys token supply, creating deflationary pressure proportional to network usage. The problem is obvious: there is no mainnet, no transactions, and therefore no revenue to burn. The mechanism is designed but entirely unproven. Until real compute workloads generate real fees on a live network, this is a whiteboard exercise priced at $473M FDV.
+
+**Supply dynamics (6/20):** Ten billion tokens with 54.6% allocated to insiders (29.6% investors plus 25% team). The 12-month cliff and 24-month linear unlock provide meaningful short-term protection, and locked tokens cannot be staked, which prevents insiders from compounding their position during the lockup. But once the cliff expires around April 2027, two years of continuous insider selling pressure begins. The community's direct access is just 5% of total supply. The 40.4% community treasury sounds generous until you realise the Foundation, which is initially team-aligned, controls it.
+
+**Revenue sustainability (2/20):** Zero revenue. Zero mainnet. Zero live token. The litepaper projected V100-equivalent pricing at $0.40 per hour (80% cheaper than AWS), which would be compelling if it existed. The testnet has trained two million models, but those are 0.5B-1.5B parameter Qwen variants on a free network — not paying customers. Revenue sustainability cannot be assessed for a project that has generated precisely no revenue in nearly six years of existence.
+
+**Liquidity and access (14/15):** This scores high not because liquidity exists — there is no tradeable token — but because the setup for future liquidity is strong. a16z-led Series A, $66.74M total funding, public sale on Sonar clearing at $473M FDV, and the calibre of backers (CoinFund, Protocol Labs, Galaxy) virtually guarantees tier-1 exchange listings at TGE. The 3% public sale via transparent English auction was a fair mechanism for the tokens it covered. When the token launches, access will not be the problem. Whether the price justifies the entry will be.
+
+### Path to improvement
+
+Three changes would materially increase Gensyn's returns score:
+
+1. **Launch mainnet and generate real revenue.** The entire returns case hinges on the buy-and-burn mechanism working with actual transaction fees. Until compute workloads generate revenue on a live network, every tokenomics projection is theoretical. Revenue is the single metric that would transform this score.
+2. **Reduce the insider allocation or increase community access.** 54.6% insider allocation with only 5% direct community access is poor by any standard. Increasing the testnet rewards allocation, adding a broader public sale tranche, or committing to community-directed treasury governance would improve the supply dynamics score materially.
+3. **Demonstrate pricing competitiveness at scale.** The $0.40/hour V100-equivalent claim needs real-world validation. Publishing transparent pricing benchmarks against AWS, Lambda Labs, and competing decentralised compute networks once mainnet launches would establish whether the economic model actually delivers value to compute buyers.

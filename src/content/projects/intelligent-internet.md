@@ -118,3 +118,25 @@ Three changes would materially increase Intelligent Internet's score:
 1. **Launch a testnet.** The single biggest signal that the blockchain vision is real rather than aspirational. A working testnet with Proof-of-Benefit consensus, even with a handful of validators, would demonstrate that the whitepaper design translates to operational code. Until then, the protocol layer is a PDF.
 2. **Publish a funded roadmap with milestones.** No mainnet timeline exists. No disclosed funding exists. A transparent roadmap with funded milestones and verifiable deliverable dates would address the most obvious gap between the ambition and the evidence. Construction projects do not get built without a programme. Neither do blockchains.
 3. **Identify the genesis National Champions.** Twelve validators at genesis is a specific claim. Who are they? What hardware do they have? Where are they located? Publishing even a shortlist with hardware attestation would convert a whitepaper concept into a concrete commitment.
+
+## Returns score: 3/10
+
+FC scores 30/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+
+**Token utility (8/20):** No token exists. The whitepaper describes Foundation Coins as the medium for Proof-of-Benefit consensus, where every minted coin proves useful AI work was performed. Four genesis benefit classes are defined: compute-inference, compute-training, data-curation, and agent-orchestration. The design is intellectually coherent and more purposeful than most token utility models. But it is a design in a PDF, not a functioning token in a live economy. Scoring reflects the quality of the concept with a heavy discount for the fact that none of it has been built.
+
+**Value accrual (6/25):** The value accrual model is entirely conceptual. FC would accrue value through scarcity (21M cap, halving schedule), utility demand (staking for validation, Culture Credit reserve backing), and the Proof-of-Benefit requirement tying minting to useful work. On paper, this is one of the more thoughtful value accrual designs in the space. In practice, there is no blockchain, no consensus mechanism, no validators, and no working implementation of any of these mechanisms. The gap between whitepaper and reality is as wide as it gets.
+
+**Supply dynamics (10/20):** The 21 million hard cap mirroring Bitcoin is the strongest dimension here. No pre-mine is described — coins are minted only through validated work. If implemented as designed, this would be structurally fairer than nearly every token launch in crypto. The halving schedule with 99% circulated within 12 years creates predictable scarcity. The Treasury receiving a programmable share of block rewards is the centralisation vector, with the percentage still undefined. Scored generously for scarcity model design, but the "if implemented" caveat carries significant weight when no code exists.
+
+**Revenue sustainability (0/20):** Zero. No blockchain means no transaction fees. No token means no staking revenue. No marketplace means no trading fees. The AI models and tools are distributed for free under Apache 2.0. II-Medical, II-Agent, and II-Search generate no revenue for the project or potential token holders. This is commendable from an open-source perspective and disastrous from a returns perspective. There is no revenue model, no path to revenue, and no disclosed funding to sustain operations until one materialises.
+
+**Liquidity and access (6/15):** There is no token to buy, sell, or stake. No exchange listing, no DEX pool, no OTC market. The unofficial Solana token using the "II" ticker on CoinSwitch has zero liquidity and is not endorsed by the project. Without disclosed funding, the capital backing that typically signals future exchange listings is absent. When and if FC launches, the Bitcoin-inspired mining model means tokens would need to be earned through validated work rather than purchased, which is philosophically interesting but creates a high barrier to initial access.
+
+### Path to improvement
+
+Three changes would materially increase Intelligent Internet's returns score:
+
+1. **Build the blockchain and launch a token.** Every dimension of this score is hamstrung by the same fundamental problem: nothing exists. A working testnet with Proof-of-Benefit consensus and mineable FC tokens would transform every category from theoretical to assessable. Without a chain, there is nothing to score.
+2. **Establish a revenue model for the AI tools.** Free, open-source AI models are a public good but not a returns proposition. Introducing optional paid tiers, enterprise licensing, or on-chain inference fees that flow to token holders would create a revenue stream. The current model generates goodwill but zero economic value for potential FC holders.
+3. **Secure and disclose funding.** Building a novel L0 blockchain with BFT consensus, sovereign rollups, and a dual-currency AMM requires significant capital. Transparent disclosure of funding sources and runway would signal that the project can survive long enough to deliver on its whitepaper promises.
