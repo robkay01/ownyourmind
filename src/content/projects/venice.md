@@ -5,17 +5,17 @@ category: "inference"
 token: "VVV"
 status: "active"
 freedomScore: 6
-returnsScore: 6.2
+returnsScore: 6.5
 returnsScoreBreakdown:
   tokenUtility: 16
   valueAccrual: 14
-  supplyDynamics: 10
+  supplyDynamics: 13
   revenueSustainability: 10
   liquidityAccess: 12
 returnsScoreEvidence:
   tokenUtility: "Staking for discounted inference. Access to pro features required."
-  valueAccrual: "Burn mechanism for API calls. Growing user base drives demand."
-  supplyDynamics: "Fixed supply. Airdrop launch. But team allocation unclear."
+  valueAccrual: "Monthly revenue buyback burns purchasing VVV on open market. Growing user base drives demand. Magnitude unclear without disclosed revenue."
+  supplyDynamics: "Uncapped supply with emissions minus burns. 42.8% of genesis supply burned. Four emission reductions in 13 months. Deflationary trajectory."
   revenueSustainability: "Privacy-focused inference with real users. Revenue model emerging."
   liquidityAccess: "Good liquidity on Base and major CEX. $50M+ daily volume."
 publishDate: 2025-03-01
@@ -116,9 +116,9 @@ Three changes would materially increase Venice's score:
 2. **Open-source the proxy layer.** The centralised, closed-source proxy is the primary freedom score deduction. Open-sourcing it would not eliminate the centralisation (Venice would still operate the instance), but it would allow independent verification and, eventually, self-hosted alternatives.
 3. **Deploy governance.** Ship a token-weighted voting interface, even for non-binding signal votes. Venice describes governance as a feature of VVV but has not built any of the tooling. Deploying Snapshot or an equivalent would convert a marketing claim into a functional mechanism.
 
-## Returns score: 62/100
+## Returns score: 65/100
 
-VVV scores 62/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+VVV scores 65/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (16/20):** VVV has a well-designed utility loop. Staking gives you pro-rata access to daily inference capacity at zero marginal cost — the more you stake relative to the pool, the more compute you can use. Pro features require either a subscription or staked VVV. DIEM, minted by locking staked VVV, provides perpetual API credit at $1/day per token. This creates genuine lock-up demand from heavy API users. The utility is practical and directly tied to product usage rather than abstract governance rights that nobody exercises.
 

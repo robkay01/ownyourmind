@@ -17,7 +17,7 @@ returnsScoreEvidence:
   valueAccrual: "Fee mechanism exists but centralized service dominates."
   supplyDynamics: "1B cap. Inflationary via staking rewards. Moderate allocation."
   revenueSustainability: "Real product. Growing enterprise interest. Early stage."
-  liquidityAccess: "Tier-2 CEX. Moderate liquidity. <$5M daily volume."
+  liquidityAccess: "Tier-1 CEX listings: Binance, Coinbase, OKX, Kraken, Bybit. 97% below ATH dampens volume and sentiment."
 publishDate: 2025-03-05
 draft: false
 coingeckoId: "pha"

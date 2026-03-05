@@ -5,19 +5,19 @@ category: "platform"
 token: "NEAR"
 status: "active"
 freedomScore: 6
-returnsScore: 6.0
+returnsScore: 6.3
 returnsScoreBreakdown:
   tokenUtility: 16
   valueAccrual: 12
   supplyDynamics: 12
   revenueSustainability: 10
-  liquidityAccess: 10
+  liquidityAccess: 13
 returnsScoreEvidence:
   tokenUtility: "Staking, governance, chain fees. Strong L1 utility."
   valueAccrual: "Fee burn mechanism (70%). But AI value capture unclear."
   supplyDynamics: "No max supply, inflationary. But controlled via burn."
   revenueSustainability: "$115M TVL. Real chain usage. AI pivot is recent."
-  liquidityAccess: "Tier-1 CEX. High liquidity. $100M+ daily volume."
+  liquidityAccess: "Tier-1 CEX listings including Binance, Coinbase, OKX, Kraken, KuCoin. Daily volume exceeding $100M. Institutional-grade liquidity."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "near"
@@ -144,9 +144,9 @@ Three changes would materially increase NEAR Protocol's score:
 2. **Grow TVL relative to market cap.** $114.7 million TVL on a $1.85 billion market cap chain is a 6.2% ratio. For context, Solana's ratio is roughly 3.5x higher. Either incentivise DeFi migration to NEAR, build native financial primitives that leverage chain abstraction, or acknowledge that DeFi depth is not the growth vector. The current figure undercuts the 46 million MAU claim.
 3. **Continue decentralising governance.** The inflation halving vote was a strong start. Extend House of Stake governance to cover treasury allocation, AI product strategy, and Foundation expenditure. The more strategic decisions that flow through veNEAR voting rather than Foundation directives, the higher the governance score. AI-powered voting delegates are an interesting initiative; ship them and demonstrate they increase participation.
 
-## Returns score: 60/100
+## Returns score: 63/100
 
-NEAR scores 60/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+NEAR scores 63/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (16/20):** NEAR has the strongest token utility of any project in this review. It is the native gas token for a proven L1 that has run continuously since October 2020. Staking secures 698 validators. Governance via veNEAR has already produced consequential decisions (the inflation halving vote). Storage staking locks NEAR for on-chain data. Every transaction, every smart contract deployment, every cross-chain Intent burns NEAR through the 70% fee burn mechanism. This is textbook L1 utility — the token is structurally necessary for the chain to function.
 

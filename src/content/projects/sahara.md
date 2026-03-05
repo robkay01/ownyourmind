@@ -5,19 +5,19 @@ category: "data"
 token: "SAHARA"
 status: "active"
 freedomScore: 3
-returnsScore: 4.2
+returnsScore: 4.5
 returnsScoreBreakdown:
   tokenUtility: 12
   valueAccrual: 8
   supplyDynamics: 6
   revenueSustainability: 8
-  liquidityAccess: 8
+  liquidityAccess: 11
 returnsScoreEvidence:
   tokenUtility: "Planned for Sahara Chain. Currently on Ethereum/BNB."
   valueAccrual: "Unclear. Blockchain not operational. Aspirational."
   supplyDynamics: "10B cap. Pausable contract. Insider-heavy."
   revenueSustainability: "Real data labelling business. But not on-chain."
-  liquidityAccess: "Tier-1 CEX (Binance). But 81% below ATH. Weak."
+  liquidityAccess: "Listed on Binance, OKX, KuCoin, Bitget, MEXC, HTX, Upbit, Bithumb. Exceptional exchange coverage. 81% below ATH dampens sentiment."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "sahara-ai"
@@ -137,9 +137,9 @@ Three changes would materially increase Sahara's score:
 2. **Publish a security audit.** $51.5 million raised and zero public audits is an indefensible gap. Commissioning audits from recognised firms (Trail of Bits, OpenZeppelin, Hashlock) for both the smart contracts and the chain itself would demonstrate the security maturity that the funding level implies. This is table stakes, not an advanced requirement.
 3. **Remove the token pause function.** A project promoting AI sovereignty and decentralisation should not have an owner-controlled kill switch on the token. Either renounce the pause capability or transfer it to a timelock controlled by on-chain governance. This single change would improve both censorship resistance and the project's credibility with sovereignty-focused users.
 
-## Returns score: 42/100
+## Returns score: 45/100
 
-SAHARA scores 42/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+SAHARA scores 45/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (12/20):** SAHARA is intended to serve as the native token for Sahara Chain, powering validator staking, data labelling rewards, AI marketplace transactions, and governance. On Ethereum and BNB Chain where it currently lives, the token functions as a standard ERC-20 with transfer and holding capabilities. The planned utility is broad and reasonable — data labelling payments, model licensing fees, and agent development rewards would create genuine demand sinks. The problem is that the blockchain these utilities depend on is not operational. Current token utility is limited to holding and trading on exchanges, with data labelling rewards being the only active demand driver.
 

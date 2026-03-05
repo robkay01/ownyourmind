@@ -5,19 +5,19 @@ category: "data"
 token: "GRASS"
 status: "active"
 freedomScore: 4
-returnsScore: 5.2
+returnsScore: 5.4
 returnsScoreBreakdown:
   tokenUtility: 12
   valueAccrual: 10
   supplyDynamics: 8
   revenueSustainability: 12
-  liquidityAccess: 10
+  liquidityAccess: 12
 returnsScoreEvidence:
   tokenUtility: "Token used for enterprise LCR product. Users earn via bandwidth sharing."
   valueAccrual: "Enterprise demand buys tokens. But foundation controls revenue flows opaquely."
   supplyDynamics: "1B cap. Team/investor allocation significant. Wide airdrop but insider heavy."
   revenueSustainability: "Real enterprise customers (AI companies). Growing revenue."
-  liquidityAccess: "Tier-1 CEX (Binance). Moderate liquidity. $50-100M volume."
+  liquidityAccess: "Listed on Bybit, Gate.io, KuCoin, Kraken, Bitget, Bithumb. Daily volume approximately $49M. Strong retail access."
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "grass"
@@ -140,9 +140,9 @@ Three changes would materially increase Grass's score:
 2. **Ship functional governance.** Launch a governance forum, publish the first proposals, run the first votes. The documentation already describes DAO governance; deliver it. Even modest governance, letting token holders vote on Foundation spending priorities or router selection criteria, would demonstrate the project is serious about decentralisation. Currently it is pure narrative.
 3. **Publish revenue and data transparency.** Disclose aggregate revenue figures, number of enterprise clients, and how Foundation funds are allocated. If GRASS is "the primary vehicle for value accrual" as stated, token holders deserve visibility into what value is being accrued and where it flows. Quarterly transparency reports would be table stakes for a project claiming to be community-owned.
 
-## Returns score: 52/100
+## Returns score: 54/100
 
-GRASS scores 52/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+GRASS scores 54/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (12/20):** GRASS is required for Live Context Retrieval (LCR), the enterprise product where AI models pull real-time web data to supplement prompts. Fiat payments from enterprise clients convert to GRASS, creating buy pressure proportional to usage. Users earn GRASS through bandwidth sharing. Staking to routers yields approximately 7.49% APR. The utility exists but is narrow — the token serves as a settlement layer for data access and a reward mechanism for bandwidth contribution. There is no governance utility in practice (despite documentation claiming it), and the staking mechanism lacks slashing enforcement, which reduces its economic credibility.
 
