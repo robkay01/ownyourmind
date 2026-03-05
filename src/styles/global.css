@@ -716,6 +716,19 @@ a:focus-visible {
   margin-bottom: 20px;
 }
 
+.freedom-breakdown-summary p {
+  margin-bottom: 0.5rem;
+}
+
+.freedom-breakdown-summary p:last-child {
+  margin-bottom: 0;
+}
+
+/* Returns bars: wider gap to match freedom bars (which have evidence dropdowns) */
+.returns-breakdown-bars {
+  gap: 16px;
+}
+
 /* Grade badges */
 .freedom-breakdown-grade-a {
   background-color: rgba(16, 185, 129, 0.15);

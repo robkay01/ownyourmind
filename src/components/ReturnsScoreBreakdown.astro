@@ -1,7 +1,8 @@
 ---
 /**
  * Returns Score breakdown — mirrors FreedomScoreBreakdown layout.
- * Shows 5 dimension bars with scores, grade badge, and methodology link.
+ * Shows 5 dimension bars with scores, grade badge, auto-generated summary,
+ * and methodology link.
  */
 interface Props {
   returnsScore: number;          // 1-10 scale from frontmatter
@@ -26,6 +27,26 @@ const dimensions = breakdown ? [
   { label: 'Revenue sustainability', score: breakdown.revenueSustainability, max: 20 },
   { label: 'Liquidity & access', score: breakdown.liquidityAccess, max: 15 },
 ] : [];
+
+// Auto-generate summary from breakdown data
+function buildSummary(): string | null {
+  if (!breakdown || dimensions.every(d => d.score == null)) return null;
+
+  const scored = dimensions
+    .filter(d => d.score != null)
+    .map(d => ({ ...d, pct: d.score! / d.max }));
+
+  if (scored.length === 0) return null;
+
+  const strongest = scored.reduce((a, b) => b.pct > a.pct ? b : a);
+  const weakest = scored.reduce((a, b) => b.pct < a.pct ? b : a);
+
+  const gradeWord = grade === 'A' ? 'excellent' : grade === 'B' ? 'strong' : grade === 'C' ? 'moderate' : grade === 'D' ? 'below average' : 'weak';
+
+  return `Overall returns potential is ${gradeWord} at ${raw}/100. Strongest dimension: ${strongest.label.toLowerCase()} (${strongest.score}/${strongest.max}). Weakest: ${weakest.label.toLowerCase()} (${weakest.score}/${weakest.max}).`;
+}
+
+const summary = buildSummary();
 
 function barColor(score: number | undefined, max: number): string {
   if (score == null || max === 0) return '#64748B';
@@ -60,9 +81,13 @@ function gradeColor(g: string): string {
     </div>
   </div>
 
+  {summary && (
+    <p class="freedom-breakdown-summary">{summary}</p>
+  )}
+
   <!-- Sub-score bars -->
   {dimensions.length > 0 && (
-    <div class="freedom-breakdown-bars">
+    <div class="freedom-breakdown-bars returns-breakdown-bars">
       {dimensions.map(dim => {
         if (dim.score == null) return null;
         const pct = dim.max > 0 ? (dim.score / dim.max) * 100 : 0;

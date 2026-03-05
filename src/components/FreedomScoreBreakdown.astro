@@ -54,7 +54,23 @@ function gradeColor(grade: string | null | undefined): string {
     </div>
 
     {freedomScore.freedom_summary && (
-      <p class="freedom-breakdown-summary">{freedomScore.freedom_summary}</p>
+      <div class="freedom-breakdown-summary">
+        {freedomScore.freedom_summary
+          .split(/(?<=\.)\s+/)
+          .reduce((acc: string[][], sentence: string) => {
+            const last = acc[acc.length - 1];
+            if (last && last.length < 3) {
+              last.push(sentence);
+            } else {
+              acc.push([sentence]);
+            }
+            return acc;
+          }, [] as string[][])
+          .map((group: string[]) => (
+            <p>{group.join(' ')}</p>
+          ))
+        }
+      </div>
     )}
 
     <!-- Sub-score bars -->
