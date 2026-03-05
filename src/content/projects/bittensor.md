@@ -5,6 +5,13 @@ category: "platform"
 token: "TAO"
 status: "active"
 freedomScore: 6
+returnsScore: 6.8
+returnsScoreBreakdown:
+  tokenUtility: 17
+  valueAccrual: 14
+  supplyDynamics: 18
+  revenueSustainability: 5
+  liquidityAccess: 14
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "bittensor"

@@ -5,6 +5,13 @@ category: "data"
 token: "VANA"
 status: "active"
 freedomScore: 6
+returnsScore: 5.5
+returnsScoreBreakdown:
+  tokenUtility: 14
+  valueAccrual: 12
+  supplyDynamics: 8
+  revenueSustainability: 10
+  liquidityAccess: 11
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "vana"

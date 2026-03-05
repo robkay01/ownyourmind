@@ -5,6 +5,13 @@ category: "agent"
 token: "ELIZAOS"
 status: "active"
 freedomScore: 5
+returnsScore: 2.8
+returnsScoreBreakdown:
+  tokenUtility: 8
+  valueAccrual: 4
+  supplyDynamics: 6
+  revenueSustainability: 2
+  liquidityAccess: 8
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "elizaos"

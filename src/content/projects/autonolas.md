@@ -5,6 +5,13 @@ category: "agent"
 token: "OLAS"
 status: "active"
 freedomScore: 6
+returnsScore: 3.5
+returnsScoreBreakdown:
+  tokenUtility: 14
+  valueAccrual: 6
+  supplyDynamics: 4
+  revenueSustainability: 4
+  liquidityAccess: 7
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "autonolas"

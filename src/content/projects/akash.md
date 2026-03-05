@@ -5,6 +5,13 @@ category: "compute"
 token: "AKT"
 status: "active"
 freedomScore: 7
+returnsScore: 6.5
+returnsScoreBreakdown:
+  tokenUtility: 16
+  valueAccrual: 13
+  supplyDynamics: 12
+  revenueSustainability: 14
+  liquidityAccess: 10
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "akash-network"

@@ -5,6 +5,13 @@ category: "data"
 token: "OCEAN"
 status: "active"
 freedomScore: 6
+returnsScore: 3.8
+returnsScoreBreakdown:
+  tokenUtility: 10
+  valueAccrual: 6
+  supplyDynamics: 6
+  revenueSustainability: 8
+  liquidityAccess: 8
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "ocean-protocol"

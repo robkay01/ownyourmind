@@ -118,17 +118,32 @@ const sections = [
                 </div>
                 <span class="text-xs font-mono text-[var(--color-accent)]">{project.data.token}</span>
               </div>
-              <div class="flex items-center gap-2 mb-2">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs text-[var(--color-text-tertiary)] w-12">Freedom</span>
                 <div class="flex-1 h-1.5 rounded-full bg-[var(--color-bg-primary)]">
                   <div
                     class="h-full rounded-full"
                     style={`width: ${project.data.freedomScore * 10}%; background-color: ${scoreColor(project.data.freedomScore)};`}
                   />
                 </div>
-                <span class="text-sm font-bold font-[var(--font-heading)]" style={`color: ${scoreColor(project.data.freedomScore)};`}>
+                <span class="text-sm font-bold" style={`color: ${scoreColor(project.data.freedomScore)};`}>
                   {project.data.freedomScore}
                 </span>
               </div>
+              {project.data.returnsScore && (
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs text-[var(--color-text-tertiary)] w-12">Returns</span>
+                  <div class="flex-1 h-1.5 rounded-full bg-[var(--color-bg-primary)]">
+                    <div
+                      class="h-full rounded-full"
+                      style={`width: ${project.data.returnsScore * 10}%; background-color: ${scoreColor(project.data.returnsScore)};`}
+                    />
+                  </div>
+                  <span class="text-sm font-bold" style={`color: ${scoreColor(project.data.returnsScore)};`}>
+                    {project.data.returnsScore.toFixed(1)}
+                  </span>
+                </div>
+              )}
               <span class="badge bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border)] text-xs">
                 {project.data.category}
               </span>

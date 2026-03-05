@@ -5,6 +5,13 @@ category: "platform"
 token: "NEAR"
 status: "active"
 freedomScore: 6
+returnsScore: 6.0
+returnsScoreBreakdown:
+  tokenUtility: 16
+  valueAccrual: 12
+  supplyDynamics: 12
+  revenueSustainability: 10
+  liquidityAccess: 10
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "near"

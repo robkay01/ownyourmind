@@ -5,6 +5,13 @@ category: "inference"
 token: "VVV"
 status: "active"
 freedomScore: 6
+returnsScore: 6.2
+returnsScoreBreakdown:
+  tokenUtility: 16
+  valueAccrual: 14
+  supplyDynamics: 10
+  revenueSustainability: 10
+  liquidityAccess: 12
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "venice-token"

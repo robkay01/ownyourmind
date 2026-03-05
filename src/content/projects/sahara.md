@@ -5,6 +5,13 @@ category: "data"
 token: "SAHARA"
 status: "active"
 freedomScore: 3
+returnsScore: 4.2
+returnsScoreBreakdown:
+  tokenUtility: 12
+  valueAccrual: 8
+  supplyDynamics: 6
+  revenueSustainability: 8
+  liquidityAccess: 8
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "sahara-ai"

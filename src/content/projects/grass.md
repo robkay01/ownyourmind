@@ -5,6 +5,13 @@ category: "data"
 token: "GRASS"
 status: "active"
 freedomScore: 4
+returnsScore: 5.2
+returnsScoreBreakdown:
+  tokenUtility: 12
+  valueAccrual: 10
+  supplyDynamics: 8
+  revenueSustainability: 12
+  liquidityAccess: 10
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "grass"

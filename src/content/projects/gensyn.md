@@ -5,6 +5,13 @@ category: "compute"
 token: "AI"
 status: "upcoming"
 freedomScore: 5
+returnsScore: 4.0
+returnsScoreBreakdown:
+  tokenUtility: 10
+  valueAccrual: 8
+  supplyDynamics: 6
+  revenueSustainability: 2
+  liquidityAccess: 14
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "gensyn"

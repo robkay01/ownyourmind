@@ -5,6 +5,13 @@ category: "compute"
 token: "RENDER"
 status: "active"
 freedomScore: 3
+returnsScore: 7.2
+returnsScoreBreakdown:
+  tokenUtility: 14
+  valueAccrual: 18
+  supplyDynamics: 12
+  revenueSustainability: 16
+  liquidityAccess: 12
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "render-token"

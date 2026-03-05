@@ -30,6 +30,10 @@ const marketData = await fetchMarketData(coingeckoIds);
 // Compute stats
 const totalProjects = entries.length;
 const avgFreedomScore = (entries.reduce((sum, e) => sum + e.data.freedomScore, 0) / totalProjects).toFixed(1);
+const returnsEntries = entries.filter(e => e.data.returnsScore != null);
+const avgReturnsScore = returnsEntries.length > 0
+  ? (returnsEntries.reduce((sum, e) => sum + (e.data.returnsScore ?? 0), 0) / returnsEntries.length).toFixed(1)
+  : '--';
 const totalMarketCap = Object.values(marketData).reduce((sum, d) => sum + d.marketCap, 0);
 const categories = [...new Set(entries.map((e) => e.data.category))];
 
@@ -83,6 +87,7 @@ function downsample(data: number[], targetPoints: number): number[] {
   <div class="dashboard-stats">
     <MetricCard value={String(totalProjects)} label="Projects tracked" />
     <MetricCard value={avgFreedomScore} label="Avg freedom score" />
+    <MetricCard value={String(avgReturnsScore)} label="Avg returns score" />
     <MetricCard value={formatMarketCap(totalMarketCap)} label="Total market cap" />
     <MetricCard value={String(categories.length)} label="Categories" />
   </div>
@@ -108,6 +113,9 @@ function downsample(data: number[], targetPoints: number): number[] {
           <th class="sort-header" data-sort="freedom" data-order="desc" aria-sort="descending">
             Freedom<span class="sort-arrow">&#9660;</span>
           </th>
+          <th class="sort-header" data-sort="returns">
+            Returns<span class="sort-arrow"></span>
+          </th>
           <th>Status</th>
           <th>Launch</th>
           <th class="sort-header text-right" data-sort="price">Price</th>
@@ -132,6 +140,7 @@ function downsample(data: number[], targetPoints: number): number[] {
               class="table-row"
               data-category={entry.data.category}
               data-freedom={entry.data.freedomScore}
+              data-returns={entry.data.returnsScore ?? 0}
               data-price={md?.price ?? 0}
               data-mcap={md?.marketCap ?? 0}
               data-fdv={md?.fdv ?? 0}
@@ -163,6 +172,20 @@ function downsample(data: number[], targetPoints: number): number[] {
                     {entry.data.freedomScore}
                   </span>
                 </div>
+              </td>
+              <td>
+                {entry.data.returnsScore ? (
+                  <div class="flex items-center gap-2">
+                    <div class="freedom-bar-container">
+                      <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
+                    </div>
+                    <span class="text-sm font-bold whitespace-nowrap" style={`color: ${scoreColor(entry.data.returnsScore)};`}>
+                      {entry.data.returnsScore.toFixed(1)}
+                    </span>
+                  </div>
+                ) : (
+                  <span class="text-[var(--color-text-tertiary)] text-sm">--</span>
+                )}
               </td>
               <td>
                 <span class:list={['badge', entry.data.status === 'active' ? 'badge-active' : entry.data.status === 'upcoming' ? 'badge-upcoming' : 'badge-dormant']}>
@@ -240,12 +263,28 @@ function downsample(data: number[], targetPoints: number): number[] {
             </span>
           </div>
 
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-xs text-[var(--color-text-tertiary)]">Freedom</span>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs text-[var(--color-text-tertiary)] w-14">Freedom</span>
             <div class="freedom-bar-container flex-1">
               <div class="freedom-bar" style={`width: ${entry.data.freedomScore * 10}%; background-color: ${sc};`} />
             </div>
             <span class="text-sm font-bold" style={`color: ${sc};`}>{entry.data.freedomScore}/10</span>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs text-[var(--color-text-tertiary)] w-14">Returns</span>
+            {entry.data.returnsScore ? (
+              <>
+                <div class="freedom-bar-container flex-1">
+                  <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
+                </div>
+                <span class="text-sm font-bold" style={`color: ${scoreColor(entry.data.returnsScore)};`}>{entry.data.returnsScore.toFixed(1)}/10</span>
+              </>
+            ) : (
+              <>
+                <div class="freedom-bar-container flex-1" />
+                <span class="text-sm text-[var(--color-text-tertiary)]">--</span>
+              </>
+            )}
           </div>
 
           {md && (

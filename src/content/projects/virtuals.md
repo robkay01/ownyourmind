@@ -5,6 +5,13 @@ category: "agent"
 token: "VIRTUAL"
 status: "active"
 freedomScore: 4
+returnsScore: 5.8
+returnsScoreBreakdown:
+  tokenUtility: 16
+  valueAccrual: 12
+  supplyDynamics: 8
+  revenueSustainability: 14
+  liquidityAccess: 8
 publishDate: 2025-03-03
 draft: false
 coingeckoId: "virtuals-protocol"

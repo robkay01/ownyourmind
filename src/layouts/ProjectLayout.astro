@@ -20,6 +20,14 @@ interface Props {
   token: string;
   status: string;
   freedomScore: number;
+  returnsScore?: number;
+  returnsScoreBreakdown?: {
+    tokenUtility?: number;
+    valueAccrual?: number;
+    supplyDynamics?: number;
+    revenueSustainability?: number;
+    liquidityAccess?: number;
+  };
   publishDate: Date;
   updatedDate?: Date;
   coingeckoId?: string;
@@ -29,7 +37,7 @@ interface Props {
   slug: string;
 }
 
-const { title, description, category, token, status, freedomScore, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
+const { title, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -41,6 +49,9 @@ const statusColors: Record<string, string> = {
 };
 
 const scoreColor = freedomScore >= 7 ? '#10B981' : freedomScore >= 4 ? '#F59E0B' : '#EF4444';
+const returnsColor = returnsScore != null ? (returnsScore >= 7 ? '#10B981' : returnsScore >= 4 ? '#F59E0B' : '#EF4444') : null;
+const returnsRaw = returnsScore != null ? Math.round(returnsScore * 10) : null;
+const returnsGrade = returnsRaw != null ? (returnsRaw >= 90 ? 'A' : returnsRaw >= 75 ? 'B' : returnsRaw >= 60 ? 'C' : returnsRaw >= 45 ? 'D' : 'F') : null;
 
 // Fetch market data if coingeckoId exists
 let market: { price: number; marketCap: number; fdv: number; priceChange24h: number } | null = null;
@@ -252,6 +263,23 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
           <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${scoreColor};`}>
             {freedomScore}/10
           </span>
+        </div>
+      )}
+
+      <!-- Returns Score -->
+      {returnsScore != null && (
+        <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] mt-3">
+          <span class="text-sm font-medium text-[var(--color-text-secondary)]">Returns Score</span>
+          <div class="flex-1 h-2 rounded-full bg-[var(--color-bg-primary)]">
+            <div
+              class="h-full rounded-full transition-all"
+              style={`width: ${returnsScore * 10}%; background-color: ${returnsColor};`}
+            />
+          </div>
+          <span class="text-lg font-bold font-[var(--font-heading)]" style={`color: ${returnsColor};`}>
+            {returnsScore.toFixed(1)}/10
+          </span>
+          <a href="/resources/returns-score-methodology/" class="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] ml-1" title="Returns Score Methodology">?</a>
         </div>
       )}
 

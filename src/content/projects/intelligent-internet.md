@@ -5,6 +5,13 @@ category: "platform"
 token: "FC"
 status: "upcoming"
 freedomScore: 4
+returnsScore: 3.0
+returnsScoreBreakdown:
+  tokenUtility: 8
+  valueAccrual: 6
+  supplyDynamics: 10
+  revenueSustainability: 0
+  liquidityAccess: 6
 publishDate: 2025-03-02
 draft: false
 coingeckoId: ""

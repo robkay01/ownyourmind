@@ -5,6 +5,13 @@ category: "agent"
 token: "FET"
 status: "active"
 freedomScore: 5
+returnsScore: 5.5
+returnsScoreBreakdown:
+  tokenUtility: 14
+  valueAccrual: 10
+  supplyDynamics: 10
+  revenueSustainability: 8
+  liquidityAccess: 13
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "fetch-ai"

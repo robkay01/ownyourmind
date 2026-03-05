@@ -5,6 +5,13 @@ category: "compute"
 token: "IO"
 status: "active"
 freedomScore: 4
+returnsScore: 4.8
+returnsScoreBreakdown:
+  tokenUtility: 12
+  valueAccrual: 8
+  supplyDynamics: 8
+  revenueSustainability: 12
+  liquidityAccess: 8
 publishDate: 2025-03-02
 draft: false
 coingeckoId: "io-net"

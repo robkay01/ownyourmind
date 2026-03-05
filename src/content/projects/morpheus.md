@@ -5,6 +5,13 @@ category: "platform"
 token: "MOR"
 status: "active"
 freedomScore: 8
+returnsScore: 5.8
+returnsScoreBreakdown:
+  tokenUtility: 18
+  valueAccrual: 14
+  supplyDynamics: 16
+  revenueSustainability: 6
+  liquidityAccess: 4
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "morpheusai"

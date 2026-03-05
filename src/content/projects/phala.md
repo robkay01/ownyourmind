@@ -5,6 +5,13 @@ category: "compute"
 token: "PHA"
 status: "active"
 freedomScore: 6
+returnsScore: 5.0
+returnsScoreBreakdown:
+  tokenUtility: 14
+  valueAccrual: 10
+  supplyDynamics: 10
+  revenueSustainability: 8
+  liquidityAccess: 8
 publishDate: 2025-03-05
 draft: false
 coingeckoId: "pha"
