@@ -1,0 +1,668 @@
+{
+  "meta": {
+    "project_id": "nillion",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "NillionNetwork",
+      "github_primary_repo": "nilchain",
+      "coingecko_id": "nillion",
+      "discord_server_id": null,
+      "telegram_username": "nillionofficialannouncements",
+      "x_handle": "naborprotocol",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No published security audit reports found from recognised auditing firms. CertiK Skynet page exists but returned 403 — audit details not extractable.",
+      "Staking APY not confirmed — third-party sources estimate up to 5% but official documentation does not state a figure.",
+      "DeFiLlama does not track Nillion — no independent TVL or protocol revenue data available.",
+      "Network usage metrics (transactions, active users, compute operations) not publicly reported.",
+      "Revenue figures not available — no evidence of protocol revenue from paying customers yet.",
+      "HuggingFace presence checked — organisation exists but 0 public models, datasets, or spaces.",
+      "Exact Discord and Telegram member counts from web search results, not directly verified.",
+      "Multiple token contract addresses found on Ethereum — unclear which is canonical NIL token. One at 0xc67dfae5ad1189df7e2fcd681005602f919f9ab0 found on Etherscan, another at 0xb4a97906466ba60d97682c37ced57eaa0d123ba1 on BitQuery. Native token is on nilChain (Cosmos-based).",
+      "Vesting schedule details for Core Contributors and Early Backers not fully documented.",
+      "Ethereum bridge planned for February 2026 — may change token accessibility significantly."
+    ]
+  },
+
+  "identity": {
+    "name": "Nillion",
+    "ticker": "NIL",
+    "category": "Data & Privacy",
+    "subcategory": "Blind Computation",
+    "tagline": "Humanity's first blind computer",
+    "one_liner": "Blind computation network using MPC, homomorphic encryption, and TEEs for private data storage, computation, and AI inference.",
+    "website": "https://nillion.com",
+    "documentation_url": "https://docs.nillion.com",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/NillionNetwork",
+    "chain": "nilChain (Cosmos-based) / Ethereum (bridge planned)",
+    "launch_date": "2025-03-24",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Alex Page",
+        "role": "CEO & Co-Founder",
+        "background": "Former Goldman Sachs, founded multiple companies. Background in finance and technology.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Andrew Masanto",
+        "role": "CSO & Co-Founder",
+        "background": "Co-founded Hedera Hashgraph (HBAR). Previously at Linklaters (law) and Rothschild & Co (banking). Strategy and partnerships.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Conrad Whelan",
+        "role": "CTO",
+        "background": "Founding engineer at Uber. Deep engineering background in distributed systems.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Slava Rubin",
+        "role": "CBO (Chief Business Officer)",
+        "background": "Founder and CEO of Indiegogo. Extensive experience in crowdfunding and marketplace platforms.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Dr. Miguel de Vega",
+        "role": "Chief Scientist",
+        "background": "30+ patents in cryptography and privacy-enhancing technologies. Academic background in applied cryptography.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Mark McDermott",
+        "role": "COO",
+        "background": "Former Nike executive. Operations and scaling experience.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 50,
+    "entity_name": "Nillion Labs",
+    "entity_jurisdiction": "Unknown",
+    "notable_backers": [
+      "Hack VC",
+      "Distributed Global",
+      "HashKey Capital",
+      "Arthur Hayes (Maelstrom)",
+      "Meltem Demirors"
+    ],
+    "funding_raised": {
+      "total_usd": 65000000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": 20000000,
+          "date": "2022-12-12",
+          "lead_investor": null,
+          "notes": "Early seed round, details partially hidden on CryptoRank"
+        },
+        {
+          "round_type": "ICO",
+          "amount_usd": 20000000,
+          "date": "2024-06-19",
+          "lead_investor": "CoinList",
+          "valuation_usd": 400000000,
+          "notes": "CoinList sale at $0.40 per NIL. 50M tokens sold. Current ROI: 0.13x (-86.9%)"
+        },
+        {
+          "round_type": "Series A",
+          "amount_usd": 25000000,
+          "date": "2024-10-30",
+          "lead_investor": "Hack VC",
+          "notes": "Co-led by Hack VC and Distributed Global. Notable backers include HashKey Capital, Arthur Hayes, Meltem Demirors."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Dual-layer architecture: nilChain (Cosmos-based coordination layer for payments, staking, governance) and Petnet (orchestration layer for blind computation). Three core modules: nilDB (encrypted data storage), nilVM (blind computation using MPC and homomorphic encryption), and nilAI (private LLM inference using TEEs). Nodes perform multi-party computation without seeing the underlying data.",
+    "consensus_mechanism": "Proof of Stake (Cosmos-based nilChain for coordination). Petnet uses cryptographic protocols (MPC, HE) for computation integrity rather than blockchain consensus.",
+    "what_is_onchain": "Staking, governance, payment coordination for blind compute operations (on nilChain). Token transfers on Cosmos. ERC-20 bridge to Ethereum planned.",
+    "what_is_offchain": "All blind computation execution via MPC/HE/TEEs. Data storage in nilDB. AI inference in nilAI TEE environments. Petnet orchestration.",
+    "key_dependencies": [
+      "Cosmos SDK (nilChain)",
+      "NVIDIA TEE hardware (for nilAI)",
+      "MPC protocols",
+      "Homomorphic encryption libraries"
+    ],
+    "smart_contract_languages": ["Go (Cosmos)", "Rust", "TypeScript", "Python"],
+    "open_source": true,
+    "license": "Mixed — various repos have different licenses",
+    "github_metrics": {
+      "total_repos": 102,
+      "primary_repo_url": "https://github.com/NillionNetwork",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-05",
+      "stars": 1141,
+      "forks": null,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "NIL",
+    "ticker": "NIL",
+    "token_standard": "Cosmos native (nilChain) / ERC-20 (Ethereum bridge planned)",
+    "token_type": "utility",
+    "token_utility": [
+      "Payment for blind computation and storage services",
+      "Staking for PoS network security (validators)",
+      "Governance participation on nilChain",
+      "Node operation requirement"
+    ],
+    "supply": {
+      "max_supply": null,
+      "total_supply": 1000000000,
+      "circulating_supply": 314464583,
+      "circulating_supply_date": "2026-03-06",
+      "circulating_percentage": 31.45
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Ecosystem & R&D",
+          "percentage": 26.5,
+          "vesting_schedule": "Cliff vesting with lump-sum releases",
+          "cliff": "Not fully documented",
+          "notes": "Validator incentives, developer rewards, network expansion"
+        },
+        {
+          "category": "Early Backers",
+          "percentage": 21.0,
+          "vesting_schedule": "Not fully documented",
+          "cliff": "Not documented",
+          "notes": "Pre-seed, seed, and 2024 funding round participants"
+        },
+        {
+          "category": "Core Contributors",
+          "percentage": 20.0,
+          "vesting_schedule": "Not fully documented",
+          "cliff": "Not documented",
+          "notes": "Team and advisors from Nillion Labs"
+        },
+        {
+          "category": "Community",
+          "percentage": 16.5,
+          "vesting_schedule": "Distributed through airdrops and incentive programs",
+          "cliff": "None",
+          "notes": "Includes community rounds and grants. Next unlock March 24, 2026: 114.5M tokens"
+        },
+        {
+          "category": "Protocol Development",
+          "percentage": 10.0,
+          "vesting_schedule": "Not documented",
+          "cliff": "Not documented",
+          "notes": "Ongoing research and protocol development"
+        },
+        {
+          "category": "Public Sale (CoinList)",
+          "percentage": 5.0,
+          "vesting_schedule": "Capped: 5% at listing, 6-month linear. Uncapped: 25% on March 13 2025, 75% monthly over 24 months",
+          "cliff": "None for capped; varies for uncapped",
+          "notes": "50M tokens at $0.40 each ($20M raised)"
+        },
+        {
+          "category": "Binance Launchpool",
+          "percentage": 3.5,
+          "vesting_schedule": "100% at TGE",
+          "cliff": "None",
+          "notes": "35M tokens distributed via Binance Launchpool"
+        },
+        {
+          "category": "Liquidity",
+          "percentage": 2.5,
+          "vesting_schedule": "At TGE",
+          "cliff": "None",
+          "notes": "Market-making and exchange liquidity"
+        }
+      ],
+      "distribution_method": "CoinList ICO + Binance Launchpool + airdrop + investor rounds"
+    },
+    "emissions": {
+      "model": "inflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": 1.0,
+      "halving_schedule": "None — governance-controlled inflation rate (~1% estimated)",
+      "next_major_emission_event": "Community unlock",
+      "next_event_date": "2026-03-24",
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "PoS validator staking (delegated)",
+      "minimum_stake": null,
+      "lock_up_period": "14-day unbonding period",
+      "current_apy_nominal": 5.0,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "14-day unbonding period during which tokens are illiquid",
+        "Validator slashing risk (standard Cosmos PoS)",
+        "APY estimated at ~5% but not officially confirmed by project"
+      ],
+      "slashing_conditions": "Standard Cosmos PoS slashing (double-signing, downtime)"
+    },
+    "market_data": {
+      "price_usd": 0.053,
+      "market_cap_usd": 16800000,
+      "fully_diluted_valuation_usd": 52100000,
+      "twenty_four_hour_volume_usd": 5300000,
+      "all_time_high_usd": 1.15,
+      "all_time_high_date": "2025-03-24",
+      "all_time_low_usd": 0.037,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Binance",
+        "Coinbase",
+        "Bybit",
+        "Gate.io",
+        "MEXC",
+        "HTX",
+        "Bitget"
+      ],
+      "data_snapshot_date": "2026-03-06"
+    },
+    "token_model_classification": "Utility token for blind computation payments, PoS staking, and governance. Inflationary supply with ~1% annual inflation governed by network governance.",
+    "tokenomics_notes": "Token launched at $0.40 on CoinList and is now trading at ~$0.05 — a 87% decline. 31.45% of initial supply circulating. Insider allocation (Core Contributors 20% + Early Backers 21% = 41%) is substantial. No max supply — inflationary by design, governance-controlled. Major unlock of 114.5M tokens scheduled for March 24, 2026. FDV of $52M is low relative to $65M raised, suggesting investors are underwater."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate NIL tokens to validators on nilChain to secure the network and earn staking rewards. Standard Cosmos PoS delegation.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "~5% APY (estimated, not officially confirmed)",
+        "barriers_to_entry": [
+          "14-day unbonding period",
+          "Need to select a validator",
+          "Token currently on Cosmos chain — Ethereum bridge planned"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.nillion.com"
+      },
+      {
+        "type": "node_operation",
+        "description": "Run a validator node on nilChain (Cosmos-based) or operate a Petnet node for blind computation services.",
+        "minimum_hardware": "Standard server requirements for Cosmos validator",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Validator commission + staking rewards",
+        "barriers_to_entry": [
+          "Technical expertise in Cosmos node operation",
+          "Stake delegation requirement",
+          "Hardware and uptime requirements"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.nillion.com"
+      },
+      {
+        "type": "building",
+        "description": "Build privacy-preserving applications using Nillion's SDKs (Python, TypeScript, Rust). nilDB for encrypted storage, nilVM for blind computation, nilAI for private AI inference.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Ecosystem grants available",
+        "barriers_to_entry": [
+          "Understanding of MPC/HE/TEE concepts",
+          "SDK learning curve",
+          "Mainnet still in early phase"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.nillion.com"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "Active — 102 public repos, multiple SDKs, GitHub Discussions",
+      "grants_program": true,
+      "grants_url": "https://nillion.com"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "None documented — pre-revenue",
+    "metrics_source": "No public usage metrics available. Not listed on DeFiLlama or Token Terminal.",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "Nillion mainnet launched March 24, 2025 (Phase 0 alpha). Applications built on network include nilGPT (private AI chatbot), LouisAI, Tickr, MonadicDNA, and Stadium Science. No quantified usage metrics are publicly reported. The network is in early mainnet phase — revenue generation from blind compute services has not been demonstrated at scale."
+  },
+
+  "community": {
+    "discord_members": 98654,
+    "telegram_members": 24300,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": "Unknown",
+    "governance_model": "Cosmos-based on-chain governance via nilChain. Standard Cosmos governance module for proposals and voting. Governance controls inflation rate and protocol parameters.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.com/invite/nillionnetwork (~99K members)",
+      "Telegram: @nillionofficialannouncements (~24K members)",
+      "X: @naborprotocol",
+      "GitHub Discussions: github.com/orgs/NillionNetwork/discussions"
+    ],
+    "sentiment_summary": "Active developer community with 102 public GitHub repos. Strong academic/cryptography credibility via team backgrounds. Community engaged through testnet participation and airdrops. Price decline from $1.15 ATH to $0.05 has tempered retail enthusiasm.",
+    "community_notes": "Discord membership (~99K) is healthy for a project of this market cap. GitHub activity is genuine — repos in Rust, Python, TypeScript, Go with regular commits. Developer documentation is actively maintained. Community is more technically oriented than many DeAI projects."
+  },
+
+  "freedom_score": {
+    "total_score": 56,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 11,
+        "max": 20,
+        "evidence": "Dual-layer architecture: nilChain (Cosmos PoS with distributed validators) and Petnet (computation orchestration). Validator set is permissionless via Cosmos PoS. However, the Petnet computation layer is still in early phase and the degree of node decentralisation for blind compute is unclear. TEE-based nilAI depends on hardware attestation from Intel/NVIDIA. Mainnet is alpha phase — real decentralisation is aspirational rather than proven at scale."
+      },
+      "governance_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Standard Cosmos governance module enables on-chain proposals and voting. Governance controls inflation rate and protocol parameters. This is a meaningful governance mechanism compared to projects with no governance at all. However, with 41% insider allocation (Core Contributors + Early Backers), governance voting power is concentrated. Early phase means governance participation data is limited."
+      },
+      "token_distribution_fairness": {
+        "score": 6,
+        "max": 15,
+        "evidence": "41% allocated to insiders (20% Core Contributors + 21% Early Backers). Community allocation is 16.5% plus 3.5% Binance Launchpool = 20% broadly accessible. Public sale was 5% at $0.40 — investors who participated at ICO are down ~87%. Ecosystem & R&D (26.5%) and Protocol Development (10%) are controlled by the team. Only 31.45% circulating means significant overhang from insider unlocks."
+      },
+      "censorship_resistance": {
+        "score": 10,
+        "max": 15,
+        "evidence": "MPC-based blind computation is inherently censorship-resistant — nodes process data without seeing it. nilChain is permissionless Cosmos PoS. The cryptographic architecture (MPC + HE + TEEs) is designed so no single party can censor or inspect computation. However, nilAI's TEE dependency creates hardware vendor risk (Intel/NVIDIA attestation). Real censorship resistance depends on the degree of Petnet decentralisation, which is unproven at scale."
+      },
+      "data_sovereignty": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Data sovereignty is Nillion's core thesis. MPC ensures data is split across nodes — no single node sees the complete data. Homomorphic encryption enables computation on encrypted data. nilDB stores encrypted data with permissioned access. nilAI runs LLM inference inside TEEs. This is one of the strongest data sovereignty architectures in DeAI. Score limited because production-scale privacy guarantees are not yet independently verified and TEE trust depends on hardware vendors."
+      },
+      "open_source_transparency": {
+        "score": 7,
+        "max": 15,
+        "evidence": "102 public GitHub repositories covering SDKs, documentation, nilchain, nilAI, nilDB, and developer tools. ~1,141 total stars across repos. Active development with commits as recent as March 2026. Key repos (nilchain, nilAI, nildb) are public. However, some core cryptographic components may not be fully open-sourced. No published security audits found. Score reflects genuine open-source effort but with gaps in audit transparency."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "Nillion has a strong theoretical foundation for privacy and sovereignty — MPC, homomorphic encryption, and TEEs are the right tools for blind computation. The open-source footprint is genuine with 102 public repos. Cosmos-based governance provides real on-chain voting. However, the network is in early alpha mainnet with unproven decentralisation at scale, 41% insider token allocation concentrates governance power, and no published security audits create a trust gap. Freedom Score 56/100 (D) reflects a project with the right architecture for sovereignty but still early in proving it works in production."
+  },
+
+  "returns_score": {
+    "total_score": 46,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "NIL is used for blind compute payments, PoS staking (validator security), and on-chain governance. Token is structurally required for network operation — validators must stake, users must pay in NIL. Cosmos governance gives holders real voting power. Multiple genuine utilities but mainnet is early phase so actual usage volume is minimal."
+      },
+      "value_accrual": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Staking rewards come from inflation (~1% annually estimated), not protocol revenue. No fee distribution to token holders. No buy-and-burn mechanism. No documented revenue sharing. Value accrual is indirect — token demand comes from compute payment requirement and staking. In theory, more blind compute usage = more NIL demand, but this is aspirational with no revenue demonstrated yet."
+      },
+      "supply_dynamics": {
+        "score": 7,
+        "max": 20,
+        "evidence": "No max supply — inflationary by design (~1% annual governance-controlled). Only 31.45% circulating with significant unlocks ahead (114.5M tokens on March 24, 2026). 41% insider allocation (Core Contributors + Early Backers) creates substantial sell pressure as vesting completes. No burn mechanism. FDV ($52M) vs market cap ($16.8M) = 3.1x ratio. Token is down 87% from ICO price and 95% from ATH, suggesting existing holders have strong incentive to sell on any recovery."
+      },
+      "revenue_sustainability": {
+        "score": 7,
+        "max": 25,
+        "evidence": "No demonstrated protocol revenue. Mainnet launched March 2025 in alpha phase. Applications exist (nilGPT, LouisAI, Tickr) but no usage metrics or revenue figures are published. Not on DeFiLlama or Token Terminal. The blind compute market is nascent — there are no proven paying customers at scale for privacy-preserving AI inference. Score reflects functional infrastructure with zero revenue evidence."
+      },
+      "liquidity_access": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Listed on Binance and Coinbase — tier-1 exchanges. Also on Bybit, Gate.io, MEXC, HTX, Bitget. Daily volume ~$5.3M. Tier-1 listings provide strong access for most holders. However, market cap is only $16.8M, volume is in the $1-10M range rather than >$10M, and the token is currently on Cosmos chain with Ethereum bridge planned for 2026 which limits DeFi composability. Score reflects excellent exchange access tempered by moderate volume depth."
+      }
+    },
+    "returns_grade": "D",
+    "risk_flags": ["early_stage", "no_revenue", "insider_heavy"],
+    "returns_summary": "Nillion has strong technical foundations and tier-1 exchange listings but zero demonstrated revenue, heavy insider allocation, significant token overhang, and an 87% decline from ICO price. The blind compute thesis is compelling but entirely pre-revenue. Returns Score 46/100 (D) reflects a project where the investment case rests entirely on future adoption of a technology that has not yet been commercially validated. Tier-1 exchange listings provide unusual liquidity access for an early-stage project."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Strong team — founding engineer of Uber (CTO), co-founder of Hedera (CSO), founder of Indiegogo (CBO), ex-Goldman Sachs (CEO)",
+      "Genuine privacy technology — MPC, homomorphic encryption, and TEEs combined for blind computation",
+      "102 public GitHub repos with active development across multiple SDKs",
+      "Tier-1 exchange listings (Binance, Coinbase) unusual for a project this early",
+      "Cosmos-based governance with real on-chain voting capability",
+      "Multiple applications building on network (nilGPT, LouisAI, Tickr, MonadicDNA, Stadium Science)"
+    ],
+    "what_is_hype": [
+      "'Humanity's first blind computer' — marketing claim. MPC and HE have been researched for decades. Nillion's innovation is the specific architecture, not the concept.",
+      "No usage metrics published despite mainnet being live for nearly a year",
+      "No revenue data available — the commercial viability of blind compute at scale is unproven",
+      "FDV of $52M against $65M raised means investors are collectively underwater",
+      "Phase 0 alpha mainnet — many features are roadmap items, not production capabilities"
+    ],
+    "key_risks": [
+      "No revenue — the entire investment case is pre-revenue speculation on future blind compute adoption",
+      "Token down 87% from ICO price and 95% from ATH — existing holders have strong sell pressure",
+      "41% insider allocation with unclear vesting schedules creates significant overhang",
+      "114.5M token unlock on March 24, 2026 (~36% of current circulating supply)",
+      "No published security audits for a project handling encrypted computation",
+      "TEE dependency creates hardware vendor risk (Intel/NVIDIA trust assumptions)",
+      "Blind compute market is nascent — unclear if demand exists at scale beyond research use cases",
+      "Competition from Phala Network, Oasis Network, and Secret Network in privacy compute"
+    ],
+    "competitive_advantages": [
+      "Team pedigree — Uber, Hedera, Indiegogo, Goldman Sachs founders",
+      "Multi-PET approach (MPC + HE + TEEs) provides defence in depth vs single-technology approaches",
+      "nilAI for private LLM inference is a timely product given AI privacy concerns",
+      "Tier-1 exchange listings provide liquidity access most early-stage projects lack",
+      "Cosmos-based architecture enables cross-chain interoperability via IBC"
+    ],
+    "competitive_disadvantages": [
+      "No revenue vs Phala which has demonstrated privacy compute revenue",
+      "Very low market cap ($16.8M) despite $65M raised — signals market scepticism",
+      "Alpha mainnet vs competitors with production networks",
+      "Privacy compute is slow and expensive — unclear if performance is viable for real-time AI inference at scale",
+      "No published audits vs competitors like Oasis which have had multiple security reviews"
+    ],
+    "comparable_projects": [
+      "Phala Network (PHA)",
+      "Oasis Network (ROSE)",
+      "Secret Network (SCRT)",
+      "Venice (VVV)"
+    ],
+    "outlook": "Nillion's thesis — that AI needs privacy-preserving computation — is correct and increasingly relevant. The team is world-class, the technology is real, and tier-1 exchange listings provide unusual access for an early-stage project. But the investment case is entirely forward-looking. Zero revenue, heavy insider allocation, a token 87% below ICO price, and alpha-stage mainnet mean this is a high-conviction, high-risk position. The March 2026 token unlock and Ethereum bridge are near-term catalysts that could go either direction. For sovereignty seekers, the MPC + HE + TEE architecture is one of the strongest privacy foundations in DeAI — but it needs to prove it works at production scale.",
+    "overall_assessment": "Right thesis, right team, wrong time for returns. Strong sovereignty architecture in early phase. Quadrant B — high freedom potential, unproven economics."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "url": "https://docs.nillion.com",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Nillion official documentation — architecture, blind compute modules, developer guides"
+    },
+    {
+      "id": "S002",
+      "url": "https://nillion.com",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Nillion official website — product overview, team, roadmap"
+    },
+    {
+      "id": "S003",
+      "url": "https://github.com/NillionNetwork",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "NillionNetwork GitHub org — 102 public repos, 1141 total stars, active development"
+    },
+    {
+      "id": "S004",
+      "url": "https://nillion.com/news/nillion-alpha-mainnet-is-live/",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Alpha mainnet launch announcement — March 24, 2025"
+    },
+    {
+      "id": "S005",
+      "url": "https://nillion.com/news/nillions-tech-roadmap-2025-advancing-the-blind-computer/",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "2025 technical roadmap — Phase 0 mainnet details, nilDB, nilVM, nilAI modules"
+    },
+    {
+      "id": "S006",
+      "url": "https://etherscan.io/token/0xc67dfae5ad1189df7e2fcd681005602f919f9ab0",
+      "type": "block_explorer",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "NIL token tracker on Etherscan — supply data, holder count"
+    },
+    {
+      "id": "S007",
+      "url": "https://www.coingecko.com/en/coins/nillion",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinGecko — NIL price, market cap, volume, exchange listings"
+    },
+    {
+      "id": "S008",
+      "url": "https://coinmarketcap.com/currencies/nillion/",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinMarketCap — NIL market data, ranking #735, supply metrics"
+    },
+    {
+      "id": "S009",
+      "url": "https://cryptorank.io/ico/nillion",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CryptoRank — funding rounds, ICO details ($20M at $0.40), token allocation, vesting schedules"
+    },
+    {
+      "id": "S010",
+      "url": "https://tokenomist.ai/nillion",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Tokenomist — token distribution, unlock schedule, next unlock March 24 2026 (114.5M NIL)"
+    },
+    {
+      "id": "S011",
+      "url": "https://defillama.com",
+      "type": "defi_analytics",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "DeFiLlama — Nillion NOT listed. No independent TVL or protocol revenue data."
+    },
+    {
+      "id": "S012",
+      "url": "https://skynet.certik.com/projects/nillion",
+      "type": "audit",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CertiK Skynet — Nillion page exists but returned 403. Audit details not extractable."
+    },
+    {
+      "id": "S013",
+      "url": "https://huggingface.co/nillion",
+      "type": "ai_platform",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "HuggingFace — Nillion org exists but 0 public models, datasets, or spaces"
+    },
+    {
+      "id": "S014",
+      "url": "https://www.coindesk.com/markets/2025/03/25/nillion-s-nil-dips-12-after-debut-analyst-believes-network-s-blind-computing-holds-promise-for-data-privacy-ai/",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "CoinDesk — NIL token launch coverage, analyst perspective on blind computing"
+    },
+    {
+      "id": "S015",
+      "url": "https://siliconangle.com/2024/10/30/data-privacy-focused-nillion-network-raises-25m-expand-decentralized-solutions/",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "SiliconAngle — $25M funding round coverage (October 2024)"
+    },
+    {
+      "id": "S016",
+      "url": "https://discord.com/invite/nillionnetwork",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Nillion Discord — ~99K members"
+    },
+    {
+      "id": "S017",
+      "url": "https://t.me/nillionofficialannouncements",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Nillion Telegram announcements — ~24K members"
+    },
+    {
+      "id": "S018",
+      "url": "https://www.bitget.com/news/detail/12560604653830",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Bitget — NIL tokenomics overview, 1B total supply, allocation breakdown"
+    },
+    {
+      "id": "S019",
+      "url": "https://chorus.one/articles/nillion-redefining-data-privacy-in-the-age-of-ai",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Chorus One — Nillion architecture overview, staking details"
+    },
+    {
+      "id": "S020",
+      "url": "https://www.chaincatcher.com/en/article/2173480",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "ChainCatcher — NIL tokenomics announcement, initial circulation 19.52%"
+    }
+  ]
+}
