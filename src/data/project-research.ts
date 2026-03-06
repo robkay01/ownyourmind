@@ -521,7 +521,7 @@ export interface MetricsSnapshot {
   /** Date the snapshot was taken: YYYY-MM-DD */
   date: string;
   /** What triggered this snapshot */
-  source: 'github-refresh' | 'manual-quarterly' | 'manual';
+  source: 'github-refresh' | 'manual-quarterly' | 'manual' | 'backfill' | 'community-refresh';
   stars?: number | null;
   forks?: number | null;
   open_issues?: number | null;
@@ -531,6 +531,8 @@ export interface MetricsSnapshot {
   discord_members?: number | null;
   telegram_members?: number | null;
   x_followers?: number | null;
+  /** Weekly commit counts (most recent 52 weeks, index 0 = oldest) */
+  weekly_commits?: number[] | null;
 }
 
 // --- Top-level record ---

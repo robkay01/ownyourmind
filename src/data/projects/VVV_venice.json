@@ -1072,5 +1072,20 @@
       "reliability_notes": "Tier 3 analysis."
     }
   ],
-  "metrics_history": []
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "contributors": 30,
+      "total_commits": 274,
+      "total_repos": 11,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 53200,
+      "weekly_commits": null
+    }
+  ]
 }

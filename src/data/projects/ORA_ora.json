@@ -26,7 +26,6 @@
       "HuggingFace profile exists but has 0 public models and 0 datasets."
     ]
   },
-
   "identity": {
     "name": "Ora Protocol",
     "ticker": "ORA",
@@ -43,7 +42,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -107,7 +105,6 @@
       }
     ]
   },
-
   "technical": {
     "architecture_summary": "Verifiable AI oracle using opML (optimistic machine learning) — off-chain ML computation with on-chain fraud-proof verification. Optimistic execution with interactive dispute game using bisection protocol. Fraud Proof VM for single-step on-chain verification. AnyTrust security (one honest validator sufficient). Core products: OAO (Onchain AI Oracle), IMO (Initial Model Offering via ERC-7641), RMS (Resilient Model Services), opAgent (on-chain perpetual agents), Pump.ai (permissionless agent creation).",
     "consensus_mechanism": "N/A — uses host chain consensus. opML adds optimistic verification layer with fraud proofs.",
@@ -134,7 +131,6 @@
       "ERC-6150: Hierarchical NFT standard"
     ]
   },
-
   "tokenomics": {
     "token_name": "ORA",
     "token_standard": "ERC-20",
@@ -146,8 +142,14 @@
     "market_cap_usd": 500000,
     "fdv_mcap_ratio": 5.2,
     "allocation": {
-      "points_programme": { "percent": 10, "vesting": "Unknown" },
-      "remaining": { "percent": 90, "vesting": "Not publicly disclosed" }
+      "points_programme": {
+        "percent": 10,
+        "vesting": "Unknown"
+      },
+      "remaining": {
+        "percent": 90,
+        "vesting": "Not publicly disclosed"
+      }
     },
     "insider_allocation_percent": null,
     "vesting_mostly_complete": false,
@@ -163,7 +165,6 @@
     "emission_model": "Fixed supply of 333.3M. Only 16.9% circulating — significant future unlock risk.",
     "tge_note": "TGE November 19, 2024 on Uniswap V3. 100% of initial float made available for community purchase — no insider allocation at TGE."
   },
-
   "market_data": {
     "price_usd": 0.009,
     "ath_usd": 5.38,
@@ -171,7 +172,6 @@
     "daily_volume_usd": 300,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -182,42 +182,45 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "180,000+ AI inference calls processed. 500+ active nodes. 20+ projects building on platform. Models supported: LLaMA 2/3, Stable Diffusion, DeepSeek, Mistral, Qwen."
   },
-
   "community": {
     "telegram_members": null,
     "x_followers": null,
     "discord_members": null,
     "twitter_handle": "@ORAProtocol"
   },
-
   "exchanges": [
     "Uniswap V3",
     "PancakeSwap"
   ],
-
   "participation": {
     "methods": [
       {
         "type": "node_operation",
         "description": "Run a Tora client node to perform AI inference and submit results. Stake ORA as validator or submitter.",
         "technical_skill_required": "advanced",
-        "barriers_to_entry": ["ORA staking required", "GPU hardware for inference"]
+        "barriers_to_entry": [
+          "ORA staking required",
+          "GPU hardware for inference"
+        ]
       },
       {
         "type": "building",
         "description": "Integrate OAO into smart contracts for verifiable AI inference. Import IAIOracle interface in Solidity.",
         "technical_skill_required": "advanced",
-        "barriers_to_entry": ["Solidity development skills"]
+        "barriers_to_entry": [
+          "Solidity development skills"
+        ]
       },
       {
         "type": "using",
         "description": "Create AI agents on Pump.ai (1 ORA minimum). Use RMS for decentralised AI model access.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Requires ORA tokens"]
+        "barriers_to_entry": [
+          "Requires ORA tokens"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 48,
     "max_possible": 100,
@@ -256,7 +259,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 42,
     "max_possible": 100,
@@ -288,5 +290,21 @@
         "evidence": "Only on Uniswap V3 and PancakeSwap. No major CEX listings. Daily volume $128-305. Effectively illiquid. Available on Ethereum, Base, Solana, Hyperliquid but thinly traded everywhere."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 315,
+      "forks": 73,
+      "open_issues": 3,
+      "contributors": 4,
+      "total_commits": 21,
+      "total_repos": 44,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
+    }
+  ]
 }

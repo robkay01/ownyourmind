@@ -16,12 +16,12 @@
       "defillama_slug": null
     },
     "research_gaps": [
-      "stats.golem.network rendered empty \u2014 active provider count, task count, and utilisation metrics not independently verified.",
+      "stats.golem.network rendered empty — active provider count, task count, and utilisation metrics not independently verified.",
       "No HuggingFace presence found.",
-      "DeFiLlama returned 403 \u2014 no TVL/revenue data (Golem is not a DeFi protocol).",
+      "DeFiLlama returned 403 — no TVL/revenue data (Golem is not a DeFi protocol).",
       "Golem Foundation treasury size and runway not publicly disclosed.",
       "Exact Golem Factory GmbH team size not confirmed.",
-      "Salad.com partnership details \u2014 scope, timeline, and commercial terms not publicly documented beyond 'engineering test'.",
+      "Salad.com partnership details — scope, timeline, and commercial terms not publicly documented beyond 'engineering test'.",
       "428% YoY usage growth claim from search results not independently verified on stats page.",
       "Discord and Telegram exact member counts not independently confirmed."
     ]
@@ -89,7 +89,7 @@
   },
   "technical": {
     "architecture_summary": "Peer-to-peer compute marketplace. Yagna framework (Rust) handles task negotiation, execution, and payment. Providers share CPU/GPU resources, Requestors consume compute. Payments on Ethereum mainnet and Polygon L2. Deposit mechanism (v0.16) enables smart contract pre-payment locks.",
-    "consensus_mechanism": "N/A \u2014 uses Ethereum and Polygon for settlement. Peer-to-peer task matching.",
+    "consensus_mechanism": "N/A — uses Ethereum and Polygon for settlement. Peer-to-peer task matching.",
     "what_is_onchain": "Token transfers, payment settlement, deposit contracts (Ethereum/Polygon).",
     "what_is_offchain": "Task negotiation, compute execution, provider discovery, task distribution.",
     "key_dependencies": [
@@ -121,7 +121,7 @@
       "Zero-knowledge proof generation (Satori)",
       "General-purpose batch compute"
     ],
-    "dev_activity_note": "Last yagna commit October 2025 \u2014 approximately 5 months of apparent inactivity on core repo. Modelserve AI (key AI product) development temporarily suspended."
+    "dev_activity_note": "Last yagna commit October 2025 — approximately 5 months of apparent inactivity on core repo. Modelserve AI (key AI product) development temporarily suspended."
   },
   "tokenomics": {
     "token_name": "GLM",
@@ -132,11 +132,11 @@
     "circulating_percent": 100,
     "fdv_usd": 133000000,
     "market_cap_usd": 133000000,
-    "fdv_mcap_ratio": 1.0,
+    "fdv_mcap_ratio": 1,
     "allocation": {
       "ico_participants": {
         "percent": 82,
-        "vesting": "None \u2014 fully unlocked at TGE"
+        "vesting": "None — fully unlocked at TGE"
       },
       "golem_factory": {
         "percent": 12,
@@ -155,7 +155,7 @@
     ],
     "burn_mechanism": "None",
     "staking": "None",
-    "protocol_commission": "0% \u2014 Golem captures no revenue from network usage",
+    "protocol_commission": "0% — Golem captures no revenue from network usage",
     "migration_note": "Migrated from GNT to GLM (1:1, no deadline). ~796M GLM on Ethereum, remainder still unmigrated GNT."
   },
   "market_data": {
@@ -168,9 +168,9 @@
   },
   "network_metrics": {
     "protocol_revenue": 0,
-    "revenue_note": "0% commission \u2014 protocol captures zero revenue from usage.",
-    "usage_claim": "428% YoY usage growth and 80%+ utilisation in 2025 \u2014 not independently verified.",
-    "pricing": "$0.001/core-hour CPU, $0.01/core-hour GPU \u2014 70-90% below AWS"
+    "revenue_note": "0% commission — protocol captures zero revenue from usage.",
+    "usage_claim": "428% YoY usage growth and 80%+ utilisation in 2025 — not independently verified.",
+    "pricing": "$0.001/core-hour CPU, $0.01/core-hour GPU — 70-90% below AWS"
   },
   "community": {
     "discord_members": 13167,
@@ -207,7 +207,7 @@
       "infrastructure_decentralisation": {
         "score": 14,
         "max": 20,
-        "evidence": "Permissionless P2P network \u2014 anyone can join as provider or requestor. Providers run own hardware. Payments on Ethereum and Polygon. Relay infrastructure and task matching involve some centralised coordination. Provider count modest vs competitors."
+        "evidence": "Permissionless P2P network — anyone can join as provider or requestor. Providers run own hardware. Payments on Ethereum and Polygon. Relay infrastructure and task matching involve some centralised coordination. Provider count modest vs competitors."
       },
       "governance_decentralisation": {
         "score": 10,
@@ -217,7 +217,7 @@
       "token_distribution_fairness": {
         "score": 11,
         "max": 15,
-        "evidence": "82% to ICO participants \u2014 one of the fairest distributions in crypto history. Only 18% team/company. Fully circulated, no remaining unlocks. $40M+ transfer to Foundation concentrates resources."
+        "evidence": "82% to ICO participants — one of the fairest distributions in crypto history. Only 18% team/company. Fully circulated, no remaining unlocks. $40M+ transfer to Foundation concentrates resources."
       },
       "censorship_resistance": {
         "score": 11,
@@ -227,7 +227,7 @@
       "data_sovereignty": {
         "score": 10,
         "max": 15,
-        "evidence": "Requestors send tasks to providers \u2014 data leaves requestor's machine. Plans for VPN and SGX but not in production. No TEE/confidential computing currently. Arkiv extends data sovereignty concepts."
+        "evidence": "Requestors send tasks to providers — data leaves requestor's machine. Plans for VPN and SGX but not in production. No TEE/confidential computing currently. Arkiv extends data sovereignty concepts."
       },
       "open_source_transparency": {
         "score": 13,
@@ -246,12 +246,12 @@
       "token_utility": {
         "score": 10,
         "max": 20,
-        "evidence": "GLM is sole payment currency for compute. Deposit mechanism adds smart contract locking. Arkiv extends to data writes. No staking, no governance weight, no fee-sharing. Pure medium of exchange \u2014 substitutable in theory."
+        "evidence": "GLM is sole payment currency for compute. Deposit mechanism adds smart contract locking. Arkiv extends to data writes. No staking, no governance weight, no fee-sharing. Pure medium of exchange — substitutable in theory."
       },
       "value_accrual": {
         "score": 6,
         "max": 20,
-        "evidence": "No burn, no staking, no protocol fee capture, no revenue sharing. Token value depends entirely on compute demand. High token velocity \u2014 providers sell immediately. Deposit mechanism creates temporary lock-up only."
+        "evidence": "No burn, no staking, no protocol fee capture, no revenue sharing. Token value depends entirely on compute demand. High token velocity — providers sell immediately. Deposit mechanism creates temporary lock-up only."
       },
       "supply_dynamics": {
         "score": 14,
@@ -261,7 +261,7 @@
       "revenue_sustainability": {
         "score": 5,
         "max": 25,
-        "evidence": "0% commission \u2014 protocol captures zero revenue from usage. Pricing at $0.001-$0.01/core-hour is extremely low. Sustainability depends on treasury/Foundation assets. Salad partnership is engineering test only. No transparent runway disclosure."
+        "evidence": "0% commission — protocol captures zero revenue from usage. Pricing at $0.001-$0.01/core-hour is extremely low. Sustainability depends on treasury/Foundation assets. Salad partnership is engineering test only. No transparent runway disclosure."
       },
       "liquidity_access": {
         "score": 11,
@@ -269,5 +269,74 @@
         "evidence": "44 exchanges including Binance, Coinbase, OKX, KuCoin, Upbit. $5-9M daily volume. Good coverage for $133M market cap. Available on Uniswap for decentralised access."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 470,
+      "forks": 85,
+      "open_issues": 292,
+      "contributors": 39,
+      "total_commits": 5905,
+      "total_repos": 276,
+      "discord_members": 13167,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        0,
+        0,
+        0,
+        7,
+        1,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        8,
+        1,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

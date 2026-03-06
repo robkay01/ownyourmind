@@ -9,6 +9,8 @@
     "check": "astro check",
     "deploy": "npm run build && npx wrangler pages deploy dist --project-name ownyourmind --commit-dirty=true",
     "refresh:github": "tsx scripts/refresh-github-metrics.ts",
+    "refresh:community": "tsx scripts/refresh-community-metrics.ts",
+    "backfill:github": "tsx scripts/backfill-github-history.ts",
     "check:staleness": "tsx scripts/flag-stale-records.ts",
     "check:returns": "tsx scripts/check-returns-consistency.ts",
     "download:logos": "tsx scripts/download-logos.ts"

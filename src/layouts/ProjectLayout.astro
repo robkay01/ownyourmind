@@ -11,6 +11,7 @@ import MetricCard from '../components/MetricCard.astro';
 import VestingTimeline from '../components/VestingTimeline.astro';
 
 import Sparkline from '../components/Sparkline.astro';
+import ActivityPanel from '../components/ActivityPanel.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
 import ProjectInfoBar from '../components/ProjectInfoBar.astro';
 import { fetchMarketData, formatPrice, formatMarketCap, formatPercent } from '../data/fetch-market-data';
@@ -124,6 +125,10 @@ function getTrend(key: keyof MetricsSnapshot): number[] {
     .map((s) => s[key])
     .filter((v): v is number => typeof v === 'number');
 }
+
+// Extract weekly commits from latest metrics_history snapshot
+const latestSnapshot = r?.metrics_history?.slice().reverse().find(s => s.weekly_commits?.length);
+const weeklyCommits = latestSnapshot?.weekly_commits ?? null;
 
 // Format large numbers with commas
 function fmtNum(n: number | null | undefined): string {
@@ -463,36 +468,19 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
               )}
             </div>
 
-            {r!.technical!.github_metrics && (r!.technical!.github_metrics.contributors != null || r!.technical!.github_metrics.stars != null) && (
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                {r!.technical!.github_metrics.contributors != null && (
-                  <MetricCard
-                    value={fmtNum(r!.technical!.github_metrics.contributors)}
-                    label="Contributors"
-                    sparklineData={getTrend('contributors')}
-                  />
-                )}
-                {r!.technical!.github_metrics.stars != null && (
-                  <MetricCard
-                    value={fmtNum(r!.technical!.github_metrics.stars)}
-                    label="Stars"
-                    sparklineData={getTrend('stars')}
-                  />
-                )}
-                {r!.technical!.github_metrics.forks != null && (
-                  <MetricCard
-                    value={fmtNum(r!.technical!.github_metrics.forks)}
-                    label="Forks"
-                    sparklineData={getTrend('forks')}
-                  />
-                )}
-                {r!.technical!.github_metrics.last_commit_date && (
-                  <MetricCard
-                    value={r!.technical!.github_metrics.last_commit_date}
-                    label="Last commit"
-                  />
-                )}
-              </div>
+            {r!.technical!.github_metrics && (r!.technical!.github_metrics.contributors != null || r!.technical!.github_metrics.stars != null || weeklyCommits) && (
+              <ActivityPanel
+                weeklyCommits={weeklyCommits}
+                metricsHistory={r!.metrics_history}
+                currentStars={r!.technical!.github_metrics.stars}
+                currentForks={r!.technical!.github_metrics.forks}
+                currentContributors={r!.technical!.github_metrics.contributors}
+                currentOpenIssues={r!.technical!.github_metrics.open_issues}
+                lastCommitDate={r!.technical!.github_metrics.last_commit_date}
+                discordMembers={r!.community?.discord_members}
+                telegramMembers={r!.community?.telegram_members}
+                xFollowers={r!.community?.x_followers}
+              />
             )}
 
             {r!.technical!.audits && r!.technical!.audits.length > 0 && r!.technical!.audits.some(a => a.auditor) && (
@@ -875,36 +863,39 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
           <section class="research-section">
             <h2 class="research-h2">Community</h2>
 
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-              {r!.community!.discord_members != null && (
-                <MetricCard
-                  value={fmtNum(r!.community!.discord_members)}
-                  label="Discord"
-                  sparklineData={getTrend('discord_members')}
-                />
-              )}
-              {r!.community!.telegram_members != null && (
-                <MetricCard
-                  value={fmtNum(r!.community!.telegram_members)}
-                  label="Telegram"
-                  sparklineData={getTrend('telegram_members')}
-                />
-              )}
-              {r!.community!.x_followers != null && (
-                <MetricCard
-                  value={fmtNum(r!.community!.x_followers)}
-                  label="X followers"
-                  sparklineData={getTrend('x_followers')}
-                />
-              )}
-              {r!.community!.github_contributors != null && (
-                <MetricCard
-                  value={fmtNum(r!.community!.github_contributors)}
-                  label="GitHub contributors"
-                  sparklineData={getTrend('contributors')}
-                />
-              )}
-            </div>
+            {/* Community metrics shown here only when ActivityPanel didn't render them */}
+            {!hasTechnical && (
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                {r!.community!.discord_members != null && (
+                  <MetricCard
+                    value={fmtNum(r!.community!.discord_members)}
+                    label="Discord"
+                    sparklineData={getTrend('discord_members')}
+                  />
+                )}
+                {r!.community!.telegram_members != null && (
+                  <MetricCard
+                    value={fmtNum(r!.community!.telegram_members)}
+                    label="Telegram"
+                    sparklineData={getTrend('telegram_members')}
+                  />
+                )}
+                {r!.community!.x_followers != null && (
+                  <MetricCard
+                    value={fmtNum(r!.community!.x_followers)}
+                    label="X followers"
+                    sparklineData={getTrend('x_followers')}
+                  />
+                )}
+                {r!.community!.github_contributors != null && (
+                  <MetricCard
+                    value={fmtNum(r!.community!.github_contributors)}
+                    label="GitHub contributors"
+                    sparklineData={getTrend('contributors')}
+                  />
+                )}
+              </div>
+            )}
 
             {r!.community!.governance_model && (
               <div class="mb-3">

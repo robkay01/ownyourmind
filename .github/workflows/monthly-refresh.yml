@@ -1,8 +1,8 @@
-name: Monthly Research Data Refresh
+name: Weekly Research Data Refresh
 
 on:
   schedule:
-    - cron: '0 8 1 * *' # 08:00 UTC, 1st of every month
+    - cron: '0 8 * * 1' # Every Monday 08:00 UTC
   workflow_dispatch: # manual trigger from GitHub UI
 
 jobs:
@@ -26,6 +26,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Refresh community metrics
+        run: npm run refresh:community
+
+      - name: Check staleness (summary only)
+        run: npm run check:staleness || true
+
       - name: Check for changes
         id: changes
         run: |
@@ -39,15 +45,18 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: 'data: monthly GitHub metrics refresh'
-          title: 'data: monthly GitHub metrics refresh'
+          commit-message: 'data: weekly GitHub and community metrics refresh'
+          title: 'data: weekly GitHub and community metrics refresh'
           body: |
-            Automated monthly refresh of GitHub metrics in research JSONs.
+            Automated weekly refresh of research data in project JSONs.
 
-            Updated fields: stars, forks, open_issues, last_commit_date,
-            contributors, total_commits, total_repos, community.github_contributors.
+            **GitHub metrics:** stars, forks, open_issues, last_commit_date,
+            contributors, total_commits, total_repos, weekly_commits,
+            community.github_contributors.
 
-            Review the diff to verify no zero/null values were written from a rate-limited response.
-          branch: auto/github-metrics-refresh
+            **Community metrics:** discord_members, telegram_members.
+
+            Review the diff to verify no zero/null values were written from a rate-limited or failed response.
+          branch: auto/weekly-metrics-refresh
           delete-branch: true
           labels: data,automated

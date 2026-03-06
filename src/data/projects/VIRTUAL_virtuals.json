@@ -3,8 +3,8 @@
     "project_id": "virtuals",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Basescan returned 403 -- token holder count, transfer count, and exact on-chain circulating supply not directly verifiable from block explorer in this session",
@@ -31,7 +31,21 @@
       "x_handle": "virtuals_io",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 21522
+        },
+        "run_by": "community-refresh"
+      }
+    ]
   },
   "identity": {
     "name": "Virtuals Protocol",
@@ -390,7 +404,7 @@
   },
   "community": {
     "discord_members": 11865,
-    "telegram_members": null,
+    "telegram_members": 21522,
     "x_followers": 281000,
     "github_contributors": null,
     "governance_participation_rate": "veVIRTUAL governance launched with 0.10% supply threshold for proposals, 25% quorum requirement. Participation rate not quantified.",
@@ -978,6 +992,35 @@
         "tokenomics.market_data.all_time_high_date"
       ],
       "reliability_notes": "403 on direct fetch. ATH $5.07 on Jan 2, 2025 confirmed via search snippet, cross-referenced with CryptoRank."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 92,
+      "forks": 59,
+      "open_issues": 10,
+      "contributors": 5,
+      "total_commits": 260,
+      "total_repos": 32,
+      "discord_members": 11865,
+      "telegram_members": null,
+      "x_followers": 281000,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 91,
+      "forks": 59,
+      "open_issues": 1,
+      "contributors": null,
+      "total_commits": 260,
+      "total_repos": 32,
+      "discord_members": 11865,
+      "telegram_members": 21522,
+      "x_followers": 281000
     }
   ]
 }

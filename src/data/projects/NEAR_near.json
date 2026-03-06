@@ -3,8 +3,8 @@
     "project_id": "near",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "DeFiLlama web page returned 403 -- TVL sourced from DeFiLlama API endpoint instead ($114.7M)",
@@ -29,7 +29,21 @@
       "x_handle": "NEARProtocol",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 54101
+        },
+        "run_by": "community-refresh"
+      }
+    ]
   },
   "identity": {
     "name": "NEAR Protocol",
@@ -229,7 +243,7 @@
       "initial_allocation": [
         {
           "category": "Community Grants & Programs",
-          "percentage": 17.0,
+          "percentage": 17,
           "vesting_schedule": "Distributed over time via grants and ecosystem programmes",
           "cliff": "None",
           "notes": "170M NEAR allocated for community development, grants, and ecosystem growth. NEAR Foundation announced $800M in grants (Oct 2021) to accelerate ecosystem development."
@@ -243,14 +257,14 @@
         },
         {
           "category": "Community Sale (CoinList)",
-          "percentage": 12.0,
+          "percentage": 12,
           "vesting_schedule": "Three options: immediate unlock at $0.40, 12-month lockup at $0.34, 24-month lockup at $0.29",
           "cliff": "None",
           "notes": "120M NEAR sold via CoinList in August 2020. Raised $40M. All lockups expired."
         },
         {
           "category": "NEAR Foundation",
-          "percentage": 10.0,
+          "percentage": 10,
           "vesting_schedule": "Managed by Foundation for ecosystem development",
           "cliff": "None",
           "notes": "100M NEAR allocated to the Switzerland-based NEAR Foundation for long-term ecosystem stewardship."
@@ -300,7 +314,7 @@
       "staking_type": "Delegated Proof of Stake -- users can delegate NEAR to validators or run their own validator node. veNEAR (vote-escrowed NEAR) available for governance participation via House of Stake.",
       "minimum_stake": 25500,
       "lock_up_period": "Unstaking takes 2-3 epochs (~24-36 hours). veNEAR requires time-locked staking for governance weight.",
-      "current_apy_nominal": 9.0,
+      "current_apy_nominal": 9,
       "real_yield_after_inflation": 6.5,
       "staking_ratio": 46.4,
       "staking_risks": [
@@ -442,7 +456,7 @@
   },
   "community": {
     "discord_members": 74000,
-    "telegram_members": null,
+    "telegram_members": 54101,
     "x_followers": 1800000,
     "github_contributors": null,
     "governance_participation_rate": "68.41% of validators signalled support for inflation halving proposal (Oct 2025). House of Stake governance launched late 2025 -- participation rates for broader token-holder governance still emerging.",
@@ -979,6 +993,88 @@
         "data sourced from Messari, Changelly, Gate.io, CoinDesk"
       ],
       "reliability_notes": "Tier 3 aggregated statistics page. Content not fully extractable via WebFetch (JavaScript-rendered)."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 2573,
+      "forks": 765,
+      "open_issues": 468,
+      "contributors": 240,
+      "total_commits": 9669,
+      "total_repos": 275,
+      "discord_members": 74000,
+      "telegram_members": null,
+      "x_followers": 1800000,
+      "weekly_commits": [
+        48,
+        37,
+        35,
+        42,
+        52,
+        21,
+        17,
+        33,
+        25,
+        32,
+        17,
+        19,
+        32,
+        22,
+        29,
+        32,
+        15,
+        27,
+        28,
+        21,
+        25,
+        9,
+        15,
+        33,
+        25,
+        29,
+        26,
+        26,
+        40,
+        35,
+        26,
+        22,
+        13,
+        19,
+        18,
+        27,
+        56,
+        23,
+        29,
+        25,
+        15,
+        1,
+        2,
+        21,
+        16,
+        20,
+        21,
+        37,
+        59,
+        48,
+        46,
+        38
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 2570,
+      "forks": 763,
+      "open_issues": 466,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 275,
+      "discord_members": 74000,
+      "telegram_members": 54101,
+      "x_followers": 1800000
     }
   ]
 }

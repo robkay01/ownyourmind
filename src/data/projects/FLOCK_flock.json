@@ -3,7 +3,7 @@
     "project_id": "flock",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,9 +24,23 @@
       "FL Alliance production status unclear — was testnet mid-2025.",
       "Privacy guarantees beyond federated learning architecture not formally proven.",
       "Companies House officer names not extracted."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 200000
+        },
+        "new_values": {
+          "community.telegram_members": 673
+        },
+        "run_by": "community-refresh"
+      }
     ]
   },
-
   "identity": {
     "name": "FLock.io",
     "ticker": "FLOCK",
@@ -43,7 +57,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -94,7 +107,6 @@
       }
     ]
   },
-
   "technical": {
     "architecture_summary": "Three-layer decentralised AI training system: (1) AI Arena — decentralised training on Base with training nodes, validators, and delegators. (2) FL Alliance — federated learning layer for privacy-preserving fine-tuning (testnet). (3) Moonbase/API Platform — model deployment and monetisation (launched Sept 2025). Uses FLoRA (LoRA-based efficient fine-tuning). First empirical 70B LLM fine-tuning in decentralised multi-domain setting.",
     "consensus_mechanism": "N/A — uses Base (Ethereum L2) for settlement. Training validation via peer review and comparative scoring.",
@@ -122,7 +134,6 @@
       "CB Insights AI 100 (2025)"
     ]
   },
-
   "tokenomics": {
     "token_name": "FLOCK",
     "token_standard": "ERC-20 (Base)",
@@ -134,10 +145,22 @@
     "market_cap_usd": 18400000,
     "fdv_mcap_ratio": 3.16,
     "allocation": {
-      "community_incentives": { "percent": 47, "vesting": "Minted over 60 months with 1% monthly decay" },
-      "team_shareholders": { "percent": 22.5, "vesting": "1-year cliff + 2-year linear" },
-      "treasury_ecosystem": { "percent": 18, "vesting": "Controlled release" },
-      "community_airdrop": { "percent": 12.5, "vesting": "50M FLOCK initial airdrop to testnet participants" }
+      "community_incentives": {
+        "percent": 47,
+        "vesting": "Minted over 60 months with 1% monthly decay"
+      },
+      "team_shareholders": {
+        "percent": 22.5,
+        "vesting": "1-year cliff + 2-year linear"
+      },
+      "treasury_ecosystem": {
+        "percent": 18,
+        "vesting": "Controlled release"
+      },
+      "community_airdrop": {
+        "percent": 12.5,
+        "vesting": "50M FLOCK initial airdrop to testnet participants"
+      }
     },
     "insider_allocation_percent": 22.5,
     "vesting_mostly_complete": false,
@@ -152,7 +175,6 @@
     "staking_apy": "Variable — gmFLOCK mechanism, 25% of circulating voluntarily locked (avg 265 days)",
     "emission_model": "1B fixed supply. Community tokens minted over 60 months with 1% monthly decay. Team/investor 1-year cliff + 2-year linear. ~68.5% still locked."
   },
-
   "market_data": {
     "price_usd": 0.058,
     "ath_usd": 0.667,
@@ -160,7 +182,6 @@
     "daily_volume_usd": 1600000,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -171,14 +192,12 @@
     "metrics_date": "2025-10-31",
     "usage_notes": "16 training tasks completed. 9,062 training submissions. 784,137 validation submissions. 196 training nodes (incl. 6 top-50 Kagglers). 262 validators. 1,416 delegators. 55,928 token holders. 11.9M FLOCK (~$2.7M) protocol fee revenue in first 10 months."
   },
-
   "community": {
-    "telegram_members": 200000,
+    "telegram_members": 673,
     "x_followers": null,
     "discord_members": null,
     "twitter_handle": "@flock_io"
   },
-
   "exchanges": [
     "Gate.io",
     "Bybit",
@@ -187,7 +206,6 @@
     "Bitget",
     "CoinEx"
   ],
-
   "participation": {
     "methods": [
       {
@@ -195,24 +213,30 @@
         "description": "Run a training node to submit AI models to training tasks. Stake FLOCK via gmFLOCK mechanism. Top-50 Kagglers among current nodes.",
         "technical_skill_required": "advanced",
         "estimated_returns": "FLOCK rewards for successful submissions",
-        "barriers_to_entry": ["ML expertise required", "FLOCK staking required"]
+        "barriers_to_entry": [
+          "ML expertise required",
+          "FLOCK staking required"
+        ]
       },
       {
         "type": "staking",
         "description": "Stake FLOCK as a validator (evaluate training submissions) or delegator (stake to nodes/validators). Lock via gmFLOCK for up to 365 days.",
         "technical_skill_required": "intermediate",
         "estimated_returns": "FLOCK rewards from protocol fees",
-        "barriers_to_entry": ["FLOCK tokens required"]
+        "barriers_to_entry": [
+          "FLOCK tokens required"
+        ]
       },
       {
         "type": "building",
         "description": "Deploy trained models via the API Platform (Moonbase). Revenue sharing for model contributors. Elite Trainer Programme offers 50% revenue share.",
         "technical_skill_required": "intermediate",
-        "barriers_to_entry": ["ML model development skills"]
+        "barriers_to_entry": [
+          "ML model development skills"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 55,
     "max_possible": 100,
@@ -251,7 +275,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 58,
     "max_possible": 100,
@@ -283,5 +306,34 @@
         "evidence": "Gate.io, Bybit, KuCoin, MEXC, Bitget, CoinEx — decent CEX coverage. DEX on Uniswap Base and Aerodrome. $1.6M daily volume. $18M market cap. No Binance or Coinbase. Base chain only."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 36,
+      "forks": 11,
+      "open_issues": 4,
+      "contributors": 1,
+      "total_commits": 2,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 200000,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 36,
+      "forks": 11,
+      "open_issues": null,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 673,
+      "x_followers": null
+    }
+  ]
 }

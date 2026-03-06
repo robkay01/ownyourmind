@@ -3,8 +3,8 @@
     "project_id": "vana",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Whitepaper is a PDF hosted on CDN -- could not be parsed directly via WebFetch. Architecture and tokenomics details reconstructed from official documentation pages, blog posts, and secondary sources",
@@ -32,7 +32,21 @@
       "x_handle": "withvana",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 10498
+        },
+        "run_by": "community-refresh"
+      }
+    ]
   },
   "identity": {
     "name": "Vana",
@@ -236,7 +250,7 @@
       "initial_allocation": [
         {
           "category": "Community",
-          "percentage": 44.0,
+          "percentage": 44,
           "vesting_schedule": "20.3% unlocked at TGE, remainder unlocked linearly over 36 months with 6-month unlock frequency",
           "cliff": "None",
           "notes": "Includes Binance Launchpool allocation (4% / 4.8M VANA) and airdrops. 46.136% of community allocation unlocked at TGE, then 8.977% every 6 months."
@@ -430,7 +444,7 @@
   },
   "community": {
     "discord_members": 77548,
-    "telegram_members": null,
+    "telegram_members": 10498,
     "x_followers": 286100,
     "github_contributors": null,
     "governance_participation_rate": null,
@@ -1200,6 +1214,35 @@
         "X followers: 286.1K for @vana handle"
       ],
       "reliability_notes": "Social metrics aggregator. Follower count not independently verified from X directly."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 113,
+      "forks": 24,
+      "open_issues": 4,
+      "contributors": 6,
+      "total_commits": 196,
+      "total_repos": 84,
+      "discord_members": 77548,
+      "telegram_members": null,
+      "x_followers": 286100,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 113,
+      "forks": 24,
+      "open_issues": 0,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 83,
+      "discord_members": 77548,
+      "telegram_members": 10498,
+      "x_followers": 286100
     }
   ]
 }

@@ -27,7 +27,6 @@
       "HuggingFace: no presence (FLUX models on HuggingFace are Black Forest Labs, unrelated)."
     ]
   },
-
   "identity": {
     "name": "Flux",
     "ticker": "FLUX",
@@ -44,7 +43,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -78,7 +76,6 @@
       "notes": "Fair launch via mining in January 2018. No ICO, no pre-mine, no pre-sale. Self-funded through mining and ecosystem development."
     }
   },
-
   "technical": {
     "architecture_summary": "Decentralised cloud platform with ~7,917 nodes across 67 countries. Three-tier node system (Cumulus, Nimbus, Stratus) with hardware benchmarking. PoUW v2 consensus (Proof of Useful Work, soft fork October 2025). Core products: FluxCloud (containerised dApp deployment), FluxEdge (GPU compute marketplace), ArcaneOS (secure container OS), Zelcore wallet, SSP wallet, Fusion cross-chain swaps.",
     "consensus_mechanism": "Proof of Useful Work v2 (PoUW v2) — soft fork October 2025. 30-second block time. 14 FLUX per block.",
@@ -110,7 +107,6 @@
       }
     ]
   },
-
   "tokenomics": {
     "token_name": "FLUX",
     "token_standard": "Native coin + parallel assets on 10+ chains",
@@ -119,12 +115,24 @@
     "circulating_percent": 72.1,
     "fdv_usd": 24200000,
     "market_cap_usd": 24200000,
-    "fdv_mcap_ratio": 1.0,
+    "fdv_mcap_ratio": 1,
     "allocation": {
-      "user_owned": { "percent": 94.7, "vesting": "Mining distribution" },
-      "foundation": { "percent": 2.9, "vesting": "0.5 FLUX per block ongoing" },
-      "exchange_liquidity": { "percent": 1.7, "vesting": "None" },
-      "team": { "percent": 0.7, "vesting": "None" }
+      "user_owned": {
+        "percent": 94.7,
+        "vesting": "Mining distribution"
+      },
+      "foundation": {
+        "percent": 2.9,
+        "vesting": "0.5 FLUX per block ongoing"
+      },
+      "exchange_liquidity": {
+        "percent": 1.7,
+        "vesting": "None"
+      },
+      "team": {
+        "percent": 0.7,
+        "vesting": "None"
+      }
     },
     "insider_allocation_percent": 3.6,
     "vesting_mostly_complete": true,
@@ -140,7 +148,6 @@
     "staking_apy": "Variable by node tier. Titan staking: 3-12 month lock-ups.",
     "emission_model": "14 FLUX per block (30-second blocks). 10% annual emission reduction. Target 1% inflation by 2036. Max supply increased from 440M to 560M via PoUW v2 fork (October 2025)."
   },
-
   "market_data": {
     "price_usd": 0.0595,
     "ath_usd": 3.33,
@@ -148,7 +155,6 @@
     "daily_volume_usd": 1884367,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -159,14 +165,12 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "~7,917 nodes across 67 countries (down from 14,000+ peak). ~100 live applications on FluxCloud. 58,300 CPU cores, 192 TB RAM, 3.2 PB SSD across network. ~114.9M FLUX locked in node collateral (~28% of circulating)."
   },
-
   "community": {
     "telegram_members": 7483,
     "x_followers": 45700,
     "discord_members": 25920,
     "twitter_handle": "@RunOnFlux"
   },
-
   "exchanges": [
     "Binance",
     "Kraken",
@@ -174,7 +178,6 @@
     "Gate.io",
     "Crypto.com"
   ],
-
   "participation": {
     "methods": [
       {
@@ -182,30 +185,39 @@
         "description": "Run a FluxNode (Cumulus: 1,000 FLUX, Nimbus: 12,500, Stratus: 40,000). Earn block rewards. Hardware benchmarking required.",
         "technical_skill_required": "advanced",
         "estimated_returns": "Block rewards (tier-dependent)",
-        "barriers_to_entry": ["Hardware requirements (2-8 cores, 8-64GB RAM)", "Collateral (1,000-40,000 FLUX)", "97% uptime requirement"]
+        "barriers_to_entry": [
+          "Hardware requirements (2-8 cores, 8-64GB RAM)",
+          "Collateral (1,000-40,000 FLUX)",
+          "97% uptime requirement"
+        ]
       },
       {
         "type": "staking",
         "description": "Titan fractional staking. Minimum 50 FLUX. Lock-ups of 3, 6, or 12 months. Managed by InFlux Technologies.",
         "technical_skill_required": "basic",
         "estimated_returns": "Variable, rewards twice weekly",
-        "barriers_to_entry": ["Minimum 50 FLUX (~$3)"]
+        "barriers_to_entry": [
+          "Minimum 50 FLUX (~$3)"
+        ]
       },
       {
         "type": "building",
         "description": "Deploy containerised applications on FluxCloud. Use FluxEdge for GPU compute tasks.",
         "technical_skill_required": "intermediate",
-        "barriers_to_entry": ["FLUX tokens for deployment payments"]
+        "barriers_to_entry": [
+          "FLUX tokens for deployment payments"
+        ]
       },
       {
         "type": "governance",
         "description": "Participate in XDAO governance voting. Historically node-operator weighted. XDAO 2.0 planned to extend to all FLUX holders.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Currently weighted towards node operators"]
+        "barriers_to_entry": [
+          "Currently weighted towards node operators"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 76,
     "max_possible": 100,
@@ -244,7 +256,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 57,
     "max_possible": 100,
@@ -276,5 +287,74 @@
         "evidence": "Binance, Kraken, KuCoin, Gate.io, Crypto.com. $1.88M daily volume. Available on 10+ chains via parallel assets. Titan accessible from 50 FLUX (~$3). $24M market cap — moderate liquidity risk. 98% below ATH."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 247,
+      "forks": 314,
+      "open_issues": 21,
+      "contributors": 240,
+      "total_commits": 8846,
+      "total_repos": 165,
+      "discord_members": 25920,
+      "telegram_members": 7483,
+      "x_followers": 45700,
+      "weekly_commits": [
+        34,
+        25,
+        14,
+        8,
+        25,
+        9,
+        8,
+        7,
+        3,
+        22,
+        22,
+        112,
+        36,
+        62,
+        14,
+        56,
+        49,
+        77,
+        58,
+        33,
+        17,
+        6,
+        12,
+        32,
+        9,
+        3,
+        14,
+        14,
+        57,
+        119,
+        30,
+        41,
+        60,
+        124,
+        59,
+        22,
+        43,
+        12,
+        3,
+        17,
+        11,
+        18,
+        16,
+        23,
+        35,
+        29,
+        4,
+        5,
+        34,
+        5,
+        7,
+        3
+      ]
+    }
+  ]
 }

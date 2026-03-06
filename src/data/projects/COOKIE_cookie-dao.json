@@ -3,7 +3,7 @@
     "project_id": "cookie-dao",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -27,9 +27,23 @@
       "Staking APY not disclosed — rewards shifted to Snaps points system July 2025",
       "Corporate entity name and registration details not found — only jurisdiction (Tallinn, Estonia) confirmed",
       "Discrepancy in circulating supply data between sources"
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 74460
+        },
+        "run_by": "community-refresh"
+      }
     ]
   },
-
   "identity": {
     "name": "Cookie DAO",
     "ticker": "COOKIE",
@@ -46,7 +60,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -102,7 +115,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Centralised data aggregation platform (cookie.fun) that indexes 1,500+ AI agents by ingesting 7TB+ of on-chain and social data. Calculates proprietary Mindshare metric, sentiment analysis, and smart following scores. COOKIE is an ERC-20 with LayerZero OFT bridging to Base, BNB Chain, and Solana. Staking on Base and other supported chains.",
     "consensus_mechanism": "N/A — data aggregation layer, not a blockchain. Relies on Ethereum PoS, Base, BNB Chain, Solana.",
@@ -126,7 +138,6 @@
     },
     "audits": []
   },
-
   "tokenomics": {
     "token_name": "COOKIE",
     "token_standard": "ERC-20 (with LayerZero OFT)",
@@ -137,20 +148,62 @@
     "market_cap_usd": 14670000,
     "fdv_mcap_ratio": 1.42,
     "allocation": {
-      "staking_liquidity": { "percent": 18.0, "vesting": "Fully unlocked at TGE" },
-      "pre_seed_b": { "percent": 10.06, "vesting": "1-month cliff + 6-month linear" },
-      "ecosystem": { "percent": 10.0, "vesting": "1-month cliff + linear" },
-      "team": { "percent": 9.5, "vesting": "1-month cliff + 6-month linear" },
-      "pre_seed_c": { "percent": 8.67, "vesting": "1-month cliff + 6-month linear" },
-      "treasury": { "percent": 8.0, "vesting": "1-month cliff + linear" },
-      "marketing": { "percent": 7.5, "vesting": "Linear" },
-      "strategic": { "percent": 6.14, "vesting": "1-month cliff + 6-month linear" },
-      "pre_seed_a": { "percent": 5.5, "vesting": "1-month cliff + 6-month linear" },
-      "advisory": { "percent": 5.0, "vesting": "1-month cliff + 6-month linear" },
-      "public_sale": { "percent": 4.38, "vesting": "12.5% TGE + 1-month cliff + 6-month" },
-      "seed": { "percent": 2.87, "vesting": "1-month cliff + 6-month linear" },
-      "kol": { "percent": 2.38, "vesting": "Linear" },
-      "airdrop": { "percent": 2.0, "vesting": "None" }
+      "staking_liquidity": {
+        "percent": 18,
+        "vesting": "Fully unlocked at TGE"
+      },
+      "pre_seed_b": {
+        "percent": 10.06,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "ecosystem": {
+        "percent": 10,
+        "vesting": "1-month cliff + linear"
+      },
+      "team": {
+        "percent": 9.5,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "pre_seed_c": {
+        "percent": 8.67,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "treasury": {
+        "percent": 8,
+        "vesting": "1-month cliff + linear"
+      },
+      "marketing": {
+        "percent": 7.5,
+        "vesting": "Linear"
+      },
+      "strategic": {
+        "percent": 6.14,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "pre_seed_a": {
+        "percent": 5.5,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "advisory": {
+        "percent": 5,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "public_sale": {
+        "percent": 4.38,
+        "vesting": "12.5% TGE + 1-month cliff + 6-month"
+      },
+      "seed": {
+        "percent": 2.87,
+        "vesting": "1-month cliff + 6-month linear"
+      },
+      "kol": {
+        "percent": 2.38,
+        "vesting": "Linear"
+      },
+      "airdrop": {
+        "percent": 2,
+        "vesting": "None"
+      }
     },
     "insider_allocation_percent": 45,
     "vesting_mostly_complete": true,
@@ -165,7 +218,6 @@
     "staking_apy": "Variable — Snaps points + MAF rewards, no fixed APY",
     "emission_model": "Fixed supply with deflationary burns. Final unlock June 2028."
   },
-
   "market_data": {
     "price_usd": 0.021,
     "ath_usd": 0.83,
@@ -173,7 +225,6 @@
     "daily_volume_usd": 17100000,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -184,14 +235,12 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "60,000+ users reported mid-2025. 1,500+ AI agents tracked. 5M+ COOKIE locked for premium access. $16M+ distributed via MAF. $5M+ Snaps rewards distributed."
   },
-
   "community": {
-    "telegram_members": null,
+    "telegram_members": 74460,
     "x_followers": null,
     "discord_members": null,
     "twitter_handle": "@cookiedotfun"
   },
-
   "exchanges": [
     "Binance",
     "Bybit",
@@ -202,7 +251,6 @@
     "MEXC",
     "Bitget"
   ],
-
   "participation": {
     "methods": [
       {
@@ -210,29 +258,36 @@
         "description": "Lock COOKIE for premium analytics access on cookie.fun. Participate in MAF pools for partner project airdrops. 10% burn on MAF locks.",
         "technical_skill_required": "basic",
         "estimated_returns": "Variable — Snaps points + 10-20% of partner reward pools via MAF",
-        "barriers_to_entry": ["Requires 10,000 COOKIE (~$210) for premium access"]
+        "barriers_to_entry": [
+          "Requires 10,000 COOKIE (~$210) for premium access"
+        ]
       },
       {
         "type": "using",
         "description": "Use cookie.fun to track and analyse AI agents. Free tier available; premium features require COOKIE staking.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Advanced features require token lock"]
+        "barriers_to_entry": [
+          "Advanced features require token lock"
+        ]
       },
       {
         "type": "building",
         "description": "Integrate Cookie Data APIs into dapps or AI agents. COOKIE token required for API access.",
         "technical_skill_required": "intermediate",
-        "barriers_to_entry": ["COOKIE token required for API access"]
+        "barriers_to_entry": [
+          "COOKIE token required for API access"
+        ]
       },
       {
         "type": "governance",
         "description": "Vote on DAO proposals regarding treasury allocations and platform upgrades using COOKIE tokens.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Must hold COOKIE tokens"]
+        "barriers_to_entry": [
+          "Must hold COOKIE tokens"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 22,
     "max_possible": 100,
@@ -271,7 +326,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 52,
     "max_possible": 100,
@@ -303,5 +357,20 @@
         "evidence": "Binance, Bybit, KuCoin, Gate.io, Coinbase, Kraken, MEXC, Bitget. $17.1M daily volume. Strong exchange coverage for ~$15M market cap. LayerZero OFT cross-chain. 97.5% drawdown means most holders underwater."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": null,
+      "contributors": 0,
+      "total_commits": null,
+      "total_repos": 0,
+      "discord_members": null,
+      "telegram_members": 74460,
+      "x_followers": null
+    }
+  ]
 }

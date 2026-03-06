@@ -3,8 +3,8 @@
     "project_id": "asi-alliance",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-02",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "fetchai",
@@ -20,7 +20,21 @@
         "assessment.overall_assessment"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 8759
+        },
+        "run_by": "community-refresh"
+      }
+    ],
     "research_gaps": [
       "Exact Discord and Telegram member counts could not be confirmed -- dynamic pages did not render in web fetch. Estimated from third-party summaries.",
       "ASI Cloud usage metrics (active users, GPU hours, revenue) not publicly disclosed. Product exited beta Dec 2025 but no usage dashboard exists.",
@@ -430,7 +444,7 @@
   },
   "community": {
     "discord_members": null,
-    "telegram_members": null,
+    "telegram_members": 8759,
     "x_followers": 96700,
     "github_contributors": null,
     "governance_participation_rate": null,
@@ -1005,5 +1019,33 @@
       ]
     }
   ],
-  "metrics_history": []
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 1553,
+      "forks": 351,
+      "open_issues": 35,
+      "contributors": 62,
+      "total_commits": 536,
+      "total_repos": 92,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 96700,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 1551,
+      "forks": 351,
+      "open_issues": 35,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 371,
+      "discord_members": null,
+      "telegram_members": 8759,
+      "x_followers": 96700
+    }
+  ]
 }

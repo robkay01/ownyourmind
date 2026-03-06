@@ -16,14 +16,14 @@
       "defillama_slug": null
     },
     "research_gaps": [
-      "Protocol revenue not publicly disclosed \u2014 cannot verify economic sustainability despite 2M+ deployments.",
+      "Protocol revenue not publicly disclosed — cannot verify economic sustainability despite 2M+ deployments.",
       "NNP-0001 vote result (pass/fail) and implementation status not confirmed.",
       "Current staking APY not publicly disclosed.",
       "Exact NOS burned to date under buyback-and-burn mechanism not verifiable.",
       "Corporate entity KvK (Dutch Chamber of Commerce) registration number not confirmed.",
       "Exact team size not publicly disclosed.",
-      "DeFiLlama returned 403 \u2014 no TVL or fee data available.",
-      "Solscan returned 403 \u2014 on-chain holder count not independently verified.",
+      "DeFiLlama returned 403 — no TVL or fee data available.",
+      "Solscan returned 403 — on-chain holder count not independently verified.",
       "GPU pricing per hour on the marketplace not documented in research.",
       "Telegram community presence not confirmed."
     ]
@@ -161,7 +161,7 @@
         "auditor": "Op Codes",
         "scope": "Nosana Staking",
         "date": "2022-08-10",
-        "result_summary": "Completed \u2014 two reports issued"
+        "result_summary": "Completed — two reports issued"
       }
     ],
     "audit_note": "README states: 'Most code is unaudited. Use at your own risk.' Only staking contract audited. Jobs, Rewards, and Pools contracts unaudited.",
@@ -306,7 +306,7 @@
       "governance_decentralisation": {
         "score": 8,
         "max": 20,
-        "evidence": "NNP governance framework exists with 7-stage lifecycle. vote.nosana.com operational. Only ONE proposal (NNP-0001) ever submitted. Proposals require team review before community vote \u2014 team gatekeeping. No Nosana Foundation established. Signal votes only, team implements."
+        "evidence": "NNP governance framework exists with 7-stage lifecycle. vote.nosana.com operational. Only ONE proposal (NNP-0001) ever submitted. Proposals require team review before community vote — team gatekeeping. No Nosana Foundation established. Signal votes only, team implements."
       },
       "token_distribution_fairness": {
         "score": 7,
@@ -340,7 +340,7 @@
       "token_utility": {
         "score": 14,
         "max": 20,
-        "evidence": "NOS required for GPU compute job payments \u2014 structurally embedded. Staking via xNOS determines fee share. Governance voting. Buyback-and-burn from protocol profits. Clear utility but network throughput and fee generation unverified."
+        "evidence": "NOS required for GPU compute job payments — structurally embedded. Staking via xNOS determines fee share. Governance voting. Buyback-and-burn from protocol profits. Clear utility but network throughput and fee generation unverified."
       },
       "value_accrual": {
         "score": 11,
@@ -350,7 +350,7 @@
       "supply_dynamics": {
         "score": 14,
         "max": 20,
-        "evidence": "100M max supply, 83.4% circulating. All vesting complete. FDV/MCap ratio 1.2x \u2014 healthy. Burn mechanism deflationary. However, NNP-0001 may introduce usage-based emissions beyond 100M cap, fundamentally changing supply dynamics."
+        "evidence": "100M max supply, 83.4% circulating. All vesting complete. FDV/MCap ratio 1.2x — healthy. Burn mechanism deflationary. However, NNP-0001 may introduce usage-based emissions beyond 100M cap, fundamentally changing supply dynamics."
       },
       "revenue_sustainability": {
         "score": 3,
@@ -363,5 +363,74 @@
         "evidence": "Gate.io, MEXC, Raydium, Jupiter. No Tier 1 CEX (Binance, Coinbase, Kraken). 24h volume ~$494K. Raydium NOS/USDC pool has just $279K liquidity. Any significant trade causes major slippage. Dangerously thin for a $14M market cap token."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 3,
+      "contributors": 6,
+      "total_commits": 1171,
+      "total_repos": 34,
+      "discord_members": 13182,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
 }

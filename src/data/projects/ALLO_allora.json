@@ -3,7 +3,7 @@
     "project_id": "allora",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -18,13 +18,28 @@
     "research_gaps": [
       "No formal security audit reports found from recognised auditing firms.",
       "No Allora-specific models or datasets on HuggingFace.",
-      "Not listed on DeFiLlama \u2014 no independent TVL or protocol revenue data.",
+      "Not listed on DeFiLlama — no independent TVL or protocol revenue data.",
       "Exact X/Twitter follower count not confirmed.",
       "Real mainnet-only inference volume not publicly separated from testnet figures.",
       "Current validator count may have expanded beyond the initial 16 at launch.",
       "Governance participation rate and proposal count unknown.",
       "Total supply discrepancy: official blog says 1B max, ICO Drops reports 786.5M total supply.",
-      "No independent verification of 692M inferences claim \u2014 self-reported only."
+      "No independent verification of 692M inferences claim — self-reported only."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 70673
+        },
+        "run_by": "community-refresh"
+      }
     ]
   },
   "identity": {
@@ -107,7 +122,7 @@
     "pivot_history": "Originally founded as Upshot (2019) for NFT appraisal using peer prediction. Rebranded to Allora Labs February 2024, pivoting to decentralised AI inference."
   },
   "technical": {
-    "architecture_summary": "L1 blockchain on Cosmos SDK with CometBFT consensus. Network organised around Topics \u2014 sub-networks for specific prediction problems. Workers generate inferences, Forecast Workers predict accuracy, Reputers evaluate against ground truth, Validators secure chain. Inference Synthesis aggregates weighted predictions using regret-based system. Consumer contracts on Arbitrum One for cross-chain inference consumption.",
+    "architecture_summary": "L1 blockchain on Cosmos SDK with CometBFT consensus. Network organised around Topics — sub-networks for specific prediction problems. Workers generate inferences, Forecast Workers predict accuracy, Reputers evaluate against ground truth, Validators secure chain. Inference Synthesis aggregates weighted predictions using regret-based system. Consumer contracts on Arbitrum One for cross-chain inference consumption.",
     "consensus_mechanism": "CometBFT DPoS. 25% of emissions to validators, 75% to intelligence layer (workers, forecasters, reputers).",
     "what_is_onchain": "Topic creation, worker/reputer registration, staking, reward distribution, governance, emission calculations, inference fee payments.",
     "what_is_offchain": "ML model execution, inference generation, data processing, model training, ground truth provision.",
@@ -132,7 +147,7 @@
     "token_standard": "Native Cosmos SDK (bridged to Arbitrum)",
     "max_supply": 1000000000,
     "circulating_supply": 220000000,
-    "circulating_percent": 22.0,
+    "circulating_percent": 22,
     "fdv_usd": 93500000,
     "market_cap_usd": 25600000,
     "fdv_mcap_ratio": 3.65,
@@ -167,7 +182,7 @@
       }
     },
     "insider_allocation_percent": 48.55,
-    "critical_unlock_event": "November 2026 \u2014 48.55% of supply (Early Backers + Core Contributors) begins cliff unlock. First 33% tranche (~160M tokens) vs ~220M current circulating.",
+    "critical_unlock_event": "November 2026 — 48.55% of supply (Early Backers + Core Contributors) begins cliff unlock. First 33% tranche (~160M tokens) vs ~220M current circulating.",
     "token_utility": [
       "Inference purchases (PWYW model)",
       "Topic creation and participation",
@@ -176,7 +191,7 @@
       "Governance voting"
     ],
     "burn_mechanism": "None documented. Excess fees accumulate in Emissions Treasury.",
-    "emission_model": "Disinflationary \u2014 Bitcoin-like decreasing emissions curve.",
+    "emission_model": "Disinflationary — Bitcoin-like decreasing emissions curve.",
     "staking_apy": "~12% base, up to 50% with Allora Prime (9-month programme)",
     "unbonding_period": "21 days"
   },
@@ -194,7 +209,7 @@
     "workers_note": "Includes testnet participants, likely inflated by airdrop farming",
     "topics_active": 55,
     "inferences_reported": 692000000,
-    "inferences_note": "Cumulative since testnet \u2014 self-reported only",
+    "inferences_note": "Cumulative since testnet — self-reported only",
     "protocol_revenue": null,
     "revenue_note": "No independently verified revenue. PWYW model allows zero-fee consumption."
   },
@@ -209,7 +224,8 @@
       "Drift Protocol (perps agent vault)",
       "Alibaba Cloud (strategic integration)",
       "TRON Network (cross-chain forecasts)"
-    ]
+    ],
+    "telegram_members": 70673
   },
   "exchanges": [
     "Binance",
@@ -225,7 +241,7 @@
       "infrastructure_decentralisation": {
         "score": 9,
         "max": 20,
-        "evidence": "Cosmos SDK L1 with CometBFT is a solid foundation. Only 16 validators at mainnet launch \u2014 highly concentrated. Workers are permissionless but 288K figure includes testnet/airdrop farmers. Consumer contracts on Arbitrum add cross-chain reach. Off-chain ML execution introduces centralisation vectors without zkML fully deployed."
+        "evidence": "Cosmos SDK L1 with CometBFT is a solid foundation. Only 16 validators at mainnet launch — highly concentrated. Workers are permissionless but 288K figure includes testnet/airdrop farmers. Consumer contracts on Arbitrum add cross-chain reach. Off-chain ML execution introduces centralisation vectors without zkML fully deployed."
       },
       "governance_decentralisation": {
         "score": 7,
@@ -245,12 +261,12 @@
       "data_sovereignty": {
         "score": 10,
         "max": 15,
-        "evidence": "Workers retain ML model ownership \u2014 no upload of weights required. zkML claims to verify execution without exposing proprietary weights (implementation status unclear). Architecture designed for data sovereignty by default."
+        "evidence": "Workers retain ML model ownership — no upload of weights required. zkML claims to verify execution without exposing proprietary weights (implementation status unclear). Architecture designed for data sovereignty by default."
       },
       "open_source_transparency": {
         "score": 12,
         "max": 15,
-        "evidence": "Fully open source, Apache 2.0. 30+ repos, 1,127 commits. SDKs in Go, Python, TypeScript. Whitepaper public. No security audit \u2014 significant transparency gap."
+        "evidence": "Fully open source, Apache 2.0. 30+ repos, 1,127 commits. SDKs in Go, Python, TypeScript. Whitepaper public. No security audit — significant transparency gap."
       }
     },
     "total_score": 52,
@@ -264,7 +280,7 @@
       "token_utility": {
         "score": 14,
         "max": 20,
-        "evidence": "ALLO structurally required for inference purchases, topic creation, worker/reputer bonding, staking, governance. PWYW model creates demand-side uncertainty \u2014 consumers can set prices to zero. Genuine utility with revenue risk."
+        "evidence": "ALLO structurally required for inference purchases, topic creation, worker/reputer bonding, staking, governance. PWYW model creates demand-side uncertainty — consumers can set prices to zero. Genuine utility with revenue risk."
       },
       "value_accrual": {
         "score": 10,
@@ -284,8 +300,90 @@
       "liquidity_access": {
         "score": 12,
         "max": 15,
-        "evidence": "Binance, Coinbase, Kraken, OKX, KuCoin, Gate.io, MEXC. $21.8M daily volume on $25.6M market cap \u2014 excellent volume/mcap ratio. Tier-1 exchange coverage from day one."
+        "evidence": "Binance, Coinbase, Kraken, OKX, KuCoin, Gate.io, MEXC. $21.8M daily volume on $25.6M market cap — excellent volume/mcap ratio. Tier-1 exchange coverage from day one."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 134,
+      "forks": 132,
+      "open_issues": 32,
+      "contributors": 31,
+      "total_commits": 1127,
+      "total_repos": 17,
+      "discord_members": 223135,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        16,
+        9,
+        15,
+        22,
+        15,
+        31,
+        7,
+        12,
+        19,
+        6,
+        0,
+        1,
+        2,
+        7,
+        6,
+        7,
+        0,
+        2,
+        17,
+        0,
+        0,
+        0,
+        2,
+        0,
+        9,
+        9,
+        3,
+        2,
+        7,
+        9,
+        2,
+        7,
+        12,
+        1,
+        0,
+        0,
+        1,
+        9,
+        4,
+        3,
+        8,
+        3,
+        0,
+        2,
+        3,
+        4,
+        1,
+        0,
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 134,
+      "forks": 132,
+      "open_issues": null,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 30,
+      "discord_members": 223135,
+      "telegram_members": 70673,
+      "x_followers": null
+    }
+  ]
 }

@@ -1,0 +1,278 @@
+---
+/**
+ * ActivityPanel — Development activity visualization for project pages.
+ *
+ * Displays:
+ * 1. Area chart of weekly commits (52 weeks)
+ * 2. Metric cards with sparklines for stars, forks, contributors
+ * 3. Community metrics row with sparklines
+ *
+ * All pure SVG — no external chart library.
+ */
+
+import MetricCard from './MetricCard.astro';
+import Sparkline from './Sparkline.astro';
+import type { MetricsSnapshot } from '../data/project-research';
+
+interface Props {
+  weeklyCommits?: number[] | null;
+  metricsHistory?: MetricsSnapshot[] | null;
+  currentStars?: number | null;
+  currentForks?: number | null;
+  currentContributors?: number | null;
+  currentOpenIssues?: number | null;
+  lastCommitDate?: string | null;
+  discordMembers?: number | null;
+  telegramMembers?: number | null;
+  xFollowers?: number | null;
+}
+
+const {
+  weeklyCommits,
+  metricsHistory,
+  currentStars,
+  currentForks,
+  currentContributors,
+  currentOpenIssues,
+  lastCommitDate,
+  discordMembers,
+  telegramMembers,
+  xFollowers,
+} = Astro.props;
+
+// --- Commit chart data ---
+const commits = weeklyCommits?.filter(v => typeof v === 'number') ?? [];
+const hasCommitChart = commits.length >= 4;
+
+// Chart dimensions
+const chartW = 600;
+const chartH = 120;
+const chartPadX = 0;
+const chartPadTop = 8;
+const chartPadBottom = 20;
+const plotH = chartH - chartPadTop - chartPadBottom;
+const plotW = chartW - chartPadX * 2;
+
+// Build area path
+let areaPath = '';
+let linePath = '';
+let maxCommits = 0;
+let totalCommits = 0;
+
+if (hasCommitChart) {
+  maxCommits = Math.max(...commits, 1);
+  totalCommits = commits.reduce((a, b) => a + b, 0);
+  const step = plotW / (commits.length - 1);
+
+  const points = commits.map((val, i) => {
+    const x = chartPadX + i * step;
+    const y = chartPadTop + plotH - (val / maxCommits) * plotH;
+    return { x, y };
+  });
+
+  linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+  areaPath = linePath + ` L${points[points.length - 1].x.toFixed(1)},${chartH - chartPadBottom} L${points[0].x.toFixed(1)},${chartH - chartPadBottom} Z`;
+}
+
+// Recent 4-week vs prior 4-week trend
+let commitTrend: number | null = null;
+if (commits.length >= 8) {
+  const recent4 = commits.slice(-4).reduce((a, b) => a + b, 0);
+  const prior4 = commits.slice(-8, -4).reduce((a, b) => a + b, 0);
+  if (prior4 > 0) {
+    commitTrend = ((recent4 - prior4) / prior4) * 100;
+  }
+}
+
+// --- Sparkline trends from metrics_history ---
+function getTrend(key: keyof MetricsSnapshot): number[] {
+  if (!metricsHistory || metricsHistory.length < 2) return [];
+  return metricsHistory
+    .map((s) => s[key])
+    .filter((v): v is number => typeof v === 'number');
+}
+
+const starsTrend = getTrend('stars');
+const forksTrend = getTrend('forks');
+const contributorsTrend = getTrend('contributors');
+const discordTrend = getTrend('discord_members');
+const telegramTrend = getTrend('telegram_members');
+const xTrend = getTrend('x_followers');
+
+// Format numbers
+function fmt(n: number | null | undefined): string {
+  if (n == null) return '--';
+  if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
+  return n.toLocaleString('en-US');
+}
+
+// Check if we have any community data to show
+const hasCommunity = discordMembers != null || telegramMembers != null || xFollowers != null;
+
+// X-axis labels for commit chart (month abbreviations)
+const monthLabels: { x: number; label: string }[] = [];
+if (hasCommitChart) {
+  const now = new Date();
+  const weeksBack = commits.length;
+  const step = plotW / (commits.length - 1);
+  // Show ~6 evenly spaced month labels
+  const interval = Math.max(Math.floor(weeksBack / 6), 1);
+  for (let i = 0; i < weeksBack; i += interval) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - (weeksBack - 1 - i) * 7);
+    const label = date.toLocaleDateString('en-GB', { month: 'short' });
+    monthLabels.push({ x: chartPadX + i * step, label });
+  }
+}
+---
+
+<div class="activity-panel">
+  {/* --- Weekly Commit Activity Chart --- */}
+  {hasCommitChart && (
+    <div class="mb-6">
+      <div class="flex items-baseline justify-between mb-2">
+        <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider">
+          Commit Activity
+        </h3>
+        <div class="flex items-center gap-3 text-xs text-[var(--color-text-tertiary)]">
+          <span class="font-mono">{totalCommits.toLocaleString('en-US')} commits</span>
+          <span>last {commits.length} weeks</span>
+          {commitTrend != null && (
+            <span class:list={['font-mono', commitTrend >= 0 ? 'text-emerald-400' : 'text-red-400']}>
+              {commitTrend >= 0 ? '+' : ''}{commitTrend.toFixed(0)}% 4w trend
+            </span>
+          )}
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] p-3 overflow-hidden">
+        <svg
+          viewBox={`0 0 ${chartW} ${chartH}`}
+          class="w-full h-auto"
+          preserveAspectRatio="none"
+          aria-label={`Weekly commit activity: ${totalCommits} commits over ${commits.length} weeks`}
+          role="img"
+        >
+          <defs>
+            <linearGradient id="commitGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0.02" />
+            </linearGradient>
+          </defs>
+
+          {/* Grid lines */}
+          {[0.25, 0.5, 0.75].map(frac => (
+            <line
+              x1={chartPadX}
+              y1={chartPadTop + plotH * (1 - frac)}
+              x2={chartW - chartPadX}
+              y2={chartPadTop + plotH * (1 - frac)}
+              stroke="var(--color-border)"
+              stroke-width="0.5"
+              stroke-dasharray="4,4"
+              opacity="0.5"
+            />
+          ))}
+
+          {/* Filled area */}
+          <path d={areaPath} fill="url(#commitGradient)" />
+
+          {/* Line */}
+          <path d={linePath} fill="none" stroke="var(--color-accent)" stroke-width="1.5" stroke-linejoin="round" />
+
+          {/* Month labels */}
+          {monthLabels.map(({ x, label }) => (
+            <text
+              x={x}
+              y={chartH - 4}
+              text-anchor="middle"
+              fill="var(--color-text-tertiary)"
+              font-size="10"
+              font-family="var(--font-body)"
+            >
+              {label}
+            </text>
+          ))}
+
+          {/* Y-axis max label */}
+          <text
+            x={chartW - 2}
+            y={chartPadTop + 4}
+            text-anchor="end"
+            fill="var(--color-text-tertiary)"
+            font-size="9"
+            font-family="var(--font-mono, monospace)"
+          >
+            {maxCommits}/wk
+          </text>
+        </svg>
+      </div>
+    </div>
+  )}
+
+  {/* --- GitHub Metrics Row --- */}
+  {(currentStars != null || currentForks != null || currentContributors != null || currentOpenIssues != null) && (
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      {currentStars != null && (
+        <MetricCard
+          value={fmt(currentStars)}
+          label="Stars"
+          sparklineData={starsTrend}
+        />
+      )}
+      {currentForks != null && (
+        <MetricCard
+          value={fmt(currentForks)}
+          label="Forks"
+          sparklineData={forksTrend}
+        />
+      )}
+      {currentContributors != null && (
+        <MetricCard
+          value={fmt(currentContributors)}
+          label="Contributors"
+          sparklineData={contributorsTrend}
+        />
+      )}
+      {lastCommitDate && (
+        <MetricCard
+          value={lastCommitDate}
+          label="Last Commit"
+        />
+      )}
+    </div>
+  )}
+
+  {/* --- Community Metrics Row --- */}
+  {hasCommunity && (
+    <div>
+      <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2">
+        Community
+      </h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {discordMembers != null && (
+          <MetricCard
+            value={fmt(discordMembers)}
+            label="Discord"
+            sparklineData={discordTrend}
+          />
+        )}
+        {telegramMembers != null && (
+          <MetricCard
+            value={fmt(telegramMembers)}
+            label="Telegram"
+            sparklineData={telegramTrend}
+          />
+        )}
+        {xFollowers != null && (
+          <MetricCard
+            value={fmt(xFollowers)}
+            label="X Followers"
+            sparklineData={xTrend}
+          />
+        )}
+      </div>
+    </div>
+  )}
+</div>

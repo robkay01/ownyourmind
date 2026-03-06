@@ -3,8 +3,8 @@
     "project_id": "ocean",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Ocean Protocol official blog (blog.oceanprotocol.com) returned SSL certificate error -- blog posts referenced via search snippets and third-party reporting instead",
@@ -33,7 +33,21 @@
       "x_handle": "oceanprotocol",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 8396
+        },
+        "run_by": "community-refresh"
+      }
+    ]
   },
   "identity": {
     "name": "Ocean Protocol",
@@ -201,14 +215,14 @@
       "initial_allocation": [
         {
           "category": "Network Reward (Emissions)",
-          "percentage": 60.0,
+          "percentage": 60,
           "vesting_schedule": "Distributed over time as network rewards",
           "cliff": "None",
           "notes": "The largest allocation intended for long-term network incentives. However, 81% of total OCEAN supply (~1.13B tokens) was converted to FET/ASI during the ASI Alliance merger (July 2024), and the remaining OCEAN max supply is effectively ~267.8M."
         },
         {
           "category": "Founding Team",
-          "percentage": 20.0,
+          "percentage": 20,
           "vesting_schedule": "5-year vesting in 6 equal tranches",
           "cliff": "None specified",
           "notes": "Allocated to BigchainDB and DEX founding teams (10% each). 122.62M OCEAN -- now fully unlocked per ICODrops."
@@ -222,14 +236,14 @@
         },
         {
           "category": "Foundation",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "Distributed as data credits and community incentives",
           "cliff": "None",
           "notes": "Ocean tokens for community distribution, data credits for buying data and services."
         },
         {
           "category": "IEO (Bittrex International)",
-          "percentage": 4.0,
+          "percentage": 4,
           "vesting_schedule": "Fully unlocked at TGE",
           "cliff": "None",
           "notes": "56.4M OCEAN at $0.12/token. Raised $6.77M."
@@ -389,7 +403,7 @@
   },
   "community": {
     "discord_members": 56066,
-    "telegram_members": null,
+    "telegram_members": 8396,
     "x_followers": 170727,
     "github_contributors": null,
     "governance_participation_rate": null,
@@ -1247,6 +1261,88 @@
         "one third-party dataset referencing Ocean Protocol"
       ],
       "reliability_notes": "Only indirect reference found. No official Ocean Protocol organisation on HuggingFace."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 21,
+      "contributors": 20,
+      "total_commits": 3378,
+      "total_repos": 94,
+      "discord_members": 56066,
+      "telegram_members": null,
+      "x_followers": 170727,
+      "weekly_commits": [
+        1,
+        7,
+        7,
+        4,
+        2,
+        10,
+        2,
+        5,
+        0,
+        0,
+        6,
+        3,
+        2,
+        6,
+        1,
+        1,
+        1,
+        3,
+        10,
+        21,
+        14,
+        7,
+        1,
+        4,
+        2,
+        0,
+        3,
+        1,
+        5,
+        14,
+        16,
+        13,
+        7,
+        7,
+        3,
+        3,
+        1,
+        2,
+        1,
+        4,
+        2,
+        0,
+        0,
+        12,
+        12,
+        10,
+        6,
+        7,
+        2,
+        5,
+        8,
+        18
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 19,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 94,
+      "discord_members": 56066,
+      "telegram_members": 8396,
+      "x_followers": 170727
     }
   ]
 }

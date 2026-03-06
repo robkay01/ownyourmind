@@ -3,7 +3,7 @@
     "project_id": "aethir",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -26,9 +26,23 @@
       "All protocol code is closed source (0 public GitHub repos). Cannot independently verify technical claims about architecture, node count, or compute delivery.",
       "Node sale buyer concentration unknown — 74,673 nodes sold but distribution across unique buyers not disclosed.",
       "Current daily emissions rate not documented in public sources."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": null
+        },
+        "new_values": {
+          "community.telegram_members": 97165
+        },
+        "run_by": "community-refresh"
+      }
     ]
   },
-
   "identity": {
     "name": "Aethir",
     "ticker": "ATH",
@@ -45,7 +59,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -119,7 +132,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Three-role architecture: Containers (execute GPU compute workloads), Checkers (verify container performance and integrity), and Indexers (match users to available containers). Uses Proof of Capacity (rewarding standby GPU availability) and Proof of Delivery (rewarding completed compute tasks). Settlement and token operations on Ethereum/Arbitrum; actual GPU compute execution is off-chain.",
     "consensus_mechanism": "Custom Proof of Rendering/Capacity/Delivery — not a blockchain consensus mechanism. Uses Ethereum and Arbitrum for settlement and token operations.",
@@ -130,7 +142,9 @@
       "Arbitrum",
       "NVIDIA GPU hardware (H100, H200, A100, B200, B300)"
     ],
-    "smart_contract_languages": ["Solidity"],
+    "smart_contract_languages": [
+      "Solidity"
+    ],
     "open_source": false,
     "license": "Proprietary / closed source",
     "github_metrics": {
@@ -146,7 +160,6 @@
     "audits": [],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "Aethir Token",
     "ticker": "ATH",
@@ -170,7 +183,7 @@
       "initial_allocation": [
         {
           "category": "Checker Nodes & Compute Providers",
-          "percentage": 50.0,
+          "percentage": 50,
           "vesting_schedule": "Linear vesting over time",
           "cliff": "None",
           "notes": "Largest allocation — rewards for network compute provision"
@@ -205,14 +218,14 @@
         },
         {
           "category": "Airdrop",
-          "percentage": 6.0,
+          "percentage": 6,
           "vesting_schedule": "Distributed at/post-TGE",
           "cliff": "None",
           "notes": "Community distribution via airdrop campaigns"
         },
         {
           "category": "Advisors",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "Not documented",
           "cliff": "Not documented",
           "notes": ""
@@ -283,7 +296,6 @@
     "token_model_classification": "Utility token with compute payment, staking, and node operator incentive functions. No fee distribution or buy-and-burn mechanism.",
     "tokenomics_notes": "50% allocation to compute providers is the largest single allocation and vests over time, creating sustained sell pressure. Node sale raised $148M which is significant relative to the project's current market cap. 29% insider allocation (team 12.5% + investors 11.5% + advisors 5%). Public sale was negligible at 0.17% of supply. Closed source raises transparency concerns about how emissions are actually distributed."
   },
-
   "participation": {
     "methods": [
       {
@@ -354,7 +366,6 @@
       "grants_url": "https://ecosystem.aethir.com"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -372,10 +383,9 @@
     "metrics_date": "2025-12-31",
     "usage_notes": "All usage and revenue metrics are self-reported by Aethir. 440,000+ GPU containers across 94 countries. 150+ enterprise clients. ARR claimed at $166M as of Q3 2025. Revenue efficiency claimed to outpace Filecoin 135x, Render 455x, Bittensor 14x by Rev/MC ratio — these comparisons are misleading given different business models. Not independently verifiable as project is not listed on DeFiLlama."
   },
-
   "community": {
     "discord_members": 310000,
-    "telegram_members": null,
+    "telegram_members": 97165,
     "x_followers": null,
     "github_contributors": 0,
     "governance_participation_rate": "Unknown — governance mechanism not documented",
@@ -389,7 +399,6 @@
     "sentiment_summary": "Generally positive. Strong enterprise adoption narrative drives community enthusiasm. Community engaged through Aethir Tribe program (800+ content creators) and recurring airdrop campaigns. Revenue claims are the primary bull case.",
     "community_notes": "Discord member count is high (~310K) but engagement depth unclear. Aethir Tribe content creator programme has 800+ members, suggesting active community marketing efforts. No public GitHub activity to assess developer community."
   },
-
   "freedom_score": {
     "total_score": 30,
     "max_possible": 100,
@@ -428,7 +437,6 @@
     "freedom_grade": "F",
     "freedom_summary": "Aethir operates substantial GPU infrastructure but is fundamentally a centralised enterprise with a token. Zero open-source code, admin-controlled token contract, no meaningful governance, and closed architecture undermine all decentralisation claims. The project scores well on geographic distribution of hardware but fails on every transparency and sovereignty metric. Freedom Score 30/100 places it firmly in Grade F: centralised project with a token bolted on."
   },
-
   "returns_score": {
     "total_score": 62,
     "max_possible": 100,
@@ -460,10 +468,11 @@
       }
     },
     "returns_grade": "C",
-    "risk_flags": ["regulatory_risk"],
+    "risk_flags": [
+      "regulatory_risk"
+    ],
     "returns_summary": "Strong self-reported revenue from enterprise GPU compute is the standout metric — $127.8M annual revenue would place Aethir among the highest-revenue DeAI projects. But significant supply overhang (58% locked), undisclosed staking yields, closed-source code, and no direct value accrual mechanism to token holders limit the returns case. Revenue figures need independent verification. Grade C reflects a project with real business traction but structural tokenomics weaknesses and transparency gaps."
   },
-
   "assessment": {
     "what_works_today": [
       "Enterprise GPU compute with real customers generating claimed $127.8M annual revenue",
@@ -512,7 +521,6 @@
     "outlook": "Aethir has the strongest revenue story in decentralised AI but the weakest decentralisation credentials among compute infrastructure projects. If the self-reported revenue figures are accurate, this is a profitable enterprise GPU business with a token bolted on. The fundamental question for investors is whether the token adds value for holders beyond speculation — with no fee distribution, no burn mechanism, undisclosed staking yields, and 58% of supply still vesting, the structural case for token value appreciation beyond revenue narrative is weak. For sovereignty-focused participants, the closed-source architecture and admin-controlled contracts make Aethir incompatible with decentralisation values.",
     "overall_assessment": "Profitable enterprise with a token, not a decentralised protocol. Strong revenue, weak sovereignty. Quadrant C — potentially profitable but centralised."
   },
-
   "sources": [
     {
       "id": "S001",
@@ -673,6 +681,21 @@
       "tier": 3,
       "accessed": "2026-03-06",
       "notes": "Built In Singapore — Aethir company listing, team size estimate ~50-100"
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "contributors": 0,
+      "total_commits": 0,
+      "total_repos": 0,
+      "discord_members": 310000,
+      "telegram_members": 97165,
+      "x_followers": null
     }
   ]
 }

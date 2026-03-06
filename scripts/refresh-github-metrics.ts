@@ -31,6 +31,7 @@ interface GitHubUpdate {
   contributors: number;
   total_commits: number;
   total_repos: number;
+  weekly_commits: number[] | null;
 }
 
 const headers: Record<string, string> = {
@@ -61,6 +62,26 @@ function parseLastPage(linkHeader: string | null): number | null {
   const match = linkHeader.match(/&page=(\d+)>;\s*rel="last"/);
   if (!match) return null;
   return parseInt(match[1], 10);
+}
+
+async function fetchWeeklyCommits(org: string, repo: string): Promise<number[] | null> {
+  const res = await githubFetch(`https://api.github.com/repos/${org}/${repo}/stats/commit_activity`);
+
+  if (res.status === 202) {
+    // GitHub is computing stats — wait and retry once
+    console.log('    Stats being computed, waiting 3s and retrying...');
+    await new Promise((r) => setTimeout(r, 3000));
+    const retry = await githubFetch(`https://api.github.com/repos/${org}/${repo}/stats/commit_activity`);
+    if (!retry.ok) return null;
+    const data = await retry.json();
+    if (!Array.isArray(data)) return null;
+    return data.map((w: { total: number }) => w.total);
+  }
+
+  if (!res.ok) return null;
+  const data = await res.json();
+  if (!Array.isArray(data)) return null;
+  return data.map((w: { total: number }) => w.total);
 }
 
 async function fetchGitHubMetrics(org: string, repo: string): Promise<GitHubUpdate> {
@@ -99,6 +120,9 @@ async function fetchGitHubMetrics(org: string, repo: string): Promise<GitHubUpda
     totalRepos = lastPage ?? 1;
   }
 
+  // 5. Weekly commit activity (52 weeks)
+  const weeklyCommits = await fetchWeeklyCommits(org, repo);
+
   return {
     stars: repoData.stargazers_count ?? 0,
     forks: repoData.forks_count ?? 0,
@@ -107,6 +131,7 @@ async function fetchGitHubMetrics(org: string, repo: string): Promise<GitHubUpda
     contributors,
     total_commits: totalCommits,
     total_repos: totalRepos,
+    weekly_commits: weeklyCommits,
   };
 }
 
@@ -127,6 +152,7 @@ function buildSnapshot(metrics: GitHubUpdate, data: Record<string, any>): Record
     discord_members: data.community?.discord_members ?? null,
     telegram_members: data.community?.telegram_members ?? null,
     x_followers: data.community?.x_followers ?? null,
+    weekly_commits: metrics.weekly_commits ?? null,
   };
 }
 

@@ -3,7 +3,7 @@
     "project_id": "iotex",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -23,9 +23,23 @@
       "W3bstream audit details not found separately from core protocol audit.",
       "Exact number of active validators beyond '60+ delegates' not confirmed.",
       "Real yield after inflation not precisely calculable."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 24065
+        },
+        "new_values": {
+          "community.telegram_members": 24057
+        },
+        "run_by": "community-refresh"
+      }
     ]
   },
-
   "identity": {
     "name": "IoTeX",
     "ticker": "IOTX",
@@ -42,7 +56,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -107,7 +120,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "EVM-compatible L1 with Roll-DPoS consensus (DPoS + PBFT + VRFs). 36 consensus delegates, 24 randomly selected each epoch. 2.5s block time, 1-block finality, 1000 TPS. Core stack: IoTeX L1, ioID (device identity via DIDs/VCs as NFTs), W3bstream (ZK-verified device data), QuickSilver (AI agent framework), DIMs (modular DePIN tooling).",
     "consensus_mechanism": "Roll-DPoS — 36 community-elected consensus delegates, 24 randomly selected per epoch via VRF/BLS. Block time 2.5s, instant finality.",
@@ -132,7 +144,6 @@
       }
     ]
   },
-
   "tokenomics": {
     "token_name": "IOTX",
     "token_standard": "Native coin (also ERC-20 on Ethereum)",
@@ -143,11 +154,26 @@
     "market_cap_usd": 51850000,
     "fdv_mcap_ratio": 1.05,
     "allocation": {
-      "ecosystem_fund": { "percent": 30, "vesting": "Gradually over 3 years" },
-      "foundation": { "percent": 25, "vesting": "Gradually over 3 years" },
-      "private_sale": { "percent": 24, "vesting": "25% TGE, 9-month cliff, quarterly" },
-      "team": { "percent": 15, "vesting": "4 years from Feb 2019" },
-      "community_rewards": { "percent": 6, "vesting": "Gradually over 3 years" }
+      "ecosystem_fund": {
+        "percent": 30,
+        "vesting": "Gradually over 3 years"
+      },
+      "foundation": {
+        "percent": 25,
+        "vesting": "Gradually over 3 years"
+      },
+      "private_sale": {
+        "percent": 24,
+        "vesting": "25% TGE, 9-month cliff, quarterly"
+      },
+      "team": {
+        "percent": 15,
+        "vesting": "4 years from Feb 2019"
+      },
+      "community_rewards": {
+        "percent": 6,
+        "vesting": "Gradually over 3 years"
+      }
     },
     "insider_allocation_percent": 40,
     "vesting_mostly_complete": true,
@@ -162,7 +188,6 @@
     "staking_apy": "4-11% depending on delegate",
     "emission_model": "Disinflationary with IoTeX 2.0 introducing new inflationary staking offset by burns."
   },
-
   "market_data": {
     "price_usd": 0.00548,
     "ath_usd": 0.2556,
@@ -170,7 +195,6 @@
     "daily_volume_usd": 4660000,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": 8900,
     "daily_transactions": 250000,
@@ -181,14 +205,12 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "3,010 ioID device owners. 218 ecosystem projects including 51 DePIN. DePINscan tracks 280+ DePIN projects globally."
   },
-
   "community": {
-    "telegram_members": 24065,
+    "telegram_members": 24057,
     "x_followers": 229315,
     "discord_members": null,
     "twitter_handle": "@iotex_io"
   },
-
   "exchanges": [
     "Binance",
     "Coinbase",
@@ -198,7 +220,6 @@
     "Gate.io",
     "MEXC"
   ],
-
   "participation": {
     "methods": [
       {
@@ -212,7 +233,9 @@
         "type": "node_operation",
         "description": "Run an IoTeX delegate node. Top 36 by stake produce blocks.",
         "technical_skill_required": "advanced",
-        "barriers_to_entry": ["Must attract sufficient stake delegation"]
+        "barriers_to_entry": [
+          "Must attract sufficient stake delegation"
+        ]
       },
       {
         "type": "building",
@@ -224,11 +247,12 @@
         "type": "governance",
         "description": "Vote on IIPs via Snapshot. Any IOTX holder can vote.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Must hold IOTX"]
+        "barriers_to_entry": [
+          "Must hold IOTX"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 64,
     "max_possible": 100,
@@ -267,7 +291,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 46,
     "max_possible": 100,
@@ -299,5 +322,87 @@
         "evidence": "Binance, Coinbase, Kraken, Robinhood, KuCoin, Gate.io, MEXC. 40+ platforms. $4.66M daily volume. Good exchange coverage for $52M market cap. PayPal/Venmo fiat on-ramps."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 1584,
+      "forks": 364,
+      "open_issues": 230,
+      "contributors": 112,
+      "total_commits": 3598,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 24065,
+      "x_followers": 229315,
+      "weekly_commits": [
+        2,
+        2,
+        3,
+        9,
+        2,
+        5,
+        9,
+        1,
+        6,
+        1,
+        10,
+        5,
+        4,
+        2,
+        3,
+        4,
+        1,
+        3,
+        2,
+        3,
+        4,
+        5,
+        2,
+        5,
+        3,
+        5,
+        0,
+        0,
+        3,
+        5,
+        0,
+        1,
+        5,
+        0,
+        1,
+        2,
+        1,
+        4,
+        4,
+        6,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        9,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 1584,
+      "forks": 365,
+      "open_issues": null,
+      "contributors": null,
+      "total_commits": null,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 24057,
+      "x_followers": 229315
+    }
+  ]
 }
