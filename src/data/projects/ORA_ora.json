@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "project_id": "ora",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "ora-io",
+      "github_primary_repo": "opml",
+      "coingecko_id": "ora-coin",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "ORAProtocol",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "Full token allocation breakdown not publicly disclosed — only 10% (Points Programme) known.",
+      "Vesting schedule not publicly documented.",
+      "No public smart contract or opML audit reports found.",
+      "Twitter, Discord, Telegram exact member counts not verified.",
+      "Dune dashboard returned 403 — exact transaction counts and revenue not accessible.",
+      "Entity jurisdiction and corporate registration details not found.",
+      "Fee distribution mechanism to ORA token holders unclear.",
+      "HuggingFace profile exists but has 0 public models and 0 datasets."
+    ]
+  },
+
+  "identity": {
+    "name": "Ora Protocol",
+    "ticker": "ORA",
+    "category": "AI Infrastructure",
+    "subcategory": "Verifiable AI Oracle",
+    "tagline": "Ethereum's Trustless AI",
+    "one_liner": "Verifiable oracle protocol bringing AI inference on-chain via optimistic machine learning (opML), enabling smart contracts to access LLaMA, Stable Diffusion, and other models with fraud-proof verification.",
+    "website": "https://ora.io",
+    "documentation_url": "https://docs.ora.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/ora-io",
+    "chain": "Ethereum, Optimism, Base, Arbitrum, Solana, Hyperliquid",
+    "launch_date": "2024-11-19",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Kartin Wong",
+        "role": "Co-Founder",
+        "background": "BS Information Science & Technology, University of Arizona. Former software engineer at Google (cryptography and AI) and TikTok. Started crypto ~2011.",
+        "doxxed": true
+      },
+      {
+        "name": "Norman Von",
+        "role": "Co-Founder & CTO",
+        "background": "Background in supercomputer architecture. Whitehat hacker. Authored ERC-7007 and ERC-7641 standards.",
+        "doxxed": true
+      },
+      {
+        "name": "Suede Kam",
+        "role": "Co-Founder",
+        "background": "Limited public information available.",
+        "doxxed": false
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": null,
+    "entity_jurisdiction": null,
+    "notable_backers": [
+      "Polychain Capital",
+      "HashKey Capital",
+      "HongShan (ex-Sequoia China)",
+      "dao5",
+      "SevenX Ventures",
+      "Foresight Ventures"
+    ],
+    "funding_raised": {
+      "total_usd": 23000000,
+      "rounds": [
+        {
+          "round_type": "pre-seed",
+          "amount_usd": 3000000,
+          "date": "2023-01-01",
+          "lead_investor": "HongShan (ex-Sequoia China), dao5"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 20000000,
+          "date": "2024-06-01",
+          "lead_investor": "Polychain Capital, HashKey Capital",
+          "notes": "Series A equivalent"
+        }
+      ]
+    },
+    "key_team": [
+      {
+        "name": "Cathie So",
+        "role": "Chief Scientist",
+        "background": "Joined Jan 2024. Previously PSE Team at Ethereum Foundation. Co-founded 852dev.xyz."
+      },
+      {
+        "name": "Suning Yao",
+        "role": "Research Engineer (founding team)",
+        "background": "Authored whitepaper and 15+ research works. Co-authored ERC-6150. Tokenomics design."
+      }
+    ]
+  },
+
+  "technical": {
+    "architecture_summary": "Verifiable AI oracle using opML (optimistic machine learning) — off-chain ML computation with on-chain fraud-proof verification. Optimistic execution with interactive dispute game using bisection protocol. Fraud Proof VM for single-step on-chain verification. AnyTrust security (one honest validator sufficient). Core products: OAO (Onchain AI Oracle), IMO (Initial Model Offering via ERC-7641), RMS (Resilient Model Services), opAgent (on-chain perpetual agents), Pump.ai (permissionless agent creation).",
+    "consensus_mechanism": "N/A — uses host chain consensus. opML adds optimistic verification layer with fraud proofs.",
+    "what_is_onchain": "AI inference results, fraud proofs, OAO oracle contracts, IMO token contracts (ERC-7641), agent smart contract wallets.",
+    "what_is_offchain": "ML model inference execution, node computation, model hosting, RMS API serving.",
+    "key_dependencies": [
+      "Ethereum",
+      "Optimism",
+      "Base",
+      "Arbitrum"
+    ],
+    "github_metrics": {
+      "total_repos": 44,
+      "primary_repo": "opml",
+      "stars": 315,
+      "forks": 73,
+      "license": "MIT",
+      "last_commit": "2024-12"
+    },
+    "audits": [],
+    "erc_standards": [
+      "ERC-7641: Intrinsic RevShare Token",
+      "ERC-7007: Verifiable AI-Generated Content Token",
+      "ERC-6150: Hierarchical NFT standard"
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "ORA",
+    "token_standard": "ERC-20",
+    "contract_address": "0x33333333FEde34409Fb7f67c6585047E1F653333",
+    "max_supply": 333333333,
+    "circulating_supply": 56300000,
+    "circulating_percent": 16.9,
+    "fdv_usd": 2600000,
+    "market_cap_usd": 500000,
+    "fdv_mcap_ratio": 5.2,
+    "allocation": {
+      "points_programme": { "percent": 10, "vesting": "Unknown" },
+      "remaining": { "percent": 90, "vesting": "Not publicly disclosed" }
+    },
+    "insider_allocation_percent": null,
+    "vesting_mostly_complete": false,
+    "token_utility": [
+      "Node staking (validators and submitters)",
+      "IMO participation",
+      "Protocol governance",
+      "Agent creation on Pump.ai (1 ORA minimum)",
+      "OAO inference fees (Model Fee + Callback Fee + Network Fee)"
+    ],
+    "burn_mechanism": "None documented for ORA token. ERC-7641 burn applies to IMO tokens (OLM), not ORA.",
+    "staking_apy": "Staking programme has concluded.",
+    "emission_model": "Fixed supply of 333.3M. Only 16.9% circulating — significant future unlock risk.",
+    "tge_note": "TGE November 19, 2024 on Uniswap V3. 100% of initial float made available for community purchase — no insider allocation at TGE."
+  },
+
+  "market_data": {
+    "price_usd": 0.009,
+    "ath_usd": 5.38,
+    "ath_date": "2024-11-19",
+    "daily_volume_usd": 300,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": 500,
+    "revenue_annual_usd": null,
+    "metrics_source": "Alea Research, project docs",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "180,000+ AI inference calls processed. 500+ active nodes. 20+ projects building on platform. Models supported: LLaMA 2/3, Stable Diffusion, DeepSeek, Mistral, Qwen."
+  },
+
+  "community": {
+    "telegram_members": null,
+    "x_followers": null,
+    "discord_members": null,
+    "twitter_handle": "@ORAProtocol"
+  },
+
+  "exchanges": [
+    "Uniswap V3",
+    "PancakeSwap"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run a Tora client node to perform AI inference and submit results. Stake ORA as validator or submitter.",
+        "technical_skill_required": "advanced",
+        "barriers_to_entry": ["ORA staking required", "GPU hardware for inference"]
+      },
+      {
+        "type": "building",
+        "description": "Integrate OAO into smart contracts for verifiable AI inference. Import IAIOracle interface in Solidity.",
+        "technical_skill_required": "advanced",
+        "barriers_to_entry": ["Solidity development skills"]
+      },
+      {
+        "type": "using",
+        "description": "Create AI agents on Pump.ai (1 ORA minimum). Use RMS for decentralised AI model access.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Requires ORA tokens"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 48,
+    "max_possible": 100,
+    "freedom_grade": "F",
+    "freedom_summary": "Ora Protocol has genuine technical innovation (opML, ERC standards, verifiable AI inference) but scores poorly on freedom due to opaque token distribution, no verifiable governance, no audits, and significant centralisation in team control. The technology is real but the project's transparency is lacking for a $23M-funded protocol.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "500+ nodes running Tora client for inference. opML uses optimistic verification with AnyTrust assumption (one honest validator sufficient). Inference runs off-chain. No evidence of node diversity or geography. Validator set composition unknown."
+      },
+      "governance_decentralisation": {
+        "score": 5,
+        "max": 20,
+        "evidence": "Token has governance utility per docs but no evidence of active DAO, governance proposals, or on-chain voting. Team retains significant control. No governance forum found."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "TGE was community-first (100% float to community). But only 16.9% circulating vs total supply. Full allocation not disclosed — where are the other 83%? $23M raised from VCs with undisclosed terms."
+      },
+      "censorship_resistance": {
+        "score": 9,
+        "max": 15,
+        "evidence": "opML AnyTrust model provides reasonable censorship resistance — one honest validator sufficient. On-chain fraud proofs. But off-chain inference means computation itself could be censored. Model selection currently limited."
+      },
+      "data_sovereignty": {
+        "score": 7,
+        "max": 15,
+        "evidence": "AI inference inputs and outputs are on-chain and verifiable. ERC-7007 enables provenance. But models run off-chain. No user data ownership mechanisms beyond standard blockchain transparency."
+      },
+      "open_source_transparency": {
+        "score": 10,
+        "max": 15,
+        "evidence": "44 public repos. Core opml repo MIT licensed (315 stars). ERC standards publicly authored. Whitepaper and 15+ research papers published. Some repos lack licences. OAO repo has no licence specified. No audits found."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 42,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Multiple use cases: node staking, IMO participation, agent creation (Pump.ai), governance, inference fees. Token velocity problem — most uses transactional. ORA points dilute direct token demand. Staking programme already concluded."
+      },
+      "value_accrual": {
+        "score": 8,
+        "max": 20,
+        "evidence": "OAO charges fees (Model + Callback + Network) but fee flow to ORA holders unclear. ERC-7641 revenue sharing exists for IMO tokens (OLM), not ORA itself. No buy-back or burn for ORA documented. Revenue exists but accrual to ORA holders unproven."
+      },
+      "supply_dynamics": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Fixed 333.3M supply. Only 16.9% circulating — massive unlock risk. Full vesting schedule not disclosed. Token down 99.85% from ATH. No burn mechanism for ORA. FDV/MCap ratio 5.2x signals significant dilution ahead."
+      },
+      "revenue_sustainability": {
+        "score": 8,
+        "max": 25,
+        "evidence": "180K inference calls and 20+ projects show real usage. RMS competitive pricing. Pump.ai for agent creation. But $300/day trading volume and ~$500K market cap suggest negligible revenue. Staking programme ended. Revenue model exists at tiny scale."
+      },
+      "liquidity_access": {
+        "score": 4,
+        "max": 15,
+        "evidence": "Only on Uniswap V3 and PancakeSwap. No major CEX listings. Daily volume $128-305. Effectively illiquid. Available on Ethereum, Base, Solana, Hyperliquid but thinly traded everywhere."
+      }
+    }
+  }
+}
