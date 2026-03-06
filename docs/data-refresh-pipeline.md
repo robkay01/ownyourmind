@@ -2,6 +2,58 @@
 
 How project data stays fresh on OwnYourMind.
 
+## What you need to do each week
+
+**Short version:** A PR appears on GitHub every Monday. Review it, merge it, done.
+
+### The weekly routine
+
+1. **Monday morning** — GitHub Actions runs at 08:00 UTC (18:00 AEST). It fetches fresh GitHub metrics and community numbers for all projects, then opens a pull request.
+
+2. **Check your GitHub notifications** — You'll see a PR titled "data: weekly GitHub and community metrics refresh" from the `auto/weekly-metrics-refresh` branch.
+
+3. **Review the PR diff** — Scan for anything obviously wrong:
+   - Stars/forks/contributors dropping to 0 (rate limit hit — reject the PR)
+   - Telegram numbers looking wildly different from last week (scraper may have broken)
+   - Any project that was previously tracked now showing as "SKIP" in the workflow logs
+
+4. **Merge the PR** — Click "Merge pull request" on GitHub. Cloudflare Pages will auto-deploy with the fresh data.
+
+5. **That's it.** The site is now showing updated GitHub activity charts, sparklines, and community numbers.
+
+### If you miss a week
+
+Nothing breaks. The data just stays at the previous week's values. The next Monday run will catch up. Market data (prices, sparklines) refreshes on every build regardless.
+
+### If no PR appears
+
+Check https://github.com/robkay01/ownyourmind/actions — the workflow may have failed. Common reasons:
+- GitHub API rate limit hit (unlikely with automatic token, but possible)
+- No data actually changed (rare, but means no PR is created — this is fine)
+- The "Allow GitHub Actions to create PRs" setting was turned off
+
+### When you add a new project
+
+After creating the research JSON, run the backfill to get historical commit data:
+```bash
+GITHUB_TOKEN=$(gh auth token) npm run backfill:github
+```
+This populates the 52-week commit chart for the new project. The weekly refresh handles everything after that.
+
+### Quarterly (manual)
+
+The automated pipeline handles GitHub and community metrics. These still need manual updates roughly every 3 months:
+- X/Twitter follower counts (no free API)
+- TVL from DeFiLlama
+- On-chain revenue figures
+- Usage metrics (DAU, transactions)
+- Freedom and Returns scores (editorial judgement)
+- Prose content in editorials
+
+Run `npm run check:staleness` to see which projects are overdue.
+
+---
+
 ## Overview
 
 | System | What it refreshes | Schedule | Trigger |
