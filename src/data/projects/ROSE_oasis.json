@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "project_id": "oasis-network",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "oasisprotocol",
+      "github_primary_repo": "oasis-core",
+      "coingecko_id": "oasis-network",
+      "discord_server_id": null,
+      "telegram_username": "oasisprotocolcommunity",
+      "x_handle": "OasisProtocol",
+      "defillama_slug": "oasis-sapphire"
+    },
+    "research_gaps": [
+      "No publicly verifiable core protocol audits from top-tier firms (Trail of Bits, NCC Group, Quantstamp). Private bug bounty programme exists but public audit reports not found.",
+      "Team size unclear — estimates range from ~10 to ~40. Significant downsizing signals if Tracxn data (~10) is accurate.",
+      "No meaningful fee or revenue data on DeFiLlama beyond minimal TVL ($288K).",
+      "X/Twitter follower count not confirmed.",
+      "HuggingFace: 'Oasis-AI' organisation exists but unclear connection to Oasis Network blockchain. No confirmed HuggingFace presence for the protocol.",
+      "Ecosystem fund ($235M) deployment details and ROI not publicly tracked.",
+      "Exact current staking APY not confirmed — range of 2-20% cited but declining over time.",
+      "ICO investor vesting completion dates not fully documented."
+    ]
+  },
+
+  "identity": {
+    "name": "Oasis Network",
+    "ticker": "ROSE",
+    "category": "Data & Privacy",
+    "subcategory": "Confidential Smart Contracts",
+    "tagline": "Privacy-first Layer 1 blockchain",
+    "one_liner": "Layer 1 blockchain with confidential smart contracts via TEE-powered ParaTimes, enabling private DeFi, AI agents, and data tokenisation.",
+    "website": "https://oasis.net",
+    "documentation_url": "https://docs.oasis.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/oasisprotocol",
+    "chain": "Oasis Network (own L1)",
+    "launch_date": "2020-11-18",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Dawn Song",
+        "role": "Co-Founder & CEO",
+        "background": "Professor of EECS at UC Berkeley. MacArthur Fellow (2010), Guggenheim Fellow. Most-cited scholar in computer security (AMiner Award). Research in deep learning and security.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Bobby Jaros",
+        "role": "Co-Founder & COO",
+        "background": "Operations and business development.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Noah Johnson",
+        "role": "Co-Founder & CPO",
+        "background": "Product development.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Raymond Cheng",
+        "role": "Co-Founder & CTO",
+        "background": "Technical architecture and engineering.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 25,
+    "entity_name": "Oasis Labs Inc. / Oasis Foundation",
+    "entity_jurisdiction": "Berkeley, California, USA",
+    "notable_backers": [
+      "Andreessen Horowitz (a16z crypto)",
+      "Polychain Capital",
+      "Pantera Capital",
+      "Binance Labs (now YZi Labs)",
+      "Accel",
+      "Foundation Capital",
+      "Dragonfly Capital",
+      "Electric Capital",
+      "Jump Capital"
+    ],
+    "funding_raised": {
+      "total_usd": 46000000,
+      "rounds": [
+        {
+          "round_type": "Private Sale",
+          "amount_usd": 46000000,
+          "date": "2018-07-01",
+          "lead_investor": "Andreessen Horowitz (a16z crypto)",
+          "valuation_usd": null,
+          "notes": "Token price $0.02. Participants include Polychain, Pantera, Binance Labs, Accel, Foundation Capital."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Two-layer architecture: Consensus Layer (CometBFT PoS with 120 validator slots) and ParaTime Layer (parallel runtimes for execution). Three ParaTimes: Sapphire (confidential EVM via Intel SGX TEEs, 6-second finality), Cipher (confidential Wasm), Emerald (non-confidential EVM). ROFL (Runtime Off-chain Logic) enables off-chain computation with on-chain attestation. Discrepancy detection reduces overhead versus full replication.",
+    "consensus_mechanism": "Proof of Stake via CometBFT (formerly Tendermint). 120 validator committee.",
+    "what_is_onchain": "Smart contract execution (EVM and Wasm), staking, governance, confidential state in Sapphire/Cipher ParaTimes.",
+    "what_is_offchain": "ROFL off-chain compute, TEE attestation, data processing inside SGX enclaves.",
+    "key_dependencies": [
+      "Intel SGX (TEE hardware)",
+      "CometBFT (consensus)",
+      "ParaTime SDK"
+    ],
+    "smart_contract_languages": ["Solidity (Sapphire/Emerald)", "Rust (Cipher/Wasm)"],
+    "open_source": true,
+    "license": "Apache 2.0",
+    "github_metrics": {
+      "total_repos": 80,
+      "primary_repo_url": "https://github.com/oasisprotocol/oasis-core",
+      "total_commits": 10228,
+      "contributors": 57,
+      "last_commit_date": "2026-03-05",
+      "stars": 369,
+      "forks": 149,
+      "open_issues": null
+    },
+    "audits": [
+      {
+        "auditor": "Verilog Audit (ecosystem partner)",
+        "date": null,
+        "scope": "Ecosystem smart contracts",
+        "result_summary": "Partnership for ecosystem contract auditing. No public core protocol audit report found.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "ROSE",
+    "ticker": "ROSE",
+    "token_standard": "Native (Oasis Network L1)",
+    "token_type": "utility",
+    "token_utility": [
+      "Transaction fees (gas) across all ParaTimes",
+      "Staking for PoS network security (validators and delegators)",
+      "Governance participation",
+      "Delegation to validators"
+    ],
+    "supply": {
+      "max_supply": 10000000000,
+      "total_supply": 10000000000,
+      "circulating_supply": 7500000000,
+      "circulating_supply_date": "2026-03-06",
+      "circulating_percentage": 75.0
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Staking Rewards",
+          "percentage": 23.5,
+          "vesting_schedule": "Distributed over time to validators/delegators",
+          "cliff": "None",
+          "notes": "PoS emission rewards"
+        },
+        {
+          "category": "Backers",
+          "percentage": 23.0,
+          "vesting_schedule": "Vesting extends to ~2030",
+          "cliff": "Not documented",
+          "notes": "a16z, Polychain, Pantera, Binance Labs, Accel"
+        },
+        {
+          "category": "Core Contributors",
+          "percentage": 20.0,
+          "vesting_schedule": "Vesting extends to ~2030",
+          "cliff": "Not documented",
+          "notes": "Team and early contributors"
+        },
+        {
+          "category": "Community & Ecosystem",
+          "percentage": 18.5,
+          "vesting_schedule": "Various — grants, ecosystem fund",
+          "cliff": "None",
+          "notes": "$235M ecosystem fund for grants and development"
+        },
+        {
+          "category": "Foundation Endowment",
+          "percentage": 10.0,
+          "vesting_schedule": "Foundation controlled",
+          "cliff": "None",
+          "notes": "Oasis Foundation operations"
+        },
+        {
+          "category": "Strategic Partners & Reserve",
+          "percentage": 4.7,
+          "vesting_schedule": "Not documented",
+          "cliff": "Not documented",
+          "notes": "Strategic partnerships"
+        },
+        {
+          "category": "Lockdrops",
+          "percentage": 0.3,
+          "vesting_schedule": "Completed",
+          "cliff": "None",
+          "notes": "ROSE Farm and ROSE Cultivate"
+        }
+      ],
+      "distribution_method": "Private sale + staking emissions + ecosystem fund"
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "Staking rewards decline over first 4 years, then stabilise",
+      "next_major_emission_event": null,
+      "next_event_date": null,
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "PoS validator staking (delegated)",
+      "minimum_stake": 100,
+      "lock_up_period": "~14-day unbonding period",
+      "current_apy_nominal": 5.0,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Slashing for double-signing only (minimum 100 ROSE penalty)",
+        "Must sign 75%+ of blocks per epoch for rewards",
+        "14-day unbonding period"
+      ],
+      "slashing_conditions": "Double-signing only. Minimum 100 ROSE slashing penalty."
+    },
+    "market_data": {
+      "price_usd": 0.012,
+      "market_cap_usd": 92000000,
+      "fully_diluted_valuation_usd": 122000000,
+      "twenty_four_hour_volume_usd": 11500000,
+      "all_time_high_usd": 0.60,
+      "all_time_high_date": "2022-01-01",
+      "all_time_low_usd": null,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Binance",
+        "KuCoin",
+        "Bybit",
+        "MEXC",
+        "Coinbase",
+        "Gate.io"
+      ],
+      "data_snapshot_date": "2026-03-06"
+    },
+    "token_model_classification": "Utility token for gas fees, PoS staking, and governance on a privacy-focused L1. Fixed 10B max supply with staking emissions declining over time.",
+    "tokenomics_notes": "75% circulating after 5+ years is healthy maturity. Insider allocation (Backers 23% + Core Contributors 20% = 43%) was high at launch but most vesting is near or past completion. ICO at $0.02 means current holders who bought in 2018 are at -40% ROI after 7+ years. The FDV/mcap ratio of 1.33x is one of the lowest in DeAI — minimal dilution remaining. $235M ecosystem fund has not translated to meaningful on-chain activity."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Delegate ROSE tokens to validators. 120 validator slots. Minimum stake 100 ROSE. ~5% APY. 14-day unbonding. Slashing for double-signing only.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": 1.2,
+        "technical_skill_required": "basic",
+        "estimated_returns": "~5% APY (declining over time)",
+        "barriers_to_entry": [
+          "100 ROSE minimum stake (~$1.20)",
+          "14-day unbonding period",
+          "Validator selection"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.oasis.io"
+      },
+      {
+        "type": "node_operation",
+        "description": "Run a validator or compute node on the Oasis Network. 120 validator slots. Compute nodes serve specific ParaTimes (Sapphire, Cipher, Emerald).",
+        "minimum_hardware": "Server with Intel SGX support (for confidential ParaTimes)",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Validator commission + staking rewards",
+        "barriers_to_entry": [
+          "Intel SGX hardware required for confidential ParaTimes",
+          "Competition for 120 validator slots",
+          "Technical expertise in Oasis node operation"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.oasis.io"
+      },
+      {
+        "type": "building",
+        "description": "Build confidential dApps on Sapphire (EVM) or Cipher (Wasm). Deploy ROFL apps for off-chain compute with on-chain attestation. Full EVM compatibility via Sapphire.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Ecosystem grants available from $235M fund",
+        "barriers_to_entry": [
+          "Solidity or Rust development skills",
+          "Understanding of confidential computing concepts",
+          "Smaller ecosystem than EVM mainnet chains"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.oasis.io/build/sapphire/"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "80+ repos, 57 contributors to core, active development",
+      "grants_program": true,
+      "grants_url": "https://oasis.net"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": 31000,
+    "tvl_usd": 288000,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": 114,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Transaction fees — negligible",
+    "metrics_source": "DeFiLlama for TVL. Oasis Engineering Update May 2025 for transaction counts and validator data.",
+    "metrics_date": "2025-05-01",
+    "usage_notes": "Sapphire: 25K-31K daily transactions (occasional spikes to 100K+). Emerald: 3K-4K daily. 114 mainnet validators. 34 Sapphire compute nodes, 55 Emerald, 40 Cipher, 6 key manager. TVL of $288K on Sapphire is negligible for an L1. $235M ecosystem fund has not driven meaningful DeFi adoption after 5+ years."
+  },
+
+  "community": {
+    "discord_members": 62000,
+    "telegram_members": 27000,
+    "x_followers": null,
+    "github_contributors": 57,
+    "governance_participation_rate": "Unknown",
+    "governance_model": "PoS-based validator governance. Foundation controls protocol upgrades. No detailed community governance mechanism documented.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: ~62K members",
+      "Telegram: ~27K members",
+      "X: @OasisProtocol"
+    ],
+    "sentiment_summary": "Established project with strong academic credibility but declining market enthusiasm. Token down 98% from ATH after 5+ years. Community is technically engaged but small relative to project pedigree. Privacy narrative aligns with growing AI privacy concerns but adoption has not followed.",
+    "community_notes": "Community size is modest relative to the project's funding ($46M raised, $235M ecosystem fund) and academic pedigree. Possible team downsizing is a concern. The project has been live since 2020 but TVL and adoption remain minimal."
+  },
+
+  "freedom_score": {
+    "total_score": 62,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 13,
+        "max": 20,
+        "evidence": "120 validator slots with 114 active validators. Multiple ParaTimes running in parallel. CometBFT PoS consensus. However, Intel SGX dependency creates hardware vendor centralisation. Sapphire has only 34 compute nodes. ParaTime separation provides architectural resilience but real-world decentralisation is limited by SGX requirement."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "PoS-based validator governance. Foundation controls protocol upgrades. No documented community governance mechanism for protocol decisions beyond validator voting. Oasis Foundation and Oasis Labs control development direction. Governance is less developed than Cosmos-style on-chain governance."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "43% insider allocation (Backers 23% + Core Contributors 20%) is high. However, 75% is now circulating after 5+ years — most insider vesting is near or past completion. 18.5% Community/Ecosystem allocation supplemented by $235M ecosystem fund. No public sale beyond the private round. FDV/mcap ratio of 1.33x is among the best in DeAI — minimal remaining dilution."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Confidential smart contracts via TEEs mean data is encrypted even from node operators — strong censorship resistance by design. Sapphire is the only production confidential EVM ParaTime. However, Intel SGX has known side-channel vulnerabilities. 120 validator cap limits censorship resistance versus uncapped validator sets. TEE hardware attestation creates a trust dependency."
+      },
+      "data_sovereignty": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Confidential computing is the core value proposition. Data enters Sapphire encrypted, is processed inside SGX enclaves, and exits encrypted. End-to-end encryption, confidential state, confidential randomness. ROFL enables off-chain compute with on-chain attestation. This is one of the strongest production data sovereignty implementations in crypto. Score limited by SGX vulnerability surface and 5+ years of minimal adoption."
+      },
+      "open_source_transparency": {
+        "score": 11,
+        "max": 15,
+        "evidence": "80+ repos, 10,228 commits to oasis-core, 57 contributors. Core, SDK, wallet, CLI, and ParaTimes all open source. Active development through March 2026. However, no publicly verifiable core protocol audit from top-tier firms. Private bug bounty exists but is not the same as published audit reports."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "Oasis Network has genuine production-ready confidential computing that puts data sovereignty at its core. The architecture is well-designed with strong open-source development. However, Intel SGX dependency creates hardware vendor risk, governance is foundation-controlled, and the lack of published core protocol audits is a gap. Freedom Score 62/100 (C) reflects strong privacy architecture with practical limitations."
+  },
+
+  "returns_score": {
+    "total_score": 41,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": 11,
+        "max": 20,
+        "evidence": "ROSE is used for gas fees across all ParaTimes, PoS staking (minimum 100 ROSE), and governance. Standard L1 token utility. Not required for confidential compute access specifically — Sapphire dApps can abstract away gas costs. Moderate utility without unique differentiators beyond standard L1 functions."
+      },
+      "value_accrual": {
+        "score": 6,
+        "max": 20,
+        "evidence": "Transaction fees accrue to validators but are negligible given low usage. Staking rewards come from inflation allocation (23.5% of supply), not protocol revenue. No fee distribution to non-staking holders. No burn mechanism. With $288K TVL and minimal fee generation, there is effectively no value accrual from protocol activity. The token's value is driven by speculation on future confidential compute adoption."
+      },
+      "supply_dynamics": {
+        "score": 14,
+        "max": 20,
+        "evidence": "10B fixed max supply with 75% already circulating — one of the most mature supply profiles in DeAI. FDV/mcap ratio of 1.33x means minimal remaining dilution. Staking emissions are the primary remaining inflation source and are declining. Most insider vesting is near completion. Score reflects strong supply maturity tempered by 5+ years of negative ROI for ICO buyers."
+      },
+      "revenue_sustainability": {
+        "score": 3,
+        "max": 25,
+        "evidence": "Near-zero protocol revenue. TVL of $288K after 5+ years on mainnet. Transaction counts of 25-31K daily on Sapphire are modest. $235M ecosystem fund has not driven meaningful DeFi adoption. The confidential compute market exists but Oasis has not captured it despite being first to market. This is the weakest dimension — 5+ years of operation with negligible revenue."
+      },
+      "liquidity_access": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Listed on Binance, Coinbase, KuCoin, Bybit, MEXC, Gate.io. Daily volume ~$11.5M. Binance and Coinbase listings provide tier-1 access. However, volume is moderate and market cap ($92M) is low relative to exchange presence. Kraken has futures only, not spot. Score reflects good exchange coverage with moderate depth."
+      }
+    },
+    "returns_grade": "D",
+    "risk_flags": ["no_revenue", "low_adoption", "sgx_dependency"],
+    "returns_summary": "Oasis has the best supply dynamics in DeAI — 75% circulating, 10B fixed cap, FDV/mcap of 1.33x. But 5+ years of mainnet operation with $288K TVL and near-zero revenue is damning. The confidential compute thesis is correct but Oasis has not captured the market despite being first. Returns Score 41/100 (D) reflects mature tokenomics attached to a network that has not found product-market fit."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Production-ready confidential EVM (Sapphire) — the only confidential EVM ParaTime in production",
+      "Exceptional founder credentials — Dawn Song is a MacArthur Fellow and top-cited security researcher",
+      "Mature supply dynamics — 75% circulating, 10B fixed cap, minimal remaining dilution",
+      "Active open-source development — 10,228 commits, 80+ repos, 57 contributors",
+      "Strong investor backing — a16z, Polychain, Pantera, Binance Labs",
+      "114 active validators with consistent uptime",
+      "ROFL framework for off-chain confidential compute with on-chain attestation"
+    ],
+    "what_is_hype": [
+      "$235M ecosystem fund has not driven meaningful adoption after 5+ years",
+      "TVL of $288K is negligible — most DeFi projects have more in a single pool",
+      "Privacy L1 narrative has not captured market attention despite growing AI privacy concerns",
+      "Token down 98% from ATH and negative ROI vs 2018 ICO price",
+      "Team may have downsized significantly — unclear operational capacity"
+    ],
+    "key_risks": [
+      "5+ years of mainnet with near-zero revenue and $288K TVL — product-market fit not found",
+      "Intel SGX dependency — known side-channel vulnerabilities, hardware vendor centralisation",
+      "Token down 98% from ATH, negative ICO ROI after 7+ years — investor patience exhausted",
+      "Team downsizing signals — Tracxn reports ~10 employees (unverified but concerning)",
+      "No published core protocol audits from recognised firms",
+      "Privacy L1 competition from Nillion, Secret Network, Phala Network",
+      "120 validator cap limits decentralisation",
+      "DeFi ecosystem is effectively non-existent despite years of ecosystem funding"
+    ],
+    "competitive_advantages": [
+      "Only production confidential EVM (Sapphire) — unique in the market",
+      "Dawn Song's academic credibility is unmatched in crypto",
+      "Most mature supply dynamics in DeAI — 75% circulating with fixed cap",
+      "a16z backing provides institutional credibility",
+      "ROFL extends confidential compute beyond smart contracts"
+    ],
+    "competitive_disadvantages": [
+      "5+ years without adoption vs newer projects that are growing faster",
+      "Intel SGX vs Nillion's MPC/HE approach — SGX has known attack surfaces",
+      "Privacy narrative has not attracted users despite being technically sound",
+      "Very low TVL vs any mainstream L1 — Oasis is not competitive as a DeFi chain",
+      "Possible team downsizing limits development capacity"
+    ],
+    "comparable_projects": [
+      "Nillion (NIL)",
+      "Secret Network (SCRT)",
+      "Phala Network (PHA)",
+      "Aleph Zero (AZERO)"
+    ],
+    "outlook": "Oasis Network is the most technically credentialled privacy blockchain — founded by a MacArthur Fellow, backed by a16z, and the only production confidential EVM. But 5+ years of mainnet operation with $288K TVL and negative ICO ROI is the uncomfortable truth. The technology works. The market does not care yet. AI privacy concerns are growing, which could be a catalyst, but Oasis has been 'early' for half a decade. For investors, the mature supply dynamics (75% circulating, 1.33x FDV/mcap) mean minimal dilution risk — but also suggest the market has had ample time to price in the value and has chosen not to. For sovereignty seekers, Sapphire's confidential EVM is genuinely useful and unique — if you need on-chain privacy today, Oasis is one of the few production options.",
+    "overall_assessment": "Best academic pedigree in crypto, worst adoption-to-pedigree ratio. Technically sound, commercially dormant. Quadrant B — high freedom, low returns."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "url": "https://docs.oasis.io",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Oasis Network official docs — architecture, ParaTimes, tokenomics, staking"
+    },
+    {
+      "id": "S002",
+      "url": "https://oasis.net",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Oasis official website — product overview, ecosystem, team"
+    },
+    {
+      "id": "S003",
+      "url": "https://github.com/oasisprotocol",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "oasisprotocol GitHub org — 80+ repos, oasis-core 369 stars, 10,228 commits, 57 contributors"
+    },
+    {
+      "id": "S004",
+      "url": "https://github.com/oasisprotocol/oasis-core",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "oasis-core — primary repo, Go/Rust, 126 releases, active through March 2026"
+    },
+    {
+      "id": "S005",
+      "url": "https://docs.oasis.io/general/oasis-network/token-metrics-and-distribution/",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Official token metrics — distribution breakdown, staking parameters"
+    },
+    {
+      "id": "S006",
+      "url": "https://oasis.net/blog/oasis-engineering-update-may-2025",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Engineering update — transaction counts, validator counts, compute node numbers"
+    },
+    {
+      "id": "S007",
+      "url": "https://www.coingecko.com/en/coins/oasis-network",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinGecko — ROSE price, market cap, volume, exchange listings"
+    },
+    {
+      "id": "S008",
+      "url": "https://coinmarketcap.com/currencies/oasis-network/",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinMarketCap — ROSE market data, supply metrics"
+    },
+    {
+      "id": "S009",
+      "url": "https://defillama.com/chain/oasis-sapphire",
+      "type": "defi_analytics",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "DeFiLlama — Sapphire TVL $288K"
+    },
+    {
+      "id": "S010",
+      "url": "https://cryptorank.io/ico/oasis-network",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CryptoRank — ICO details, $46M raise at $0.02, investor list"
+    },
+    {
+      "id": "S011",
+      "url": "https://tokenomist.ai/oasis-network",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Tokenomist — ROSE unlock schedule, vesting data"
+    },
+    {
+      "id": "S012",
+      "url": "https://huggingface.co/Oasis-AI",
+      "type": "ai_platform",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "HuggingFace — 'Oasis-AI' org exists but unclear connection to Oasis Network blockchain"
+    },
+    {
+      "id": "S013",
+      "url": "https://en.wikipedia.org/wiki/Dawn_Song",
+      "type": "reference",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Wikipedia — Dawn Song biography, MacArthur Fellowship, academic credentials"
+    },
+    {
+      "id": "S014",
+      "url": "https://www.coindesk.com/tech/2021/11/17/oasis-launches-160m-ecosystem-fund-with-backing-from-jump-capital-and-others/",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "CoinDesk — $160M ecosystem fund launch"
+    },
+    {
+      "id": "S015",
+      "url": "https://oasis.net/blog/the-oasis-ecosystem-fund-reaches-235-million",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Ecosystem fund grew to $235M"
+    },
+    {
+      "id": "S016",
+      "url": "https://discord.com/invite/oasis-network-community-748635004384313474",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Oasis Discord — ~62K members"
+    },
+    {
+      "id": "S017",
+      "url": "https://t.me/oasisprotocolcommunity",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Oasis Telegram — ~27K members"
+    },
+    {
+      "id": "S018",
+      "url": "https://tracxn.com/d/companies/oasis-labs/__ACAKQvBn43t81zIAiKlYMrKkidKXbVzEE99PyyJ5-D8",
+      "type": "company_data",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Tracxn — Oasis Labs employee count (~10), company profile"
+    },
+    {
+      "id": "S019",
+      "url": "https://docs.oasis.io/core/SECURITY/",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Security documentation — vulnerability categories, bug bounty programme"
+    },
+    {
+      "id": "S020",
+      "url": "https://mpost.io/people/dawn-song-co-founder-and-ceo-of-oasis-labs/",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Dawn Song profile — founding story, background"
+    }
+  ]
+}
