@@ -3,8 +3,8 @@
     "project_id": "bittensor",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-02",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "opentensor",
@@ -19,7 +19,33 @@
         "freedom_score.breakdown.governance_decentralisation.evidence"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 1373,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": "2026-02-27",
+          "technical.github_metrics.contributors": 171,
+          "community.github_contributors": 171
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 1374,
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2026-03-04",
+          "technical.github_metrics.contributors": 101,
+          "community.github_contributors": 101
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "Exact destination of 5.38M TAO mined during Kusanagi/Nakamoto era (Jan 2021 - Oct 2023) is undocumented publicly",
       "No public dashboard for active compute node count across subnets -- 8,000+ figure from aggregator, not on-chain verified",
@@ -107,11 +133,11 @@
       "total_repos": 64,
       "primary_repo_url": "https://github.com/opentensor/bittensor",
       "total_commits": 9444,
-      "contributors": 171,
-      "last_commit_date": "2026-02-27",
-      "stars": 1373,
+      "contributors": 101,
+      "last_commit_date": "2026-03-04",
+      "stars": 1374,
       "forks": 443,
-      "open_issues": null
+      "open_issues": 3
     },
     "audits": [],
     "security_incidents": [
@@ -314,7 +340,7 @@
     "discord_members": 45500,
     "telegram_members": 6400,
     "x_followers": null,
-    "github_contributors": 171,
+    "github_contributors": 101,
     "governance_participation_rate": "Not measurable -- Senate is a small fixed group (top validators by stake), Triumvirate is 3 OTF employees",
     "governance_model": "Bicameral: Triumvirate (3 OTF employees propose changes) + Senate (top validators by delegated stake vote, 50%+1 required). dTAO adds market-driven economic governance via subnet staking flows.",
     "governance_url": "https://docs.learnbittensor.org/governance",
@@ -977,6 +1003,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 1374,
+      "forks": 443,
+      "open_issues": 3,
+      "contributors": 101,
+      "total_commits": 9444,
+      "total_repos": 64,
+      "discord_members": 45500,
+      "telegram_members": 6400,
+      "x_followers": null,
+      "weekly_commits": null
     }
   ]
 }

@@ -3,7 +3,7 @@
     "project_id": "sentient",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -26,6 +26,39 @@
       "HuggingFace models have very low download counts — demonstration pieces, not production.",
       "Seed round valuation ($1.2B) vs current FDV ($731M) — market values below seed.",
       "Telegram member count not publicly confirmed."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 12500,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 4992,
+          "technical.github_metrics.forks": 773,
+          "technical.github_metrics.open_issues": 20,
+          "technical.github_metrics.last_commit_date": "2026-02-16",
+          "technical.github_metrics.contributors": 3,
+          "technical.github_metrics.total_commits": 124,
+          "community.github_contributors": 3
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -134,12 +167,12 @@
     "github_metrics": {
       "total_repos": 15,
       "primary_repo_url": "https://github.com/sentient-agi/ROMA",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-06",
-      "stars": 12500,
-      "forks": null,
-      "open_issues": null
+      "total_commits": 124,
+      "contributors": 3,
+      "last_commit_date": "2026-02-16",
+      "stars": 4992,
+      "forks": 773,
+      "open_issues": 20
     },
     "audits": [],
     "security_incidents": []
@@ -325,7 +358,7 @@
     "discord_members": 713260,
     "telegram_members": null,
     "x_followers": null,
-    "github_contributors": null,
+    "github_contributors": 3,
     "governance_participation_rate": "Unknown — governance not yet active",
     "governance_model": "Token-based governance planned with GRID mainnet. Details not fully documented.",
     "governance_url": null,
@@ -630,6 +663,20 @@
     {
       "date": "2026-03-06",
       "source": "backfill",
+      "stars": 4992,
+      "forks": 773,
+      "open_issues": 20,
+      "contributors": 3,
+      "total_commits": 124,
+      "total_repos": 15,
+      "discord_members": 713260,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
       "stars": 4992,
       "forks": 773,
       "open_issues": 20,

@@ -3,7 +3,7 @@
     "project_id": "origintrail",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
+    "version": 3,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -39,6 +39,37 @@
           "community.telegram_members": 5494
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 584,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": 10,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 83,
+          "community.github_contributors": 10
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 230,
+          "technical.github_metrics.forks": 86,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 31,
+          "technical.github_metrics.total_commits": 5374,
+          "technical.github_metrics.total_repos": 84,
+          "community.github_contributors": 31
+        },
+        "run_by": "github-actions"
       }
     ]
   },
@@ -122,13 +153,13 @@
     "open_source": true,
     "license": "Various open-source licenses",
     "github_metrics": {
-      "total_repos": 83,
+      "total_repos": 84,
       "primary_repo_url": "https://github.com/OriginTrail/dkg-engine",
-      "total_commits": null,
-      "contributors": 10,
-      "last_commit_date": "2026-03-05",
-      "stars": 584,
-      "forks": null,
+      "total_commits": 5374,
+      "contributors": 31,
+      "last_commit_date": "2026-03-06",
+      "stars": 230,
+      "forks": 86,
       "open_issues": 56
     },
     "audits": [
@@ -355,7 +386,7 @@
     "discord_members": null,
     "telegram_members": 5494,
     "x_followers": null,
-    "github_contributors": 10,
+    "github_contributors": 31,
     "governance_participation_rate": "Unknown",
     "governance_model": "NeuroWeb has its own governance via NEURO token (Polkadot parachain). TRAC governance for DKG protocol decisions is less documented.",
     "governance_url": null,
@@ -679,6 +710,33 @@
       "contributors": 10,
       "total_commits": null,
       "total_repos": 83,
+      "discord_members": null,
+      "telegram_members": 5494,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 230,
+      "forks": 86,
+      "open_issues": 56,
+      "contributors": 31,
+      "total_commits": 5374,
+      "total_repos": 84,
+      "discord_members": null,
+      "telegram_members": 5494,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 230,
+      "forks": 86,
+      "open_issues": 56,
+      "contributors": 31,
+      "total_commits": 5374,
+      "total_repos": 84,
       "discord_members": null,
       "telegram_members": 5494,
       "x_followers": null

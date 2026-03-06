@@ -3,7 +3,7 @@
     "project_id": "nosana",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -26,6 +26,39 @@
       "Solscan returned 403 — on-chain holder count not independently verified.",
       "GPU pricing per hour on the marketplace not documented in research.",
       "Telegram community presence not confirmed."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": null,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 32,
+          "technical.github_metrics.forks": 11,
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2025-10-26",
+          "technical.github_metrics.contributors": 6,
+          "technical.github_metrics.total_commits": 1171,
+          "community.github_contributors": 6
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -154,7 +187,13 @@
           "commits": 1171
         }
       ],
-      "license": "MIT"
+      "license": "MIT",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 3,
+      "last_commit_date": "2025-10-26",
+      "contributors": 6,
+      "total_commits": 1171
     },
     "audits": [
       {
@@ -251,7 +290,8 @@
     "twitter_handle": "@nosana_ai",
     "discord_members": 13182,
     "telegram_members": null,
-    "community_calls": "Monthly on Discord"
+    "community_calls": "Monthly on Discord",
+    "github_contributors": 6
   },
   "exchanges": [
     "Gate.io",
@@ -431,6 +471,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 3,
+      "contributors": 6,
+      "total_commits": 1171,
+      "total_repos": 34,
+      "discord_members": 13182,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
     }
   ]
 }

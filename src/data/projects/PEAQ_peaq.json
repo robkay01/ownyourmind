@@ -3,7 +3,7 @@
     "project_id": "peaq",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
+    "version": 3,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -40,6 +40,34 @@
           "community.telegram_members": 31547
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 136,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 97,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 81,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 15,
+          "technical.github_metrics.total_commits": 1576,
+          "technical.github_metrics.total_repos": 98,
+          "community.github_contributors": 15
+        },
+        "run_by": "github-actions"
       }
     ]
   },
@@ -147,12 +175,12 @@
     "open_source": true,
     "license": "Apache 2.0",
     "github_metrics": {
-      "total_repos": 97,
+      "total_repos": 98,
       "primary_repo_url": "https://github.com/peaqnetwork/peaq-network-node",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-05",
-      "stars": 136,
+      "total_commits": 1576,
+      "contributors": 15,
+      "last_commit_date": "2026-03-06",
+      "stars": 81,
       "forks": 45,
       "open_issues": 12
     },
@@ -393,7 +421,7 @@
     "discord_members": 144332,
     "telegram_members": 31547,
     "x_followers": null,
-    "github_contributors": null,
+    "github_contributors": 15,
     "governance_participation_rate": "Unknown",
     "governance_model": "On-chain governance via Substrate governance module. Token holders can propose and vote on protocol changes.",
     "governance_url": null,
@@ -769,6 +797,33 @@
       "contributors": null,
       "total_commits": null,
       "total_repos": 97,
+      "discord_members": 144332,
+      "telegram_members": 31547,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 81,
+      "forks": 45,
+      "open_issues": 12,
+      "contributors": 15,
+      "total_commits": 1576,
+      "total_repos": 98,
+      "discord_members": 144332,
+      "telegram_members": 31547,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 81,
+      "forks": 45,
+      "open_issues": 12,
+      "contributors": 15,
+      "total_commits": 1576,
+      "total_repos": 98,
       "discord_members": 144332,
       "telegram_members": 31547,
       "x_followers": null

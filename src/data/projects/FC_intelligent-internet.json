@@ -3,8 +3,8 @@
     "project_id": "intelligent-internet",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 2,
-    "last_updated": "2026-03-02",
+    "version": 3,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "Intelligent-Internet",
@@ -18,7 +18,39 @@
         "freedom_score.breakdown.open_source_transparency.evidence"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 3172,
+          "technical.github_metrics.forks": 488,
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2026-02-17",
+          "technical.github_metrics.contributors": 20,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": 20
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 3170,
+          "technical.github_metrics.forks": 487,
+          "technical.github_metrics.open_issues": 12,
+          "technical.github_metrics.last_commit_date": "2026-02-04",
+          "technical.github_metrics.contributors": 2,
+          "technical.github_metrics.total_commits": 5,
+          "community.github_contributors": 2
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "No mainnet, no testnet, no token launched. The blockchain and tokenomics exist only as a whitepaper (published July 2025). All blockchain-related fields are 'planned' status.",
       "No publicly disclosed fundraising rounds for Intelligent Internet / L42 Ltd. PitchBook has a profile (18 employees) but funding data is paywalled. May be self-funded by Mostaque from personal wealth.",
@@ -198,12 +230,12 @@
       "original_repos": 14,
       "forked_repos": 8,
       "primary_repo_url": "https://github.com/Intelligent-Internet/ii-agent",
-      "total_commits": null,
-      "contributors": 20,
-      "last_commit_date": "2026-02-17",
-      "stars": 3172,
-      "forks": 488,
-      "open_issues": 3,
+      "total_commits": 5,
+      "contributors": 2,
+      "last_commit_date": "2026-02-04",
+      "stars": 3170,
+      "forks": 487,
+      "open_issues": 12,
       "notes": "22 repos total but 8 are forks (OpenAI Codex, Google Gemini CLI, PPTist, reveal.js, litellm, verl, and others). Original repos include: ii-agent (3,172 stars), ii-researcher (496 stars), CommonGround-legacy (420 stars), gemini-cli-mcp-openai-bridge (131 stars), CommonGround (95 stars), CoT-Lab-Demo (91 stars), Symbioism-Nextra (53 stars), Symbioism-TLE (52 stars), II-Commons (33 stars), ii-thought (31 stars), Common_Chronicle (28 stars), ii-agent-community (20 stars), CG-Cardbox (1 star). Total org stars approximately 4,600+. 20 unique contributors across all original repos. Core development team appears Vietnam-based (PhungVanDuy, khoangothe, baquy96, TueVNguyen, ducphuE10, khongtrunght) with Canada (huo-ju, Leask) and others globally."
     },
     "huggingface_metrics": {
@@ -540,7 +572,7 @@
     "telegram_members": null,
     "x_followers": 20400,
     "x_followers_founder": 290800,
-    "github_contributors": 20,
+    "github_contributors": 2,
     "governance_participation_rate": "N/A (no governance system deployed)",
     "governance_model": "Planned: three-phase progressive decentralisation. Phases 0-2: multi-sig controlled by founding Champions, stewards Treasury. Phase 3+: 15-seat Oracle Council (each seat is a Partner-grade II-Agent with Principal/Associate teams). Guardian Lattice enforces rules through three roles: Sentinels (read-only monitors replaying PoB receipts), Advisers (human-readable risk reports), Implementers (time-locked pause key for emergencies). Six-month automatic rotation via stake-weighted election. Living Constitution Assembly with domain experts and sortition-selected jurors. Parameter updates require on-chain proposals, 7-day Sentinel simulation, Oracle Council 2/3 approval, and 30-day grace period. Not yet implemented.",
     "governance_url": null,
@@ -1124,6 +1156,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 3170,
+      "forks": 487,
+      "open_issues": 12,
+      "contributors": 2,
+      "total_commits": 5,
+      "total_repos": 22,
+      "discord_members": 884,
+      "telegram_members": null,
+      "x_followers": 20400,
+      "weekly_commits": null
     }
   ]
 }

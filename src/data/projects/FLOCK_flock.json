@@ -3,7 +3,7 @@
     "project_id": "flock",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
+    "version": 3,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -38,6 +38,31 @@
           "community.telegram_members": 673
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 4,
+          "technical.github_metrics.last_commit_date": "2022-11-16",
+          "technical.github_metrics.contributors": 1,
+          "technical.github_metrics.total_commits": 2,
+          "community.github_contributors": 1
+        },
+        "run_by": "github-actions"
       }
     ]
   },
@@ -123,7 +148,11 @@
       "forks": 11,
       "license": "GPL-3.0",
       "last_commit": "2026-03-05",
-      "notes": "Main FLock repo is essentially empty (README + LICENSE). Development in peripheral repos: testnet-training-node-quickstart (55 stars), llm-loss-validator (44 stars)."
+      "notes": "Main FLock repo is essentially empty (README + LICENSE). Development in peripheral repos: testnet-training-node-quickstart (55 stars), llm-loss-validator (44 stars).",
+      "open_issues": 4,
+      "last_commit_date": "2022-11-16",
+      "contributors": 1,
+      "total_commits": 2
     },
     "audits": [],
     "academic_credentials": [
@@ -196,7 +225,8 @@
     "telegram_members": 673,
     "x_followers": null,
     "discord_members": null,
-    "twitter_handle": "@flock_io"
+    "twitter_handle": "@flock_io",
+    "github_contributors": 1
   },
   "exchanges": [
     "Gate.io",
@@ -330,6 +360,33 @@
       "open_issues": null,
       "contributors": null,
       "total_commits": null,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 673,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 36,
+      "forks": 11,
+      "open_issues": 4,
+      "contributors": 1,
+      "total_commits": 2,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 673,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 36,
+      "forks": 11,
+      "open_issues": 4,
+      "contributors": 1,
+      "total_commits": 2,
       "total_repos": 34,
       "discord_members": null,
       "telegram_members": 673,

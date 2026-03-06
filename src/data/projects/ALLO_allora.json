@@ -3,7 +3,7 @@
     "project_id": "allora",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
+    "version": 3,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -39,6 +39,34 @@
           "community.telegram_members": 70673
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 30,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 32,
+          "technical.github_metrics.last_commit_date": "2026-03-04",
+          "technical.github_metrics.contributors": 31,
+          "technical.github_metrics.total_commits": 1127,
+          "technical.github_metrics.total_repos": 17,
+          "community.github_contributors": 31
+        },
+        "run_by": "github-actions"
       }
     ]
   },
@@ -132,12 +160,16 @@
       "Arbitrum One (consumer contracts)"
     ],
     "github_metrics": {
-      "total_repos": 30,
+      "total_repos": 17,
       "primary_repo": "allora-chain",
       "stars": 134,
       "forks": 132,
       "commits": 1127,
-      "license": "Apache 2.0"
+      "license": "Apache 2.0",
+      "open_issues": 32,
+      "last_commit_date": "2026-03-04",
+      "contributors": 31,
+      "total_commits": 1127
     },
     "audits": [],
     "audit_note": "No public security audit reports found from any recognised firm. Significant gap for a network handling financial predictions."
@@ -225,7 +257,8 @@
       "Alibaba Cloud (strategic integration)",
       "TRON Network (cross-chain forecasts)"
     ],
-    "telegram_members": 70673
+    "telegram_members": 70673,
+    "github_contributors": 31
   },
   "exchanges": [
     "Binance",
@@ -381,6 +414,33 @@
       "contributors": null,
       "total_commits": null,
       "total_repos": 30,
+      "discord_members": 223135,
+      "telegram_members": 70673,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 134,
+      "forks": 132,
+      "open_issues": 32,
+      "contributors": 31,
+      "total_commits": 1127,
+      "total_repos": 17,
+      "discord_members": 223135,
+      "telegram_members": 70673,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 134,
+      "forks": 132,
+      "open_issues": 32,
+      "contributors": 31,
+      "total_commits": 1127,
+      "total_repos": 17,
       "discord_members": 223135,
       "telegram_members": 70673,
       "x_followers": null
