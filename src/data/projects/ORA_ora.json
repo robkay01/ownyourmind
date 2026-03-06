@@ -3,7 +3,7 @@
     "project_id": "ora",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,6 +24,33 @@
       "Entity jurisdiction and corporate registration details not found.",
       "Fee distribution mechanism to ORA token holders unclear.",
       "HuggingFace profile exists but has 0 public models and 0 datasets."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2024-12-11",
+          "technical.github_metrics.contributors": 4,
+          "technical.github_metrics.total_commits": 21,
+          "community.github_contributors": 4
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -122,7 +149,11 @@
       "stars": 315,
       "forks": 73,
       "license": "MIT",
-      "last_commit": "2024-12"
+      "last_commit": "2024-12",
+      "open_issues": 3,
+      "last_commit_date": "2024-12-11",
+      "contributors": 4,
+      "total_commits": 21
     },
     "audits": [],
     "erc_standards": [
@@ -186,7 +217,8 @@
     "telegram_members": null,
     "x_followers": null,
     "discord_members": null,
-    "twitter_handle": "@ORAProtocol"
+    "twitter_handle": "@ORAProtocol",
+    "github_contributors": 4
   },
   "exchanges": [
     "Uniswap V3",
@@ -295,6 +327,20 @@
     {
       "date": "2026-03-06",
       "source": "backfill",
+      "stars": 315,
+      "forks": 73,
+      "open_issues": 3,
+      "contributors": 4,
+      "total_commits": 21,
+      "total_repos": 44,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
       "stars": 315,
       "forks": 73,
       "open_issues": 3,

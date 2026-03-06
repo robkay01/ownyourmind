@@ -3,7 +3,7 @@
     "project_id": "theta-network",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,6 +24,33 @@
       "Theta Labs 36.3% reserve deployment strategy not publicly documented.",
       "Exact percentage of THETA staked not verified via block explorer.",
       "HuggingFace not checked — infrastructure project, unlikely to have models."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 58,
+          "technical.github_metrics.last_commit_date": "2026-02-24",
+          "technical.github_metrics.contributors": 8,
+          "technical.github_metrics.total_commits": 2025,
+          "community.github_contributors": 8
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -119,7 +146,11 @@
       "forks": 87,
       "commits": 2025,
       "license": "GPL-3.0",
-      "last_commit": "2026-02-24"
+      "last_commit": "2026-02-24",
+      "open_issues": 58,
+      "last_commit_date": "2026-02-24",
+      "contributors": 8,
+      "total_commits": 2025
     },
     "audits": []
   },
@@ -192,7 +223,8 @@
     "telegram_members": 5195,
     "x_followers": 272947,
     "discord_members": null,
-    "twitter_handle": "@Theta_Network"
+    "twitter_handle": "@Theta_Network",
+    "github_contributors": 8
   },
   "exchanges": [
     "Binance",
@@ -305,6 +337,73 @@
     {
       "date": "2026-03-06",
       "source": "backfill",
+      "stars": 365,
+      "forks": 87,
+      "open_issues": 58,
+      "contributors": 8,
+      "total_commits": 2025,
+      "total_repos": 56,
+      "discord_members": null,
+      "telegram_members": 5195,
+      "x_followers": 272947,
+      "weekly_commits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
       "stars": 365,
       "forks": 87,
       "open_issues": 58,

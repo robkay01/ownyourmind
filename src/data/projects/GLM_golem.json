@@ -3,7 +3,7 @@
     "project_id": "golem",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,6 +24,36 @@
       "Salad.com partnership details — scope, timeline, and commercial terms not publicly documented beyond 'engineering test'.",
       "428% YoY usage growth claim from search results not independently verified on stats page.",
       "Discord and Telegram exact member counts not independently confirmed."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": 76,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 100,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 292,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": 39,
+          "technical.github_metrics.total_commits": 5905,
+          "technical.github_metrics.total_repos": 276,
+          "community.github_contributors": 39
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -97,14 +127,17 @@
       "Polygon"
     ],
     "github_metrics": {
-      "total_repos": 100,
+      "total_repos": 276,
       "primary_repo": "yagna",
       "stars": 470,
       "forks": 85,
-      "contributors": 76,
+      "contributors": 39,
       "license": "GPL-3.0",
       "last_commit": "2025-10",
-      "legacy_repo_stars": 2889
+      "legacy_repo_stars": 2889,
+      "open_issues": 292,
+      "last_commit_date": "2026-03-05",
+      "total_commits": 5905
     },
     "audits": [
       {
@@ -191,7 +224,8 @@
         "type": "Partnership",
         "detail": "AI provider integration"
       }
-    ]
+    ],
+    "github_contributors": 39
   },
   "exchanges": [
     "Binance",
@@ -337,6 +371,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 470,
+      "forks": 85,
+      "open_issues": 292,
+      "contributors": 39,
+      "total_commits": 5905,
+      "total_repos": 276,
+      "discord_members": 13167,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
     }
   ]
 }

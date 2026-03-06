@@ -3,7 +3,7 @@
     "project_id": "flux",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -25,6 +25,33 @@
       "FluxEdge usage metrics not available — recently graduated from alpha.",
       "DeFiLlama does not track Flux (the cloud project).",
       "HuggingFace: no presence (FLUX models on HuggingFace are Black Forest Labs, unrelated)."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": 244,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 21,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 240,
+          "technical.github_metrics.total_commits": 8846,
+          "community.github_contributors": 240
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -87,10 +114,13 @@
       "primary_repo": "flux",
       "stars": 247,
       "forks": 314,
-      "contributors": 244,
+      "contributors": 240,
       "commits": 8846,
       "license": "AGPL-3.0",
-      "last_commit": "2026-03-05"
+      "last_commit": "2026-03-05",
+      "open_issues": 21,
+      "last_commit_date": "2026-03-06",
+      "total_commits": 8846
     },
     "audits": [
       {
@@ -169,7 +199,8 @@
     "telegram_members": 7483,
     "x_followers": 45700,
     "discord_members": 25920,
-    "twitter_handle": "@RunOnFlux"
+    "twitter_handle": "@RunOnFlux",
+    "github_contributors": 240
   },
   "exchanges": [
     "Binance",
@@ -355,6 +386,20 @@
         7,
         3
       ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 247,
+      "forks": 314,
+      "open_issues": 21,
+      "contributors": 240,
+      "total_commits": 8846,
+      "total_repos": 165,
+      "discord_members": 25920,
+      "telegram_members": 7483,
+      "x_followers": 45700,
+      "weekly_commits": null
     }
   ]
 }

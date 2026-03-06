@@ -3,7 +3,7 @@
     "project_id": "render",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
+    "version": 4,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -32,6 +32,19 @@
           "community.telegram_members": 19334
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.total_repos"
+        ],
+        "previous_values": {
+          "technical.github_metrics.total_repos": 9
+        },
+        "new_values": {
+          "technical.github_metrics.total_repos": 4
+        },
+        "run_by": "github-actions"
       }
     ],
     "research_gaps": [
@@ -200,7 +213,7 @@
     "open_source": false,
     "license": "Proprietary (OTOY Inc.) for core software. Governance proposals (RNPs) are public on GitHub. Legacy token contracts on GitHub under MIT-like terms.",
     "github_metrics": {
-      "total_repos": 9,
+      "total_repos": 4,
       "primary_repo_url": "https://github.com/rendernetwork/RNPs",
       "total_commits": 107,
       "contributors": 6,
@@ -1158,6 +1171,86 @@
       "contributors": 6,
       "total_commits": 107,
       "total_repos": 9,
+      "discord_members": null,
+      "telegram_members": 19334,
+      "x_followers": 150000
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 44,
+      "forks": 5,
+      "open_issues": 0,
+      "contributors": 6,
+      "total_commits": 107,
+      "total_repos": 4,
+      "discord_members": null,
+      "telegram_members": 19334,
+      "x_followers": 150000,
+      "weekly_commits": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 44,
+      "forks": 5,
+      "open_issues": 0,
+      "contributors": 6,
+      "total_commits": 107,
+      "total_repos": 4,
       "discord_members": null,
       "telegram_members": 19334,
       "x_followers": 150000

@@ -3,7 +3,7 @@
     "project_id": "iotex",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
+    "version": 3,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -37,6 +37,34 @@
           "community.telegram_members": 24057
         },
         "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.forks": 365,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.forks": 364,
+          "technical.github_metrics.open_issues": 230,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 112,
+          "technical.github_metrics.total_commits": 3598,
+          "community.github_contributors": 112
+        },
+        "run_by": "github-actions"
       }
     ]
   },
@@ -130,10 +158,14 @@
       "total_repos": 173,
       "primary_repo": "iotex-core",
       "stars": 1584,
-      "forks": 365,
+      "forks": 364,
       "commits": 3598,
       "license": "Apache-2.0",
-      "last_commit": "2026-03-05"
+      "last_commit": "2026-03-05",
+      "open_issues": 230,
+      "last_commit_date": "2026-03-06",
+      "contributors": 112,
+      "total_commits": 3598
     },
     "audits": [
       {
@@ -209,7 +241,8 @@
     "telegram_members": 24057,
     "x_followers": 229315,
     "discord_members": null,
-    "twitter_handle": "@iotex_io"
+    "twitter_handle": "@iotex_io",
+    "github_contributors": 112
   },
   "exchanges": [
     "Binance",
@@ -399,6 +432,33 @@
       "open_issues": null,
       "contributors": null,
       "total_commits": null,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 24057,
+      "x_followers": 229315
+    },
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 1584,
+      "forks": 364,
+      "open_issues": 230,
+      "contributors": 112,
+      "total_commits": 3598,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 24057,
+      "x_followers": 229315,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-06",
+      "source": "community-refresh",
+      "stars": 1584,
+      "forks": 364,
+      "open_issues": 230,
+      "contributors": 112,
+      "total_commits": 3598,
       "total_repos": 173,
       "discord_members": null,
       "telegram_members": 24057,
