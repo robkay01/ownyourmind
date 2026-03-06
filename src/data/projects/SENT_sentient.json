@@ -1,0 +1,633 @@
+{
+  "meta": {
+    "project_id": "sentient",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "sentient-agi",
+      "github_primary_repo": "ROMA",
+      "coingecko_id": "sentient",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "SentientAGI",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No publicly disclosed smart contract audit — significant gap for a $731M FDV project.",
+      "Entity jurisdiction not publicly confirmed — Foundation and Labs structure exists but registration location unclear.",
+      "SENT token contract source code not verified on Etherscan — reputation listed as UNKNOWN.",
+      "Staking mechanism not yet live — planned for GRID mainnet Q2 2026.",
+      "No on-chain revenue — GRID mainnet not launched, revenue model is theoretical.",
+      "DeFiLlama does not track Sentient — no TVL or protocol metrics.",
+      "Discord member count (713K) should be treated cautiously given active airdrop programme.",
+      "HuggingFace models have very low download counts — demonstration pieces, not production.",
+      "Seed round valuation ($1.2B) vs current FDV ($731M) — market values below seed.",
+      "Telegram member count not publicly confirmed."
+    ]
+  },
+
+  "identity": {
+    "name": "Sentient",
+    "ticker": "SENT",
+    "category": "Intelligence Networks",
+    "subcategory": "Decentralised AGI",
+    "tagline": "Community-owned open-source AGI",
+    "one_liner": "Open-source protocol for community-owned AGI with cryptographic model ownership (OML), multi-agent framework (ROMA), and The GRID network.",
+    "website": "https://sentient.foundation",
+    "documentation_url": "https://blog.sentient.xyz",
+    "whitepaper_url": "https://eprint.iacr.org/2024/1573",
+    "github_url": "https://github.com/sentient-agi",
+    "chain": "Ethereum (ERC-20) / Multi-chain (Base, Polygon, Arbitrum)",
+    "launch_date": "2025-11-22",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Pramod Viswanath",
+        "role": "Co-Founder",
+        "background": "Forrest G. Hamrick Professor of Engineering at Princeton. Co-inventor of Flash OFDM (technology behind 4G). Initiated the project in early 2024.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Himanshu Tyagi",
+        "role": "Co-Founder",
+        "background": "Professor of Engineering at Indian Institute of Science (IISc). Expertise in privacy and decentralised algorithms.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Sandeep Nailwal",
+        "role": "Co-Founder",
+        "background": "Co-founder of Polygon (MATIC). Blockchain strategy and ecosystem development.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Kenzi Wang",
+        "role": "Co-Founder",
+        "background": "Founder of Sensys. Co-founder of Symbolic Capital.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 30,
+    "entity_name": "Sentient Foundation (nonprofit) / Sentient Labs (development)",
+    "entity_jurisdiction": "Unknown — not publicly confirmed",
+    "notable_backers": [
+      "Founders Fund (Peter Thiel)",
+      "Pantera Capital",
+      "Framework Ventures",
+      "Franklin Templeton",
+      "Robot Ventures",
+      "Delphi Ventures",
+      "Hack VC",
+      "Arrington Capital",
+      "Spartan Group",
+      "HashKey Capital",
+      "Mirana Ventures"
+    ],
+    "funding_raised": {
+      "total_usd": 92600000,
+      "rounds": [
+        {
+          "round_type": "Seed",
+          "amount_usd": 85000000,
+          "date": "2024-07-02",
+          "lead_investor": "Founders Fund, Pantera Capital, Framework Ventures",
+          "valuation_usd": 1200000000,
+          "notes": "One of the largest seed rounds in crypto-AI history. 23+ institutional investors."
+        },
+        {
+          "round_type": "ICO",
+          "amount_usd": 7600000,
+          "date": "2026-01-19",
+          "lead_investor": "Binance Wallet IEO",
+          "valuation_usd": 380000000,
+          "notes": "Public sale at $0.01106 per SENT. ATH ROI 6.55x."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "OML (Open, Monetizable, Loyal) cryptographic standard for AI model ownership — embeds undetectable fingerprints into LLMs via fine-tuning. ROMA multi-agent framework for recursive task decomposition. The GRID is an open-source AGI network with 40+ agents, 50+ data sources, 10+ models across Base, Polygon, Arbitrum. Revenue model: per-invocation fees distributed via smart contracts to model creators, deployers, and validators. Sentient Enclaves Framework uses TEEs for secure computation.",
+    "consensus_mechanism": "ERC-20 on Ethereum. GRID uses multi-chain deployment (Base, Polygon, Arbitrum). Protocol infrastructure built using Polygon CDK.",
+    "what_is_onchain": "Token transfers, model ownership registration via OML fingerprinting, per-invocation fee distribution, governance. GRID agents deployed across multiple chains.",
+    "what_is_offchain": "AI model training and inference execution, ROMA multi-agent orchestration, OML fingerprint embedding, model fine-tuning.",
+    "key_dependencies": [
+      "Ethereum",
+      "Polygon CDK",
+      "Base",
+      "Arbitrum",
+      "Meta Llama (base models for Dobby fine-tunes)"
+    ],
+    "smart_contract_languages": ["Solidity", "Rust"],
+    "open_source": true,
+    "license": "Mixed — various repos have different licenses",
+    "github_metrics": {
+      "total_repos": 15,
+      "primary_repo_url": "https://github.com/sentient-agi/ROMA",
+      "total_commits": null,
+      "contributors": null,
+      "last_commit_date": "2026-03-06",
+      "stars": 12500,
+      "forks": null,
+      "open_issues": null
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "SENT",
+    "ticker": "SENT",
+    "token_standard": "ERC-20",
+    "token_type": "utility",
+    "token_utility": [
+      "Governance participation",
+      "Staking for network security and reward eligibility (planned, not yet live)",
+      "Access to AI artifacts and models on The GRID",
+      "Task eligibility and reward qualification",
+      "Funding direction for ecosystem development"
+    ],
+    "supply": {
+      "max_supply": 34359738368,
+      "total_supply": 34359738368,
+      "circulating_supply": 7240000000,
+      "circulating_supply_date": "2026-03-06",
+      "circulating_percentage": 21.0
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Community Initiatives & Airdrop",
+          "percentage": 44.0,
+          "vesting_schedule": "30% at TGE, 70% linear over 4 years",
+          "cliff": "None",
+          "notes": "Largest allocation — community-focused"
+        },
+        {
+          "category": "Team",
+          "percentage": 22.0,
+          "vesting_schedule": "Linear over 6 years",
+          "cliff": "1 year",
+          "notes": "Long vesting period relative to industry standard"
+        },
+        {
+          "category": "Ecosystem & R&D",
+          "percentage": 19.55,
+          "vesting_schedule": "30% at TGE, 70% linear over 4 years",
+          "cliff": "None",
+          "notes": "Development and ecosystem growth"
+        },
+        {
+          "category": "Investors",
+          "percentage": 12.45,
+          "vesting_schedule": "Linear over 4 years",
+          "cliff": "1 year",
+          "notes": "Seed round investors including Founders Fund, Pantera, Framework"
+        },
+        {
+          "category": "Public Sale",
+          "percentage": 2.0,
+          "vesting_schedule": "100% at TGE",
+          "cliff": "None",
+          "notes": "Binance Wallet IEO at $0.01106"
+        }
+      ],
+      "distribution_method": "Seed round + Binance IEO + community airdrop + emissions"
+    },
+    "emissions": {
+      "model": "inflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": 2.0,
+      "halving_schedule": "None — fixed 2% annual to Community Emission Pool",
+      "next_major_emission_event": "Investor and team cliff unlock",
+      "next_event_date": "2026-11-22",
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": false,
+      "staking_type": "Planned with GRID mainnet (Q2 2026)",
+      "minimum_stake": null,
+      "lock_up_period": null,
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Staking not yet live — mechanism is theoretical",
+        "GRID mainnet Q2 2026 is the dependency"
+      ],
+      "slashing_conditions": "Not documented"
+    },
+    "market_data": {
+      "price_usd": 0.0213,
+      "market_cap_usd": 154000000,
+      "fully_diluted_valuation_usd": 731000000,
+      "twenty_four_hour_volume_usd": 20000000,
+      "all_time_high_usd": 0.0725,
+      "all_time_high_date": "2026-01-19",
+      "all_time_low_usd": 0.012,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Binance",
+        "Bybit",
+        "Gate.io",
+        "KuCoin",
+        "Kraken",
+        "Coinbase"
+      ],
+      "data_snapshot_date": "2026-03-06"
+    },
+    "token_model_classification": "Utility token for governance, model access, staking (planned), and per-invocation fee distribution. 2% annual inflation to community pool.",
+    "tokenomics_notes": "Community-facing allocation is strong: 44% Community + 19.55% Ecosystem + 2% Public = 65.55%. Team at 22% with 6-year vesting (long). Investors at 12.45% with 1-year cliff and 4-year vest. Only 21% circulating — major unlock in November 2026 when investor and team cliffs expire. FDV ($731M) is below the $1.2B seed valuation, meaning the market values Sentient below what VCs paid. 2% annual inflation is low."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Staking planned with GRID mainnet (Q2 2026). Will enable governance participation, reward eligibility, and network security.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Unknown — not yet live",
+        "barriers_to_entry": [
+          "Staking not live yet",
+          "Dependent on GRID mainnet launch"
+        ],
+        "guide_available": false,
+        "guide_url": null
+      },
+      {
+        "type": "building",
+        "description": "Build AI agents, models, or data pipelines for The GRID using ROMA framework and Sentient Agent Framework. SDKs in Python and Rust.",
+        "minimum_hardware": "None for agent development",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Per-invocation fees when models/agents are used (planned)",
+        "barriers_to_entry": [
+          "AI/ML development expertise",
+          "GRID is in testnet — mainnet Q2 2026",
+          "OML fingerprinting knowledge"
+        ],
+        "guide_available": true,
+        "guide_url": "https://github.com/sentient-agi"
+      },
+      {
+        "type": "contributing",
+        "description": "Contribute AI models with OML fingerprinting. Model creators earn per-invocation revenue via smart contracts when their models are used on The GRID.",
+        "minimum_hardware": "GPU for model fine-tuning",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Per-invocation fees (planned — not yet live)",
+        "barriers_to_entry": [
+          "ML model development skills",
+          "GPU hardware for fine-tuning",
+          "GRID mainnet not yet live"
+        ],
+        "guide_available": true,
+        "guide_url": "https://github.com/sentient-agi/OML-1.0-Fingerprinting"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "Active — 15 repos with 12,500+ total stars. ROMA (4,992 stars), OpenDeepSearch (3,783 stars), OML Fingerprinting (3,524 stars).",
+      "grants_program": true,
+      "grants_url": "https://sentient.foundation"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "None yet — per-invocation fee model planned for GRID mainnet",
+    "metrics_source": "Not listed on DeFiLlama or Token Terminal. Usage metrics from blog and media reports only.",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "Sentient Chat: 2M+ waitlist, 5K+ beta users, 100K+ queries in testing. The GRID testnet: 40+ agents, 50+ data sources, 10+ models. ~120 partner entities. GRID mainnet planned Q2 2026. No on-chain revenue yet. Builder programme has committed $1M+ in grants."
+  },
+
+  "community": {
+    "discord_members": 713260,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": null,
+    "governance_participation_rate": "Unknown — governance not yet active",
+    "governance_model": "Token-based governance planned with GRID mainnet. Details not fully documented.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.com/invite/sentientfoundation (~713K members — likely inflated by airdrop farming)",
+      "X: @SentientAGI",
+      "Blog: blog.sentient.xyz"
+    ],
+    "sentiment_summary": "High-profile project with strong VC backing (Founders Fund, Pantera, Franklin Templeton). Academic credibility via Princeton co-founder. AGI narrative generates excitement. Token down 44% from listing price tempers enthusiasm. Active airdrop programme inflates community metrics.",
+    "community_notes": "Discord 713K likely inflated by airdrop farming — active engagement is unclear. HuggingFace team has 16 members. 2M+ Sentient Chat waitlist suggests genuine interest in the product. GitHub engagement (12.5K stars) is among the highest in DeAI."
+  },
+
+  "freedom_score": {
+    "total_score": 49,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "GRID testnet runs agents across Base, Polygon, and Arbitrum — multi-chain deployment. Sentient Enclaves Framework suggests TEE-based secure computation. However, GRID mainnet is not yet live (Q2 2026). Infrastructure is EVM-based and depends on existing L2s. Protocol infrastructure uses Polygon CDK. Currently centralised operation by Sentient Labs."
+      },
+      "governance_decentralisation": {
+        "score": 7,
+        "max": 20,
+        "evidence": "Governance planned but not yet active. Sentient Foundation is a nonprofit which provides structural commitment to community governance. Token-based governance is intended but mechanism not fully documented. Currently all decisions are made by the founding team and Foundation."
+      },
+      "token_distribution_fairness": {
+        "score": 9,
+        "max": 15,
+        "evidence": "65.55% community-facing allocation (44% Community + 19.55% Ecosystem + 2% Public) is among the most community-friendly in DeAI. Team at 22% with 6-year vesting is longer than industry standard. Investors at 12.45% is moderate. Public sale was small (2%). However, only 21% circulating means substantial overhang. The 44% community allocation vesting over 4 years is the key positive."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "OML cryptographic standard enables model creators to distribute models openly while retaining ownership — this is a novel censorship-resistance mechanism for AI. 'Dobby Unhinged' models are explicitly uncensored fine-tunes. ROMA is open-source. However, GRID infrastructure is not yet decentralised. TEE enclaves provide some censorship resistance but depend on hardware vendors."
+      },
+      "data_sovereignty": {
+        "score": 8,
+        "max": 15,
+        "evidence": "OML fingerprinting enables model ownership verification without centralised registries. Model creators retain control via cryptographic proofs. Sentient Enclaves use TEEs for private computation. However, data sovereignty for end users of AI models is not specifically addressed. The focus is model creator sovereignty, not user data sovereignty."
+      },
+      "open_source_transparency": {
+        "score": 9,
+        "max": 15,
+        "evidence": "15 repos with 12,500+ total stars — strong open-source presence. ROMA (4,992 stars), OpenDeepSearch (3,783), OML Fingerprinting (3,524). OML published as peer-reviewed academic paper. Active development with all repos updated in March 2026. HuggingFace models published. However, no smart contract audit published. Token contract not verified on Etherscan."
+      }
+    },
+    "freedom_grade": "D",
+    "freedom_summary": "Sentient has strong open-source credentials and a novel approach to AI model ownership via OML cryptographic fingerprinting. Community token allocation (65.55%) is among the best in DeAI. However, GRID mainnet is not yet live, governance is not active, infrastructure is not decentralised, and no smart contract audit has been published. Freedom Score 49/100 (D) reflects strong theoretical foundations with limited practical decentralisation today."
+  },
+
+  "returns_score": {
+    "total_score": 50,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": 10,
+        "max": 20,
+        "evidence": "SENT is planned for governance, staking, model access, and per-invocation fee distribution. However, staking is not yet live (GRID mainnet Q2 2026). Current utility is limited to governance signalling and holding. The per-invocation fee model is theoretical. Score reflects planned utility that is not yet implemented."
+      },
+      "value_accrual": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Per-invocation fee model will distribute revenue to model creators, deployers, and validators via smart contracts. This is a direct accrual mechanism — more model usage = more fee distribution. However, this mechanism is not yet live. No revenue exists yet. The OML framework creates a credible path to value accrual but it is entirely forward-looking."
+      },
+      "supply_dynamics": {
+        "score": 8,
+        "max": 20,
+        "evidence": "34.36B max supply (2^35) with only 21% circulating. Major investor and team cliff unlock in November 2026 (1 year post-TGE). 2% annual inflation is low. Team vesting is 6 years (long). However, FDV ($731M) vs market cap ($154M) = 4.75x ratio — significant dilution ahead. FDV is below seed valuation ($1.2B), suggesting VC investors may sell at unlock."
+      },
+      "revenue_sustainability": {
+        "score": 7,
+        "max": 25,
+        "evidence": "No on-chain revenue. GRID mainnet (Q2 2026) is the dependency for revenue generation. Per-invocation fee model is theoretically sound but not proven. 2M+ Sentient Chat waitlist and 100K+ test queries suggest demand exists. However, converting waitlist signups to paying users is unproven. $1M+ in grants committed. Score reflects no current revenue with a credible but unvalidated path."
+      },
+      "liquidity_access": {
+        "score": 15,
+        "max": 15,
+        "evidence": "Listed on Binance, Coinbase, Kraken, Bybit, Gate.io, KuCoin. Daily volume ~$17-25M. This is exceptional tier-1 liquidity. All three major Western exchanges (Binance, Coinbase, Kraken) carry the token. Large holders can enter and exit without significant slippage."
+      }
+    },
+    "returns_grade": "D",
+    "risk_flags": ["no_revenue", "pre_mainnet", "vc_overhang"],
+    "returns_summary": "Sentient has exceptional exchange listings and a theoretically sound revenue model (per-invocation fees via OML). But GRID mainnet is not yet live, no revenue exists, staking is not active, and the FDV ($731M) is below the seed valuation ($1.2B) — suggesting VC investors are underwater and may sell at the November 2026 cliff unlock. Returns Score 50/100 (D) reflects strong liquidity and promising architecture with zero current revenue."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "World-class team — Princeton professor (co-inventor of 4G tech), Polygon co-founder, strong academic-crypto bridge",
+      "$92.6M+ raised from top-tier VCs (Founders Fund, Pantera, Framework, Franklin Templeton)",
+      "Novel OML cryptographic standard with peer-reviewed academic paper",
+      "Strong open-source presence — 12,500+ GitHub stars, ROMA and OpenDeepSearch with real traction",
+      "Tier-1 exchange listings: Binance, Coinbase, Kraken, Bybit, Gate.io, KuCoin",
+      "2M+ Sentient Chat waitlist — genuine product interest",
+      "Community-friendly tokenomics: 65.55% community allocation, 6-year team vesting"
+    ],
+    "what_is_hype": [
+      "AGI framing — 'community-owned AGI' is aspirational marketing, not a realistic near-term outcome",
+      "GRID mainnet planned Q2 2026 but not yet live — most utility is theoretical",
+      "713K Discord members likely inflated by airdrop farming",
+      "HuggingFace Dobby models have very low download counts — demonstration pieces, not production LLMs",
+      "Revenue model is entirely theoretical — zero on-chain revenue",
+      "FDV ($731M) below seed valuation ($1.2B) — market disagrees with VC pricing"
+    ],
+    "key_risks": [
+      "GRID mainnet dependency — the entire revenue model and utility depends on Q2 2026 launch",
+      "VC cliff unlock November 2026 — 12.45% investor allocation begins unlocking. Investors are underwater vs seed valuation.",
+      "No smart contract audit — significant gap for a $731M FDV project",
+      "Token contract not verified on Etherscan — transparency concern",
+      "Only 21% circulating — FDV/mcap ratio of 4.75x means massive dilution ahead",
+      "Competing with established intelligence networks (Bittensor, Fetch-ASI) and well-funded AI labs",
+      "Per-invocation fee model unproven at scale — unclear if decentralised AI can compete on cost with centralised providers",
+      "AGI narrative creates expectations that cannot realistically be met"
+    ],
+    "competitive_advantages": [
+      "OML cryptographic standard is a genuine innovation — peer-reviewed, no equivalent in the market",
+      "Princeton academic credibility + Polygon crypto credibility = unique positioning",
+      "Founders Fund, Pantera, Franklin Templeton backing signals institutional conviction",
+      "Multi-chain GRID deployment provides flexibility",
+      "Community-friendly tokenomics with longest team vesting in DeAI (6 years)"
+    ],
+    "competitive_disadvantages": [
+      "Pre-mainnet — Bittensor, Fetch-ASI, and others already have live networks with revenue",
+      "No revenue vs projects like Render and Akash which generate real income",
+      "Academic pedigree does not guarantee commercial execution",
+      "AGI framing may attract attention but sets unrealistic expectations",
+      "Dobby models are fine-tunes of Llama — not original research competitive with frontier labs"
+    ],
+    "comparable_projects": [
+      "Bittensor (TAO)",
+      "Fetch.ai / ASI Alliance (FET)",
+      "Morpheus (MOR)",
+      "ElizaOS (AI16Z)"
+    ],
+    "outlook": "Sentient is the highest-conviction VC bet in crypto-AI — $85M seed from Founders Fund and Pantera is unmatched. The OML cryptographic standard for AI model ownership is a genuine innovation with academic rigor. The team bridges academia and crypto in a way no other project does. But GRID mainnet is not live, there is zero revenue, the token is 44% below listing price, and the November 2026 VC unlock looms. This is a project that could define the intersection of crypto and AI — or could be the most expensive academic experiment in the space. The Q2 2026 GRID mainnet launch is the make-or-break event.",
+    "overall_assessment": "Highest-conviction VC bet in crypto-AI with genuine innovation (OML), but pre-revenue and pre-mainnet. Strong community tokenomics, zero commercial proof. Quadrant B/D — strong vision, unproven execution."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "url": "https://sentient.foundation",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Sentient Foundation official site"
+    },
+    {
+      "id": "S002",
+      "url": "https://blog.sentient.xyz/posts/tokenomics",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Official tokenomics blog — distribution, vesting, inflation model"
+    },
+    {
+      "id": "S003",
+      "url": "https://eprint.iacr.org/2024/1573",
+      "type": "whitepaper",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "OML (Open, Monetizable, Loyal) peer-reviewed academic paper"
+    },
+    {
+      "id": "S004",
+      "url": "https://github.com/sentient-agi",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "sentient-agi GitHub org — 15 repos, 12,500+ total stars"
+    },
+    {
+      "id": "S005",
+      "url": "https://github.com/sentient-agi/ROMA",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "ROMA multi-agent framework — 4,992 stars, Python, actively maintained"
+    },
+    {
+      "id": "S006",
+      "url": "https://github.com/sentient-agi/OML-1.0-Fingerprinting",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "OML fingerprinting implementation — 3,524 stars"
+    },
+    {
+      "id": "S007",
+      "url": "https://www.coingecko.com/en/coins/sentient",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinGecko — SENT price, market cap, volume, exchange listings"
+    },
+    {
+      "id": "S008",
+      "url": "https://coinmarketcap.com/currencies/sentient/",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinMarketCap — SENT ranking #156, market data"
+    },
+    {
+      "id": "S009",
+      "url": "https://cryptorank.io/ico/sentient",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CryptoRank — funding rounds, ICO details, vesting data"
+    },
+    {
+      "id": "S010",
+      "url": "https://icodrops.com/sentient/",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "ICO Drops — Sentient IEO details, ROI tracking"
+    },
+    {
+      "id": "S011",
+      "url": "https://defillama.com",
+      "type": "defi_analytics",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "DeFiLlama — Sentient NOT listed. No TVL or protocol revenue."
+    },
+    {
+      "id": "S012",
+      "url": "https://huggingface.co/SentientAGI",
+      "type": "ai_platform",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "HuggingFace — 9 Dobby models (Llama fine-tunes), 1 dataset, 16 team members. Low download counts."
+    },
+    {
+      "id": "S013",
+      "url": "https://www.coindesk.com/business/2024/07/02/peter-thiels-founders-fund-leads-85m-seed-investment-into-open-source-ai-platform-sentient",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "CoinDesk — $85M seed round coverage"
+    },
+    {
+      "id": "S014",
+      "url": "https://www.coindesk.com/business/2025/08/13/openai-rival-sentient-unveils-open-source-agi-network-the-grid",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "CoinDesk — The GRID launch coverage"
+    },
+    {
+      "id": "S015",
+      "url": "https://www.dailyprincetonian.com/article/2025/05/princeton-features-profiles-sentient-ai-loyal-alignment",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Daily Princetonian — team profiles, $1.2B seed valuation, Sentient Chat waitlist"
+    },
+    {
+      "id": "S016",
+      "url": "https://discord.com/invite/sentientfoundation",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Sentient Discord — ~713K members (likely inflated by airdrop farming)"
+    },
+    {
+      "id": "S017",
+      "url": "https://www.chaincatcher.com/en/article/2211199",
+      "type": "research",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "ChainCatcher — Sentient research report, GRID architecture details"
+    },
+    {
+      "id": "S018",
+      "url": "https://inc42.com/buzz/sandeep-nailwals-new-venture-sentient-raises-85-mn-to-take-on-openai-llama/",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Inc42 — Sandeep Nailwal's involvement, OpenAI competitor framing"
+    },
+    {
+      "id": "S019",
+      "url": "https://etherscan.io/token/0x829e60cf8861ae61c042ba0167656e8c7ad6b7cb",
+      "type": "block_explorer",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Etherscan — SENT token contract. Source code NOT verified. Reputation UNKNOWN."
+    },
+    {
+      "id": "S020",
+      "url": "https://cointelegraph.com/news/sentient-85-million-round-open-source-ai",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Cointelegraph — $85M round coverage, investor list"
+    }
+  ]
+}
