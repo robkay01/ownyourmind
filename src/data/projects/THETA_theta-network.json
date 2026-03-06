@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "project_id": "theta-network",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "thetatoken",
+      "github_primary_repo": "theta-protocol-ledger",
+      "coingecko_id": "theta-token",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "Theta_Network",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No prominent third-party security audit found for the blockchain.",
+      "EdgeCloud revenue figures not publicly disclosed.",
+      "DeFiLlama TVL data not accessible — appears minimal DeFi ecosystem.",
+      "Discord member count not confirmed.",
+      "EdgeCloud platform open source status unclear.",
+      "Theta Labs 36.3% reserve deployment strategy not publicly documented.",
+      "Exact percentage of THETA staked not verified via block explorer.",
+      "HuggingFace not checked — infrastructure project, unlikely to have models."
+    ]
+  },
+
+  "identity": {
+    "name": "Theta Network",
+    "ticker": "THETA",
+    "category": "Compute & Infrastructure",
+    "subcategory": "Decentralised Cloud / Video / AI Compute",
+    "tagline": "The next generation entertainment and AI cloud",
+    "one_liner": "Blockchain-powered decentralised cloud platform for AI, media, and entertainment with enterprise validator set including Google, Samsung, and Sony.",
+    "website": "https://www.thetatoken.org",
+    "documentation_url": "https://docs.thetatoken.org",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/thetatoken",
+    "chain": "Theta (own chain, EVM-compatible)",
+    "launch_date": "2019-03-15",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Mitch Liu",
+        "role": "Co-Founder & CEO",
+        "background": "MIT CS (1992), Stanford MBA (2004). Co-founded Tapjoy (grew to $100M revenue), Gameview Studios (sold to DeNA). 12+ patents in blockchain, edge computing, video tech.",
+        "doxxed": true
+      },
+      {
+        "name": "Jieyi Long",
+        "role": "Co-Founder & CTO",
+        "background": "BS Microelectronics, Peking University (2006). PhD Computer Engineering, Northwestern University (2010). Previously at Magma Design Automation and Synopsys.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": "Theta Labs, Inc.",
+    "entity_jurisdiction": "Cupertino, California, USA",
+    "notable_backers": [
+      "Samsung NEXT",
+      "Sony Innovation Fund",
+      "Bertelsmann Digital Media Investments",
+      "Sierra Ventures",
+      "GFR Fund",
+      "DWF Labs",
+      "CAA"
+    ],
+    "advisors": [
+      "Steve Chen (co-founder of YouTube)",
+      "Justin Kan (co-founder of Twitch)"
+    ],
+    "funding_raised": {
+      "total_usd": 137000000,
+      "rounds": [
+        {
+          "round_type": "ico",
+          "amount_usd": 20000000,
+          "date": "2017-12-01",
+          "lead_investor": null,
+          "notes": "Private sale at $0.067 per THETA"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 16000000,
+          "date": "2017-06-01",
+          "lead_investor": null,
+          "notes": "Equity round"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 100000000,
+          "date": "2021-03-01",
+          "lead_investor": "GFR Fund",
+          "notes": "Series B equivalent"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 1000000,
+          "date": "2023-12-01",
+          "lead_investor": "DWF Labs"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "EVM-compatible blockchain with multi-level BFT consensus. 20-30 Enterprise Validator Nodes (block proposing/finalising) + ~3,500 Guardian Nodes (sealing blocks, checking validators) + 10,000+ Edge Nodes. Dual token: THETA (governance/staking) and TFUEL (gas/utility). MetaChain (Mainnet 4.0) enables subchain architecture. EdgeCloud launched May 2024 for AI/GPU compute (~80 PetaFLOPS). EdgeStore for decentralised storage.",
+    "consensus_mechanism": "Multi-level BFT — enterprise validators propose blocks, guardian nodes seal and verify. ~1,000 TPS, 1-2 second block finalisation.",
+    "what_is_onchain": "Transaction settlement, staking, smart contracts (Solidity), TNT-20 tokens, TDROP governance, NFTs.",
+    "what_is_offchain": "EdgeCloud compute, video transcoding/delivery, EdgeStore data, edge node task execution.",
+    "key_dependencies": [],
+    "github_metrics": {
+      "total_repos": 56,
+      "primary_repo": "theta-protocol-ledger",
+      "stars": 365,
+      "forks": 87,
+      "commits": 2025,
+      "license": "GPL-3.0",
+      "last_commit": "2026-02-24"
+    },
+    "audits": []
+  },
+
+  "tokenomics": {
+    "token_name": "THETA",
+    "token_standard": "Native coin",
+    "max_supply": 1000000000,
+    "circulating_supply": 1000000000,
+    "circulating_percent": 100,
+    "fdv_usd": 195000000,
+    "market_cap_usd": 195000000,
+    "fdv_mcap_ratio": 1.0,
+    "allocation": {
+      "token_sale": { "percent": 30, "vesting": "No lockup" },
+      "theta_labs_reserve": { "percent": 36.3, "vesting": "None" },
+      "partners": { "percent": 12.5, "vesting": "None" },
+      "network_seeding": { "percent": 12.5, "vesting": "None" },
+      "team": { "percent": 7.5, "vesting": "None" },
+      "advisors": { "percent": 1.2, "vesting": "None" }
+    },
+    "insider_allocation_percent": 45,
+    "vesting_mostly_complete": true,
+    "token_utility": [
+      "Staking for Enterprise Validator Nodes (20M THETA minimum)",
+      "Staking for Guardian Nodes (1,000 THETA minimum)",
+      "Governance (TDROP governance portal)",
+      "Network security through staking"
+    ],
+    "burn_mechanism": "None for THETA. TFUEL has protocol-level burning (min 25% of edge network payments).",
+    "staking_apy": "TFUEL rewards from 5% TFUEL inflation distributed to THETA stakers",
+    "emission_model": "Fixed supply, zero inflation. THETA stakers earn TFUEL (which has ~5% inflation).",
+    "dual_token_note": "THETA is governance/staking only. TFUEL is the gas/utility token. All fees and payments use TFUEL, not THETA."
+  },
+
+  "market_data": {
+    "price_usd": 0.195,
+    "ath_usd": 15.72,
+    "ath_date": "2021-04-16",
+    "daily_volume_usd": 13500000,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": 25,
+    "revenue_annual_usd": null,
+    "metrics_source": "Official docs, third-party sources",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "~3,500 Guardian Nodes, 10,000+ Edge Nodes, ~80 PetaFLOPS GPU compute. Enterprise validators: Google, Samsung, Sony, Binance, Deutsche Telekom. EdgeCloud customers include universities (Stanford, Imperial College London, KAIST) and sports teams."
+  },
+
+  "community": {
+    "telegram_members": 5195,
+    "x_followers": 272947,
+    "discord_members": null,
+    "twitter_handle": "@Theta_Network"
+  },
+
+  "exchanges": [
+    "Binance",
+    "Kraken",
+    "KuCoin",
+    "Gate.io",
+    "Crypto.com"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake THETA as a Guardian Node (1,000 THETA minimum). Earn TFUEL rewards from network inflation. ~60-hour unstaking period.",
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "TFUEL rewards (variable, from 5% TFUEL inflation pool)",
+        "barriers_to_entry": ["Minimum 1,000 THETA (~$195)"]
+      },
+      {
+        "type": "node_operation",
+        "description": "Run an Edge Node to provide compute, storage, or video relay resources. Earn TFUEL for completed tasks.",
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "TFUEL payments for compute tasks",
+        "barriers_to_entry": ["Hardware with GPU recommended for EdgeCloud tasks"]
+      },
+      {
+        "type": "governance",
+        "description": "Participate in TDROP governance voting. Requires 5M TDROP to create proposals.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Governs TDROP/ThetaDrop only, not core Theta blockchain"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 59,
+    "max_possible": 100,
+    "freedom_grade": "D",
+    "freedom_summary": "Theta Network has a permissioned enterprise validator set (Google, Samsung, Sony) offset by ~3,500 permissionless Guardian Nodes and 10,000+ Edge Nodes. Core protocol is open source (GPL-3.0) with active development. Main centralisation concerns: 36.3% Theta Labs reserve, permissioned validators requiring 20M THETA, Theta Labs controlling roadmap, and governance limited to TDROP not the core chain.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Multi-level BFT with 20-30 enterprise validators + ~3,500 guardian nodes + 10,000+ edge nodes. Validators are permissioned (enterprise only, 20M THETA minimum). Guardian nodes permissionless at 1,000 THETA. Edge nodes open to anyone. Enterprise validator set is a centralisation concern. Guardian layer adds meaningful decentralisation as a check on validators."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "TDROP governance portal exists for on-chain voting but only governs TDROP/ThetaDrop, not the core Theta blockchain. THETA governance is a future goal, not implemented. Theta Labs retains control over protocol direction, roadmap, and validator selection. 36.3% Theta Labs reserve concentrates influence."
+      },
+      "token_distribution_fairness": {
+        "score": 9,
+        "max": 15,
+        "evidence": "30% private sale with no lockup (concerning). 36.3% Theta Labs reserve is very large. Team 7.5% and advisors 1.2% are modest. All tokens fully unlocked — no overhang. Combined insider allocation ~45% (reserve + team + advisors) is high but 100% circulating."
+      },
+      "censorship_resistance": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Guardian nodes can check malicious validators, providing censorship-resistance backstop. However, permissioned validator set requiring 20M THETA means only enterprises and whales can validate. Primary block production is concentrated. ~1,000 TPS is decent throughput."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "EdgeStore provides decentralised storage. Edge nodes permissionless. Users can run own nodes. However, EdgeCloud is hybrid — not all data fully decentralised. Video API and AI compute route through Theta Labs infrastructure to some degree."
+      },
+      "open_source_transparency": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Core protocol GPL-3.0 open source. 56 repos, 2,025 commits, 29 releases. Active development through Feb 2026. Web wallet source released. Documentation at docs.thetatoken.org. Moderate star count (365) but consistent activity. EdgeCloud platform may not be fully open source."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 53,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 11,
+        "max": 20,
+        "evidence": "THETA is governance/staking only — it is NOT the gas token (TFUEL is). Utility limited to staking for validator nodes (20M minimum) and guardian nodes (1,000 minimum). No direct fee capture. Governance limited to TDROP, not core chain. Dual-token model means operational utility flows to TFUEL, not THETA."
+      },
+      "value_accrual": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Value accrual to THETA is indirect. Network fees paid in TFUEL, not THETA. THETA stakers earn TFUEL rewards from 5% TFUEL inflation — inflationary rewards, not protocol revenue. EdgeCloud revenue goes to Theta Labs Inc, not token holders. No buyback, no revenue share, no direct fee capture for THETA."
+      },
+      "supply_dynamics": {
+        "score": 16,
+        "max": 20,
+        "evidence": "Fixed 1B supply with zero inflation — strong. 100% circulating, no future unlocks or dilution. Guardian node staking locks THETA (1,000 min, 60-hour unstaking). Significant portion staked, reducing liquid supply. 36.3% Theta Labs reserve is concentrated supply risk."
+      },
+      "revenue_sustainability": {
+        "score": 8,
+        "max": 25,
+        "evidence": "EdgeCloud launched June 2024 — still early. Customers include universities and sports teams but revenue not disclosed. No protocol-level revenue visible. TFUEL burning exists but hasn't offset inflation. Enterprise partnerships impressive but unclear translation to sustainable token-level revenue. DeFi ecosystem minimal."
+      },
+      "liquidity_access": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Binance (primary), Kraken, KuCoin, Gate.io, Crypto.com. NOT on Coinbase — notable gap. $13-14M daily volume moderate for #177 ranked token. FDV equals market cap (fully circulating). No significant liquidity concerns but volume declined from peak."
+      }
+    }
+  }
+}
