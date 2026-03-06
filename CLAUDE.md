@@ -80,6 +80,7 @@ When researching a new project for the `projects` collection, you **must** follo
 - `deai_site_structure.md` — Content strategy, editorial guidelines, competitive positioning
 - `own-your-mind-research-plan.md` — **MANDATORY** research protocol for new project research (7-step sequence, source tiers, JSON schema, freedom score rubric)
 - `own-your-mind-claude-code-brief.md` § "Data Maintenance" — Full pipeline docs (automated refresh, sparklines, staleness, quarterly review)
+- `docs/data-refresh-pipeline.md` — How automated data refresh works (weekly GitHub/community metrics, market data, staleness checks, troubleshooting)
 
 ---
 
