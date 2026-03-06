@@ -18,7 +18,15 @@
       "Whitepaper/litepaper PDF could not be parsed by WebFetch (binary PDF) — tokenomics data sourced from official docs pages and third-party trackers instead.",
       "DeFiLlama does not track io.net — not a DeFi protocol, so no TVL/fee data available from that source.",
       "Circulating supply figures vary across sources (168.77M on CryptoRank vs 298.34M on Tokenomist/DropsTab as of March 2026) — discrepancy likely due to different treatment of locked/vesting vs technically circulating tokens."
-    ]
+    ],
+    "refresh_config": {
+      "github_org": "ionet-official",
+      "github_primary_repo": "io_launch_binaries",
+      "coingecko_id": "io-net",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "ionabornet"
+    }
   },
   "identity": {
     "name": "io.net",
@@ -309,7 +317,7 @@
         },
         {
           "category": "Community",
-          "percentage": 10.0,
+          "percentage": 10,
           "vesting_schedule": "Monthly linear vesting over 3 years starting January 2025",
           "cliff": "TGE unlock of 22.61%",
           "notes": "80M IO tokens. Includes Ignition/Galxe airdrop (32.5M tokens). Next unlock: 13.29M IO on March 11, 2026."
@@ -1253,6 +1261,22 @@
         "$31.92M self-reported market cap"
       ],
       "reliability_notes": "Tier 3 — confirms market cap range from other sources."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "backfill",
+      "stars": 75,
+      "forks": 49,
+      "open_issues": 1,
+      "contributors": 5,
+      "total_commits": 90,
+      "total_repos": 9,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 447200,
+      "weekly_commits": null
     }
   ]
 }
