@@ -149,9 +149,9 @@ This project uses **Agent Zero** for research, scoring, and content creation. Cl
 
 ### Returns Score (NEW — Implemented via `specs/returns-score-implementation-spec.md`)
 - Token Utility (0-20)
-- Value Accrual (0-25)
+- Value Accrual (0-20)
 - Supply Dynamics (0-20)
-- Revenue Sustainability (0-20)
+- Revenue Sustainability (0-25)
 - Liquidity & Access (0-15)
 
 ### Quadrant Model

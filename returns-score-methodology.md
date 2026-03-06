@@ -45,13 +45,13 @@ Returns Score is calculated across five dimensions, weighted by importance:
 | Dimension | Weight |
 |-----------|--------|
 | Token Utility | 20% |
-| Value Accrual | 25% |
+| Value Accrual | 20% |
 | Supply Dynamics | 20% |
-| Revenue Sustainability | 20% |
+| Revenue Sustainability | 25% |
 | Liquidity & Access | 15% |
 | **Total** | **100%** |
 
-Each dimension is scored from 0 to 20 points. Weighted total produces a score from 0 to 100.
+Dimensions are scored on different scales matching their weight: Token Utility /20, Value Accrual /20, Supply Dynamics /20, Revenue Sustainability /25, Liquidity & Access /15. Raw scores sum to 100.
 
 ---
 
@@ -87,21 +87,19 @@ Each dimension is scored from 0 to 20 points. Weighted total produces a score fr
 
 ---
 
-## Dimension 2: Value Accrual (25%)
+## Dimension 2: Value Accrual (20%)
 
 **What it measures:** Is there a mechanical link between protocol activity and token value? When someone uses the protocol, does value flow to holders?
-
-This is the most important dimension. Many projects have "utility" but no connection between usage and value.
 
 ### Scoring Rubric
 
 | Score | Criteria |
 |-------|----------|
-| **22-25** | **Direct accrual.** Clear mechanical link: fees → buy/burn → holders. Revenue-sharing to stakers. Deflationary pressure from usage. More activity = unambiguously good for holders. |
-| **17-21** | **Indirect accrual.** Token needed for access, so demand increases with usage. Staking yields from real revenue (not emissions). Value flows to holders through measurable channels. |
-| **12-16** | **Speculative accrual.** Token benefits from network effects and attention, but no direct mechanism. "Price will go up because the network grows" - may be true but not guaranteed mechanically. |
-| **6-11** | **Weak accrual.** Token may benefit from future governance decisions or theoretical fee switches. Value accrual is aspirational, not implemented. |
-| **0-5** | **No accrual path.** Token has no relationship to protocol success. Protocol could 10x revenue and token holders would see zero benefit. |
+| **18-20** | **Direct accrual.** Clear mechanical link: fees → buy/burn → holders. Revenue-sharing to stakers. Deflationary pressure from usage. More activity = unambiguously good for holders. |
+| **14-17** | **Indirect accrual.** Token needed for access, so demand increases with usage. Staking yields from real revenue (not emissions). Value flows to holders through measurable channels. |
+| **10-13** | **Speculative accrual.** Token benefits from network effects and attention, but no direct mechanism. "Price will go up because the network grows" - may be true but not guaranteed mechanically. |
+| **5-9** | **Weak accrual.** Token may benefit from future governance decisions or theoretical fee switches. Value accrual is aspirational, not implemented. |
+| **0-4** | **No accrual path.** Token has no relationship to protocol success. Protocol could 10x revenue and token holders would see zero benefit. |
 
 ### Accrual Mechanisms (Strongest to Weakest)
 
@@ -139,19 +137,19 @@ This is the most important dimension. Many projects have "utility" but no connec
 
 ---
 
-## Dimension 4: Revenue Sustainability (20%)
+## Dimension 4: Revenue Sustainability (25%)
 
-**What it measures:** Does the protocol generate real revenue from paying customers, or is it entirely dependent on token emissions to attract participants?
+**What it measures:** Does the protocol generate real revenue from paying customers, or is it entirely dependent on token emissions to attract participants? This is the most important dimension — revenue from paying customers is the hardest metric to fake.
 
 ### Scoring Rubric
 
 | Score | Criteria |
 |-------|----------|
-| **18-20** | **Product-market fit.** Protocol generates real revenue from external customers (not just token incentives). Revenue covers or exceeds emissions. Sustainable without inflation. |
-| **13-17** | **Revenue-generating.** Meaningful revenue exists but does not yet cover emissions. Clear path to sustainability. Real users, not just yield farmers. |
-| **8-12** | **Emission-dependent.** Minimal external revenue. Participants are primarily emission farmers. No clear business model yet, but infrastructure is functional. |
-| **4-7** | **Speculative.** No revenue. Pure incentive layer. Participants are there for token rewards, not utility. |
-| **0-3** | **Extractive or broken.** Protocol loses money on every transaction (paying more in incentives than it earns). No path to sustainability. |
+| **22-25** | **Product-market fit.** Protocol generates real revenue from external customers (not just token incentives). Revenue covers or exceeds emissions. Sustainable without inflation. |
+| **17-21** | **Revenue-generating.** Meaningful revenue exists but does not yet cover emissions. Clear path to sustainability. Real users, not just yield farmers. |
+| **12-16** | **Emission-dependent.** Minimal external revenue. Participants are primarily emission farmers. No clear business model yet, but infrastructure is functional. |
+| **7-11** | **Speculative.** No revenue. Pure incentive layer. Participants are there for token rewards, not utility. |
+| **0-6** | **Extractive or broken.** Protocol loses money on every transaction (paying more in incentives than it earns). No path to sustainability. |
 
 ### What Counts as Revenue
 
@@ -197,11 +195,11 @@ The weighted total produces a score from 0 to 100, mapped to letter grades:
 
 | Score | Grade | Interpretation |
 |-------|-------|----------------|
-| 90-100 | **A** | Exceptional value capture. Token is structurally aligned with protocol success. |
-| 75-89 | **B** | Strong fundamentals. Minor concerns but credible accrual path. |
-| 60-74 | **C** | Adequate. Some value capture but significant gaps or risks. |
-| 45-59 | **D** | Weak. Token economics are misaligned or unsustainable. |
-| 0-44 | **F** | Failing. Little to no connection between protocol success and token value. |
+| 85-100 | **A** | Exceptional value capture. Token is structurally aligned with protocol success. |
+| 70-84 | **B** | Strong fundamentals. Minor concerns but credible accrual path. |
+| 55-69 | **C** | Adequate. Some value capture but significant gaps or risks. |
+| 40-54 | **D** | Weak. Token economics are misaligned or unsustainable. |
+| 0-39 | **F** | Failing. Little to no connection between protocol success and token value. |
 
 ---
 
@@ -212,44 +210,44 @@ The weighted total produces a score from 0 to 100, mapped to letter grades:
 | Dimension | Score | Reasoning |
 |-----------|-------|----------|
 | Token Utility | 18/20 | Multiple utilities: staking for yield, compute access, agent services. Token is essential to the protocol. |
-| Value Accrual | 14/25 | Emissions only currently. MOR burned for compute, but burn is minimal vs emissions. No fee distribution yet. Speculative. |
+| Value Accrual | 11/20 | Emissions only currently. MOR burned for compute, but burn is minimal vs emissions. No fee distribution yet. Speculative. |
 | Supply Dynamics | 16/20 | Fair launch, no insider allocation. 16-year decay schedule. Moderate inflation (~12% annually currently). |
-| Revenue Sustainability | 6/20 | Minimal external revenue. Compute marketplace active but emission-dependent. Early stage. |
+| Revenue Sustainability | 8/25 | Minimal external revenue. Compute marketplace active but emission-dependent. Early stage. |
 | Liquidity & Access | 8/15 | DEX-primary, limited CEX. Daily volume ~$30K. Thin liquidity for position size. |
-| **Total** | **62/100 (D+)** | **High freedom, early-stage economics.** |
+| **Total** | **61/100 (D+)** | **High freedom, early-stage economics.** |
 
 ### Bittensor (TAO)
 
 | Dimension | Score | Reasoning |
 |-----------|-------|----------|
 | Token Utility | 17/20 | Staking required for participation (miners, validators). Governance rights. Burn for subnet registration. Essential. |
-| Value Accrual | 14/25 | Stake to participate, but no direct fee distribution to holders. Dynamic TAO creates market-based emission allocation. Indirect. |
+| Value Accrual | 11/20 | Stake to participate, but no direct fee distribution to holders. Dynamic TAO creates market-based emission allocation. Indirect. |
 | Supply Dynamics | 18/20 | Bitcoin model: 21M cap, halving schedule. First halving completed Dec 2025. No insider allocation technically. |
-| Revenue Sustainability | 5/20 | No external revenue. Entirely emission-driven. Subnets compete for emissions, not paying customers. |
-| Liquidity & Access | 16/15* | Listed on Binance, Coinbase, Kraken. Daily volume $100M+. Highly liquid. (*capped at 15) |
-| **Total** | **70/100 (C)** | **Strong liquidity, no revenue model yet.** |
+| Revenue Sustainability | 6/25 | No external revenue. Entirely emission-driven. Subnets compete for emissions, not paying customers. |
+| Liquidity & Access | 15/15 | Listed on Binance, Coinbase, Kraken. Daily volume $100M+. Highly liquid. |
+| **Total** | **67/100 (C)** | **Strong liquidity, no revenue model yet.** |
 
 ### Render (RNDR)
 
 | Dimension | Score | Reasoning |
 |-----------|-------|----------|
-| Token Utility | 14/20 | Payment for render services. Staking exists but unclear purpose. Governance minimal. |
-| Value Accrual | 18/25 | Burn mechanism: RNDR burned for services. Real customers (Hollywood studios) paying for renders. Proven demand. |
-| Supply Dynamics | 12/20 | Infinite supply (max not capped). Foundation holds significant tokens. Moderate inflation. |
-| Revenue Sustainability | 16/20 | Real revenue from real customers. Hollywood productions use Render network. Product-market fit demonstrated. |
-| Liquidity & Access | 14/15 | Major CEX listings. High DEX liquidity. Daily volume $50M+. |
-| **Total** | **74/100 (C+)** | **Revenue-generating but centralized (low Freedom Score).** |
+| Token Utility | 12/20 | Payment for render services. No native staking. Holders earn nothing by simply holding. Limited governance role. |
+| Value Accrual | 14/20 | Burn mechanism: RNDR burned for services. Real customers (Hollywood studios) paying for renders. Proven demand. |
+| Supply Dynamics | 12/20 | Capped but foundation holds significant tokens. Inflation through rewards. |
+| Revenue Sustainability | 20/25 | Real revenue from real customers. Hollywood productions use Render network. Product-market fit demonstrated. |
+| Liquidity & Access | 12/15 | Major CEX listings. Good DEX liquidity. Daily volume $50M+. |
+| **Total** | **70/100 (C)** | **Revenue-generating but centralized (low Freedom Score).** |
 
 ### Akash (AKT)
 
 | Dimension | Score | Reasoning |
 |-----------|-------|----------|
 | Token Utility | 16/20 | Payment for compute. Staking for security and governance. Required for validator operation. |
-| Value Accrual | 13/25 | Take rate on compute fees. staking rewards from inflation + fees. But take rate is small. Mostly inflation. |
-| Supply Dynamics | 14/20 | Inflationary with decay. Community pool holds significant tokens. Vesting ongoing but manageable. |
-| Revenue Sustainability | 14/20 | Real customers using decentralized cloud. Revenue growing but still emission-heavy.|
+| Value Accrual | 10/20 | Take rate on compute fees. Staking rewards from inflation + fees. But take rate is small. Mostly inflation. |
+| Supply Dynamics | 12/20 | Uncapped supply with inflation. BME burn not yet active. Moderate dilution. |
+| Revenue Sustainability | 18/25 | Real customers using decentralized cloud. Revenue growing but still emission-heavy. |
 | Liquidity & Access | 10/15 | Listed on mid-tier CEXs. Moderate DEX liquidity. Daily volume $1-5M. |
-| **Total** | **67/100 (C)** | **Real revenue, moderate liquidity, inflating supply.** |
+| **Total** | **66/100 (C)** | **Real revenue, moderate liquidity, inflating supply.** |
 
 ---
 

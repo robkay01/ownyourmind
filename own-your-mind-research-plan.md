@@ -487,9 +487,9 @@ The Returns Score assesses whether the token has a credible structural path to v
 | Dimension | Max Score | What It Measures |
 |-----------|----------|------------------|
 | Token Utility | /20 | What can holders actually do with the token? |
-| Value Accrual | /20 | Is there a mechanical link between usage and token value? |
+| Value Accrual | /25 | Is there a mechanical link between usage and token value? |
 | Supply Dynamics | /20 | Is the supply schedule sustainable? |
-| Revenue Sustainability | /25 | Does the protocol generate real revenue from paying customers? |
+| Revenue Sustainability | /20 | Does the protocol generate real revenue from paying customers? |
 | Liquidity & Access | /15 | Can holders actually buy and sell without significant slippage? |
 
 **Revenue Sustainability carries the highest weight** because revenue from paying customers is the hardest metric to fake and the strongest signal of real value creation.
