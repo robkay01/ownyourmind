@@ -3,8 +3,8 @@
     "project_id": "sahara",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Sahara AI litepaper PDF (assets.saharaai.com/files/litepaper.pdf) could not be parsed via WebFetch -- content reconstructed from official docs, blog posts, Binance Academy, and secondary sources",
@@ -33,7 +33,27 @@
       "x_handle": "SaharaLabsAI",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.last_commit_date": "2026-01-16",
+          "technical.github_metrics.contributors": 3,
+          "community.github_contributors": 3
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "Sahara AI",
@@ -137,8 +157,8 @@
       "total_repos": 26,
       "primary_repo_url": "https://github.com/SaharaLabsAI/sahara",
       "total_commits": 128,
-      "contributors": null,
-      "last_commit_date": "2026-03-02",
+      "contributors": 3,
+      "last_commit_date": "2026-01-16",
       "stars": 0,
       "forks": 0,
       "open_issues": 0
@@ -197,7 +217,7 @@
         },
         {
           "category": "Core Team & Contributors",
-          "percentage": 15.0,
+          "percentage": 15,
           "vesting_schedule": "1-year cliff, then linear over 36 months",
           "cliff": "12 months",
           "notes": "25% unlocks at 12 months, remainder over next 36 months. 0% unlocked as of March 2026."
@@ -218,7 +238,7 @@
         },
         {
           "category": "Liquidity & Market Stability",
-          "percentage": 1.0,
+          "percentage": 1,
           "vesting_schedule": "100% unlocked at TGE",
           "cliff": "None",
           "notes": "100M tokens for exchange liquidity"
@@ -382,7 +402,7 @@
     "discord_members": 341738,
     "telegram_members": null,
     "x_followers": 913000,
-    "github_contributors": null,
+    "github_contributors": 3,
     "governance_participation_rate": "No governance proposals have been submitted yet -- mainnet governance not active",
     "governance_model": "Planned DAO governance with SAHARA token-based voting. Token holders can propose and vote on protocol upgrades, funding allocations, and key governance policies. Staking required for voting rights. Not yet operational.",
     "governance_url": "",
@@ -1067,6 +1087,21 @@
         "No HuggingFace presence (404)"
       ],
       "reliability_notes": "Direct URL check returned 404. Confirmed no official Sahara AI organisation on HuggingFace."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "contributors": 3,
+      "total_commits": 128,
+      "total_repos": 26,
+      "discord_members": 341738,
+      "telegram_members": null,
+      "x_followers": 913000
     }
   ]
 }

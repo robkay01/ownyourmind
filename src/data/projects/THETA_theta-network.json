@@ -3,7 +3,7 @@
     "project_id": "theta-network",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,9 +24,35 @@
       "Theta Labs 36.3% reserve deployment strategy not publicly documented.",
       "Exact percentage of THETA staked not verified via block explorer.",
       "HuggingFace not checked — infrastructure project, unlikely to have models."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 58,
+          "technical.github_metrics.last_commit_date": "2026-02-24",
+          "technical.github_metrics.contributors": 8,
+          "technical.github_metrics.total_commits": 2025,
+          "community.github_contributors": 8
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
-
   "identity": {
     "name": "Theta Network",
     "ticker": "THETA",
@@ -43,7 +69,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -108,7 +133,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "EVM-compatible blockchain with multi-level BFT consensus. 20-30 Enterprise Validator Nodes (block proposing/finalising) + ~3,500 Guardian Nodes (sealing blocks, checking validators) + 10,000+ Edge Nodes. Dual token: THETA (governance/staking) and TFUEL (gas/utility). MetaChain (Mainnet 4.0) enables subchain architecture. EdgeCloud launched May 2024 for AI/GPU compute (~80 PetaFLOPS). EdgeStore for decentralised storage.",
     "consensus_mechanism": "Multi-level BFT — enterprise validators propose blocks, guardian nodes seal and verify. ~1,000 TPS, 1-2 second block finalisation.",
@@ -122,11 +146,14 @@
       "forks": 87,
       "commits": 2025,
       "license": "GPL-3.0",
-      "last_commit": "2026-02-24"
+      "last_commit": "2026-02-24",
+      "open_issues": 58,
+      "last_commit_date": "2026-02-24",
+      "contributors": 8,
+      "total_commits": 2025
     },
     "audits": []
   },
-
   "tokenomics": {
     "token_name": "THETA",
     "token_standard": "Native coin",
@@ -135,14 +162,32 @@
     "circulating_percent": 100,
     "fdv_usd": 195000000,
     "market_cap_usd": 195000000,
-    "fdv_mcap_ratio": 1.0,
+    "fdv_mcap_ratio": 1,
     "allocation": {
-      "token_sale": { "percent": 30, "vesting": "No lockup" },
-      "theta_labs_reserve": { "percent": 36.3, "vesting": "None" },
-      "partners": { "percent": 12.5, "vesting": "None" },
-      "network_seeding": { "percent": 12.5, "vesting": "None" },
-      "team": { "percent": 7.5, "vesting": "None" },
-      "advisors": { "percent": 1.2, "vesting": "None" }
+      "token_sale": {
+        "percent": 30,
+        "vesting": "No lockup"
+      },
+      "theta_labs_reserve": {
+        "percent": 36.3,
+        "vesting": "None"
+      },
+      "partners": {
+        "percent": 12.5,
+        "vesting": "None"
+      },
+      "network_seeding": {
+        "percent": 12.5,
+        "vesting": "None"
+      },
+      "team": {
+        "percent": 7.5,
+        "vesting": "None"
+      },
+      "advisors": {
+        "percent": 1.2,
+        "vesting": "None"
+      }
     },
     "insider_allocation_percent": 45,
     "vesting_mostly_complete": true,
@@ -157,7 +202,6 @@
     "emission_model": "Fixed supply, zero inflation. THETA stakers earn TFUEL (which has ~5% inflation).",
     "dual_token_note": "THETA is governance/staking only. TFUEL is the gas/utility token. All fees and payments use TFUEL, not THETA."
   },
-
   "market_data": {
     "price_usd": 0.195,
     "ath_usd": 15.72,
@@ -165,7 +209,6 @@
     "daily_volume_usd": 13500000,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -176,14 +219,13 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "~3,500 Guardian Nodes, 10,000+ Edge Nodes, ~80 PetaFLOPS GPU compute. Enterprise validators: Google, Samsung, Sony, Binance, Deutsche Telekom. EdgeCloud customers include universities (Stanford, Imperial College London, KAIST) and sports teams."
   },
-
   "community": {
     "telegram_members": 5195,
     "x_followers": 272947,
     "discord_members": null,
-    "twitter_handle": "@Theta_Network"
+    "twitter_handle": "@Theta_Network",
+    "github_contributors": 8
   },
-
   "exchanges": [
     "Binance",
     "Kraken",
@@ -191,7 +233,6 @@
     "Gate.io",
     "Crypto.com"
   ],
-
   "participation": {
     "methods": [
       {
@@ -199,24 +240,29 @@
         "description": "Stake THETA as a Guardian Node (1,000 THETA minimum). Earn TFUEL rewards from network inflation. ~60-hour unstaking period.",
         "technical_skill_required": "intermediate",
         "estimated_returns": "TFUEL rewards (variable, from 5% TFUEL inflation pool)",
-        "barriers_to_entry": ["Minimum 1,000 THETA (~$195)"]
+        "barriers_to_entry": [
+          "Minimum 1,000 THETA (~$195)"
+        ]
       },
       {
         "type": "node_operation",
         "description": "Run an Edge Node to provide compute, storage, or video relay resources. Earn TFUEL for completed tasks.",
         "technical_skill_required": "intermediate",
         "estimated_returns": "TFUEL payments for compute tasks",
-        "barriers_to_entry": ["Hardware with GPU recommended for EdgeCloud tasks"]
+        "barriers_to_entry": [
+          "Hardware with GPU recommended for EdgeCloud tasks"
+        ]
       },
       {
         "type": "governance",
         "description": "Participate in TDROP governance voting. Requires 5M TDROP to create proposals.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Governs TDROP/ThetaDrop only, not core Theta blockchain"]
+        "barriers_to_entry": [
+          "Governs TDROP/ThetaDrop only, not core Theta blockchain"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 59,
     "max_possible": 100,
@@ -255,7 +301,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 53,
     "max_possible": 100,
@@ -287,5 +332,20 @@
         "evidence": "Binance (primary), Kraken, KuCoin, Gate.io, Crypto.com. NOT on Coinbase — notable gap. $13-14M daily volume moderate for #177 ranked token. FDV equals market cap (fully circulating). No significant liquidity concerns but volume declined from peak."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 365,
+      "forks": 87,
+      "open_issues": 58,
+      "contributors": 8,
+      "total_commits": 2025,
+      "total_repos": 56,
+      "discord_members": null,
+      "telegram_members": 5195,
+      "x_followers": 272947
+    }
+  ]
 }

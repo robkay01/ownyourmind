@@ -3,7 +3,7 @@
     "project_id": "origintrail",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -25,9 +25,41 @@
       "HuggingFace — no models or datasets found.",
       "ATH price discrepancy across sources ($3.44 to $6.24 for Nov 2021).",
       "Entity structure complexity — Trace Labs across Hong Kong, UK, Slovenia, Serbia."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 584,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": 10,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 83,
+          "community.github_contributors": 10
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 230,
+          "technical.github_metrics.forks": 86,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 31,
+          "technical.github_metrics.total_commits": 5374,
+          "technical.github_metrics.total_repos": 84,
+          "community.github_contributors": 31
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
-
   "identity": {
     "name": "OriginTrail",
     "ticker": "TRAC",
@@ -44,7 +76,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -91,7 +122,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Decentralised Knowledge Graph (DKG) with off-chain data storage and on-chain hash anchoring. Knowledge Assets are ERC1155Delta standard tokens representing structured data entities. Two node types: DKG Core Nodes (require 50K-5M TRAC stake, provide infrastructure) and DKG Edge Nodes (lightweight, for devices). Random Sampling Proof-of-Knowledge consensus for data integrity. V8 (June 2025) claims 1000x throughput improvement over V6. Supports RDF, SPARQL, JSON-LD, GS1 EPCIS, W3C DIDs.",
     "consensus_mechanism": "Random Sampling Proof-of-Knowledge for data integrity. NeuroWeb uses Polkadot parachain consensus. ERC-20 on Ethereum for token.",
@@ -103,17 +133,20 @@
       "Gnosis Chain",
       "Ethereum (token)"
     ],
-    "smart_contract_languages": ["Solidity", "Rust (NeuroWeb)"],
+    "smart_contract_languages": [
+      "Solidity",
+      "Rust (NeuroWeb)"
+    ],
     "open_source": true,
     "license": "Various open-source licenses",
     "github_metrics": {
-      "total_repos": 83,
+      "total_repos": 84,
       "primary_repo_url": "https://github.com/OriginTrail/dkg-engine",
-      "total_commits": null,
-      "contributors": 10,
-      "last_commit_date": "2026-03-05",
-      "stars": 584,
-      "forks": null,
+      "total_commits": 5374,
+      "contributors": 31,
+      "last_commit_date": "2026-03-06",
+      "stars": 230,
+      "forks": 86,
       "open_issues": 56
     },
     "audits": [
@@ -141,7 +174,6 @@
     ],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "TRAC",
     "ticker": "TRAC",
@@ -165,49 +197,49 @@
       "initial_allocation": [
         {
           "category": "Pre-Sale",
-          "percentage": 25.0,
+          "percentage": 25,
           "vesting_schedule": "No lock-up",
           "cliff": "None",
           "notes": "125M tokens at $0.08"
         },
         {
           "category": "Crowd Sale",
-          "percentage": 25.0,
+          "percentage": 25,
           "vesting_schedule": "No lock-up",
           "cliff": "None",
           "notes": "125M tokens at $0.10"
         },
         {
           "category": "Development Pool",
-          "percentage": 20.0,
+          "percentage": 20,
           "vesting_schedule": "Used over time for ecosystem development",
           "cliff": "None",
           "notes": "100M tokens for future development"
         },
         {
           "category": "Founders & Early Contributors",
-          "percentage": 18.0,
+          "percentage": 18,
           "vesting_schedule": "Fully vested (completed)",
           "cliff": "None",
           "notes": "90M tokens"
         },
         {
           "category": "Liquidity",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "None",
           "cliff": "None",
           "notes": "25M tokens"
         },
         {
           "category": "Team & Advisors",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "Fully vested (12.5% every 3 months for team, 6 months for advisors)",
           "cliff": "None",
           "notes": "25M tokens — all vesting completed"
         },
         {
           "category": "Token Sale Facilitators",
-          "percentage": 2.0,
+          "percentage": 2,
           "vesting_schedule": "None",
           "cliff": "None",
           "notes": "10M tokens"
@@ -264,7 +296,6 @@
     "token_model_classification": "Utility token with fixed supply (500M, non-inflationary). Used for knowledge publishing fees, node staking, and data integrity collateral. Staking rewards come from network usage fees, not inflation — real yield model.",
     "tokenomics_notes": "Virtually fully circulated (99.96%) with fixed 500M cap — no dilution risk. FDV equals market cap. ICO was 50% of supply with no lock-up — unusual transparency. Staking rewards are utility-based from publishing fees rather than inflationary — one of the few real-yield models in DeAI. Core Node requires 50K TRAC (~$16K+) which creates meaningful token lockup. ICO investors at $0.10 have ~3.5x ROI after 8 years — one of the few positive ICO returns in the space."
   },
-
   "participation": {
     "methods": [
       {
@@ -321,7 +352,6 @@
       "grants_url": "https://origintrail.io"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -339,12 +369,11 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "1 billion+ Knowledge Assets created (Genesis period milestone). V8 claims 1000x throughput improvement over V6. Enterprise partnerships with Walmart, Oracle, BSI, GS1. Revenue is protocol-level (publishing fees to nodes) — no public dashboard tracking total fees collected. Not a DeFi protocol so DeFiLlama TVL is not applicable."
   },
-
   "community": {
     "discord_members": null,
     "telegram_members": null,
     "x_followers": null,
-    "github_contributors": 10,
+    "github_contributors": 31,
     "governance_participation_rate": "Unknown",
     "governance_model": "NeuroWeb has its own governance via NEURO token (Polkadot parachain). TRAC governance for DKG protocol decisions is less documented.",
     "governance_url": null,
@@ -357,7 +386,6 @@
     "sentiment_summary": "Dedicated community with strong conviction in the knowledge graph thesis. One of the longest-running crypto projects (since 2018) with positive ICO ROI. Enterprise partnerships (Walmart, Oracle, BSI) provide credibility. Community-run resources (origintrail.club) suggest engaged but niche following.",
     "community_notes": "Community is smaller but more technically sophisticated than typical DeAI projects. 8+ years of operation without major controversy. Turing Award winner (Bob Metcalfe) on advisory board adds academic credibility. ElizaOS integration (elizagraph) shows relevance to current AI agent narrative."
   },
-
   "freedom_score": {
     "total_score": 60,
     "max_possible": 100,
@@ -396,7 +424,6 @@
     "freedom_grade": "C",
     "freedom_summary": "OriginTrail is one of the most mature open-source projects in DeAI — 8 years of operation, 99.96% supply circulated, and genuine enterprise adoption. The DKG architecture provides real data sovereignty through verifiable Knowledge Assets. However, governance is limited, data is not encrypted, and the exact degree of node decentralisation is unclear. Freedom Score 60/100 (C) reflects strong foundations with room for improvement in governance and privacy."
   },
-
   "returns_score": {
     "total_score": 65,
     "max_possible": 100,
@@ -428,10 +455,12 @@
       }
     },
     "returns_grade": "C",
-    "risk_flags": ["unquantified_revenue", "small_developer_community"],
+    "risk_flags": [
+      "unquantified_revenue",
+      "small_developer_community"
+    ],
     "returns_summary": "OriginTrail has the best supply dynamics in DeAI — fixed 500M cap, 99.96% circulated, zero dilution. The real-yield staking model (publishing fees, not inflation) is rare and structurally sound. But revenue is unquantified and commercial scale is unproven despite 1B+ Knowledge Assets and enterprise partnerships. Returns Score 65/100 (C) reflects excellent tokenomics attached to unproven monetisation."
   },
-
   "assessment": {
     "what_works_today": [
       "8 years of continuous operation — one of the longest-running projects in DeAI",
@@ -482,7 +511,6 @@
     "outlook": "OriginTrail is a quiet builder in a noisy space. Eight years of operation, positive ICO returns, enterprise partnerships, and the best supply dynamics in DeAI. The knowledge graph architecture is unique and increasingly relevant as AI systems need verifiable, structured data. But the project has been 'almost there' for years — pivoting narratives from supply chain to Web3 to AI. Revenue is unquantified, the developer community is small, and the market has not rewarded the long-term approach. For sovereignty seekers, verifiable Knowledge Assets provide genuine data provenance. For investors, the fixed supply and real-yield model are structurally sound — the question is whether knowledge graph adoption will ever reach scale.",
     "overall_assessment": "The quiet achiever of DeAI. Best tokenomics, real enterprise adoption, unique category. Unquantified revenue and niche positioning limit both freedom and returns scores. Quadrant B — sovereignty-relevant with moderate returns potential."
   },
-
   "sources": [
     {
       "id": "S001",
@@ -643,6 +671,21 @@
       "tier": 3,
       "accessed": "2026-03-06",
       "notes": "Community-maintained partnerships overview"
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 230,
+      "forks": 86,
+      "open_issues": 56,
+      "contributors": 31,
+      "total_commits": 5374,
+      "total_repos": 84,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": null
     }
   ]
 }

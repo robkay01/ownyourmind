@@ -3,7 +3,7 @@
     "project_id": "nosana",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -16,16 +16,49 @@
       "defillama_slug": null
     },
     "research_gaps": [
-      "Protocol revenue not publicly disclosed \u2014 cannot verify economic sustainability despite 2M+ deployments.",
+      "Protocol revenue not publicly disclosed — cannot verify economic sustainability despite 2M+ deployments.",
       "NNP-0001 vote result (pass/fail) and implementation status not confirmed.",
       "Current staking APY not publicly disclosed.",
       "Exact NOS burned to date under buyback-and-burn mechanism not verifiable.",
       "Corporate entity KvK (Dutch Chamber of Commerce) registration number not confirmed.",
       "Exact team size not publicly disclosed.",
-      "DeFiLlama returned 403 \u2014 no TVL or fee data available.",
-      "Solscan returned 403 \u2014 on-chain holder count not independently verified.",
+      "DeFiLlama returned 403 — no TVL or fee data available.",
+      "Solscan returned 403 — on-chain holder count not independently verified.",
       "GPU pricing per hour on the marketplace not documented in research.",
       "Telegram community presence not confirmed."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": null,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 32,
+          "technical.github_metrics.forks": 11,
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2025-10-26",
+          "technical.github_metrics.contributors": 6,
+          "technical.github_metrics.total_commits": 1171,
+          "community.github_contributors": 6
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
   "identity": {
@@ -154,14 +187,20 @@
           "commits": 1171
         }
       ],
-      "license": "MIT"
+      "license": "MIT",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 3,
+      "last_commit_date": "2025-10-26",
+      "contributors": 6,
+      "total_commits": 1171
     },
     "audits": [
       {
         "auditor": "Op Codes",
         "scope": "Nosana Staking",
         "date": "2022-08-10",
-        "result_summary": "Completed \u2014 two reports issued"
+        "result_summary": "Completed — two reports issued"
       }
     ],
     "audit_note": "README states: 'Most code is unaudited. Use at your own risk.' Only staking contract audited. Jobs, Rewards, and Pools contracts unaudited.",
@@ -251,7 +290,8 @@
     "twitter_handle": "@nosana_ai",
     "discord_members": 13182,
     "telegram_members": null,
-    "community_calls": "Monthly on Discord"
+    "community_calls": "Monthly on Discord",
+    "github_contributors": 6
   },
   "exchanges": [
     "Gate.io",
@@ -306,7 +346,7 @@
       "governance_decentralisation": {
         "score": 8,
         "max": 20,
-        "evidence": "NNP governance framework exists with 7-stage lifecycle. vote.nosana.com operational. Only ONE proposal (NNP-0001) ever submitted. Proposals require team review before community vote \u2014 team gatekeeping. No Nosana Foundation established. Signal votes only, team implements."
+        "evidence": "NNP governance framework exists with 7-stage lifecycle. vote.nosana.com operational. Only ONE proposal (NNP-0001) ever submitted. Proposals require team review before community vote — team gatekeeping. No Nosana Foundation established. Signal votes only, team implements."
       },
       "token_distribution_fairness": {
         "score": 7,
@@ -340,7 +380,7 @@
       "token_utility": {
         "score": 14,
         "max": 20,
-        "evidence": "NOS required for GPU compute job payments \u2014 structurally embedded. Staking via xNOS determines fee share. Governance voting. Buyback-and-burn from protocol profits. Clear utility but network throughput and fee generation unverified."
+        "evidence": "NOS required for GPU compute job payments — structurally embedded. Staking via xNOS determines fee share. Governance voting. Buyback-and-burn from protocol profits. Clear utility but network throughput and fee generation unverified."
       },
       "value_accrual": {
         "score": 11,
@@ -350,7 +390,7 @@
       "supply_dynamics": {
         "score": 14,
         "max": 20,
-        "evidence": "100M max supply, 83.4% circulating. All vesting complete. FDV/MCap ratio 1.2x \u2014 healthy. Burn mechanism deflationary. However, NNP-0001 may introduce usage-based emissions beyond 100M cap, fundamentally changing supply dynamics."
+        "evidence": "100M max supply, 83.4% circulating. All vesting complete. FDV/MCap ratio 1.2x — healthy. Burn mechanism deflationary. However, NNP-0001 may introduce usage-based emissions beyond 100M cap, fundamentally changing supply dynamics."
       },
       "revenue_sustainability": {
         "score": 3,
@@ -363,5 +403,20 @@
         "evidence": "Gate.io, MEXC, Raydium, Jupiter. No Tier 1 CEX (Binance, Coinbase, Kraken). 24h volume ~$494K. Raydium NOS/USDC pool has just $279K liquidity. Any significant trade causes major slippage. Dangerously thin for a $14M market cap token."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 32,
+      "forks": 11,
+      "open_issues": 3,
+      "contributors": 6,
+      "total_commits": 1171,
+      "total_repos": 34,
+      "discord_members": 13182,
+      "telegram_members": null,
+      "x_followers": null
+    }
+  ]
 }

@@ -3,7 +3,7 @@
     "project_id": "sentient",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -26,9 +26,41 @@
       "HuggingFace models have very low download counts — demonstration pieces, not production.",
       "Seed round valuation ($1.2B) vs current FDV ($731M) — market values below seed.",
       "Telegram member count not publicly confirmed."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 12500,
+          "technical.github_metrics.forks": null,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 4992,
+          "technical.github_metrics.forks": 773,
+          "technical.github_metrics.open_issues": 20,
+          "technical.github_metrics.last_commit_date": "2026-02-16",
+          "technical.github_metrics.contributors": 3,
+          "technical.github_metrics.total_commits": 124,
+          "community.github_contributors": 3
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
-
   "identity": {
     "name": "Sentient",
     "ticker": "SENT",
@@ -45,7 +77,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -115,7 +146,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "OML (Open, Monetizable, Loyal) cryptographic standard for AI model ownership — embeds undetectable fingerprints into LLMs via fine-tuning. ROMA multi-agent framework for recursive task decomposition. The GRID is an open-source AGI network with 40+ agents, 50+ data sources, 10+ models across Base, Polygon, Arbitrum. Revenue model: per-invocation fees distributed via smart contracts to model creators, deployers, and validators. Sentient Enclaves Framework uses TEEs for secure computation.",
     "consensus_mechanism": "ERC-20 on Ethereum. GRID uses multi-chain deployment (Base, Polygon, Arbitrum). Protocol infrastructure built using Polygon CDK.",
@@ -128,23 +158,25 @@
       "Arbitrum",
       "Meta Llama (base models for Dobby fine-tunes)"
     ],
-    "smart_contract_languages": ["Solidity", "Rust"],
+    "smart_contract_languages": [
+      "Solidity",
+      "Rust"
+    ],
     "open_source": true,
     "license": "Mixed — various repos have different licenses",
     "github_metrics": {
       "total_repos": 15,
       "primary_repo_url": "https://github.com/sentient-agi/ROMA",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-06",
-      "stars": 12500,
-      "forks": null,
-      "open_issues": null
+      "total_commits": 124,
+      "contributors": 3,
+      "last_commit_date": "2026-02-16",
+      "stars": 4992,
+      "forks": 773,
+      "open_issues": 20
     },
     "audits": [],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "SENT",
     "ticker": "SENT",
@@ -162,20 +194,20 @@
       "total_supply": 34359738368,
       "circulating_supply": 7240000000,
       "circulating_supply_date": "2026-03-06",
-      "circulating_percentage": 21.0
+      "circulating_percentage": 21
     },
     "distribution": {
       "initial_allocation": [
         {
           "category": "Community Initiatives & Airdrop",
-          "percentage": 44.0,
+          "percentage": 44,
           "vesting_schedule": "30% at TGE, 70% linear over 4 years",
           "cliff": "None",
           "notes": "Largest allocation — community-focused"
         },
         {
           "category": "Team",
-          "percentage": 22.0,
+          "percentage": 22,
           "vesting_schedule": "Linear over 6 years",
           "cliff": "1 year",
           "notes": "Long vesting period relative to industry standard"
@@ -196,7 +228,7 @@
         },
         {
           "category": "Public Sale",
-          "percentage": 2.0,
+          "percentage": 2,
           "vesting_schedule": "100% at TGE",
           "cliff": "None",
           "notes": "Binance Wallet IEO at $0.01106"
@@ -207,7 +239,7 @@
     "emissions": {
       "model": "inflationary",
       "current_daily_emissions": null,
-      "current_annual_inflation_rate": 2.0,
+      "current_annual_inflation_rate": 2,
       "halving_schedule": "None — fixed 2% annual to Community Emission Pool",
       "next_major_emission_event": "Investor and team cliff unlock",
       "next_event_date": "2026-11-22",
@@ -249,7 +281,6 @@
     "token_model_classification": "Utility token for governance, model access, staking (planned), and per-invocation fee distribution. 2% annual inflation to community pool.",
     "tokenomics_notes": "Community-facing allocation is strong: 44% Community + 19.55% Ecosystem + 2% Public = 65.55%. Team at 22% with 6-year vesting (long). Investors at 12.45% with 1-year cliff and 4-year vest. Only 21% circulating — major unlock in November 2026 when investor and team cliffs expire. FDV ($731M) is below the $1.2B seed valuation, meaning the market values Sentient below what VCs paid. 2% annual inflation is low."
   },
-
   "participation": {
     "methods": [
       {
@@ -306,7 +337,6 @@
       "grants_url": "https://sentient.foundation"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -324,12 +354,11 @@
     "metrics_date": "2026-03-06",
     "usage_notes": "Sentient Chat: 2M+ waitlist, 5K+ beta users, 100K+ queries in testing. The GRID testnet: 40+ agents, 50+ data sources, 10+ models. ~120 partner entities. GRID mainnet planned Q2 2026. No on-chain revenue yet. Builder programme has committed $1M+ in grants."
   },
-
   "community": {
     "discord_members": 713260,
     "telegram_members": null,
     "x_followers": null,
-    "github_contributors": null,
+    "github_contributors": 3,
     "governance_participation_rate": "Unknown — governance not yet active",
     "governance_model": "Token-based governance planned with GRID mainnet. Details not fully documented.",
     "governance_url": null,
@@ -341,7 +370,6 @@
     "sentiment_summary": "High-profile project with strong VC backing (Founders Fund, Pantera, Franklin Templeton). Academic credibility via Princeton co-founder. AGI narrative generates excitement. Token down 44% from listing price tempers enthusiasm. Active airdrop programme inflates community metrics.",
     "community_notes": "Discord 713K likely inflated by airdrop farming — active engagement is unclear. HuggingFace team has 16 members. 2M+ Sentient Chat waitlist suggests genuine interest in the product. GitHub engagement (12.5K stars) is among the highest in DeAI."
   },
-
   "freedom_score": {
     "total_score": 49,
     "max_possible": 100,
@@ -380,7 +408,6 @@
     "freedom_grade": "D",
     "freedom_summary": "Sentient has strong open-source credentials and a novel approach to AI model ownership via OML cryptographic fingerprinting. Community token allocation (65.55%) is among the best in DeAI. However, GRID mainnet is not yet live, governance is not active, infrastructure is not decentralised, and no smart contract audit has been published. Freedom Score 49/100 (D) reflects strong theoretical foundations with limited practical decentralisation today."
   },
-
   "returns_score": {
     "total_score": 50,
     "max_possible": 100,
@@ -412,10 +439,13 @@
       }
     },
     "returns_grade": "D",
-    "risk_flags": ["no_revenue", "pre_mainnet", "vc_overhang"],
+    "risk_flags": [
+      "no_revenue",
+      "pre_mainnet",
+      "vc_overhang"
+    ],
     "returns_summary": "Sentient has exceptional exchange listings and a theoretically sound revenue model (per-invocation fees via OML). But GRID mainnet is not yet live, no revenue exists, staking is not active, and the FDV ($731M) is below the seed valuation ($1.2B) — suggesting VC investors are underwater and may sell at the November 2026 cliff unlock. Returns Score 50/100 (D) reflects strong liquidity and promising architecture with zero current revenue."
   },
-
   "assessment": {
     "what_works_today": [
       "World-class team — Princeton professor (co-inventor of 4G tech), Polygon co-founder, strong academic-crypto bridge",
@@ -467,7 +497,6 @@
     "outlook": "Sentient is the highest-conviction VC bet in crypto-AI — $85M seed from Founders Fund and Pantera is unmatched. The OML cryptographic standard for AI model ownership is a genuine innovation with academic rigor. The team bridges academia and crypto in a way no other project does. But GRID mainnet is not live, there is zero revenue, the token is 44% below listing price, and the November 2026 VC unlock looms. This is a project that could define the intersection of crypto and AI — or could be the most expensive academic experiment in the space. The Q2 2026 GRID mainnet launch is the make-or-break event.",
     "overall_assessment": "Highest-conviction VC bet in crypto-AI with genuine innovation (OML), but pre-revenue and pre-mainnet. Strong community tokenomics, zero commercial proof. Quadrant B/D — strong vision, unproven execution."
   },
-
   "sources": [
     {
       "id": "S001",
@@ -628,6 +657,21 @@
       "tier": 3,
       "accessed": "2026-03-06",
       "notes": "Cointelegraph — $85M round coverage, investor list"
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 4992,
+      "forks": 773,
+      "open_issues": 20,
+      "contributors": 3,
+      "total_commits": 124,
+      "total_repos": 15,
+      "discord_members": 713260,
+      "telegram_members": null,
+      "x_followers": null
     }
   ]
 }

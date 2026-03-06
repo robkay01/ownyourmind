@@ -3,8 +3,8 @@
     "project_id": "venice",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-02",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "veniceai",
@@ -19,7 +19,39 @@
         "freedom_score.breakdown.censorship_resistance.evidence"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 40,
+          "technical.github_metrics.forks": 422,
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": "2026-03-01",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": 261,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 0,
+          "technical.github_metrics.forks": 0,
+          "technical.github_metrics.open_issues": 0,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 30,
+          "technical.github_metrics.total_commits": 274,
+          "community.github_contributors": 30
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "No formal whitepaper or litepaper exists. Blog posts and help centre articles serve as the closest equivalent.",
       "Exact current team size uncertain. The Block reported 6 at launch (May 2024); RocketReach estimates 13; no official current figure published.",
@@ -103,12 +135,12 @@
     "github_metrics": {
       "total_repos": 11,
       "primary_repo_url": "https://github.com/veniceai/ironclaw",
-      "total_commits": 261,
-      "contributors": null,
-      "last_commit_date": "2026-03-01",
-      "stars": 40,
-      "forks": 422,
-      "open_issues": null
+      "total_commits": 274,
+      "contributors": 30,
+      "last_commit_date": "2026-03-06",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0
     },
     "audits": [
       {
@@ -324,7 +356,7 @@
     "discord_members": null,
     "telegram_members": null,
     "x_followers": 53200,
-    "github_contributors": null,
+    "github_contributors": 30,
     "governance_participation_rate": "Not measurable. Governance is described as token-weighted voting but no specific voting interface (Snapshot, Tally) or quorum requirements documented. Day-to-day product decisions made by Venice team with community input via Featurebase and Discord.",
     "governance_model": "Token-weighted voting described conceptually. VVV holders can propose and vote on platform decisions. Voting power proportional to staked VVV. In practice, Venice.ai (the company) retains full operational control. Featurebase upvote system for feature requests (not token-weighted). Closer to team-led project with token governance aspirations than a fully operational DAO.",
     "governance_url": null,
@@ -1072,5 +1104,19 @@
       "reliability_notes": "Tier 3 analysis."
     }
   ],
-  "metrics_history": []
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "contributors": 30,
+      "total_commits": 274,
+      "total_repos": 11,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 53200
+    }
+  ]
 }

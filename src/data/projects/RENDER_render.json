@@ -3,8 +3,8 @@
     "project_id": "render",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 2,
-    "last_updated": "2026-03-02",
+    "version": 3,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "rendernetwork",
@@ -19,7 +19,21 @@
         "freedom_score.breakdown.open_source_transparency.evidence"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.total_repos"
+        ],
+        "previous_values": {
+          "technical.github_metrics.total_repos": 9
+        },
+        "new_values": {
+          "technical.github_metrics.total_repos": 4
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "Core rendering/compute software (OctaneRender, node client, job routing) is proprietary and closed source -- no independent code review possible",
       "EtherAuthority audit (April 14, 2024) referenced in one source but full report could not be located publicly -- single-source claim, unverified",
@@ -186,7 +200,7 @@
     "open_source": false,
     "license": "Proprietary (OTOY Inc.) for core software. Governance proposals (RNPs) are public on GitHub. Legacy token contracts on GitHub under MIT-like terms.",
     "github_metrics": {
-      "total_repos": 9,
+      "total_repos": 4,
       "primary_repo_url": "https://github.com/rendernetwork/RNPs",
       "total_commits": 107,
       "contributors": 6,
@@ -1120,5 +1134,19 @@
       "reliability_notes": "Tier 2 Solana infrastructure analysis. Relevant to chain risk assessment."
     }
   ],
-  "metrics_history": []
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 44,
+      "forks": 5,
+      "open_issues": 0,
+      "contributors": 6,
+      "total_commits": 107,
+      "total_repos": 4,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 150000
+    }
+  ]
 }

@@ -3,8 +3,8 @@
     "project_id": "virtuals",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Basescan returned 403 -- token holder count, transfer count, and exact on-chain circulating supply not directly verifiable from block explorer in this session",
@@ -31,7 +31,30 @@
       "x_handle": "virtuals_io",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.contributors",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 91,
+          "technical.github_metrics.open_issues": 1,
+          "technical.github_metrics.contributors": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 92,
+          "technical.github_metrics.open_issues": 10,
+          "technical.github_metrics.contributors": 5,
+          "community.github_contributors": 5
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "Virtuals Protocol",
@@ -133,11 +156,11 @@
       "total_repos": 32,
       "primary_repo_url": "https://github.com/Virtual-Protocol/protocol-contracts",
       "total_commits": 260,
-      "contributors": null,
+      "contributors": 5,
       "last_commit_date": "2026-02-26",
-      "stars": 91,
+      "stars": 92,
       "forks": 59,
-      "open_issues": 1
+      "open_issues": 10
     },
     "audits": [
       {
@@ -392,7 +415,7 @@
     "discord_members": 11865,
     "telegram_members": null,
     "x_followers": 281000,
-    "github_contributors": null,
+    "github_contributors": 5,
     "governance_participation_rate": "veVIRTUAL governance launched with 0.10% supply threshold for proposals, 25% quorum requirement. Participation rate not quantified.",
     "governance_model": "Dual-layer governance: (1) Protocol-level governance via veVIRTUAL -- permissionless proposal submission (0.10% threshold), 72-hour comment window, 72-hour voting, 25% quorum, simple majority. (2) Agent SubDAO governance via DPoS -- LPs delegate to validators who evaluate AI model quality. Ecosystem treasury controlled by DAO multi-sig with governance voting on fund deployment.",
     "governance_url": "https://gov.virtuals.io/",
@@ -978,6 +1001,21 @@
         "tokenomics.market_data.all_time_high_date"
       ],
       "reliability_notes": "403 on direct fetch. ATH $5.07 on Jan 2, 2025 confirmed via search snippet, cross-referenced with CryptoRank."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 92,
+      "forks": 59,
+      "open_issues": 10,
+      "contributors": 5,
+      "total_commits": 260,
+      "total_repos": 32,
+      "discord_members": 11865,
+      "telegram_members": null,
+      "x_followers": 281000
     }
   ]
 }

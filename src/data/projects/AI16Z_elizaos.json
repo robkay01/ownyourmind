@@ -3,8 +3,8 @@
     "project_id": "elizaos",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "CoinGecko returned 403 -- market data reconstructed from LiveCoinWatch, MarketCapOf, and web search snippets",
@@ -33,7 +33,36 @@
       "x_handle": "elizaOS",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 17662,
+          "technical.github_metrics.forks": 5439,
+          "technical.github_metrics.open_issues": 141,
+          "technical.github_metrics.last_commit_date": "2026-02-27",
+          "technical.github_metrics.contributors": 583,
+          "community.github_contributors": 583
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 17708,
+          "technical.github_metrics.forks": 5449,
+          "technical.github_metrics.open_issues": 133,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 366,
+          "community.github_contributors": 366
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "ElizaOS",
@@ -113,11 +142,11 @@
       "total_repos": 60,
       "primary_repo_url": "https://github.com/elizaOS/eliza",
       "total_commits": 17545,
-      "contributors": 583,
-      "last_commit_date": "2026-02-27",
-      "stars": 17662,
-      "forks": 5439,
-      "open_issues": 141
+      "contributors": 366,
+      "last_commit_date": "2026-03-06",
+      "stars": 17708,
+      "forks": 5449,
+      "open_issues": 133
     },
     "audits": [
       {
@@ -150,27 +179,27 @@
       "total_supply": 9377383307,
       "circulating_supply": 7482544314,
       "circulating_supply_date": "2026-03-03",
-      "circulating_percentage": 68.0
+      "circulating_percentage": 68
     },
     "distribution": {
       "initial_allocation": [
         {
           "category": "Community (AI16Z holders conversion)",
-          "percentage": 60.0,
+          "percentage": 60,
           "vesting_schedule": "Immediate upon migration (1:6 swap ratio)",
           "cliff": "None",
           "notes": "Original AI16Z holders received 6 ELIZAOS per 1 AI16Z held at snapshot. Migration window: 6 Nov 2025 to 4 Feb 2026."
         },
         {
           "category": "SAFT (Simple Agreement for Future Tokens)",
-          "percentage": 15.0,
+          "percentage": 15,
           "vesting_schedule": "Locked multisig, minimum 12-month cliff",
           "cliff": "12 months",
           "notes": "Specific investors not publicly disclosed."
         },
         {
           "category": "Team and Contributors",
-          "percentage": 10.0,
+          "percentage": 10,
           "vesting_schedule": "12-month cliff (from Oct 2024) + 24-month linear vesting",
           "cliff": "12 months",
           "notes": "Vesting enforced by Streamflow smart contracts with no early unlock discretion."
@@ -341,7 +370,7 @@
     "discord_members": 2683,
     "telegram_members": null,
     "x_followers": null,
-    "github_contributors": 583,
+    "github_contributors": 366,
     "governance_participation_rate": "Low -- formal DAO voting module not yet launched. Current governance operates through informal Discord proposals and signalling alongside AI agent 'Marc AIndreessen' which maintains final investment decision authority.",
     "governance_model": "Hybrid AI-human DAO governance. An AI agent called 'Marc AIndreessen' autonomously manages the DAO's treasury and investment decisions. Community members can suggest investments based on their token stake size, but the AI maintains final decision authority. A formal on-chain voting module is under development but not yet launched. Token holders can propose investments, token buybacks, and strategic initiatives.",
     "governance_url": null,
@@ -982,6 +1011,21 @@
         "exchange listing status"
       ],
       "reliability_notes": "Tier 2 major exchange. Confirms swap ratio and listing status."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 17708,
+      "forks": 5449,
+      "open_issues": 133,
+      "contributors": 366,
+      "total_commits": 17545,
+      "total_repos": 60,
+      "discord_members": 2683,
+      "telegram_members": null,
+      "x_followers": null
     }
   ]
 }

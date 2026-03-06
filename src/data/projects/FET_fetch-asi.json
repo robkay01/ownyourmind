@@ -3,8 +3,8 @@
     "project_id": "asi-alliance",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-02",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "fetchai",
@@ -20,7 +20,36 @@
         "assessment.overall_assessment"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 1551,
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 371,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 1553,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": 62,
+          "technical.github_metrics.total_commits": 536,
+          "technical.github_metrics.total_repos": 92,
+          "community.github_contributors": 62
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "Exact Discord and Telegram member counts could not be confirmed -- dynamic pages did not render in web fetch. Estimated from third-party summaries.",
       "ASI Cloud usage metrics (active users, GPU hours, revenue) not publicly disclosed. Product exited beta Dec 2025 but no usage dashboard exists.",
@@ -155,12 +184,12 @@
     "open_source": true,
     "license": "Apache 2.0 (uAgents, primary repos); mixed across constituent projects",
     "github_metrics": {
-      "total_repos": 371,
+      "total_repos": 92,
       "primary_repo_url": "https://github.com/fetchai/uAgents",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-02",
-      "stars": 1551,
+      "total_commits": 536,
+      "contributors": 62,
+      "last_commit_date": "2026-03-05",
+      "stars": 1553,
       "forks": 351,
       "open_issues": 35,
       "additional_github_orgs": [
@@ -432,7 +461,7 @@
     "discord_members": null,
     "telegram_members": null,
     "x_followers": 96700,
-    "github_contributors": null,
+    "github_contributors": 62,
     "governance_participation_rate": null,
     "governance_model": "Federated: ASI Alliance Governing Council (Sheikh as Chairman, Goertzel as CEO) sets strategic direction. On-chain governance via FET token voting for major proposals (merger approvals, new member additions). Each constituent foundation (Fetch.ai, SingularityNET, CUDOS) retains independent governance for project-specific decisions.",
     "governance_url": "https://docs.superintelligence.io",
@@ -1005,5 +1034,19 @@
       ]
     }
   ],
-  "metrics_history": []
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 1553,
+      "forks": 351,
+      "open_issues": 35,
+      "contributors": 62,
+      "total_commits": 536,
+      "total_repos": 92,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 96700
+    }
+  ]
 }

@@ -3,8 +3,8 @@
     "project_id": "ocean",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "Ocean Protocol official blog (blog.oceanprotocol.com) returned SSL certificate error -- blog posts referenced via search snippets and third-party reporting instead",
@@ -33,7 +33,33 @@
       "x_handle": "oceanprotocol",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": 19,
+          "technical.github_metrics.last_commit_date": "2026-03-03",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 21,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 20,
+          "technical.github_metrics.total_commits": 3378,
+          "community.github_contributors": 20
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "Ocean Protocol",
@@ -139,12 +165,12 @@
     "github_metrics": {
       "total_repos": 94,
       "primary_repo_url": "https://github.com/oceanprotocol/ocean-node",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-03",
+      "total_commits": 3378,
+      "contributors": 20,
+      "last_commit_date": "2026-03-06",
       "stars": 72,
       "forks": 19,
-      "open_issues": 19
+      "open_issues": 21
     },
     "audits": [
       {
@@ -201,14 +227,14 @@
       "initial_allocation": [
         {
           "category": "Network Reward (Emissions)",
-          "percentage": 60.0,
+          "percentage": 60,
           "vesting_schedule": "Distributed over time as network rewards",
           "cliff": "None",
           "notes": "The largest allocation intended for long-term network incentives. However, 81% of total OCEAN supply (~1.13B tokens) was converted to FET/ASI during the ASI Alliance merger (July 2024), and the remaining OCEAN max supply is effectively ~267.8M."
         },
         {
           "category": "Founding Team",
-          "percentage": 20.0,
+          "percentage": 20,
           "vesting_schedule": "5-year vesting in 6 equal tranches",
           "cliff": "None specified",
           "notes": "Allocated to BigchainDB and DEX founding teams (10% each). 122.62M OCEAN -- now fully unlocked per ICODrops."
@@ -222,14 +248,14 @@
         },
         {
           "category": "Foundation",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "Distributed as data credits and community incentives",
           "cliff": "None",
           "notes": "Ocean tokens for community distribution, data credits for buying data and services."
         },
         {
           "category": "IEO (Bittrex International)",
-          "percentage": 4.0,
+          "percentage": 4,
           "vesting_schedule": "Fully unlocked at TGE",
           "cliff": "None",
           "notes": "56.4M OCEAN at $0.12/token. Raised $6.77M."
@@ -391,7 +417,7 @@
     "discord_members": 56066,
     "telegram_members": null,
     "x_followers": 170727,
-    "github_contributors": null,
+    "github_contributors": 20,
     "governance_participation_rate": null,
     "governance_model": "OceanDAO governance (quadratic voting using OCEAN across Ethereum, Polygon, BSC via Snapshot) operated from 2021-2022 (23 rounds) before being superseded by more automated approaches. veOCEAN holders had curation power over data assets. Post-ASI withdrawal, governance model is unclear -- the Foundation states OCEAN is not a governance token and OceanDAO grants ended. Decision-making appears to rest primarily with the Ocean Protocol Foundation and BigchainDB GmbH founding team.",
     "governance_url": null,
@@ -1247,6 +1273,21 @@
         "one third-party dataset referencing Ocean Protocol"
       ],
       "reliability_notes": "Only indirect reference found. No official Ocean Protocol organisation on HuggingFace."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 21,
+      "contributors": 20,
+      "total_commits": 3378,
+      "total_repos": 94,
+      "discord_members": 56066,
+      "telegram_members": null,
+      "x_followers": 170727
     }
   ]
 }

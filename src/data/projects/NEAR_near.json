@@ -3,8 +3,8 @@
     "project_id": "near",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-03",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "research_gaps": [
       "DeFiLlama web page returned 403 -- TVL sourced from DeFiLlama API endpoint instead ($114.7M)",
@@ -29,7 +29,39 @@
       "x_handle": "NEARProtocol",
       "prose_fields_with_embedded_figures": []
     },
-    "auto_refresh_log": []
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 2570,
+          "technical.github_metrics.forks": 763,
+          "technical.github_metrics.open_issues": 466,
+          "technical.github_metrics.last_commit_date": "2026-03-03",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 2573,
+          "technical.github_metrics.forks": 765,
+          "technical.github_metrics.open_issues": 468,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 240,
+          "technical.github_metrics.total_commits": 9669,
+          "community.github_contributors": 240
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "NEAR Protocol",
@@ -147,12 +179,12 @@
     "github_metrics": {
       "total_repos": 275,
       "primary_repo_url": "https://github.com/near/nearcore",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-03",
-      "stars": 2570,
-      "forks": 763,
-      "open_issues": 466
+      "total_commits": 9669,
+      "contributors": 240,
+      "last_commit_date": "2026-03-06",
+      "stars": 2573,
+      "forks": 765,
+      "open_issues": 468
     },
     "audits": [
       {
@@ -229,7 +261,7 @@
       "initial_allocation": [
         {
           "category": "Community Grants & Programs",
-          "percentage": 17.0,
+          "percentage": 17,
           "vesting_schedule": "Distributed over time via grants and ecosystem programmes",
           "cliff": "None",
           "notes": "170M NEAR allocated for community development, grants, and ecosystem growth. NEAR Foundation announced $800M in grants (Oct 2021) to accelerate ecosystem development."
@@ -243,14 +275,14 @@
         },
         {
           "category": "Community Sale (CoinList)",
-          "percentage": 12.0,
+          "percentage": 12,
           "vesting_schedule": "Three options: immediate unlock at $0.40, 12-month lockup at $0.34, 24-month lockup at $0.29",
           "cliff": "None",
           "notes": "120M NEAR sold via CoinList in August 2020. Raised $40M. All lockups expired."
         },
         {
           "category": "NEAR Foundation",
-          "percentage": 10.0,
+          "percentage": 10,
           "vesting_schedule": "Managed by Foundation for ecosystem development",
           "cliff": "None",
           "notes": "100M NEAR allocated to the Switzerland-based NEAR Foundation for long-term ecosystem stewardship."
@@ -300,7 +332,7 @@
       "staking_type": "Delegated Proof of Stake -- users can delegate NEAR to validators or run their own validator node. veNEAR (vote-escrowed NEAR) available for governance participation via House of Stake.",
       "minimum_stake": 25500,
       "lock_up_period": "Unstaking takes 2-3 epochs (~24-36 hours). veNEAR requires time-locked staking for governance weight.",
-      "current_apy_nominal": 9.0,
+      "current_apy_nominal": 9,
       "real_yield_after_inflation": 6.5,
       "staking_ratio": 46.4,
       "staking_risks": [
@@ -444,7 +476,7 @@
     "discord_members": 74000,
     "telegram_members": null,
     "x_followers": 1800000,
-    "github_contributors": null,
+    "github_contributors": 240,
     "governance_participation_rate": "68.41% of validators signalled support for inflation halving proposal (Oct 2025). House of Stake governance launched late 2025 -- participation rates for broader token-holder governance still emerging.",
     "governance_model": "House of Stake -- on-chain governance system launched late 2025 using veNEAR (vote-escrowed NEAR) for stake-weighted, time-locked governance. NEP (NEAR Enhancement Proposal) process for protocol upgrades. Validators can signal on protocol changes (e.g., inflation halving vote). NEAR Foundation developing AI-powered voting delegates to assist governance participation. Foundation still holds significant influence over strategic direction and treasury allocation.",
     "governance_url": "https://gov.near.org",
@@ -979,6 +1011,21 @@
         "data sourced from Messari, Changelly, Gate.io, CoinDesk"
       ],
       "reliability_notes": "Tier 3 aggregated statistics page. Content not fully extractable via WebFetch (JavaScript-rendered)."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 2573,
+      "forks": 765,
+      "open_issues": 468,
+      "contributors": 240,
+      "total_commits": 9669,
+      "total_repos": 275,
+      "discord_members": 74000,
+      "telegram_members": null,
+      "x_followers": 1800000
     }
   ]
 }

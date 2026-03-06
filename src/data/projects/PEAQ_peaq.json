@@ -3,7 +3,7 @@
     "project_id": "peaq",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -26,9 +26,38 @@
       "Total supply after inflation since November 2024 launch not precisely calculated.",
       "Insider vesting completion dates not fully documented beyond duration periods.",
       "CoinList ICO ($20M) may overlap with the private sale allocation — exact breakdown unclear."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 136,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "technical.github_metrics.total_repos": 97,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 81,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.contributors": 15,
+          "technical.github_metrics.total_commits": 1576,
+          "technical.github_metrics.total_repos": 98,
+          "community.github_contributors": 15
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
-
   "identity": {
     "name": "peaq",
     "ticker": "PEAQ",
@@ -45,7 +74,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -117,7 +145,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Substrate-based Layer-1 blockchain running as a Polkadot parachain. Dual smart contract support: EVM (Solidity) and WASM (Rust/ink!). Native machine-economy modules built into the chain: peaq ID (machine identity), peaq access (RBAC), peaq verify (data verification), peaq store (key-value storage), peaq pay (M2M payments), UMT (time sync). 49K TPS achieved in Q3 2025 with target of 100K+ TPS.",
     "consensus_mechanism": "Delegated Proof of Stake (DPoS) for block production + Nominated Proof of Stake (NPoS) for verification. Secured by Polkadot Relay Chain.",
@@ -128,16 +155,19 @@
       "Substrate framework",
       "Cumulus (parachain framework)"
     ],
-    "smart_contract_languages": ["Solidity", "Rust (ink!)"],
+    "smart_contract_languages": [
+      "Solidity",
+      "Rust (ink!)"
+    ],
     "open_source": true,
     "license": "Apache 2.0",
     "github_metrics": {
-      "total_repos": 97,
+      "total_repos": 98,
       "primary_repo_url": "https://github.com/peaqnetwork/peaq-network-node",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-03-05",
-      "stars": 136,
+      "total_commits": 1576,
+      "contributors": 15,
+      "last_commit_date": "2026-03-06",
+      "stars": 81,
       "forks": 45,
       "open_issues": 12
     },
@@ -159,7 +189,6 @@
     ],
     "security_incidents": []
   },
-
   "tokenomics": {
     "token_name": "PEAQ",
     "ticker": "PEAQ",
@@ -184,21 +213,21 @@
       "initial_allocation": [
         {
           "category": "Ecosystem & Treasury",
-          "percentage": 20.0,
+          "percentage": 20,
           "vesting_schedule": "48 months linear",
           "cliff": "None",
           "notes": "840M tokens for ecosystem growth"
         },
         {
           "category": "Community Initiatives",
-          "percentage": 15.0,
+          "percentage": 15,
           "vesting_schedule": "36 months linear",
           "cliff": "None",
           "notes": "630M tokens for community programs"
         },
         {
           "category": "Private Sale",
-          "percentage": 13.0,
+          "percentage": 13,
           "vesting_schedule": "18 months linear, 7.5% at unlock",
           "cliff": "6 months",
           "notes": "546M tokens"
@@ -219,35 +248,35 @@
         },
         {
           "category": "Pre-Seed",
-          "percentage": 7.0,
+          "percentage": 7,
           "vesting_schedule": "24 months linear, 5% at unlock",
           "cliff": "6 months",
           "notes": "294M tokens"
         },
         {
           "category": "Launchpad/Community Sale",
-          "percentage": 6.0,
+          "percentage": 6,
           "vesting_schedule": "6 months linear",
           "cliff": "None",
           "notes": "252M tokens"
         },
         {
           "category": "Seed",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "24 months linear, 5% at unlock",
           "cliff": "6 months",
           "notes": "210M tokens"
         },
         {
           "category": "Network Security",
-          "percentage": 5.0,
+          "percentage": 5,
           "vesting_schedule": "54 months linear",
           "cliff": "None",
           "notes": "210M tokens for Polkadot coretime purchases"
         },
         {
           "category": "Advisors",
-          "percentage": 9.0,
+          "percentage": 9,
           "vesting_schedule": "Not documented separately",
           "cliff": "Not documented",
           "notes": "Included in various allocations above"
@@ -269,7 +298,7 @@
       "staking_type": "DPoS/NPoS (validators and delegators)",
       "minimum_stake": null,
       "lock_up_period": "Variable — locked tokens can be staked",
-      "current_apy_nominal": 10.0,
+      "current_apy_nominal": 10,
       "real_yield_after_inflation": 6.5,
       "staking_ratio": null,
       "staking_risks": [
@@ -302,7 +331,6 @@
     "token_model_classification": "Utility token for gas fees, staking, governance, machine identity, and M2M payments on a purpose-built DePIN L1. Disinflationary with 3.5% annual inflation decreasing to 1%.",
     "tokenomics_notes": "Genesis supply of 4.2B with no max supply. 44.3% circulating. Insider allocation (Core Team 11.5% + EoT Labs 8.5% + Pre-Seed 7% + Seed 5% + Private Sale 13% = 45%) is significant. Inflation model is well-structured — 3.5% decreasing 10% annually to 1%. 40% of inflation goes to validators/delegators. Token down 98% from ATH. FDV of $64.7M is reasonable relative to $24.9M raised but investors from higher-priced rounds may be significantly underwater."
   },
-
   "participation": {
     "methods": [
       {
@@ -359,7 +387,6 @@
       "grants_url": "https://www.peaq.xyz"
     }
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "active_users_monthly": null,
@@ -377,12 +404,11 @@
     "metrics_date": "2025-12-31",
     "usage_notes": "60+ DePINs across 22 industries building on peaq. 6M+ people and machines on-chain (primarily via Teneo with 6M+ community nodes). 40.4M transactions in Q3 2025. TVL is low ($726K) because DeFi is not the primary use case — peaq is infrastructure for machine economy, not trading. Enterprise partnerships include NTT, Continental, Airbus, Mastercard, Bosch, Gaia. Real usage exists but monetisation is minimal — $163.6K annualised fees."
   },
-
   "community": {
     "discord_members": 144332,
     "telegram_members": 32331,
     "x_followers": null,
-    "github_contributors": null,
+    "github_contributors": 15,
     "governance_participation_rate": "Unknown",
     "governance_model": "On-chain governance via Substrate governance module. Token holders can propose and vote on protocol changes.",
     "governance_url": null,
@@ -394,7 +420,6 @@
     "sentiment_summary": "Active community with strong DePIN narrative. 60+ projects building on the chain creates ecosystem momentum. Enterprise partnerships (NTT, Continental, Airbus, Bosch) add credibility. Token price decline (98% from ATH) is a concern but the team continues shipping.",
     "community_notes": "Discord membership of 144K is strong for a project this size. Telegram has migrated activity to Discord. Developer community is active across 97 GitHub repos."
   },
-
   "freedom_score": {
     "total_score": 53,
     "max_possible": 100,
@@ -433,7 +458,6 @@
     "freedom_grade": "D",
     "freedom_summary": "peaq is a well-engineered open-source L1 with genuine infrastructure decentralisation via Polkadot. Strong audit history and active GitHub presence. However, 45% insider allocation, Polkadot parachain dependency, enterprise-focused partnerships, and lack of privacy features limit the sovereignty case. Freedom Score 53/100 (D) reflects a solid technical foundation with centralised control dynamics."
   },
-
   "returns_score": {
     "total_score": 47,
     "max_possible": 100,
@@ -465,10 +489,13 @@
       }
     },
     "returns_grade": "D",
-    "risk_flags": ["early_revenue", "insider_heavy", "polkadot_dependency"],
+    "risk_flags": [
+      "early_revenue",
+      "insider_heavy",
+      "polkadot_dependency"
+    ],
     "returns_summary": "peaq has genuine ecosystem traction — 60+ DePINs, 40M+ quarterly transactions, enterprise partnerships. The token has strong multi-utility design. But revenue is minimal ($163.6K annualised), the token is down 98% from ATH, insider allocation is heavy at 45%, and Polkadot parachain dependency adds platform risk. Returns Score 47/100 (D) reflects real activity but unproven monetisation in a nascent machine economy."
   },
-
   "assessment": {
     "what_works_today": [
       "60+ DePINs across 22 industries building on peaq — genuine ecosystem breadth",
@@ -518,7 +545,6 @@
     "outlook": "peaq has built a genuine machine-economy L1 with real ecosystem traction — 60+ DePINs, enterprise partnerships, and millions of on-chain interactions. The architecture is well-designed with native modules purpose-built for machine identity and M2M payments. But the commercial case is weak — $163.6K annualised revenue for an L1 chain is not sustainable. The token's 98% decline from ATH reflects market scepticism about DePIN monetisation. peaq needs its DePIN ecosystem to generate meaningful transaction volume that translates to fee revenue. The Machine Economy thesis is forward-looking — the question is timing, and the market is not rewarding early positioning.",
     "overall_assessment": "Well-engineered DePIN infrastructure with real ecosystem activity but minimal monetisation. Strong technical foundation, weak commercial proof. Quadrant D — moderate freedom, low returns."
   },
-
   "sources": [
     {
       "id": "S001",
@@ -679,6 +705,21 @@
       "tier": 3,
       "accessed": "2026-03-06",
       "notes": "Bitstamp — peaq overview, architecture, machine economy thesis"
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 81,
+      "forks": 45,
+      "open_issues": 12,
+      "contributors": 15,
+      "total_commits": 1576,
+      "total_repos": 98,
+      "discord_members": 144332,
+      "telegram_members": 32331,
+      "x_followers": null
     }
   ]
 }

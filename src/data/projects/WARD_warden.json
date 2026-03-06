@@ -3,7 +3,7 @@
     "project_id": "warden",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 1,
+    "version": 2,
     "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
@@ -24,9 +24,35 @@
       "No third-party audit of SPEX system found.",
       "Madrid-based entity registration details not verified.",
       "HuggingFace not checked."
+    ],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": null,
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 21,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.contributors": 66,
+          "technical.github_metrics.total_commits": 2409,
+          "community.github_contributors": 66
+        },
+        "run_by": "github-actions"
+      }
     ]
   },
-
   "identity": {
     "name": "Warden Protocol",
     "ticker": "WARD",
@@ -43,7 +69,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -118,7 +143,6 @@
       ]
     }
   },
-
   "technical": {
     "architecture_summary": "Purpose-built EVM blockchain for AI agents. Key components: SPEX (Statistical Proof of Execution) for verifiable AI inference via probabilistic sampling and validator consensus. AVRs (Asynchronous Verifiable Resources) as cross-chain plugins. Agentic Wallet with natural language interface. Agent Hub marketplace. Multi-chain support via IBC, Hyperlane, deBridge.",
     "consensus_mechanism": "Proof-of-Stake with dynamic inflation (1-10%) targeting 65% staked.",
@@ -131,12 +155,15 @@
       "stars": 2185,
       "forks": 188,
       "license": "Apache 2.0 (main), proprietary x/async module",
-      "last_commit": "2026-03-05"
+      "last_commit": "2026-03-05",
+      "open_issues": 21,
+      "last_commit_date": "2026-03-05",
+      "contributors": 66,
+      "total_commits": 2409
     },
     "audits": [],
     "licensing_concern": "x/async module is proprietary with restricted use — core infrastructure partially closed source."
   },
-
   "tokenomics": {
     "token_name": "WARD",
     "token_standard": "Native coin + BEP20 + ERC20",
@@ -147,15 +174,42 @@
     "market_cap_usd": 2500000,
     "fdv_mcap_ratio": 3.96,
     "allocation": {
-      "initial_airdrop": { "percent": 4.7, "vesting": "30.32M at genesis; 6-month linear" },
-      "public_goods": { "percent": 5.3, "vesting": "10M at genesis; 30-month linear" },
-      "ecosystem_community": { "percent": 12.0, "vesting": "20M at genesis; 30-month linear" },
-      "liquidity": { "percent": 5.0, "vesting": "100% at genesis" },
-      "agent_incentives": { "percent": 19.0, "vesting": "20M at genesis; 12-month linear" },
-      "validators": { "percent": 10.0, "vesting": "Permanently locked (delegated)" },
-      "treasury_rd": { "percent": 22.0, "vesting": "120M at genesis; 12-month linear" },
-      "strategic_investors": { "percent": 2.0, "vesting": "12-month cliff + 12-month linear" },
-      "core_contributors": { "percent": 20.0, "vesting": "6-month cliff + 24-month linear" }
+      "initial_airdrop": {
+        "percent": 4.7,
+        "vesting": "30.32M at genesis; 6-month linear"
+      },
+      "public_goods": {
+        "percent": 5.3,
+        "vesting": "10M at genesis; 30-month linear"
+      },
+      "ecosystem_community": {
+        "percent": 12,
+        "vesting": "20M at genesis; 30-month linear"
+      },
+      "liquidity": {
+        "percent": 5,
+        "vesting": "100% at genesis"
+      },
+      "agent_incentives": {
+        "percent": 19,
+        "vesting": "20M at genesis; 12-month linear"
+      },
+      "validators": {
+        "percent": 10,
+        "vesting": "Permanently locked (delegated)"
+      },
+      "treasury_rd": {
+        "percent": 22,
+        "vesting": "120M at genesis; 12-month linear"
+      },
+      "strategic_investors": {
+        "percent": 2,
+        "vesting": "12-month cliff + 12-month linear"
+      },
+      "core_contributors": {
+        "percent": 20,
+        "vesting": "6-month cliff + 24-month linear"
+      }
     },
     "insider_allocation_percent": 42,
     "vesting_mostly_complete": false,
@@ -171,7 +225,6 @@
     "staking_apy": "Variable — dynamic inflation targeting 65% staked",
     "emission_model": "Unlimited max supply with PoS inflation (1-10%). Total supply 1B at genesis. Inflationary emissions ongoing."
   },
-
   "market_data": {
     "price_usd": 0.0099,
     "ath_usd": 0.1415,
@@ -179,7 +232,6 @@
     "daily_volume_usd": 3600000,
     "data_date": "2026-03-06"
   },
-
   "usage_metrics": {
     "active_users_daily": null,
     "daily_transactions": null,
@@ -190,21 +242,19 @@
     "metrics_date": "2025-12-31",
     "usage_notes": "10.9M cumulative on-chain txns. 60.4M AI agent runs. 11.7M inference proofs. $749K protocol revenue. $704K agent revenue. Claimed 15-20M users but purged ~6M bots."
   },
-
   "community": {
     "telegram_members": null,
     "x_followers": 350000,
     "discord_members": null,
-    "twitter_handle": "@wardenprotocol"
+    "twitter_handle": "@wardenprotocol",
+    "github_contributors": 66
   },
-
   "exchanges": [
     "KuCoin",
     "Bybit",
     "BingX",
     "Bitget"
   ],
-
   "participation": {
     "methods": [
       {
@@ -212,29 +262,36 @@
         "description": "Stake WARD to secure WardenChain via PoS. Dynamic inflation targeting 65% staked.",
         "technical_skill_required": "basic",
         "estimated_returns": "Variable — 1-10% inflation distributed to stakers",
-        "barriers_to_entry": ["Must hold WARD tokens"]
+        "barriers_to_entry": [
+          "Must hold WARD tokens"
+        ]
       },
       {
         "type": "using",
         "description": "Use the Agentic Wallet for natural language crypto operations. Access Agent Hub for pre-built AI agents.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["WARD for gas fees"]
+        "barriers_to_entry": [
+          "WARD for gas fees"
+        ]
       },
       {
         "type": "building",
         "description": "Build AI agents using Warden Studio and deploy on Agent Hub. SPEX for verifiable inference.",
         "technical_skill_required": "advanced",
-        "barriers_to_entry": ["Development skills required"]
+        "barriers_to_entry": [
+          "Development skills required"
+        ]
       },
       {
         "type": "governance",
         "description": "Vote on protocol proposals using staked WARD.",
         "technical_skill_required": "basic",
-        "barriers_to_entry": ["Must stake WARD"]
+        "barriers_to_entry": [
+          "Must stake WARD"
+        ]
       }
     ]
   },
-
   "freedom_score": {
     "total_score": 47,
     "max_possible": 100,
@@ -273,7 +330,6 @@
       }
     }
   },
-
   "returns_score": {
     "total_score": 48,
     "max_possible": 100,
@@ -305,5 +361,20 @@
         "evidence": "13 exchanges including Binance Alpha, KuCoin, Bybit, BingX. Multi-chain (WardenChain, BNB Chain, Base). $2.6-4.6M daily volume. $2.5M market cap — high volatility. Down 93% from ATH in one month. IDO investors down 97.8%."
       }
     }
-  }
+  },
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 2185,
+      "forks": 188,
+      "open_issues": 21,
+      "contributors": 66,
+      "total_commits": 2409,
+      "total_repos": 36,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 350000
+    }
+  ]
 }

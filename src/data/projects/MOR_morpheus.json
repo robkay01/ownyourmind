@@ -3,8 +3,8 @@
     "project_id": "morpheus",
     "research_date": "2026-03-01",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 1,
-    "last_updated": "2026-03-01",
+    "version": 2,
+    "last_updated": "2026-03-06",
     "status": "draft",
     "refresh_config": {
       "github_org": "MorpheusAIs",
@@ -18,7 +18,36 @@
         "participation.methods[2].estimated_returns"
       ]
     },
-    "auto_refresh_log": [],
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-06",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 219,
+          "technical.github_metrics.open_issues": 21,
+          "technical.github_metrics.last_commit_date": "2026-02-01",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": null,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 218,
+          "technical.github_metrics.open_issues": 27,
+          "technical.github_metrics.last_commit_date": "2024-06-20",
+          "technical.github_metrics.contributors": 68,
+          "technical.github_metrics.total_commits": 1635,
+          "community.github_contributors": 68
+        },
+        "run_by": "github-actions"
+      }
+    ],
     "research_gaps": [
       "Exact active compute node count not publicly available. No dashboard reports this metric.",
       "Market data shows significant discrepancies across aggregators (CoinGecko, CoinMarketCap, DropsTab). Verify on-chain before publishing.",
@@ -120,12 +149,12 @@
     "github_metrics": {
       "total_repos": 52,
       "primary_repo_url": "https://github.com/MorpheusAIs/Morpheus",
-      "total_commits": null,
-      "contributors": null,
-      "last_commit_date": "2026-02-01",
-      "stars": 219,
+      "total_commits": 1635,
+      "contributors": 68,
+      "last_commit_date": "2024-06-20",
+      "stars": 218,
       "forks": 142,
-      "open_issues": 21
+      "open_issues": 27
     },
     "audits": [
       {
@@ -364,7 +393,7 @@
     "discord_members": 5300,
     "telegram_members": null,
     "x_followers": 24300,
-    "github_contributors": null,
+    "github_contributors": 68,
     "governance_participation_rate": null,
     "governance_model": "Atomic Governance — no central team, company, or foundation. Each contributor category makes independent decisions. MRC (Morpheus Request for Comments) system for proposals submitted as markdown to GitHub. MOR holders vote on proposals via Snapshot. Contributors do not need permission to build or contribute.",
     "governance_url": "https://github.com/MorpheusAIs/MRC",
@@ -871,6 +900,21 @@
         "usage_metrics.tvl_usd"
       ],
       "reliability_notes": "Industry standard TVL tracker. Live data not programmatically fetched; verify directly."
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-03-06",
+      "source": "github-refresh",
+      "stars": 218,
+      "forks": 142,
+      "open_issues": 27,
+      "contributors": 68,
+      "total_commits": 1635,
+      "total_repos": 52,
+      "discord_members": 5300,
+      "telegram_members": null,
+      "x_followers": 24300
     }
   ]
 }
