@@ -908,6 +908,10 @@ When given a project to research, follow these instructions exactly:
 
 14. **After editorial is written, run `npm run check:returns`** to validate all Returns Score data is consistent across frontmatter, breakdown, and editorial text. Fix any errors before committing.
 
+15. **Source the project logo.** Download the project's logo from CoinGecko API (`/api/v3/coins/{coingecko_id}` → `.image.small`) and save it as `public/images/logos/{slug}.png`. The `ProjectLogo` component uses this path — without the file, the dashboard shows a letter initial fallback. If CoinGecko does not have the logo, check the project's official press kit or GitHub for a PNG/SVG. Logo must be a small square image (ideally 64-128px). This step is mandatory for every new project.
+
+16. **Generate the hero image** via Venice API (flux-2-max, 1280x400, `return_binary: true`). Save as `public/images/project-{slug}.webp`. Use abstract, thematic imagery related to the project's category — no text, no logos, no faces.
+
 ### Prompt Template for Initiating Research
 
 ```
