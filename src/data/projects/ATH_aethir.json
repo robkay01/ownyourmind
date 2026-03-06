@@ -1,0 +1,678 @@
+{
+  "meta": {
+    "project_id": "aethir",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "Aethir",
+      "github_primary_repo": null,
+      "coingecko_id": "aethir",
+      "discord_server_id": null,
+      "telegram_username": "aethir_cloud",
+      "x_handle": "AethirCloud",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No smart contract audit reports found from recognised auditing firms (Trail of Bits, OpenZeppelin, Halborn, CertiK). Audit history unknown.",
+      "Staking APY not publicly disclosed for Gaming Pool, AI Pool, or EigenLayer Pre-deposits. Cannot calculate real yield after inflation.",
+      "Exact X/Twitter follower count for @AethirCloud and @AethirEco not confirmed via direct observation.",
+      "Exact Telegram member count not confirmed — group exists at t.me/aethir_cloud but count not extractable.",
+      "Revenue figures ($127.8M in 2025, $166M ARR) are self-reported by Aethir. Not listed on DeFiLlama or Token Terminal. No independent third-party verification available.",
+      "Governance mechanism for DAO Treasury not documented — unclear how treasury decisions are made or who controls them.",
+      "HuggingFace presence checked — no models, datasets, or spaces found.",
+      "All protocol code is closed source (0 public GitHub repos). Cannot independently verify technical claims about architecture, node count, or compute delivery.",
+      "Node sale buyer concentration unknown — 74,673 nodes sold but distribution across unique buyers not disclosed.",
+      "Current daily emissions rate not documented in public sources."
+    ]
+  },
+
+  "identity": {
+    "name": "Aethir",
+    "ticker": "ATH",
+    "category": "Compute & Infrastructure",
+    "subcategory": "Enterprise GPU Cloud",
+    "tagline": "Distributed GPU cloud for AI and gaming",
+    "one_liner": "Enterprise-grade decentralised GPU compute network for AI training, inference, and cloud gaming.",
+    "website": "https://aethir.com",
+    "documentation_url": "https://docs.aethir.com",
+    "whitepaper_url": "https://docs.aethir.com/whitepaper",
+    "github_url": "https://github.com/Aethir",
+    "chain": "Ethereum (canonical token), Arbitrum (operations/rewards), Solana (bridge)",
+    "launch_date": "2024-06-12",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Daniel Wang",
+        "role": "CEO & Co-Founder",
+        "background": "Partner at IVC, CIO at YGG E2, Head of International Publishing at Riot Games, COO at Riot Games China.",
+        "linkedin_or_x": "https://sg.linkedin.com/in/danielwang",
+        "doxxed": true
+      },
+      {
+        "name": "Mark Rydon",
+        "role": "Co-Founder & CSO",
+        "background": "Roles at NOTA Platform, Flux Capital, Gaas LTD, Bechtel Corporation.",
+        "linkedin_or_x": "https://sg.linkedin.com/in/markrydon",
+        "doxxed": true
+      },
+      {
+        "name": "Kyle Okamoto",
+        "role": "CTO",
+        "background": "CEO & GM at Ericsson IoT/Automotive/Security, CEO of Edge Gravity, Chief Network Officer at Verizon Media.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 75,
+    "entity_name": "Aethir",
+    "entity_jurisdiction": "Singapore",
+    "notable_backers": [
+      "HashKey Capital",
+      "Animoca Brands",
+      "Maelstrom (Arthur Hayes)",
+      "Sanctor Capital",
+      "CitizenX",
+      "Framework Ventures",
+      "Infinity Ventures Crypto",
+      "Merit Circle",
+      "Mirana Ventures",
+      "Big Brain Holdings"
+    ],
+    "funding_raised": {
+      "total_usd": 158400000,
+      "rounds": [
+        {
+          "round_type": "Pre-Series A",
+          "amount_usd": 9000000,
+          "date": "2023-07-01",
+          "lead_investor": "HashKey Capital",
+          "valuation_usd": 150000000
+        },
+        {
+          "round_type": "Node Sale",
+          "amount_usd": 148440000,
+          "date": "2024-03-01",
+          "lead_investor": null,
+          "notes": "74,673 checker node licenses sold (March-May 2024)"
+        },
+        {
+          "round_type": "IDO",
+          "amount_usd": 817000,
+          "date": "2024-03-01",
+          "lead_investor": "Seedify",
+          "notes": "Price $0.013 per ATH"
+        },
+        {
+          "round_type": "Private Sale",
+          "amount_usd": 138000,
+          "date": "2024-03-01",
+          "lead_investor": "DexCheck Pad",
+          "notes": "Price $0.014 per ATH"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Three-role architecture: Containers (execute GPU compute workloads), Checkers (verify container performance and integrity), and Indexers (match users to available containers). Uses Proof of Capacity (rewarding standby GPU availability) and Proof of Delivery (rewarding completed compute tasks). Settlement and token operations on Ethereum/Arbitrum; actual GPU compute execution is off-chain.",
+    "consensus_mechanism": "Custom Proof of Rendering/Capacity/Delivery — not a blockchain consensus mechanism. Uses Ethereum and Arbitrum for settlement and token operations.",
+    "what_is_onchain": "Token transfers, staking, reward distribution, resource consumption tracking (on Arbitrum). ERC-20 token contract on Ethereum.",
+    "what_is_offchain": "All GPU compute execution, container management, rendering workloads, indexer matching, and checker verification processes.",
+    "key_dependencies": [
+      "Ethereum",
+      "Arbitrum",
+      "NVIDIA GPU hardware (H100, H200, A100, B200, B300)"
+    ],
+    "smart_contract_languages": ["Solidity"],
+    "open_source": false,
+    "license": "Proprietary / closed source",
+    "github_metrics": {
+      "total_repos": 0,
+      "primary_repo_url": "https://github.com/Aethir",
+      "total_commits": 0,
+      "contributors": 0,
+      "last_commit_date": null,
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0
+    },
+    "audits": [],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "Aethir Token",
+    "ticker": "ATH",
+    "token_standard": "ERC-20",
+    "token_type": "utility",
+    "token_utility": [
+      "Payment for GPU compute services",
+      "Staking for yield (Gaming Pool, AI Pool, EigenLayer Pre-deposits)",
+      "Governance participation (nominal — mechanism undocumented)",
+      "Node operator incentives (Checker and Compute Provider rewards)",
+      "Ecosystem development funding"
+    ],
+    "supply": {
+      "max_supply": 42000000000,
+      "total_supply": 42000000000,
+      "circulating_supply": 17487150519,
+      "circulating_supply_date": "2026-03-06",
+      "circulating_percentage": 41.6
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Checker Nodes & Compute Providers",
+          "percentage": 50.0,
+          "vesting_schedule": "Linear vesting over time",
+          "cliff": "None",
+          "notes": "Largest allocation — rewards for network compute provision"
+        },
+        {
+          "category": "Team",
+          "percentage": 12.5,
+          "vesting_schedule": "3-year linear daily vesting after cliff",
+          "cliff": "18 months from TGE (June 2024)",
+          "notes": "Cliff ends approximately December 2025"
+        },
+        {
+          "category": "Investors",
+          "percentage": 11.5,
+          "vesting_schedule": "Not fully documented",
+          "cliff": "Not documented",
+          "notes": "Includes Pre-Series A and private round investors"
+        },
+        {
+          "category": "DAO Treasury",
+          "percentage": 7.5,
+          "vesting_schedule": "Not documented",
+          "cliff": "None documented",
+          "notes": "Governance mechanism for treasury decisions undocumented"
+        },
+        {
+          "category": "Ecosystem Development",
+          "percentage": 7.5,
+          "vesting_schedule": "Not documented",
+          "cliff": "None documented",
+          "notes": "Includes $100M ecosystem fund"
+        },
+        {
+          "category": "Airdrop",
+          "percentage": 6.0,
+          "vesting_schedule": "Distributed at/post-TGE",
+          "cliff": "None",
+          "notes": "Community distribution via airdrop campaigns"
+        },
+        {
+          "category": "Advisors",
+          "percentage": 5.0,
+          "vesting_schedule": "Not documented",
+          "cliff": "Not documented",
+          "notes": ""
+        },
+        {
+          "category": "Public Sale",
+          "percentage": 0.15,
+          "vesting_schedule": "None",
+          "cliff": "None",
+          "notes": "IDO via Seedify at $0.013"
+        },
+        {
+          "category": "Private/Pre-sale",
+          "percentage": 0.02,
+          "vesting_schedule": "Not documented",
+          "cliff": "Not documented",
+          "notes": "DexCheck Pad at $0.014"
+        }
+      ],
+      "distribution_method": "Node sale + private rounds + airdrop + emissions"
+    },
+    "emissions": {
+      "model": "disinflationary",
+      "current_daily_emissions": null,
+      "current_annual_inflation_rate": null,
+      "halving_schedule": "None documented",
+      "next_major_emission_event": "Team token vesting completion",
+      "next_event_date": "2028-12-01",
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Gaming Pool, AI Pool, EigenLayer Pre-deposits",
+      "minimum_stake": null,
+      "lock_up_period": "Up to 4 years; 30-day withdrawal vesting period",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Lock-up period up to 4 years with 30-day withdrawal vesting",
+        "No compounding of rewards",
+        "Utilisation lock at 85% — staked tokens may not be fully withdrawable",
+        "APY not publicly disclosed — cannot assess real yield"
+      ],
+      "slashing_conditions": "Not documented"
+    },
+    "market_data": {
+      "price_usd": 0.007,
+      "market_cap_usd": 117000000,
+      "fully_diluted_valuation_usd": 283000000,
+      "twenty_four_hour_volume_usd": 32000000,
+      "all_time_high_usd": 0.1185,
+      "all_time_high_date": "2024-06-12",
+      "all_time_low_usd": 0.0049,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "OKX",
+        "Bybit",
+        "KuCoin",
+        "Bitget",
+        "Gate.io",
+        "MEXC",
+        "BingX",
+        "Bitrue"
+      ],
+      "data_snapshot_date": "2026-03-06"
+    },
+    "token_model_classification": "Utility token with compute payment, staking, and node operator incentive functions. No fee distribution or buy-and-burn mechanism.",
+    "tokenomics_notes": "50% allocation to compute providers is the largest single allocation and vests over time, creating sustained sell pressure. Node sale raised $148M which is significant relative to the project's current market cap. 29% insider allocation (team 12.5% + investors 11.5% + advisors 5%). Public sale was negligible at 0.17% of supply. Closed source raises transparency concerns about how emissions are actually distributed."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake ATH tokens in Gaming Pool, AI Pool, or EigenLayer Pre-deposits to earn yield. Multiple lock-up tiers available up to 4 years with 30-day withdrawal vesting.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "APY not publicly disclosed",
+        "barriers_to_entry": [
+          "Lock-up period up to 4 years",
+          "30-day withdrawal vesting",
+          "No compounding"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.aethir.com"
+      },
+      {
+        "type": "node_operation",
+        "description": "Operate a Checker node to verify container performance and integrity. Requires purchase of a Checker node license from Aethir's node sale.",
+        "minimum_hardware": "Modest hardware requirements (checking, not computing)",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Share of 50% compute provider/checker allocation",
+        "barriers_to_entry": [
+          "Node license purchase required (sold out in primary sale — secondary market only)",
+          "Technical setup and maintenance"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.aethir.com"
+      },
+      {
+        "type": "contributing",
+        "description": "Provide enterprise-grade NVIDIA GPUs (H100, H200, A100, B200, B300) as a compute provider. Earn ATH rewards through Proof of Capacity and Proof of Delivery.",
+        "minimum_hardware": "NVIDIA H100/H200/A100/B200/B300 GPU",
+        "minimum_capital_usd": 25000,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Share of compute provider emissions based on capacity and delivery",
+        "barriers_to_entry": [
+          "Enterprise-grade GPU hardware cost ($25K+ per unit)",
+          "Technical infrastructure setup",
+          "Network connectivity requirements"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.aethir.com"
+      },
+      {
+        "type": "building",
+        "description": "Build applications using Aethir's SDK and API for GPU compute. $100M ecosystem fund available for grants.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Grants available from ecosystem fund",
+        "barriers_to_entry": [
+          "Development expertise required",
+          "Closed-source SDK limits independent verification"
+        ],
+        "guide_available": true,
+        "guide_url": "https://ecosystem.aethir.com"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "adequate",
+      "developer_community_size": "Unknown — closed source, 0 public GitHub repos",
+      "grants_program": true,
+      "grants_url": "https://ecosystem.aethir.com"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": "1.5B+ compute hours delivered (2025, self-reported)",
+    "nodes_active": 440000,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": 127800000,
+    "revenue_source": "Enterprise GPU compute contracts from 150+ enterprise clients",
+    "metrics_source": "Aethir 2025 wrap-up blog post (self-reported). Not listed on DeFiLlama or Token Terminal.",
+    "metrics_date": "2025-12-31",
+    "usage_notes": "All usage and revenue metrics are self-reported by Aethir. 440,000+ GPU containers across 94 countries. 150+ enterprise clients. ARR claimed at $166M as of Q3 2025. Revenue efficiency claimed to outpace Filecoin 135x, Render 455x, Bittensor 14x by Rev/MC ratio — these comparisons are misleading given different business models. Not independently verifiable as project is not listed on DeFiLlama."
+  },
+
+  "community": {
+    "discord_members": 310000,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": 0,
+    "governance_participation_rate": "Unknown — governance mechanism not documented",
+    "governance_model": "DAO Treasury exists (7.5% of supply) but governance mechanism poorly documented. Team controls all technical decisions. No evidence of meaningful community governance or on-chain voting.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.com/invite/aethircloud (~307K-317K members)",
+      "Telegram: t.me/aethir_cloud",
+      "X: @AethirCloud, @AethirEco"
+    ],
+    "sentiment_summary": "Generally positive. Strong enterprise adoption narrative drives community enthusiasm. Community engaged through Aethir Tribe program (800+ content creators) and recurring airdrop campaigns. Revenue claims are the primary bull case.",
+    "community_notes": "Discord member count is high (~310K) but engagement depth unclear. Aethir Tribe content creator programme has 800+ members, suggesting active community marketing efforts. No public GitHub activity to assess developer community."
+  },
+
+  "freedom_score": {
+    "total_score": 30,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "440K containers across 94 countries is broadly distributed geographically, but all code is closed source (0 public repos). Checker node system is controlled by Aethir. Admin multisig on token contract controls minting and whitelist functions. Cannot independently verify decentralisation claims without access to source code or network topology data."
+      },
+      "governance_decentralisation": {
+        "score": 4,
+        "max": 20,
+        "evidence": "DAO Treasury exists (7.5% of supply) but governance mechanism is poorly documented. No evidence of on-chain voting, governance proposals, or community decision-making processes. Team controls all technical and strategic decisions. Governance is nominal at best."
+      },
+      "token_distribution_fairness": {
+        "score": 5,
+        "max": 15,
+        "evidence": "50% allocated to compute providers is positive for long-term distribution. However, 12.5% team + 11.5% investors + 5% advisors = 29% insider allocation. Node sale raised $148M from an unknown number of unique buyers — concentration risk unknown. Public sale was negligible at 0.17% of total supply. IDO and private sale combined under $1M."
+      },
+      "censorship_resistance": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Closed source code means Aethir controls what runs on the network. Admin multisig on token contract enables minting and whitelist changes. Enterprise focus with 150+ corporate clients suggests compliance-oriented approach, not censorship resistance. No evidence of permissionless access to the compute network."
+      },
+      "data_sovereignty": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Enterprise clients' workloads run on distributed containers, but Aethir controls the Indexer matching layer and has visibility into workload allocation. No evidence of end-to-end encryption, zero-knowledge compute, or privacy guarantees for data processed on the network. Container isolation claims cannot be verified without source code."
+      },
+      "open_source_transparency": {
+        "score": 2,
+        "max": 15,
+        "evidence": "Zero public repositories on GitHub. Token contract is verified on Etherscan (Solidity v0.8.18) but that is the bare minimum for an ERC-20 token. All protocol code — Containers, Checkers, Indexers, Proof of Capacity, Proof of Delivery — is proprietary. Cannot independently verify any technical claims about architecture, performance, or decentralisation."
+      }
+    },
+    "freedom_grade": "F",
+    "freedom_summary": "Aethir operates substantial GPU infrastructure but is fundamentally a centralised enterprise with a token. Zero open-source code, admin-controlled token contract, no meaningful governance, and closed architecture undermine all decentralisation claims. The project scores well on geographic distribution of hardware but fails on every transparency and sovereignty metric. Freedom Score 30/100 places it firmly in Grade F: centralised project with a token bolted on."
+  },
+
+  "returns_score": {
+    "total_score": 62,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": 12,
+        "max": 20,
+        "evidence": "ATH serves as payment for GPU compute services, staking in Gaming/AI/EigenLayer pools, and node operation requirement. However, staking APY is undisclosed, governance is nominal with no documented mechanism, and access gating is minimal. Moderate utility with real compute payment use case but lacks strong holder incentives."
+      },
+      "value_accrual": {
+        "score": 14,
+        "max": 20,
+        "evidence": "Compute providers earn ATH for services delivered. Staking pools direct tokens to AI and gaming workloads. However, there is no fee distribution mechanism to token holders, no buy-and-burn, and no protocol revenue sharing. Value accrual is indirect — token demand driven by compute payment and staking requirements rather than direct mechanical link between protocol usage and token value."
+      },
+      "supply_dynamics": {
+        "score": 8,
+        "max": 20,
+        "evidence": "42B max supply with only 41.6% circulating as of March 2026. 50% allocated to compute providers vesting over time creates sustained long-term dilution. Team tokens (12.5%) vesting until approximately December 2028. Investor tokens (11.5%) vesting schedule not fully documented. 58.4% of supply still locked represents significant overhang. Score capped at 8 given circulating below 50% with heavy remaining emissions and no burn mechanism."
+      },
+      "revenue_sustainability": {
+        "score": 17,
+        "max": 25,
+        "evidence": "Self-reported $127.8M annual revenue in 2025 with 150+ enterprise clients paying for GPU compute. ARR of $166M claimed for Q3 2025. If accurate, this is exceptional revenue for any DeAI project. However, all figures are self-reported — Aethir is not listed on DeFiLlama or Token Terminal, and no audited financials are available. Revenue from real enterprise customers paying for GPU compute is a credible business model. Score of 17 (not higher) because independent verification is lacking."
+      },
+      "liquidity_access": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Listed on OKX, Bybit, KuCoin, Bitget, Gate.io, MEXC, BingX, and Bitrue. $32M daily trading volume provides adequate liquidity. However, not listed on Binance, Coinbase, or Kraken — the three largest Western exchanges. Tier-2 liquid with sufficient volume for most traders but missing the top-tier listings that would signal broader institutional acceptance."
+      }
+    },
+    "returns_grade": "C",
+    "risk_flags": ["regulatory_risk"],
+    "returns_summary": "Strong self-reported revenue from enterprise GPU compute is the standout metric — $127.8M annual revenue would place Aethir among the highest-revenue DeAI projects. But significant supply overhang (58% locked), undisclosed staking yields, closed-source code, and no direct value accrual mechanism to token holders limit the returns case. Revenue figures need independent verification. Grade C reflects a project with real business traction but structural tokenomics weaknesses and transparency gaps."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "Enterprise GPU compute with real customers generating claimed $127.8M annual revenue",
+      "Large network footprint — 440,000+ GPU containers across 94 countries",
+      "Strong team with enterprise backgrounds (Riot Games, Ericsson, Verizon Media, Bechtel)",
+      "Significant funding and institutional backing from HashKey, Animoca, Framework, Maelstrom",
+      "EigenLayer integration for restaking extends staking utility",
+      "1.5B+ compute hours delivered in 2025 (self-reported)"
+    ],
+    "what_is_hype": [
+      "Revenue figures are entirely self-reported with no independent verification on DeFiLlama or Token Terminal",
+      "Decentralisation claims are undermined by zero open-source code — cannot verify any technical architecture claims",
+      "440K containers but actual utilisation rate is unclear — Proof of Capacity rewards standby availability, not active compute",
+      "$100M ecosystem fund announced but deployment timeline and disbursements are unclear",
+      "Rev/MC ratio comparisons to Filecoin, Render, and Bittensor are misleading given fundamentally different business models and accounting methods"
+    ],
+    "key_risks": [
+      "Closed source — cannot independently verify any technical claims about architecture, decentralisation, or performance",
+      "Admin multisig on token contract enables minting and whitelist changes — centralised control over token supply",
+      "Self-reported revenue with no DeFiLlama, Token Terminal, or audited financial verification",
+      "58% of token supply still locked and vesting — significant dilution ahead through December 2028",
+      "No major exchange listings (Binance, Coinbase, Kraken) — limits institutional access",
+      "Enterprise dependency — if key enterprise clients reduce spending, revenue could collapse rapidly",
+      "Regulatory risk — enterprise GPU compute for AI may face export controls or data sovereignty regulations"
+    ],
+    "competitive_advantages": [
+      "Enterprise sales team with proven relationships and enterprise-grade backgrounds",
+      "GPU hardware partnerships covering latest NVIDIA H-series and B-series",
+      "Revenue scale that dwarfs most DeAI projects if self-reported figures are accurate",
+      "Geographic distribution across 94 countries provides redundancy",
+      "Node sale raised $148M creating a large committed operator base"
+    ],
+    "competitive_disadvantages": [
+      "Closed source vs Akash Network (fully open source) — fundamental transparency gap",
+      "No meaningful governance vs Akash and Render which have active DAO governance",
+      "Centralised control vs permissionless alternatives — admin multisig, closed code, opaque operations",
+      "Token economics unclear — staking yields undisclosed, no fee distribution or burn mechanism",
+      "Cannot compete on decentralisation narrative despite using the label"
+    ],
+    "comparable_projects": [
+      "Akash Network (AKT)",
+      "Render Network (RENDER)",
+      "io.net (IO)",
+      "Nosana (NOS)"
+    ],
+    "outlook": "Aethir has the strongest revenue story in decentralised AI but the weakest decentralisation credentials among compute infrastructure projects. If the self-reported revenue figures are accurate, this is a profitable enterprise GPU business with a token bolted on. The fundamental question for investors is whether the token adds value for holders beyond speculation — with no fee distribution, no burn mechanism, undisclosed staking yields, and 58% of supply still vesting, the structural case for token value appreciation beyond revenue narrative is weak. For sovereignty-focused participants, the closed-source architecture and admin-controlled contracts make Aethir incompatible with decentralisation values.",
+    "overall_assessment": "Profitable enterprise with a token, not a decentralised protocol. Strong revenue, weak sovereignty. Quadrant C — potentially profitable but centralised."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "url": "https://docs.aethir.com",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Official Aethir documentation — architecture, tokenomics, staking, node operations"
+    },
+    {
+      "id": "S002",
+      "url": "https://docs.aethir.com/whitepaper",
+      "type": "whitepaper",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Aethir whitepaper — technical architecture, Proof of Capacity/Delivery, three-role system"
+    },
+    {
+      "id": "S003",
+      "url": "https://etherscan.io/token/0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B",
+      "type": "block_explorer",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "ATH ERC-20 token contract on Ethereum — verified Solidity v0.8.18, admin multisig minting/whitelist"
+    },
+    {
+      "id": "S004",
+      "url": "https://arbiscan.io/token/0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B",
+      "type": "block_explorer",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "ATH token on Arbitrum — operations and reward distribution chain"
+    },
+    {
+      "id": "S005",
+      "url": "https://github.com/Aethir",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Aethir GitHub organisation — 0 public repositories, all code is closed source"
+    },
+    {
+      "id": "S006",
+      "url": "https://aethir.com/blog",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Aethir official blog — 2025 wrap-up with revenue claims, partnership announcements"
+    },
+    {
+      "id": "S007",
+      "url": "https://ecosystem.aethir.com",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Aethir ecosystem hub — grants programme, $100M ecosystem fund details"
+    },
+    {
+      "id": "S008",
+      "url": "https://www.coingecko.com/en/coins/aethir",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinGecko — ATH price, market cap, FDV, volume, exchange listings, supply data"
+    },
+    {
+      "id": "S009",
+      "url": "https://coinmarketcap.com/currencies/aethir/",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinMarketCap — ATH market data, circulating supply, exchange listings"
+    },
+    {
+      "id": "S010",
+      "url": "https://cryptorank.io/ico/aethir",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CryptoRank — Aethir ICO/IDO details, vesting schedules, round data, token allocation"
+    },
+    {
+      "id": "S011",
+      "url": "https://sg.linkedin.com/in/danielwang",
+      "type": "team_profile",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Daniel Wang LinkedIn — CEO background verification (Riot Games, IVC, YGG)"
+    },
+    {
+      "id": "S012",
+      "url": "https://sg.linkedin.com/in/markrydon",
+      "type": "team_profile",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Mark Rydon LinkedIn — Co-Founder background verification (Bechtel, Flux Capital)"
+    },
+    {
+      "id": "S013",
+      "url": "https://defillama.com",
+      "type": "defi_analytics",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "DeFiLlama — Aethir NOT listed. No independent protocol revenue or TVL data available."
+    },
+    {
+      "id": "S014",
+      "url": "https://beincrypto.com",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "BeInCrypto — Aethir exchange listing coverage, ATH price analysis"
+    },
+    {
+      "id": "S015",
+      "url": "https://discord.com/invite/aethircloud",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Aethir Discord — ~307K-317K members, community sentiment assessment"
+    },
+    {
+      "id": "S016",
+      "url": "https://t.me/aethir_cloud",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Aethir Telegram — community channel, member count not confirmed"
+    },
+    {
+      "id": "S017",
+      "url": "https://x.com/AethirCloud",
+      "type": "social",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Aethir main X account — announcements, community engagement"
+    },
+    {
+      "id": "S018",
+      "url": "https://x.com/AethirEco",
+      "type": "social",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Aethir Ecosystem X account — ecosystem updates, grants, partnerships"
+    },
+    {
+      "id": "S019",
+      "url": "https://huggingface.co/search/full-text?q=aethir",
+      "type": "ai_platform",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "HuggingFace — no Aethir models, datasets, or spaces found"
+    },
+    {
+      "id": "S020",
+      "url": "https://www.builtinsingapore.com/company/aethir",
+      "type": "company_data",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Built In Singapore — Aethir company listing, team size estimate ~50-100"
+    }
+  ]
+}
