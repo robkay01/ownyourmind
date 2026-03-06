@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "project_id": "iotex",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "iotexproject",
+      "github_primary_repo": "iotex-core",
+      "coingecko_id": "iotex",
+      "discord_server_id": null,
+      "telegram_username": "IoTeXGroup",
+      "x_handle": "iotex_io",
+      "defillama_slug": "IoTeX"
+    },
+    "research_gaps": [
+      "Block explorer (iotexscan.io) returned no data — client-side rendering only.",
+      "No HuggingFace presence found.",
+      "Exact Discord member count not confirmed.",
+      "Exact annual protocol revenue not available — no Token Terminal or DeFiLlama revenue tracking.",
+      "W3bstream audit details not found separately from core protocol audit.",
+      "Exact number of active validators beyond '60+ delegates' not confirmed.",
+      "Real yield after inflation not precisely calculable."
+    ]
+  },
+
+  "identity": {
+    "name": "IoTeX",
+    "ticker": "IOTX",
+    "category": "Infrastructure",
+    "subcategory": "DePIN / IoT Blockchain",
+    "tagline": "Where AI touches life",
+    "one_liner": "EVM-compatible L1 blockchain optimised for DePIN and real-world AI, providing identity, verification, and compute infrastructure for IoT devices.",
+    "website": "https://iotex.io",
+    "documentation_url": "https://docs.iotex.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/iotexproject",
+    "chain": "IoTeX L1 (own chain, EVM-compatible)",
+    "launch_date": "2019-04-22",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Raullen Chai",
+        "role": "Co-Founder & CEO",
+        "background": "PhD Electrical/Computer Engineering, University of Waterloo (cryptography). Former Senior Software Engineer/Tech Lead at Google, Lead Crypto R&D at Uber.",
+        "linkedin_or_x": "https://www.linkedin.com/in/raullenchai/",
+        "doxxed": true
+      },
+      {
+        "name": "Qevan Guo",
+        "role": "Co-Founder",
+        "background": "PhD AI/Computer Vision, NUS. Former product lead at Facebook (Ads, Pages, Offers).",
+        "doxxed": true
+      },
+      {
+        "name": "Jing Sun",
+        "role": "Co-Founder",
+        "background": "Founding partner Sparkland Capital. 40+ investments in security, blockchain, IoT.",
+        "doxxed": true
+      },
+      {
+        "name": "Xinxin Fan",
+        "role": "Co-Founder & Head of Cryptography",
+        "background": "PhD University of Waterloo. Former Senior Research Engineer at Bosch R&D.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": "MachineFi Inc (operating), IoTeX Foundation (governance)",
+    "entity_jurisdiction": "Houston, Texas (MachineFi); Singapore (Foundation)",
+    "notable_backers": [
+      "Borderless Capital",
+      "Amber Group",
+      "Foresight Ventures",
+      "HashKey Capital",
+      "Draper Dragon",
+      "Animoca Brands"
+    ],
+    "funding_raised": {
+      "total_usd": 69920000,
+      "rounds": [
+        {
+          "round_type": "ico",
+          "amount_usd": 19920000,
+          "date": "2018-02-15",
+          "lead_investor": null,
+          "notes": "ICO at $0.0083 per IOTX."
+        },
+        {
+          "round_type": "undisclosed",
+          "amount_usd": 50000000,
+          "date": "2024-04-02",
+          "lead_investor": "Borderless Capital"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": null,
+          "date": "2025-08-27",
+          "lead_investor": "Animoca Brands"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "EVM-compatible L1 with Roll-DPoS consensus (DPoS + PBFT + VRFs). 36 consensus delegates, 24 randomly selected each epoch. 2.5s block time, 1-block finality, 1000 TPS. Core stack: IoTeX L1, ioID (device identity via DIDs/VCs as NFTs), W3bstream (ZK-verified device data), QuickSilver (AI agent framework), DIMs (modular DePIN tooling).",
+    "consensus_mechanism": "Roll-DPoS — 36 community-elected consensus delegates, 24 randomly selected per epoch via VRF/BLS. Block time 2.5s, instant finality.",
+    "what_is_onchain": "Transaction settlement, staking/delegation, ioID device registration (NFTs), governance, smart contracts (Solidity), token transfers.",
+    "what_is_offchain": "W3bstream computation and ZK proof generation, QuickSilver AI processing, IoT device data collection.",
+    "key_dependencies": [],
+    "github_metrics": {
+      "total_repos": 173,
+      "primary_repo": "iotex-core",
+      "stars": 1584,
+      "forks": 365,
+      "commits": 3598,
+      "license": "Apache-2.0",
+      "last_commit": "2026-03-05"
+    },
+    "audits": [
+      {
+        "auditor": "CertiK",
+        "scope": "IOTX token and Delegates Program",
+        "date": "2018",
+        "result_summary": "No vulnerabilities found. Formal verification completed."
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "IOTX",
+    "token_standard": "Native coin (also ERC-20 on Ethereum)",
+    "max_supply": 10000000000,
+    "circulating_supply": 9441000000,
+    "circulating_percent": 94.4,
+    "fdv_usd": 54300000,
+    "market_cap_usd": 51850000,
+    "fdv_mcap_ratio": 1.05,
+    "allocation": {
+      "ecosystem_fund": { "percent": 30, "vesting": "Gradually over 3 years" },
+      "foundation": { "percent": 25, "vesting": "Gradually over 3 years" },
+      "private_sale": { "percent": 24, "vesting": "25% TGE, 9-month cliff, quarterly" },
+      "team": { "percent": 15, "vesting": "4 years from Feb 2019" },
+      "community_rewards": { "percent": 6, "vesting": "Gradually over 3 years" }
+    },
+    "insider_allocation_percent": 40,
+    "vesting_mostly_complete": true,
+    "token_utility": [
+      "Gas fees on IoTeX L1",
+      "Staking and delegation to validators",
+      "Governance voting (IIPs)",
+      "ioID device registration (burned)",
+      "Burn-Drop mechanism tied to device onboarding"
+    ],
+    "burn_mechanism": "Multiple: (1) Burn-Drop — 1B IOTX allocated, ~400M burned so far (4% of supply). (2) IoTeX 2.0 EIP-1559-style gas burning. (3) ioID registration burns.",
+    "staking_apy": "4-11% depending on delegate",
+    "emission_model": "Disinflationary with IoTeX 2.0 introducing new inflationary staking offset by burns."
+  },
+
+  "market_data": {
+    "price_usd": 0.00548,
+    "ath_usd": 0.2556,
+    "ath_date": "2021-11-13",
+    "daily_volume_usd": 4660000,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": 8900,
+    "daily_transactions": 250000,
+    "tvl_usd": 2578269,
+    "validators_active": 60,
+    "revenue_annual_usd": null,
+    "metrics_source": "DeFiLlama, Messari Q1 2025",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "3,010 ioID device owners. 218 ecosystem projects including 51 DePIN. DePINscan tracks 280+ DePIN projects globally."
+  },
+
+  "community": {
+    "telegram_members": 24065,
+    "x_followers": 229315,
+    "discord_members": null,
+    "twitter_handle": "@iotex_io"
+  },
+
+  "exchanges": [
+    "Binance",
+    "Coinbase",
+    "Kraken",
+    "Robinhood",
+    "KuCoin",
+    "Gate.io",
+    "MEXC"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake IOTX to delegates. 70+ delegates with varying reward policies. Auto-stake 91+ days for Burn-Drop airdrops.",
+        "technical_skill_required": "basic",
+        "estimated_returns": "4-11% APY",
+        "barriers_to_entry": []
+      },
+      {
+        "type": "node_operation",
+        "description": "Run an IoTeX delegate node. Top 36 by stake produce blocks.",
+        "technical_skill_required": "advanced",
+        "barriers_to_entry": ["Must attract sufficient stake delegation"]
+      },
+      {
+        "type": "building",
+        "description": "Build DePIN apps using DIMs (ioID, W3bstream, QuickSilver). EVM-compatible Solidity. IoT hardware SDKs.",
+        "technical_skill_required": "intermediate",
+        "barriers_to_entry": []
+      },
+      {
+        "type": "governance",
+        "description": "Vote on IIPs via Snapshot. Any IOTX holder can vote.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Must hold IOTX"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 64,
+    "max_possible": 100,
+    "freedom_grade": "C",
+    "freedom_summary": "IoTeX scores solidly in the partially decentralised range. Strongest in data sovereignty (ioID and W3bstream provide genuine device-level data control with ZK verification) and open source transparency. Main centralisation concerns are the small delegate set (36 consensus validators), foundation-controlled implementation, and low governance voter turnout.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 13,
+        "max": 20,
+        "evidence": "Own L1 with Roll-DPoS. 36 consensus delegates, 60+ total, 24 randomly selected per epoch via VRF. Permissionless node operation. Small delegate set and foundation's role in upgrades are centralisation vectors. Mainnet live since April 2019."
+      },
+      "governance_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Functional IIP governance process via Snapshot. IIP-42 passed unanimously but only 60 voters with ~31M IOTX. Foundation and MachineFi Lab retain implementation control. Low voter turnout concerning."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Team 15% + Foundation 25% = 40% insider allocation. ICO was public at $0.0083. 94.4% now circulating. Burn-Drop burned ~400M IOTX (4%). Initial allocation was heavy but now mostly vested."
+      },
+      "censorship_resistance": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Permissionless EVM-compatible chain. No KYC for transacting. Roll-DPoS with 36 rotating validators provides reasonable resistance. Smaller validator set than Ethereum but functional."
+      },
+      "data_sovereignty": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Core design principle. ioID gives devices self-sovereign identity via DIDs/VCs as NFTs. W3bstream ZK proofs verify device data without exposing raw data. Device keys stored on-device. Among the strongest data sovereignty architectures in DePIN."
+      },
+      "open_source_transparency": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Apache-2.0 licence. 173 public repos. 3,598 commits, 1,584 stars. Founder Raullen Chai personally committing code March 2026. CertiK audit completed. IIP process public. Some DIM modules less fully documented."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 46,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "IOTX serves as gas, staking/delegation, governance, and ioID device registration (burned). Multiple utility vectors but gas usage minimal ($2.58M TVL). Only 3,010 ioID device owners. Utility is real but volume is low."
+      },
+      "value_accrual": {
+        "score": 6,
+        "max": 20,
+        "evidence": "Burn-Drop removed ~400M IOTX (4%), gas burning planned for IoTeX 2.0, ioID registration burns. With $2.58M TVL actual value captured is minimal. No clear fee revenue flowing to holders beyond staking inflation."
+      },
+      "supply_dynamics": {
+        "score": 12,
+        "max": 20,
+        "evidence": "94.4% of 10B max supply circulating. Minimal future dilution. Burn-Drop burned ~400M tokens. IoTeX 2.0 introduces inflationary staking counterbalanced by burns — net effect uncertain."
+      },
+      "revenue_sustainability": {
+        "score": 5,
+        "max": 25,
+        "evidence": "Gas fees from 250K daily txns but fees extremely low. $2.58M TVL. No Token Terminal or DeFiLlama revenue data. Protocol revenue heavily dependent on staking inflation, not organic revenue. $70M funding provides runway but protocol revenue is negligible."
+      },
+      "liquidity_access": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Binance, Coinbase, Kraken, Robinhood, KuCoin, Gate.io, MEXC. 40+ platforms. $4.66M daily volume. Good exchange coverage for $52M market cap. PayPal/Venmo fiat on-ramps."
+      }
+    }
+  }
+}
