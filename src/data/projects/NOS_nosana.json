@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "project_id": "nosana",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "nosana-ci",
+      "github_primary_repo": "nosana-programs",
+      "coingecko_id": "nosana",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "nosana_ai",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "Protocol revenue not publicly disclosed — cannot verify economic sustainability despite 2M+ deployments.",
+      "NNP-0001 vote result (pass/fail) and implementation status not confirmed.",
+      "Current staking APY not publicly disclosed.",
+      "Exact NOS burned to date under buyback-and-burn mechanism not verifiable.",
+      "Corporate entity KvK (Dutch Chamber of Commerce) registration number not confirmed.",
+      "Exact team size not publicly disclosed.",
+      "DeFiLlama returned 403 — no TVL or fee data available.",
+      "Solscan returned 403 — on-chain holder count not independently verified.",
+      "GPU pricing per hour on the marketplace not documented in research.",
+      "Telegram community presence not confirmed."
+    ]
+  },
+
+  "identity": {
+    "name": "Nosana",
+    "ticker": "NOS",
+    "category": "Compute & Infrastructure",
+    "subcategory": "GPU Inference Marketplace",
+    "tagline": "Decentralised GPU compute for AI inference",
+    "one_liner": "GPU marketplace on Solana matching idle consumer and enterprise hardware with AI inference workloads.",
+    "website": "https://nosana.com",
+    "documentation_url": "https://learn.nosana.com",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/nosana-ci",
+    "chain": "Solana",
+    "launch_date": "2022-01-10",
+    "mainnet_launch_date": "2025-01-14",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Jesse Eisses",
+        "role": "Co-Founder",
+        "background": "BSc and MSc Artificial Intelligence from University of Amsterdam. Former ML Platform Architect at Intel. Software Engineer at Itsavirus, Technical Lead at MyAdbooker (RTB platform), ML Specialist at 3DUniversum (deep learning for computer vision).",
+        "linkedin_or_x": "https://www.linkedin.com/in/jesse-eisses-9760ab48/",
+        "doxxed": true
+      },
+      {
+        "name": "Sjoerd Dijkstra",
+        "role": "Co-Founder",
+        "background": "Senior DevOps Engineer at Zivver. University of Amsterdam. Based in Amsterdam.",
+        "linkedin_or_x": "https://www.linkedin.com/in/sjoerd-dijkstra/",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": "Nosana",
+    "entity_jurisdiction": "Netherlands (Amsterdam)",
+    "notable_backers": [
+      "Solana Foundation",
+      "Genblock Capital",
+      "MEXC Ventures",
+      "Dutch Crypto Investors",
+      "SkyVision Capital",
+      "PetRock Capital"
+    ],
+    "funding_raised": {
+      "total_usd": 1740000,
+      "rounds": [
+        {
+          "round_type": "private",
+          "amount_usd": 1360000,
+          "date": "2021",
+          "lead_investor": null,
+          "notes": "17M NOS at $0.08 per token. 10% TGE, linear release over 9 months."
+        },
+        {
+          "round_type": "ido",
+          "amount_usd": 300000,
+          "date": "2022-01-10",
+          "lead_investor": "Solanium",
+          "notes": "3M NOS at $0.10 per token. No lockup."
+        },
+        {
+          "round_type": "ieo",
+          "amount_usd": 80000,
+          "date": "2022-01-16",
+          "lead_investor": "Gate.io Startup",
+          "notes": "800K NOS at $0.10 per token. No lockup."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "GPU marketplace on Solana. Jobs submitted via API, CLI, SDK, or web dashboard. Nosana Grid matches GPU supply (hosts) with compute demand via Solana smart contracts. Supports Docker containers, HuggingFace model loading, S3 resources, health checks, and confidential execution. Sub-second finality enables micro-payments.",
+    "consensus_mechanism": "Solana PoS (underlying chain). Nosana uses Anchor smart contracts for job matching and payments.",
+    "what_is_onchain": "Job matching, payments, staking (xNOS), governance voting, token transfers. All on Solana.",
+    "what_is_offchain": "GPU compute execution, model inference, Docker container orchestration, data processing.",
+    "key_dependencies": ["Solana"],
+    "smart_contracts": [
+      { "name": "Nosana Staking", "address": "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE" },
+      { "name": "Nosana Rewards", "address": "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp" },
+      { "name": "Nosana Pools", "address": "nosPdZrfDzND1LAR28FLMDEATUPK53K8xbRBXAirevD" },
+      { "name": "Nosana Jobs", "address": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM" }
+    ],
+    "github_metrics": {
+      "total_repos": 34,
+      "key_repos": [
+        { "name": "nosana-kit", "stars": 141, "language": "TypeScript" },
+        { "name": "agent-challenge", "stars": 139, "forks": 273, "language": "TypeScript" },
+        { "name": "nosana-cli", "stars": 135, "forks": 11, "language": "TypeScript" },
+        { "name": "nosana-programs", "stars": 32, "forks": 11, "language": "Rust/TypeScript", "commits": 1171 }
+      ],
+      "license": "MIT"
+    },
+    "audits": [
+      {
+        "auditor": "Op Codes",
+        "scope": "Nosana Staking",
+        "date": "2022-08-10",
+        "result_summary": "Completed — two reports issued"
+      }
+    ],
+    "audit_note": "README states: 'Most code is unaudited. Use at your own risk.' Only staking contract audited. Jobs, Rewards, and Pools contracts unaudited.",
+    "supported_workloads": [
+      "LLM inference (DeepSeek, TinyLlama, Ollama)",
+      "Stable Diffusion image generation",
+      "LMDeploy, VLLM inference engines",
+      "Whisper speech-to-text",
+      "Jupyter notebooks",
+      "Custom Docker containers"
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "NOS",
+    "token_standard": "SPL (Solana)",
+    "max_supply": 100000000,
+    "circulating_supply": 83400000,
+    "circulating_percent": 83.4,
+    "fdv_usd": 16900000,
+    "market_cap_usd": 14060000,
+    "fdv_mcap_ratio": 1.2,
+    "fully_diluted": false,
+    "allocation": {
+      "company": { "percent": 25, "vesting": "10% TGE, linear over 36 months" },
+      "mining": { "percent": 20, "vesting": "Linear over 24 months" },
+      "team": { "percent": 20, "vesting": "0% TGE, linear over 48 months" },
+      "backers": { "percent": 17, "vesting": "10% TGE, linear over 9 months" },
+      "liquidity": { "percent": 10, "vesting": "100% at TGE" },
+      "airdrop": { "percent": 5, "vesting": "Not specified" },
+      "public_sale": { "percent": 3, "vesting": "100% at TGE" }
+    },
+    "vesting_complete": true,
+    "insider_allocation_percent": 45,
+    "public_distribution_percent": 8,
+    "token_utility": [
+      "Payment for GPU compute jobs",
+      "Staking (xNOS score determines fee share)",
+      "Governance voting (NNP proposals)",
+      "Buyback-and-burn (20% of protocol profits)"
+    ],
+    "burn_mechanism": "20% of protocol profits used to buy back and burn NOS from exchanges.",
+    "inflation_note": "NNP-0001 proposes usage-based emissions that may exceed the 100M cap. If implemented, supply dynamics fundamentally change."
+  },
+
+  "market_data": {
+    "price_usd": 0.169,
+    "ath_usd": 7.83,
+    "ath_date": "2024-03-06",
+    "daily_volume_usd": 494158,
+    "coingecko_rank": 978,
+    "data_date": "2026-03-06"
+  },
+
+  "network_metrics": {
+    "total_nodes": 4200,
+    "daily_active_nodes": 600,
+    "gpu_hosts_registered": 50000,
+    "countries": 60,
+    "jobs_completed_2024": 985000,
+    "deployments_total": 2000000,
+    "stakers": 9102,
+    "total_staked_usd": 4860000,
+    "protocol_revenue": null,
+    "revenue_note": "No public protocol revenue figures. Critical gap."
+  },
+
+  "community": {
+    "twitter_followers": 60200,
+    "twitter_handle": "@nosana_ai",
+    "discord_members": 13182,
+    "telegram_members": null,
+    "community_calls": "Monthly on Discord"
+  },
+
+  "exchanges": [
+    "Gate.io",
+    "MEXC Global",
+    "Raydium (DEX)",
+    "Jupiter (DEX aggregator)"
+  ],
+
+  "partnerships": [
+    { "partner": "Render Network", "type": "Integration (RNP-008)", "detail": "Render nodes can execute Nosana jobs" },
+    { "partner": "PiKNiK", "type": "Infrastructure", "detail": "Enterprise Nvidia A5000 setups" },
+    { "partner": "Matrix One", "type": "Customer", "detail": "AI avatar creation" },
+    { "partner": "Sogni.AI", "type": "Customer", "detail": "Stable Diffusion processing" },
+    { "partner": "Arbius", "type": "Customer", "detail": "ML infrastructure validation" },
+    { "partner": "Theoriq", "type": "Customer", "detail": "AI agent testing" },
+    { "partner": "OpenGPU", "type": "Supply Partner", "detail": "GPU supply expansion" }
+  ],
+
+  "freedom_score": {
+    "total": 58,
+    "grade": "C",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 14,
+        "max": 20,
+        "evidence": "4,200+ nodes across 60+ countries with permissionless GPU hosting. 50K registered hosts but only ~600 daily active nodes. Consumer and enterprise GPUs accepted. PiKNiK provides enterprise Nvidia A5000s. Solana dependency inherits its centralisation risks. Job orchestration details unclear."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "NNP governance framework exists with 7-stage lifecycle. vote.nosana.com operational. Only ONE proposal (NNP-0001) ever submitted. Proposals require team review before community vote — team gatekeeping. No Nosana Foundation established. Signal votes only, team implements."
+      },
+      "token_distribution_fairness": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Team 20% + Company 25% = 45% insider allocation. Only 3% public sale + 5% airdrop = 8% initial public distribution. All vesting complete by 2025 removes ongoing unlock pressure. Low public distribution concerning."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Permissionless node participation, no KYC required for GPU hosts. Docker-based job execution provides isolation. Jobs matched via smart contracts. Team controls protocol upgrades. No explicit anti-censorship guarantees."
+      },
+      "data_sovereignty": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Documentation mentions confidential execution as a job option. Docker containerisation provides process isolation. Distributed execution. However, TEE details unclear, data-in-transit protections not detailed. Privacy features appear early-stage."
+      },
+      "open_source_transparency": {
+        "score": 9,
+        "max": 15,
+        "evidence": "34 public GitHub repos, MIT licence on smart contracts, 1,171 commits on nosana-programs. Active development through March 2026. Only staking audited (2022, lesser-known firm). README warns 'most code is unaudited'."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total": 46,
+    "grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "NOS required for GPU compute job payments — structurally embedded. Staking via xNOS determines fee share. Governance voting. Buyback-and-burn from protocol profits. Clear utility but network throughput and fee generation unverified."
+      },
+      "value_accrual": {
+        "score": 11,
+        "max": 20,
+        "evidence": "Buyback-and-burn: 20% of protocol profits buy and burn NOS. Transaction fees partially distributed to stakers via xNOS. Good mechanisms on paper. No data on actual burns or protocol profits. 9,102 stakers with $4.86M staked. Unproven at scale."
+      },
+      "supply_dynamics": {
+        "score": 14,
+        "max": 20,
+        "evidence": "100M max supply, 83.4% circulating. All vesting complete. FDV/MCap ratio 1.2x — healthy. Burn mechanism deflationary. However, NNP-0001 may introduce usage-based emissions beyond 100M cap, fundamentally changing supply dynamics."
+      },
+      "revenue_sustainability": {
+        "score": 3,
+        "max": 25,
+        "evidence": "No public protocol revenue figures. 2M+ deployments but no revenue per deployment disclosed. DeFiLlama has no data. 985K jobs in 2024 with no pricing data. Competing against Aethir ($147M ARR) with zero disclosed revenue. Sustainability unverifiable."
+      },
+      "liquidity_access": {
+        "score": 4,
+        "max": 15,
+        "evidence": "Gate.io, MEXC, Raydium, Jupiter. No Tier 1 CEX (Binance, Coinbase, Kraken). 24h volume ~$494K. Raydium NOS/USDC pool has just $279K liquidity. Any significant trade causes major slippage. Dangerously thin for a $14M market cap token."
+      }
+    }
+  }
+}
