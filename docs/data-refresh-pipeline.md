@@ -4,43 +4,60 @@ How project data stays fresh on OwnYourMind.
 
 ## What you need to do each week
 
-**Short version:** A PR appears on GitHub every Monday. Review it, merge it, done.
+**Short version:** Open Claude Code, tell it to merge the weekly data refresh PR. Done.
 
 ### The weekly routine
 
-1. **Monday morning** — GitHub Actions runs at 08:00 UTC (18:00 AEST). It fetches fresh GitHub metrics and community numbers for all projects, then opens a pull request.
+Every Monday at 08:00 UTC (18:00 AEST), GitHub Actions automatically fetches fresh metrics for all projects and opens a PR. Your job is to merge it.
 
-2. **Check your GitHub notifications** — You'll see a PR titled "data: weekly GitHub and community metrics refresh" from the `auto/weekly-metrics-refresh` branch.
+**Step 1.** Open Terminal, navigate to the project, start Claude Code:
+```
+cd ~/Developer/OwnYourMind
+claude
+```
 
-3. **Review the PR diff** — Scan for anything obviously wrong:
-   - Stars/forks/contributors dropping to 0 (rate limit hit — reject the PR)
-   - Telegram numbers looking wildly different from last week (scraper may have broken)
-   - Any project that was previously tracked now showing as "SKIP" in the workflow logs
+**Step 2.** Tell Claude Code:
+```
+Check if there's a weekly data refresh PR open. If it looks good, merge it and pull.
+```
 
-4. **Merge the PR** — Click "Merge pull request" on GitHub. Cloudflare Pages will auto-deploy with the fresh data.
+Claude Code will:
+1. Run `gh pr list` to find the automated PR
+2. Show you what changed (stars, forks, community numbers)
+3. Merge it with `gh pr merge`
+4. Pull the changes with `git pull`
+5. Cloudflare Pages auto-deploys from main
 
-5. **That's it.** The site is now showing updated GitHub activity charts, sparklines, and community numbers.
+**Step 3.** That's it. Close the terminal or keep working on other things.
 
-### If you miss a week
+### If you want to do it yourself without asking Claude
 
-Nothing breaks. The data just stays at the previous week's values. The next Monday run will catch up. Market data (prices, sparklines) refreshes on every build regardless.
+```
+gh pr list --label automated
+gh pr view 1 --json title,changedFiles
+gh pr merge 1 --merge
+git pull
+```
 
-### If no PR appears
+### If no PR appears on Monday
 
-Check https://github.com/robkay01/ownyourmind/actions — the workflow may have failed. Common reasons:
-- GitHub API rate limit hit (unlikely with automatic token, but possible)
-- No data actually changed (rare, but means no PR is created — this is fine)
-- The "Allow GitHub Actions to create PRs" setting was turned off
+Tell Claude Code:
+```
+The weekly refresh PR didn't show up. Check what happened and run it manually if needed.
+```
+
+Claude Code will check the Actions log, diagnose the issue, and either fix it or run the refresh locally.
 
 ### When you add a new project
 
-After creating the research JSON, run the backfill to get historical commit data:
-```bash
-GITHUB_TOKEN=$(gh auth token) npm run backfill:github
+After the research JSON is created, tell Claude Code:
 ```
-This populates the 52-week commit chart for the new project. The weekly refresh handles everything after that.
+Run the GitHub backfill for the new project to get historical commit data.
+```
 
-### Quarterly (manual)
+This populates the 52-week commit chart. The weekly refresh handles everything after that.
+
+### Quarterly review (manual)
 
 The automated pipeline handles GitHub and community metrics. These still need manual updates roughly every 3 months:
 - X/Twitter follower counts (no free API)
@@ -50,7 +67,10 @@ The automated pipeline handles GitHub and community metrics. These still need ma
 - Freedom and Returns scores (editorial judgement)
 - Prose content in editorials
 
-Run `npm run check:staleness` to see which projects are overdue.
+Tell Claude Code:
+```
+Run the staleness check and tell me which projects need a quarterly review.
+```
 
 ---
 
