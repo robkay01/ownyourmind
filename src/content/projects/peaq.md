@@ -4,7 +4,7 @@ description: "Layer-1 blockchain purpose-built for the Machine Economy — enabl
 category: "other"
 token: "PEAQ"
 status: "active"
-freedomScore: 5.3
+freedomScore: 5
 returnsScore: 4.7
 returnsScoreBreakdown:
   tokenUtility: 15
@@ -106,7 +106,7 @@ Listed on Kraken, KuCoin, Gate.io, MEXC, Bitget, Crypto.com, Coinone, and others
 
 ## Honest assessment
 
-### Freedom Score: 53/100 (D)
+### Freedom Score: 50/100 (D)
 
 peaq is a well-engineered open-source L1 but with centralised control dynamics and Polkadot dependency.
 

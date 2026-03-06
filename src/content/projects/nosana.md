@@ -4,7 +4,7 @@ description: "Decentralised GPU marketplace on Solana for AI inference workloads
 category: "compute"
 token: "NOS"
 status: "active"
-freedomScore: 5.8
+freedomScore: 6
 returnsScore: 4.6
 returnsScoreBreakdown:
   tokenUtility: 14
@@ -85,7 +85,7 @@ Staking: 9,102 stakers with approximately $4.86M staked. APY has been halved sin
 
 ## Honest assessment
 
-### Freedom Score: 58/100 (C)
+### Freedom Score: 60/100 (C)
 
 Nosana has genuine permissionless infrastructure with real geographic distribution, but governance centralisation and audit gaps exist.
 

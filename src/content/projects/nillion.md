@@ -4,7 +4,7 @@ description: "Blind computation network using MPC, homomorphic encryption, and T
 category: "data"
 token: "NIL"
 status: "active"
-freedomScore: 5.6
+freedomScore: 6
 returnsScore: 4.6
 returnsScoreBreakdown:
   tokenUtility: 14
@@ -96,7 +96,7 @@ Listed on Binance, Coinbase, Bybit, Gate.io, MEXC, HTX, and Bitget. Daily volume
 
 ## Honest assessment
 
-### Freedom Score: 56/100 (D)
+### Freedom Score: 60/100 (C)
 
 Nillion's architecture is fundamentally designed for data sovereignty — this is not a feature bolted on, but the core product. However, the network is in alpha phase and real-world decentralisation is unproven.
 

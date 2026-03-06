@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "project_id": "golem",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "golemfactory",
+      "github_primary_repo": "yagna",
+      "coingecko_id": "golem",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "goaboringcompany",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "stats.golem.network rendered empty \u2014 active provider count, task count, and utilisation metrics not independently verified.",
+      "No HuggingFace presence found.",
+      "DeFiLlama returned 403 \u2014 no TVL/revenue data (Golem is not a DeFi protocol).",
+      "Golem Foundation treasury size and runway not publicly disclosed.",
+      "Exact Golem Factory GmbH team size not confirmed.",
+      "Salad.com partnership details \u2014 scope, timeline, and commercial terms not publicly documented beyond 'engineering test'.",
+      "428% YoY usage growth claim from search results not independently verified on stats page.",
+      "Discord and Telegram exact member counts not independently confirmed."
+    ]
+  },
+  "identity": {
+    "name": "Golem Network",
+    "ticker": "GLM",
+    "category": "Compute & Infrastructure",
+    "subcategory": "General-Purpose Compute Marketplace",
+    "tagline": "The original decentralised compute network",
+    "one_liner": "Peer-to-peer marketplace for computing power, connecting providers with requestors via the Yagna framework on Ethereum and Polygon.",
+    "website": "https://golem.network",
+    "documentation_url": "https://docs.golem.network",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/golemfactory",
+    "chain": "Ethereum / Polygon",
+    "launch_date": "2016-11-11",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+  "team": {
+    "founding_team": [
+      {
+        "name": "Julian Zawistowski",
+        "role": "Co-Founder (departed 2019)",
+        "background": "Original CEO. Departed to establish Golem Foundation with $40M+ in ETH/GNT.",
+        "doxxed": true
+      },
+      {
+        "name": "Piotr Janiuk",
+        "role": "Co-Founder & CEO (current)",
+        "background": "Mathematics/CS, University of Warsaw. Leading Golem Factory since 2019.",
+        "doxxed": true
+      },
+      {
+        "name": "Aleksandra Skrzypczak",
+        "role": "Co-Founder",
+        "background": "Now managing partner at Golem Factory.",
+        "doxxed": true
+      },
+      {
+        "name": "Andrzej Regulski",
+        "role": "Co-Founder (departed 2019)",
+        "background": "Original COO. Departed with Zawistowski to Golem Foundation.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": "Golem Factory GmbH",
+    "entity_jurisdiction": "Zug, Switzerland (CHE-143.168.192)",
+    "notable_backers": [],
+    "funding_raised": {
+      "total_usd": 8600000,
+      "rounds": [
+        {
+          "round_type": "ico",
+          "amount_usd": 8600000,
+          "date": "2016-11-11",
+          "lead_investor": null,
+          "notes": "820,000 ETH raised in under an hour. Third-largest platform ICO at the time. 82% of tokens to ICO participants."
+        }
+      ]
+    },
+    "leadership_split": "In 2019, co-founders Zawistowski and Regulski departed to establish the Golem Foundation, a separate non-profit. Over $40M in ETH and GNT was transferred from Factory to Foundation."
+  },
+  "technical": {
+    "architecture_summary": "Peer-to-peer compute marketplace. Yagna framework (Rust) handles task negotiation, execution, and payment. Providers share CPU/GPU resources, Requestors consume compute. Payments on Ethereum mainnet and Polygon L2. Deposit mechanism (v0.16) enables smart contract pre-payment locks.",
+    "consensus_mechanism": "N/A \u2014 uses Ethereum and Polygon for settlement. Peer-to-peer task matching.",
+    "what_is_onchain": "Token transfers, payment settlement, deposit contracts (Ethereum/Polygon).",
+    "what_is_offchain": "Task negotiation, compute execution, provider discovery, task distribution.",
+    "key_dependencies": [
+      "Ethereum",
+      "Polygon"
+    ],
+    "github_metrics": {
+      "total_repos": 100,
+      "primary_repo": "yagna",
+      "stars": 470,
+      "forks": 85,
+      "contributors": 76,
+      "license": "GPL-3.0",
+      "last_commit": "2025-10",
+      "legacy_repo_stars": 2889
+    },
+    "audits": [
+      {
+        "auditor": "OpenZeppelin",
+        "scope": "GNT token contract",
+        "date": "2016",
+        "result_summary": "Very good code quality rating"
+      }
+    ],
+    "supported_workloads": [
+      "3D rendering / CGI",
+      "AI model inference",
+      "Scientific simulations",
+      "Zero-knowledge proof generation (Satori)",
+      "General-purpose batch compute"
+    ],
+    "dev_activity_note": "Last yagna commit October 2025 \u2014 approximately 5 months of apparent inactivity on core repo. Modelserve AI (key AI product) development temporarily suspended."
+  },
+  "tokenomics": {
+    "token_name": "GLM",
+    "token_standard": "ERC-20",
+    "contract_address": "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429",
+    "max_supply": 1000000000,
+    "circulating_supply": 1000000000,
+    "circulating_percent": 100,
+    "fdv_usd": 133000000,
+    "market_cap_usd": 133000000,
+    "fdv_mcap_ratio": 1.0,
+    "allocation": {
+      "ico_participants": {
+        "percent": 82,
+        "vesting": "None \u2014 fully unlocked at TGE"
+      },
+      "golem_factory": {
+        "percent": 12,
+        "vesting": "None"
+      },
+      "team": {
+        "percent": 6,
+        "vesting": "None"
+      }
+    },
+    "fully_circulating": true,
+    "token_utility": [
+      "Payment for compute (sole currency between requestors and providers)",
+      "Smart contract deposits for compute pre-payment",
+      "Arkiv data writes (L2/L3 extension)"
+    ],
+    "burn_mechanism": "None",
+    "staking": "None",
+    "protocol_commission": "0% \u2014 Golem captures no revenue from network usage",
+    "migration_note": "Migrated from GNT to GLM (1:1, no deadline). ~796M GLM on Ethereum, remainder still unmigrated GNT."
+  },
+  "market_data": {
+    "price_usd": 0.13,
+    "ath_usd": 0.86,
+    "ath_date": "2021-11-28",
+    "daily_volume_usd": 7000000,
+    "holders": 19813,
+    "data_date": "2026-03-06"
+  },
+  "network_metrics": {
+    "protocol_revenue": 0,
+    "revenue_note": "0% commission \u2014 protocol captures zero revenue from usage.",
+    "usage_claim": "428% YoY usage growth and 80%+ utilisation in 2025 \u2014 not independently verified.",
+    "pricing": "$0.001/core-hour CPU, $0.01/core-hour GPU \u2014 70-90% below AWS"
+  },
+  "community": {
+    "discord_members": 13167,
+    "twitter_handle": null,
+    "key_partnerships": [
+      {
+        "partner": "Salad.com",
+        "type": "Engineering Test",
+        "detail": "Mirroring Salad commercial workloads onto Golem execution layer (Jan 2026)"
+      },
+      {
+        "partner": "Satori Network",
+        "type": "Integration",
+        "detail": "ZK proving on Golem (mainnet July 2025)"
+      },
+      {
+        "partner": "GamerHash",
+        "type": "Partnership",
+        "detail": "AI provider integration"
+      }
+    ]
+  },
+  "exchanges": [
+    "Binance",
+    "Coinbase",
+    "OKX",
+    "KuCoin",
+    "Upbit",
+    "Gate.io",
+    "Uniswap"
+  ],
+  "freedom_score": {
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 14,
+        "max": 20,
+        "evidence": "Permissionless P2P network \u2014 anyone can join as provider or requestor. Providers run own hardware. Payments on Ethereum and Polygon. Relay infrastructure and task matching involve some centralised coordination. Provider count modest vs competitors."
+      },
+      "governance_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "GAPs governance mechanism since 2020. In practice Golem Factory GmbH retains control over protocol development and treasury. 2019 split created two entities (Factory + Foundation) distributing power somewhat. No formal DAO. Ecosystem Fund allocation team-directed."
+      },
+      "token_distribution_fairness": {
+        "score": 11,
+        "max": 15,
+        "evidence": "82% to ICO participants \u2014 one of the fairest distributions in crypto history. Only 18% team/company. Fully circulated, no remaining unlocks. $40M+ transfer to Foundation concentrates resources."
+      },
+      "censorship_resistance": {
+        "score": 11,
+        "max": 15,
+        "evidence": "Explicitly designed as censorship-resistant computing. Permissionless, no KYC. Arbitrary workloads supported. Providers choose tasks. Small network scale means coordinated disruption possible."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Requestors send tasks to providers \u2014 data leaves requestor's machine. Plans for VPN and SGX but not in production. No TEE/confidential computing currently. Arkiv extends data sovereignty concepts."
+      },
+      "open_source_transparency": {
+        "score": 13,
+        "max": 15,
+        "evidence": "All core code GPL-3.0. 100+ repos, 76+ contributors on yagna. OpenZeppelin audited token contract. Team identifiable and public. Dev cadence slowed (5-month gap on yagna). Foundation activities less transparent."
+      }
+    },
+    "total_score": 69,
+    "freedom_grade": "C",
+    "max_possible": 100
+  },
+  "returns_score": {
+    "total": 46,
+    "grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 10,
+        "max": 20,
+        "evidence": "GLM is sole payment currency for compute. Deposit mechanism adds smart contract locking. Arkiv extends to data writes. No staking, no governance weight, no fee-sharing. Pure medium of exchange \u2014 substitutable in theory."
+      },
+      "value_accrual": {
+        "score": 6,
+        "max": 20,
+        "evidence": "No burn, no staking, no protocol fee capture, no revenue sharing. Token value depends entirely on compute demand. High token velocity \u2014 providers sell immediately. Deposit mechanism creates temporary lock-up only."
+      },
+      "supply_dynamics": {
+        "score": 14,
+        "max": 20,
+        "evidence": "Fixed 1B supply, no inflation, no future emissions, no remaining unlocks. FDV = market cap. 82% distributed to public in 2016. Clean structure. No deflationary mechanism or staking lock-up."
+      },
+      "revenue_sustainability": {
+        "score": 5,
+        "max": 25,
+        "evidence": "0% commission \u2014 protocol captures zero revenue from usage. Pricing at $0.001-$0.01/core-hour is extremely low. Sustainability depends on treasury/Foundation assets. Salad partnership is engineering test only. No transparent runway disclosure."
+      },
+      "liquidity_access": {
+        "score": 11,
+        "max": 15,
+        "evidence": "44 exchanges including Binance, Coinbase, OKX, KuCoin, Upbit. $5-9M daily volume. Good coverage for $133M market cap. Available on Uniswap for decentralised access."
+      }
+    }
+  }
+}

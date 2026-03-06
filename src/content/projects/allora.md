@@ -4,7 +4,7 @@ description: "Self-improving decentralised AI inference network using regret-bas
 category: "other"
 token: "ALLO"
 status: "active"
-freedomScore: 5.2
+freedomScore: 5
 returnsScore: 4.7
 returnsScoreBreakdown:
   tokenUtility: 14
@@ -102,7 +102,7 @@ Staking offers approximately 12% APY base, with Allora Prime providing up to 50%
 
 ## Honest assessment
 
-### Freedom Score: 52/100 (D)
+### Freedom Score: 50/100 (D)
 
 Allora has genuine decentralisation potential through Cosmos SDK but the current state is highly centralised with only 16 validators and nearly half of tokens allocated to insiders.
 

@@ -4,7 +4,7 @@ description: "Open-source protocol for community-owned AGI with cryptographic mo
 category: "inference"
 token: "SENT"
 status: "active"
-freedomScore: 4.9
+freedomScore: 5
 returnsScore: 5.0
 returnsScoreBreakdown:
   tokenUtility: 10
@@ -91,7 +91,7 @@ Listed on Binance, Coinbase, Kraken, Bybit, Gate.io, and KuCoin. Daily volume $1
 
 ## Honest assessment
 
-### Freedom Score: 49/100 (D)
+### Freedom Score: 50/100 (D)
 
 Sentient has strong open-source credentials and a novel approach to AI model sovereignty, but most systems are not yet decentralised.
 

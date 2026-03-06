@@ -4,7 +4,7 @@ description: "Privacy-first Layer 1 with confidential smart contracts via TEE-po
 category: "data"
 token: "ROSE"
 status: "active"
-freedomScore: 6.2
+freedomScore: 6
 returnsScore: 4.1
 returnsScoreBreakdown:
   tokenUtility: 11
@@ -93,7 +93,7 @@ Staking is available with a minimum of 100 ROSE (~$1.20). APY approximately 5% (
 
 ## Honest assessment
 
-### Freedom Score: 62/100 (C)
+### Freedom Score: 60/100 (C)
 
 Oasis has genuine production-ready confidential computing with strong open-source development, but practical limitations exist.
 

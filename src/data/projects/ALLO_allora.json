@@ -18,16 +18,15 @@
     "research_gaps": [
       "No formal security audit reports found from recognised auditing firms.",
       "No Allora-specific models or datasets on HuggingFace.",
-      "Not listed on DeFiLlama — no independent TVL or protocol revenue data.",
+      "Not listed on DeFiLlama \u2014 no independent TVL or protocol revenue data.",
       "Exact X/Twitter follower count not confirmed.",
       "Real mainnet-only inference volume not publicly separated from testnet figures.",
       "Current validator count may have expanded beyond the initial 16 at launch.",
       "Governance participation rate and proposal count unknown.",
       "Total supply discrepancy: official blog says 1B max, ICO Drops reports 786.5M total supply.",
-      "No independent verification of 692M inferences claim — self-reported only."
+      "No independent verification of 692M inferences claim \u2014 self-reported only."
     ]
   },
-
   "identity": {
     "name": "Allora Network",
     "ticker": "ALLO",
@@ -44,7 +43,6 @@
     "current_status": "mainnet",
     "logo_url": null
   },
-
   "team": {
     "founding_team": [
       {
@@ -108,13 +106,16 @@
     },
     "pivot_history": "Originally founded as Upshot (2019) for NFT appraisal using peer prediction. Rebranded to Allora Labs February 2024, pivoting to decentralised AI inference."
   },
-
   "technical": {
-    "architecture_summary": "L1 blockchain on Cosmos SDK with CometBFT consensus. Network organised around Topics — sub-networks for specific prediction problems. Workers generate inferences, Forecast Workers predict accuracy, Reputers evaluate against ground truth, Validators secure chain. Inference Synthesis aggregates weighted predictions using regret-based system. Consumer contracts on Arbitrum One for cross-chain inference consumption.",
+    "architecture_summary": "L1 blockchain on Cosmos SDK with CometBFT consensus. Network organised around Topics \u2014 sub-networks for specific prediction problems. Workers generate inferences, Forecast Workers predict accuracy, Reputers evaluate against ground truth, Validators secure chain. Inference Synthesis aggregates weighted predictions using regret-based system. Consumer contracts on Arbitrum One for cross-chain inference consumption.",
     "consensus_mechanism": "CometBFT DPoS. 25% of emissions to validators, 75% to intelligence layer (workers, forecasters, reputers).",
     "what_is_onchain": "Topic creation, worker/reputer registration, staking, reward distribution, governance, emission calculations, inference fee payments.",
     "what_is_offchain": "ML model execution, inference generation, data processing, model training, ground truth provision.",
-    "key_dependencies": ["Cosmos SDK", "CometBFT", "Arbitrum One (consumer contracts)"],
+    "key_dependencies": [
+      "Cosmos SDK",
+      "CometBFT",
+      "Arbitrum One (consumer contracts)"
+    ],
     "github_metrics": {
       "total_repos": 30,
       "primary_repo": "allora-chain",
@@ -126,7 +127,6 @@
     "audits": [],
     "audit_note": "No public security audit reports found from any recognised firm. Significant gap for a network handling financial predictions."
   },
-
   "tokenomics": {
     "token_name": "ALLO",
     "token_standard": "Native Cosmos SDK (bridged to Arbitrum)",
@@ -137,16 +137,37 @@
     "market_cap_usd": 25600000,
     "fdv_mcap_ratio": 3.65,
     "allocation": {
-      "early_backers": { "percent": 31.05, "vesting": "12-month cliff, 33% unlock, then 24-month linear" },
-      "network_emissions": { "percent": 21.45, "vesting": "Bitcoin-like decreasing emissions" },
-      "core_contributors": { "percent": 17.50, "vesting": "12-month cliff, 33% unlock, then 24-month linear" },
-      "foundation": { "percent": 9.35, "vesting": "~50% at TGE, remainder 24-month linear" },
-      "community_pool": { "percent": 9.30, "vesting": "100% at TGE" },
-      "ecosystem_partnerships": { "percent": 8.85, "vesting": "50% at TGE, 50% 24-month linear" },
-      "allora_prime_staking": { "percent": 2.50, "vesting": "100% at TGE" }
+      "early_backers": {
+        "percent": 31.05,
+        "vesting": "12-month cliff, 33% unlock, then 24-month linear"
+      },
+      "network_emissions": {
+        "percent": 21.45,
+        "vesting": "Bitcoin-like decreasing emissions"
+      },
+      "core_contributors": {
+        "percent": 17.5,
+        "vesting": "12-month cliff, 33% unlock, then 24-month linear"
+      },
+      "foundation": {
+        "percent": 9.35,
+        "vesting": "~50% at TGE, remainder 24-month linear"
+      },
+      "community_pool": {
+        "percent": 9.3,
+        "vesting": "100% at TGE"
+      },
+      "ecosystem_partnerships": {
+        "percent": 8.85,
+        "vesting": "50% at TGE, 50% 24-month linear"
+      },
+      "allora_prime_staking": {
+        "percent": 2.5,
+        "vesting": "100% at TGE"
+      }
     },
     "insider_allocation_percent": 48.55,
-    "critical_unlock_event": "November 2026 — 48.55% of supply (Early Backers + Core Contributors) begins cliff unlock. First 33% tranche (~160M tokens) vs ~220M current circulating.",
+    "critical_unlock_event": "November 2026 \u2014 48.55% of supply (Early Backers + Core Contributors) begins cliff unlock. First 33% tranche (~160M tokens) vs ~220M current circulating.",
     "token_utility": [
       "Inference purchases (PWYW model)",
       "Topic creation and participation",
@@ -155,19 +176,17 @@
       "Governance voting"
     ],
     "burn_mechanism": "None documented. Excess fees accumulate in Emissions Treasury.",
-    "emission_model": "Disinflationary — Bitcoin-like decreasing emissions curve.",
+    "emission_model": "Disinflationary \u2014 Bitcoin-like decreasing emissions curve.",
     "staking_apy": "~12% base, up to 50% with Allora Prime (9-month programme)",
     "unbonding_period": "21 days"
   },
-
   "market_data": {
     "price_usd": 0.1187,
-    "ath_usd": 1.70,
+    "ath_usd": 1.7,
     "ath_date": "2025-11-11",
     "daily_volume_usd": 21800000,
     "data_date": "2026-03-06"
   },
-
   "network_metrics": {
     "validators": 16,
     "validators_note": "16 at mainnet launch, may have expanded",
@@ -175,11 +194,10 @@
     "workers_note": "Includes testnet participants, likely inflated by airdrop farming",
     "topics_active": 55,
     "inferences_reported": 692000000,
-    "inferences_note": "Cumulative since testnet — self-reported only",
+    "inferences_note": "Cumulative since testnet \u2014 self-reported only",
     "protocol_revenue": null,
     "revenue_note": "No independently verified revenue. PWYW model allows zero-fee consumption."
   },
-
   "community": {
     "discord_members": 223135,
     "twitter_handle": "@AlloraNetwork",
@@ -193,7 +211,6 @@
       "TRON Network (cross-chain forecasts)"
     ]
   },
-
   "exchanges": [
     "Binance",
     "Coinbase",
@@ -203,15 +220,12 @@
     "Gate.io",
     "MEXC"
   ],
-
   "freedom_score": {
-    "total": 52,
-    "grade": "D",
     "breakdown": {
       "infrastructure_decentralisation": {
         "score": 9,
         "max": 20,
-        "evidence": "Cosmos SDK L1 with CometBFT is a solid foundation. Only 16 validators at mainnet launch — highly concentrated. Workers are permissionless but 288K figure includes testnet/airdrop farmers. Consumer contracts on Arbitrum add cross-chain reach. Off-chain ML execution introduces centralisation vectors without zkML fully deployed."
+        "evidence": "Cosmos SDK L1 with CometBFT is a solid foundation. Only 16 validators at mainnet launch \u2014 highly concentrated. Workers are permissionless but 288K figure includes testnet/airdrop farmers. Consumer contracts on Arbitrum add cross-chain reach. Off-chain ML execution introduces centralisation vectors without zkML fully deployed."
       },
       "governance_decentralisation": {
         "score": 7,
@@ -231,16 +245,18 @@
       "data_sovereignty": {
         "score": 10,
         "max": 15,
-        "evidence": "Workers retain ML model ownership — no upload of weights required. zkML claims to verify execution without exposing proprietary weights (implementation status unclear). Architecture designed for data sovereignty by default."
+        "evidence": "Workers retain ML model ownership \u2014 no upload of weights required. zkML claims to verify execution without exposing proprietary weights (implementation status unclear). Architecture designed for data sovereignty by default."
       },
       "open_source_transparency": {
         "score": 12,
         "max": 15,
-        "evidence": "Fully open source, Apache 2.0. 30+ repos, 1,127 commits. SDKs in Go, Python, TypeScript. Whitepaper public. No security audit — significant transparency gap."
+        "evidence": "Fully open source, Apache 2.0. 30+ repos, 1,127 commits. SDKs in Go, Python, TypeScript. Whitepaper public. No security audit \u2014 significant transparency gap."
       }
-    }
+    },
+    "total_score": 52,
+    "freedom_grade": "D",
+    "max_possible": 100
   },
-
   "returns_score": {
     "total": 47,
     "grade": "D",
@@ -248,7 +264,7 @@
       "token_utility": {
         "score": 14,
         "max": 20,
-        "evidence": "ALLO structurally required for inference purchases, topic creation, worker/reputer bonding, staking, governance. PWYW model creates demand-side uncertainty — consumers can set prices to zero. Genuine utility with revenue risk."
+        "evidence": "ALLO structurally required for inference purchases, topic creation, worker/reputer bonding, staking, governance. PWYW model creates demand-side uncertainty \u2014 consumers can set prices to zero. Genuine utility with revenue risk."
       },
       "value_accrual": {
         "score": 10,
@@ -268,7 +284,7 @@
       "liquidity_access": {
         "score": 12,
         "max": 15,
-        "evidence": "Binance, Coinbase, Kraken, OKX, KuCoin, Gate.io, MEXC. $21.8M daily volume on $25.6M market cap — excellent volume/mcap ratio. Tier-1 exchange coverage from day one."
+        "evidence": "Binance, Coinbase, Kraken, OKX, KuCoin, Gate.io, MEXC. $21.8M daily volume on $25.6M market cap \u2014 excellent volume/mcap ratio. Tier-1 exchange coverage from day one."
       }
     }
   }

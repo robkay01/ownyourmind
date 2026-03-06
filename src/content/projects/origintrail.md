@@ -4,7 +4,7 @@ description: "Decentralised Knowledge Graph protocol turning data into verifiabl
 category: "other"
 token: "TRAC"
 status: "active"
-freedomScore: 6.0
+freedomScore: 6
 returnsScore: 6.5
 returnsScoreBreakdown:
   tokenUtility: 16

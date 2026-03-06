@@ -351,42 +351,54 @@
         "type": "staking",
         "description": "Delegate FET to validators on Fetchhub-4 to earn staking rewards (5.5-8% APY). Use the ASI Alliance Wallet (browser extension) or any Cosmos-compatible wallet. 21-day unbonding period.",
         "minimum_requirements": "Any amount of FET (keep 1 FET undelegated for fees)",
-        "barriers_to_entry": "Low -- purchase FET on exchanges, install wallet, delegate",
+        "barriers_to_entry": [
+          "Low -- purchase FET on exchanges, install wallet, delegate"
+        ],
         "technical_skill_required": "basic"
       },
       {
         "type": "building",
         "description": "Build autonomous AI agents using the uAgents Python framework. Deploy on Agentverse (no-code) or self-host. Register agents on the Almanac contract (requires FET, renewed every 48 hours). Access to ASI-1 Mini LLM and ASI Cloud for agent capabilities.",
         "minimum_requirements": "Python programming knowledge, FET for agent registration",
-        "barriers_to_entry": "Moderate -- requires programming skills and understanding of agent architecture",
+        "barriers_to_entry": [
+          "Moderate -- requires programming skills and understanding of agent architecture"
+        ],
         "technical_skill_required": "intermediate"
       },
       {
         "type": "validating",
         "description": "Run a validator node on Fetchhub-4. Max 70 validator slots (sPOS). Requires self-bonding FET and attracting delegations to enter the active set.",
         "minimum_requirements": "Substantial FET stake (competitive -- top validators have 30M+ FET), server infrastructure, DevOps expertise",
-        "barriers_to_entry": "High -- limited slots, high capital requirements, technical expertise needed",
+        "barriers_to_entry": [
+          "High -- limited slots, high capital requirements, technical expertise needed"
+        ],
         "technical_skill_required": "expert"
       },
       {
         "type": "using",
         "description": "Use ASI Cloud for GPU inference (~50% cheaper than AWS, per project claims). Use ASI-1 Mini LLM via API. Browse and consume AI services on the SingularityNET marketplace. Interact with deployed agents.",
         "minimum_requirements": "FET tokens for payment",
-        "barriers_to_entry": "Low to moderate -- some products still in early access or beta",
+        "barriers_to_entry": [
+          "Low to moderate -- some products still in early access or beta"
+        ],
         "technical_skill_required": "basic"
       },
       {
         "type": "contributing",
         "description": "Contribute to open-source repos (uAgents, fetchd, SingularityNET SDK, etc.). Participate in hackathons and the Innovation Lab (backed by $10M fund with Imperial College London).",
         "minimum_requirements": "Development skills, GitHub account",
-        "barriers_to_entry": "Low -- open-source contributions welcome",
+        "barriers_to_entry": [
+          "Low -- open-source contributions welcome"
+        ],
         "technical_skill_required": "intermediate"
       },
       {
         "type": "governance",
         "description": "Vote on ASI Alliance governance proposals using staked FET. Proposals include alliance membership (e.g., CUDOS, Paal.ai), tokenomics changes, and protocol upgrades.",
         "minimum_requirements": "Staked FET tokens",
-        "barriers_to_entry": "Low -- any staked FET holder can vote",
+        "barriers_to_entry": [
+          "Low -- any staked FET holder can vote"
+        ],
         "technical_skill_required": "none"
       }
     ],
