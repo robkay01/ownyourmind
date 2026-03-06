@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "project_id": "flux",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "RunOnFlux",
+      "github_primary_repo": "flux",
+      "coingecko_id": "zelcash",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "RunOnFlux",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "Parker Honeyman (co-founder/COO) resigned as director February 2025 — no public explanation found.",
+      "FluxCloud revenue figures not publicly disclosed.",
+      "Node operator ROI not publicly available. Declining node count suggests poor economics.",
+      "XDAO 2.0 governance implementation status unclear — XDAO page returns 404.",
+      "No comprehensive protocol-level security audit of FluxOS/FluxCloud found.",
+      "Supply cap change (440M to 560M) governance process not well-documented.",
+      "FluxEdge usage metrics not available — recently graduated from alpha.",
+      "DeFiLlama does not track Flux (the cloud project).",
+      "HuggingFace: no presence (FLUX models on HuggingFace are Black Forest Labs, unrelated)."
+    ]
+  },
+
+  "identity": {
+    "name": "Flux",
+    "ticker": "FLUX",
+    "category": "Compute & Infrastructure",
+    "subcategory": "Decentralised Cloud Computing",
+    "tagline": "The People's Cloud",
+    "one_liner": "Blockchain-powered decentralised cloud infrastructure with ~8,000 nodes across 67 countries, fair-launched via mining with no ICO or pre-mine.",
+    "website": "https://runonflux.com",
+    "documentation_url": "https://docs.runonflux.com",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/RunOnFlux",
+    "chain": "Flux (own chain) + parallel assets on 10+ chains",
+    "launch_date": "2018-01-28",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Daniel Keller",
+        "role": "Co-Founder & CEO/CSO",
+        "background": "25+ years IT experience. Director at InFlux Technologies since September 2019.",
+        "doxxed": true
+      },
+      {
+        "name": "Tadeas Kmenta",
+        "role": "Co-Founder & Chief Innovation Officer",
+        "background": "Core developer (GitHub: TheTrunk). Director at InFlux Technologies since September 2019.",
+        "doxxed": true
+      },
+      {
+        "name": "Parker Honeyman",
+        "role": "Co-Founder & COO (departed February 2025)",
+        "background": "Resigned as director 20 February 2025. No public explanation for departure.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 72,
+    "entity_name": "InFlux Technologies Limited",
+    "entity_jurisdiction": "Cheltenham, UK (Companies House #12144906)",
+    "notable_backers": [
+      "Hack VC"
+    ],
+    "funding_raised": {
+      "total_usd": 0,
+      "rounds": [],
+      "notes": "Fair launch via mining in January 2018. No ICO, no pre-mine, no pre-sale. Self-funded through mining and ecosystem development."
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Decentralised cloud platform with ~7,917 nodes across 67 countries. Three-tier node system (Cumulus, Nimbus, Stratus) with hardware benchmarking. PoUW v2 consensus (Proof of Useful Work, soft fork October 2025). Core products: FluxCloud (containerised dApp deployment), FluxEdge (GPU compute marketplace), ArcaneOS (secure container OS), Zelcore wallet, SSP wallet, Fusion cross-chain swaps.",
+    "consensus_mechanism": "Proof of Useful Work v2 (PoUW v2) — soft fork October 2025. 30-second block time. 14 FLUX per block.",
+    "what_is_onchain": "FLUX transactions, node collateral locks, governance voting, parallel asset swaps.",
+    "what_is_offchain": "FluxCloud app deployment, FluxEdge compute tasks, ArcaneOS container execution, node benchmarking.",
+    "key_dependencies": [],
+    "github_metrics": {
+      "total_repos": 165,
+      "primary_repo": "flux",
+      "stars": 247,
+      "forks": 314,
+      "contributors": 244,
+      "commits": 8846,
+      "license": "AGPL-3.0",
+      "last_commit": "2026-03-05"
+    },
+    "audits": [
+      {
+        "auditor": "Halborn",
+        "scope": "SSP Wallet, SSP Key, SSP Relay",
+        "date": "2025-03",
+        "result_summary": "Comprehensive security audit with remediated findings."
+      },
+      {
+        "auditor": "Halborn",
+        "scope": "Schnorr Multisig Account Abstraction Smart Contracts and SDK",
+        "date": "2025-02",
+        "result_summary": "Security audit completed."
+      }
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "FLUX",
+    "token_standard": "Native coin + parallel assets on 10+ chains",
+    "max_supply": 560000000,
+    "circulating_supply": 403709514,
+    "circulating_percent": 72.1,
+    "fdv_usd": 24200000,
+    "market_cap_usd": 24200000,
+    "fdv_mcap_ratio": 1.0,
+    "allocation": {
+      "user_owned": { "percent": 94.7, "vesting": "Mining distribution" },
+      "foundation": { "percent": 2.9, "vesting": "0.5 FLUX per block ongoing" },
+      "exchange_liquidity": { "percent": 1.7, "vesting": "None" },
+      "team": { "percent": 0.7, "vesting": "None" }
+    },
+    "insider_allocation_percent": 3.6,
+    "vesting_mostly_complete": true,
+    "token_utility": [
+      "Node collateral (1,000-40,000 FLUX locked per tier)",
+      "FluxCloud deployment payments",
+      "FluxEdge compute purchases",
+      "Titan staking (50-10,000 FLUX)",
+      "Governance voting (XDAO)",
+      "Cross-chain Fusion swaps"
+    ],
+    "burn_mechanism": "None documented despite claims of burning. Value accrual primarily through collateral lock-up.",
+    "staking_apy": "Variable by node tier. Titan staking: 3-12 month lock-ups.",
+    "emission_model": "14 FLUX per block (30-second blocks). 10% annual emission reduction. Target 1% inflation by 2036. Max supply increased from 440M to 560M via PoUW v2 fork (October 2025)."
+  },
+
+  "market_data": {
+    "price_usd": 0.0595,
+    "ath_usd": 3.33,
+    "ath_date": "2022-01-03",
+    "daily_volume_usd": 1884367,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": 7917,
+    "revenue_annual_usd": null,
+    "metrics_source": "Official website, third-party sources",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "~7,917 nodes across 67 countries (down from 14,000+ peak). ~100 live applications on FluxCloud. 58,300 CPU cores, 192 TB RAM, 3.2 PB SSD across network. ~114.9M FLUX locked in node collateral (~28% of circulating)."
+  },
+
+  "community": {
+    "telegram_members": 7483,
+    "x_followers": 45700,
+    "discord_members": 25920,
+    "twitter_handle": "@RunOnFlux"
+  },
+
+  "exchanges": [
+    "Binance",
+    "Kraken",
+    "KuCoin",
+    "Gate.io",
+    "Crypto.com"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run a FluxNode (Cumulus: 1,000 FLUX, Nimbus: 12,500, Stratus: 40,000). Earn block rewards. Hardware benchmarking required.",
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Block rewards (tier-dependent)",
+        "barriers_to_entry": ["Hardware requirements (2-8 cores, 8-64GB RAM)", "Collateral (1,000-40,000 FLUX)", "97% uptime requirement"]
+      },
+      {
+        "type": "staking",
+        "description": "Titan fractional staking. Minimum 50 FLUX. Lock-ups of 3, 6, or 12 months. Managed by InFlux Technologies.",
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable, rewards twice weekly",
+        "barriers_to_entry": ["Minimum 50 FLUX (~$3)"]
+      },
+      {
+        "type": "building",
+        "description": "Deploy containerised applications on FluxCloud. Use FluxEdge for GPU compute tasks.",
+        "technical_skill_required": "intermediate",
+        "barriers_to_entry": ["FLUX tokens for deployment payments"]
+      },
+      {
+        "type": "governance",
+        "description": "Participate in XDAO governance voting. Historically node-operator weighted. XDAO 2.0 planned to extend to all FLUX holders.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Currently weighted towards node operators"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 76,
+    "max_possible": 100,
+    "freedom_grade": "B",
+    "freedom_summary": "Flux scores well on freedom due to its fair-launch mining origins (no ICO, 0.7% team allocation), ~8,000 permissionless nodes across 67 countries, and extensive open source code (165 repos, AGPL-3.0). Main concerns: declining node count, Titan nodes managed centrally by InFlux, XDAO 2.0 governance status unclear, and co-founder departure unexplained.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 16,
+        "max": 20,
+        "evidence": "~7,917 nodes across 67 countries operated by 560+ independent providers. Hardware-benchmarked permissionless node operation. PoUW v2 distributes block production. No centralised data centres. Node count declining from 14,000+ peak. Titan nodes managed by InFlux Technologies (centralisation vector)."
+      },
+      "governance_decentralisation": {
+        "score": 13,
+        "max": 20,
+        "evidence": "XDAO governance since 2021 with community proposals and 30% quorum requirement. XDAO 2.0 announced to extend voting to all FLUX holders. Implementation status unclear — page returns 404. Core team retains significant influence. Weighted voting favours Stratus operators."
+      },
+      "token_distribution_fairness": {
+        "score": 13,
+        "max": 15,
+        "evidence": "Fair launch mining (January 2018), no ICO, no pre-mine, no pre-sale. 94.7% user-owned. Team only 0.7%. Foundation 2.9%. One of the fairest distributions in crypto. Max supply increased from 440M to 560M via fork — dilutive. Node collateral favours wealthier participants."
+      },
+      "censorship_resistance": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Permissionless node operation across 67 countries. Containerised app deployment. No single entity can shut down the network. ArcaneOS provides encrypted disk space. InFlux manages Titan nodes centrally. UK-registered company. ~100 deployed apps limits battle-testing."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "ArcaneOS provides containerised, encrypted application deployment. Users control data within dApps. No centralised data harvesting. FluxAI emphasises privacy. Data sovereignty claims architecture-level, not well-documented in practice. FluxEdge data passing through third-party nodes without strong guarantees."
+      },
+      "open_source_transparency": {
+        "score": 12,
+        "max": 15,
+        "evidence": "165 public GitHub repos. Core software AGPL-3.0 and MIT licensed. 247 stars, 244 contributors, 8,846 commits on main repo. Companies House filings current. Halborn audits public. Active development through March 2026. No comprehensive FluxOS/FluxCloud protocol audit."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 57,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 15,
+        "max": 20,
+        "evidence": "FLUX used for node collateral (1,000-40,000 locked), FluxCloud deployment payments, FluxEdge compute purchases, Titan staking (50-10,000), governance voting, cross-chain Fusion swaps. Multiple real use cases. FluxCloud has only ~100 deployed apps — actual compute payment demand minimal. Most utility is collateral lock-up."
+      },
+      "value_accrual": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Progressive Node Rewards share 80% of FluxCloud revenue with ArcaneOS operators. Node collateral locks ~114.9M FLUX (~28% of circulating). 10% annual emission reduction. No documented burn mechanism. Revenue from FluxCloud minimal with ~100 apps. Value accrual largely theoretical at current usage."
+      },
+      "supply_dynamics": {
+        "score": 14,
+        "max": 20,
+        "evidence": "560M max supply with 72% circulating. ~114.9M locked in node collateral. Titan lock-ups reduce liquid supply. 10% annual emission reduction targeting 1% by 2036. Max supply increased 27% (440M to 560M) via fork — dilutive. ~40,320 FLUX daily emissions still entering circulation."
+      },
+      "revenue_sustainability": {
+        "score": 8,
+        "max": 25,
+        "evidence": "FluxCloud generates some revenue from ~100 deployed apps — likely negligible. FluxEdge just graduated from alpha. No public revenue figures. Node economics primarily sustained by block rewards (inflation). Declining node count (14K to 8K) suggests operators leaving due to poor economics. Fundamental thesis unproven after 6+ years."
+      },
+      "liquidity_access": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Binance, Kraken, KuCoin, Gate.io, Crypto.com. $1.88M daily volume. Available on 10+ chains via parallel assets. Titan accessible from 50 FLUX (~$3). $24M market cap — moderate liquidity risk. 98% below ATH."
+      }
+    }
+  }
+}
