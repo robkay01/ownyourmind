@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "project_id": "allora",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "allora-network",
+      "github_primary_repo": "allora-chain",
+      "coingecko_id": "allora-network",
+      "discord_server_id": null,
+      "telegram_username": "alloranetworkannouncements",
+      "x_handle": "AlloraNetwork",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No formal security audit reports found from recognised auditing firms.",
+      "No Allora-specific models or datasets on HuggingFace.",
+      "Not listed on DeFiLlama — no independent TVL or protocol revenue data.",
+      "Exact X/Twitter follower count not confirmed.",
+      "Real mainnet-only inference volume not publicly separated from testnet figures.",
+      "Current validator count may have expanded beyond the initial 16 at launch.",
+      "Governance participation rate and proposal count unknown.",
+      "Total supply discrepancy: official blog says 1B max, ICO Drops reports 786.5M total supply.",
+      "No independent verification of 692M inferences claim — self-reported only."
+    ]
+  },
+
+  "identity": {
+    "name": "Allora Network",
+    "ticker": "ALLO",
+    "category": "Intelligence Network",
+    "subcategory": "AI Inference & Prediction",
+    "tagline": "A self-improving decentralised AI network",
+    "one_liner": "Decentralised prediction and inference network that aggregates competing ML models to produce collective intelligence, built on Cosmos SDK.",
+    "website": "https://allora.network",
+    "documentation_url": "https://docs.allora.network",
+    "whitepaper_url": "https://research.assets.allora.network/allora.0x10001.pdf",
+    "github_url": "https://github.com/allora-network",
+    "chain": "Allora L1 (Cosmos SDK / CometBFT)",
+    "launch_date": "2025-11-11",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Nick Emmons",
+        "role": "Co-Founder & CEO",
+        "background": "Co-founded Upshot in 2019 (NFT appraisal). Pivoted to Allora Labs February 2024.",
+        "linkedin_or_x": "https://www.linkedin.com/in/nickemmons/",
+        "doxxed": true
+      },
+      {
+        "name": "Kenny Peluso",
+        "role": "Co-Founder & CTO",
+        "background": "BSc Applied Mathematics, Brown University. Full-stack developer at John Hancock before co-founding Upshot/Allora.",
+        "linkedin_or_x": "https://www.linkedin.com/in/kennypeluso/",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 30,
+    "entity_name": "Allora Labs Inc (formerly Upshot Technologies)",
+    "entity_jurisdiction": "Cayman Islands (registered), operations in New York/Boston",
+    "notable_backers": [
+      "Polychain Capital",
+      "Framework Ventures",
+      "Blockchain Capital",
+      "CoinFund",
+      "Delphi Digital",
+      "Archetype",
+      "Slow Ventures",
+      "Mechanism Capital"
+    ],
+    "notable_angels": [
+      "Stani Kulechov (Aave founder)",
+      "Kain Warwick (Synthetix founder)",
+      "Ryan Selkis (Messari founder)"
+    ],
+    "funding_raised": {
+      "total_usd": 35000000,
+      "rounds": [
+        {
+          "round_type": "Series A",
+          "amount_usd": 7500000,
+          "date": "2021-05-06",
+          "lead_investor": null,
+          "notes": "As Upshot. Pre-valuation $60M."
+        },
+        {
+          "round_type": "Series A Extension",
+          "amount_usd": 22000000,
+          "date": "2022-03-22",
+          "lead_investor": null,
+          "notes": "As Upshot. Pre-valuation $220M."
+        },
+        {
+          "round_type": "Strategic",
+          "amount_usd": 3000000,
+          "date": "2024-06-24",
+          "lead_investor": "Archetype",
+          "notes": "As Allora Labs."
+        }
+      ]
+    },
+    "pivot_history": "Originally founded as Upshot (2019) for NFT appraisal using peer prediction. Rebranded to Allora Labs February 2024, pivoting to decentralised AI inference."
+  },
+
+  "technical": {
+    "architecture_summary": "L1 blockchain on Cosmos SDK with CometBFT consensus. Network organised around Topics — sub-networks for specific prediction problems. Workers generate inferences, Forecast Workers predict accuracy, Reputers evaluate against ground truth, Validators secure chain. Inference Synthesis aggregates weighted predictions using regret-based system. Consumer contracts on Arbitrum One for cross-chain inference consumption.",
+    "consensus_mechanism": "CometBFT DPoS. 25% of emissions to validators, 75% to intelligence layer (workers, forecasters, reputers).",
+    "what_is_onchain": "Topic creation, worker/reputer registration, staking, reward distribution, governance, emission calculations, inference fee payments.",
+    "what_is_offchain": "ML model execution, inference generation, data processing, model training, ground truth provision.",
+    "key_dependencies": ["Cosmos SDK", "CometBFT", "Arbitrum One (consumer contracts)"],
+    "github_metrics": {
+      "total_repos": 30,
+      "primary_repo": "allora-chain",
+      "stars": 134,
+      "forks": 132,
+      "commits": 1127,
+      "license": "Apache 2.0"
+    },
+    "audits": [],
+    "audit_note": "No public security audit reports found from any recognised firm. Significant gap for a network handling financial predictions."
+  },
+
+  "tokenomics": {
+    "token_name": "ALLO",
+    "token_standard": "Native Cosmos SDK (bridged to Arbitrum)",
+    "max_supply": 1000000000,
+    "circulating_supply": 220000000,
+    "circulating_percent": 22.0,
+    "fdv_usd": 93500000,
+    "market_cap_usd": 25600000,
+    "fdv_mcap_ratio": 3.65,
+    "allocation": {
+      "early_backers": { "percent": 31.05, "vesting": "12-month cliff, 33% unlock, then 24-month linear" },
+      "network_emissions": { "percent": 21.45, "vesting": "Bitcoin-like decreasing emissions" },
+      "core_contributors": { "percent": 17.50, "vesting": "12-month cliff, 33% unlock, then 24-month linear" },
+      "foundation": { "percent": 9.35, "vesting": "~50% at TGE, remainder 24-month linear" },
+      "community_pool": { "percent": 9.30, "vesting": "100% at TGE" },
+      "ecosystem_partnerships": { "percent": 8.85, "vesting": "50% at TGE, 50% 24-month linear" },
+      "allora_prime_staking": { "percent": 2.50, "vesting": "100% at TGE" }
+    },
+    "insider_allocation_percent": 48.55,
+    "critical_unlock_event": "November 2026 — 48.55% of supply (Early Backers + Core Contributors) begins cliff unlock. First 33% tranche (~160M tokens) vs ~220M current circulating.",
+    "token_utility": [
+      "Inference purchases (PWYW model)",
+      "Topic creation and participation",
+      "Worker/reputer registration bonding",
+      "Staking (validators and reputers)",
+      "Governance voting"
+    ],
+    "burn_mechanism": "None documented. Excess fees accumulate in Emissions Treasury.",
+    "emission_model": "Disinflationary — Bitcoin-like decreasing emissions curve.",
+    "staking_apy": "~12% base, up to 50% with Allora Prime (9-month programme)",
+    "unbonding_period": "21 days"
+  },
+
+  "market_data": {
+    "price_usd": 0.1187,
+    "ath_usd": 1.70,
+    "ath_date": "2025-11-11",
+    "daily_volume_usd": 21800000,
+    "data_date": "2026-03-06"
+  },
+
+  "network_metrics": {
+    "validators": 16,
+    "validators_note": "16 at mainnet launch, may have expanded",
+    "workers_reported": 288000,
+    "workers_note": "Includes testnet participants, likely inflated by airdrop farming",
+    "topics_active": 55,
+    "inferences_reported": 692000000,
+    "inferences_note": "Cumulative since testnet — self-reported only",
+    "protocol_revenue": null,
+    "revenue_note": "No independently verified revenue. PWYW model allows zero-fee consumption."
+  },
+
+  "community": {
+    "discord_members": 223135,
+    "twitter_handle": "@AlloraNetwork",
+    "telegram": "t.me/alloranetworkannouncements",
+    "key_partnerships": [
+      "Coinbase (CDP AgentKit action provider)",
+      "PancakeSwap (price prediction games)",
+      "Steer Finance (AI-powered vaults)",
+      "Drift Protocol (perps agent vault)",
+      "Alibaba Cloud (strategic integration)",
+      "TRON Network (cross-chain forecasts)"
+    ]
+  },
+
+  "exchanges": [
+    "Binance",
+    "Coinbase",
+    "Kraken",
+    "OKX",
+    "KuCoin",
+    "Gate.io",
+    "MEXC"
+  ],
+
+  "freedom_score": {
+    "total": 52,
+    "grade": "D",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "Cosmos SDK L1 with CometBFT is a solid foundation. Only 16 validators at mainnet launch — highly concentrated. Workers are permissionless but 288K figure includes testnet/airdrop farmers. Consumer contracts on Arbitrum add cross-chain reach. Off-chain ML execution introduces centralisation vectors without zkML fully deployed."
+      },
+      "governance_decentralisation": {
+        "score": 7,
+        "max": 20,
+        "evidence": "ALLO holders can vote on upgrades, emissions, and grants. But 48.55% of supply is locked to insiders. No evidence of active governance proposals or meaningful voter turnout. Foundation holds significant discretionary control."
+      },
+      "token_distribution_fairness": {
+        "score": 5,
+        "max": 15,
+        "evidence": "Early Backers 31.05% + Core Contributors 17.50% = 48.55% insider allocation. Community Pool only 9.3%. Binance airdrop just 1.5%. Heavy insider concentration despite 3-year vesting."
+      },
+      "censorship_resistance": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Permissionless worker/reputer participation. Topics can be created by anyone. Cosmos SDK inherits reasonable censorship resistance. But 16 validators could coordinate censorship. PWYW model means topics can be economically starved."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Workers retain ML model ownership — no upload of weights required. zkML claims to verify execution without exposing proprietary weights (implementation status unclear). Architecture designed for data sovereignty by default."
+      },
+      "open_source_transparency": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Fully open source, Apache 2.0. 30+ repos, 1,127 commits. SDKs in Go, Python, TypeScript. Whitepaper public. No security audit — significant transparency gap."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total": 47,
+    "grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "ALLO structurally required for inference purchases, topic creation, worker/reputer bonding, staking, governance. PWYW model creates demand-side uncertainty — consumers can set prices to zero. Genuine utility with revenue risk."
+      },
+      "value_accrual": {
+        "score": 10,
+        "max": 20,
+        "evidence": "Fees flow to workers/reputers, not passive holders. No burn or buyback. Staking rewards (~12% APY) are emission-funded, not revenue-funded. Allora Prime up to 50% APY is time-limited and also emission-funded. No independent evidence of meaningful fee revenue."
+      },
+      "supply_dynamics": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Critical: 48.55% of supply cliff unlocks November 2026. First 33% tranche (~160M tokens) nearly doubles ~220M circulating supply. FDV/MCap 3.65x. Only 22% circulating. Disinflationary emissions positive long-term but near-term unlock pressure severe."
+      },
+      "revenue_sustainability": {
+        "score": 3,
+        "max": 25,
+        "evidence": "No independently verified revenue. Not on DeFiLlama or Token Terminal. PWYW allows zero-fee consumption. 692M inferences and 55 topics self-reported, include testnet. DeFi integrations exist but revenue contribution unknown."
+      },
+      "liquidity_access": {
+        "score": 12,
+        "max": 15,
+        "evidence": "Binance, Coinbase, Kraken, OKX, KuCoin, Gate.io, MEXC. $21.8M daily volume on $25.6M market cap — excellent volume/mcap ratio. Tier-1 exchange coverage from day one."
+      }
+    }
+  }
+}
