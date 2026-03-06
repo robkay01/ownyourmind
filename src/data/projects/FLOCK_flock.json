@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "project_id": "flock",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "FLock-io",
+      "github_primary_repo": "FLock",
+      "coingecko_id": "flock-2",
+      "discord_server_id": null,
+      "telegram_username": "flock_io_channel",
+      "x_handle": "flock_io",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No public smart contract audit found.",
+      "DAO governance described but unclear what is deployed on-chain vs aspirational.",
+      "Twitter/Discord exact follower counts not obtained.",
+      "Not listed on DeFiLlama — no independent TVL tracking.",
+      "Core platform smart contracts and logic appear partially closed-source.",
+      "FL Alliance production status unclear — was testnet mid-2025.",
+      "Privacy guarantees beyond federated learning architecture not formally proven.",
+      "Companies House officer names not extracted."
+    ]
+  },
+
+  "identity": {
+    "name": "FLock.io",
+    "ticker": "FLOCK",
+    "category": "AI Training",
+    "subcategory": "Federated Learning / Decentralised AI Training",
+    "tagline": "Train AI together, keep data apart",
+    "one_liner": "Decentralised AI training and validation platform combining federated learning with blockchain, enabling collaborative model training without sharing raw data.",
+    "website": "https://www.flock.io",
+    "documentation_url": "https://docs.flock.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/FLock-io",
+    "chain": "Base (Ethereum L2)",
+    "launch_date": "2024-12-31",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Jiahao Sun",
+        "role": "Founder & CEO",
+        "background": "MSc Computer Science, University of Oxford. BSc Maths & CS, University of Liverpool. Honorary Research Fellow, Imperial College London. Former Director of AI at RBC Wealth Management.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 15,
+    "entity_name": "FLOCK.IO LTD",
+    "entity_jurisdiction": "London, UK (Companies House #14039622, incorporated April 2022)",
+    "notable_backers": [
+      "Lightspeed Faction",
+      "Tagus Capital",
+      "Digital Currency Group (DCG)",
+      "Volt Capital",
+      "OKX Ventures",
+      "Animoca Brands"
+    ],
+    "funding_raised": {
+      "total_usd": 9000000,
+      "rounds": [
+        {
+          "round_type": "pre-seed",
+          "amount_usd": 6000000,
+          "date": "2024-03-01",
+          "lead_investor": "Lightspeed Faction, Tagus Capital"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 3000000,
+          "date": "2024-12-01",
+          "lead_investor": "Animoca Brands"
+        }
+      ]
+    },
+    "key_team": [
+      {
+        "name": "Zehua Cheng",
+        "role": "Chief AI Scientist",
+        "background": "DPhil candidate, University of Oxford"
+      },
+      {
+        "name": "Dr. Zhipeng Wang",
+        "role": "Lead Blockchain Researcher",
+        "background": "Leading Ethereum Foundation-funded research"
+      }
+    ]
+  },
+
+  "technical": {
+    "architecture_summary": "Three-layer decentralised AI training system: (1) AI Arena — decentralised training on Base with training nodes, validators, and delegators. (2) FL Alliance — federated learning layer for privacy-preserving fine-tuning (testnet). (3) Moonbase/API Platform — model deployment and monetisation (launched Sept 2025). Uses FLoRA (LoRA-based efficient fine-tuning). First empirical 70B LLM fine-tuning in decentralised multi-domain setting.",
+    "consensus_mechanism": "N/A — uses Base (Ethereum L2) for settlement. Training validation via peer review and comparative scoring.",
+    "what_is_onchain": "Staking, rewards, slashing, gmFLOCK locks, training task management (Base smart contracts).",
+    "what_is_offchain": "Model training, gradient computation, federated learning, model inference, API serving.",
+    "key_dependencies": [
+      "Base (Ethereum L2)",
+      "Ethereum"
+    ],
+    "github_metrics": {
+      "total_repos": 34,
+      "primary_repo": "FLock",
+      "stars": 36,
+      "forks": 11,
+      "license": "GPL-3.0",
+      "last_commit": "2026-03-05",
+      "notes": "Main FLock repo is essentially empty (README + LICENSE). Development in peripheral repos: testnet-training-node-quickstart (55 stars), llm-loss-validator (44 stars)."
+    },
+    "audits": [],
+    "academic_credentials": [
+      "NeurIPS 2022 Best Paper Runner-up",
+      "NeurIPS 2023 Best Technical Demo",
+      "IEEE GBC 2025 Best Application Award",
+      "Ethereum Foundation Academic Grant (2024)",
+      "CB Insights AI 100 (2025)"
+    ]
+  },
+
+  "tokenomics": {
+    "token_name": "FLOCK",
+    "token_standard": "ERC-20 (Base)",
+    "contract_address": "0x5ab3d4c385b400f3abb49e80de2faf6a88a7b691",
+    "max_supply": 1000000000,
+    "circulating_supply": 315000000,
+    "circulating_percent": 31.5,
+    "fdv_usd": 58200000,
+    "market_cap_usd": 18400000,
+    "fdv_mcap_ratio": 3.16,
+    "allocation": {
+      "community_incentives": { "percent": 47, "vesting": "Minted over 60 months with 1% monthly decay" },
+      "team_shareholders": { "percent": 22.5, "vesting": "1-year cliff + 2-year linear" },
+      "treasury_ecosystem": { "percent": 18, "vesting": "Controlled release" },
+      "community_airdrop": { "percent": 12.5, "vesting": "50M FLOCK initial airdrop to testnet participants" }
+    },
+    "insider_allocation_percent": 22.5,
+    "vesting_mostly_complete": false,
+    "token_utility": [
+      "Staking to participate as trainer, validator, or delegator",
+      "gmFLOCK lock-up mechanism (up to 365 days)",
+      "Governance voting",
+      "Slashing for malicious behaviour",
+      "Future: task creation fees"
+    ],
+    "burn_mechanism": "None documented.",
+    "staking_apy": "Variable — gmFLOCK mechanism, 25% of circulating voluntarily locked (avg 265 days)",
+    "emission_model": "1B fixed supply. Community tokens minted over 60 months with 1% monthly decay. Team/investor 1-year cliff + 2-year linear. ~68.5% still locked."
+  },
+
+  "market_data": {
+    "price_usd": 0.058,
+    "ath_usd": 0.667,
+    "ath_date": "2025-09-09",
+    "daily_volume_usd": 1600000,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": 262,
+    "revenue_annual_usd": null,
+    "metrics_source": "FLock 2025 Earnings Report",
+    "metrics_date": "2025-10-31",
+    "usage_notes": "16 training tasks completed. 9,062 training submissions. 784,137 validation submissions. 196 training nodes (incl. 6 top-50 Kagglers). 262 validators. 1,416 delegators. 55,928 token holders. 11.9M FLOCK (~$2.7M) protocol fee revenue in first 10 months."
+  },
+
+  "community": {
+    "telegram_members": 200000,
+    "x_followers": null,
+    "discord_members": null,
+    "twitter_handle": "@flock_io"
+  },
+
+  "exchanges": [
+    "Gate.io",
+    "Bybit",
+    "KuCoin",
+    "MEXC",
+    "Bitget",
+    "CoinEx"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run a training node to submit AI models to training tasks. Stake FLOCK via gmFLOCK mechanism. Top-50 Kagglers among current nodes.",
+        "technical_skill_required": "advanced",
+        "estimated_returns": "FLOCK rewards for successful submissions",
+        "barriers_to_entry": ["ML expertise required", "FLOCK staking required"]
+      },
+      {
+        "type": "staking",
+        "description": "Stake FLOCK as a validator (evaluate training submissions) or delegator (stake to nodes/validators). Lock via gmFLOCK for up to 365 days.",
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "FLOCK rewards from protocol fees",
+        "barriers_to_entry": ["FLOCK tokens required"]
+      },
+      {
+        "type": "building",
+        "description": "Deploy trained models via the API Platform (Moonbase). Revenue sharing for model contributors. Elite Trainer Programme offers 50% revenue share.",
+        "technical_skill_required": "intermediate",
+        "barriers_to_entry": ["ML model development skills"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 55,
+    "max_possible": 100,
+    "freedom_grade": "D",
+    "freedom_summary": "FLock.io has strong academic foundations (NeurIPS, Ethereum Foundation grant) and a federated learning architecture inherently designed for data privacy. However, task creation is centralised, core platform code is partially closed-source, governance is more described than demonstrated, and FL Alliance (the key privacy layer) is not yet in production.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 11,
+        "max": 20,
+        "evidence": "196 training nodes, 262 validators — genuine multi-party training. However, task creation remains centralised to the FLock team. FL Alliance (federated learning layer) still in testnet. Smart contracts on Base inherit Ethereum security."
+      },
+      "governance_decentralisation": {
+        "score": 9,
+        "max": 20,
+        "evidence": "DAO governance described in docs with weighted/quadratic voting. In practice, team controls task creation, protocol upgrades, and treasury. Decentralisation plan was due Q2 2025 — no evidence it was published. Governance more described than demonstrated."
+      },
+      "token_distribution_fairness": {
+        "score": 10,
+        "max": 15,
+        "evidence": "66.7% community vs 33.3% team/investors — good ratio. 1-year cliff + 2-year linear vest for team. Community tokens minted over 60 months with decay. 5% airdrop to testnet participants. ~31.5% circulating after 14 months — moderate unlock pace."
+      },
+      "censorship_resistance": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Federated learning design means data never leaves participants' devices — strong privacy architecture. Base L2 contracts are immutable. However, task creation is centralised and API Platform is team-operated — single points of control."
+      },
+      "data_sovereignty": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Core value proposition: data stays with owners, only model updates shared. FL Alliance designed for privacy-preserving training. Healthcare demo showed cross-continental collaboration without data sharing. FL Alliance still in testnet — full vision not delivered yet."
+      },
+      "open_source_transparency": {
+        "score": 7,
+        "max": 15,
+        "evidence": "34 GitHub repos, some actively maintained. Training node quickstart and validator code are open source. Main FLock repo is essentially empty. Core platform code and smart contracts not fully public. Academic papers peer-reviewed (NeurIPS, IEEE) add credibility."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 58,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "FLOCK required for staking as trainer, validator, or delegator. gmFLOCK mechanism adds lock-up incentive (up to 365 days). Governance voting requires staking. Slashing for malicious behaviour — genuine skin-in-the-game. Task creation will require tokens (planned). No burn mechanism."
+      },
+      "value_accrual": {
+        "score": 13,
+        "max": 20,
+        "evidence": "Protocol generated 11.9M FLOCK ($2.7M) in fee revenue in first 10 months — real revenue. API Platform has revenue sharing. Elite Trainer Programme offers 50% revenue share. Unclear how fees flow to token holders vs protocol treasury. No explicit buyback or burn."
+      },
+      "supply_dynamics": {
+        "score": 14,
+        "max": 20,
+        "evidence": "1B fixed supply. Community tokens minted over 60 months with 1% monthly decay. 25% of circulating voluntarily locked via gmFLOCK (avg 265 days). Team/investor 1-year cliff + 2-year vest. 68.5% still locked — significant future dilution pressure."
+      },
+      "revenue_sustainability": {
+        "score": 9,
+        "max": 25,
+        "evidence": "$2.7M protocol fees in 10 months — promising but only 16 training tasks. Task creation still centralised. Partnerships (Animoca, Qwen) at MoU stage. API Platform launched Sept 2025 — too early to assess. Revenue depends heavily on team-created tasks."
+      },
+      "liquidity_access": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Gate.io, Bybit, KuCoin, MEXC, Bitget, CoinEx — decent CEX coverage. DEX on Uniswap Base and Aerodrome. $1.6M daily volume. $18M market cap. No Binance or Coinbase. Base chain only."
+      }
+    }
+  }
+}
