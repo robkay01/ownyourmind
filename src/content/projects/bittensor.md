@@ -26,7 +26,7 @@ chain: "Bittensor L1"
 supplyType: "capped"
 maxSupply: "21M"
 verdict: "Largest DeAI network with real workloads. PoA block production and governance far more centralised than marketed. No security audit."
-oymHolds: true
+oymHolds: false
 ---
 
 ## What it does

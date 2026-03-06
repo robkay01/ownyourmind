@@ -26,7 +26,7 @@ chain: "Solana"
 supplyType: "capped"
 maxSupply: "644M (536.9M original + 107.4M BME inflation pool, governance-approved)"
 verdict: "Real rendering demand with Hollywood customers. But permissioned network, proprietary core, and OTOY controls everything."
-oymHolds: false
+oymHolds: true
 ---
 
 ## What it does

@@ -26,7 +26,7 @@ chain: "Cosmos"
 supplyType: "uncapped"
 maxSupply: "388.5M genesis cap (inflationary via staking rewards, BME burn mechanism not yet active)"
 verdict: "The most credible decentralised cloud marketplace operating today. Real revenue, real customers, but chain migration looming."
-oymHolds: false
+oymHolds: true
 ---
 
 ## What it does

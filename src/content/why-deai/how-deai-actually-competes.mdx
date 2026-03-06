@@ -1,0 +1,267 @@
+---
+title: "How DeAI Actually Competes"
+description: "DeAI won't beat OpenAI at frontier models. The edge is coordination, specialisation, and economics. Not ideology — game theory and market structure."
+publishDate: 2026-03-07
+draft: false
+---
+
+import PullQuote from '../../components/PullQuote.astro';
+
+DeAI is not going to out-frontier the frontier labs. That's not the play.
+
+OpenAI, Anthropic, and Google have more GPUs, more researchers, and more money than the entire decentralised AI ecosystem combined. If DeAI tries to beat them at training GPT-6, it loses. That game is rigged.
+
+The real competitive edge is different. It's cost, coordination, neutrality, and infrastructure. Not ideological purity. Actual market structure advantages that centralised players cannot replicate without ceasing to be centralised.
+
+This is where DeAI can actually win.
+
+## The cost inflection point
+
+Something shifted in late 2024. Open-source models stopped being the budget option that admitted they were worse. They became the budget option that admitted they were almost as good.
+
+<PullQuote>
+DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of the cost. That's not a gap. That's a canyon.
+</PullQuote>
+
+Let me be specific about the numbers because the deltas are absurd. DeepSeek R1 costs $0.55 per million input tokens and $2.19 per million output tokens. OpenAI o1 costs $15 and $60 respectively. That's a 27x difference on input and a 27x difference on output. For a million tokens in and a million tokens out, you're looking at roughly $2.74 with DeepSeek versus $75 with OpenAI o1. [Data Studios comparison](https://www.datastudios.org/post/chatgpt-vs-claude-vs-deepseek-full-report-and-comparison-on-features-capabilities-pricing-and-mo)
+
+The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually tied" with OpenAI o3 on technical problem-solving. [SoftwareSeni analysis](https://www.softwareseni.com/ai-model-comparison-2025-deepseek-vs-gpt-4-vs-claude-vs-llama-for-enterprise-use-cases/) confirms it delivers roughly 90% of Claude/GPT-4 capability. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
+
+| Model | Input $/1M | Output $/1M | Total (1M in + 1M out) |
+|-------|------------|-------------|------------------------|
+| DeepSeek R1 | $0.55 | $2.19 | ~$2.74 |
+| DeepSeek V3 | $0.14 | $0.28 | $0.42 |
+| OpenAI o1 | $15.00 | $60.00 | $75.00 |
+| Claude Opus 4 | ~$15.00 | ~$75.00 | ~$90.00 |
+
+Qwen3 Coder hits 69.6% on SWE-Bench Verified. That beats GPT-4 on key coding benchmarks. [Index.dev review](https://www.index.dev/blog/qwen-ai-coding-review) The licence is MIT. Cost: $0.35/$0.39 per million tokens. You can fine-tune it. You can host it. You can build products on top of it without asking permission or paying API taxes.
+
+Llama 4 Scout offers a 10 million token context window. Ten million. That's not a typo. [Meta AI Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) Same workloads that cost $147 with GPT-4.5 run at roughly $0.42 with Llama 4 Scout. [Bind.co comparison](https://blog.getbind.co/llama-4-comparison-with-claude-3-7-sonnet-gpt-4-5-and-gemini-2-5/) That's a 350x cost difference.
+
+This matters because it breaks the centralised AI business model. OpenAI and Anthropic charge premiums for frontier capability. If frontier-adjacent models cost 5-20% of frontier models and deliver 80-95% of the performance, the premium upstream compresses. You don't need GPT-5 for most tasks. You need something good enough, cheap enough, and controllable.
+
+### The self-hosting option
+
+When DeepSeek V3 costs $0.14 per million tokens through their API, you might wonder why anyone would bother self-hosting. The answer is control, not cost.
+
+Self-hosting means no rate limits. No usage tracking. No terms of service that change with a policy update. No possibility that the provider decides your use case violates their interpretation of safety guidelines.
+
+[Akash Network](/projects/akash/) rents H100s at roughly $1.50-2 per GPU-hour. At 70% utilisation on inference workloads, that translates to competitive per-token costs at scale. The utilisation matters more than the hardware cost. Most centralised providers run at 30-50% utilisation and price accordingly. You can price more efficiently if you control your own utilisation.
+
+The self-hosting economics work at scale. Below certain thresholds, API providers win on convenience. Above them, the maths tips toward ownership. The threshold is dropping as open-source models improve.
+
+### Small models, domain specialisation, and the decentralised advantage
+
+Here's something the frontier narrative obscures. Most AI workloads don't need general intelligence. They need specific competence.
+
+A model trained on medical literature doesn't need to write poetry. A model optimised for legal contract review doesn't need to generate images. A model built for code review doesn't need to understand interpersonal dynamics. Specialisation beats generalisation in narrow domains.
+
+This is where decentralised training and federated learning become genuinely interesting. FLock.io's Web3 Agent Model beats GPT-4o, Gemini Flash 2.0, and DeepSeek-V3 on Web3-specific tasks. [Messari Q1 2025 Report](https://messari.io/report/state-of-flock-io-q1-2025/) Not because it's a better general model, but because it's trained on Web3 data, for Web3 tasks, in a Web3 context.
+
+<PullQuote>
+The future isn't one model to rule them all. It's thousands of specialised models, each excellent at one thing, coordinated through markets and protocols.
+</PullQuote>
+
+Centralised labs have strong incentives to build general models. The economics of frontier training (hundreds of millions of dollars per run) demand broad applicability to justify the investment. You can't spend $500 million training a model that only does one thing well.
+
+But decentralised networks don't face that constraint. A specialised model trained on 1,000 GPUs distributed across [Bittensor](/projects/bittensor/) subnets costs a fraction of a frontier run. The training can be continuous, not discrete. The model can be domain-specific without apologising for not being general.
+
+Bittensor's subnet architecture creates markets for specialised intelligence. One subnet handles text generation. Another handles image generation. Others handle translation, code review, data scraping, embeddings, financial analysis, medical diagnosis. Each subnet optimises for its specific task. The best miners earn the most TAO. Evolution, not engineering.
+
+This is the real DeAI opportunity: not beating GPT-5 at being GPT-5, but building an ecosystem of specialised models that collectively exceed what any single generalist can do. Generalists will always exist for broad tasks. But for everything else, specialisation wins.
+
+## Coordination layers: where DeAI gets interesting
+
+The cost advantage is real but not uniquely DeAI. Anyone can run DeepSeek on AWS. The structural DeAI play is coordination: mechanisms that align incentives across distributed participants to produce AI capability.
+
+### Bittensor: the coordination experiment that actually shipped
+
+[Bittensor](/projects/bittensor/) is the largest decentralised AI network by market cap, and it's one of the few that has real workloads running through it.
+
+128 active subnets. 8,000+ GPU nodes. $100M+ daily volume. Chutes, a subnet handling serverless inference, processes billions of tokens daily. These are not hypothetical numbers. [LinkedIn Analysis](https://www.linkedin.com/pulse/detailed-bittensor-subnets-analysis-october-2025-hilton-shomron-nc0ge/)
+
+The architecture works like this: subnets are specialised markets for specific AI tasks. Miners compete to produce the best outputs. Validators score them. The best miners earn the most TAO. Underperformers get pushed out. Darwinian selection applied to model inference and training.
+
+Dynamic TAO, launched February 2025, changed how emissions flow. Each subnet now has its own alpha token traded against TAO in an on-chain AMM. Stakers vote with their TAO by depositing into subnets they believe produce value. Emission allocation follows market signals, not validator votes. The first halving in December 2025 cut daily emissions from roughly 7,200 TAO to roughly 3,600 TAO. [Blockworks Research](https://app.blockworksresearch.com/research/bittensor-positioning-for-the-post-halving-repricing)
+
+<PullQuote>
+Bittensor creates incentive alignment for distributed intelligence production. The question is whether that production beats centralised alternatives on quality, not just cost.
+</PullQuote>
+
+The honest assessment: Bittensor's decentralisation is weaker than marketed. The Opentensor Foundation validates all blocks through Proof of Authority. They halted the entire network in July 2024 and intervened in subnet 28. No timeline for Proof of Stake transition exists. The top 1% of wallets control roughly 90% of stake. Academic analysis shows stake weight (0.50-0.80 correlation) drives rewards more than AI output quality (0.10-0.30 correlation). [My Bittensor review](/projects/bittensor/) details the centralisation concerns.
+
+But the subnet model is genuinely innovative. Anyone can spin up a subnet for any AI task. If it attracts miners and validators, it gets emissions. If it produces useful output, it grows. The market decides what intelligence gets produced, not a central lab.
+
+### FLock.io: technical traction, not just tokens
+
+FLock.io is a different coordination play. It focuses on federated learning, training models across distributed datasets without centralising the data. Named partners include CIMG Inc. (Nasdaq-listed, using FLock for AI health products) and BGA, a global nonprofit running "AI for Good" initiatives. They made the CB Insights AI 100 list for 2025. [CoinMarketCap](https://coinmarketcap.com/cmc-ai/flock-io/what-is/)
+
+This is notable because most DeAI projects claim technical parity but cannot benchmark it. FLock published results.
+
+The Bittensor integration (FLock OFF subnet) shows coordination layers can compose. Federated small-language-model training on a decentralised network. Not a pitch deck, actual running code.
+
+Federated learning matters for privacy-sensitive domains. Medical data cannot leave hospitals. Financial data cannot cross jurisdictions. Personal data should not be centralised. FLock's architecture trains models where the data lives, aggregating only model updates. The data never moves. The model improves anyway.
+
+### Sentient: the $85 million question mark
+
+Sentient raised $85 million in seed funding in July 2024. Peter Thiel's Founders Fund led. Pantera participated. Franklin Templeton made a strategic investment in July 2025. [CoinDesk](https://www.coindesk.com/business/2024/07/02/peter-thiels-founders-fund-leads-85m-seed-investment-into-open-source-ai-platform-sentient)
+
+They launched "The GRID" in August 2025, described as an open-source AGI network. The SENT token listed on Binance. Over 100 AI models/agents on the network. [MEXC News](https://www.mexc.co/en-PH/news/532298)
+
+But usage metrics are not publicly disclosed. Mainnet is described as "pending" in most documentation. This is early-stage. The funding is real. The team is serious. Whether the coordination mechanism produces better AI than centralised alternatives remains an open question. More "pitch deck plus testnet" than production system.
+
+I am sceptical of any project that raises $85 million before shipping. The history of crypto is littered with well-funded projects that never found product-market fit. Sentient might be different. The investors are credible. But until mainnet launches with measurable usage, it belongs in the "wait and see" category.
+
+| Project | Status | Real Traction? | Key Signal |
+|---------|--------|----------------|------------|
+| Bittensor | Production | Yes | 128 subnets, $100M+ daily volume, Chutes revenue |
+| Sentient | Testnet | Early | $85M funding, Grid launched Aug 2025, Binance listing |
+| FLock.io | Production | Yes | Web3 Agent Model benchmarks, CB Insights AI 100, Bittensor subnet |
+
+## The geopolitical angle: neutrality as a feature
+
+This is where DeAI stops being about technology and starts being about geopolitics.
+
+The US sees AI as an economic engine and national security pillar. China sees AI as geopolitical infrastructure, centralised, sovereign, aligned with Belt and Road diplomacy. [Atlantic Council](https://www.atlanticcouncil.org/blogs/new-atlanticist/reading-between-the-lines-of-the-dueling-us-and-chinese-ai-action-plans/)
+
+Neither position is wrong. AI will define economic competitiveness, military capability, and information sovereignty for the next century. The US and China know this. They are building AI stacks that they control, that advance their interests, that can be weaponised if necessary.
+
+<PullQuote>
+Presented with a binary choice between US and Chinese technology, middle powers must balance realism and ambition in maintaining sovereignty over their technology.
+</PullQuote>
+
+Middle powers (the EU, Southeast Asia, Latin America, the Gulf states) face a binary choice. US tech or Chinese tech. Neither is neutral. Both come with strings attached. Data residency requirements. Export controls. Surveillance expectations. Influence. The Chatham House analysis is blunt: [Chatham House](https://www.chathamhouse.org/2025/05/us-china-ai-race-forcing-countries-reconsider-who-owns-their-digital-infrastructure)
+
+This creates demand for neutral infrastructure. Not US-controlled. Not Chinese-controlled. Decentralised.
+
+The value proposition is straightforward. Nodes distributed across multiple jurisdictions. No single government can shut it down. Open-source transparency means no hidden backdoors. Permissionless access means no export controls can block it. The network exists everywhere and nowhere.
+
+[Akash](/projects/akash/) has 69 active providers across multiple countries. [Bittensor](/projects/bittensor/) has 8,000+ GPU nodes globally. [Render](/projects/render/) has 15,670 node operators. These are not theoretical distributions. They exist now.
+
+The geopolitics matter because AI infrastructure is becoming sovereign infrastructure. Countries want control over their data, their compute, their models. The EU's AI sovereignty initiatives, India's push for domestic AI capability, Saudi Arabia's investment in national AI infrastructure: these are not optional programmes. They are strategic priorities.
+
+Centralised US providers cannot offer true sovereignty. AWS might have EU regions, but AWS is a US company subject to US law. Centralised Chinese providers cannot offer it either. The CLOUD Act, US export controls, Chinese national security laws: these make true data sovereignty impossible with centralised providers.
+
+DeAI can offer it. A network where compute happens across diverse jurisdictions, where no single entity controls the infrastructure, where the code is open and auditable. That is sovereign infrastructure by design, not by promise.
+
+Is this a large market today? No. Most AI buyers prioritise cost and capability over sovereignty. But sovereign AI is a stated priority for the EU, India, Saudi Arabia, Singapore, and others. The demand is emerging. Whether DeAI can capture it depends on whether the networks become reliable enough for government adoption.
+
+The US-China AI race is also making decentralised alternatives valuable for a different reason: resilience. If US-China tensions escalate to technology decoupling, centralised providers in either jurisdiction become unreliable for users in the other. A truly decentralised network, with nodes across both jurisdictions and neutral third parties, provides continuity that neither US nor Chinese centralised providers can guarantee.
+
+## On-chain AI standards: the infrastructure layer
+
+Two standards launched in late 2024 and early 2025 that matter more than their current usage suggests: ERC-8004 and x402.
+
+### ERC-8004: agent identity on-chain
+
+ERC-8004 establishes on-chain registries for AI agents. Three registries: Identity, Reputation, and Validation. Deployed January 29, 2026 on 18+ EVM-compatible chains. [Chainstack](https://chainstack.com/erc-8004-ai-agents-on-chain/)
+
+This solves a real problem. Autonomous AI agents need persistent identity. They need reputation that cannot be forged. They need validation that other agents can verify without human intermediaries. ERC-8004 provides this infrastructure.
+
+An agent registers with its capabilities, pricing, and interaction endpoints. Other agents can discover it, verify its reputation, and transact with it. The registry is immutable and transparent. Avalanche announced ERC-8004 live on their platform in February 2026. The Graph is maintaining dedicated subgraphs across 8 blockchains.
+
+The criticism is fragmentation. 18+ chains means 18+ registries. Network effects require consolidation on a single registry or cross-chain discoverability. 49% alternative facilitator usage suggests concentration is still an issue. [SmartContracts Tools](https://www.smartcontracts.tools/blog/erc8004-x402-infrastructure-for-autonomous-ai-agents/) But the standard exists. The infrastructure is live.
+
+### x402: micropayments for AI-to-AI transactions
+
+x402 turns HTTP 402 status codes ("Payment Required") into functional micropayment rails. AI agents can pay for API calls and services with on-chain stablecoins. Pay-per-request infrastructure for machine-to-machine commerce. [Chainstack x402](https://chainstack.com/x402-protocol-for-ai-agents/)
+
+The use case is specific but important. An AI agent needs to query a database, run an inference, or access a service. Instead of a subscription or pre-paid API key, it sends a micropayment with the request. The service processes it and responds. No human involved. No account management. No billing department.
+
+Austin Griffith on the Bankless podcast gave a concrete example: "If I put my node up as a service and I put it on X402 and say, I'll help you do your taxes by giving you the P&L of every one of your transactions because I have a full node here. Then you can go to 8004 and discover me..." The standards compose. Agent discovery via ERC-8004. Payment via x402. Autonomous commerce.
+
+Solana is dominant for production deployments, as speed and low cost matter for micropayments. The Graph integrated x402 for Subgraph queries. Implementations exist on Base, MultiversX, and Sei.
+
+### Why these matter
+
+Neither standard has massive adoption today. But they are building blocks for an autonomous agent economy. If AI agents are going to transact without human intermediaries, they need identity, reputation, and payment infrastructure. ERC-8004 and x402 provide it.
+
+The bet is that agent-to-agent commerce becomes meaningful. If that happens, these standards become the rails. If it doesn't, they remain infrastructure in search of users. But compared to DeAI projects building speculative token economies without utility, standards work is infrastructure investment.
+
+| Standard | Deployed | Chains | Purpose |
+|----------|----------|--------|---------|
+| ERC-8004 | Jan 29, 2026 | 18+ EVM | Agent identity, reputation, validation registries |
+| x402 | Active | Solana, Base, MultiversX, Sei | Micropayments for API calls via HTTP 402 |
+
+## Cost benchmarks: decentralised compute at scale
+
+The cost advantage for decentralised compute is real but nuanced.
+
+The headline claim: "You can get industry-standard GPUs for less than 50% of AWS/Azure costs." [Capracap Substack](https://capracap.substack.com/p/render-vs-akash-a-deeper-look-into) This is directionally correct but hides important tradeoffs.
+
+| Provider | Approx Cost/GPU-Hour (A100 80GB) | Notes |
+|----------|-----------------------------------|-------|
+| AWS On-Demand | ~$3-4 | Reference baseline with SLAs |
+| Akash | ~$1.50-2 | Variable, spot-market, fewer guarantees |
+| Render | ~$1-2 | Rendering-focused, AI pivot ongoing |
+| io.net | ~$0.50-1.50 | But verify actual availability |
+
+[Akash](/projects/akash/) is the most credible open-source compute marketplace. 69 active providers, 700-1,000 GPUs, roughly 60% utilisation. $3.15 million annual revenue, up 128% year-over-year. Real customers: [Venice](/projects/venice/), ElizaOS, Morpheus, Gensyn. Permissionless provider onboarding. Fully open source. Freedom Score: 66/100, among the highest for DePIN GPU networks.
+
+<PullQuote>
+Akash is the most credible decentralised GPU marketplace operating today. The question is scale, not legitimacy.
+</PullQuote>
+
+The tradeoffs are real. 69 providers is not a cloud marketplace. It's a pilot programme. AWS has millions of GPUs. Akash has hundreds. You don't get managed services. You don't get SLAs. You get raw compute at a discount, and you accept that the provider might disappear. Provider count actually declined through 2025, despite usage growth.
+
+[io.net](/projects/io-net/) markets 327,000 "registered" GPUs. The daily average of verified, active GPUs in Q1 2025 was 6,720. That's 2% utilisation of the registered base. Freedom Score: 38/100, F grade. Closed-source core. No governance. Founder departed under allegations. Revenue is growing ($5.7M Q1 2025, 82.6% QoQ growth), but the metrics are inflated and the decentralisation claims are weak. [My io.net review](/projects/io-net/) details the concerns.
+
+[Render](/projects/render/) has genuine product-market fit for visual rendering. 15,670 node operators. 69 million frames rendered cumulatively. Freedom Score: 32/100, F grade. Permissioned network, closed-source. Late to the AI compute pivot. Real customers like Beeple and Apple Vision Pro. But the tokenomics work better than most. Returns Score: 70/100, B grade. [Render analysis](/projects/render/)
+
+The honest assessment: decentralised compute is cheaper but smaller. You are trading reliability and scale for cost and sovereignty. That tradeoff makes sense for some workloads and not for others. If you need guaranteed uptime for production inference, centralised providers still win. If you need cheap batch processing and can tolerate interruptions, DePIN networks work.
+
+The DePIN GPU landscape in 2026: io.net leads on claimed capacity (327,000 registered GPUs, 6,720 active), Render leads on rendering volume and mainstream customers, Akash leads on decentralisation and open-source credibility. Aethir (not reviewed here) reports $166.9M ARR with 430K GPUs. The market is fragmented and the metrics are noisy. But the cost advantage is real for users who can tolerate the tradeoffs.
+
+## The quadrant model: where projects actually sit
+
+This is the framework I use at OwnYourMind.ai. Two axes: Freedom Score (decentralisation, censorship resistance, sovereignty) and Returns Score (token utility, value accrual, supply dynamics).
+
+```
+                HIGH RETURNS
+                     |
+       C             |           A
+  (Render, Venice)   |    (Ideal: doesn't exist yet)
+                     |
+  LOW FREEDOM -------+-------- HIGH FREEDOM
+                     |
+       D             |           B
+  (io.net, Grass)    |    (Morpheus, Akash, Bittensor)
+                     |
+                LOW RETURNS
+```
+
+**Quadrant A (High Freedom, High Returns)** is the ideal. Nothing occupies it yet. Projects either sacrifice decentralisation for efficiency or sacrifice token economics for sovereignty.
+
+**Quadrant B (High Freedom, Low Returns)** is where the sovereignty plays live. [Akash](/projects/akash/) at 66/66. [Bittensor](/projects/bittensor/) at 56/63. [Morpheus](/projects/morpheus/). These projects prioritise decentralisation. Their token economics are works in progress. Returns come from network growth, not revenue distribution.
+
+**Quadrant C (Low Freedom, High Returns)** is efficient but centralised. [Render](/projects/render/) at 32/70. [Venice](/projects/venice/) at 57/64. Real products, real revenue, token buybacks. But centralised operation, closed-source components, teams that can make unilateral decisions.
+
+**Quadrant D (Low Freedom, Low Returns)** is the danger zone. [io.net](/projects/io-net/) at 38/49. [Grass](/projects/grass/). Centralised, closed-source, weak tokenomics, inflated metrics. Avoid.
+
+The quadrant model is useful because it forces honesty. A project cannot be all things. Tradeoffs are inherent. The question is whether the tradeoff is intentional and acknowledged, or obscured by marketing.
+
+## Where DeAI actually competes
+
+DeAI competes on three dimensions that centralised players cannot match without ceasing to be centralised.
+
+**Cost commodity traps.** Open-source models at 5-20% of frontier cost, running on decentralised compute at 50% of cloud cost. Centralised providers can lower prices, but they have revenue expectations and margin requirements. Decentralised providers are selling spare capacity. The cost floor is lower.
+
+**Coordination mechanisms.** Bittensor's subnet model, FLock's federated learning, the emerging agent standards. These are experiments in aligning distributed participants toward AI production. They might fail. They also might produce capabilities that centralised labs cannot replicate because they lack the coordination mechanism, not the technology.
+
+**Sovereignty and neutrality.** The geopolitical dimension. Governments and enterprises that want AI infrastructure they control, that no foreign power can influence or shut down. Centralised US and Chinese providers cannot offer true sovereignty. DeAI can.
+
+<PullQuote>
+DeAI's edge is not better AI. It's better economics, coordination, and sovereignty. The technology is the means, not the differentiator.
+</PullQuote>
+
+What DeAI does not compete on is frontier capability. GPT-5, Claude 5, Gemini 2.5: these will be better than anything the decentralised ecosystem produces for the foreseeable future. The frontier labs have the GPUs, the researchers, and the data. That game is not winnable.
+
+But most AI workloads don't need frontier models. They need good enough, cheap enough, and controllable. That's where DeAI plays. And that's where the economics are shifting toward open-source and decentralised infrastructure.
+
+The real question is not whether DeAI can beat OpenAI. It's whether DeAI can capture the commodity layer of the AI stack while frontier labs fight for the premium. The commodity layer is larger. The margin is lower. The sovereignty premium is real.
+
+That's the actual competitive position. Not revolution, but adjacent competition on the dimensions that centralised players structurally cannot optimise.
+
+---
+
+*The dual-score framework (Freedom Score + Returns Score) is my attempt to bring analytical rigour to a space full of marketing claims. If you want the methodology, it's at [Freedom Score Methodology](/resources/freedom-score-methodology/) and [Returns Score Methodology](/resources/returns-score-methodology/). If you want project-by-project analysis, see [Projects](/projects/). I hold AKT, VVV, MOR, and RENDER. I do not hold TAO or IO. Position disclosure matters.*
