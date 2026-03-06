@@ -1,0 +1,648 @@
+{
+  "meta": {
+    "project_id": "origintrail",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "OriginTrail",
+      "github_primary_repo": "dkg-engine",
+      "coingecko_id": "origintrail",
+      "discord_server_id": null,
+      "telegram_username": "origintrail",
+      "x_handle": "origin_trail",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "Discord and Telegram exact member counts not confirmed — need direct platform access.",
+      "DKG V8 smart contract audit not found from a major auditing firm — only historical 2018 audits and bridge audit.",
+      "Protocol revenue not publicly tracked — no dashboard for publishing fees collected/distributed to nodes.",
+      "Staking APY/rewards not fixed — utility-based from publishing fees, no fixed rate published.",
+      "Current active DKG Core Node count not found via web research.",
+      "DeFiLlama does not list OriginTrail — not a DeFi protocol, so no standardised TVL/revenue comparison.",
+      "HuggingFace — no models or datasets found.",
+      "ATH price discrepancy across sources ($3.44 to $6.24 for Nov 2021).",
+      "Entity structure complexity — Trace Labs across Hong Kong, UK, Slovenia, Serbia."
+    ]
+  },
+
+  "identity": {
+    "name": "OriginTrail",
+    "ticker": "TRAC",
+    "category": "Knowledge & Infrastructure",
+    "subcategory": "Decentralised Knowledge Graph",
+    "tagline": "The Decentralised Knowledge Graph for trusted AI",
+    "one_liner": "Decentralised Knowledge Graph protocol turning data into verifiable Knowledge Assets for AI, supply chain, and enterprise use.",
+    "website": "https://origintrail.io",
+    "documentation_url": "https://docs.origintrail.io",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/OriginTrail",
+    "chain": "NeuroWeb (Polkadot parachain), Base, Gnosis, Ethereum (ERC-20)",
+    "launch_date": "2018-01-25",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Tomaz Levak",
+        "role": "CEO & Co-Founder",
+        "background": "Project management background. Leading OriginTrail since 2017.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Ziga Drev",
+        "role": "COO & Co-Founder",
+        "background": "Operations. Co-founding since 2017.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      },
+      {
+        "name": "Branimir Rakic",
+        "role": "CTO & Co-Founder",
+        "background": "MS Electrical/Computer Engineering, University of Belgrade. Leads protocol development.",
+        "linkedin_or_x": null,
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 25,
+    "entity_name": "Trace Labs Ltd",
+    "entity_jurisdiction": "Hong Kong (registered), Slovenia (operational hub)",
+    "notable_backers": [
+      "Bits x Bites",
+      "H-FARM",
+      "Alpha Sigma Capital",
+      "Fengshui Capital"
+    ],
+    "funding_raised": {
+      "total_usd": 22500000,
+      "rounds": [
+        {
+          "round_type": "ICO",
+          "amount_usd": 22500000,
+          "date": "2018-01-18",
+          "lead_investor": null,
+          "notes": "Pre-sale $10M at $0.08, crowd sale $12.5M at $0.10. Sold out in ~20 minutes. ETH only."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Decentralised Knowledge Graph (DKG) with off-chain data storage and on-chain hash anchoring. Knowledge Assets are ERC1155Delta standard tokens representing structured data entities. Two node types: DKG Core Nodes (require 50K-5M TRAC stake, provide infrastructure) and DKG Edge Nodes (lightweight, for devices). Random Sampling Proof-of-Knowledge consensus for data integrity. V8 (June 2025) claims 1000x throughput improvement over V6. Supports RDF, SPARQL, JSON-LD, GS1 EPCIS, W3C DIDs.",
+    "consensus_mechanism": "Random Sampling Proof-of-Knowledge for data integrity. NeuroWeb uses Polkadot parachain consensus. ERC-20 on Ethereum for token.",
+    "what_is_onchain": "Knowledge Asset ownership (ERC1155Delta), publishing fee payments, staking, hash anchoring for data integrity verification.",
+    "what_is_offchain": "Knowledge graph data storage, SPARQL queries, data processing, node operations, semantic data validation.",
+    "key_dependencies": [
+      "NeuroWeb (Polkadot parachain)",
+      "Base (Coinbase L2)",
+      "Gnosis Chain",
+      "Ethereum (token)"
+    ],
+    "smart_contract_languages": ["Solidity", "Rust (NeuroWeb)"],
+    "open_source": true,
+    "license": "Various open-source licenses",
+    "github_metrics": {
+      "total_repos": 83,
+      "primary_repo_url": "https://github.com/OriginTrail/dkg-engine",
+      "total_commits": null,
+      "contributors": 10,
+      "last_commit_date": "2026-03-05",
+      "stars": 584,
+      "forks": null,
+      "open_issues": 56
+    },
+    "audits": [
+      {
+        "auditor": "DLT Labs",
+        "date": "2018-01-01",
+        "scope": "Smart contract code audit v0.2",
+        "result_summary": "Code audit of original smart contracts.",
+        "report_url": "https://github.com/OriginTrail/smart-contract-audit-documents"
+      },
+      {
+        "auditor": "Hosho",
+        "date": "2018-01-01",
+        "scope": "Smart contract follow-up audit",
+        "result_summary": "Including pause functionality review.",
+        "report_url": "https://github.com/OriginTrail/smart-contract-audit-documents"
+      },
+      {
+        "auditor": "Quantstamp",
+        "date": null,
+        "scope": "TRAC bridge contract (NeuroWeb-Ethereum)",
+        "result_summary": "Confirmed functional and secure.",
+        "report_url": null
+      }
+    ],
+    "security_incidents": []
+  },
+
+  "tokenomics": {
+    "token_name": "TRAC",
+    "ticker": "TRAC",
+    "token_standard": "ERC-20 (also on NeuroWeb, Base, Gnosis)",
+    "token_type": "utility",
+    "token_utility": [
+      "Publishing Knowledge Assets (fee payment)",
+      "Staking on DKG Core Nodes (50K-5M TRAC)",
+      "Delegated staking to node operators",
+      "Collateral for data integrity guarantees",
+      "Node operation requirement"
+    ],
+    "supply": {
+      "max_supply": 500000000,
+      "total_supply": 500000000,
+      "circulating_supply": 499800000,
+      "circulating_supply_date": "2026-03-06",
+      "circulating_percentage": 99.96
+    },
+    "distribution": {
+      "initial_allocation": [
+        {
+          "category": "Pre-Sale",
+          "percentage": 25.0,
+          "vesting_schedule": "No lock-up",
+          "cliff": "None",
+          "notes": "125M tokens at $0.08"
+        },
+        {
+          "category": "Crowd Sale",
+          "percentage": 25.0,
+          "vesting_schedule": "No lock-up",
+          "cliff": "None",
+          "notes": "125M tokens at $0.10"
+        },
+        {
+          "category": "Development Pool",
+          "percentage": 20.0,
+          "vesting_schedule": "Used over time for ecosystem development",
+          "cliff": "None",
+          "notes": "100M tokens for future development"
+        },
+        {
+          "category": "Founders & Early Contributors",
+          "percentage": 18.0,
+          "vesting_schedule": "Fully vested (completed)",
+          "cliff": "None",
+          "notes": "90M tokens"
+        },
+        {
+          "category": "Liquidity",
+          "percentage": 5.0,
+          "vesting_schedule": "None",
+          "cliff": "None",
+          "notes": "25M tokens"
+        },
+        {
+          "category": "Team & Advisors",
+          "percentage": 5.0,
+          "vesting_schedule": "Fully vested (12.5% every 3 months for team, 6 months for advisors)",
+          "cliff": "None",
+          "notes": "25M tokens — all vesting completed"
+        },
+        {
+          "category": "Token Sale Facilitators",
+          "percentage": 2.0,
+          "vesting_schedule": "None",
+          "cliff": "None",
+          "notes": "10M tokens"
+        }
+      ],
+      "distribution_method": "ICO (pre-sale + crowd sale)"
+    },
+    "emissions": {
+      "model": "fixed",
+      "current_daily_emissions": 0,
+      "current_annual_inflation_rate": 0,
+      "halving_schedule": "N/A — fixed 500M supply, no emissions",
+      "next_major_emission_event": null,
+      "next_event_date": null,
+      "burn_mechanism": "None documented"
+    },
+    "staking": {
+      "staking_available": true,
+      "staking_type": "Core Node staking + delegated staking",
+      "minimum_stake": 50000,
+      "lock_up_period": "28 days unbonding on Gnosis/Base, 5 minutes on NeuroWeb",
+      "current_apy_nominal": null,
+      "real_yield_after_inflation": null,
+      "staking_ratio": null,
+      "staking_risks": [
+        "Rewards are utility-based (from publishing fees), not inflationary — variable returns",
+        "28-day unbonding on Gnosis/Base",
+        "Core Node requires 50K TRAC minimum (~$16K+ at current prices)",
+        "Maximum 5M TRAC per node"
+      ],
+      "slashing_conditions": "Not explicitly documented in research"
+    },
+    "market_data": {
+      "price_usd": 0.35,
+      "market_cap_usd": 175000000,
+      "fully_diluted_valuation_usd": 175000000,
+      "twenty_four_hour_volume_usd": 5000000,
+      "all_time_high_usd": 3.44,
+      "all_time_high_date": "2021-11-02",
+      "all_time_low_usd": null,
+      "all_time_low_date": null,
+      "major_exchanges": [
+        "Coinbase",
+        "Kraken",
+        "KuCoin",
+        "Bitstamp",
+        "Crypto.com",
+        "Bitget",
+        "Gate.io",
+        "HTX"
+      ],
+      "data_snapshot_date": "2026-03-06"
+    },
+    "token_model_classification": "Utility token with fixed supply (500M, non-inflationary). Used for knowledge publishing fees, node staking, and data integrity collateral. Staking rewards come from network usage fees, not inflation — real yield model.",
+    "tokenomics_notes": "Virtually fully circulated (99.96%) with fixed 500M cap — no dilution risk. FDV equals market cap. ICO was 50% of supply with no lock-up — unusual transparency. Staking rewards are utility-based from publishing fees rather than inflationary — one of the few real-yield models in DeAI. Core Node requires 50K TRAC (~$16K+) which creates meaningful token lockup. ICO investors at $0.10 have ~3.5x ROI after 8 years — one of the few positive ICO returns in the space."
+  },
+
+  "participation": {
+    "methods": [
+      {
+        "type": "node_operation",
+        "description": "Run a DKG Core Node to store and serve Knowledge Assets. Requires 50K-5M TRAC stake. Earn publishing fees from knowledge asset creators.",
+        "minimum_hardware": "Server with moderate requirements",
+        "minimum_capital_usd": 16000,
+        "technical_skill_required": "intermediate",
+        "estimated_returns": "Variable — based on publishing fees (utility-based, not inflationary)",
+        "barriers_to_entry": [
+          "50K TRAC minimum stake (~$16K+)",
+          "Technical setup and maintenance",
+          "5M TRAC maximum per node"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.origintrail.io"
+      },
+      {
+        "type": "staking",
+        "description": "Delegate TRAC to Core Node operators. Available on NeuroWeb, Base, and Gnosis. Share in publishing fee rewards.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable — share of node operator's publishing fee rewards",
+        "barriers_to_entry": [
+          "2M TRAC max delegation per node",
+          "28-day unbonding on Gnosis/Base (5 min on NeuroWeb)"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.origintrail.io/dkg-v8-current-version/delegated-staking-v8"
+      },
+      {
+        "type": "building",
+        "description": "Build applications using the DKG — publish Knowledge Assets, query the knowledge graph via SPARQL, integrate with AI systems via ChatDKG or elizagraph.",
+        "minimum_hardware": "None",
+        "minimum_capital_usd": null,
+        "technical_skill_required": "advanced",
+        "estimated_returns": "Value from knowledge asset creation and querying",
+        "barriers_to_entry": [
+          "Understanding of knowledge graphs and semantic web standards",
+          "TRAC needed for publishing fees",
+          "Smaller developer ecosystem than major L1s"
+        ],
+        "guide_available": true,
+        "guide_url": "https://docs.origintrail.io"
+      }
+    ],
+    "developer_resources": {
+      "sdk_available": true,
+      "api_available": true,
+      "documentation_quality": "good",
+      "developer_community_size": "83 repos, 584 stars, active development with JS and Python SDKs",
+      "grants_program": true,
+      "grants_url": "https://origintrail.io"
+    }
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "active_users_monthly": null,
+    "total_transactions": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "compute_delivered": null,
+    "nodes_active": null,
+    "validators_active": null,
+    "miners_active": null,
+    "unique_contracts_deployed": null,
+    "revenue_annual_usd": null,
+    "revenue_source": "Publishing fees paid by knowledge asset creators to node operators",
+    "metrics_source": "OriginTrail blog and announcements. Not listed on DeFiLlama.",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "1 billion+ Knowledge Assets created (Genesis period milestone). V8 claims 1000x throughput improvement over V6. Enterprise partnerships with Walmart, Oracle, BSI, GS1. Revenue is protocol-level (publishing fees to nodes) — no public dashboard tracking total fees collected. Not a DeFi protocol so DeFiLlama TVL is not applicable."
+  },
+
+  "community": {
+    "discord_members": null,
+    "telegram_members": null,
+    "x_followers": null,
+    "github_contributors": 10,
+    "governance_participation_rate": "Unknown",
+    "governance_model": "NeuroWeb has its own governance via NEURO token (Polkadot parachain). TRAC governance for DKG protocol decisions is less documented.",
+    "governance_url": null,
+    "key_community_channels": [
+      "Discord: discord.gg/R4tRpCuwaA",
+      "Telegram: @origintrail",
+      "X: @origin_trail",
+      "Reddit: r/OriginTrail"
+    ],
+    "sentiment_summary": "Dedicated community with strong conviction in the knowledge graph thesis. One of the longest-running crypto projects (since 2018) with positive ICO ROI. Enterprise partnerships (Walmart, Oracle, BSI) provide credibility. Community-run resources (origintrail.club) suggest engaged but niche following.",
+    "community_notes": "Community is smaller but more technically sophisticated than typical DeAI projects. 8+ years of operation without major controversy. Turing Award winner (Bob Metcalfe) on advisory board adds academic credibility. ElizaOS integration (elizagraph) shows relevance to current AI agent narrative."
+  },
+
+  "freedom_score": {
+    "total_score": 60,
+    "max_possible": 100,
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 12,
+        "max": 20,
+        "evidence": "DKG Core Nodes distributed globally — anyone can run one with 50K TRAC stake. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides infrastructure redundancy. V8 Edge Nodes extend the network to lightweight devices. However, exact node count not publicly available. NeuroWeb depends on Polkadot parachain slot. Core team (Trace Labs) controls protocol development direction."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "NeuroWeb has Polkadot-style parachain governance with NEURO token. TRAC governance for the DKG protocol itself is less documented. RFC repository exists for protocol proposals but formal governance process is unclear. Trace Labs controls development decisions. Score reflects partial governance via NeuroWeb but limited DKG-level governance."
+      },
+      "token_distribution_fairness": {
+        "score": 11,
+        "max": 15,
+        "evidence": "50% sold in ICO (pre-sale + crowd sale) — unusually high public distribution. 99.96% circulating after 8 years — fully vested with no remaining insider overhang. FDV equals market cap. ICO investors at $0.10 have ~3.5x ROI — rare positive outcome. 23% insider (founders 18% + team/advisors 5%) is moderate and fully vested. Best supply maturity in DeAI."
+      },
+      "censorship_resistance": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Knowledge Assets are anchored on-chain — once published, they cannot be easily censored. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides redundancy. However, data is stored off-chain on DKG nodes — if nodes go offline, data availability depends on replication. Node operators can choose what data to store. No privacy features for stored data."
+      },
+      "data_sovereignty": {
+        "score": 9,
+        "max": 15,
+        "evidence": "Knowledge Assets are owned by their creators (ERC1155Delta). W3C DID-compliant identifiers. Verifiable data provenance through on-chain anchoring. Users control their knowledge graph data. However, data stored on DKG nodes is not encrypted — it's verifiable but not private. No privacy-preserving computation for knowledge graph queries."
+      },
+      "open_source_transparency": {
+        "score": 11,
+        "max": 15,
+        "evidence": "83 repos on GitHub, 584 total stars. Core DKG engine, SDKs (JS, Python), NeuroWeb parachain all open source. Active development through March 2026. elizagraph (AI agent integration) is a notable recent addition. Smart contract audit documents publicly available. However, DKG V8 contracts have not been audited by a major firm."
+      }
+    },
+    "freedom_grade": "C",
+    "freedom_summary": "OriginTrail is one of the most mature open-source projects in DeAI — 8 years of operation, 99.96% supply circulated, and genuine enterprise adoption. The DKG architecture provides real data sovereignty through verifiable Knowledge Assets. However, governance is limited, data is not encrypted, and the exact degree of node decentralisation is unclear. Freedom Score 60/100 (C) reflects strong foundations with room for improvement in governance and privacy."
+  },
+
+  "returns_score": {
+    "total_score": 65,
+    "max_possible": 100,
+    "breakdown": {
+      "token_utility": {
+        "score": 16,
+        "max": 20,
+        "evidence": "TRAC is structurally essential: required for publishing Knowledge Assets (fee payment), node staking (50K-5M TRAC per node), delegated staking, and data integrity collateral. The token is not optional — you cannot use the DKG without TRAC. Multi-chain deployment (NeuroWeb, Base, Gnosis) expands utility surfaces. Strong utility design with genuine usage requirements."
+      },
+      "value_accrual": {
+        "score": 13,
+        "max": 20,
+        "evidence": "Publishing fees are paid in TRAC and distributed to node operators — a direct utility-based accrual mechanism. Staking rewards come from real network usage (publishing fees), not inflation. This is one of the few genuine real-yield models in DeAI. However, total fee revenue is not publicly tracked. No burn mechanism. Value accrual is real but unquantified."
+      },
+      "supply_dynamics": {
+        "score": 18,
+        "max": 20,
+        "evidence": "500M fixed supply with 99.96% circulating. Zero inflation. FDV equals market cap — no dilution ahead. All insider vesting completed years ago. No token overhang. Core Node staking locks 50K-5M TRAC per node, reducing effective circulating supply. This is the best supply dynamics profile of any project reviewed — fixed cap, fully circulated, real staking lockup."
+      },
+      "revenue_sustainability": {
+        "score": 8,
+        "max": 25,
+        "evidence": "1 billion+ Knowledge Assets created indicates real usage. Enterprise partnerships (Walmart, Oracle, BSI, GS1) suggest commercial traction. Publishing fee model is sound — users pay TRAC to publish knowledge assets, nodes earn from providing storage and retrieval. However, total revenue is not publicly reported. Not on DeFiLlama. Usage exists but commercial scale is unproven. Score reflects real but unquantified revenue."
+      },
+      "liquidity_access": {
+        "score": 10,
+        "max": 15,
+        "evidence": "Listed on Coinbase, Kraken, KuCoin, Bitstamp, Crypto.com, Bitget, Gate.io, HTX. Daily volume ~$5M. Tier-1 exchange coverage (Coinbase, Kraken) is strong. Volume is adequate for most position sizes. Not on Binance main exchange which limits retail discovery. Score reflects strong exchange coverage with moderate volume depth."
+      }
+    },
+    "returns_grade": "C",
+    "risk_flags": ["unquantified_revenue", "small_developer_community"],
+    "returns_summary": "OriginTrail has the best supply dynamics in DeAI — fixed 500M cap, 99.96% circulated, zero dilution. The real-yield staking model (publishing fees, not inflation) is rare and structurally sound. But revenue is unquantified and commercial scale is unproven despite 1B+ Knowledge Assets and enterprise partnerships. Returns Score 65/100 (C) reflects excellent tokenomics attached to unproven monetisation."
+  },
+
+  "assessment": {
+    "what_works_today": [
+      "8 years of continuous operation — one of the longest-running projects in DeAI",
+      "1 billion+ Knowledge Assets created — genuine network usage",
+      "Enterprise partnerships: Walmart, Oracle, BSI, GS1 — real institutional adoption",
+      "Fixed 500M supply, 99.96% circulating — best supply maturity in DeAI",
+      "Real-yield staking model — rewards from publishing fees, not inflation",
+      "Multi-chain deployment: NeuroWeb, Base, Gnosis",
+      "Turing Award winner (Bob Metcalfe) on advisory board",
+      "Positive ICO ROI after 8 years (~3.5x from crowd sale) — rare in crypto",
+      "83 open-source repos with active development"
+    ],
+    "what_is_hype": [
+      "'1 billion Knowledge Assets' — impressive number but what is the commercial value of these assets?",
+      "Enterprise partnerships are real but depth of integration is unclear — Walmart was a specific use case, not a platform-wide deployment",
+      "Revenue is not publicly tracked — impossible to assess commercial sustainability",
+      "AI readiness narrative is current but OriginTrail has been pivoting narratives (supply chain → Web3 → AI) over 8 years"
+    ],
+    "key_risks": [
+      "Revenue is unquantified — no public dashboard, no DeFiLlama listing, no way to assess sustainability",
+      "Small developer community (10 contributors to core) limits development velocity",
+      "Token down 90% from ATH despite positive ICO ROI — limited market enthusiasm",
+      "Knowledge graph adoption by AI systems is nascent — unclear if decentralised knowledge graphs will be preferred over centralised alternatives",
+      "DKG V8 smart contracts not audited by a major firm",
+      "NeuroWeb parachain dependency adds Polkadot platform risk",
+      "Narrative pivots over 8 years suggest the project is still searching for product-market fit"
+    ],
+    "competitive_advantages": [
+      "Unique category — no other project offers a decentralised knowledge graph at this maturity",
+      "Fixed supply with zero inflation — no dilution competition",
+      "Real-yield staking model — rare in crypto",
+      "GS1 EPCIS compliance for supply chain — enterprise-grade data standards",
+      "8 years of operational history builds trust",
+      "elizagraph connects to AI agent narrative via ElizaOS integration"
+    ],
+    "competitive_disadvantages": [
+      "Niche category — knowledge graphs are not well understood by retail investors",
+      "Small community relative to compute or inference projects",
+      "No Binance listing limits discovery",
+      "Revenue opacity makes it hard to evaluate commercially",
+      "Competing with centralised knowledge graph solutions (Google, Neo4j) that have larger ecosystems"
+    ],
+    "comparable_projects": [
+      "The Graph (GRT)",
+      "Chainlink (LINK)",
+      "Arweave (AR)"
+    ],
+    "outlook": "OriginTrail is a quiet builder in a noisy space. Eight years of operation, positive ICO returns, enterprise partnerships, and the best supply dynamics in DeAI. The knowledge graph architecture is unique and increasingly relevant as AI systems need verifiable, structured data. But the project has been 'almost there' for years — pivoting narratives from supply chain to Web3 to AI. Revenue is unquantified, the developer community is small, and the market has not rewarded the long-term approach. For sovereignty seekers, verifiable Knowledge Assets provide genuine data provenance. For investors, the fixed supply and real-yield model are structurally sound — the question is whether knowledge graph adoption will ever reach scale.",
+    "overall_assessment": "The quiet achiever of DeAI. Best tokenomics, real enterprise adoption, unique category. Unquantified revenue and niche positioning limit both freedom and returns scores. Quadrant B — sovereignty-relevant with moderate returns potential."
+  },
+
+  "sources": [
+    {
+      "id": "S001",
+      "url": "https://origintrail.io",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "OriginTrail official site — product overview, technology, partnerships"
+    },
+    {
+      "id": "S002",
+      "url": "https://docs.origintrail.io",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "DKG documentation — architecture, Knowledge Assets, staking, node operation"
+    },
+    {
+      "id": "S003",
+      "url": "https://github.com/OriginTrail",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "OriginTrail GitHub org — 83 repos, 584 stars, active development"
+    },
+    {
+      "id": "S004",
+      "url": "https://github.com/OriginTrail/dkg-engine",
+      "type": "github",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "DKG engine main repo — 230 stars, 86 forks, JavaScript, 10 contributors"
+    },
+    {
+      "id": "S005",
+      "url": "https://etherscan.io/token/0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f",
+      "type": "block_explorer",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "TRAC ERC-20 token on Ethereum — 22,787 holders"
+    },
+    {
+      "id": "S006",
+      "url": "https://origintrail.io/technology/decentralized-knowledge-graph",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "DKG technology overview — architecture, Knowledge Assets, V8 features"
+    },
+    {
+      "id": "S007",
+      "url": "https://www.coingecko.com/en/coins/origintrail",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinGecko — TRAC price, market cap, volume, exchange listings"
+    },
+    {
+      "id": "S008",
+      "url": "https://coinmarketcap.com/currencies/origintrail/",
+      "type": "market_data",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CoinMarketCap — TRAC market data, ranking"
+    },
+    {
+      "id": "S009",
+      "url": "https://cryptorank.io/ico/origintrail",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "CryptoRank — ICO details, $22.5M raised, ROI tracking"
+    },
+    {
+      "id": "S010",
+      "url": "https://icodrops.com/origintrail/",
+      "type": "research",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "ICO Drops — OriginTrail ICO details, token distribution"
+    },
+    {
+      "id": "S011",
+      "url": "https://github.com/OriginTrail/smart-contract-audit-documents",
+      "type": "audit",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "Audit documents — DLT Labs and Hosho audits from 2018"
+    },
+    {
+      "id": "S012",
+      "url": "https://huggingface.co/models?search=origintrail",
+      "type": "ai_platform",
+      "tier": 2,
+      "accessed": "2026-03-06",
+      "notes": "HuggingFace — no OriginTrail models or datasets found"
+    },
+    {
+      "id": "S013",
+      "url": "https://biyond.co/blog/biyond-alpha-brief/origintrail-trac-protocol-analysis-from-supply-chain-transparency-to-ai-ready-data.html",
+      "type": "research",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Biyond — protocol analysis, enterprise partnerships overview"
+    },
+    {
+      "id": "S014",
+      "url": "https://medium.com/origintrail/internet-pioneer-bob-metcalfe-joins-trace-labs-advisory-board-to-help-apply-metcalfe-s-law-for-b89c160a9097",
+      "type": "official_blog",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Bob Metcalfe (Turing Award, Ethernet inventor) joins advisory board"
+    },
+    {
+      "id": "S015",
+      "url": "https://www.globenewswire.com/news-release/2018/01/18/1296517/0/en/OriginTrail-ICO-Raises-22-5-Million-to-Build-Transparency-in-Supply-Chains.html",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "GlobeNewsWire — ICO raise announcement, $22.5M, sold out in 20 minutes"
+    },
+    {
+      "id": "S016",
+      "url": "https://supplychaindigital.com/technology/origintrail-partners-oracle-bring-blockchain-technology-supply-chain",
+      "type": "media",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Oracle partnership announcement"
+    },
+    {
+      "id": "S017",
+      "url": "https://docs.origintrail.io/dkg-v8-current-version/delegated-staking-v8",
+      "type": "official_documentation",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Delegated staking documentation — mechanics, chains, parameters"
+    },
+    {
+      "id": "S018",
+      "url": "https://staking.origintrail.io/",
+      "type": "official_site",
+      "tier": 1,
+      "accessed": "2026-03-06",
+      "notes": "Staking dashboard — Core Node and delegated staking interface"
+    },
+    {
+      "id": "S019",
+      "url": "https://iq.wiki/wiki/branimir-rakic",
+      "type": "reference",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Branimir Rakic (CTO) biography"
+    },
+    {
+      "id": "S020",
+      "url": "https://www.origintrail.club/partnerships/",
+      "type": "community",
+      "tier": 3,
+      "accessed": "2026-03-06",
+      "notes": "Community-maintained partnerships overview"
+    }
+  ]
+}
