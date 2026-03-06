@@ -1,0 +1,87 @@
+---
+import ContentLayout from '../layouts/ContentLayout.astro';
+---
+
+<ContentLayout
+  title="Privacy Policy"
+  description="Privacy policy for Own Your Mind — what data we collect and how we use it."
+  breadcrumbs={[{ label: 'Privacy Policy' }]}
+>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-6">Privacy Policy</h1>
+
+    <div class="prose">
+      <p class="text-lg text-[var(--color-text-secondary)]">
+        We keep this simple because our data collection is minimal. We don't run ads, we don't sell data,
+        and we don't track you across the web.
+      </p>
+
+      <h2>What We Collect</h2>
+
+      <h3>Website Analytics</h3>
+
+      <p>
+        This site is hosted on Cloudflare Pages. Cloudflare provides basic analytics (page views,
+        visitor counts, countries) using server-side logging — no cookies, no tracking scripts, no
+        fingerprinting. We use this to understand which content is useful. We cannot identify individual
+        visitors from this data.
+      </p>
+
+      <h3>Newsletter</h3>
+
+      <p>
+        If you subscribe to our newsletter via Buttondown, we collect your email address. That's it.
+        Your email is stored by <a href="https://buttondown.com/privacy" target="_blank" rel="noopener noreferrer">Buttondown</a>
+        and is used solely to send you our newsletter. You can unsubscribe at any time using the link
+        in every email, and your data will be deleted.
+      </p>
+
+      <h3>Search</h3>
+
+      <p>
+        Site search is powered by Pagefind and runs entirely in your browser. No search queries are
+        sent to any server.
+      </p>
+
+      <h2>What We Don't Collect</h2>
+
+      <ul>
+        <li>No cookies (beyond any set by Cloudflare for security/performance)</li>
+        <li>No third-party tracking scripts</li>
+        <li>No advertising pixels</li>
+        <li>No personal data beyond newsletter sign-ups</li>
+        <li>No user accounts or passwords</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+
+      <p>We use the following third-party services:</p>
+
+      <ul>
+        <li><strong>Cloudflare</strong> — hosting, CDN, and DNS. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Their privacy policy</a>.</li>
+        <li><strong>Buttondown</strong> — newsletter. <a href="https://buttondown.com/privacy" target="_blank" rel="noopener noreferrer">Their privacy policy</a>.</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+
+      <p>
+        Under the Australian Privacy Act 1988, you have the right to access and correct personal
+        information we hold about you. If you're in the EU or UK, you also have rights under GDPR.
+        In practice, the only personal data we might hold is your email address if you subscribed to
+        the newsletter. To exercise these rights, contact us via
+        <a href="https://x.com/0xBobski" target="_blank" rel="noopener noreferrer">@0xBobski on X</a>
+        or unsubscribe directly from any newsletter email.
+      </p>
+
+      <h2>Changes</h2>
+
+      <p>
+        If we change this policy, we'll update it here. We won't start collecting data without telling you.
+      </p>
+
+      <p class="text-sm text-[var(--color-text-tertiary)] mt-8">
+        Last updated: March 2026
+      </p>
+    </div>
+  </div>
+</ContentLayout>

@@ -18,6 +18,8 @@ const sections = [
     title: 'Site',
     links: [
       { label: 'About', href: '/about/' },
+      { label: 'Disclaimer', href: '/disclaimer/' },
+      { label: 'Privacy', href: '/privacy/' },
     ],
   },
 ];
@@ -79,6 +81,9 @@ const sections = [
     <div class="mt-10 pt-6 border-t border-[var(--color-border)]">
       <p class="text-xs text-[var(--color-text-tertiary)] text-center">
         &copy; {new Date().getFullYear()} Own Your Mind. Independent coverage of decentralised AI.
+      </p>
+      <p class="text-xs text-[var(--color-text-tertiary)] text-center mt-2">
+        Not financial advice. <a href="/disclaimer/" class="underline hover:text-[var(--color-text-secondary)] transition-colors">Read our disclaimer</a>.
       </p>
     </div>
   </div>
