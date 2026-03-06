@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "project_id": "warden",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "warden-protocol",
+      "github_primary_repo": "wardenprotocol",
+      "coingecko_id": "warden-2",
+      "discord_server_id": null,
+      "telegram_username": null,
+      "x_handle": "waraboringcompany",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "Validator count and distribution not confirmed.",
+      "Discord and Telegram exact member counts not verified.",
+      "Real user numbers unclear — claimed 15-20M but admitted purging ~6M bots.",
+      "No active on-chain governance proposals found.",
+      "Not listed on DeFiLlama.",
+      "No third-party audit of SPEX system found.",
+      "Madrid-based entity registration details not verified.",
+      "HuggingFace not checked."
+    ]
+  },
+
+  "identity": {
+    "name": "Warden Protocol",
+    "ticker": "WARD",
+    "category": "agent",
+    "subcategory": "AI Agent Infrastructure / L1",
+    "tagline": "The distribution layer for the agent economy",
+    "one_liner": "Purpose-built L1 blockchain for AI agents in Web3 with verifiable inference (SPEX), agentic wallet, and agent marketplace. Heavy Qredo/Binance alumni team.",
+    "website": "https://wardenprotocol.org",
+    "documentation_url": "https://docs.wardenprotocol.org",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/warden-protocol",
+    "chain": "WardenChain (own EVM chain)",
+    "launch_date": "2026-02-04",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "David Pinger",
+        "role": "Co-Founder (Ecosystem)",
+        "background": "LMU Munich + Pantheon Sorbonne (summa cum laude). Ex-Uber, ex-Binance. Led R&D at Qredo Labs.",
+        "doxxed": true
+      },
+      {
+        "name": "Antonio Pitasi",
+        "role": "Co-Founder (Protocol)",
+        "background": "Software engineer. Ex-Tendermint/Ignite (Emeris project). Cosmos SDK expertise.",
+        "doxxed": true
+      },
+      {
+        "name": "Alex Melikhov",
+        "role": "Co-Founder (Product)",
+        "background": "CEO of Equilibrium (EOSDT stablecoin, $20M collateral). Polkadot parachain experience.",
+        "doxxed": true
+      },
+      {
+        "name": "Jon Heywood",
+        "role": "Co-Founder (Design/dApps)",
+        "background": "15+ years tech. Ex-Qredo. Built SpaceWard. Digital agency founder in Dubai.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": null,
+    "entity_name": null,
+    "entity_jurisdiction": "Madrid, Spain",
+    "notable_backers": [
+      "0G",
+      "Messari",
+      "Venice.AI"
+    ],
+    "key_hires": [
+      {
+        "name": "Josh Goodbody",
+        "role": "CEO",
+        "background": "Ex-Binance, ex-Qredo executive"
+      },
+      {
+        "name": "Dr. Michele Dallachiesa",
+        "role": "Chief AI Officer",
+        "background": "Ex-Google, ex-NASA"
+      }
+    ],
+    "funding_raised": {
+      "total_usd": 5000000,
+      "rounds": [
+        {
+          "round_type": "pre-seed",
+          "amount_usd": 450000,
+          "date": "2024-01-01",
+          "lead_investor": null,
+          "notes": "Angel investors"
+        },
+        {
+          "round_type": "ico",
+          "amount_usd": 534000,
+          "date": "2024-05-01",
+          "lead_investor": null,
+          "notes": "Fjord Foundry IDO at $460M FDV. 1.161M WARP tokens at $0.46."
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 4000000,
+          "date": "2026-01-01",
+          "lead_investor": "0G, Messari, Venice.AI",
+          "notes": "At $200M valuation"
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Purpose-built EVM blockchain for AI agents. Key components: SPEX (Statistical Proof of Execution) for verifiable AI inference via probabilistic sampling and validator consensus. AVRs (Asynchronous Verifiable Resources) as cross-chain plugins. Agentic Wallet with natural language interface. Agent Hub marketplace. Multi-chain support via IBC, Hyperlane, deBridge.",
+    "consensus_mechanism": "Proof-of-Stake with dynamic inflation (1-10%) targeting 65% staked.",
+    "what_is_onchain": "Agent execution, SPEX inference proofs, WARD staking, governance, agent fees, operator bonding.",
+    "what_is_offchain": "AI model inference, agent computation, natural language processing.",
+    "key_dependencies": [],
+    "github_metrics": {
+      "total_repos": 36,
+      "primary_repo": "wardenprotocol",
+      "stars": 2185,
+      "forks": 188,
+      "license": "Apache 2.0 (main), proprietary x/async module",
+      "last_commit": "2026-03-05"
+    },
+    "audits": [],
+    "licensing_concern": "x/async module is proprietary with restricted use — core infrastructure partially closed source."
+  },
+
+  "tokenomics": {
+    "token_name": "WARD",
+    "token_standard": "Native coin + BEP20 + ERC20",
+    "max_supply": null,
+    "circulating_supply": 250320000,
+    "circulating_percent": 25.03,
+    "fdv_usd": 9900000,
+    "market_cap_usd": 2500000,
+    "fdv_mcap_ratio": 3.96,
+    "allocation": {
+      "initial_airdrop": { "percent": 4.7, "vesting": "30.32M at genesis; 6-month linear" },
+      "public_goods": { "percent": 5.3, "vesting": "10M at genesis; 30-month linear" },
+      "ecosystem_community": { "percent": 12.0, "vesting": "20M at genesis; 30-month linear" },
+      "liquidity": { "percent": 5.0, "vesting": "100% at genesis" },
+      "agent_incentives": { "percent": 19.0, "vesting": "20M at genesis; 12-month linear" },
+      "validators": { "percent": 10.0, "vesting": "Permanently locked (delegated)" },
+      "treasury_rd": { "percent": 22.0, "vesting": "120M at genesis; 12-month linear" },
+      "strategic_investors": { "percent": 2.0, "vesting": "12-month cliff + 12-month linear" },
+      "core_contributors": { "percent": 20.0, "vesting": "6-month cliff + 24-month linear" }
+    },
+    "insider_allocation_percent": 42,
+    "vesting_mostly_complete": false,
+    "token_utility": [
+      "Gas on WardenChain",
+      "PoS staking with dynamic inflation (1-10%)",
+      "Governance voting",
+      "Agent execution fee payment",
+      "Operator bonding",
+      "3% community tax burn on protocol fees"
+    ],
+    "burn_mechanism": "3% community tax on protocol fees burned programmatically.",
+    "staking_apy": "Variable — dynamic inflation targeting 65% staked",
+    "emission_model": "Unlimited max supply with PoS inflation (1-10%). Total supply 1B at genesis. Inflationary emissions ongoing."
+  },
+
+  "market_data": {
+    "price_usd": 0.0099,
+    "ath_usd": 0.1415,
+    "ath_date": "2026-02-10",
+    "daily_volume_usd": 3600000,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": null,
+    "revenue_annual_usd": null,
+    "metrics_source": "Warden 2025 Report",
+    "metrics_date": "2025-12-31",
+    "usage_notes": "10.9M cumulative on-chain txns. 60.4M AI agent runs. 11.7M inference proofs. $749K protocol revenue. $704K agent revenue. Claimed 15-20M users but purged ~6M bots."
+  },
+
+  "community": {
+    "telegram_members": null,
+    "x_followers": 350000,
+    "discord_members": null,
+    "twitter_handle": "@wardenprotocol"
+  },
+
+  "exchanges": [
+    "KuCoin",
+    "Bybit",
+    "BingX",
+    "Bitget"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Stake WARD to secure WardenChain via PoS. Dynamic inflation targeting 65% staked.",
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable — 1-10% inflation distributed to stakers",
+        "barriers_to_entry": ["Must hold WARD tokens"]
+      },
+      {
+        "type": "using",
+        "description": "Use the Agentic Wallet for natural language crypto operations. Access Agent Hub for pre-built AI agents.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["WARD for gas fees"]
+      },
+      {
+        "type": "building",
+        "description": "Build AI agents using Warden Studio and deploy on Agent Hub. SPEX for verifiable inference.",
+        "technical_skill_required": "advanced",
+        "barriers_to_entry": ["Development skills required"]
+      },
+      {
+        "type": "governance",
+        "description": "Vote on protocol proposals using staked WARD.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Must stake WARD"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 47,
+    "max_possible": 100,
+    "freedom_grade": "F",
+    "freedom_summary": "Warden Protocol is a very young project (TGE February 2026) with heavy team control. 42% insider allocation, proprietary core module (x/async), no governance track record, inflated user numbers, and ex-centralised-exchange leadership culture. The SPEX verifiable inference concept is interesting but unproven.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 10,
+        "max": 20,
+        "evidence": "PoS chain with validator set but details on count and distribution are sparse. WardenChain is very young (mainnet ~mid 2025). x/async module is proprietary — core infrastructure has centralised control. SPEX is novel but unproven at scale."
+      },
+      "governance_decentralisation": {
+        "score": 8,
+        "max": 20,
+        "evidence": "Token-based governance exists but is very new (token launched Feb 2026). Treasury holds 22% with 120M unlocked at genesis. Core contributors hold 20% with vesting. No evidence of active on-chain governance proposals. Heavy centralisation around founding team."
+      },
+      "token_distribution_fairness": {
+        "score": 6,
+        "max": 15,
+        "evidence": "Only 4.7% to initial airdrop. 42% controlled by team (20% core contributors + 22% treasury). Strategic investors only 2%. Fjord Foundry IDO participants down -97.8%. 25% circulating at TGE."
+      },
+      "censorship_resistance": {
+        "score": 7,
+        "max": 15,
+        "evidence": "Claims zk-SNARK integration for privacy but unverified. Permissionless agent deployment is positive. Multi-chain presence reduces single-point failure. Protocol is young and team-controlled — could realistically censor agents."
+      },
+      "data_sovereignty": {
+        "score": 8,
+        "max": 15,
+        "evidence": "User key management through cryptographic IDs. SPEX provides verifiable AI inference. Cross-chain operation avoids ecosystem lock-in. Privacy features claimed but implementation unclear. Agent execution flows through WardenChain."
+      },
+      "open_source_transparency": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Main repo Apache 2.0 with 2,185 stars. However, x/async module is proprietary — meaningful gap in open source commitment. 36 repos with active development. Agent-kit MIT licensed. Team is public and identifiable."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 48,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Gas token on WardenChain. Agent execution fee payment. PoS staking. Governance voting. Operator bonding reduces circulating supply. Gated functionality. Very early — actual fee revenue modest (~$750K cumulative 2025)."
+      },
+      "value_accrual": {
+        "score": 10,
+        "max": 20,
+        "evidence": "3% community tax burn on protocol fees — modest deflationary pressure. Validator bonding locks supply. Agent fees create buy pressure. Revenue is small ($750K/year). Unlimited max supply with 1-10% inflation offsets burn. Trading near ATL."
+      },
+      "supply_dynamics": {
+        "score": 10,
+        "max": 20,
+        "evidence": "25% circulating at TGE with structured vesting. Core contributor 6-month cliff + 24-month linear. Validator tokens permanently locked. Unlimited max supply with PoS inflation (1-10%). 120M treasury tokens unlocked at genesis is concerning."
+      },
+      "revenue_sustainability": {
+        "score": 8,
+        "max": 25,
+        "evidence": "Protocol revenue ~$750K in 2025. Agent revenue ~$704K. $1M agent incentive programme. Multiple revenue streams. Revenue tiny relative to claimed user base. Sustainability unproven. Heavily dependent on agent adoption."
+      },
+      "liquidity_access": {
+        "score": 8,
+        "max": 15,
+        "evidence": "13 exchanges including Binance Alpha, KuCoin, Bybit, BingX. Multi-chain (WardenChain, BNB Chain, Base). $2.6-4.6M daily volume. $2.5M market cap — high volatility. Down 93% from ATH in one month. IDO investors down 97.8%."
+      }
+    }
+  }
+}
