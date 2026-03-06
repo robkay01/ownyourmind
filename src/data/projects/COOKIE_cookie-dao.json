@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "project_id": "cookie-dao",
+    "research_date": "2026-03-06",
+    "researcher": "Claude Code",
+    "version": 1,
+    "last_updated": "2026-03-06",
+    "status": "draft",
+    "refresh_config": {
+      "github_org": "cookie3",
+      "github_primary_repo": null,
+      "coingecko_id": "cookie",
+      "discord_server_id": null,
+      "telegram_username": "cookie_dao",
+      "x_handle": "cookiedotfun",
+      "defillama_slug": null
+    },
+    "research_gaps": [
+      "No public GitHub repositories found — cookie3 GitHub org has 0 public repos",
+      "No HuggingFace models or datasets found",
+      "DeFiLlama returned 403 — could not verify TVL or protocol revenue on-chain",
+      "No Snapshot governance space found — governance voting history unverifiable",
+      "Exact Discord and Telegram member counts not retrievable",
+      "No audit reports found for COOKIE smart contracts",
+      "Cookie.fun API pricing/fee structure not publicly documented",
+      "Annual protocol revenue figure not publicly disclosed",
+      "Staking APY not disclosed — rewards shifted to Snaps points system July 2025",
+      "Corporate entity name and registration details not found — only jurisdiction (Tallinn, Estonia) confirmed",
+      "Discrepancy in circulating supply data between sources"
+    ]
+  },
+
+  "identity": {
+    "name": "Cookie DAO",
+    "ticker": "COOKIE",
+    "category": "Data & Analytics",
+    "subcategory": "AI Agent Analytics / Data Layer",
+    "tagline": "The index & data layer for all AI agents",
+    "one_liner": "Centralised data platform that indexes, tracks, and scores 1,500+ AI agents across crypto using on-chain and social data, with a token-gated premium analytics model.",
+    "website": "https://www.cookie.fun",
+    "documentation_url": "https://docs.cookie.community/cookie-dao",
+    "whitepaper_url": null,
+    "github_url": "https://github.com/cookie3",
+    "chain": "Ethereum, Base, BNB Chain, Solana (LayerZero OFT)",
+    "launch_date": "2024-06-13",
+    "current_status": "mainnet",
+    "logo_url": null
+  },
+
+  "team": {
+    "founding_team": [
+      {
+        "name": "Filip Wielanier",
+        "role": "CEO & Co-Founder",
+        "background": "Co-founded Cookie3 in 2021 in Tallinn, Estonia. 17+ years combined tech and blockchain experience.",
+        "linkedin_or_x": "https://www.linkedin.com/in/filipwielanier/",
+        "doxxed": true
+      },
+      {
+        "name": "Wojciech Piechocinski",
+        "role": "Co-Founder",
+        "background": "Co-founded Cookie3 in 2021. Combined 17+ years tech and blockchain experience with Filip Wielanier.",
+        "doxxed": true
+      }
+    ],
+    "team_size_estimate": 15,
+    "entity_name": null,
+    "entity_jurisdiction": "Estonia (Tallinn)",
+    "notable_backers": [
+      "Animoca Brands",
+      "The Spartan Group",
+      "Mapleblock Capital",
+      "Castrum Capital",
+      "GSR",
+      "CMT Digital",
+      "Big Brain Holdings",
+      "OrangeDAO",
+      "ChainGPT Labs"
+    ],
+    "funding_raised": {
+      "total_usd": 6820000,
+      "rounds": [
+        {
+          "round_type": "pre-seed",
+          "amount_usd": 3300000,
+          "date": "2022-08-01",
+          "lead_investor": "The Spartan Group"
+        },
+        {
+          "round_type": "strategic",
+          "amount_usd": 2500000,
+          "date": "2024-01-01",
+          "lead_investor": null
+        },
+        {
+          "round_type": "ico",
+          "amount_usd": 1025000,
+          "date": "2024-06-13",
+          "lead_investor": null,
+          "notes": "IDO on Polkastarter/ChainGPT Pad ($800K) + IEO on Bybit/Gate.io ($225K). Public sale at $0.025-$0.028."
+        }
+      ]
+    }
+  },
+
+  "technical": {
+    "architecture_summary": "Centralised data aggregation platform (cookie.fun) that indexes 1,500+ AI agents by ingesting 7TB+ of on-chain and social data. Calculates proprietary Mindshare metric, sentiment analysis, and smart following scores. COOKIE is an ERC-20 with LayerZero OFT bridging to Base, BNB Chain, and Solana. Staking on Base and other supported chains.",
+    "consensus_mechanism": "N/A — data aggregation layer, not a blockchain. Relies on Ethereum PoS, Base, BNB Chain, Solana.",
+    "what_is_onchain": "COOKIE token (ERC-20/OFT), staking contracts, token burns (MAF 10% + 50% API fees)",
+    "what_is_offchain": "Entire data pipeline, Mindshare engine, AI agent indexing, social data ingestion, API serving, cookie.fun frontend, Snaps rewards system",
+    "key_dependencies": [
+      "Ethereum",
+      "Base",
+      "LayerZero",
+      "Twitter/X API",
+      "Cookie3 (technology provider)"
+    ],
+    "github_metrics": {
+      "total_repos": 0,
+      "primary_repo": null,
+      "stars": 0,
+      "forks": 0,
+      "contributors": 0,
+      "license": "Proprietary — no public repositories",
+      "last_commit": null
+    },
+    "audits": []
+  },
+
+  "tokenomics": {
+    "token_name": "COOKIE",
+    "token_standard": "ERC-20 (with LayerZero OFT)",
+    "max_supply": 1000000000,
+    "circulating_supply": 705010234,
+    "circulating_percent": 70.5,
+    "fdv_usd": 20800000,
+    "market_cap_usd": 14670000,
+    "fdv_mcap_ratio": 1.42,
+    "allocation": {
+      "staking_liquidity": { "percent": 18.0, "vesting": "Fully unlocked at TGE" },
+      "pre_seed_b": { "percent": 10.06, "vesting": "1-month cliff + 6-month linear" },
+      "ecosystem": { "percent": 10.0, "vesting": "1-month cliff + linear" },
+      "team": { "percent": 9.5, "vesting": "1-month cliff + 6-month linear" },
+      "pre_seed_c": { "percent": 8.67, "vesting": "1-month cliff + 6-month linear" },
+      "treasury": { "percent": 8.0, "vesting": "1-month cliff + linear" },
+      "marketing": { "percent": 7.5, "vesting": "Linear" },
+      "strategic": { "percent": 6.14, "vesting": "1-month cliff + 6-month linear" },
+      "pre_seed_a": { "percent": 5.5, "vesting": "1-month cliff + 6-month linear" },
+      "advisory": { "percent": 5.0, "vesting": "1-month cliff + 6-month linear" },
+      "public_sale": { "percent": 4.38, "vesting": "12.5% TGE + 1-month cliff + 6-month" },
+      "seed": { "percent": 2.87, "vesting": "1-month cliff + 6-month linear" },
+      "kol": { "percent": 2.38, "vesting": "Linear" },
+      "airdrop": { "percent": 2.0, "vesting": "None" }
+    },
+    "insider_allocation_percent": 45,
+    "vesting_mostly_complete": true,
+    "token_utility": [
+      "Premium analytics access (10K COOKIE lock)",
+      "API access gating for AI agents",
+      "Multi-Airdrop Farming (MAF) participation",
+      "Governance voting",
+      "Cookie Snaps participation"
+    ],
+    "burn_mechanism": "Dual: (1) 10% of MAF pool locks burned — 170K+ COOKIE daily as of July 2025. (2) 50% of API access fee revenue burned.",
+    "staking_apy": "Variable — Snaps points + MAF rewards, no fixed APY",
+    "emission_model": "Fixed supply with deflationary burns. Final unlock June 2028."
+  },
+
+  "market_data": {
+    "price_usd": 0.021,
+    "ath_usd": 0.83,
+    "ath_date": "2025-01-10",
+    "daily_volume_usd": 17100000,
+    "data_date": "2026-03-06"
+  },
+
+  "usage_metrics": {
+    "active_users_daily": null,
+    "daily_transactions": null,
+    "tvl_usd": null,
+    "validators_active": null,
+    "revenue_annual_usd": null,
+    "metrics_source": "Various third-party sources",
+    "metrics_date": "2026-03-06",
+    "usage_notes": "60,000+ users reported mid-2025. 1,500+ AI agents tracked. 5M+ COOKIE locked for premium access. $16M+ distributed via MAF. $5M+ Snaps rewards distributed."
+  },
+
+  "community": {
+    "telegram_members": null,
+    "x_followers": null,
+    "discord_members": null,
+    "twitter_handle": "@cookiedotfun"
+  },
+
+  "exchanges": [
+    "Binance",
+    "Bybit",
+    "KuCoin",
+    "Gate.io",
+    "Coinbase",
+    "Kraken",
+    "MEXC",
+    "Bitget"
+  ],
+
+  "participation": {
+    "methods": [
+      {
+        "type": "staking",
+        "description": "Lock COOKIE for premium analytics access on cookie.fun. Participate in MAF pools for partner project airdrops. 10% burn on MAF locks.",
+        "technical_skill_required": "basic",
+        "estimated_returns": "Variable — Snaps points + 10-20% of partner reward pools via MAF",
+        "barriers_to_entry": ["Requires 10,000 COOKIE (~$210) for premium access"]
+      },
+      {
+        "type": "using",
+        "description": "Use cookie.fun to track and analyse AI agents. Free tier available; premium features require COOKIE staking.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Advanced features require token lock"]
+      },
+      {
+        "type": "building",
+        "description": "Integrate Cookie Data APIs into dapps or AI agents. COOKIE token required for API access.",
+        "technical_skill_required": "intermediate",
+        "barriers_to_entry": ["COOKIE token required for API access"]
+      },
+      {
+        "type": "governance",
+        "description": "Vote on DAO proposals regarding treasury allocations and platform upgrades using COOKIE tokens.",
+        "technical_skill_required": "basic",
+        "barriers_to_entry": ["Must hold COOKIE tokens"]
+      }
+    ]
+  },
+
+  "freedom_score": {
+    "total_score": 22,
+    "max_possible": 100,
+    "freedom_grade": "F",
+    "freedom_summary": "Cookie DAO scores 22/100 on Freedom. Despite the 'DAO' branding, this is a centralised data analytics company (Cookie3) with a token. The data infrastructure is entirely centralised, there is no verifiable governance activity, the codebase is fully closed source, and the team controls the platform end-to-end. The 'DAO' label is aspirational rather than descriptive.",
+    "breakdown": {
+      "infrastructure_decentralisation": {
+        "score": 3,
+        "max": 20,
+        "evidence": "Fully centralised data aggregation infrastructure. cookie.fun platform, data indexing, API servers, and Mindshare engine all operated by Cookie3. No independent nodes, no permissionless data providers, no decentralised compute. Future decentralisation plan has no timeline."
+      },
+      "governance_decentralisation": {
+        "score": 4,
+        "max": 20,
+        "evidence": "Token voting claimed but no Snapshot space, governance forum, or on-chain voting history found. Cookie3 and core contributors make all operational decisions. DAO structure appears primarily a branding wrapper."
+      },
+      "token_distribution_fairness": {
+        "score": 4,
+        "max": 15,
+        "evidence": "~45% insider allocation (pre-seed A/B/C + team + advisory + strategic). Only 4.38% public sale + 2% airdrop. Unusually short vesting: 1-month cliff + 6-month linear. Most insider tokens unlocked within 7 months of TGE."
+      },
+      "censorship_resistance": {
+        "score": 4,
+        "max": 15,
+        "evidence": "cookie.fun is a centralised web app that can restrict access, modify data, and gate features at will. No on-chain data layer. If Cookie3 ceased operations, the entire data product stops. COOKIE token on Ethereum is censorship-resistant but the product is not."
+      },
+      "data_sovereignty": {
+        "score": 3,
+        "max": 15,
+        "evidence": "Mindshare metric, agent scores, and analytics are proprietary with no verifiable methodology on-chain. 7TB data layer entirely controlled by Cookie3. Cookie Snaps monitors user social activity. No independent data verification possible."
+      },
+      "open_source_transparency": {
+        "score": 4,
+        "max": 15,
+        "evidence": "Zero public GitHub repositories. Entire codebase is proprietary. No audit reports found. Token contract verified on Etherscan (table stakes for any ERC-20). Zero open source footprint."
+      }
+    }
+  },
+
+  "returns_score": {
+    "total_score": 52,
+    "max_possible": 100,
+    "returns_grade": "D",
+    "breakdown": {
+      "token_utility": {
+        "score": 14,
+        "max": 20,
+        "evidence": "Multiple genuine use cases: premium analytics access (10K COOKIE lock), API access gating, MAF airdrop farming (10-20% of partner rewards), Snaps participation, governance. 5M+ COOKIE locked for premium access. Utility depends entirely on cookie.fun adoption."
+      },
+      "value_accrual": {
+        "score": 13,
+        "max": 20,
+        "evidence": "Dual burn: 50% of API fees burned + 10% of MAF pool locks burned (170K+ COOKIE daily as of July 2025). Revenue share from API fees to stakers. However, actual API revenue not disclosed. 97.5% drawdown from ATH suggests market scepticism about value capture."
+      },
+      "supply_dynamics": {
+        "score": 11,
+        "max": 20,
+        "evidence": "Fixed 1B supply with deflationary burns. 70.5% circulating. Most vesting complete, final unlock June 2028. Short vesting (1-month cliff + 6-month linear) caused massive unlock pressure. Burns provide deflationary pressure but total rate not quantified."
+      },
+      "revenue_sustainability": {
+        "score": 6,
+        "max": 25,
+        "evidence": "Revenue sources exist: API fees (50% burn / 50% treasury), Snaps campaign fees, trading interface. $5M+ Snaps rewards distributed. But no annual revenue disclosed, no DeFiLlama listing, no Token Terminal data. Revenue sustainability unproven."
+      },
+      "liquidity_access": {
+        "score": 8,
+        "max": 15,
+        "evidence": "Binance, Bybit, KuCoin, Gate.io, Coinbase, Kraken, MEXC, Bitget. $17.1M daily volume. Strong exchange coverage for ~$15M market cap. LayerZero OFT cross-chain. 97.5% drawdown means most holders underwater."
+      }
+    }
+  }
+}
