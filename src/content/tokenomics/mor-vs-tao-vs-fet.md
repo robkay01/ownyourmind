@@ -2,6 +2,7 @@
 title: "MOR vs TAO vs FET: Token Models Compared"
 description: "Three different approaches to tokenising decentralised AI. How MOR, TAO and FET/ASI work, what drives their value, and which model aligns best with actual decentralisation."
 publishDate: 2025-03-02
+updatedDate: 2026-03-07
 draft: false
 ---
 
@@ -17,18 +18,18 @@ MOR (Morpheus), TAO (Bittensor) and FET (Fetch.ai / ASI Alliance) represent thre
 | **Launch** | Fair launch, no pre-mine | Mining launch, early concentration | ICO + multiple raises |
 | **Insider allocation** | 0% | Low (early miners) | Significant (Foundation, team, investors) |
 | **Earning mechanism** | Stake stETH, provide compute, contribute code | Mine subnets, validate | Stake FET, run agents |
-| **Value driver** | Compute demand + burn | Subnet quality + competition | Agent adoption + staking |
-| **Lock-ups** | 90-day on earned MOR | None (liquid on receipt) | Variable staking periods |
+| **Value driver** | Compute access demand + PoL burn | Subnet quality + competition | Agent adoption + staking |
+| **Lock-ups** | 7-day on deposits; Power Factor lock voluntary (up to 6 yrs) | None (liquid on receipt) | Variable staking periods |
 
 ## MOR: the fair-launch compute token
 
-**Model.** Participants contribute capital (stETH), compute, code or community effort. In return they receive daily MOR emissions proportional to their contribution. MOR is consumed (partially burned) when users purchase compute on the Morpheus network.
+**Model.** Participants contribute capital (stETH, USDC, USDT or WBTC), compute, code or community effort. In return they receive daily MOR emissions proportional to their contribution. Users hold MOR to access compute on the network via an inference-per-second (IPS) quota – the more MOR held, the more compute available. Separate from usage, 50% of MOR from protocol-owned liquidity generation is permanently burned (MRC43).
 
-**What drives value.** Compute demand. When people use the Morpheus network for inference, they spend MOR. Burns reduce supply. If burns exceed emissions, MOR becomes deflationary. The value thesis is directly tied to network usage.
+**What drives value.** Compute access demand and structural burn. MOR must be held to access inference on the network, creating persistent demand proportional to usage. The PoL burn mechanism reduces supply independently of compute queries. If demand for holding MOR grows while burns reduce supply, the token appreciates.
 
-**Strengths.** Zero insider allocation means no unlock-driven selling pressure. The emission model is transparent and predictable. All four contributor groups are incentivised. The 90-day lock-up on earned MOR forces long-term thinking.
+**Strengths.** Zero insider allocation means no unlock-driven selling pressure. The emission model is transparent and predictable. All four contributor groups are incentivised. The Power Factor multiplier (up to ~10.7x for a 6-year lock) rewards long-term conviction. Capital deposits are withdrawable after just 7 days, and earned MOR has no vesting or lock – the Power Factor lock is entirely voluntary. Protocol-owned liquidity deepens every day capital is staked.
 
-**Weaknesses.** The 90-day lock creates liquidity risk. The network is still young, so compute demand has not yet reached the levels needed for significant burn pressure. Capital provider returns depend heavily on MOR price, which is volatile.
+**Weaknesses.** The network is still young, so compute demand has not yet reached the levels needed for significant burn pressure. Capital provider returns depend heavily on MOR price, which is volatile. Liquidity is thin (primarily DEX with ~$30K daily volume), making meaningful positions difficult to enter or exit.
 
 **Alignment score.** High. The tokenomics directly incentivise the behaviours the network needs: compute provision, code contribution, capital commitment and community growth. No misalignment between token holders and network operators.
 
@@ -70,7 +71,7 @@ This is the single most important factor in evaluating DeAI token models. When i
 
 Where does value flow when the network grows?
 
-- **MOR:** Directly to participants through emissions. Indirectly to all holders through burn-driven scarcity.
+- **MOR:** Directly to participants through emissions and Power Factor multiplied rewards. Indirectly to all holders through PoL burn-driven scarcity and growing protocol-owned liquidity.
 - **TAO:** To the most competitive miners and validators. Holders benefit from scarcity but do not earn directly without active participation.
 - **FET/ASI:** To stakers through staking yields. To the foundation through network fees. To insiders through appreciation of their holdings.
 
