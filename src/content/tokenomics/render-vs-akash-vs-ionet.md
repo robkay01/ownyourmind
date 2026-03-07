@@ -17,13 +17,13 @@ Render, Akash and io.net are the three largest decentralised compute networks by
 |---|---|---|---|
 | **Market cap** | $696M | $100M | ~$34M |
 | **Revenue model** | Burn-Mint Equilibrium (BME) | Take fee on deployment spend | Incentive Dynamic Engine (IDE) |
-| **2025 revenue** | ~$1M (burn-derived) | $3.15M (on-chain verified) | ~$18M ARR (self-reported) |
-| **Revenue verifiable?** | Partially (burns on-chain, USD revenue not disclosed) | Yes (Cosmos transactions, Messari reports) | No (self-reported only) |
+| **2025 revenue** | ~$1M (burn-derived) | $3.15M (on-chain verified) | $20M+ annualised (self-reported) |
+| **Revenue verifiable?** | Partially (burns on-chain, USD revenue not disclosed) | Yes (Cosmos transactions, Messari reports) | Partially (Messari quarterly reports, but core figures self-reported) |
 | **P/Revenue** | ~696x | ~32x | ~1.9x |
 | **Supply cap** | 644M (hard) | No cap (8% inflation) | 800M (hard) |
 | **Network model** | Permissioned | Permissionless | Permissionless portal |
 | **Core software** | Proprietary (OTOY) | Open source (Apache 2.0) | Partially open |
-| **Freedom score** | 32/100 (F) | 66/100 (C) | 40/100 (D) |
+| **Freedom score** | 32/100 (F) | 66/100 (C) | 38/100 (F) |
 | **Returns score** | 72/100 (B) | 62/100 (C) | 49/100 (D) |
 
 ## Render: centralisation as a product strategy
@@ -60,15 +60,15 @@ The P/Revenue ratio tells a story. At roughly 32x, Akash is priced like an early
 
 ## io.net: the unverifiable claim
 
-io.net is the most aggressive of the three. It claims $18.4M in annualised revenue, 327,000 verified GPUs, and partnerships with Dell Technologies. Named enterprise customers include Leonardo.Ai (19M users, 50% GPU cost reduction), Wondera ($2.48M savings versus AWS) and UC Berkeley's RAIL Lab (92.8% cost savings).
+io.net is the most aggressive of the three. It claims $20M+ in annualised revenue (Q1 2025 alone was $5.7M, an 82.6% quarter-on-quarter increase), 327,000 registered GPUs, and partnerships with Dell Technologies. Named enterprise customers include Leonardo.Ai (19M users, 50% GPU cost reduction), Wondera ($2.48M savings versus AWS) and UC Berkeley's RAIL Lab (92.8% cost savings).
 
-The problem: none of this is independently verifiable. io.net's revenue figures are self-reported. There is no on-chain revenue dashboard, no Messari report, no way to audit the claims. The market has noticed – io.net's $34M market cap pricing it at 1.9x claimed revenue is the market saying "we do not believe these numbers."
+The revenue figures are self-reported. Messari publishes quarterly reports with network metrics, and token data is verifiable on-chain, but the core revenue and utilisation numbers come from io.net. The gap between headline metrics and reality is the persistent concern – 327,000 registered GPUs but only 6,720 daily verified active, after a 2024 Sybil attack inflated GPU counts with 1.8 million fake devices. The market has noticed – io.net's ~$32M market cap pricing it at roughly 1.6x claimed revenue is the market saying "we are not confident in these numbers."
 
 The Incentive Dynamic Engine burns at least 50% of post-supplier revenue by purchasing and burning IO tokens. In theory, this creates strong deflationary pressure. In practice, with unverifiable revenue, the burn mechanism is unverifiable too.
 
 io.net launched in June 2024 and is down 98% from its all-time high. The token still has significant unlocks through 2030. The core platform is proprietary with no on-chain governance. The enterprise case studies are compelling if true, but "if true" is doing a lot of work in that sentence.
 
-**The lesson.** Revenue claims without verifiability are worth nothing. Akash's $3.15M of on-chain revenue is more valuable as an investment signal than io.net's $18M of self-reported revenue, because you can prove one exists and you cannot prove the other.
+**The lesson.** Revenue claims without full verifiability carry a discount. Akash's $3.15M of fully on-chain revenue is more valuable as an investment signal than io.net's $20M of self-reported revenue, because you can trace every dollar of one on a block explorer and you cannot do the same for the other.
 
 ## The revenue comparison that matters
 
@@ -78,11 +78,11 @@ Strip away the marketing and look at what each token actually does with revenue:
 |-----------|--------|-----|-----|
 | **Does revenue burn tokens?** | Yes – 95% of job spend burned | Not yet (BME approved, not active) | Claimed – 50%+ of post-supplier revenue |
 | **Does revenue flow to holders?** | No – no staking, no fee distribution | Partially – staking yields include small fee component | Not clearly documented |
-| **Is revenue verifiable?** | Partially – burns on-chain, USD not disclosed | Yes – fully on-chain | No |
+| **Is revenue verifiable?** | Partially – burns on-chain, USD not disclosed | Yes – fully on-chain | Partially – Messari reports, but core figures self-reported |
 | **Is the system deflationary?** | Not yet (8x gap) | Not yet (inflationary by design) | Unknown |
 | **Revenue growth rate** | +279% YoY burns | +128% YoY spend | N/A (too new) |
 
-Render has the best-designed value capture mechanism (BME). Akash has the most trustworthy revenue data. io.net has the best enterprise story if you trust the numbers.
+Render has the best-designed value capture mechanism (BME). Akash has the most trustworthy revenue data. io.net has the strongest revenue growth claim, but the verification gap keeps it discounted.
 
 ## The freedom-returns trade-off
 
@@ -108,6 +108,6 @@ I hold both RENDER and AKT. Different positions for different theses.
 
 **AKT** is a bet on permissionless compute becoming the default. The revenue is smaller but growing, verifiable and diversifying beyond crypto-native customers. The BME activation is a catalyst that the market has not yet priced. At 32x P/Revenue with 128% growth, the valuation is reasonable if the growth trajectory holds.
 
-I do not hold **IO**. Unverifiable revenue, 98% drawdown from ATH, ongoing token unlocks and no on-chain governance make it too opaque for my risk tolerance. The enterprise partnerships may be real. If io.net publishes verifiable on-chain revenue, I will reassess.
+I do not hold **IO**. Self-reported revenue with a verification gap, 98% drawdown from ATH, ongoing token unlocks and no on-chain governance make it too opaque for my risk tolerance. The enterprise partnerships and revenue growth may be real – $5.7M in Q1 2025 is genuine traction if accurate. If io.net closes the gap between headline metrics and verifiable on-chain data, I will reassess.
 
 The broader lesson: freedom and returns are genuinely in tension for compute networks today. Render proves that centralisation can produce better short-term returns. Akash bets that freedom produces more durable infrastructure. Both can be right on different timescales. The question is which timescale you are investing for.
