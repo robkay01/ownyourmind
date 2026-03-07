@@ -30,12 +30,24 @@ const entries = (await getCollection('tokenomics'))
 
   <div class="grid gap-6">
     {entries.map((entry) => (
-      <Card href={`/tokenomics/${entry.id}/`}>
-        <div class="text-sm text-[var(--color-text-tertiary)] mb-2">
-          {entry.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+      <Card href={`/tokenomics/${entry.id}/`} class="!p-0 overflow-hidden">
+        <div class="flex flex-col sm:flex-row">
+          <div class="sm:w-1/3 shrink-0">
+            <img
+              src={`/images/tokenomics-${entry.id}.webp`}
+              alt=""
+              class="w-full h-40 sm:h-full object-cover opacity-75"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col justify-center">
+            <div class="text-sm text-[var(--color-text-tertiary)] mb-2">
+              {entry.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </div>
+            <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
+            <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
+          </div>
         </div>
-        <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
-        <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
       </Card>
     ))}
   </div>
