@@ -43,9 +43,11 @@ Your principal is never sold or spent. Only the yield is diverted. 50% of that y
 
 Your MOR earnings are determined by your share of the total stETH pool. If 100,000 stETH is staked and you contribute 100 stETH, you receive 0.1% of daily capital emissions. That is roughly 3.5 MOR per day at year one rates.
 
-**The 7-day lock.** When you first deposit stETH, there is a 7-day lock before you can withdraw. After that, your stETH is freely withdrawable at any time. You stop earning MOR the moment you unstake, but your principal is not trapped. One caveat: making a new deposit restarts the 7-day lock for your entire balance from that address.
+**The 7-day lock on deposits.** When you first deposit stETH, there is a 7-day lock before you can withdraw your capital. After that, your stETH is freely withdrawable at any time. You stop earning MOR the moment you unstake, but your principal is not trapped. One caveat: making a new deposit restarts the 7-day lock for your entire balance from that address.
 
-**The bootstrapping lock.** At launch in February 2024, there was a one-time 90-day bootstrapping period where no MOR could be claimed or transferred. This ended in May 2024 and does not apply to new stakers.
+**No lock on earned MOR.** Earned MOR rewards can be claimed at any time — there is no vesting or lock on claims. You can claim as frequently as you like, even every Ethereum block, though each claim incurs a transaction fee. The only lock on MOR rewards is the voluntary Power Factor lock (covered below), where you choose to lock earned MOR in exchange for multiplied emissions.
+
+**Historical note.** At launch in February 2024, there was a one-time 90-day bootstrapping period where no MOR could be claimed or transferred. This ended in May 2024 and does not apply to new stakers.
 
 ### Multi-asset staking (Capital V2)
 
@@ -53,7 +55,7 @@ In September 2025, Morpheus expanded capital staking beyond stETH. You can now s
 
 Chainlink oracles normalise yields across asset types in real time, converting everything to USDC equivalents so MOR rewards are distributed fairly regardless of which asset you stake. This matters because stETH yield (~3-4%) is very different from USDC lending yield (~5-8% depending on market conditions), and the oracle ensures you earn proportional to your actual yield contribution, not just the dollar value of your deposit.
 
-For the multi-asset pools, MOR rewards begin accruing after 7 days and can be claimed after 90 days from deposit.
+For the multi-asset pools, MOR rewards begin accruing after 7 days.
 
 ## The Power Factor: locking MOR for multiplied rewards
 
