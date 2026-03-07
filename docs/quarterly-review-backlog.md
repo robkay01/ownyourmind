@@ -1,7 +1,8 @@
-# Quarterly Review Backlog
+# Review Backlog
 
-Research findings and score adjustments deferred to the next quarterly review.
-Next review: **April 2026**
+Research findings and score adjustments deferred to the next review cycle.
+Processed during monthly editorial reviews or quarterly deep reviews.
+See `docs/review-schedule.json` for next due dates.
 
 ---
 

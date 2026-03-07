@@ -1,0 +1,14 @@
+{
+  "monthly": {
+    "description": "Light editorial review — process backlog, check prose accuracy, assess score triggers",
+    "schedule": "1st of every month",
+    "last_completed": null,
+    "next_due": "2026-04-01"
+  },
+  "quarterly": {
+    "description": "Deep research review — full checklist, re-read whitepapers, team changes, governance, security",
+    "schedule": "1st of January, April, July, October",
+    "last_completed": null,
+    "next_due": "2026-04-01"
+  }
+}

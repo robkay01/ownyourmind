@@ -1,6 +1,20 @@
-# Quarterly Research Review Checklist
+# Quarterly Deep Research Review Checklist
 
-Schedule: January, April, July, October.
+**Schedule:** 1st of January, April, July, October
+**Lead:** Claude Code (proactive — check `docs/review-schedule.json` at conversation start)
+**Duration:** ~2-3 hours
+
+---
+
+## How to trigger
+
+Claude checks `docs/review-schedule.json` at the start of each conversation. If `quarterly.next_due` has passed, Claude prompts:
+
+> "A quarterly deep research review is due (last completed: [date]). This takes 2-3 hours. Want me to run it now?"
+
+Manual trigger: ask Claude "run quarterly review".
+
+**Pre-requisite:** Process `docs/quarterly-review-backlog.md` first (any entries not yet handled in monthly reviews).
 
 ---
 
@@ -112,3 +126,15 @@ npm run build        # Site builds
 ```
 
 Commit with message: `data: Q[N] [YYYY] quarterly research review`
+
+---
+
+## 8. Update schedule
+
+After completing the review:
+
+1. Update `docs/review-schedule.json`:
+   - Set `quarterly.last_completed` to today's date
+   - Set `quarterly.next_due` to the 1st of the next quarter month
+   - Also update `monthly.last_completed` and `monthly.next_due` (quarterly subsumes monthly)
+2. Clear all processed entries from `docs/quarterly-review-backlog.md`

@@ -81,6 +81,7 @@ When researching a new project for the `projects` collection, you **must** follo
 - `own-your-mind-research-plan.md` — **MANDATORY** research protocol for new project research (7-step sequence, source tiers, JSON schema, freedom score rubric)
 - `own-your-mind-claude-code-brief.md` § "Data Maintenance" — Full pipeline docs (automated refresh, sparklines, staleness, quarterly review)
 - `docs/data-refresh-pipeline.md` — How automated data refresh works (weekly GitHub/community metrics, market data, staleness checks, troubleshooting)
+- `docs/review-schedule.json` — **CHECK AT CONVERSATION START** — tracks monthly/quarterly review due dates
 
 ---
 
@@ -223,33 +224,46 @@ returnsScoreBreakdown:
 
 ---
 
-## Quarterly Review Process
+## Review Process (PROACTIVE — Claude Leads)
 
-Schedule: **January, April, July, October.** Claude Code is responsible for executing the review.
+Three cadences, Claude Code is responsible for all three:
+
+| Cadence | Schedule | What | Duration |
+|---------|----------|------|----------|
+| **Weekly** | Automated (cron/CI) | GitHub metrics, market data, community counts | Automated |
+| **Monthly** | 1st of every month | Process backlog, prose spot-check, score triggers | ~30 min |
+| **Quarterly** | 1st of Jan, Apr, Jul, Oct | Deep research: whitepapers, team, governance, security, full re-score | ~2-3 hrs |
+
+### Auto-trigger (IMPORTANT)
+
+At the **start of every conversation**, Claude MUST check `docs/review-schedule.json`. If `next_due` for either monthly or quarterly has passed, prompt the user:
+
+> "A [monthly/quarterly] review is due (last completed: [date]). Want me to run it now?"
+
+Manual trigger: user says "run monthly review" or "run quarterly review".
 
 ### Key Files
 
 | File | Purpose |
 |------|---------|
-| `docs/quarterly-review-checklist.md` | Step-by-step checklist (staleness, community, security, team, scores, JSON updates) |
-| `docs/quarterly-review-backlog.md` | **Deferred findings log** — research discoveries between reviews that may affect scores |
+| `docs/review-schedule.json` | Tracks last completed and next due dates — **check this at conversation start** |
+| `docs/monthly-review-checklist.md` | Light editorial review process |
+| `docs/quarterly-review-checklist.md` | Deep research review process |
+| `docs/quarterly-review-backlog.md` | Deferred findings log between reviews |
 
-### Workflow
+### Between Reviews
 
-1. **Before the review:** Read `docs/quarterly-review-backlog.md` first. These are pre-researched findings with evidence already documented. Process them before running the general checklist.
-2. **During the review:** Follow `docs/quarterly-review-checklist.md` steps 1-7 in order.
-3. **Between reviews:** When research uncovers findings that may affect scores but are not urgent enough to change immediately, log them in `docs/quarterly-review-backlog.md` with:
-   - Date discovered
-   - Project name
-   - Affected dimension and current vs proposed score
-   - Evidence summary
-   - Whether the editorial text has already been corrected (separate from score changes)
-4. **After the review:** Clear processed entries from the backlog. Commit with message: `data: Q[N] [YYYY] quarterly research review`
+When research uncovers findings that may affect scores but are not urgent enough to change immediately, log them in `docs/quarterly-review-backlog.md` with:
+- Date discovered
+- Project name
+- Affected dimension and current vs proposed score
+- Evidence summary
+- Whether the editorial text has already been corrected (separate from score changes)
 
 ### Score Change Rules
 
 - **Editorial corrections** (factual errors in prose) — fix immediately, do not defer
-- **Score adjustments** (dimension score changes) — defer to quarterly review unless the change crosses a grade boundary or is triggered by a major event (see freedom score triggers in checklist)
+- **Score adjustments** (dimension score changes) — defer to next monthly review unless the change crosses a grade boundary or is triggered by a major event (see freedom score triggers in quarterly checklist)
 - All score changes require evidence from Tier 1 or Tier 2 sources
 
 ---
