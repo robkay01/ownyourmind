@@ -39,19 +39,19 @@ This is where most participants enter the Morpheus ecosystem. The mechanism:
 3. In return, you receive a proportional share of the capital provider MOR emissions
 4. MOR rewards are distributed on Arbitrum (bridged via LayerZero)
 
-Your principal is never sold or spent. Only the yield is diverted. 50% of that yield buys MOR from the Uniswap AMM, and the other 50% pairs with the purchased MOR as protocol-owned liquidity. This is a clever mechanism — every day that capital providers are staking, the protocol's own liquidity deepens.
+Your principal is never sold or spent. Only the yield is diverted. 50% of that yield buys MOR from the Uniswap AMM, and the other 50% pairs with the purchased MOR as protocol-owned liquidity. This is a clever mechanism – every day that capital providers are staking, the protocol's own liquidity deepens.
 
 Your MOR earnings are determined by your share of the total stETH pool. If 100,000 stETH is staked and you contribute 100 stETH, you receive 0.1% of daily capital emissions. That is roughly 3.5 MOR per day at year one rates.
 
 **The 7-day lock on deposits.** When you first deposit stETH, there is a 7-day lock before you can withdraw your capital. After that, your stETH is freely withdrawable at any time. You stop earning MOR the moment you unstake, but your principal is not trapped. One caveat: making a new deposit restarts the 7-day lock for your entire balance from that address.
 
-**No lock on earned MOR.** Earned MOR rewards can be claimed at any time — there is no vesting or lock on claims. You can claim as frequently as you like, even every Ethereum block, though each claim incurs a transaction fee. The only lock on MOR rewards is the voluntary Power Factor lock (covered below), where you choose to lock earned MOR in exchange for multiplied emissions.
+**No lock on earned MOR.** Earned MOR rewards can be claimed at any time – there is no vesting or lock on claims. You can claim as frequently as you like, even every Ethereum block, though each claim incurs a transaction fee. The only lock on MOR rewards is the voluntary Power Factor lock (covered below), where you choose to lock earned MOR in exchange for multiplied emissions.
 
 **Historical note.** At launch in February 2024, there was a one-time 90-day bootstrapping period where no MOR could be claimed or transferred. This ended in May 2024 and does not apply to new stakers.
 
 ### Multi-asset staking (Capital V2)
 
-In September 2025, Morpheus expanded capital staking beyond stETH. You can now stake USDC, USDT and WBTC via Aave integration. The yield from these assets (Aave lending rates) is used in the same way as stETH yield — diverted to the protocol to buy MOR and build liquidity.
+In September 2025, Morpheus expanded capital staking beyond stETH. You can now stake USDC, USDT and WBTC via Aave integration. The yield from these assets (Aave lending rates) is used in the same way as stETH yield – diverted to the protocol to buy MOR and build liquidity.
 
 Chainlink oracles normalise yields across asset types in real time, converting everything to USDC equivalents so MOR rewards are distributed fairly regardless of which asset you stake. This matters because stETH yield (~3-4%) is very different from USDC lending yield (~5-8% depending on market conditions), and the oracle ensures you earn proportional to your actual yield contribution, not just the dollar value of your deposit.
 
@@ -81,7 +81,7 @@ In practice, the multipliers look roughly like this:
 | 5 years | ~9.4x |
 | 6 years (max) | ~10.7x |
 
-The curve is steepest in the early years because that is when emissions are highest and dilution is fastest. A 6-year lock at ~10.7x is significant — you are earning roughly eleven times the MOR per unit of staked capital compared to someone who does not lock at all.
+The curve is steepest in the early years because that is when emissions are highest and dilution is fastest. A 6-year lock at ~10.7x is significant – you are earning roughly eleven times the MOR per unit of staked capital compared to someone who does not lock at all.
 
 ### The rules
 
@@ -102,7 +102,7 @@ My reasoning:
 3. **Decentralised projects grow differently.** VC-backed projects get big fast because they spend investor money on growth. Decentralised projects with fair launches grow organically, which is slower but more durable. I would rather be early in something organic than late in something artificial.
 4. **I sized the position for the commitment.** The stETH I have staked is capital I do not need for six years. The MOR rewards are a bonus, not income I depend on. Size your positions for the lock period, not the other way around.
 
-My stETH principal remains freely withdrawable. Only the MOR rewards are locked. If the thesis breaks, I can pull my stETH and walk away — I just forfeit the locked MOR. That is a risk I am comfortable with.
+My stETH principal remains freely withdrawable. Only the MOR rewards are locked. If the thesis breaks, I can pull my stETH and walk away – I just forfeit the locked MOR. That is a risk I am comfortable with.
 
 ## Compute provider mechanics
 
@@ -114,9 +114,9 @@ This is not passive income. Running a competitive compute node requires investme
 
 ## What drives MOR value
 
-MOR is the access token for the Morpheus compute network. Under the current Yellowstone Compute Model, users hold MOR to gain an inference-per-second (IPS) quota — the more MOR you hold, the more compute you can access. This is different from a pay-per-query model. MOR is not burned when you run an inference. It is held as a stake that determines your access rate.
+MOR is the access token for the Morpheus compute network. Under the current Yellowstone Compute Model, users hold MOR to gain an inference-per-second (IPS) quota – the more MOR you hold, the more compute you can access. This is different from a pay-per-query model. MOR is not burned when you run an inference. It is held as a stake that determines your access rate.
 
-This is an important distinction. The value accrual mechanism is not "MOR gets burned when used" — it is "MOR must be held to access compute, creating persistent demand."
+This is an important distinction. The value accrual mechanism is not "MOR gets burned when used" – it is "MOR must be held to access compute, creating persistent demand."
 
 ### The actual burn mechanism
 
@@ -152,6 +152,6 @@ As a capital provider with a 6-year Power Factor lock, I track five things:
 
 The tokenomics are well designed for long-term alignment. The fair launch eliminates insider dump risk. The emission curve rewards early commitment. The Power Factor rewards conviction with a material multiplier. The burn mechanism creates structural deflation independent of usage volume.
 
-The main risks are the long lock period for Power Factor participants (you cannot change your mind), dependence on compute demand materialising at scale, and smart contract risk across a multi-chain architecture (Ethereum for staking, Arbitrum for rewards, Base for inference). The Code4rena audit in August 2025 found medium-severity issues around stETH rounding and Aave pool migration — these are the kinds of edge cases that matter when real capital is at stake.
+The main risks are the long lock period for Power Factor participants (you cannot change your mind), dependence on compute demand materialising at scale, and smart contract risk across a multi-chain architecture (Ethereum for staking, Arbitrum for rewards, Base for inference). The Code4rena audit in August 2025 found medium-severity issues around stETH rounding and Aave pool migration – these are the kinds of edge cases that matter when real capital is at stake.
 
 I am in this position because I believe the Morpheus compute network will achieve meaningful scale over the next several years. The six-year lock is a feature of my conviction, not a constraint on it. If that thesis proves wrong, I lose the locked MOR but keep my stETH principal. I sized the position with that outcome in mind.

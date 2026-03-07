@@ -11,8 +11,8 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = 'Own Your Mind — Independent research into decentralised AI', ogImage } = Astro.props;
-const fullTitle = title === 'Home' ? 'Own Your Mind — Sovereignty-First AI' : `${title} | Own Your Mind`;
+const { title, description = 'Own Your Mind – Independent research into decentralised AI', ogImage } = Astro.props;
+const fullTitle = title === 'Home' ? 'Own Your Mind – Sovereignty-First AI' : `${title} | Own Your Mind`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage || '/images/hero-network.webp', Astro.site).href;
 

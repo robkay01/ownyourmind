@@ -25,45 +25,45 @@ launchType: "ico"
 chain: "Ethereum, Base, BNB Chain, Solana (LayerZero OFT)"
 supplyType: "capped"
 maxSupply: "1,000,000,000 COOKIE"
-verdict: "A legitimate AI agent analytics product with real users and first-mover advantage. But the 'DAO' label is marketing — zero open source code, no verifiable governance, fully centralised infrastructure."
+verdict: "A legitimate AI agent analytics product with real users and first-mover advantage. But the 'DAO' label is marketing – zero open source code, no verifiable governance, fully centralised infrastructure."
 oymHolds: false
 ---
 
 ## What it does
 
-Cookie DAO operates **cookie.fun**, a data analytics platform that indexes, tracks, and scores over 1,500 AI agents across crypto. It ingests 7TB+ of live on-chain and social data feeds to calculate proprietary metrics — most notably **Mindshare**, a measure of an AI agent's share of social conversation volume that has become a widely referenced standard in the DeFAI space.
+Cookie DAO operates **cookie.fun**, a data analytics platform that indexes, tracks, and scores over 1,500 AI agents across crypto. It ingests 7TB+ of live on-chain and social data feeds to calculate proprietary metrics – most notably **Mindshare**, a measure of an AI agent's share of social conversation volume that has become a widely referenced standard in the DeFAI space.
 
 The platform provides:
 
-- **AI Agent Index** — comprehensive directory of 1,500+ crypto AI agents with real-time tracking of on-chain activity, token holders, market cap, and social metrics.
-- **Mindshare Metric** — proprietary calculation of social conversation share, used across the industry to rank AI agent attention and momentum.
-- **Smart Following** — tracks which influencers and smart money wallets are paying attention to specific agents.
-- **Cookie Data APIs** — token-gated data feeds that AI agents and dapps can plug into for real-time analytics.
-- **Cookie Snaps** — gamified social engagement rewards system where users earn SNAPS points convertible to COOKIE or partner tokens.
-- **Trading Interface** — launched May 2025, enabling direct trading from the analytics dashboard.
+- **AI Agent Index** – comprehensive directory of 1,500+ crypto AI agents with real-time tracking of on-chain activity, token holders, market cap, and social metrics.
+- **Mindshare Metric** – proprietary calculation of social conversation share, used across the industry to rank AI agent attention and momentum.
+- **Smart Following** – tracks which influencers and smart money wallets are paying attention to specific agents.
+- **Cookie Data APIs** – token-gated data feeds that AI agents and dapps can plug into for real-time analytics.
+- **Cookie Snaps** – gamified social engagement rewards system where users earn SNAPS points convertible to COOKIE or partner tokens.
+- **Trading Interface** – launched May 2025, enabling direct trading from the analytics dashboard.
 
-Founded in 2021 by **Filip Wielanier** (CEO) and **Wojciech Piechocinski** in Tallinn, Estonia, originally as Cookie3 — a MarketingFi analytics company. The pivot to AI agent analytics came with the DeFAI narrative in 2024. Both founders are doxxed. Team size estimated at approximately 15.
+Founded in 2021 by **Filip Wielanier** (CEO) and **Wojciech Piechocinski** in Tallinn, Estonia, originally as Cookie3 – a MarketingFi analytics company. The pivot to AI agent analytics came with the DeFAI narrative in 2024. Both founders are doxxed. Team size estimated at approximately 15.
 
 COOKIE is an ERC-20 token on Ethereum with LayerZero OFT bridging to Base, BNB Chain, and Solana. The token launched via IDO on Polkastarter/ChainGPT Pad and IEO on Bybit/Gate.io in June 2024 at $0.025-$0.028. Total funding raised: $6.82M across pre-seed ($3.3M led by The Spartan Group), strategic ($2.5M), and public sale ($1.025M). Backed by Animoca Brands, GSR, CMT Digital, Big Brain Holdings, and others.
 
 ## Value proposition
 
-Cookie DAO's core thesis is that AI agents need an indexing and analytics layer — the same way DeFi needed DeFiLlama, AI agents need cookie.fun. They were first to build it, and the Mindshare metric has genuine adoption as a reference standard.
+Cookie DAO's core thesis is that AI agents need an indexing and analytics layer – the same way DeFi needed DeFiLlama, AI agents need cookie.fun. They were first to build it, and the Mindshare metric has genuine adoption as a reference standard.
 
 The numbers support real product-market fit: 60,000+ users, 1,500+ agents tracked, 5M+ COOKIE locked for premium access, $16M+ distributed to MAF stakers, and $5M+ in Snaps rewards. Cookie.fun attracted 20,000 users within 48 hours of launch. The Binance listing in January 2025 pushed market cap to $218M.
 
-The token-gated model is the interesting piece. Premium analytics require locking 10,000 COOKIE (~$210 at current price). API access for AI agents requires COOKIE. This creates genuine demand beyond speculation — if you want the data, you need the token.
+The token-gated model is the interesting piece. Premium analytics require locking 10,000 COOKIE (~$210 at current price). API access for AI agents requires COOKIE. This creates genuine demand beyond speculation – if you want the data, you need the token.
 
 The counter-narrative is harsh but necessary. Cookie DAO is **not a decentralised project.** Despite the "DAO" branding:
 
-- **Zero open source code.** The cookie3 GitHub organisation has zero public repositories. The entire codebase — data pipeline, indexing engine, API, Mindshare algorithm — is proprietary.
+- **Zero open source code.** The cookie3 GitHub organisation has zero public repositories. The entire codebase – data pipeline, indexing engine, API, Mindshare algorithm – is proprietary.
 - **No verifiable governance.** No public Snapshot space, no governance forum, no on-chain voting history. Cookie3 and core contributors make all decisions.
 - **Fully centralised infrastructure.** Every component runs on Cookie3's servers. If they shut down, cookie.fun stops.
 - **No audits.** No third-party audit reports found for the smart contracts.
 
 The docs acknowledge the centralisation: "In its early phase, the Cookie DAO data layer is being built together with core contributors from Cookie3, but in the future, an infrastructure will be put in place that will enable an indefinite number of independent contributors." That future has no timeline.
 
-This is a centralised data company with a token, branded as a DAO. That can be a fine business — Nansen, Dune Analytics, and DexScreener are centralised and valuable. But calling it a DAO is misleading, and the sovereignty implications are real: your data access, your analytics, your API feeds all depend on one company continuing to operate.
+This is a centralised data company with a token, branded as a DAO. That can be a fine business – Nansen, Dune Analytics, and DexScreener are centralised and valuable. But calling it a DAO is misleading, and the sovereignty implications are real: your data access, your analytics, your API feeds all depend on one company continuing to operate.
 
 The 97.5% drawdown from ATH ($0.83 to $0.021) reflects a combination of aggressive insider unlocks (most vesting completed within 7 months) and market reassessment of whether analytics usage translates to sustainable token value.
 
@@ -71,9 +71,9 @@ The 97.5% drawdown from ATH ($0.83 to $0.021) reflects a combination of aggressi
 
 COOKIE has a fixed supply of 1 billion tokens with approximately 705 million circulating (70.5%). Final unlock in June 2028.
 
-Initial distribution was heavily insider-weighted: pre-seed rounds A/B/C (24.23%), team (9.5%), advisory (5%), strategic (6.14%) = approximately 45% to insiders. Public sale was only 4.38% and airdrop 2%. The vesting was unusually aggressive: 1-month cliff + 6-month linear. Industry standard is 12-month cliff + 24-36 month vesting. Most insider tokens unlocked by January 2025 — the same month as the ATH.
+Initial distribution was heavily insider-weighted: pre-seed rounds A/B/C (24.23%), team (9.5%), advisory (5%), strategic (6.14%) = approximately 45% to insiders. Public sale was only 4.38% and airdrop 2%. The vesting was unusually aggressive: 1-month cliff + 6-month linear. Industry standard is 12-month cliff + 24-36 month vesting. Most insider tokens unlocked by January 2025 – the same month as the ATH.
 
-Two burn mechanisms exist. First, 10% of COOKIE locked in MAF (Multi-Airdrop Farming) pools is burned — destroying 170K+ COOKIE daily as of July 2025. Second, 50% of API access fee revenue is burned. The dual burn is structurally sound but the actual impact is not publicly quantified because API revenue is not disclosed.
+Two burn mechanisms exist. First, 10% of COOKIE locked in MAF (Multi-Airdrop Farming) pools is burned – destroying 170K+ COOKIE daily as of July 2025. Second, 50% of API access fee revenue is burned. The dual burn is structurally sound but the actual impact is not publicly quantified because API revenue is not disclosed.
 
 Staking rewards shifted from APY-based to the Snaps points system in July 2025, making returns less predictable. MAF participants earn 10-20% of partner project reward pools but lose 10% of locked principal to the burn mechanism.
 
@@ -117,11 +117,11 @@ Cookie DAO scores at the bottom of our freedom scale. The "DAO" label is aspirat
 
 **Revenue Sustainability: 6/25.** Revenue sources exist: API access fees, partner project fees for Snaps campaigns, trading interface revenue. $5M+ in Snaps rewards distributed, ~$1M to stakers. However, no annual revenue figure is disclosed, no DeFiLlama or Token Terminal data available. Product has real usage (60K+ users) but revenue sustainability is unproven at scale.
 
-**Liquidity & Access: 8/15.** Listed on Binance, Bybit, KuCoin, Gate.io, Coinbase, Kraken, MEXC, Bitget — strong exchange coverage for a ~$15M market cap project. $17.1M daily volume exceeds market cap. LayerZero OFT enables cross-chain transfers. However, 97.5% decline from ATH means most holders are underwater, and low market cap means large orders could cause slippage.
+**Liquidity & Access: 8/15.** Listed on Binance, Bybit, KuCoin, Gate.io, Coinbase, Kraken, MEXC, Bitget – strong exchange coverage for a ~$15M market cap project. $17.1M daily volume exceeds market cap. LayerZero OFT enables cross-chain transfers. However, 97.5% decline from ATH means most holders are underwater, and low market cap means large orders could cause slippage.
 
 ### Quadrant: C (Low Freedom, Moderate Returns)
 
-Cookie DAO sits in Quadrant C — a centralised project with some commercial potential but no sovereignty value.
+Cookie DAO sits in Quadrant C – a centralised project with some commercial potential but no sovereignty value.
 
 ### Key risks
 
@@ -130,7 +130,7 @@ Cookie DAO sits in Quadrant C — a centralised project with some commercial pot
 - **Zero open source code.** Cannot audit, fork, or independently verify any technology claims.
 - **No audit reports.** No third-party security audits found for COOKIE smart contracts.
 - **Unproven revenue.** No public financials, no DeFiLlama listing, no Token Terminal data. Burns exist but their impact is unquantifiable.
-- **X/Twitter API dependency.** Social data feed depends on Twitter API access — single point of failure if API terms change.
+- **X/Twitter API dependency.** Social data feed depends on Twitter API access – single point of failure if API terms change.
 - **Short vesting enabled insider selling.** 1-month cliff + 6-month linear vs industry standard 12-month cliff + 24-36 month linear.
 - **Narrative dependency.** Value tied to overall DeFAI/AI agent market health. If the AI agent narrative fades, so does the analytics demand.
 - **Competition.** Kaito AI, DexScreener, and others expanding into AI agent analytics.
