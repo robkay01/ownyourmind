@@ -5,19 +5,19 @@ category: "compute"
 token: "RENDER"
 status: "active"
 freedomScore: 3
-returnsScore: 7.0
+returnsScore: 7.2
 returnsScoreBreakdown:
-  tokenUtility: 12
-  valueAccrual: 14
+  tokenUtility: 14
+  valueAccrual: 18
   supplyDynamics: 12
-  revenueSustainability: 20
+  revenueSustainability: 16
   liquidityAccess: 12
 returnsScoreEvidence:
-  tokenUtility: "Payment for render services. No native staking. Holders earn nothing by simply holding. Limited governance role."
-  valueAccrual: "Burn mechanism for services. Real Hollywood customers. Proven demand."
-  supplyDynamics: "Capped but foundation holds significant tokens. Inflation through rewards."
-  revenueSustainability: "Real revenue from real customers. Product-market fit demonstrated."
-  liquidityAccess: "Major CEX listings. Good DEX liquidity. $50M+ daily volume."
+  tokenUtility: "Settlement currency for rendering and AI compute. No native staking. Holders earn nothing by simply holding. Limited governance role."
+  valueAccrual: "BME burns 95% of job payments. Real Hollywood customers. Burns up 279% YoY. But still net inflationary 10x."
+  supplyDynamics: "644M cap but OTOY treasury 23.3% unvested. 91% held by ~902 addresses. Alameda history."
+  revenueSustainability: "69M frames rendered, 35% of volume in 2025. OctaneRender moat. But AI compute pivot late vs Akash/io.net. BME still net inflationary."
+  liquidityAccess: "Binance, Coinbase, Kraken, OKX. $50M+ daily volume. Solana SPL liquidity."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "render-token"
@@ -122,9 +122,9 @@ Three changes would materially increase Render's score:
 2. **Move to permissionless operator onboarding.** The permissioned model is the clearest centralisation vector. Akash proves that permissionless compute marketplaces work. The Foundation's approval process serves OTOY's quality control interests, not decentralisation. A reputation and staking-based operator model would distribute control away from the Foundation.
 3. **Commission a current security audit.** The only verified audit covers deprecated 2017 Ethereum contracts. The current Solana infrastructure, including BME emission contracts, escrow mechanisms and the SPL token programme, has no publicly verifiable audit. For a network handling enterprise production workloads and a $701 million market cap, this is a significant gap.
 
-## Returns score: 70/100
+## Returns score: 72/100
 
-RENDER scores 70/100 (B grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+RENDER scores 72/100 (B grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (14/20):** RENDER is the settlement currency for rendering jobs and, increasingly, AI compute through the Dispersed subnet. Creators pay in RENDER or Render Credits for GPU rendering, and node operators receive newly minted RENDER as compensation. The utility is clear but narrow – there is no meaningful staking mechanism, no governance weight tied to holdings, and no additional demand sink beyond job settlement. Unlike most DePIN tokens, simply holding RENDER earns you nothing. The token exists to settle transactions, full stop.
 
