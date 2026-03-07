@@ -1,0 +1,63 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import ProjectCompare from '../../components/ProjectCompare';
+import { getCollection } from 'astro:content';
+import { fetchMarketData } from '../../data/fetch-market-data';
+
+const entries = (await getCollection('projects'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const coingeckoIds = entries
+  .map((e) => e.data.coingeckoId)
+  .filter((id): id is string => !!id);
+
+const marketData = await fetchMarketData(coingeckoIds);
+
+const projects = entries.map((entry) => {
+  const md = entry.data.coingeckoId ? marketData[entry.data.coingeckoId] : null;
+  return {
+    id: entry.id,
+    title: entry.data.title,
+    token: entry.data.token,
+    category: entry.data.category,
+    status: entry.data.status,
+    freedomScore: entry.data.freedomScore,
+    returnsScore: entry.data.returnsScore ?? null,
+    returnsScoreBreakdown: entry.data.returnsScoreBreakdown ?? null,
+    returnsScoreEvidence: entry.data.returnsScoreEvidence ?? null,
+    launchType: entry.data.launchType ?? null,
+    chain: entry.data.chain ?? null,
+    supplyType: entry.data.supplyType ?? null,
+    maxSupply: entry.data.maxSupply ?? null,
+    verdict: entry.data.verdict ?? null,
+    oymHolds: entry.data.oymHolds,
+    market: md ? {
+      price: md.price,
+      marketCap: md.marketCap,
+      fdv: md.fdv,
+      priceChange24h: md.priceChange24h,
+      priceChange7d: md.priceChange7d,
+    } : null,
+  };
+});
+---
+
+<ContentLayout
+  title="Compare Projects"
+  description="Side-by-side comparison of DeAI projects. Compare freedom scores, returns scores, market data and key metrics."
+  breadcrumbs={[{ label: 'Projects', href: '/projects/' }, { label: 'Compare' }]}
+>
+  <div class="mb-8">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-3">Compare Projects</h1>
+    <p class="text-[var(--color-text-secondary)] max-w-2xl">
+      Select up to four projects to compare side by side. Scores, breakdowns, market data and verdicts in one view.
+    </p>
+  </div>
+
+  <ProjectCompare client:load projects={projects} />
+
+  <p class="text-xs text-[var(--color-text-tertiary)] mt-6">
+    Market data via CoinGecko. Scores reflect latest editorial review. <a href="/projects/" class="text-[var(--color-accent)]">Back to dashboard</a>.
+  </p>
+</ContentLayout>
