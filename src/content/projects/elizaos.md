@@ -103,7 +103,7 @@ The Princeton memory injection vulnerability is a material security concern. Res
 
 **The risk.** Shaw Walters' prior project Webaverse collapsed after a treasury security breach. This does not disqualify him, but the pattern of project launches followed by financial complications is worth noting. The high dependence on a single founder creates concentration risk.
 
-The competitive landscape is challenging from both directions. Within web3, [Virtuals Protocol](/projects/virtuals/) has a more complete tokenisation model with real revenue, and [Autonolas](/projects/autonolas/) offers stronger decentralisation with functioning on-chain governance. From the mainstream AI world, LangChain (118,000-plus GitHub stars) and CrewAI are adding web3 integrations without token overhead. ElizaOS sits between these worlds without clearly dominating either.
+The competitive landscape is challenging from both directions. Within web3, [Virtuals Protocol](/projects/virtuals/) has a more complete tokenisation model with real revenue, and [Olas](/projects/autonolas/) offers stronger decentralisation with functioning on-chain governance. From the mainstream AI world, LangChain (118,000-plus GitHub stars) and CrewAI are adding web3 integrations without token overhead. ElizaOS sits between these worlds without clearly dominating either.
 
 Regulatory risk is real. AI agents executing autonomous financial transactions create novel exposure across multiple jurisdictions. The "AI VC fund" framing raises obvious securities questions.
 

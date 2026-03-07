@@ -103,7 +103,7 @@ The handling of the January 2025 smart contract vulnerability raises governance 
 
 Smart contracts on Base are upgradeable (noted in the Cantina audit), meaning the team can modify contract behaviour. Base itself runs on a centralised sequencer operated by Coinbase, adding another layer of centralisation beneath the protocol.
 
-The competitive landscape is challenging. Free, open-source frameworks (LangChain, CrewAI, AutoGPT) offer comparable agent capabilities. [Autonolas](/projects/autonolas/) provides a more decentralised agent protocol. [ElizaOS](/projects/elizaos/) competes for developer mindshare on Solana. Virtuals' moat is the tokenisation layer, not the AI, and tokenisation mechanics are easily replicated.
+The competitive landscape is challenging. Free, open-source frameworks (LangChain, CrewAI, AutoGPT) offer comparable agent capabilities. [Olas](/projects/autonolas/) provides a more decentralised agent protocol. [ElizaOS](/projects/elizaos/) competes for developer mindshare on Solana. Virtuals' moat is the tokenisation layer, not the AI, and tokenisation mechanics are easily replicated.
 
 The 84.6% decline from ATH reflects market scepticism about the sustainability of the agent launchpad model. If the next AI narrative cycle does not materialise, or if agent utility does not improve beyond speculative token trading, the protocol's revenue model has no floor.
 

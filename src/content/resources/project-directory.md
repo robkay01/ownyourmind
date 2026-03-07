@@ -43,7 +43,7 @@ Platforms and protocols for building autonomous AI agents.
 | Project | Token | Status | Focus | Review |
 |---------|-------|--------|-------|--------|
 | [Morpheus](/projects/morpheus/) | MOR | Active | Personal AI agents on decentralised compute. Fair launch. Power Factor staking. Compute marketplace live. | [Full review](/projects/morpheus/) |
-| [Autonolas](/projects/autonolas/) | OLAS | Active | Multi-agent service framework across nine blockchains. 14.5M transactions, 542 daily active agents. | [Full review](/projects/autonolas/) |
+| [Olas](/projects/autonolas/) | OLAS | Active | Multi-agent service framework across nine blockchains. 14.5M transactions, 542 daily active agents. | [Full review](/projects/autonolas/) |
 | [Fetch.ai / ASI Alliance](/projects/fetch-asi/) | FET | Active | Autonomous economic agents. Merged with SingularityNET and CUDOS. Ocean withdrew October 2025. | [Full review](/projects/fetch-asi/) |
 | [Virtuals Protocol](/projects/virtuals/) | VIRTUAL | Active | AI agent launchpad on Base. 17,000+ agents, $39.5M cumulative revenue. Centralised GAME inference engine. | [Full review](/projects/virtuals/) |
 | [ElizaOS](/projects/elizaos/) | ELIZAOS | Active | Most popular open-source AI agent framework in web3. 17,600+ GitHub stars, 583 contributors. | [Full review](/projects/elizaos/) |

@@ -20,6 +20,33 @@ See `docs/review-schedule.json` for next due dates.
 
 - **Token Utility (18 → 19?):** Power Factor adds another utility layer beyond staking/compute/agents. Marginal — 18/20 already reflects strong multi-sided utility. Probably leave as-is.
 
+---
+
+## Akash Network (AKT)
+
+**Date discovered:** 2026-03-07
+
+### Returns Score (current: 62/100)
+
+**Trigger:** BME (Burn-Mint Equilibrium) going to on-chain vote, upgrade scheduled for March 23rd 2026 at 14:00 UTC. Review once live and confirmed on-chain.
+
+- **Value Accrual (10 → 14–15?):** Editorial currently says "BME activation would change this equation, but it has been 'coming soon' for a while." Once live, AKT spent on compute is burned directly – a functioning value accrual mechanism tied to $3.15M real revenue. Also introduces WASM smart contracts. Significant upgrade from "near zero real yield."
+
+- **Supply Dynamics (12 → 14?):** Editorial says "the token is straightforwardly inflationary" and BME is "code-complete but not yet active." Activation changes this from narrative to reality. Team estimates inflation drops from 8% to ~5.2% at current usage – still inflationary but materially better.
+
+- **Estimated total impact:** 62 → 68–70 (C → C+/B-). Review after March 23rd activation is confirmed.
+
+### Editorial updates required on activation
+
+- Tokenomics section: "Activation target is early-mid 2026" → update with actual date
+- Value Accrual evidence: remove "BME approved but not yet active"
+- Supply Dynamics evidence: remove "BME burn approved but not active"
+- maxSupply field: remove "BME burn approved but not yet active"
+- render-vs-akash-vs-ionet.md: update comparison table ("Not yet" for AKT burn → active)
+- mor-vs-tao-vs-fet.md: no impact (doesn't cover Akash)
+
+---
+
 ### Editorial corrections already applied (2026-03-07)
 
 These are not deferred — they were fixed in the live articles and project page:

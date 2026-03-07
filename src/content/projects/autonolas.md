@@ -1,5 +1,5 @@
 ---
-title: "Autonolas"
+title: "Olas"
 description: "An autonomous agent protocol for building, deploying, and co-owning AI agents across nine blockchains. Real on-chain usage (14.5M transactions, 542 daily active agents) but 99.6% token decline, tiny marketplace economics, and 42.65% insider allocation with no enforced vesting."
 category: "agent"
 token: "OLAS"
