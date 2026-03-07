@@ -5,26 +5,26 @@ category: "compute"
 token: "AKT"
 status: "active"
 freedomScore: 7
-returnsScore: 6.6
+returnsScore: 6.2
 returnsScoreBreakdown:
   tokenUtility: 16
   valueAccrual: 10
   supplyDynamics: 12
-  revenueSustainability: 18
+  revenueSustainability: 14
   liquidityAccess: 10
 returnsScoreEvidence:
   tokenUtility: "Payment for compute, staking for governance/security, validator requirement."
-  valueAccrual: "Take rate on compute fees. Staking rewards from inflation + fees. But take rate is small."
-  supplyDynamics: "Uncapped supply with inflation. BME burn not yet active. Moderate dilution."
-  revenueSustainability: "Real customers using decentralized cloud. Revenue growing, still emission-heavy."
-  liquidityAccess: "Tier-2 CEX listings. Moderate DEX liquidity. $1-5M daily volume."
+  valueAccrual: "Take rate on compute fees. Staking rewards from inflation + fees. But take rate is small and real yield is near zero."
+  supplyDynamics: "Uncapped supply with 8% annual inflation. BME burn approved but not yet active. All vesting complete."
+  revenueSustainability: "Real customers (Venice, ElizaOS, Morpheus, Gensyn). $3.15M annual revenue growing 128% YoY. But revenue-to-emission ratio below 0.5. Still emission-heavy."
+  liquidityAccess: "Coinbase, Kraken, KuCoin. No Binance. $1-5M daily volume."
 publishDate: 2025-03-01
 draft: false
 coingeckoId: "akash-network"
 launchType: "ico"
 chain: "Cosmos"
 supplyType: "uncapped"
-maxSupply: "388.5M genesis cap (inflationary via staking rewards, BME burn mechanism not yet active)"
+maxSupply: "No max supply. 388.5M genesis cap + 8% annual inflation. BME burn approved but not yet active."
 verdict: "The most credible decentralised cloud marketplace operating today. Real revenue, real customers, but chain migration looming."
 oymHolds: true
 ---
@@ -94,7 +94,7 @@ No formal protocol-level security audit has been disclosed despite the network o
 
 Overclock Labs is a US-incorporated entity (Delaware), exposing the project to SEC, CFTC and compute export regulations. Osuri is the key person risk. He is the public face, strategic driver and open-source credibility anchor. The Starbonds offering introduces new dilution and regulatory dimensions that are not yet fully transparent.
 
-**My position.** I do not hold AKT. I have indirect exposure through Venice (which uses Akash GPUs) and Morpheus (which routes compute through Akash providers). I find the project technically credible but the chain migration introduces too much uncertainty for a direct position at current prices.
+**My position.** I hold AKT. I also have indirect exposure through Venice (which uses Akash GPUs) and Morpheus (which routes compute through Akash providers). The chain migration introduces uncertainty but I believe the project's technical credibility and real revenue justify the position.
 
 ## Freedom score: 66/100
 
@@ -120,24 +120,24 @@ Three changes would materially increase Akash's score:
 2. **Execute the chain migration transparently.** Publish a technical specification. Run a governance vote on the destination chain. Provide a detailed migration timeline with milestones. The current state, aspirational timelines with no published roadmap, creates justified uncertainty.
 3. **Grow the provider count.** Roughly 69 providers, declining through 2025, is not decentralised cloud. Homenode is a step in the right direction. The target should be hundreds of active providers across multiple geographies before claiming the "decentralised AWS" positioning with a straight face.
 
-## Returns score: 66/100
+## Returns score: 62/100
 
-AKT scores 66/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+AKT scores 62/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
-**Token utility (16/20):** AKT serves three clear functions: payment for compute on the marketplace, staking for validator security and governance, and a requirement for running validator infrastructure. Tenants pay in AKT (or USDC, with AKT settlement), and validators must bond AKT to participate. The utility is genuine and structurally necessary — the network cannot function without the token. The gap to a perfect score is the lack of a broader demand sink beyond compute settlement and staking.
+**Token utility (16/20):** AKT serves three clear functions: payment for compute on the marketplace, staking for validator security and governance, and a requirement for running validator infrastructure. Tenants pay in AKT (or USDC, with AKT settlement), and validators must bond AKT to participate. The utility is genuine and structurally necessary. The network cannot function without the token. The gap to a perfect score is the lack of a broader demand sink beyond compute settlement and staking.
 
-**Value accrual (13/25):** The protocol takes a cut on compute fees, and staking rewards come from a combination of inflation and transaction fees. The problem is that the take rate on a $3.15 million annual revenue base generates negligible fee income relative to the token's $88 million market cap. Staking yields roughly 7.3% nominal, but after 8% inflation and the 50% community pool tax, real yield is approximately zero. You are running to stand still. BME activation would change this equation, but it has been "coming soon" for a while.
+**Value accrual (10/20):** The protocol takes a cut on compute fees, and staking rewards come from a combination of inflation and transaction fees. The problem is that the take rate on a $3.15 million annual revenue base generates negligible fee income relative to the token's $88 million market cap. Staking yields roughly 7.3% nominal, but after 8% inflation and the 50% community pool tax, real yield is approximately zero. You are running to stand still. BME activation would change this equation, but it has been "coming soon" for a while.
 
-**Supply dynamics (12/20):** AKT has no hard cap and runs 8% maximum annual inflation. The BME mechanism — which would burn AKT spent on compute and mint new AKT to providers — is code-complete but not yet active. Until it activates, the token is straightforwardly inflationary. All initial investor and team allocations are fully vested, which removes cliff-dump risk, but the ongoing dilution from staking rewards is real. The 50% community pool tax redirects half of inflation to community spending, which is good governance but does not reduce supply pressure.
+**Supply dynamics (12/20):** AKT has no hard cap and runs 8% maximum annual inflation. The supply is uncapped: the 388.5 million genesis cap is not a ceiling but a starting point, and inflation mints new tokens beyond it indefinitely. The BME mechanism, which would burn AKT spent on compute and mint new AKT to providers, is code-complete but not yet active. Until it activates, the token is straightforwardly inflationary. All initial investor and team allocations are fully vested, which removes cliff-dump risk, but the ongoing dilution from staking rewards is real. The 50% community pool tax redirects half of inflation to community spending, which is good governance but does not reduce supply pressure. Even with BME active at current adoption, the team estimates inflation would only drop from 8% to ~5.2%. The token remains inflationary either way.
 
-**Revenue sustainability (14/20):** This is Akash's strongest returns dimension relative to the field. $3.15 million in annual revenue from real customers — Venice, ElizaOS, Morpheus, Gensyn — running real workloads is more than most DeAI projects can claim. Revenue grew 128% year-over-year. The marketplace has genuine product-market fit for permissionless cloud compute at discount prices. The concern is absolute scale: $3.15 million would not register as a rounding error at AWS. The revenue is real but tiny, and the gap between "working product" and "sustainable economy" remains wide.
+**Revenue sustainability (14/25):** This is Akash's strongest returns dimension relative to the field. $3.15 million in annual revenue from real customers (Venice, ElizaOS, Morpheus, Gensyn) running real workloads is more than most DeAI projects can claim. Revenue grew 128% year-over-year. The marketplace has genuine product-market fit for permissionless cloud compute at discount prices. The concern is absolute scale: $3.15 million would not register as a rounding error at AWS. The revenue is real but tiny, and the revenue-to-emission ratio sits below 0.5 (roughly $3.15 million revenue against ~$7 million in annual inflation-driven dilution). The gap between "working product" and "sustainable economy" remains wide.
 
-**Liquidity and access (10/15):** AKT is listed on Coinbase and Kraken, which provides reasonable access for Western retail and institutional buyers. Daily volume runs $1-5 million, which is adequate for moderate position sizes without excessive slippage. The notable absence is Binance — the largest exchange by volume — which limits Asian market discovery and liquidity depth. DEX liquidity on Osmosis is moderate. Not thin enough to be a problem, not deep enough to be a strength.
+**Liquidity and access (10/15):** AKT is listed on Coinbase and Kraken, which provides reasonable access for Western retail and institutional buyers. Daily volume runs $1-5 million, which is adequate for moderate position sizes without excessive slippage. The notable absence is Binance, the largest exchange by volume, which limits Asian market discovery and liquidity depth. DEX liquidity on Osmosis is moderate. Not thin enough to be a problem, not deep enough to be a strength.
 
 ### Path to improvement
 
 Three changes would materially increase Akash's returns score:
 
-1. **Activate BME.** The burn-and-mint mechanism is the single most impactful change for AKT's economic model. Converting compute fees into token burns would create a direct link between network usage and token value. Every month it remains inactive is a month where inflation dilutes holders with no offsetting mechanism.
+1. **Activate BME.** The burn-and-mint mechanism is the single most impactful change for AKT's economic model. Converting compute fees into token burns would create a direct link between network usage and token value. Every month it remains inactive is a month where 8% inflation dilutes holders with no offsetting mechanism. Even with BME active, current revenue would only reduce effective inflation to ~5.2%. The mechanism needs both activation and significantly higher revenue to make a real dent.
 2. **Secure a Binance listing.** The absence from the world's largest exchange is a concrete liquidity constraint. Binance coverage would meaningfully increase daily volume, improve price discovery, and expand Akash's visibility in Asian markets where much of the retail crypto activity occurs.
-3. **Scale revenue by an order of magnitude.** $3.15 million annual revenue against an $88 million market cap gives a price-to-revenue ratio of roughly 28x. That is better than most DeAI tokens but still stretched. Growing revenue toward $30 million would make the BME burn mechanism economically meaningful and support a credible value accrual narrative.
+3. **Scale revenue by an order of magnitude.** $3.15 million annual revenue against an $88 million market cap gives a price-to-revenue ratio of roughly 28x. More critically, the revenue-to-emission ratio is below 0.5: revenue does not even cover the dilution from inflation. Growing revenue toward $30 million would make the BME burn mechanism economically meaningful and support a credible value accrual narrative.
