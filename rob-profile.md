@@ -2,17 +2,21 @@
 
 ## Who Rob Is
 
-- **Name**: Rob Kay (online: @0xBobski)
+- **Name**: Rob Kay (online: @0xBobski, LinkedIn: [robdkay](https://linkedin.com/in/robdkay))
 - **Based**: Fremantle, Western Australia (originally Lancashire, UK; moved to Perth 2012)
-- **Born**: 1980
+- **Born**: 23 May 1980
 - **Education**: 1st Class BA (Hons), University of Liverpool (1998-2003). David Inman Prize, Liverpool Region Building Employers' Confederation Prize, Norwest Holst Prize (all 2003).
 - **Professional qualification**: MCIOB Chartered Construction Manager (Chartered Institute of Building, since 2007)
+- **LinkedIn headline**: "Owner-Side Project Director | Major Infrastructure, PPP & Energy Transition"
+- **LinkedIn industry**: Renewable Energy Power Generation
 - **Background**: 20+ years in construction and infrastructure, progressing from site engineer through PM roles to owner-side Project Director. Career spent largely on the owner/investor side across Australia and the UK, working within PPP, DBFM, EPC, and D&C delivery models. Full asset lifecycle experience from procurement strategy through construction, commissioning, and operational handover.
 - **Current focus**: 70% Construction Claims Platform, 30% DeAI content (Own Your Mind)
 - **Hardware**: Mac Studio M4 Max (64GB RAM), two external curved monitors, RackNerd VPS in Texas running Agent Zero with Docker
 - **DeAI involvement**: Morpheus (capital provider, stETH staking for MOR), explored Bittensor, Akash, Venice.ai (VVV/DIEM staking), Agent Zero with Venice + Morpheus APIs
 - **Crypto experience**: Years in Bitcoin and crypto markets, TradingView Pine Script strategies, Solidity on Base, Polymarket. Lost funds in FTX collapse (filed with Kroll). Early into Secret Network, zkSync, Sovryn, Arweave/AO. Active airdrop hunter. Advanced Diploma of Applied Blockchain (MoveAcademy, 2023).
 - **Tech stack**: Astro, TypeScript, Tailwind CSS, Cloudflare Pages, Git, VS Code/Cursor, Claude Code, Homebrew on Mac
+- **Professional network**: Strong WA government and infrastructure connections (Infrastructure WA, DevelopmentWA, Water Corporation, Main Roads WA). Active in PPP/infrastructure investor circles (IPFA, GIIA, Infrastructure Partnerships Australia). Recent interest in data centres (Data Centres Australia, NEXTDC, Google Cloud, NVIDIA) connecting construction background to DeAI compute infrastructure. Follows DePIN Association, Enterprise Ethereum Alliance, Blockchain Australia, a16z crypto.
+- **LinkedIn job preferences**: Project Manager / Project Director / Senior Project Manager. Full-time, contract or part-time. Perth-based. Open to recruiters. Casually browsing.
 - **Other sites**: erwte.com.au, homevacuumzone.com, kidsittingsafe.com, 4orbs.com
 
 ## Career History (from LinkedIn)
@@ -24,6 +28,18 @@
 | 2012-2014 | Project Manager | Aurecon (EPCM) | Rio Tinto's A$500m Wickham Accommodation Expansion. Central facilities, modular FIFO units, live operational environment. |
 | 2004-2012 | Senior PM / Employer's Agent | Davis Langdon / AECOM (UK & Europe) | Major public, commercial, industrial assets. Echo Arena/BT Convention Centre Liverpool, First Direct Arena Leeds, Copenhagen Arena, National Football Museum Manchester. |
 | 2000-2004 | Engineer | Carillion (UK) | 17-storey apartments Salford Quays, 29-storey Beetham tower Liverpool, Manchester Business Park. Site engineering, setting out, H&S management. |
+
+**LinkedIn summary (Rob's own words):**
+> I am an owner-side Project Director with over 20 years' experience leading and managing major infrastructure and energy asset developments across Australia and the UK, including PPP and DBFM projects delivered under EPC and D&C models. I specialise in complex and high-risk project environments, where delivery certainty, governance, and asset value require active leadership through periods of change, constraint, or transition. My roles have involved Employer's Representative authority and senior accountability to boards, financiers, regulators, and government stakeholders. My experience spans the full asset lifecycle, from early project definition and procurement strategy through construction, commissioning, market and network interface, and operational handover. I am frequently engaged to stabilise delivery, rebuild confidence across interfaces, and guide assets through challenging phases toward operable outcomes. Core areas of focus include owner-side EPC and PPP governance, commercial and contractual risk, delivery and recovery strategy, regulatory and market interface management, and executive-level stakeholder engagement. I work with owners and investors to protect asset value and lead complex projects to sustainable, long-term outcomes.
+
+**LinkedIn skills (81 listed, key clusters):**
+- **Core PM**: Project Management, Construction Project Management, Project Planning, Project Delivery, Project Control, Scheduling, Oracle Primavera, Asta Powerproject, Microsoft Project, Jira, Agile PM
+- **Commercial/Legal**: Contract Management, Construction Law, Delay Claims, Delay Analysis, Dispute Resolution, Procurement, Cost Control, Cost Engineering, Cost Planning, Quantity Surveying, Value Engineering, Commercial Management
+- **Infrastructure/Energy**: Power Generation, Power Systems, Electrical Engineering, Grid Connection, Waste-to-Energy, Renewable Energy, Electricity Markets, Energy Industry
+- **Finance**: Project Finance, Corporate Finance, Financial Modeling, Financial Statement Analysis, Budget Management
+- **Technical**: Civil Engineering, Construction Engineering, MEP, P&ID, PFD, Construction Drawings, Wiring Diagrams, Land Surveying, Concrete
+- **Specialist sectors**: Stadiums, Arenas, Public-Private Partnerships, EPCM, EPC, Asset Management, Facilities Management, ESG
+- **Tech/Blockchain**: Blockchain, Smart Contracts, Computer Science, Programming
 
 **What this means for OYM:** Rob has spent his career on the owner/investor side of the table, not the contractor side. He evaluates from the position of someone protecting asset value and managing delivery risk, not someone selling a product. This is the same lens he applies to DeAI projects.
 
@@ -41,6 +57,8 @@ Rob is a systematic learner. Recent completions include:
 - Electric Power Systems (University at Buffalo, 2022)
 - Advanced Diploma of Applied Blockchain (MoveAcademy, 2023)
 - Introduction to Digital Currencies (University of Nicosia, 2019, verified on Bitcoin blockchain)
+
+Also attended: EESA WA Chapter 2024 – WA Clean Energy Future (Oct 2024), registered for UKA International Construction Adjudication & Arbitration Conference (Jun 2024). LinkedIn Premium Career subscriber (Sep–Nov 2024).
 
 This pattern matters for voice: Rob doesn't wing it. He studies the domain formally before writing about it. The DeAI writing comes from the same disciplined approach he applies to infrastructure finance or energy markets.
 
