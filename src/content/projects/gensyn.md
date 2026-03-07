@@ -113,7 +113,7 @@ The $473M FDV prices perfection. The public sale clearing at this valuation mean
 
 No security audits have been published for the smart contracts or protocol, despite $66.74 million in funding and a testnet processing 90 million transactions.
 
-**My position.** I do not hold $AI tokens. The project has not launched a token for public trading. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a practitioner perspective; economic exposure requires a high tolerance for uncertainty.
+**My position.** I do not hold $AI tokens. The project has not launched a token for public trading. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a hands-on perspective; economic exposure requires a high tolerance for uncertainty.
 
 ## Freedom score: 52/100
 

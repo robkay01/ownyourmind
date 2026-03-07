@@ -1,6 +1,6 @@
 ---
 title: "How MOR Actually Works"
-description: "A practitioner's breakdown of Morpheus token economics. Emission schedules, staking mechanics, the Power Factor multiplier, and what the numbers mean for real participants."
+description: "A capital provider's breakdown of Morpheus token economics. Emission schedules, staking mechanics, the Power Factor multiplier, and what the numbers actually mean if you're deploying capital."
 publishDate: 2025-03-01
 updatedDate: 2026-03-07
 draft: false
@@ -148,7 +148,7 @@ As a capital provider with a 6-year Power Factor lock, I track five things:
 
 5. **Compute demand.** This is the leading indicator for long-term token value. If compute demand grows, more MOR needs to be held for access and the economic model strengthens. The move to production on Base in December 2025 was a meaningful milestone.
 
-## Practitioner assessment
+## My assessment
 
 The tokenomics are well designed for long-term alignment. The fair launch eliminates insider dump risk. The emission curve rewards early commitment. The Power Factor rewards conviction with a material multiplier. The burn mechanism creates structural deflation independent of usage volume.
 

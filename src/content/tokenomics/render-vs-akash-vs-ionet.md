@@ -86,7 +86,7 @@ Render has the best-designed value capture mechanism (BME). Akash has the most t
 
 ## The freedom-returns trade-off
 
-This is the core question for practitioners. Does centralisation produce better returns?
+This is the core question for investors. Does centralisation produce better returns?
 
 The data says yes, for now. Render's proprietary engine, permissioned network and curated operator base produce a higher-quality product that attracts higher-value customers. The Hollywood partnerships are real. The OctaneRender integration is a genuine moat. And the market rewards this with a $696M valuation.
 
