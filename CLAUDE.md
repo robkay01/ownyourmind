@@ -223,4 +223,35 @@ returnsScoreBreakdown:
 
 ---
 
+## Quarterly Review Process
+
+Schedule: **January, April, July, October.** Claude Code is responsible for executing the review.
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| `docs/quarterly-review-checklist.md` | Step-by-step checklist (staleness, community, security, team, scores, JSON updates) |
+| `docs/quarterly-review-backlog.md` | **Deferred findings log** — research discoveries between reviews that may affect scores |
+
+### Workflow
+
+1. **Before the review:** Read `docs/quarterly-review-backlog.md` first. These are pre-researched findings with evidence already documented. Process them before running the general checklist.
+2. **During the review:** Follow `docs/quarterly-review-checklist.md` steps 1-7 in order.
+3. **Between reviews:** When research uncovers findings that may affect scores but are not urgent enough to change immediately, log them in `docs/quarterly-review-backlog.md` with:
+   - Date discovered
+   - Project name
+   - Affected dimension and current vs proposed score
+   - Evidence summary
+   - Whether the editorial text has already been corrected (separate from score changes)
+4. **After the review:** Clear processed entries from the backlog. Commit with message: `data: Q[N] [YYYY] quarterly research review`
+
+### Score Change Rules
+
+- **Editorial corrections** (factual errors in prose) — fix immediately, do not defer
+- **Score adjustments** (dimension score changes) — defer to quarterly review unless the change crosses a grade boundary or is triggered by a major event (see freedom score triggers in checklist)
+- All score changes require evidence from Tier 1 or Tier 2 sources
+
+---
+
 *Updated March 2026 — Agent Zero Partnership Active*
