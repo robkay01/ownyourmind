@@ -23,8 +23,8 @@ Render, Akash and io.net are the three largest decentralised compute networks by
 | **Supply cap** | 644M (hard) | No cap (8% inflation) | 800M (hard) |
 | **Network model** | Permissioned | Permissionless | Permissionless portal |
 | **Core software** | Proprietary (OTOY) | Open source (Apache 2.0) | Partially open |
-| **Freedom score** | 32/100 (F) | 66/100 (C) | Not yet scored |
-| **Returns score** | 72/100 (B) | 62/100 (C) | Not yet scored |
+| **Freedom score** | 32/100 (F) | 66/100 (C) | 40/100 (D) |
+| **Returns score** | 72/100 (B) | 62/100 (C) | 49/100 (D) |
 
 ## Render: centralisation as a product strategy
 
