@@ -2,7 +2,7 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-07
+Updated: 2026-03-08
 
 ---
 
@@ -31,11 +31,12 @@ Updated: 2026-03-07
 
 All 34 projects have both Freedom Scores and Returns Scores with full editorial breakdowns.
 
-### Tokenomics (3 articles)
+### Tokenomics (4 articles)
 
 1. **How MOR Actually Works** — capital provider's breakdown of Morpheus token economics, Power Factor, burn mechanics
 2. **MOR vs TAO vs FET: Token Models Compared** — three approaches to tokenising AI infrastructure compared
 3. **RENDER vs AKT vs IO: The Revenue Question** — why Render scores highest on returns despite lowest freedom, revenue model comparison
+4. **Burn-Mint Equilibrium: What Actually Changes for AKT Holders** — AEP-76 mechanics, worked examples, safety infrastructure, Render BME comparison, post-activation metrics
 
 ### Build (2 tutorials)
 
@@ -46,13 +47,14 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 
 1. **Week 1: What I'm Running** — launch dispatch
 
-### Resources (3 pages)
+### Resources (4 pages)
 
 1. **Freedom Score Methodology** — full rubric for the 6-dimension freedom score
 2. **Returns Score Methodology** — full rubric for the 5-dimension returns score
-3. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
+3. **The Quadrant Model** — how Freedom and Returns scores combine into A/B/C/D positioning
+4. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
 
-**Total published content: 50 pages**
+**Total published content: 52 pages**
 
 ---
 
@@ -116,12 +118,21 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ## Tokenomics Pipeline
 
-3 articles published. Candidates for future:
+4 articles published.
+
+### Priority 1 — Tied to market events
+
+| Article | Trigger | Target timing | Notes |
+|---|---|---|---|
+| ~~**Burn-Mint Equilibrium: What Actually Changes for AKT Holders**~~ | ~~Akash BME vote (March 23rd)~~ | ~~March 2026~~ | **DONE** — Published 2026-03-08. Includes Render BME comparison section, so separate BME comparison article no longer needed. |
+| **ASI Alliance: What the Merged Tokenomics Actually Mean** | FET/OCEAN/AGIX migration ongoing | Q2 2026 | Token migration mechanics, merged supply dynamics, what holders of each original token get. |
+| **Bittensor Subnet Economics: How dTAO Actually Works** | dTAO launched | Q2 2026 | Novel subnet staking/emission model, poorly understood, high search interest. Evergreen once written. |
+
+### Priority 2 — Evergreen candidates
 
 - Staking economics across DeAI networks — where the real yield is
 - Vesting schedules and unlock risks — what the charts don't tell you
 - DeAI token classification: utility vs governance vs speculation
-- BME deep-dive: Akash vs Render burn mechanics compared (timely once Akash BME activates March 23rd)
 
 ---
 
@@ -166,6 +177,6 @@ Current backlog: `docs/quarterly-review-backlog.md`
 No fixed dates — quality over cadence. Current focus areas:
 
 1. Monthly/quarterly review process (first monthly review due April 2026)
-2. Akash BME activation follow-up (March 23rd) — update project page + tokenomics articles
+2. Akash BME activation follow-up (March 23rd) — update project page + returns score once live on mainnet
 3. New tokenomics articles as market events warrant
 4. Build tutorials when Rob has hands-on experience to share
