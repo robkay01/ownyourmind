@@ -3,9 +3,11 @@ const currentPath = Astro.url.pathname;
 
 const navItems = [
   { label: 'WHY DeAI', href: '/why-deai/' },
-  { label: 'PROJECTS', href: '/projects/' },
+  { label: 'PROJECTS', href: '/projects/', children: [
+    { label: 'Compare', href: '/projects/compare/' },
+  ]},
   { label: 'TOKENOMICS', href: '/tokenomics/' },
-{ label: 'RESOURCES', href: '/resources/' },
+  { label: 'RESOURCES', href: '/resources/' },
 ];
 
 function isActive(href: string): boolean {
@@ -25,17 +27,50 @@ function isActive(href: string): boolean {
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center gap-1">
         {navItems.map((item) => (
-          <a
-            href={item.href}
-            class:list={[
-              'px-3 py-2 text-sm font-medium rounded-md transition-colors no-underline',
-              isActive(item.href)
-                ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
-                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
-            ]}
-          >
-            {item.label}
-          </a>
+          item.children ? (
+            <div class="relative group">
+              <a
+                href={item.href}
+                class:list={[
+                  'px-3 py-2 text-sm font-medium rounded-md transition-colors no-underline',
+                  isActive(item.href)
+                    ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                    : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+                ]}
+              >
+                {item.label}
+              </a>
+              <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+                <div class="rounded-md border border-[var(--color-border)] bg-[var(--color-bg-secondary)] shadow-lg py-1 min-w-[140px]">
+                  {item.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class:list={[
+                        'block px-3 py-1.5 text-sm no-underline transition-colors',
+                        isActive(child.href)
+                          ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                          : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+                      ]}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={item.href}
+              class:list={[
+                'px-3 py-2 text-sm font-medium rounded-md transition-colors no-underline',
+                isActive(item.href)
+                  ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                  : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+              ]}
+            >
+              {item.label}
+            </a>
+          )
         ))}
       </div>
 
@@ -73,17 +108,32 @@ function isActive(href: string): boolean {
   <div id="mobile-menu" class="hidden lg:hidden border-t border-[var(--color-border)] bg-[var(--color-bg-secondary)] max-h-[calc(100vh-4rem)] overflow-y-auto">
     <div class="px-4 py-4 space-y-1">
       {navItems.map((item) => (
-        <a
-          href={item.href}
-          class:list={[
-            'block px-3 py-2 text-sm font-medium rounded-md no-underline',
-            isActive(item.href)
-              ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
-              : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
-          ]}
-        >
-          {item.label}
-        </a>
+        <>
+          <a
+            href={item.href}
+            class:list={[
+              'block px-3 py-2 text-sm font-medium rounded-md no-underline',
+              isActive(item.href)
+                ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+            ]}
+          >
+            {item.label}
+          </a>
+          {item.children?.map((child) => (
+            <a
+              href={child.href}
+              class:list={[
+                'block pl-6 px-3 py-1.5 text-sm rounded-md no-underline',
+                isActive(child.href)
+                  ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                  : 'text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+              ]}
+            >
+              {child.label}
+            </a>
+          ))}
+        </>
       ))}
     </div>
   </div>
