@@ -49,6 +49,17 @@ function scoreColor(score: number): string {
   return '#EF4444';
 }
 
+// Quadrant positioning
+function getQuadrant(freedom: number, returns?: number | null): { letter: string; label: string; color: string } | null {
+  if (returns == null) return null;
+  const highFreedom = freedom >= 5.5;
+  const highReturns = returns >= 5.5;
+  if (highFreedom && highReturns) return { letter: 'A', label: 'Best of both', color: '#10B981' };
+  if (highFreedom && !highReturns) return { letter: 'B', label: 'Sovereignty play', color: '#3B82F6' };
+  if (!highFreedom && highReturns) return { letter: 'C', label: 'Centralised value', color: '#F59E0B' };
+  return { letter: 'D', label: 'Avoid', color: '#EF4444' };
+}
+
 function sparklineColor(change7d: number): string {
   return change7d >= 0 ? '#10B981' : '#EF4444';
 }
@@ -120,6 +131,7 @@ function downsample(data: number[], targetPoints: number): number[] {
           <th class="sort-header" data-sort="returns">
             Returns<span class="sort-arrow"></span>
           </th>
+          <th>Quadrant</th>
           <th>Status</th>
           <th>Launch</th>
           <th class="sort-header text-right" data-sort="price">Price</th>
@@ -191,6 +203,20 @@ function downsample(data: number[], targetPoints: number): number[] {
                   <span class="text-[var(--color-text-tertiary)] text-sm">--</span>
                 )}
               </td>
+              {(() => {
+                const q = getQuadrant(entry.data.freedomScore, entry.data.returnsScore);
+                return (
+                  <td>
+                    {q ? (
+                      <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold whitespace-nowrap" style={`background-color: ${q.color}20; color: ${q.color};`}>
+                        {q.letter}
+                      </span>
+                    ) : (
+                      <span class="text-[var(--color-text-tertiary)] text-sm">--</span>
+                    )}
+                  </td>
+                );
+              })()}
               <td>
                 <span class:list={['badge', entry.data.status === 'active' ? 'badge-active' : entry.data.status === 'upcoming' ? 'badge-upcoming' : 'badge-dormant']}>
                   {entry.data.status}
@@ -290,6 +316,18 @@ function downsample(data: number[], targetPoints: number): number[] {
               </>
             )}
           </div>
+
+          {(() => {
+            const q = getQuadrant(entry.data.freedomScore, entry.data.returnsScore);
+            return q ? (
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xs text-[var(--color-text-tertiary)] w-14">Quadrant</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold" style={`background-color: ${q.color}20; color: ${q.color};`}>
+                  {q.letter} — {q.label}
+                </span>
+              </div>
+            ) : null;
+          })()}
 
           {md && (
             <div class="grid grid-cols-3 gap-3 mb-3 text-sm">

@@ -64,6 +64,18 @@ const returnsColor = returnsScore != null ? (returnsScore >= 7 ? '#10B981' : ret
 const returnsRaw = returnsScore != null ? Math.round(returnsScore * 10) : null;
 const returnsGrade = returnsRaw != null ? (returnsRaw >= 85 ? 'A' : returnsRaw >= 70 ? 'B' : returnsRaw >= 55 ? 'C' : returnsRaw >= 40 ? 'D' : 'F') : null;
 
+// Quadrant positioning
+function getQuadrant(freedom: number, returns?: number): { label: string; color: string } | null {
+  if (returns == null) return null;
+  const highFreedom = freedom >= 5.5;
+  const highReturns = returns >= 5.5;
+  if (highFreedom && highReturns) return { label: 'A — Best of both', color: '#10B981' };
+  if (highFreedom && !highReturns) return { label: 'B — Sovereignty play', color: '#3B82F6' };
+  if (!highFreedom && highReturns) return { label: 'C — Centralised value', color: '#F59E0B' };
+  return { label: 'D — Avoid', color: '#EF4444' };
+}
+const quadrant = getQuadrant(freedomScore, returnsScore);
+
 // Fetch market data if coingeckoId exists
 let market: { price: number; marketCap: number; fdv: number; priceChange24h: number } | null = null;
 if (coingeckoId) {
@@ -285,6 +297,16 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
       <!-- Returns Score breakdown -->
       {returnsScore != null && (
         <ReturnsScoreBreakdown returnsScore={returnsScore} breakdown={returnsScoreBreakdown} evidence={returnsScoreEvidence} />
+      )}
+
+      <!-- Quadrant positioning -->
+      {quadrant && (
+        <div class="flex items-center gap-3 mt-4 p-3 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)]">
+          <span class="text-sm text-[var(--color-text-tertiary)]">Quadrant</span>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-sm font-semibold" style={`background-color: ${quadrant.color}20; color: ${quadrant.color};`}>
+            {quadrant.label}
+          </span>
+        </div>
       )}
 
       <!-- Market Data -->
