@@ -36,7 +36,28 @@ const sections = [
         <p class="text-sm text-[var(--color-text-tertiary)] leading-relaxed">
           Freedom AND returns. Sovereignty-first. No sponsors.
         </p>
-        <div class="flex items-center gap-4 mt-4">
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/ownyourmind"
+          method="post"
+          target="popupwindow"
+          class="mt-4 flex gap-2"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email"
+            required
+            class="px-3 py-1.5 rounded-md bg-[var(--color-bg-secondary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-accent)] text-xs w-full"
+          />
+          <button
+            type="submit"
+            class="px-3 py-1.5 rounded-md bg-[var(--color-accent)] text-xs font-medium hover:bg-[var(--color-accent-hover)] transition-colors whitespace-nowrap"
+            style="color: #fff;"
+          >
+            Subscribe
+          </button>
+        </form>
+        <div class="flex items-center gap-4 mt-3">
           <a
             href="https://x.com/ownyourmindai"
             target="_blank"

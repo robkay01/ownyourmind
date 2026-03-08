@@ -154,4 +154,40 @@ const sections = [
     </section>
   )}
 
+  <!-- Newsletter Signup -->
+  <section class="py-16 border-t border-[var(--color-border)]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-3">Get monthly DeAI score updates</h2>
+        <p class="text-[var(--color-text-secondary)] mb-6">
+          Score changes, new reviews, and tokenomics analysis. Once a month. No spam.
+        </p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/ownyourmind"
+          method="post"
+          target="popupwindow"
+          class="flex flex-col sm:flex-row gap-3 justify-center"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            class="px-4 py-2.5 rounded-lg bg-[var(--color-bg-secondary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-accent)] text-sm w-full sm:w-72"
+          />
+          <button
+            type="submit"
+            class="px-6 py-2.5 rounded-lg bg-[var(--color-accent)] font-medium text-sm hover:bg-[var(--color-accent-hover)] transition-colors"
+            style="color: #fff;"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p class="text-xs text-[var(--color-text-tertiary)] mt-3">
+          No spam. Unsubscribe any time. Powered by <a href="https://buttondown.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-[var(--color-text-secondary)]">Buttondown</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
