@@ -33,7 +33,7 @@ OYM's dual-score system works the same way:
 
 - **Freedom Score** (0–100): How decentralised is this project, really? Six dimensions, scored with evidence.
 - **Returns Score** (0–100): How well does the token capture value? Five dimensions, scored with evidence.
-- **Quadrant model**: High Freedom + High Returns (ideal), High Freedom + Low Returns (sovereignty plays), Low Freedom + High Returns (profitable but centralised), Low Freedom + Low Returns (avoid).
+- **Quadrant model**: A (High Freedom + High Returns — best of both), B (High Freedom + Low Returns — sovereignty plays), C (Low Freedom + High Returns — centralised value), D (Low Freedom + Low Returns — avoid). Now visible on the dashboard, project pages, and comparison tool.
 
 The editorial reviews are not decoration. They are the proof of work behind each score. Every number has a paragraph explaining why. That's what makes the scores defensible and trustworthy.
 
@@ -79,16 +79,18 @@ Both scoring methodologies are published on the site. Anyone can read exactly ho
 The goal is to become the score that projects and investors reference.
 
 **Content depth:**
-- Expand to 40–50 reviewed projects (cover remaining credible DeAI projects)
+- Maintain 30–35 deep reviews + add a **watchlist tier** for DeAI-adjacent and emerging projects with lighter coverage (we've reviewed all credible core DeAI projects; forcing full reviews on marginal projects dilutes quality)
 - Quarterly score updates with published changelogs (transparency builds trust)
-- Tokenomics articles timed to market events (Akash BME activation, Bittensor halvings, major unlocks)
-- Build tutorials that drive organic search (practical content has long-tail SEO value)
+- Tokenomics articles timed to market events — pipeline already identified:
+  - Akash BME activation (March 23rd), BME comparison (Akash vs Render), ASI Alliance merged tokenomics, Bittensor dTAO subnet economics
+- Build tutorials that drive organic search — keyword research via Agent Zero to validate and prioritise targets (practical content has long-tail SEO value)
 
 **Dashboard enhancement:**
 - Score history — show how Freedom and Returns scores change over time per project
-- Side-by-side comparison — select 2–3 projects, compare scores and key metrics
-- Category views — compute, data, agents, inference as filtered dashboards
-- Quadrant visualisation — interactive scatter plot of all projects
+- ~~Side-by-side comparison~~ — **DONE** (compare page live at /projects/compare/)
+- ~~Category views~~ — **DONE** (filter tabs on dashboard: Compute, Inference, Agent, Data, Platform, Storage)
+- ~~Quadrant labels~~ — **DONE** (A/B/C/D badges on dashboard, project pages, and compare tool)
+- Quadrant visualisation — interactive scatter plot of all projects (remaining item)
 
 **Credibility signals:**
 - Engage with project teams on score methodology (invite challenges publicly)
@@ -154,14 +156,16 @@ OYM is a one-person operation with AI assistance. The vision above is ambitious.
 ## Success Metrics
 
 ### 6-month targets (by September 2026)
-- 40+ reviewed projects with dual scores
+- 34 deep reviews maintained + watchlist tier for emerging/adjacent projects
+- 6+ tokenomics articles (event-timed pipeline)
+- 5+ build tutorials (keyword-researched, organic search targets)
 - Monthly organic traffic growing (baseline TBD — set up analytics)
 - At least 3 project teams engaging with their scores publicly
 - Newsletter subscriber base established
 - Score history tracking live on site
 
 ### 12-month targets (by March 2027)
-- 50+ reviewed projects
+- 35–40 deep reviews + active watchlist tier
 - OYM scores cited in at least one external research report or media article
 - API in beta with at least one external consumer
 - Revenue from at least one stream (newsletter, API, or sponsored research)
