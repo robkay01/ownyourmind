@@ -3,8 +3,8 @@
     "project_id": "intelligent-internet",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 4,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "Intelligent-Internet",
@@ -47,6 +47,25 @@
           "technical.github_metrics.contributors": 2,
           "technical.github_metrics.total_commits": 5,
           "community.github_contributors": 2
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 3170,
+          "technical.github_metrics.forks": 487,
+          "technical.github_metrics.open_issues": 12
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 3171,
+          "technical.github_metrics.forks": 488,
+          "technical.github_metrics.open_issues": 13
         },
         "run_by": "github-actions"
       }
@@ -233,9 +252,9 @@
       "total_commits": 5,
       "contributors": 2,
       "last_commit_date": "2026-02-04",
-      "stars": 3170,
-      "forks": 487,
-      "open_issues": 12,
+      "stars": 3171,
+      "forks": 488,
+      "open_issues": 13,
       "notes": "22 repos total but 8 are forks (OpenAI Codex, Google Gemini CLI, PPTist, reveal.js, litellm, verl, and others). Original repos include: ii-agent (3,172 stars), ii-researcher (496 stars), CommonGround-legacy (420 stars), gemini-cli-mcp-openai-bridge (131 stars), CommonGround (95 stars), CoT-Lab-Demo (91 stars), Symbioism-Nextra (53 stars), Symbioism-TLE (52 stars), II-Commons (33 stars), ii-thought (31 stars), Common_Chronicle (28 stars), ii-agent-community (20 stars), CG-Cardbox (1 star). Total org stars approximately 4,600+. 20 unique contributors across all original repos. Core development team appears Vietnam-based (PhungVanDuy, khoangothe, baquy96, TueVNguyen, ducphuE10, khongtrunght) with Canada (huo-ju, Leask) and others globally."
     },
     "huggingface_metrics": {
@@ -1304,6 +1323,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 3171,
+      "forks": 488,
+      "open_issues": 13,
+      "contributors": 2,
+      "total_commits": 5,
+      "total_repos": 22,
+      "discord_members": 884,
+      "telegram_members": null,
+      "x_followers": 20400,
+      "weekly_commits": null
     }
   ]
 }

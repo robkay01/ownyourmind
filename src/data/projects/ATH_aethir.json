@@ -3,8 +3,8 @@
     "project_id": "aethir",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "Aethir",
@@ -38,6 +38,19 @@
         },
         "new_values": {
           "community.telegram_members": 97165
+        },
+        "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 97165
+        },
+        "new_values": {
+          "community.telegram_members": 96675
         },
         "run_by": "community-refresh"
       }
@@ -385,7 +398,7 @@
   },
   "community": {
     "discord_members": 310000,
-    "telegram_members": 97165,
+    "telegram_members": 96675,
     "x_followers": null,
     "github_contributors": 0,
     "governance_participation_rate": "Unknown — governance mechanism not documented",
@@ -708,6 +721,19 @@
       "total_repos": 0,
       "discord_members": 310000,
       "telegram_members": 97165,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "contributors": 0,
+      "total_commits": 0,
+      "total_repos": 0,
+      "discord_members": 310000,
+      "telegram_members": 96675,
       "x_followers": null
     }
   ]

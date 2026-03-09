@@ -3,8 +3,8 @@
     "project_id": "phala-network",
     "research_date": "2026-03-05",
     "researcher": "0xBobski",
-    "version": 1,
-    "last_updated": "2026-03-05",
+    "version": 2,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Exact amount of DWF Labs investment (Jan 2024) not publicly disclosed",
@@ -21,7 +21,34 @@
       "discord_server_id": null,
       "telegram_username": null,
       "x_handle": "PhalaNetwork"
-    }
+    },
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": null,
+          "technical.github_metrics.last_commit_date": "2025-12-01",
+          "technical.github_metrics.contributors": 30,
+          "technical.github_metrics.total_repos": 100,
+          "community.github_contributors": 30
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 136,
+          "technical.github_metrics.last_commit_date": "2026-03-03",
+          "technical.github_metrics.contributors": 41,
+          "technical.github_metrics.total_repos": 297,
+          "community.github_contributors": 41
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "Phala Network",
@@ -127,14 +154,14 @@
     "open_source": true,
     "license": "Apache-2.0",
     "github_metrics": {
-      "total_repos": 100,
+      "total_repos": 297,
       "primary_repo_url": "https://github.com/Phala-Network/phala-blockchain",
       "total_commits": 6385,
-      "contributors": 30,
-      "last_commit_date": "2025-12-01",
+      "contributors": 41,
+      "last_commit_date": "2026-03-03",
       "stars": 368,
       "forks": 162,
-      "open_issues": null
+      "open_issues": 136
     },
     "audits": [
       {
@@ -364,7 +391,7 @@
     "telegram_members": 10552,
     "twitter_followers": 143000,
     "twitter_handle": "@PhalaNetwork",
-    "github_contributors": 30,
+    "github_contributors": 41,
     "forum_topics": 617,
     "forum_url": "https://forum.phala.network",
     "governance_type": "Snapshot + Safe multisig on Ethereum L1 (migrated from Polkadot on-chain governance)",
@@ -719,6 +746,73 @@
       "telegram_members": 10552,
       "x_followers": null,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 368,
+      "forks": 162,
+      "open_issues": 136,
+      "contributors": 41,
+      "total_commits": 6385,
+      "total_repos": 297,
+      "discord_members": 12068,
+      "telegram_members": 10552,
+      "x_followers": null,
+      "weekly_commits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        15,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
     }
   ]
 }

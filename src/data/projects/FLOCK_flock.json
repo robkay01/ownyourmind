@@ -3,8 +3,8 @@
     "project_id": "flock",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "FLock-io",
@@ -63,6 +63,50 @@
           "community.github_contributors": 1
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 36,
+          "technical.github_metrics.forks": 11,
+          "technical.github_metrics.open_issues": 4,
+          "technical.github_metrics.last_commit_date": "2022-11-16",
+          "technical.github_metrics.contributors": 1,
+          "technical.github_metrics.total_commits": 2,
+          "community.github_contributors": 1
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 44,
+          "technical.github_metrics.forks": 41,
+          "technical.github_metrics.open_issues": 12,
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": 10,
+          "technical.github_metrics.total_commits": 82,
+          "community.github_contributors": 10
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 673
+        },
+        "new_values": {
+          "community.telegram_members": 667
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -144,15 +188,15 @@
     "github_metrics": {
       "total_repos": 34,
       "primary_repo": "FLock",
-      "stars": 36,
-      "forks": 11,
+      "stars": 44,
+      "forks": 41,
       "license": "GPL-3.0",
       "last_commit": "2026-03-05",
       "notes": "Main FLock repo is essentially empty (README + LICENSE). Development in peripheral repos: testnet-training-node-quickstart (55 stars), llm-loss-validator (44 stars).",
-      "open_issues": 4,
-      "last_commit_date": "2022-11-16",
-      "contributors": 1,
-      "total_commits": 2
+      "open_issues": 12,
+      "last_commit_date": "2026-03-02",
+      "contributors": 10,
+      "total_commits": 82
     },
     "audits": [],
     "academic_credentials": [
@@ -222,11 +266,11 @@
     "usage_notes": "16 training tasks completed. 9,062 training submissions. 784,137 validation submissions. 196 training nodes (incl. 6 top-50 Kagglers). 262 validators. 1,416 delegators. 55,928 token holders. 11.9M FLOCK (~$2.7M) protocol fee revenue in first 10 months."
   },
   "community": {
-    "telegram_members": 673,
+    "telegram_members": 667,
     "x_followers": null,
     "discord_members": null,
     "twitter_handle": "@flock_io",
-    "github_contributors": 1
+    "github_contributors": 10
   },
   "exchanges": [
     "Gate.io",
@@ -472,6 +516,33 @@
       "telegram_members": 673,
       "x_followers": null,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 44,
+      "forks": 41,
+      "open_issues": 12,
+      "contributors": 10,
+      "total_commits": 82,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 673,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 44,
+      "forks": 41,
+      "open_issues": 12,
+      "contributors": 10,
+      "total_commits": 82,
+      "total_repos": 34,
+      "discord_members": null,
+      "telegram_members": 667,
+      "x_followers": null
     }
   ]
 }

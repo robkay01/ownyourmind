@@ -3,8 +3,8 @@
     "project_id": "gensyn",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Exact circulating supply unknown -- TGE scheduled for April 2026 but not yet occurred as of research date",
@@ -52,6 +52,37 @@
           "technical.github_metrics.contributors": 22,
           "technical.github_metrics.total_repos": 23,
           "community.github_contributors": 22
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 1699,
+          "technical.github_metrics.forks": 639,
+          "technical.github_metrics.open_issues": 141,
+          "technical.github_metrics.last_commit_date": "2026-01-05",
+          "technical.github_metrics.contributors": 22,
+          "technical.github_metrics.total_commits": 238,
+          "community.github_contributors": 22
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 699,
+          "technical.github_metrics.forks": 123,
+          "technical.github_metrics.open_issues": 16,
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": 7,
+          "technical.github_metrics.total_commits": 27,
+          "community.github_contributors": 7
         },
         "run_by": "github-actions"
       }
@@ -167,12 +198,12 @@
     "github_metrics": {
       "total_repos": 23,
       "primary_repo_url": "https://github.com/gensyn-ai/rl-swarm",
-      "total_commits": 238,
-      "contributors": 22,
-      "last_commit_date": "2026-01-05",
-      "stars": 1699,
-      "forks": 639,
-      "open_issues": 141
+      "total_commits": 27,
+      "contributors": 7,
+      "last_commit_date": "2026-03-02",
+      "stars": 699,
+      "forks": 123,
+      "open_issues": 16
     },
     "audits": [],
     "security_incidents": []
@@ -327,7 +358,7 @@
     "discord_members": null,
     "telegram_members": null,
     "x_followers": null,
-    "github_contributors": 22,
+    "github_contributors": 7,
     "governance_participation_rate": null,
     "governance_model": "Planned progressive decentralisation: Initially centralised around Gensyn Limited and core team. Post-TGE, Gensyn Foundation to govern via elected council (initially mapped to core team), on-chain proposals, and referenda. $AI token holders will vote on protocol upgrades, ecosystem programmes, and treasury deployments.",
     "governance_url": "https://gensyn.network",
@@ -860,6 +891,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 699,
+      "forks": 123,
+      "open_issues": 16,
+      "contributors": 7,
+      "total_commits": 27,
+      "total_repos": 23,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
     }
   ]
 }

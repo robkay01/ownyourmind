@@ -3,8 +3,8 @@
     "project_id": "golem",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "golemfactory",
@@ -51,6 +51,19 @@
           "technical.github_metrics.total_commits": 5905,
           "technical.github_metrics.total_repos": 276,
           "community.github_contributors": 39
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.last_commit_date"
+        ],
+        "previous_values": {
+          "technical.github_metrics.last_commit_date": "2026-03-05"
+        },
+        "new_values": {
+          "technical.github_metrics.last_commit_date": "2026-03-08"
         },
         "run_by": "github-actions"
       }
@@ -136,7 +149,7 @@
       "last_commit": "2025-10",
       "legacy_repo_stars": 2889,
       "open_issues": 292,
-      "last_commit_date": "2026-03-05",
+      "last_commit_date": "2026-03-08",
       "total_commits": 5905
     },
     "audits": [
@@ -519,6 +532,20 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 470,
+      "forks": 85,
+      "open_issues": 292,
+      "contributors": 39,
+      "total_commits": 5905,
+      "total_repos": 276,
+      "discord_members": 13167,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": null
     }
   ]
 }

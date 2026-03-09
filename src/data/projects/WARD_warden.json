@@ -3,8 +3,8 @@
     "project_id": "warden",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "warden-protocol",
@@ -48,6 +48,22 @@
           "technical.github_metrics.contributors": 66,
           "technical.github_metrics.total_commits": 2409,
           "community.github_contributors": 66
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": 21,
+          "technical.github_metrics.last_commit_date": "2026-03-05"
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 25,
+          "technical.github_metrics.last_commit_date": "2026-03-09"
         },
         "run_by": "github-actions"
       }
@@ -156,8 +172,8 @@
       "forks": 188,
       "license": "Apache 2.0 (main), proprietary x/async module",
       "last_commit": "2026-03-05",
-      "open_issues": 21,
-      "last_commit_date": "2026-03-05",
+      "open_issues": 25,
+      "last_commit_date": "2026-03-09",
       "contributors": 66,
       "total_commits": 2409
     },
@@ -510,6 +526,20 @@
         0,
         7
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 2185,
+      "forks": 188,
+      "open_issues": 25,
+      "contributors": 66,
+      "total_commits": 2409,
+      "total_repos": 36,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 350000,
+      "weekly_commits": null
     }
   ]
 }

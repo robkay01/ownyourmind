@@ -3,8 +3,8 @@
     "project_id": "autonolas",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Whitepaper is a PDF that could not be parsed directly -- tokenomics and architecture details reconstructed from secondary sources and official documentation",
@@ -60,6 +60,22 @@
           "technical.github_metrics.total_commits": 13799,
           "technical.github_metrics.total_repos": 149,
           "community.github_contributors": 24
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.total_commits"
+        ],
+        "previous_values": {
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.total_commits": 13799
+        },
+        "new_values": {
+          "technical.github_metrics.last_commit_date": "2026-03-08",
+          "technical.github_metrics.total_commits": 13810
         },
         "run_by": "github-actions"
       }
@@ -177,9 +193,9 @@
     "github_metrics": {
       "total_repos": 149,
       "primary_repo_url": "https://github.com/valory-xyz/open-autonomy",
-      "total_commits": 13799,
+      "total_commits": 13810,
       "contributors": 24,
-      "last_commit_date": "2026-03-05",
+      "last_commit_date": "2026-03-08",
       "stars": 115,
       "forks": 46,
       "open_issues": 63
@@ -1026,6 +1042,73 @@
         3,
         58,
         254
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 115,
+      "forks": 46,
+      "open_issues": 63,
+      "contributors": 24,
+      "total_commits": 13810,
+      "total_repos": 149,
+      "discord_members": 5462,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        5,
+        8,
+        1,
+        0,
+        6,
+        0,
+        0,
+        0,
+        3,
+        1,
+        13,
+        13,
+        0,
+        13,
+        0,
+        5,
+        0,
+        9,
+        2,
+        5,
+        26,
+        35,
+        0,
+        2,
+        5,
+        1,
+        0,
+        5,
+        8,
+        0,
+        8,
+        1,
+        0,
+        3,
+        0,
+        4,
+        10,
+        0,
+        9,
+        3,
+        0,
+        0,
+        13,
+        30,
+        16,
+        0,
+        9,
+        18,
+        3,
+        58,
+        254,
+        20
       ]
     }
   ]

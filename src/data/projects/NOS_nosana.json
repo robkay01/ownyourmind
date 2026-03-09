@@ -3,8 +3,8 @@
     "project_id": "nosana",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "nosana-ci",
@@ -56,6 +56,34 @@
           "technical.github_metrics.contributors": 6,
           "technical.github_metrics.total_commits": 1171,
           "community.github_contributors": 6
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 32,
+          "technical.github_metrics.open_issues": 3,
+          "technical.github_metrics.last_commit_date": "2025-10-26",
+          "technical.github_metrics.contributors": 6,
+          "technical.github_metrics.total_commits": 1171,
+          "community.github_contributors": 6
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 135,
+          "technical.github_metrics.open_issues": 0,
+          "technical.github_metrics.last_commit_date": "2026-02-24",
+          "technical.github_metrics.contributors": 11,
+          "technical.github_metrics.total_commits": 1749,
+          "community.github_contributors": 11
         },
         "run_by": "github-actions"
       }
@@ -188,12 +216,12 @@
         }
       ],
       "license": "MIT",
-      "stars": 32,
+      "stars": 135,
       "forks": 11,
-      "open_issues": 3,
-      "last_commit_date": "2025-10-26",
-      "contributors": 6,
-      "total_commits": 1171
+      "open_issues": 0,
+      "last_commit_date": "2026-02-24",
+      "contributors": 11,
+      "total_commits": 1749
     },
     "audits": [
       {
@@ -291,7 +319,7 @@
     "discord_members": 13182,
     "telegram_members": null,
     "community_calls": "Monthly on Discord",
-    "github_contributors": 6
+    "github_contributors": 11
   },
   "exchanges": [
     "Gate.io",
@@ -566,6 +594,73 @@
       "telegram_members": null,
       "x_followers": null,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 135,
+      "forks": 11,
+      "open_issues": 0,
+      "contributors": 11,
+      "total_commits": 1749,
+      "total_repos": 34,
+      "discord_members": 13182,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        27,
+        12,
+        4,
+        2,
+        2,
+        0,
+        3,
+        2,
+        2,
+        5,
+        22,
+        19,
+        1,
+        1,
+        0,
+        9,
+        4,
+        0,
+        1,
+        2,
+        2,
+        11,
+        19,
+        8,
+        10,
+        4,
+        23,
+        5,
+        21,
+        4,
+        20,
+        7,
+        0,
+        2,
+        0,
+        0,
+        3,
+        3,
+        15,
+        18,
+        5,
+        0,
+        3,
+        10,
+        0,
+        7,
+        3,
+        3,
+        1,
+        2,
+        0,
+        0
+      ]
     }
   ]
 }

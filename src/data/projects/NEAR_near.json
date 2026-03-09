@@ -3,8 +3,8 @@
     "project_id": "near",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 4,
-    "last_updated": "2026-03-06",
+    "version": 6,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "DeFiLlama web page returned 403 -- TVL sourced from DeFiLlama API endpoint instead ($114.7M)",
@@ -84,6 +84,44 @@
         },
         "new_values": {
           "community.telegram_members": 54103
+        },
+        "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos"
+        ],
+        "previous_values": {
+          "technical.github_metrics.forks": 765,
+          "technical.github_metrics.open_issues": 468,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.total_commits": 9669,
+          "technical.github_metrics.total_repos": 275
+        },
+        "new_values": {
+          "technical.github_metrics.forks": 763,
+          "technical.github_metrics.open_issues": 467,
+          "technical.github_metrics.last_commit_date": "2026-03-09",
+          "technical.github_metrics.total_commits": 9672,
+          "technical.github_metrics.total_repos": 276
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 54103
+        },
+        "new_values": {
+          "community.telegram_members": 53896
         },
         "run_by": "community-refresh"
       }
@@ -203,14 +241,14 @@
     "open_source": true,
     "license": "GPL-3.0 (nearcore)",
     "github_metrics": {
-      "total_repos": 275,
+      "total_repos": 276,
       "primary_repo_url": "https://github.com/near/nearcore",
-      "total_commits": 9669,
+      "total_commits": 9672,
       "contributors": 240,
-      "last_commit_date": "2026-03-06",
+      "last_commit_date": "2026-03-09",
       "stars": 2573,
-      "forks": 765,
-      "open_issues": 468
+      "forks": 763,
+      "open_issues": 467
     },
     "audits": [
       {
@@ -500,7 +538,7 @@
   },
   "community": {
     "discord_members": 74000,
-    "telegram_members": 54103,
+    "telegram_members": 53896,
     "x_followers": 1800000,
     "github_contributors": 240,
     "governance_participation_rate": "68.41% of validators signalled support for inflation halving proposal (Oct 2025). House of Stake governance launched late 2025 -- participation rates for broader token-holder governance still emerging.",
@@ -1280,6 +1318,86 @@
         46,
         38
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 2573,
+      "forks": 763,
+      "open_issues": 467,
+      "contributors": 240,
+      "total_commits": 9672,
+      "total_repos": 276,
+      "discord_members": 74000,
+      "telegram_members": 54103,
+      "x_followers": 1800000,
+      "weekly_commits": [
+        37,
+        35,
+        42,
+        52,
+        21,
+        17,
+        33,
+        25,
+        32,
+        17,
+        19,
+        32,
+        22,
+        29,
+        32,
+        15,
+        27,
+        28,
+        21,
+        25,
+        9,
+        15,
+        33,
+        25,
+        29,
+        26,
+        26,
+        40,
+        35,
+        26,
+        22,
+        13,
+        19,
+        18,
+        27,
+        56,
+        23,
+        29,
+        25,
+        15,
+        1,
+        2,
+        21,
+        16,
+        20,
+        21,
+        37,
+        59,
+        48,
+        46,
+        41,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 2573,
+      "forks": 763,
+      "open_issues": 467,
+      "contributors": 240,
+      "total_commits": 9672,
+      "total_repos": 276,
+      "discord_members": 74000,
+      "telegram_members": 53896,
+      "x_followers": 1800000
     }
   ]
 }

@@ -3,8 +3,8 @@
     "project_id": "render",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 4,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "rendernetwork",
@@ -45,6 +45,19 @@
           "technical.github_metrics.total_repos": 4
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 19334
+        },
+        "new_values": {
+          "community.telegram_members": 19292
+        },
+        "run_by": "community-refresh"
       }
     ],
     "research_gaps": [
@@ -457,7 +470,7 @@
   },
   "community": {
     "discord_members": null,
-    "telegram_members": 19334,
+    "telegram_members": 19292,
     "x_followers": 150000,
     "github_contributors": 6,
     "governance_participation_rate": "Low active participation despite meeting quorum. RNP-022 (Dec 2025): 93.9M tokens participating (18% of supply, exceeds 15% quorum), but 91.3M abstained. Only 2.6M tokens actively voted for/against (~0.5% of supply). 22 RNPs submitted; 8 implemented, 10+ approved/roadmap, 1 withdrawn.",
@@ -1388,6 +1401,33 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 44,
+      "forks": 5,
+      "open_issues": 0,
+      "contributors": 6,
+      "total_commits": 107,
+      "total_repos": 4,
+      "discord_members": null,
+      "telegram_members": 19334,
+      "x_followers": 150000,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 44,
+      "forks": 5,
+      "open_issues": 0,
+      "contributors": 6,
+      "total_commits": 107,
+      "total_repos": 4,
+      "discord_members": null,
+      "telegram_members": 19292,
+      "x_followers": 150000
     }
   ]
 }

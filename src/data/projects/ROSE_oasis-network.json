@@ -3,8 +3,8 @@
     "project_id": "oasis-network",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 4,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "oasisprotocol",
@@ -54,6 +54,19 @@
           "technical.github_metrics.total_repos": 100
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 25255
+        },
+        "new_values": {
+          "community.telegram_members": 25132
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -363,7 +376,7 @@
   },
   "community": {
     "discord_members": 62000,
-    "telegram_members": 25255,
+    "telegram_members": 25132,
     "x_followers": null,
     "github_contributors": 57,
     "governance_participation_rate": "Unknown",
@@ -959,6 +972,86 @@
         2,
         5
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 369,
+      "forks": 149,
+      "open_issues": 403,
+      "contributors": 57,
+      "total_commits": 10228,
+      "total_repos": 100,
+      "discord_members": 62000,
+      "telegram_members": 25255,
+      "x_followers": null,
+      "weekly_commits": [
+        17,
+        12,
+        16,
+        42,
+        3,
+        15,
+        25,
+        29,
+        2,
+        15,
+        13,
+        13,
+        12,
+        17,
+        8,
+        22,
+        8,
+        10,
+        7,
+        5,
+        14,
+        5,
+        16,
+        15,
+        3,
+        1,
+        9,
+        10,
+        23,
+        20,
+        3,
+        8,
+        35,
+        9,
+        14,
+        8,
+        29,
+        9,
+        0,
+        4,
+        0,
+        0,
+        4,
+        4,
+        6,
+        7,
+        6,
+        13,
+        11,
+        2,
+        5,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 369,
+      "forks": 149,
+      "open_issues": 403,
+      "contributors": 57,
+      "total_commits": 10228,
+      "total_repos": 100,
+      "discord_members": 62000,
+      "telegram_members": 25132,
+      "x_followers": null
     }
   ]
 }
