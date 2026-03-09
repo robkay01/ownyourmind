@@ -7,12 +7,14 @@ import SearchModal from '../components/SearchModal';
 
 interface Props {
   title: string;
+  seoTitle?: string;
   description?: string;
   ogImage?: string;
 }
 
-const { title, description = 'Own Your Mind – Independent research into decentralised AI', ogImage } = Astro.props;
-const fullTitle = title === 'Home' ? 'Own Your Mind – Sovereignty-First AI' : `${title} | Own Your Mind`;
+const { title, seoTitle, description = 'Own Your Mind – Independent research into decentralised AI', ogImage } = Astro.props;
+const displayTitle = seoTitle || title;
+const fullTitle = title === 'Home' ? 'Own Your Mind – Sovereignty-First AI' : `${displayTitle} | Own Your Mind`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage || '/images/hero-network.webp', Astro.site).href;
 

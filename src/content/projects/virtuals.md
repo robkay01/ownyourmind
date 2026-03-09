@@ -1,6 +1,6 @@
 ---
 title: "Virtuals Protocol"
-description: "An AI agent launchpad on Base that lets anyone tokenise and deploy autonomous agents via bonding curves. Real revenue ($39.5M cumulative) and ecosystem scale (17,000+ agents, $8B+ DEX volume), but centralised GAME inference engine, pump-and-dump agent dynamics, and 97% revenue collapse expose the gap between narrative and substance."
+description: "Virtuals Protocol review — AI agent launchpad on Base. How to create an AI agent on Virtuals, tokenomics, VIRTUAL token, Freedom Score and honest assessment."
 category: "agent"
 token: "VIRTUAL"
 status: "active"

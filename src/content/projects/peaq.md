@@ -1,6 +1,6 @@
 ---
 title: "peaq"
-description: "Layer-1 blockchain purpose-built for the Machine Economy – enabling machines, vehicles, robots, and IoT devices to function as economic participants. 60+ DePINs, minimal revenue."
+description: "peaq review — DePIN Layer-1 for the Machine Economy. 60+ DePINs, enterprise partners (Bosch, Airbus, NTT), but $163K revenue. Freedom Score, Returns Score and honest assessment."
 category: "other"
 token: "PEAQ"
 status: "active"

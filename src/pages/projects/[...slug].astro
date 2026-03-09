@@ -19,6 +19,7 @@ const research: ProjectResearchRecord | null = getProjectResearch(entry.id);
 
 <ProjectLayout
   title={entry.data.title}
+  seoTitle={`${entry.data.title} Review`}
   description={entry.data.description}
   category={entry.data.category}
   token={entry.data.token}

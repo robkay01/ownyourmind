@@ -1,6 +1,6 @@
 ---
 title: "Bittensor"
-description: "The largest decentralised AI network by market cap. An incentivised system of AI subnets competing to produce intelligence. Full review with hands-on assessment."
+description: "Bittensor review — the largest decentralised AI network by market cap. TAO tokenomics, dTAO subnet economics, halving schedule, Freedom Score and honest assessment."
 category: "platform"
 token: "TAO"
 status: "active"

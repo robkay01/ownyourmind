@@ -19,6 +19,7 @@ import type { ProjectResearchRecord, MetricsSnapshot } from '../data/project-res
 
 interface Props {
   title: string;
+  seoTitle?: string;
   description: string;
   category: string;
   token: string;
@@ -48,7 +49,7 @@ interface Props {
   slug: string;
 }
 
-const { title, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, returnsScoreEvidence, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
+const { title, seoTitle, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, returnsScoreEvidence, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -239,6 +240,7 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
 
 <ContentLayout
   title={title}
+  seoTitle={seoTitle}
   description={description}
   breadcrumbs={[
     { label: 'Projects', href: '/projects/' },

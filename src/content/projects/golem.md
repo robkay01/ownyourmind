@@ -1,6 +1,6 @@
 ---
 title: "Golem Network"
-description: "The original decentralised compute network (2016). Permissionless P2P marketplace with 82% ICO distribution. Zero protocol revenue, no staking, no burn. A sovereignty play with weak value capture."
+description: "Golem Network review — the original decentralised compute network (2016). Permissionless P2P marketplace, 82% ICO distribution, zero protocol revenue. Freedom Score and honest assessment."
 category: "compute"
 token: "GLM"
 status: "active"

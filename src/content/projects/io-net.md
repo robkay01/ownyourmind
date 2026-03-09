@@ -1,6 +1,6 @@
 ---
 title: "io.net"
-description: "A VC-backed GPU marketplace on Solana aggregating compute from data centres, miners and consumer hardware. Growing revenue ($20M+ annualised) but closed-source core, no governance, and a 2024 Sybil attack that inflated GPU metrics."
+description: "io.net review — GPU marketplace on Solana. IO token earnings, GPU requirements, $20M+ annualised revenue claims, and why the metrics need scrutiny."
 category: "compute"
 token: "IO"
 status: "active"

@@ -1,6 +1,6 @@
 ---
 title: "Render Network"
-description: "Decentralised GPU rendering and compute. Connects GPU providers with creators and AI developers who need rendering and inference capacity."
+description: "Render Network review — decentralised GPU rendering with Hollywood customers, burn-mint equilibrium, and RENDER staking. Freedom Score, Returns Score and honest assessment."
 category: "compute"
 token: "RENDER"
 status: "active"

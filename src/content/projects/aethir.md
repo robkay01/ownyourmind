@@ -1,6 +1,6 @@
 ---
 title: "Aethir"
-description: "Enterprise-grade decentralised GPU compute network for AI training, inference, and cloud gaming. Big revenue numbers, closed source code."
+description: "Aethir review — enterprise GPU compute network for AI and cloud gaming. Aethir node setup, ATH token, $166.9M ARR claims, Freedom Score and honest assessment."
 category: "compute"
 token: "ATH"
 status: "active"

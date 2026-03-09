@@ -1,6 +1,6 @@
 ---
 title: "ElizaOS"
-description: "The most popular open-source AI agent framework in web3, with 17,600+ GitHub stars, 583 contributors, and genuine developer adoption. But the token economy tells a different story: 99.7% below effective ATH, no functioning governance, a 40% supply expansion that diluted original holders, and an unpatched memory injection vulnerability."
+description: "ElizaOS review — the most popular open-source AI agent framework in web3. How to build an AI agent with ElizaOS, tokenomics, Freedom Score and honest assessment."
 category: "agent"
 token: "ELIZAOS"
 status: "active"

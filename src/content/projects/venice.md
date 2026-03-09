@@ -1,6 +1,6 @@
 ---
 title: "Venice AI"
-description: "Private, uncensored AI inference platform. No logs, no content filtering, API access to open-weight models with a privacy-first architecture."
+description: "Venice AI review — private, uncensored AI inference with no logs and no content filtering. Freedom Score, Returns Score, tokenomics breakdown and honest assessment."
 category: "inference"
 token: "VVV"
 status: "active"

@@ -1,6 +1,6 @@
 ---
 title: "Grass"
-description: "The largest bandwidth-sharing DePIN network with 8.3 million monthly active nodes across 190 countries, scraping petabytes of web data daily for AI training. Real enterprise revenue, a genuinely wide airdrop to 2.8 million wallets, and strong VC backing. But the code is entirely closed-source, governance is non-functional, users have no sovereignty over the data their bandwidth produces, and the Grass Foundation controls all revenue with zero transparency."
+description: "Grass review — bandwidth-sharing DePIN network with 8.3M monthly active nodes. How to earn GRASS, tokenomics, and why 190-country scale doesn't mean decentralised."
 category: "data"
 token: "GRASS"
 status: "active"

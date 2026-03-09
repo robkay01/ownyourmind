@@ -1,6 +1,6 @@
 ---
 title: "Flux"
-description: "Fair-launched decentralised cloud with ~8,000 nodes across 67 countries. No ICO, 0.7% team allocation. Six years of building with ~100 deployed apps. Strong sovereignty, weak commercial traction."
+description: "Flux review — fair-launched decentralised cloud with ~8,000 nodes across 67 countries. GPU mining, FluxCloud, FluxEdge. Freedom Score, Returns Score and honest assessment."
 category: "compute"
 token: "FLUX"
 status: "active"
