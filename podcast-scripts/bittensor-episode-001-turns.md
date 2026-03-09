@@ -284,3 +284,8 @@ If you found this valuable, subscribe wherever you get your podcasts. We'll be c
 
 Thanks for listening. This is the Own Your Mind podcast — freedom AND returns, sovereignty-first, practitioner-led.
 ```
+
+## TURN 54 — RACHEL
+```
+This podcast is for informational purposes only and is not financial advice. We may hold positions in tokens discussed — disclosures are on ownyourmind.ai. Do your own research.
+```

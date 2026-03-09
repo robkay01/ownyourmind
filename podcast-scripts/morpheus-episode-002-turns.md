@@ -263,3 +263,8 @@ For the full deep-dive with score breakdowns, participation guides, and all the 
 
 Next episode, we're covering Akash Network — real revenue, real customers, but a looming chain migration that introduces serious uncertainty. Subscribe wherever you get your podcasts.
 ```
+
+## TURN 53 — RACHEL
+```
+This podcast is for informational purposes only and is not financial advice. We may hold positions in tokens discussed — disclosures are on ownyourmind.ai. Do your own research.
+```

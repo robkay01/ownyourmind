@@ -201,3 +201,8 @@ For the full deep-dive, check out ownyourmind.ai/projects/akash.
 
 Subscribe wherever you get your podcasts. This is the Own Your Mind podcast — freedom AND returns, sovereignty-first, practitioner-led.
 ```
+
+## TURN 40 — RACHEL
+```
+This podcast is for informational purposes only and is not financial advice. We may hold positions in tokens discussed — disclosures are on ownyourmind.ai. Do your own research.
+```
