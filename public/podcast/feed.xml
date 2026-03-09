@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:podcast="https://podcastindex.org/namespace/1.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Own Your Mind</title>
+    <link>https://ownyourmind.ai</link>
+    <language>en</language>
+    <description>The dual-score podcast for decentralised AI. Every episode breaks down a DeAI project with honest, data-driven assessments — scoring both sovereignty (Freedom Score) and token economics (Returns Score). No sponsors, no shilling, no hype. Freedom AND returns. Sovereignty-first. Practitioner-led.</description>
+    <atom:link href="https://ownyourmind.ai/podcast/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <itunes:author>Rob Kay</itunes:author>
+    <itunes:owner>
+      <itunes:name>Rob Kay</itunes:name>
+      <itunes:email>rob@ownyourmind.ai</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology"/>
+    <itunes:category text="Business">
+      <itunes:category text="Investing"/>
+    </itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://ownyourmind.ai/apple-touch-icon.png"/>
+    <itunes:type>episodic</itunes:type>
+
+    <!-- Episode 003: Akash Network -->
+    <item>
+      <title>003: Akash Network — Real Revenue, Real Risks</title>
+      <description>Akash Network is the most credible decentralised cloud marketplace operating today — real revenue, real customers, but a looming chain migration that introduces serious uncertainty. Freedom Score 66, Returns Score 62. We break down the compute marketplace, BME burn mechanics, provider economics, and the elephant in the room: the unplanned chain migration.</description>
+      <enclosure url="https://ownyourmind.ai/podcast/Own-Your-Mind-003-Akash.mp3" length="7736467" type="audio/mpeg"/>
+      <guid isPermaLink="false">oym-003-akash</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <itunes:duration>483</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <link>https://ownyourmind.ai/projects/akash</link>
+    </item>
+
+    <!-- Episode 002: Morpheus -->
+    <item>
+      <title>002: Morpheus — The Fair Launch Paradox</title>
+      <description>Morpheus has one of the cleanest token distributions in DeAI — no VC allocation, no pre-mine, no insider advantage. But that fair launch comes with real trade-offs for the token economics. Freedom Score 76, Returns Score 57. We cover the four-sided incentive model, Power Factor locking, stETH yield mechanics, and why the fairest launch doesn't automatically mean the best investment.</description>
+      <enclosure url="https://ownyourmind.ai/podcast/Own-Your-Mind-002-Morpheus.mp3" length="11514818" type="audio/mpeg"/>
+      <guid isPermaLink="false">oym-002-morpheus</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <itunes:duration>719</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <link>https://ownyourmind.ai/projects/morpheus</link>
+    </item>
+
+    <!-- Episode 001: Bittensor -->
+    <item>
+      <title>001: Bittensor — The Biggest DeAI Network Nobody Audited</title>
+      <description>Bittensor is the largest decentralised AI network by market cap with the TAO token. But beneath the surface, governance is far more centralised than marketed, and no security audit exists. Freedom Score 56, Returns Score 63. We cover dTAO subnet economics, the halving, emission-dependent revenue, and what the honest assessment looks like.</description>
+      <enclosure url="https://ownyourmind.ai/podcast/Own-Your-Mind-001-Bittensor.mp3" length="14374913" type="audio/mpeg"/>
+      <guid isPermaLink="false">oym-001-bittensor</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <itunes:duration>898</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <link>https://ownyourmind.ai/projects/bittensor</link>
+    </item>
+
+    <!-- Trailer -->
+    <item>
+      <title>Trailer: The Dual-Score Podcast for Decentralised AI</title>
+      <description>Welcome to the Own Your Mind podcast. Every week, we break down decentralised AI projects with honest, data-driven assessments. Two scores: Freedom Score for sovereignty, Returns Score for token economics. No sponsors, no shilling, no hype.</description>
+      <enclosure url="https://ownyourmind.ai/podcast/Own-Your-Mind--PodcastTrailer.mp3" length="2629842" type="audio/mpeg"/>
+      <guid isPermaLink="false">oym-000-trailer</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <itunes:duration>164</itunes:duration>
+      <itunes:episodeType>trailer</itunes:episodeType>
+      <link>https://ownyourmind.ai</link>
+    </item>
+
+  </channel>
+</rss>

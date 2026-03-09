@@ -10,6 +10,7 @@ import DonutChart from '../components/DonutChart.astro';
 import MetricCard from '../components/MetricCard.astro';
 import VestingTimeline from '../components/VestingTimeline.astro';
 
+import PodcastPlayer from '../components/PodcastPlayer.astro';
 import Sparkline from '../components/Sparkline.astro';
 import ActivityPanel from '../components/ActivityPanel.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
@@ -45,11 +46,12 @@ interface Props {
   coingeckoId?: string;
   verdict?: string;
   oymHolds?: boolean;
+  podcastUrl?: string;
   research?: ProjectResearchRecord | null;
   slug: string;
 }
 
-const { title, seoTitle, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, returnsScoreEvidence, publishDate, updatedDate, coingeckoId, verdict, oymHolds, research, slug } = Astro.props;
+const { title, seoTitle, description, category, token, status, freedomScore, returnsScore, returnsScoreBreakdown, returnsScoreEvidence, publishDate, updatedDate, coingeckoId, verdict, oymHolds, podcastUrl, research, slug } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -362,6 +364,10 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
     </header>
 
     <MobileTOC />
+
+    {podcastUrl && (
+      <PodcastPlayer url={podcastUrl} title={title} />
+    )}
 
     <div class="prose">
       <slot />

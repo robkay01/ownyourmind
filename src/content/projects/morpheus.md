@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "42M"
 verdict: "Genuine fair launch with working compute marketplace. Early-stage agents but real infrastructure."
 oymHolds: true
+podcastUrl: "/podcast/Own-Your-Mind-002-Morpheus.mp3"
 ---
 
 ## What it does

@@ -46,6 +46,7 @@ const projects = defineCollection({
     maxSupply: z.string().optional(),
     verdict: z.string().optional(),
     oymHolds: z.boolean().default(false),
+    podcastUrl: z.string().optional(),
   }),
 });
 

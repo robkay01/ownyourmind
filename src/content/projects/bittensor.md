@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "21M"
 verdict: "Largest DeAI network with real workloads. PoA block production and governance far more centralised than marketed. No security audit."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-001-Bittensor.mp3"
 ---
 
 ## What it does

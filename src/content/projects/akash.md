@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "No max supply. 388.5M genesis cap + 8% annual inflation. BME burn approved but not yet active."
 verdict: "The most credible decentralised cloud marketplace operating today. Real revenue, real customers, but chain migration looming."
 oymHolds: true
+podcastUrl: "/podcast/Own-Your-Mind-003-Akash.mp3"
 ---
 
 ## What it does

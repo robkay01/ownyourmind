@@ -33,7 +33,7 @@ Open ElevenLabs Speech tool (or Projects for multi-section management).
 
 | Section | Timestamp | Voice |
 |---------|-----------|-------|
-| Intro | 0:00-1:00 | Rob (cloned voice) + Alex (library voice) |
+| Intro | 0:00-1:00 | Rob (cloned voice) + Rachel (library voice) |
 | What is [Project]? | 1:00-4:00 | Both |
 | Freedom Score | 4:00-9:00 | Both |
 | Returns Score | 9:00-14:00 | Both |
@@ -44,7 +44,7 @@ For each section:
 - [ ] Paste **ROB** lines → select cloned voice → generate → download MP3
 - [ ] Paste **ALEX** lines → select library voice (Adam or Daniel) → generate → download MP3
 
-**Voice selection for Alex:** Use "Adam" or "Daniel" from the ElevenLabs library for an analyst tone. Pick one and stick with it across all episodes for consistency.
+**Voice selection for Rachel:** Use Rachel McGrath from the ElevenLabs library. Consistent across all episodes.
 
 ### 3. Edit Together
 
@@ -112,7 +112,7 @@ Before publishing each episode:
 
 - [ ] Scores quoted match the editorial body text (use /100 scale)
 - [ ] No outdated claims (check if anything changed since script was written)
-- [ ] Audio levels consistent between Rob and Alex voices
+- [ ] Audio levels consistent between Rob and Rachel voices
 - [ ] No long silences or abrupt cuts
 - [ ] Intro clearly states the project name and what the episode covers
 - [ ] Outro directs listeners to ownyourmind.ai/projects/{slug}

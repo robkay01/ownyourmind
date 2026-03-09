@@ -1,0 +1,59 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<div class="podcast-player">
+  <div class="podcast-header">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" y1="19" x2="12" y2="23"/>
+      <line x1="8" y1="23" x2="16" y2="23"/>
+    </svg>
+    <span>Listen to this review</span>
+  </div>
+  <audio controls preload="none">
+    <source src={url} type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<style>
+  .podcast-player {
+    background: rgba(13, 148, 136, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.25);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .podcast-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent, #0D9488);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .podcast-header svg {
+    flex-shrink: 0;
+  }
+
+  audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.5rem;
+  }
+
+  /* Style the audio controls for dark theme */
+  audio::-webkit-media-controls-panel {
+    background: rgba(15, 17, 23, 0.8);
+  }
+</style>

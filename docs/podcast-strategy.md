@@ -30,7 +30,7 @@ Updated: 2026-03-09
 | Role | Voice | Source |
 |------|-------|--------|
 | **Host (Rob)** | Cloned voice | ElevenLabs — voice clone created |
-| **Expert Analyst (Alex)** | AI voice | ElevenLabs — "Adam", "Daniel", or similar |
+| **Co-host (Rachel)** | AI voice | ElevenLabs — Rachel McGrath |
 
 ### Episode Structure (Project Deep-Dive)
 
@@ -52,7 +52,7 @@ Agent Zero: Write script from existing review
      |
 Rob: Review script, adjust for voice/tone
      |
-ElevenLabs: Generate audio (Rob voice + Alex voice)
+ElevenLabs: Generate audio (Rob voice + Rachel voice)
      |
 Edit: Combine clips, add intro/outro music bed
      |
@@ -79,7 +79,7 @@ Embed: Add player to project page on site
 
 - ElevenLabs account: active
 - Rob's voice clone: created
-- Second voice (Alex): select from ElevenLabs library
+- Co-host voice (Rachel): Rachel McGrath from ElevenLabs library
 
 ### Distribution Channels
 

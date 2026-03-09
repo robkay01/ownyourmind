@@ -29,6 +29,9 @@ cookies.txt
 # jetbrains setting folder
 .idea/
 
+# Podcast audio outputs (generated MP3s — large files)
+podcast-audio/
+
 # Remotion explainer video outputs
 explainers/out/
 explainers/node_modules/
