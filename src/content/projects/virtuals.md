@@ -20,7 +20,7 @@ returnsScoreEvidence:
   liquidityAccess: "Binance, Coinbase, OKX, Bybit, Kraken. Daily volume approximately $68M. Base chain bridging adds friction but liquidity is strong."
 publishDate: 2025-03-03
 draft: false
-coingeckoId: "virtuals-protocol"
+coingeckoId: "virtual-protocol"
 launchType: "ico"
 chain: "Base (Ethereum L2)"
 supplyType: "capped"

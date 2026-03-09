@@ -79,6 +79,7 @@ Run the staleness check and tell me which projects need a quarterly review.
 | System | What it refreshes | Schedule | Trigger |
 |--------|-------------------|----------|---------|
 | Live market data | Price, market cap, FDV, 24h/7d change, sparklines | Every build | `npm run build` (30-min cache) |
+| On-chain metrics | Token supply, staking ratios, contract data (12 EVM projects) | Manual | `npm run refresh:onchain` |
 | GitHub metrics | Stars, forks, contributors, commits, weekly commit activity | Weekly (Mon 08:00 UTC) | GitHub Actions or `npm run refresh:github` |
 | Community metrics | Telegram members, Discord members | Weekly (Mon 08:00 UTC) | GitHub Actions or `npm run refresh:community` |
 | Staleness checker | Flags stale/incomplete research records | Weekly (Mon 08:00 UTC) | GitHub Actions or `npm run check:staleness` |
@@ -96,6 +97,32 @@ At build time, Astro calls the CoinGecko `/coins/markets` API for all projects w
 Data displayed: price, market cap, FDV, 24h change, 7d sparkline.
 
 No API key required. Free tier rate limits apply (~30 calls/minute).
+
+### 1b. On-chain Metrics (manual)
+
+**Script:** `scripts/fetch-onchain-metrics.sh`
+**Command:** `npm run refresh:onchain`
+
+Queries public EVM RPC endpoints directly (no API keys) for `totalSupply()` and `balanceOf()` on 12 projects with ERC-20 tokens:
+
+| Project | Chain | What's queried |
+|---------|-------|---------------|
+| Venice (VVV/DIEM) | Base | Supply, staking ratio, DIEM supply |
+| Morpheus (MOR) | Arbitrum + Ethereum | Supply on both chains |
+| Virtuals (VIRTUAL) | Base | Supply |
+| FLock (FLOCK) | Base | Supply |
+| Golem (GLM) | Ethereum | Supply |
+| Autonolas (OLAS) | Ethereum | Supply |
+| Fetch/ASI (FET) | Ethereum | Supply |
+| Ocean (OCEAN) | Ethereum | Supply |
+| Phala (PHA) | Ethereum | Supply |
+| ORA | Ethereum | Supply |
+| Vana (VANA) | Ethereum | Supply (bridged) |
+| Sahara (SAHARA) | Ethereum | Supply |
+
+Output: `src/data/onchain-metrics.json`. Displayed via the `OnchainMetrics` component on each project page.
+
+RPC endpoints used: `ethereum.publicnode.com`, `mainnet.base.org`, `arb1.arbitrum.io/rpc`. No rate limits for basic `eth_call` queries.
 
 ### 2. GitHub Metrics Refresh (weekly)
 
@@ -212,6 +239,7 @@ As weekly refreshes accumulate, the sparklines will show trends over time.
 | X/Twitter followers | Paid API ($100/month) | Quarterly manual review |
 | TVL (DeFiLlama) | No automated pipeline yet | Quarterly manual review |
 | On-chain revenue | Project-specific data sources | Quarterly manual review |
+| On-chain metrics (non-EVM) | Solana, Cosmos, Polkadot chains not yet supported | `npm run refresh:onchain` covers EVM only |
 | Usage metrics (DAU, txns) | Project-specific dashboards | Quarterly manual review |
 | Freedom/Returns scores | Editorial judgement required | Quarterly manual review |
 | Prose content | Human-written analysis | When material changes occur |
@@ -219,6 +247,9 @@ As weekly refreshes accumulate, the sparklines will show trends over time.
 ## Running locally
 
 ```bash
+# On-chain metrics (public RPC, no keys needed)
+npm run refresh:onchain
+
 # GitHub refresh (set token for higher rate limits)
 GITHUB_TOKEN=$(gh auth token) npm run refresh:github
 

@@ -1,5 +1,5 @@
 ---
-import { getVeniceMetrics } from '../data/onchain-metrics';
+import { getOnchainMetrics, getProjectMetrics } from '../data/onchain-metrics';
 
 interface Props {
   slug: string;
@@ -7,31 +7,47 @@ interface Props {
 
 const { slug } = Astro.props;
 
-// Load metrics based on project
-let metrics: { label: string; value: string; detail?: string }[] = [];
-let dataDate: string | null = null;
+const onchain = getOnchainMetrics();
+const data = getProjectMetrics(slug);
 
-if (slug === 'venice') {
-  const venice = getVeniceMetrics();
-  if (venice) {
-    const onchain = await import('../data/onchain-metrics.ts').then(m => m.getOnchainMetrics());
-    dataDate = onchain?.date ?? null;
-    metrics = [
-      {
-        label: 'VVV Staked',
-        value: `${(venice.vvv_staked / 1e6).toFixed(1)}M`,
-        detail: `${venice.vvv_staking_ratio}% of supply`,
-      },
-      {
-        label: 'DIEM Supply',
-        value: venice.diem_total_supply.toLocaleString('en-US', { maximumFractionDigits: 0 }),
-        detail: `$${venice.diem_total_supply.toLocaleString('en-US', { maximumFractionDigits: 0 })}/day inference`,
-      },
-      {
-        label: 'VVV Supply',
-        value: `${(venice.vvv_total_supply / 1e6).toFixed(1)}M`,
-      },
-    ];
+let metrics: { label: string; value: string; detail?: string }[] = [];
+let dataDate: string | null = onchain?.date ?? null;
+
+function fmtSupply(n: number): string {
+  if (n >= 1e9) return `${(n / 1e9).toFixed(1)}B`;
+  if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`;
+  if (n >= 1e3) return `${(n / 1e3).toFixed(0)}K`;
+  return n.toLocaleString('en-US');
+}
+
+if (data) {
+  // Token supply (handles single-chain and multi-chain)
+  const supply = data.token_supply ?? data.token_supply_arbitrum ?? 0;
+  if (supply > 0) {
+    const supplyLabel = data.token_supply_arbitrum ? 'Supply (Arbitrum)' : 'Token Supply';
+    metrics.push({ label: supplyLabel, value: fmtSupply(supply), detail: data.chain });
+  }
+
+  // Secondary chain supply (e.g. Morpheus on Ethereum)
+  if (data.token_supply_ethereum && data.token_supply_ethereum > 0) {
+    metrics.push({ label: 'Supply (Ethereum)', value: fmtSupply(data.token_supply_ethereum) });
+  }
+
+  // Staking data (Venice)
+  if (data.staked && data.staked > 0) {
+    metrics.push({
+      label: 'Staked',
+      value: fmtSupply(data.staked),
+      detail: data.staking_ratio ? `${data.staking_ratio}% of supply` : undefined,
+    });
+  }
+
+  // DIEM supply (Venice)
+  if (data.diem_supply && data.diem_supply > 0) {
+    metrics.push({
+      label: 'DIEM Supply',
+      value: data.diem_supply.toLocaleString('en-US', { maximumFractionDigits: 0 }),
+    });
   }
 }
 ---
@@ -42,7 +58,7 @@ if (slug === 'venice') {
       <span class="onchain-label">On-chain data</span>
       {dataDate && <span class="onchain-date">{dataDate}</span>}
     </div>
-    <div class="onchain-grid">
+    <div class={`onchain-grid onchain-cols-${Math.min(metrics.length, 3)}`}>
       {metrics.map((m) => (
         <div class="onchain-card">
           <div class="onchain-value">{m.value}</div>
@@ -85,13 +101,16 @@ if (slug === 'venice') {
 
   .onchain-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
+  .onchain-cols-1 { grid-template-columns: 1fr; }
+  .onchain-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .onchain-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
   @media (max-width: 640px) {
     .onchain-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
   }
 

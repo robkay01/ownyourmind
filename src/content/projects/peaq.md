@@ -20,7 +20,7 @@ returnsScoreEvidence:
   liquidityAccess: "Kraken, KuCoin, Gate.io, MEXC, Bitget, Crypto.com. $1.18M daily volume. No Binance main listing. Adequate for small positions."
 publishDate: 2025-03-06
 draft: false
-coingeckoId: "peaq"
+coingeckoId: "peaq-2"
 launchType: "ico"
 chain: "Polkadot parachain (Substrate)"
 supplyType: "uncapped"

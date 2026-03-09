@@ -20,7 +20,7 @@ returnsScoreEvidence:
   liquidityAccess: "Binance listing. But volume has declined significantly since launch."
 publishDate: 2025-03-02
 draft: false
-coingeckoId: "io-net"
+coingeckoId: "io"
 launchType: "ico"
 chain: "Solana"
 supplyType: "capped"

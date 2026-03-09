@@ -1,16 +1,95 @@
 {
-  "timestamp": 1773066182,
+  "timestamp": 1773066998,
   "date": "2026-03-09",
   "venice": {
-    "vvv_total_supply": 112627072,
-    "vvv_staked": 32909008,
-    "vvv_staking_ratio": 29.2,
-    "diem_total_supply": 37645.31,
+    "token_supply": 112627244,
+    "staked": 32909171,
+    "staking_ratio": 29.2,
+    "diem_supply": 37643.3,
+    "chain": "base",
     "contracts": {
-      "vvv_token": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
-      "vvv_staking": "0x321b7ff75154472B18EDb199033fF4D116F340Ff",
-      "diem_token": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024",
-      "chain": "base"
+      "token": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+      "staking": "0x321b7ff75154472B18EDb199033fF4D116F340Ff",
+      "diem": "0xf4d97f2da56e8c3098f3a8d538db630a2606a024"
+    }
+  },
+  "morpheus": {
+    "token_supply_arbitrum": 2888925,
+    "token_supply_ethereum": 67192,
+    "chain": "arbitrum",
+    "contracts": {
+      "token_arbitrum": "0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86",
+      "token_ethereum": "0xcbb8f1bda10b9696c57e13bc128fe674769dcec0"
+    }
+  },
+  "virtuals": {
+    "token_supply": 497448625,
+    "chain": "base",
+    "contracts": {
+      "token": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b"
+    }
+  },
+  "flock": {
+    "token_supply": 316432831,
+    "chain": "base",
+    "contracts": {
+      "token": "0x5ab3d4c385b400f3abb49e80de2faf6a88a7b691"
+    }
+  },
+  "golem": {
+    "token_supply": 796295903,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429"
+    }
+  },
+  "autonolas": {
+    "token_supply": 527890426,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0x0001a500a6b18995b03f44bb040a5ffc28e45cb0"
+    }
+  },
+  "fetch-asi": {
+    "token_supply": 2714384547,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85"
+    }
+  },
+  "ocean": {
+    "token_supply": 1410000000,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48"
+    }
+  },
+  "phala": {
+    "token_supply": 1000000000,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e"
+    }
+  },
+  "ora": {
+    "token_supply": 333333333,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0x33333333FEde34409Fb7f67c6585047E1F653333"
+    }
+  },
+  "vana": {
+    "token_supply_ethereum": 63444,
+    "chain": "ethereum (bridged)",
+    "contracts": {
+      "token": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0"
+    }
+  },
+  "sahara": {
+    "token_supply": 10000000000,
+    "chain": "ethereum",
+    "contracts": {
+      "token": "0xFDFfB411C4A70AA7C95D5C981a6Fb4Da867e1111"
     }
   }
 }
