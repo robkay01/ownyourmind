@@ -11,9 +11,9 @@
     <description>The dual-score podcast for decentralised AI. Every episode breaks down a DeAI project with honest, data-driven assessments — scoring both sovereignty (Freedom Score) and token economics (Returns Score). No sponsors, no shilling, no hype. Freedom AND returns. Sovereignty-first. Practitioner-led.</description>
     <atom:link href="https://ownyourmind.ai/podcast/feed.xml" rel="self" type="application/rss+xml"/>
 
-    <itunes:author>Rob Kay</itunes:author>
+    <itunes:author>Bobski</itunes:author>
     <itunes:owner>
-      <itunes:name>Rob Kay</itunes:name>
+      <itunes:name>Bobski</itunes:name>
       <itunes:email>bobski@ownyourmind.ai</itunes:email>
     </itunes:owner>
     <itunes:category text="Technology"/>
