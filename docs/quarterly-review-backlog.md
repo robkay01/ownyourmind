@@ -20,6 +20,8 @@ See `docs/review-schedule.json` for next due dates.
 
 - **Token Utility (18 → 19?):** Power Factor adds another utility layer beyond staking/compute/agents. Marginal — 18/20 already reflects strong multi-sided utility. Probably leave as-is.
 
+- **Revenue Sustainability (8 → 10?):** stETH yield from capital providers is verifiable on-chain external revenue funding POL daily. Compared to Venice (12/25) which has undisclosed revenue and qualitative claims, Morpheus's 8/25 looks underscored. The stETH mechanism is structurally sound and creates a rising floor independent of speculation. Compute revenue is still negligible, which caps the upside, but the 4-point gap vs Venice is hard to justify. If bumped to 10: total 57 → 59, grade stays C. Deferred because podcast episodes 001-003 reference current scores.
+
 ---
 
 ## Akash Network (AKT)
