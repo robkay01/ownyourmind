@@ -131,6 +131,7 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ### Priority 2 — Evergreen candidates
 
+- **DIEM: How Venice Turned Staking into Perpetual AI Credit** — The DIEM flywheel: exponential mint curve, VVV lock-up mechanics, how rising DIEM demand tightens VVV supply on an exponential curve. Voorhees' tokenomics post as primary source. Contrast with simple staking models (Bittensor, Morpheus). One of the more elegant token designs in DeAI.
 - Staking economics across DeAI networks — where the real yield is
 - Vesting schedules and unlock risks — what the charts don't tell you
 - DeAI token classification: utility vs governance vs speculation
@@ -217,6 +218,7 @@ Current backlog: `docs/quarterly-review-backlog.md`
 - **Vitalik Buterin** — writings on AI + crypto intersection
 - **DeFiLlama** — TVL and usage data
 - **CoinGecko** — market data, logos
+- **Dune Analytics** — on-chain dashboards. Venice: [seoul/venice](https://dune.com/seoul/venice), [maxdesalle/venice](https://dune.com/maxdesalle/venice), [jdhyper/vvv-launch-and-staking](https://dune.com/jdhyper/vvv-launch-and-staking)
 - **Academic** — federated learning economics, FHE performance papers
 - **DeAI Twitter/X** — @0xJeff, @CanteraCapital, @OlasNetwork, @baboracles
 
@@ -228,17 +230,18 @@ AI-generated podcast using Rob's cloned voice (ElevenLabs). Agent Zero scripts f
 
 Full strategy: `docs/podcast-strategy.md`
 
-### Status: Pilot Phase
+### Status: Launched
 
-Voice clone created on ElevenLabs. First script (Bittensor) drafted by Agent Zero. Producing 2-3 pilot episodes before launching to directories.
+Voice clone (Rob/Bobski) + Rachel McGrath co-host on ElevenLabs. Turn-by-turn generation pipeline (`podcast-scripts/generate-episode-v2.sh`). All episodes include spoken disclaimer. Audio embedded on project pages via PodcastPlayer component. RSS feed at `/podcast/feed.xml`. Submitted to Spotify (direct upload) and Apple Podcasts (RSS).
 
-### Pilot Episodes
+### Published Episodes
 
-| Episode | Project/Topic | Type | Script | Audio | Embedded |
-|---------|--------------|------|--------|-------|----------|
-| 001 | Bittensor | Deep-Dive | Ready (`podcast-scripts/bittensor-episode-001.md`) | Not started | No |
-| 002 | Morpheus | Deep-Dive | Not started | Not started | No |
-| 003 | Akash | Deep-Dive | Not started | Not started | No |
+| Episode | Project/Topic | Type | Duration | Audio |
+|---------|--------------|------|----------|-------|
+| Trailer | Introduction | Trailer | 2m 44s | `/podcast/Own-Your-Mind--PodcastTrailer.mp3` |
+| 001 | Bittensor | Deep-Dive | 15m 12s | `/podcast/Own-Your-Mind-001-Bittensor.mp3` |
+| 002 | Morpheus | Deep-Dive | 12m 13s | `/podcast/Own-Your-Mind-002-Morpheus.mp3` |
+| 003 | Akash | Deep-Dive | 8m 17s | `/podcast/Own-Your-Mind-003-Akash.mp3` |
 
 ### Episode Backlog
 
