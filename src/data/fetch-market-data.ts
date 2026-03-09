@@ -52,7 +52,8 @@ export async function fetchMarketData(coingeckoIds: string[]): Promise<MarketDat
     }
 
     const json = await res.json();
-    const result: MarketDataMap = {};
+    // Merge fresh data with cached data so missing IDs retain old values
+    const result: MarketDataMap = { ...(cached?.data ?? {}) };
 
     for (const coin of json) {
       result[coin.id] = {
