@@ -83,7 +83,7 @@ The goal is to become the score that projects and investors reference.
 - Quarterly score updates with published changelogs (transparency builds trust)
 - Tokenomics articles timed to market events — pipeline already identified:
   - Akash BME activation (March 23rd), BME comparison (Akash vs Render), ASI Alliance merged tokenomics, Bittensor dTAO subnet economics
-- Build tutorials that drive organic search — keyword research via Agent Zero to validate and prioritise targets (practical content has long-tail SEO value)
+- Build tutorials that drive organic search — keyword research completed (March 2026), 5 tutorials prioritised by search volume. Build section revived as dedicated tutorial hub, separate from project reviews for independent maintenance. Full strategy: `docs/seo-keyword-strategy.md`
 
 **Dashboard enhancement:**
 - Score history — show how Freedom and Returns scores change over time per project
@@ -97,10 +97,26 @@ The goal is to become the score that projects and investors reference.
 - Publish score change rationale when scores move (like Moody's rating actions)
 - Guest contributions from project teams responding to their reviews (builds ecosystem engagement)
 
+**SEO strategy (active):**
+- Phase A complete: meta descriptions, title tags, heading optimisation across 14 pages
+- Phase B in progress: keyword-targeted enrichments to existing pages (Venice uncensored, Bittensor halving, FAQ schemas, compare page intro)
+- Phase C planned: keyword-prioritised Build tutorials + DePIN tokens resource page
+- Keyword data from Agent Zero (March 2026): 82 keywords with measurable volume, 86% Low competition
+- Full strategy: `docs/seo-keyword-strategy.md`
+
+**Podcast (AI-generated):**
+- Rob's cloned voice (ElevenLabs) as host, AI analyst as guest
+- Repurposes existing project reviews into audio — compound content, not new research
+- Embeds on project pages (time-on-page SEO signal) + distributes to Spotify/Apple/Google
+- ~20 min per episode to produce. Passes the one-person-with-AI test.
+- Pilot phase: 2-3 episodes to validate on-site engagement before directory launch
+- Full strategy: `docs/podcast-strategy.md`
+
 **Audience growth:**
 - SEO-optimised project reviews (people search "[project name] review")
 - X/Twitter engagement on score changes and new reviews (news-driven content)
 - Newsletter with monthly score updates and editorial highlights
+- Podcast in directories for passive discovery (complementary to newsletter, not competing)
 
 ### Phase 3: Platform (Q4 2026 – 2027)
 

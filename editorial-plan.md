@@ -2,7 +2,7 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-08
+Updated: 2026-03-09
 
 ---
 
@@ -126,6 +126,7 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 |---|---|---|---|
 | ~~**Burn-Mint Equilibrium: What Actually Changes for AKT Holders**~~ | ~~Akash BME vote (March 23rd)~~ | ~~March 2026~~ | **DONE** — Published 2026-03-08. Includes Render BME comparison section, so separate BME comparison article no longer needed. |
 | **ASI Alliance: What the Merged Tokenomics Actually Mean** | FET/OCEAN/AGIX migration ongoing | Q2 2026 | Token migration mechanics, merged supply dynamics, what holders of each original token get. |
+| **Bittensor Halving 2026: What TAO Holders Need to Know** | Halving event | Before halving | 500 monthly searches for "bittensor halving". Event-timed, high intent. |
 | **Bittensor Subnet Economics: How dTAO Actually Works** | dTAO launched | Q2 2026 | Novel subnet staking/emission model, poorly understood, high search interest. Evergreen once written. |
 
 ### Priority 2 — Evergreen candidates
@@ -136,14 +137,63 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ---
 
-## Build Pipeline
+## Build Pipeline — Keyword-Prioritised
 
-2 tutorials published. Candidates for future:
+2 tutorials published. Build section revived as the dedicated home for tutorials (separate from project reviews to keep reviews evergreen and tutorials independently updateable).
+
+Each tutorial links back to its project review. Each project review's "How to participate" section links forward to the tutorial.
+
+### Priority 1 — Keyword-validated (from Agent Zero keyword research, March 2026)
+
+| Priority | Article | Target Query | Monthly Volume | Links to |
+|----------|---------|-------------|----------------|----------|
+| 1 | **How to Earn with Grass: Passive Income from Bandwidth** | how to earn grass, grass bandwidth sharing | 50+50 | `/projects/grass/` |
+| 2 | **How to Stake RENDER: Complete Guide** | render staking, render gpu mining | 50+50 | `/projects/render/` |
+| 3 | **Aethir Node Setup: How to Earn with ATH** | aethir node | 50 | `/projects/aethir/` |
+| 4 | **How to Build an AI Agent with ElizaOS** | elizaos ai agent | 50 | `/projects/elizaos/` |
+| 5 | **Virtuals Protocol: How to Create an AI Agent** | virtuals protocol ai agent | 50 | `/projects/virtuals/` |
+
+All have Low competition and transactional intent. Volume is long-tail but these are practical pages that compound over time.
+
+### Priority 2 — Original candidates (not yet keyword-validated)
 
 - Running a Bittensor subnet miner
 - Deploying on Akash from zero
 - Local inference benchmarks: which models, which hardware, what it actually costs
 - Morpheus capital staking walkthrough with Power Factor
+
+Full keyword strategy: `docs/seo-keyword-strategy.md`
+
+---
+
+## SEO: Existing Page Enrichments (Phase B)
+
+Pages that already exist but need keyword-targeted content additions. No new URLs.
+
+### High-value (500+ monthly searches)
+
+| Page | Target Query | Volume | Action | Status |
+|------|-------------|--------|--------|--------|
+| `/projects/venice/` | venice ai uncensored, venice ai private ai | 500+50 | Add "uncensored" and "private AI" coverage, tutorial subsection | Not started |
+| `/projects/bittensor/` | bittensor halving | 500 | Add halving section with TAO holder impact | Not started |
+| `/why-deai/the-case-for-sovereign-ai/` | sovereign ai, what is sovereign ai | 5,000+500 | Title optimised; add FAQ schema | Title DONE, schema not started |
+| `/why-deai/what-counts-as-decentralised-ai/` | what is deai | 500 | Title optimised; add FAQ schema | Title DONE, schema not started |
+
+### Long-tail (50 monthly searches)
+
+| Page | Target Query | Action | Status |
+|------|-------------|--------|--------|
+| `/projects/compare/` | bittensor vs render, render vs akash | Add static SEO intro + popular comparison links above tool | Not started |
+| `/projects/io-net/` | io net earnings | Add earnings expectations to participation section | Not started |
+| `/projects/morpheus/` | how does morpheus work | Verify H2 matches query phrasing | Not started |
+
+### Resources — New Pages
+
+| Article | Target Query | Volume | Status |
+|---------|-------------|--------|--------|
+| **DePIN Tokens Ranked by Freedom & Returns** | depin tokens list | 50 | Not started |
+
+Full keyword strategy: `docs/seo-keyword-strategy.md`
 
 ---
 
@@ -172,11 +222,43 @@ Current backlog: `docs/quarterly-review-backlog.md`
 
 ---
 
+## Podcast Pipeline
+
+AI-generated podcast using Rob's cloned voice (ElevenLabs). Agent Zero scripts from existing reviews, ElevenLabs generates audio, episodes embed on project pages and distribute to podcast platforms.
+
+Full strategy: `docs/podcast-strategy.md`
+
+### Status: Pilot Phase
+
+Voice clone created on ElevenLabs. First script (Bittensor) drafted by Agent Zero. Producing 2-3 pilot episodes before launching to directories.
+
+### Pilot Episodes
+
+| Episode | Project/Topic | Type | Script | Audio | Embedded |
+|---------|--------------|------|--------|-------|----------|
+| 001 | Bittensor | Deep-Dive | Drafted (Agent Zero) | Not started | No |
+| 002 | Morpheus | Deep-Dive | Not started | Not started | No |
+| 003 | Akash | Deep-Dive | Not started | Not started | No |
+
+### Episode Backlog
+
+| Priority | Project/Topic | Type |
+|----------|--------------|------|
+| 4 | Venice | Deep-Dive |
+| 5 | Render vs Akash vs io.net | Comparison |
+| 6 | Why Decentralised AI Matters | Theme |
+
+---
+
 ## Content Calendar
 
 No fixed dates — quality over cadence. Current focus areas:
 
 1. Monthly/quarterly review process (first monthly review due April 2026)
 2. Akash BME activation follow-up (March 23rd) — update project page + returns score once live on mainnet
-3. New tokenomics articles as market events warrant
-4. Build tutorials when Rob has hands-on experience to share
+3. Podcast pilot — produce 2-3 episodes, embed on project pages, validate engagement
+4. SEO Phase B page enrichments — Venice uncensored, Bittensor halving, FAQ schemas, compare page intro
+5. Build tutorials prioritised by keyword data — Grass, Render, Aethir, ElizaOS, Virtuals
+6. Event-timed tokenomics — Bittensor halving, ASI Alliance, dTAO economics
+7. Compare page SEO optimisation — static intro content + popular comparison links
+8. Newsletter — monthly digest once Buttondown account approved
