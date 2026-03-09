@@ -3,8 +3,8 @@
     "project_id": "sahara",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Sahara AI litepaper PDF (assets.saharaai.com/files/litepaper.pdf) could not be parsed via WebFetch -- content reconstructed from official docs, blog posts, Binance Academy, and secondary sources",
@@ -65,6 +65,50 @@
           "community.github_contributors": 3
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 0,
+          "technical.github_metrics.forks": 0,
+          "technical.github_metrics.last_commit_date": "2026-01-16",
+          "technical.github_metrics.contributors": 3,
+          "technical.github_metrics.total_commits": 128,
+          "technical.github_metrics.total_repos": 26,
+          "community.github_contributors": 3
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 4,
+          "technical.github_metrics.forks": 1,
+          "technical.github_metrics.last_commit_date": "2026-03-09",
+          "technical.github_metrics.contributors": 1,
+          "technical.github_metrics.total_commits": 18,
+          "technical.github_metrics.total_repos": 27,
+          "community.github_contributors": 1
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 157729
+        },
+        "new_values": {
+          "community.telegram_members": 157461
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -167,13 +211,13 @@
     "open_source": false,
     "license": "Apache-2.0 (selected repos including Verifiable-ClawGuard, x-function). Core platform components appear proprietary. Chain code (sahara repo) has no specified license.",
     "github_metrics": {
-      "total_repos": 26,
+      "total_repos": 27,
       "primary_repo_url": "https://github.com/SaharaLabsAI/sahara",
-      "total_commits": 128,
-      "contributors": 3,
-      "last_commit_date": "2026-01-16",
-      "stars": 0,
-      "forks": 0,
+      "total_commits": 18,
+      "contributors": 1,
+      "last_commit_date": "2026-03-09",
+      "stars": 4,
+      "forks": 1,
       "open_issues": 0
     },
     "audits": [],
@@ -413,9 +457,9 @@
   },
   "community": {
     "discord_members": 341738,
-    "telegram_members": 157729,
+    "telegram_members": 157461,
     "x_followers": 913000,
-    "github_contributors": 3,
+    "github_contributors": 1,
     "governance_participation_rate": "No governance proposals have been submitted yet -- mainnet governance not active",
     "governance_model": "Planned DAO governance with SAHARA token-based voting. Token holders can propose and vote on protocol upgrades, funding allocations, and key governance policies. Staking required for voting rights. Not yet operational.",
     "governance_url": "",
@@ -1237,6 +1281,33 @@
       "telegram_members": 157729,
       "x_followers": 913000,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 4,
+      "forks": 1,
+      "open_issues": 0,
+      "contributors": 1,
+      "total_commits": 18,
+      "total_repos": 27,
+      "discord_members": 341738,
+      "telegram_members": 157729,
+      "x_followers": 913000,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 4,
+      "forks": 1,
+      "open_issues": 0,
+      "contributors": 1,
+      "total_commits": 18,
+      "total_repos": 27,
+      "discord_members": 341738,
+      "telegram_members": 157461,
+      "x_followers": 913000
     }
   ]
 }

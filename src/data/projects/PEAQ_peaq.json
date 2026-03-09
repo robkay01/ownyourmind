@@ -3,8 +3,8 @@
     "project_id": "peaq",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 4,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "peaqnetwork",
@@ -68,6 +68,19 @@
           "community.github_contributors": 15
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 31547
+        },
+        "new_values": {
+          "community.telegram_members": 31382
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -419,7 +432,7 @@
   },
   "community": {
     "discord_members": 144332,
-    "telegram_members": 31547,
+    "telegram_members": 31382,
     "x_followers": null,
     "github_contributors": 15,
     "governance_participation_rate": "Unknown",
@@ -908,6 +921,86 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 81,
+      "forks": 45,
+      "open_issues": 12,
+      "contributors": 15,
+      "total_commits": 1576,
+      "total_repos": 98,
+      "discord_members": 144332,
+      "telegram_members": 31547,
+      "x_followers": null,
+      "weekly_commits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        4,
+        2,
+        1,
+        4,
+        1,
+        8,
+        0,
+        6,
+        1,
+        4,
+        0,
+        2,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 81,
+      "forks": 45,
+      "open_issues": 12,
+      "contributors": 15,
+      "total_commits": 1576,
+      "total_repos": 98,
+      "discord_members": 144332,
+      "telegram_members": 31382,
+      "x_followers": null
     }
   ]
 }

@@ -3,8 +3,8 @@
     "project_id": "iotex",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "iotexproject",
@@ -65,6 +65,41 @@
           "community.github_contributors": 112
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 1584,
+          "technical.github_metrics.forks": 364,
+          "technical.github_metrics.open_issues": 230,
+          "technical.github_metrics.last_commit_date": "2026-03-06"
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 1585,
+          "technical.github_metrics.forks": 365,
+          "technical.github_metrics.open_issues": 243,
+          "technical.github_metrics.last_commit_date": "2026-03-09"
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 24057
+        },
+        "new_values": {
+          "community.telegram_members": 23970
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -157,13 +192,13 @@
     "github_metrics": {
       "total_repos": 173,
       "primary_repo": "iotex-core",
-      "stars": 1584,
-      "forks": 364,
+      "stars": 1585,
+      "forks": 365,
       "commits": 3598,
       "license": "Apache-2.0",
       "last_commit": "2026-03-05",
-      "open_issues": 230,
-      "last_commit_date": "2026-03-06",
+      "open_issues": 243,
+      "last_commit_date": "2026-03-09",
       "contributors": 112,
       "total_commits": 3598
     },
@@ -238,7 +273,7 @@
     "usage_notes": "3,010 ioID device owners. 218 ecosystem projects including 51 DePIN. DePINscan tracks 280+ DePIN projects globally."
   },
   "community": {
-    "telegram_members": 24057,
+    "telegram_members": 23970,
     "x_followers": 229315,
     "discord_members": null,
     "twitter_handle": "@iotex_io",
@@ -597,6 +632,33 @@
         0,
         4
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 1585,
+      "forks": 365,
+      "open_issues": 243,
+      "contributors": 112,
+      "total_commits": 3598,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 24057,
+      "x_followers": 229315,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 1585,
+      "forks": 365,
+      "open_issues": 243,
+      "contributors": 112,
+      "total_commits": 3598,
+      "total_repos": 173,
+      "discord_members": null,
+      "telegram_members": 23970,
+      "x_followers": 229315
     }
   ]
 }

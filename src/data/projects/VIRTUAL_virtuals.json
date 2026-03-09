@@ -3,8 +3,8 @@
     "project_id": "virtuals",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 4,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Basescan returned 403 -- token holder count, transfer count, and exact on-chain circulating supply not directly verifiable from block explorer in this session",
@@ -66,6 +66,19 @@
           "community.github_contributors": 5
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 21522
+        },
+        "new_values": {
+          "community.telegram_members": 21492
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -426,7 +439,7 @@
   },
   "community": {
     "discord_members": 11865,
-    "telegram_members": 21522,
+    "telegram_members": 21492,
     "x_followers": 281000,
     "github_contributors": 5,
     "governance_participation_rate": "veVIRTUAL governance launched with 0.10% supply threshold for proposals, 25% quorum requirement. Participation rate not quantified.",
@@ -1204,6 +1217,33 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 92,
+      "forks": 59,
+      "open_issues": 10,
+      "contributors": 5,
+      "total_commits": 260,
+      "total_repos": 32,
+      "discord_members": 11865,
+      "telegram_members": 21522,
+      "x_followers": 281000,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 92,
+      "forks": 59,
+      "open_issues": 10,
+      "contributors": 5,
+      "total_commits": 260,
+      "total_repos": 32,
+      "discord_members": 11865,
+      "telegram_members": 21492,
+      "x_followers": 281000
     }
   ]
 }

@@ -3,8 +3,8 @@
     "project_id": "elizaos",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "CoinGecko returned 403 -- market data reconstructed from LiveCoinWatch, MarketCapOf, and web search snippets",
@@ -59,6 +59,31 @@
           "technical.github_metrics.last_commit_date": "2026-03-06",
           "technical.github_metrics.contributors": 366,
           "community.github_contributors": 366
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.total_commits",
+          "technical.github_metrics.total_repos"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 17708,
+          "technical.github_metrics.forks": 5449,
+          "technical.github_metrics.last_commit_date": "2026-03-06",
+          "technical.github_metrics.total_commits": 17545,
+          "technical.github_metrics.total_repos": 60
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 17728,
+          "technical.github_metrics.forks": 5451,
+          "technical.github_metrics.last_commit_date": "2026-03-09",
+          "technical.github_metrics.total_commits": 17562,
+          "technical.github_metrics.total_repos": 61
         },
         "run_by": "github-actions"
       }
@@ -139,13 +164,13 @@
     "open_source": true,
     "license": "MIT",
     "github_metrics": {
-      "total_repos": 60,
+      "total_repos": 61,
       "primary_repo_url": "https://github.com/elizaOS/eliza",
-      "total_commits": 17545,
+      "total_commits": 17562,
       "contributors": 366,
-      "last_commit_date": "2026-03-06",
-      "stars": 17708,
-      "forks": 5449,
+      "last_commit_date": "2026-03-09",
+      "stars": 17728,
+      "forks": 5451,
       "open_issues": 133
     },
     "audits": [
@@ -1280,6 +1305,73 @@
         39,
         2,
         0
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 17728,
+      "forks": 5451,
+      "open_issues": 133,
+      "contributors": 366,
+      "total_commits": 17562,
+      "total_repos": 61,
+      "discord_members": 2683,
+      "telegram_members": null,
+      "x_followers": null,
+      "weekly_commits": [
+        377,
+        301,
+        258,
+        212,
+        177,
+        163,
+        233,
+        210,
+        315,
+        656,
+        270,
+        416,
+        415,
+        414,
+        325,
+        400,
+        452,
+        299,
+        52,
+        77,
+        153,
+        60,
+        198,
+        162,
+        274,
+        135,
+        122,
+        92,
+        142,
+        112,
+        86,
+        90,
+        79,
+        43,
+        41,
+        63,
+        34,
+        39,
+        62,
+        36,
+        14,
+        54,
+        81,
+        75,
+        18,
+        6,
+        60,
+        39,
+        39,
+        2,
+        1,
+        16
       ]
     }
   ]

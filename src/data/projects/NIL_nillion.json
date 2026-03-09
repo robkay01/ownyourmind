@@ -3,8 +3,8 @@
     "project_id": "nillion",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "NillionNetwork",
@@ -71,6 +71,50 @@
           "community.github_contributors": 16
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 35,
+          "technical.github_metrics.forks": 30,
+          "technical.github_metrics.open_issues": 8,
+          "technical.github_metrics.last_commit_date": "2026-01-22",
+          "technical.github_metrics.contributors": 16,
+          "technical.github_metrics.total_commits": 42,
+          "community.github_contributors": 16
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 12,
+          "technical.github_metrics.forks": 6,
+          "technical.github_metrics.open_issues": 6,
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": 7,
+          "technical.github_metrics.total_commits": 165,
+          "community.github_contributors": 7
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 22769
+        },
+        "new_values": {
+          "community.telegram_members": 22729
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -195,12 +239,12 @@
     "github_metrics": {
       "total_repos": 102,
       "primary_repo_url": "https://github.com/NillionNetwork",
-      "total_commits": 42,
-      "contributors": 16,
-      "last_commit_date": "2026-01-22",
-      "stars": 35,
-      "forks": 30,
-      "open_issues": 8
+      "total_commits": 165,
+      "contributors": 7,
+      "last_commit_date": "2026-03-02",
+      "stars": 12,
+      "forks": 6,
+      "open_issues": 6
     },
     "audits": [],
     "security_incidents": []
@@ -407,9 +451,9 @@
   },
   "community": {
     "discord_members": 98654,
-    "telegram_members": 22769,
+    "telegram_members": 22729,
     "x_followers": null,
-    "github_contributors": 16,
+    "github_contributors": 7,
     "governance_participation_rate": "Unknown",
     "governance_model": "Cosmos-based on-chain governance via nilChain. Standard Cosmos governance module for proposals and voting. Governance controls inflation rate and protocol parameters.",
     "governance_url": null,
@@ -844,6 +888,33 @@
       "telegram_members": 22769,
       "x_followers": null,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 12,
+      "forks": 6,
+      "open_issues": 6,
+      "contributors": 7,
+      "total_commits": 165,
+      "total_repos": 102,
+      "discord_members": 98654,
+      "telegram_members": 22769,
+      "x_followers": null,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 12,
+      "forks": 6,
+      "open_issues": 6,
+      "contributors": 7,
+      "total_commits": 165,
+      "total_repos": 102,
+      "discord_members": 98654,
+      "telegram_members": 22729,
+      "x_followers": null
     }
   ]
 }

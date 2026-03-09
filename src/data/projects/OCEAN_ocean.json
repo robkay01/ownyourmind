@@ -3,8 +3,8 @@
     "project_id": "ocean",
     "research_date": "2026-03-03",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 4,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Ocean Protocol official blog (blog.oceanprotocol.com) returned SSL certificate error -- blog posts referenced via search snippets and third-party reporting instead",
@@ -71,6 +71,19 @@
           "community.github_contributors": 20
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 8396
+        },
+        "new_values": {
+          "community.telegram_members": 8376
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -428,7 +441,7 @@
   },
   "community": {
     "discord_members": 56066,
-    "telegram_members": 8396,
+    "telegram_members": 8376,
     "x_followers": 170727,
     "github_contributors": 20,
     "governance_participation_rate": null,
@@ -1476,6 +1489,33 @@
       "telegram_members": 8396,
       "x_followers": 170727,
       "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 21,
+      "contributors": 20,
+      "total_commits": 3378,
+      "total_repos": 94,
+      "discord_members": 56066,
+      "telegram_members": 8396,
+      "x_followers": 170727,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 72,
+      "forks": 19,
+      "open_issues": 21,
+      "contributors": 20,
+      "total_commits": 3378,
+      "total_repos": 94,
+      "discord_members": 56066,
+      "telegram_members": 8376,
+      "x_followers": 170727
     }
   ]
 }

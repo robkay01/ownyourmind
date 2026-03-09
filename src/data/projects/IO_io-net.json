@@ -3,8 +3,8 @@
     "project_id": "io-net",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent v2)",
-    "version": 2,
-    "last_updated": "2026-03-02",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "research_gaps": [
       "Seed round USD amount and date not publicly disclosed — only Series A ($30M, March 2024) confirmed. Seed allocation is 12.5% of supply but seed-round valuation and amount are not documented in primary sources.",
@@ -26,7 +26,40 @@
       "discord_server_id": null,
       "telegram_username": null,
       "x_handle": "ionet"
-    }
+    },
+    "auto_refresh_log": [
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.forks",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.contributors",
+          "technical.github_metrics.total_commits",
+          "community.github_contributors"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 131,
+          "technical.github_metrics.forks": 465,
+          "technical.github_metrics.open_issues": 5,
+          "technical.github_metrics.last_commit_date": "2026-03-02",
+          "technical.github_metrics.contributors": null,
+          "technical.github_metrics.total_commits": 775,
+          "community.github_contributors": null
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 75,
+          "technical.github_metrics.forks": 49,
+          "technical.github_metrics.open_issues": 1,
+          "technical.github_metrics.last_commit_date": "2025-07-03",
+          "technical.github_metrics.contributors": 5,
+          "technical.github_metrics.total_commits": 90,
+          "community.github_contributors": 5
+        },
+        "run_by": "github-actions"
+      }
+    ]
   },
   "identity": {
     "name": "io.net",
@@ -148,12 +181,12 @@
     "github_metrics": {
       "total_repos": 9,
       "primary_repo_url": "https://github.com/ionet-official/io_launch_binaries",
-      "total_commits": 775,
-      "contributors": null,
-      "last_commit_date": "2026-03-02",
-      "stars": 131,
-      "forks": 465,
-      "open_issues": 5,
+      "total_commits": 90,
+      "contributors": 5,
+      "last_commit_date": "2025-07-03",
+      "stars": 75,
+      "forks": 49,
+      "open_issues": 1,
       "repo_breakdown": [
         {
           "name": "docs",
@@ -480,7 +513,7 @@
     "discord_members": null,
     "telegram_members": null,
     "x_followers": 447200,
-    "github_contributors": null,
+    "github_contributors": 5,
     "governance_participation_rate": "No on-chain governance exists. All decisions made by team/foundation.",
     "governance_model": "Centralised — decisions made by CEO Gaurav Sharma, COO Basem Oubah, and io.net Foundation (chaired by Tory Green). No DAO, no token voting, no governance proposals mechanism. io.net Foundation announced April 2025 focuses on grants, advocacy, and policy engagement — not decentralised governance.",
     "governance_url": "",
@@ -1267,6 +1300,20 @@
     {
       "date": "2026-03-06",
       "source": "backfill",
+      "stars": 75,
+      "forks": 49,
+      "open_issues": 1,
+      "contributors": 5,
+      "total_commits": 90,
+      "total_repos": 9,
+      "discord_members": null,
+      "telegram_members": null,
+      "x_followers": 447200,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
       "stars": 75,
       "forks": 49,
       "open_issues": 1,

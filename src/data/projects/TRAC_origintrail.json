@@ -3,8 +3,8 @@
     "project_id": "origintrail",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "OriginTrail",
@@ -70,6 +70,32 @@
           "community.github_contributors": 31
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.open_issues"
+        ],
+        "previous_values": {
+          "technical.github_metrics.open_issues": 56
+        },
+        "new_values": {
+          "technical.github_metrics.open_issues": 57
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 5494
+        },
+        "new_values": {
+          "community.telegram_members": 5485
+        },
+        "run_by": "community-refresh"
       }
     ]
   },
@@ -160,7 +186,7 @@
       "last_commit_date": "2026-03-06",
       "stars": 230,
       "forks": 86,
-      "open_issues": 56
+      "open_issues": 57
     },
     "audits": [
       {
@@ -384,7 +410,7 @@
   },
   "community": {
     "discord_members": null,
-    "telegram_members": 5494,
+    "telegram_members": 5485,
     "x_followers": null,
     "github_contributors": 31,
     "governance_participation_rate": "Unknown",
@@ -874,6 +900,86 @@
         0,
         0
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 230,
+      "forks": 86,
+      "open_issues": 57,
+      "contributors": 31,
+      "total_commits": 5374,
+      "total_repos": 84,
+      "discord_members": null,
+      "telegram_members": 5494,
+      "x_followers": null,
+      "weekly_commits": [
+        13,
+        33,
+        37,
+        42,
+        41,
+        37,
+        41,
+        4,
+        7,
+        32,
+        9,
+        20,
+        23,
+        20,
+        18,
+        12,
+        16,
+        31,
+        20,
+        7,
+        6,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        5,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 230,
+      "forks": 86,
+      "open_issues": 57,
+      "contributors": 31,
+      "total_commits": 5374,
+      "total_repos": 84,
+      "discord_members": null,
+      "telegram_members": 5485,
+      "x_followers": null
     }
   ]
 }

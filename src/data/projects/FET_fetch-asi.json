@@ -3,8 +3,8 @@
     "project_id": "asi-alliance",
     "research_date": "2026-03-02",
     "researcher": "Claude (OYM Research Agent)",
-    "version": 3,
-    "last_updated": "2026-03-06",
+    "version": 5,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "fetchai",
@@ -61,6 +61,41 @@
           "community.github_contributors": 62
         },
         "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "technical.github_metrics.stars",
+          "technical.github_metrics.open_issues",
+          "technical.github_metrics.last_commit_date",
+          "technical.github_metrics.total_commits"
+        ],
+        "previous_values": {
+          "technical.github_metrics.stars": 1553,
+          "technical.github_metrics.open_issues": 35,
+          "technical.github_metrics.last_commit_date": "2026-03-05",
+          "technical.github_metrics.total_commits": 536
+        },
+        "new_values": {
+          "technical.github_metrics.stars": 1555,
+          "technical.github_metrics.open_issues": 34,
+          "technical.github_metrics.last_commit_date": "2026-03-07",
+          "technical.github_metrics.total_commits": 537
+        },
+        "run_by": "github-actions"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 8759
+        },
+        "new_values": {
+          "community.telegram_members": 8742
+        },
+        "run_by": "community-refresh"
       }
     ],
     "research_gaps": [
@@ -199,12 +234,12 @@
     "github_metrics": {
       "total_repos": 92,
       "primary_repo_url": "https://github.com/fetchai/uAgents",
-      "total_commits": 536,
+      "total_commits": 537,
       "contributors": 62,
-      "last_commit_date": "2026-03-05",
-      "stars": 1553,
+      "last_commit_date": "2026-03-07",
+      "stars": 1555,
       "forks": 351,
-      "open_issues": 35,
+      "open_issues": 34,
       "additional_github_orgs": [
         {
           "org": "fetchai",
@@ -472,7 +507,7 @@
   },
   "community": {
     "discord_members": null,
-    "telegram_members": 8759,
+    "telegram_members": 8742,
     "x_followers": 96700,
     "github_contributors": 62,
     "governance_participation_rate": null,
@@ -1235,6 +1270,33 @@
         6,
         5
       ]
+    },
+    {
+      "date": "2026-03-09",
+      "source": "github-refresh",
+      "stars": 1555,
+      "forks": 351,
+      "open_issues": 34,
+      "contributors": 62,
+      "total_commits": 537,
+      "total_repos": 92,
+      "discord_members": null,
+      "telegram_members": 8759,
+      "x_followers": 96700,
+      "weekly_commits": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 1555,
+      "forks": 351,
+      "open_issues": 34,
+      "contributors": 62,
+      "total_commits": 537,
+      "total_repos": 92,
+      "discord_members": null,
+      "telegram_members": 8742,
+      "x_followers": 96700
     }
   ]
 }

@@ -3,8 +3,8 @@
     "project_id": "cookie-dao",
     "research_date": "2026-03-06",
     "researcher": "Claude Code",
-    "version": 2,
-    "last_updated": "2026-03-06",
+    "version": 3,
+    "last_updated": "2026-03-09",
     "status": "draft",
     "refresh_config": {
       "github_org": "cookie3",
@@ -39,6 +39,19 @@
         },
         "new_values": {
           "community.telegram_members": 74460
+        },
+        "run_by": "community-refresh"
+      },
+      {
+        "run_date": "2026-03-09",
+        "fields_updated": [
+          "community.telegram_members"
+        ],
+        "previous_values": {
+          "community.telegram_members": 74460
+        },
+        "new_values": {
+          "community.telegram_members": 74234
         },
         "run_by": "community-refresh"
       }
@@ -236,7 +249,7 @@
     "usage_notes": "60,000+ users reported mid-2025. 1,500+ AI agents tracked. 5M+ COOKIE locked for premium access. $16M+ distributed via MAF. $5M+ Snaps rewards distributed."
   },
   "community": {
-    "telegram_members": 74460,
+    "telegram_members": 74234,
     "x_followers": null,
     "discord_members": null,
     "twitter_handle": "@cookiedotfun"
@@ -383,6 +396,19 @@
       "total_repos": 0,
       "discord_members": null,
       "telegram_members": 74460,
+      "x_followers": null
+    },
+    {
+      "date": "2026-03-09",
+      "source": "community-refresh",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": null,
+      "contributors": 0,
+      "total_commits": null,
+      "total_repos": 0,
+      "discord_members": null,
+      "telegram_members": 74234,
       "x_followers": null
     }
   ]
