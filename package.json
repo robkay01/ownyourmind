@@ -13,7 +13,8 @@
     "backfill:github": "tsx scripts/backfill-github-history.ts",
     "check:staleness": "tsx scripts/flag-stale-records.ts",
     "check:returns": "tsx scripts/check-returns-consistency.ts",
-    "download:logos": "tsx scripts/download-logos.ts"
+    "download:logos": "tsx scripts/download-logos.ts",
+    "refresh:onchain": "bash scripts/fetch-onchain-metrics.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

@@ -1,0 +1,119 @@
+---
+import { getVeniceMetrics } from '../data/onchain-metrics';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+
+// Load metrics based on project
+let metrics: { label: string; value: string; detail?: string }[] = [];
+let dataDate: string | null = null;
+
+if (slug === 'venice') {
+  const venice = getVeniceMetrics();
+  if (venice) {
+    const onchain = await import('../data/onchain-metrics.ts').then(m => m.getOnchainMetrics());
+    dataDate = onchain?.date ?? null;
+    metrics = [
+      {
+        label: 'VVV Staked',
+        value: `${(venice.vvv_staked / 1e6).toFixed(1)}M`,
+        detail: `${venice.vvv_staking_ratio}% of supply`,
+      },
+      {
+        label: 'DIEM Supply',
+        value: venice.diem_total_supply.toLocaleString('en-US', { maximumFractionDigits: 0 }),
+        detail: `$${venice.diem_total_supply.toLocaleString('en-US', { maximumFractionDigits: 0 })}/day inference`,
+      },
+      {
+        label: 'VVV Supply',
+        value: `${(venice.vvv_total_supply / 1e6).toFixed(1)}M`,
+      },
+    ];
+  }
+}
+---
+
+{metrics.length > 0 && (
+  <div class="onchain-metrics">
+    <div class="onchain-header">
+      <span class="onchain-label">On-chain data</span>
+      {dataDate && <span class="onchain-date">{dataDate}</span>}
+    </div>
+    <div class="onchain-grid">
+      {metrics.map((m) => (
+        <div class="onchain-card">
+          <div class="onchain-value">{m.value}</div>
+          <div class="onchain-card-label">{m.label}</div>
+          {m.detail && <div class="onchain-detail">{m.detail}</div>}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .onchain-metrics {
+    background: rgba(13, 148, 136, 0.06);
+    border: 1px solid rgba(13, 148, 136, 0.2);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .onchain-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .onchain-label {
+    color: var(--color-accent, #0D9488);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .onchain-date {
+    color: var(--color-text-tertiary, #6B7280);
+    font-size: 0.75rem;
+  }
+
+  .onchain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .onchain-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .onchain-card {
+    text-align: center;
+  }
+
+  .onchain-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary, #F3F4F6);
+  }
+
+  .onchain-card-label {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary, #9CA3AF);
+    margin-top: 0.15rem;
+  }
+
+  .onchain-detail {
+    font-size: 0.7rem;
+    color: var(--color-text-tertiary, #6B7280);
+    margin-top: 0.15rem;
+  }
+</style>

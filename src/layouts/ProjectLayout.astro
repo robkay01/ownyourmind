@@ -11,6 +11,7 @@ import MetricCard from '../components/MetricCard.astro';
 import VestingTimeline from '../components/VestingTimeline.astro';
 
 import PodcastPlayer from '../components/PodcastPlayer.astro';
+import OnchainMetrics from '../components/OnchainMetrics.astro';
 import Sparkline from '../components/Sparkline.astro';
 import ActivityPanel from '../components/ActivityPanel.astro';
 import ProjectLogo from '../components/ProjectLogo.astro';
@@ -368,6 +369,8 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
     {podcastUrl && (
       <PodcastPlayer url={podcastUrl} title={title} />
     )}
+
+    <OnchainMetrics slug={slug} />
 
     <div class="prose">
       <slot />
