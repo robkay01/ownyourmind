@@ -45,7 +45,7 @@ Venice sells privacy without friction. You open a browser, type a prompt, and ge
 
 The API is OpenAI-compatible. If you have existing code calling OpenAI, you change one base URL and your prompts now route through Venice's privacy proxy instead. For developers, this is the killer feature. I use it daily.
 
-Pro-rata staking adds a DeFi angle. Stake VVV tokens and you receive a proportional share of daily inference capacity at zero marginal cost. The more you stake relative to the total staked pool, the more compute you can access. DIEM, a derivative token, takes this further: each DIEM represents $1/day of perpetual API credit, minted by locking staked VVV and redeemable by burning the DIEM to unlock your stake.
+The token mechanics add a DeFi angle. Stake VVV to earn emissions-based yield. To access inference via tokens, you lock staked VVV (sVVV) to mint DIEM — each DIEM represents $1/day of perpetual, renewing API credit against any model on Venice (including Claude, GPT-5, Gemini and all open-source models). The mint rate follows an exponential curve: as DIEM supply approaches the target, it costs progressively more VVV to mint each DIEM. Burning DIEM unlocks your original sVVV. While locked, you still earn 80% of standard staking yields. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply. Minimum threshold is 0.1 DIEM to activate API credits.
 
 The competitive position is clear. If you want private AI inference that actually works today, Venice is the only consumer product delivering it at scale. 1.3 million registered users and 45 billion LLM tokens processed daily are not vanity metrics. Those are real workloads. Warden Protocol alone drives roughly 1.5 million daily chats through the Venice backend. The product ships fast: text, image, video, audio, music, code, web search, voice mode and Memoria (local vector memory) all launched within 18 months.
 
@@ -62,7 +62,7 @@ VVV launched via airdrop in January 2025. No presale. No ICO. No private round. 
 
 The airdrop distribution was genuinely generous. When 32.6 million tokens went unclaimed after the 45-day window, Venice burned them rather than reclaiming them. That burn, valued at roughly $100 million at the time, removed about a third of genesis supply permanently. Combined with subsequent burns, 42.8% of genesis supply has been destroyed.
 
-Emissions have been cut aggressively: four reductions in 13 months brought annual emissions from 14 million down to 6 million VVV. Monthly revenue buyback burns have been active since December 2025. Current daily emissions sit at roughly 16,400 VVV with an annual inflation rate of 7.6%.
+Emissions have been cut aggressively: multiple reductions brought annual emissions from 14 million down to 10 million VVV. With the DIEM restructure, stakers now receive 100% of emissions (80% when sVVV is locked for DIEM). Monthly revenue buyback burns have been active since December 2025.
 
 The launch was not clean. On day one, two Aerodrome contributors purchased VVV before public announcements, turning $50,000 into over $1 million within an hour. Aerodrome flagged the trades within 30 minutes and suspended both individuals within three hours. VVV dropped 50% on the allegations. The insider trading was external to Venice, but the damage to launch credibility was real.
 
@@ -72,9 +72,9 @@ Market snapshot: VVV trades at $5.65 with a $250 million market cap. That is 75%
 
 **Use the platform.** The simplest entry point. Free tier requires no account. Pro subscription runs $18/month or $149/year for unlimited text, 1,000 daily image generations, advanced model access (including Claude and GPT-5.x), voice mode and Memoria (local vector memory).
 
-**Stake VVV.** Staking VVV earns emissions-based yield (nominal APY ranges from 20-72% depending on the period), but this yield comes from newly minted VVV, not protocol revenue. Real yield depends on whether VVV holds value against the inflation. Staking alone does not give you inference — but holding a sufficient amount of staked VVV grants pro account access to Venice. Seven-day unstaking cooldown.
+**Stake VVV.** Staking VVV earns emissions-based yield (nominal APY ranges from 20-72% depending on the period), but this yield comes from newly minted VVV, not protocol revenue. Real yield depends on whether VVV holds value against the inflation. Staking alone does not give you inference access. Seven-day unstaking cooldown.
 
-**Lock and mint DIEM.** To get inference from your tokens, you must lock staked VVV and mint DIEM. Each DIEM represents $1/day of perpetual API credit against any model. Stake DIEM to activate inference access — your capacity is proportional to your share of staked DIEM. You get your VVV back by burning the DIEM to unlock your stake. This is the mechanism that creates long-term lock-up demand for VVV.
+**Lock and mint DIEM.** To access inference via tokens, lock your staked VVV (sVVV) to mint DIEM on the Venice token dashboard. Each DIEM represents $1/day of perpetual, renewing API credit — stake DIEM (minimum 0.1) to activate access to all models on Venice including Claude, GPT-5 and Gemini. The mint rate rises exponentially as DIEM supply approaches the target supply set by Venice, so early minters get more DIEM per VVV locked. While your sVVV is locked, you still earn 80% of standard staking yields. To exit, burn the same amount of DIEM you minted to unlock your original sVVV (partial unlocks permitted). DIEM also trades on Aerodrome and Coinbase — you can buy it directly instead of minting. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply.
 
 **Build on the API.** The OpenAI-compatible API is the developer on-ramp. The $27 million incentive fund has run two cohorts (110+ applications in Cohort 1, roughly 30 semifinalists in Cohort 2). Grants range from $5,000 to $100,000 in VVV.
 
