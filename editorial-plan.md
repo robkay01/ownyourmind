@@ -236,7 +236,7 @@ Voice clone created on ElevenLabs. First script (Bittensor) drafted by Agent Zer
 
 | Episode | Project/Topic | Type | Script | Audio | Embedded |
 |---------|--------------|------|--------|-------|----------|
-| 001 | Bittensor | Deep-Dive | Drafted (Agent Zero) | Not started | No |
+| 001 | Bittensor | Deep-Dive | Ready (`podcast-scripts/bittensor-episode-001.md`) | Not started | No |
 | 002 | Morpheus | Deep-Dive | Not started | Not started | No |
 | 003 | Akash | Deep-Dive | Not started | Not started | No |
 

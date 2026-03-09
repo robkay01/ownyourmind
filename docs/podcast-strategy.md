@@ -149,7 +149,7 @@ Prioritised by project interest + SEO value:
 
 | Priority | Project/Topic | Type | Script Status |
 |----------|--------------|------|---------------|
-| 1 | Bittensor | Deep-Dive | Agent Zero drafted (not in repo yet) |
+| 1 | Bittensor | Deep-Dive | Ready (`podcast-scripts/bittensor-episode-001.md`) |
 | 2 | Morpheus | Deep-Dive | Not started |
 | 3 | Akash | Deep-Dive | Not started |
 | 4 | Venice | Deep-Dive | Not started |
