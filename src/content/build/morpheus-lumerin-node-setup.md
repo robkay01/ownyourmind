@@ -30,11 +30,41 @@ The node also bundles a desktop UI (Electron), a CLI client, and IPFS (Kubo) for
 
 ## What you earn
 
-24% of all MOR emissions go to compute providers. The daily emission started at 14,400 MOR/day in February 2024 and decreases by approximately 2.47 MOR per day. By March 2026, that is roughly 12,500 MOR/day total, with approximately 3,000 MOR/day allocated to the compute pool.
+24% of all MOR emissions go to compute providers. The daily emission started at 14,400 MOR/day in February 2024 and decreases by approximately 2.47 MOR per day. By March 2026 (day 761), that is roughly 12,521 MOR/day total, with approximately 3,005 MOR/day allocated to the compute pool.
 
-At current MOR price (~$3.30), the entire compute pool is worth roughly $10,000/day across all providers. Individual earnings depend on how many providers are active and how much consumer demand exists.
+At current MOR price (~$1.42), the entire compute pool is worth roughly $4,267/day (~$128,000/month) across all providers. MOR is down 99% from its all-time high of $139 (May 2024). Individual earnings depend on how many providers are active and how much consumer demand exists.
 
-The honest problem: there is no public dashboard showing active provider count, demand volume, or reward distribution. You cannot assess the competitive landscape before committing hardware. This is the biggest gap in the current system.
+The honest problem: there is no public dashboard showing active provider count, demand volume, or reward distribution. You can query the Diamond contract's `getProviderIds()` function on BaseScan to get the registered provider count, or ask in the Discord #compute-providers channel. But the network does not surface this data in any accessible way, which is a significant gap.
+
+### The Yellowstone reward model
+
+Rewards are not distributed equally among all providers. The Yellowstone model (designed by Erik Voorhees) works like this:
+
+1. **Consumers hold MOR** and receive a daily compute budget proportional to their balance. No per-inference payment from consumers.
+2. **Providers post bids** on the marketplace specifying their price per second for each model they serve.
+3. **The Router matches consumers to the cheapest qualifying provider.** If your bid is competitive and your uptime is good, you get selected more often.
+4. **You earn MOR from the compute pool only when you actually serve inference** and the consumer reports a Pass result. No inference served, no reward.
+5. **The daily compute budget is 1% of the accumulated compute contract balance** -- asymptotic, never runs out.
+
+This means rewards are proportional to inference actually delivered, not proportional to stake. Staking determines eligibility and reputation ranking, but the work earns the MOR.
+
+### Power Factor
+
+The Power Factor applies to compute providers. Staking MOR for longer periods increases your reputation multiplier:
+
+| Staking period | Power Factor |
+|---|---|
+| 0-6 months | 1x |
+| 1 year | ~2x |
+| 6 years | 10.7x (maximum) |
+
+The Power Factor does not increase your per-inference rate -- it increases your ranking in the Router's selection algorithm, making you more likely to be matched with consumers. Higher ranking means more sessions, which means more earnings.
+
+Your staked MOR also caps your maximum reward. Stake 100 MOR, earn up to 100 MOR during that staking period. The staking period can be increased but never decreased. Rewards cannot be withdrawn until the period ends.
+
+### Bootstrapping incentive
+
+During the first year after the capital contract bootstrapping period, the top 100 compute providers may receive a pro-rata 2.4% of MOR emissions (one-tenth of the compute bucket). This is the early subsidy for providers who show up before consumer demand has fully materialised.
 
 ### Staking requirements
 
@@ -42,31 +72,48 @@ The barrier to entry is low in MOR terms:
 
 | Action | Minimum stake |
 |---|---|
-| Register as provider | 0.2 MOR (~$0.66) |
-| Register a model | 0.1 MOR (~$0.33) |
-| Post a bid | 0.3 MOR (~$0.99) |
-| **Total to start** | **0.6 MOR (~$1.98)** |
+| Register as provider | 0.2 MOR (~$0.28) |
+| Register a model | 0.1 MOR (~$0.14) |
+| Post a bid | 0.3 MOR (~$0.43) |
+| **Total to start** | **0.6 MOR (~$0.85)** |
 
-Staking above the minimum increases your reputation weight in the marketplace. To register as a subnet operator, you need 10,000 MOR (~$33,000).
+That is under a dollar to register. Additional stake above the minimum increases your reputation weight and your earning cap. To register as a subnet operator, you need 10,000 MOR (~$14,200).
+
+### No slashing
+
+There is no slashing mechanism in the current contracts. If your node goes offline, you stop earning but do not lose stake. Failed inference results mean no payment -- that is the economic penalty. The Provider Registry has an `unregisterProvider` function that returns your stake voluntarily. This may evolve as Pretty Good Verification matures.
 
 ## Hardware for a provider node
 
-The official docs include a sample build optimised for cost while meeting requirements for an 8B-parameter model. Delivers roughly 80 tokens per second on 8B models.
+The official docs recommend a dual RTX 3090 build (~$4,500 USD new). But you do not need to start there. A single-GPU budget build is enough to serve 8B and 13B models and start earning.
 
-| Component | Spec | Notes |
+### Budget build: single RTX 3090 (~A$2,100-2,200)
+
+| Component | Pick | Price (AUD) |
 |---|---|---|
-| CPU | Intel i7-13700K | Or equivalent AMD |
-| RAM | 64 GB DDR5-6000 | |
-| GPU | 2x NVIDIA RTX 3090 (24 GB VRAM each) | Docs recommend 3090s over 4090s for price efficiency |
-| Storage | 1 TB NVMe SSD | |
-| PSU | 1000W minimum | 1200-1500W with dual GPU under load |
-| OS | Ubuntu (latest) + NVIDIA CUDA toolkit | |
+| GPU | Used RTX 3090 24GB (eBay/Gumtree) | ~$1,450 |
+| CPU | Intel i5-12400F | $209 |
+| Motherboard | B660M mATX DDR4 | $139 |
+| RAM | 32GB DDR4-3200 | $107 |
+| PSU | 850W 80+ Gold | $123 |
+| SSD | 500GB NVMe | $49 |
+| Case | Mid-tower ATX | ~$70 |
 
-Estimated cost: approximately $4,500 USD new. The docs note they run open-case for thermal management — dual 3090s generate serious heat.
+The CPU barely matters for inference -- it just feeds data to the GPU. The money goes on the card. Check Gumtree and Facebook Marketplace first; they typically run 10-20% cheaper than eBay ($1,200-1,500 range for a working 3090).
 
-If you already have a single RTX 3090 or 4090, you can start with one GPU and smaller models. Dual GPU enables larger models or more parallel prompts.
+This build delivers roughly 80-90 tokens per second on 8B models and 45-55 tok/s on 13B. That is competitive for Morpheus marketplace bids.
 
-Consumer nodes need minimal hardware — any modern desktop or laptop runs the proxy-router and UI.
+### Official recommended build: dual RTX 3090 (~A$4,000-4,200)
+
+Adds a second 3090, 1200W PSU, motherboard with two PCIe x16 slots, and a larger case. The dual setup gives 48GB combined VRAM -- enough to run 70B Q4 models across both cards. The docs note they run open-case for thermal management. Dual 3090s generate serious heat.
+
+Only worth the extra cost if you need 70B model capability or want to serve more parallel requests. Start with one card and upgrade if the economics justify it.
+
+### Why RTX 3090 specifically
+
+The RTX 4090 is roughly 1.6x faster on inference but costs roughly 2x more used in Australia ($2,500-3,500 vs $1,400-1,800). Same 24GB VRAM. Performance per dollar favours the 3090 clearly. The RTX 3080 12GB is false economy -- 12GB VRAM limits you to 8B models only, and TDP is nearly the same as the 3090.
+
+Consumer nodes need minimal hardware -- any modern desktop or laptop runs the proxy-router and UI.
 
 ### Network requirements
 
@@ -225,26 +272,40 @@ The self-hosted llama.cpp path is the most aligned with the sovereignty thesis �
 
 ## The honest economics
 
-Let me work the numbers at current prices.
+Let me work the numbers at current prices for the budget single-GPU build.
 
-**Hardware:** ~$4,500 for the recommended dual RTX 3090 build.
+**Hardware:** ~A$2,200 for a single RTX 3090 build.
 
-**Electricity:** Dual 3090s under load draw 700W+. Running 24/7 in Western Australia at roughly $0.30/kWh, that is $5-6/day in electricity alone. Add the rest of the system and you are looking at $6-7/day.
+**Electricity:** A single 3090 under inference load draws roughly 200-280W. With the rest of the system, call it 330W sustained. Running 24/7 in Western Australia at Synergy's current rate of $0.3237/kWh, that is approximately $2.56/day or $77/month. At 60% average utilisation (mix of active inference and idle), expect $50-60/month.
 
-**Staking:** 0.6 MOR (~$2). Negligible.
+**Staking:** 0.6 MOR (~$0.85). Negligible.
 
-**Earnings:** The entire compute pool receives approximately 3,000 MOR/day (~$10,000/day). If there are 50 active providers sharing equally, each earns ~$200/day. If there are 500, each earns ~$20/day. If there are 5,000, each earns ~$2/day.
+**Earnings:** The entire compute pool receives approximately 3,005 MOR/day (~$4,267/day at $1.42/MOR). Under the Yellowstone model, rewards are not split equally -- they go to providers who win bids and serve inference. But as a rough guide:
 
-The problem is that second number — active provider count — is not public. You cannot calculate expected ROI without it. This is not unique to Morpheus (most early networks have this gap), but it matters when you are committing $4,500 in hardware.
+| Providers sharing pool | Your monthly share | Monthly AUD (approx.) | Break-even |
+|---|---|---|---|
+| 25 | ~3,606 MOR | ~$7,350 | < 1 month |
+| 50 | ~1,803 MOR | ~$3,675 | ~1 month |
+| 100 | ~901 MOR | ~$1,837 | ~2 months |
+| 250 | ~361 MOR | ~$736 | ~4 months |
+| 500 | ~180 MOR | ~$367 | ~8 months |
 
-**Break-even scenarios (excluding electricity):**
-- 50 providers: ~23 days
-- 200 providers: ~90 days
-- 500 providers: ~225 days
+These assume equal sharing, which the Yellowstone model does not guarantee -- competitive pricing and uptime determine your actual share. Subtract $50-60/month in electricity from each scenario.
 
-Add electricity at $6-7/day and the break-even extends significantly for the higher provider counts.
+The provider count is the variable that makes or breaks this. At 100 providers, you break even in two months on a budget build. At 500, it takes eight months. The network launched compute on mainnet in November 2024, which is early enough that the lower end of that range is plausible.
 
-**The real thesis:** If you already have GPU hardware sitting idle, the marginal cost is electricity and setup time. The 0.6 MOR staking requirement is trivial. In that case, running a Morpheus node is a low-cost way to earn MOR emissions while the network is young and provider count is low. If you are buying hardware specifically for this, the economics are speculative at current MOR prices.
+**What happens if MOR price moves:**
+
+| MOR price | Daily pool value | Monthly pool value |
+|---|---|---|
+| $0.50 (further decline) | $1,503 | $45,075 |
+| $1.42 (current) | $4,267 | $128,000 |
+| $5.00 (recovery) | $15,025 | $450,750 |
+| $10.00 (modest recovery) | $30,050 | $901,500 |
+
+MOR only needs to recover to $5-10 (still 93-97% below ATH) for the compute pool to become very attractive even with hundreds of providers.
+
+**The real thesis:** The asymmetry is interesting. Downside is A$2,200 in hardware that retains resale value (3090s hold their price) plus $50-60/month electricity. Upside is early entry to a compute pool where the provider count is unknown but likely small, earning a token that is 99% off its high. If you already have GPU hardware sitting idle, the marginal cost is just electricity and the 0.6 MOR stake.
 
 ## Monitoring and maintenance
 
@@ -255,8 +316,6 @@ Key things to watch:
 - **Model server uptime** — if llama.cpp crashes, your provider stops earning
 - **Wallet balance** — you need ETH on BASE for gas. Keep a buffer.
 - **Software updates** — the node is actively developed. Check releases regularly.
-
-There is no slashing in the current system — if your node goes offline, you stop earning but do not lose stake. This may change as the verification system (Pretty Good Verification) matures.
 
 ## Common issues
 
@@ -281,12 +340,20 @@ The testnet environment variables are in the `env.example` file.
 - **Discord:** #compute-providers channel for support
 - **Smart contracts on BASE:** MOR token `0x7431...b8e3`, Diamond `0x6aBE...030a`
 
+## How other compute networks looked at this stage
+
+Every successful compute network went through the same pattern. Akash, Render, and Flux all used emission subsidies to attract early providers before organic demand existed. Provider economics were negative without those subsidies in year one and two. The demand-supply paradox -- needing providers to attract users, needing users to justify provider costs -- took years to resolve.
+
+Render had the advantage of existing demand from 3D artists. Akash found traction in 2023-2024 when AI workloads exploded. Flux maintained a large node network through the bear market on conviction.
+
+Morpheus is approximately 16 months into its compute mainnet. That is early by comparison. Render took two-plus years from public launch to meaningful organic demand. The question is whether decentralised AI inference follows the same adoption curve or a faster one, given the current AI demand environment.
+
 ## My assessment
 
 Morpheus is doing something genuinely different from the other compute networks I have reviewed. Akash, Render, and io.net are general-purpose compute marketplaces. Morpheus is specifically an AI inference routing network with P2P privacy by design. Prompts never touch a centralised server. That matters.
 
-The 0.6 MOR entry cost is the lowest barrier of any node I have set up for this site. The proxy-router installation is straightforward. The on-chain registration via Swagger API is well-designed — no raw contract interaction needed.
+The 0.6 MOR entry cost is the lowest barrier of any node I have set up for this site. The proxy-router installation is straightforward. The on-chain registration via Swagger API is well-designed -- no raw contract interaction needed. The Yellowstone reward model is genuinely well-thought-out: competitive bidding, demand-driven allocation, and a Power Factor that rewards commitment over speculation.
 
-The gaps are real though. No public dashboard for network statistics. Two key documentation pages are stubs. The verification system is at proposal stage. And the compute pool economics depend entirely on a provider-to-demand ratio that nobody can currently measure.
+The gaps are real though. No public dashboard for network statistics. Two key documentation pages are stubs. The verification system (Pretty Good Verification) is at proposal stage. Consumer demand signals are thin. And MOR is trading at 99% below its all-time high, which either means the market has given up or the opportunity is priced at its most asymmetric.
 
-If you have idle GPU hardware, the risk is low and the potential upside in early MOR emissions is genuine. If you are buying hardware for this, wait until there is more visibility on demand and provider count. The network needs to prove consumer traction before a $4,500 hardware investment makes sense at $3.30 MOR.
+For a budget build at A$2,200, the downside is capped (hardware retains resale value) and the upside scales with both MOR price recovery and early-mover advantage in a small provider pool. That is a better risk/reward profile than most node opportunities I have reviewed. The Aethir Edge's 47-year break-even and Flux Cumulus earning cents per day do not compare.
