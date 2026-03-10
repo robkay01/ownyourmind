@@ -1,6 +1,6 @@
 ---
 title: "peaq"
-description: "peaq review — DePIN Layer-1 for the Machine Economy. 60+ DePINs, enterprise partners (Bosch, Airbus, NTT), but $163K revenue. Freedom Score, Returns Score and honest assessment."
+description: "DePIN Layer-1 for the Machine Economy. 60+ DePINs, enterprise partners (Bosch, Airbus, NTT), but $163K revenue. Freedom Score, Returns Score and honest assessment."
 category: "other"
 token: "PEAQ"
 status: "active"

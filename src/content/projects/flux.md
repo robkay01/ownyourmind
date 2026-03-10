@@ -1,6 +1,6 @@
 ---
 title: "Flux"
-description: "Flux review — fair-launched decentralised cloud with ~8,000 nodes across 67 countries. GPU mining, FluxCloud, FluxEdge. Freedom Score, Returns Score and honest assessment."
+description: "Fair-launched decentralised cloud with ~8,000 nodes across 67 countries. GPU mining, FluxCloud, FluxEdge. Freedom Score, Returns Score and honest assessment."
 category: "compute"
 token: "FLUX"
 status: "active"
