@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://4orbs.com/sitemap-index.xml
+Sitemap: https://ownyourmind.ai/sitemap-index.xml
