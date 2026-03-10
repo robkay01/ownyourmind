@@ -1,5 +1,5 @@
 ---
-title: "Grass Review"
+title: "Grass"
 description: "Grass review — bandwidth-sharing DePIN network with 8.3M monthly active nodes. How to earn GRASS, tokenomics, and why 190-country scale doesn't mean decentralised."
 category: "data"
 token: "GRASS"
