@@ -1,0 +1,133 @@
+---
+title: "ASI Alliance: What the Merged Tokenomics Actually Mean"
+description: "Fetch.ai, SingularityNET and CUDOS merged into the ASI Alliance. What holders of each token got, what the merged economics look like, and why Ocean's exit changes the thesis."
+publishDate: 2026-03-10
+draft: true
+---
+
+## What happened
+
+In March 2024, Fetch.ai, SingularityNET and Ocean Protocol announced they would merge into the Artificial Superintelligence Alliance. The pitch: combine three complementary AI projects — agents (Fetch), AI marketplace (SingularityNET), and data (Ocean) — under one token and one governance structure.
+
+CUDOS joined in October 2024, contributing 30 validators. Then in October 2025, Ocean Protocol withdrew, alleging governance failures and strategic misalignment. Fetch.ai filed a lawsuit the following month, alleging Ocean's Foundation converted 661 million OCEAN into 286 million FET and sold approximately 263 million FET — over 10% of circulating supply — without disclosure.
+
+That lawsuit is unresolved as of March 2026. The alliance continues as Fetch.ai + SingularityNET + CUDOS, but it lost its strongest data sovereignty component when Ocean walked.
+
+I do not hold FET. The governance breakdown that caused a founding member to leave within 18 months raises questions I have not been able to answer from public information.
+
+## The conversion ratios
+
+All tokens consolidated under the **FET ticker** (not renamed to ASI on exchanges, despite the alliance name):
+
+| Original token | Conversion ratio |
+|---|---|
+| FET | 1:1 (base token) |
+| AGIX | 1 AGIX = 0.433350 FET |
+| OCEAN | 1 OCEAN = 0.433226 FET |
+| CUDOS | 118.344 CUDOS = 1 FET (5% fee, 3-10 month vesting) |
+
+Migration is not 100% complete. OCEAN and AGIX still trade independently — OCEAN has approximately 200 million tokens circulating ($23.6M market cap), AGIX has approximately 250 million ($16.2M market cap). No public deadline for conversion has been documented. Given Ocean's withdrawal and the lawsuit, the status of remaining OCEAN-to-FET conversion is legally and practically uncertain.
+
+## The merged supply
+
+| Metric | Value |
+|---|---|
+| Total supply | 2,714,384,547 FET (hard cap) |
+| Circulating | ~2,260M FET (83.3%) |
+| Price | ~$0.145 |
+| Market cap | ~$328M |
+| All-time high | $3.45 (March 2024, merger announcement) |
+| Current vs ATH | Down 96% |
+
+The distribution of merged supply:
+
+| Allocation | Share |
+|---|---|
+| AGIX migration (SingularityNET holders) | 32.95% |
+| OCEAN migration (Ocean holders) | 23.22% |
+| Founders | 8.77% (cliff vesting to 2050) |
+| Foundation (co-founded with Bosch) | 8.77% |
+| Future releases | 7.63% (reserved, schedule to 2050) |
+| Mining/staking rewards | 6.57% |
+| Private sale | 5.08% (fully unlocked) |
+| Advisors | 4.38% (cliff vesting) |
+| Public sale (Binance Launchpad IEO) | 2.49% |
+
+The AGIX and OCEAN allocations (56.17% combined) represent community token swaps, not new insider supply. But approximately 600 million FET was minted to absorb OCEAN holders, which diluted original FET holders.
+
+Full unlock extends to **2050** — a 24-year vesting schedule for founders that is longer than most projects survive.
+
+## What FET actually does
+
+FET has genuine multi-layer utility across the merged ecosystem:
+
+**Staking.** Secures Fetchhub-4 (Cosmos SDK chain with CometBFT consensus), up to 70 validators. Current APY approximately 5.5-8%. 21-day unbonding period. An estimated 480-560 million FET is staked (21-25% of circulating supply). Standard Cosmos slashing: 5% for double-signing, 0.01% for downtime.
+
+**Agent services.** Pay for agent registration on the Almanac contract (renewed every 48 hours) and agent-to-agent transactions on Fetch.ai's Agentverse platform.
+
+**Compute.** GPU inference payments on ASI Cloud, which launched September 2025 and exited beta December 2025. Claims approximately 50% cheaper than AWS — I have not verified this independently.
+
+**AI marketplace.** Payment for AI services on SingularityNET's marketplace (live since 2017, Ethereum and Cardano).
+
+**Governance.** Vote on alliance proposals including merger approvals, new member additions and tokenomics changes.
+
+**Burn mechanism.** An Earn and Burn programme launched January 2026. First burn: 5 million FET (0.18% of supply). This is a start but the magnitude is not yet material.
+
+## The products
+
+The alliance operates several platforms that are still largely separate:
+
+**Fetch.ai Agentverse.** Agent development and deployment platform with no-code browser-based templates. Agents register on-chain and can interact autonomously. This is the most mature product in the ecosystem.
+
+**SingularityNET marketplace.** AI services marketplace live since 2017. Developers publish and consume AI models. Usage volumes are not publicly disclosed, which is a concern for a platform that has been live for nine years.
+
+**ASI Cloud.** GPU rental and AI model access. Permissionless. Includes ASI-1 Mini, described as the "first Web3-native LLM" with Knowledge Graph integration.
+
+**ASI:Create.** Closed alpha since February 2026. A launchpad for building, funding and deploying AI agents and applications.
+
+**ASI:Chain.** The convergence layer — a blockDAG L1 using the MeTTa programming language and Atomspace knowledge graph. DevNet launched November 2025. **No mainnet timeline published.** This is intended to unify all the above under one protocol, but it is pre-production.
+
+## What Ocean's exit means
+
+Ocean Protocol was the data layer of the alliance. Its compute-to-data capability — running AI models on data without revealing the underlying dataset — was the strongest data sovereignty feature. With Ocean's withdrawal, that capability is no longer part of the alliance.
+
+The remaining components are agents (Fetch), AI marketplace (SingularityNET) and validators (CUDOS). These overlap more than they complement. The thesis that three distinct capabilities would combine into something greater depends on all three being present. Two and a half is a weaker proposition.
+
+The lawsuit adds uncertainty. If Fetch.ai's allegations about OCEAN-to-FET conversion and dumping are proven, it exposes governance failures in how the merger was structured. If Ocean's allegations about governance not matching the "original decentralised vision" are proven, it exposes structural problems in the alliance itself.
+
+Either way, a founding member leaving within 18 months is not a sign of health.
+
+## Next-generation tokenomics
+
+A whitepaper from superintelligence.io outlines a two-tier token model:
+
+- **ASI** — the base token (current FET)
+- **stakedASI** — a staked derivative with additional utility
+
+Shard-based economics with fee distribution: a portion burned, a portion to validators and treasury, a portion to staking rewards. Simulations show circulating supply declining by over 6 million ASI over 36 months with a target of approximately 11% annual staking yield funded by fees and buybacks rather than new issuance.
+
+Health-driven automated controls would increase burn rates during stress and hibernate emissions when necessary.
+
+This is well-designed on paper. No implementation timeline has been published. ASI:Chain, which would host this model, has no announced mainnet date.
+
+## What I am watching
+
+**1. ASI:Chain mainnet.** The convergence layer that is supposed to unify all products under one protocol. Until it launches, the alliance is three separate products sharing a token. No timeline published.
+
+**2. The Ocean lawsuit.** Resolution will clarify what happened with the OCEAN-to-FET conversion and whether 263 million FET was dumped on markets. If proven, it explains a meaningful portion of the 96% price decline.
+
+**3. Usage metrics.** None of the platforms — Agentverse, SingularityNET marketplace, ASI Cloud — publish adoption or revenue data. For a combined ecosystem that has been live in various forms since 2017, this opacity is a red flag.
+
+**4. The burn programme.** First burn was 5 million FET (0.18% of supply). The trajectory matters. If burns accelerate to material levels, it changes the supply dynamics. At current pace, it is symbolic.
+
+**5. Governance reform.** The governance structure that caused one member to leave has not been visibly changed. Until the alliance demonstrates it can make decisions transparently and retain members, the governance risk remains.
+
+## The honest assessment
+
+The ASI Alliance has genuine technical talent. Ben Goertzel is one of the most credible AGI researchers alive. Fetch.ai's agent architecture is functional and differentiated. The combined patent portfolio and research output is substantial.
+
+But the execution has been troubled. A 96% price decline from the merger announcement. A founding member's acrimonious exit. An unresolved lawsuit alleging insider dumping. No published usage metrics across any platform. A convergence layer with no mainnet date.
+
+The merger thesis was that combining three specialised projects would create something greater. Losing the data layer and the associated lawsuit have damaged that thesis. What remains is a well-resourced agent platform (Fetch), a long-running but opaque AI marketplace (SingularityNET), and a validator set (CUDOS), sharing a token that has lost 96% of its value.
+
+The next-generation tokenomics design is genuinely interesting — shard economics, automated health controls, fee-funded yield. If ASI:Chain delivers and the alliance stabilises, the token economics could be compelling at a $328 million market cap. But those are significant ifs, and I am not comfortable betting on them until I see mainnet, usage data and governance reform.
