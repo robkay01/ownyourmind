@@ -7,6 +7,8 @@ draft: false
 
 import PullQuote from '../../components/PullQuote.astro';
 
+> **Sovereign AI is AI infrastructure that you control.** Your models, your compute, your data, your inference — running on hardware and networks where no single company can revoke access, censor outputs, or harvest your inputs. It is the difference between renting intelligence and owning it.
+
 ## The problem
 
 A handful of companies control the most powerful AI models on the planet. They decide what gets built, who gets access and what the models are allowed to say. If you're building on top of their APIs, you're building on rented land.
@@ -30,6 +32,35 @@ Decentralised AI is infrastructure that no single entity can shut down, censor o
 **Token-aligned incentives.** Economic mechanisms that reward participation over extraction. When you contribute compute, data or code to a network, you earn tokens that represent ownership in that network. The incentive structure drives decentralisation rather than concentration.
 
 **Sovereign inference.** Running models on hardware you control. Your prompts never leave your machine. Your data stays yours. Nobody can see what you're asking, what you're building or what conclusions you're drawing. This is the foundation of cognitive sovereignty.
+
+## Sovereign AI vs centralised AI
+
+The practical differences are concrete, not philosophical.
+
+| | Centralised AI | Sovereign AI |
+|---|---|---|
+| **Who controls the model** | The provider. They choose which models to offer, what they refuse, and when to deprecate. | You do. Open-weight models you can run, modify, and host anywhere. |
+| **Where your data goes** | Provider servers. OpenAI trains on conversations by default. Google feeds data into its advertising infrastructure. Anthropic retains conversations for safety research. | Nowhere you do not choose. Local inference means prompts never leave your machine. Privacy-focused services like [Venice](/projects/venice/) strip identifying data before forwarding to GPUs. |
+| **Content restrictions** | Corporate content policies. GPT refuses security research questions. Claude declines certain creative writing. Gemini adds safety disclaimers to medical topics. | None beyond what you impose. Open models have no content filter. You decide the boundaries. |
+| **Pricing and access** | The provider sets prices and can change them overnight. OpenAI has raised API prices, changed rate limits, and deprecated models without notice. | You own the hardware or pay market rates on decentralised compute. No single entity controls pricing. Akash compute runs at 60-85% below AWS equivalent. |
+| **Uptime guarantee** | Dependent on one company's infrastructure. When OpenAI goes down, everyone using their API goes down. | Distributed across independent providers. No single point of failure if the network has sufficient scale. |
+| **Lock-in risk** | High. Fine-tuned models, conversation history, integrations — all tied to one provider's platform. | Low. Open models are portable. Your fine-tunes, your weights, your data. Move between providers freely. |
+
+None of this means centralised AI is bad. I use Claude every day and it is excellent at what it does. The point is that you should have the option to not use it. The moment the alternative disappears, the terms change.
+
+## Who needs sovereign AI
+
+Not everyone needs the full sovereignty stack. But more people need parts of it than realise.
+
+**Developers building products.** If your application depends on a single AI provider's API, you have a single-supplier risk. When OpenAI changes their content policy, your chatbot stops working. When they raise prices, your margins disappear. Sovereign infrastructure means multiple providers, open models, and no single point of dependency. Twenty years of managing construction contracts taught me this: never give a single supplier the ability to shut down your project.
+
+**Businesses in regulated industries.** Legal firms, healthcare providers, financial institutions — anyone handling sensitive data that cannot leave their control. Running inference locally or on privacy-preserving infrastructure is not a preference, it is a compliance requirement.
+
+**Researchers and journalists.** Anyone whose work involves sensitive topics that corporate content filters block. Security researchers need to discuss vulnerabilities. Journalists investigating authoritarian regimes need to ask questions without surveillance. Sovereign inference means nobody sees your prompts.
+
+**People in restrictive jurisdictions.** If your government monitors internet traffic, controls what you can access, or criminalises certain types of speech, sovereign AI is not a luxury. It is a necessity.
+
+**Anyone who values cognitive privacy.** What you ask an AI reveals what you think, what you are building, and what you are worried about. That information has value. Sovereign inference keeps it yours.
 
 ## Why this is also a financial opportunity
 
@@ -59,6 +90,16 @@ Most people will not run the full stack. That is fine. The point is that each la
 
 > **Sovereignty is not about rejecting centralised tools.** It is about making sure they are not the only option. The moment there is no alternative, the terms change.
 
+## The cost of sovereignty
+
+Honesty requires acknowledging the trade-offs.
+
+Sovereign AI is harder to set up than typing a prompt into ChatGPT. Running local inference means choosing a model, configuring hardware, and managing updates yourself. Decentralised compute is less polished than AWS. Open models, while competitive for most tasks, still trail frontier closed models on the hardest benchmarks.
+
+But the gap is closing faster than most people realise. A [Mac Studio M4 Max](/build/mac-studio-deai-setup/) with 64GB of unified memory runs a 70-billion parameter model locally at usable speed. That was not possible two years ago. Open-weight models like Llama 4, DeepSeek V3, and Qwen 3.5 match or beat GPT-4-class performance on most practical tasks. [Venice](/projects/venice/) offers private inference with uncensored open models for $18/month. [Akash](/projects/akash/) provides GPU compute at a fraction of centralised cloud pricing.
+
+The cost of sovereignty is real but declining. The cost of not having sovereignty only increases over time.
+
 ## Why now
 
 The window for decentralised AI infrastructure is open. It will not stay open indefinitely.
@@ -70,3 +111,20 @@ I am building this site because I could not find what I was looking for. Most De
 That is what Own Your Mind is. Independent, hands-on coverage. What works, what does not, what the real economics look like. Freedom and returns.
 
 Own your compute. Own your models. Own your mind.
+
+## Frequently asked questions
+
+**What is sovereign AI?**
+Sovereign AI is artificial intelligence infrastructure where you control the compute, models, data, and inference. No single company can revoke your access, censor your outputs, or harvest your inputs. It ranges from running models on your own hardware to using decentralised networks where no central authority has control.
+
+**Is sovereign AI the same as decentralised AI?**
+They overlap but are not identical. Decentralised AI refers to the infrastructure — distributed compute, open models, token-coordinated networks. Sovereign AI is the outcome — you have control over your AI stack. You can achieve sovereignty through decentralised networks, local inference, or a combination. The key is that alternatives exist and you choose between them.
+
+**Can I run sovereign AI at home?**
+Yes. A modern computer with sufficient memory can run open-weight AI models locally. A Mac Studio with 64GB unified memory handles 70B parameter models at usable speed. Smaller models run on consumer laptops. See our [Mac Studio DeAI Setup](/build/mac-studio-deai-setup/) guide for a practical walkthrough.
+
+**What are the best sovereign AI projects?**
+It depends on what you need. For private inference: [Venice](/projects/venice/). For decentralised compute: [Akash](/projects/akash/) and [Render](/projects/render/). For AI agent infrastructure: [Morpheus](/projects/morpheus/) and [Bittensor](/projects/bittensor/). For local inference: Ollama and LM Studio. See our [project directory](/resources/deai-project-directory/) for all 34 reviewed projects with Freedom and Returns scores.
+
+**How much does sovereign AI cost?**
+Running models locally costs the price of hardware (a capable Mac Studio starts around $3,000) plus electricity. Cloud-based sovereign options are cheaper: Venice Pro costs $18/month for unlimited private inference, and decentralised compute on Akash runs 60-85% below AWS equivalent pricing. The free tier on Venice gives you 10 text prompts per day with no account required.

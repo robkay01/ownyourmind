@@ -1,5 +1,5 @@
 ---
-title: "peaq"
+title: "peaq Review"
 description: "peaq review — DePIN Layer-1 for the Machine Economy. 60+ DePINs, enterprise partners (Bosch, Airbus, NTT), but $163K revenue. Freedom Score, Returns Score and honest assessment."
 category: "other"
 token: "PEAQ"
@@ -68,6 +68,34 @@ The Machine Economy thesis is directionally correct – machines will increasing
 
 For the sovereignty thesis, peaq provides self-sovereign machine identities and permissionless infrastructure. But it is not privacy-preserving – data on peaq is visible on-chain. And as a Polkadot parachain, the chain's security depends on maintaining its parachain slot. It is infrastructure for machines to operate independently, which is a different but related angle on sovereignty.
 
+## peaq's DePIN positioning: why 60+ projects chose this chain
+
+The interesting question about peaq is not what it does — it is why 60+ DePINs chose to build on it instead of Solana, Base, or Ethereum.
+
+The answer is specialisation. General-purpose blockchains treat machines the same as humans: you need a wallet, you sign transactions, you interact with smart contracts. peaq treats machines as first-class economic participants with native infrastructure built into the chain itself — not deployed as smart contracts, but embedded at the protocol level.
+
+**peaq IDs** give every machine a self-sovereign identity compliant with W3C DID standards. A car, a drone, a sensor array — each gets a decentralised identity that persists across applications without depending on a centralised registry. This is the foundation: machines cannot transact autonomously if they cannot prove who they are.
+
+**peaq Pay** handles machine-to-machine micropayments natively. When a drone sells its weather data to an insurance company, the payment settles on-chain without human intervention. The fee structure is designed for high-frequency, low-value transactions that would be prohibitively expensive on Ethereum.
+
+**peaq Access** provides role-based permissions for machine interactions. A fleet of delivery robots can be granted access to a warehouse's loading dock programmatically, with permissions that expire, rotate, and audit automatically.
+
+The enterprise partnerships — NTT, Continental, Airbus, Mastercard, Bosch, Gaia — validate the thesis at the pilot level. These are not marketing logos. NTT is running a data marketplace pilot. Airbus is exploring decentralised drone identity. Bosch is evaluating supply chain verification. But the distance between "exploring" and "production deployment generating revenue" is vast. In construction, we call this the gap between letters of intent and executed contracts. peaq has the letters.
+
+The honest assessment: the technology is genuinely purpose-built and well-engineered. The 60+ DePINs are real projects building real applications. But $163,600 in annualised fees across all of them tells you that the Machine Economy is still ahead of the market. The infrastructure is ready. The machines are not yet transacting at scale.
+
+## How peaq compares to other DePIN infrastructure
+
+peaq made a bet: build a chain specifically for machines rather than adapting a general-purpose chain. How does that bet compare?
+
+**peaq vs Solana.** Solana hosts more DePINs by market cap — Helium, Render, Hivemapper. The liquidity is deeper, the developer tools are more mature, and the user base is larger. But Solana treats DePIN the same as DeFi or NFTs: generic smart contracts on a fast chain. peaq's native machine identity, M2M payments, and access control modules are purpose-built. The trade-off is ecosystem size (Solana wins) versus specialisation (peaq wins).
+
+**peaq vs IoTeX.** The closest competitor in the machine-specific L1 space. [IoTeX](/projects/iotex/) focuses on "DePIN as a Service" with W3bstream middleware for off-chain compute verification. peaq focuses on on-chain machine identity and payments. IoTeX has a longer track record (mainnet since 2019) but smaller DePIN count. Both are betting that machines need specialised infrastructure. Neither has proven the commercial case yet.
+
+**peaq vs Polkadot ecosystem.** As a Polkadot parachain, peaq inherits shared security from the Relay Chain. This is a double-edged sword: robust security without maintaining your own validator set, but dependency on Polkadot's health and the need to maintain a parachain slot. If Polkadot's ecosystem contracts, peaq's security model is directly affected.
+
+The broader question is whether the Machine Economy needs a specialised L1 at all, or whether general-purpose chains with smart contract-based machine identity will be good enough. peaq is betting on specialisation. The answer will not be clear until autonomous machine transactions happen at scale — and that is still years away.
+
 ## Tokenomics
 
 PEAQ launched with a genesis supply of 4.2 billion tokens. There is **no maximum supply** – the model is disinflationary with 3.5% annual inflation, decreasing by 10% each year until it stabilises at 1% (approximately 12 years post-launch). This is a thoughtfully designed emission schedule.
@@ -106,7 +134,7 @@ Listed on Kraken, KuCoin, Gate.io, MEXC, Bitget, Crypto.com, Coinone, and others
 
 ## Honest assessment
 
-### Freedom Score: 50/100 (D)
+## Freedom Score: 50/100
 
 peaq is a well-engineered open-source L1 but with centralised control dynamics and Polkadot dependency.
 
@@ -122,7 +150,7 @@ peaq is a well-engineered open-source L1 but with centralised control dynamics a
 
 **Open Source Transparency: 11/15.** 97 public GitHub repos with active development. Core chain is 98.3% Rust. CertiK audit scored 97.96/100. SRL audit completed. SDKs in JS, Python, Rust all open source. Good transparency. Score limited because SRL audit reports are not publicly readable from repos.
 
-### Returns Score: 47/100 (D)
+## Returns Score: 47/100
 
 **Token Utility: 15/20.** PEAQ is used for gas fees, staking (DPoS/NPoS), governance, machine identity registration, and M2M payments. The token is structurally essential to the chain – 60+ DePINs use it for operations. Strong multi-utility design with real ecosystem usage.
 

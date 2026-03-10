@@ -12,6 +12,35 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+// FAQ schemas for pages with FAQ sections
+const faqsByPage: Record<string, Array<{ q: string; a: string }>> = {
+  'the-case-for-sovereign-ai': [
+    { q: "What is sovereign AI?", a: "Sovereign AI is artificial intelligence infrastructure where you control the compute, models, data, and inference. No single company can revoke your access, censor your outputs, or harvest your inputs. It ranges from running models on your own hardware to using decentralised networks where no central authority has control." },
+    { q: "Is sovereign AI the same as decentralised AI?", a: "They overlap but are not identical. Decentralised AI refers to the infrastructure — distributed compute, open models, token-coordinated networks. Sovereign AI is the outcome — you have control over your AI stack. You can achieve sovereignty through decentralised networks, local inference, or a combination." },
+    { q: "Can I run sovereign AI at home?", a: "Yes. A modern computer with sufficient memory can run open-weight AI models locally. A Mac Studio with 64GB unified memory handles 70B parameter models at usable speed. Smaller models run on consumer laptops." },
+    { q: "What are the best sovereign AI projects?", a: "It depends on what you need. For private inference: Venice. For decentralised compute: Akash and Render. For AI agent infrastructure: Morpheus and Bittensor. For local inference: Ollama and LM Studio." },
+    { q: "How much does sovereign AI cost?", a: "Running models locally costs the price of hardware (a capable Mac Studio starts around $3,000) plus electricity. Cloud-based sovereign options are cheaper: Venice Pro costs $18/month for unlimited private inference, and decentralised compute on Akash runs 60-85% below AWS equivalent pricing." },
+  ],
+  'what-counts-as-decentralised-ai': [
+    { q: "What is DeAI (decentralised AI)?", a: "DeAI is artificial intelligence infrastructure built on decentralised networks — distributed compute, open-weight models, and token-coordinated protocols where no single entity controls access, censors outputs, or owns your data. The blockchain and the AI need each other; if you could remove one without affecting the other, it is not genuine DeAI." },
+    { q: "What is the difference between DeAI and regular AI?", a: "Regular AI runs on centralised infrastructure controlled by a single company. They decide which models you access, what content policies apply, and how your data is used. DeAI distributes that control across independent participants. You choose the model, the compute provider, and the privacy level." },
+    { q: "How do I know if a crypto project is really an AI project?", a: "Apply three tests. Did AI come before the token? Would the project survive if the AI narrative disappeared? Does AI change the protocol's mechanism or just its marketing? If a project fails all three, it is probably not what it claims to be." },
+    { q: "What are examples of genuine DeAI projects?", a: "Core DeAI projects include Bittensor, Venice, Gensyn, and Morpheus. DeAI-adjacent projects with genuine AI utility include Akash and Phala. See our project directory for all 34 reviewed projects." },
+    { q: "Is DeAI a good investment?", a: "It depends on the project. We score every project on Freedom (how decentralised it is) and Returns (how well the token captures value). Most DeAI tokens are early-stage bets on infrastructure that may take years to reach scale." },
+  ],
+};
+
+const faqs = faqsByPage[entry.id];
+const faqData = faqs ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
+} : null;
 ---
 
 <ArticleLayout
@@ -23,5 +52,6 @@ const { Content } = await render(entry);
   sectionHref="/why-deai/"
   heroImage={`/images/why-deai-${entry.id}.webp`}
 >
+  {faqData && <script type="application/ld+json" set:html={JSON.stringify(faqData)} />}
   <Content />
 </ArticleLayout>

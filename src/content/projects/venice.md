@@ -1,5 +1,5 @@
 ---
-title: "Venice AI"
+title: "Venice AI Review"
 description: "Venice AI review — private, uncensored AI inference with no logs and no content filtering. Freedom Score, Returns Score, tokenomics breakdown and honest assessment."
 category: "inference"
 token: "VVV"
@@ -39,6 +39,34 @@ Founded by Erik Voorhees, the serial crypto entrepreneur behind SatoshiDice and 
 
 This is not a protocol. It is a company that runs a proxy server. The distinction matters for everything that follows.
 
+## Why Venice AI is uncensored — and what that actually means
+
+"Uncensored AI" is a loaded term, so let me be specific about what Venice does and does not do.
+
+Venice serves open-weight models — DeepSeek, Llama, Qwen, Mistral and others — without corporate content policies layered on top. When you send a prompt to ChatGPT, OpenAI's safety layer decides whether to answer. When you send the same prompt to Claude, Anthropic's content policy makes the call. These are editorial decisions by private companies about what their AI is allowed to discuss.
+
+Venice removes that layer. The models respond based on their training, not a corporation's content policy. Pro subscribers can disable Safe Mode entirely, which removes even the model's built-in guardrails where the model architecture permits it.
+
+In practice, this means Venice handles prompts that centralised providers refuse. Security researchers can discuss vulnerabilities without triggering refusal responses. Creative writers are not blocked from mature themes. Medical researchers get direct answers about drug interactions rather than "please consult a healthcare professional." I have had Claude refuse to help with completely legitimate research questions about smart contract exploits — Venice handles these without friction.
+
+What Venice does not do is serve illegal content. CSAM, direct instructions for mass violence, and other clearly illegal material are blocked at the platform level. "Uncensored" means no corporate content policy, not no rules at all. The distinction matters because critics conflate the two.
+
+The real question is whether uncensored inference is a feature or a risk. For Venice, it is both. Security publications have flagged Venice as a tool for generating malware. If a credible real-world crime is traced to Venice-generated content, the regulatory response could be severe. The UK free tier is already blocked under FSMA. Voorhees is betting that the market for uncensored AI is large enough and legitimate enough to outweigh the regulatory risk. So far, that bet is paying off — 1.3 million registered users suggests real demand.
+
+## Private AI inference: what Venice actually protects
+
+Privacy is Venice's other core feature, and it works differently from what most people expect.
+
+When you send a prompt to Venice, it hits a centralised proxy server that strips identifying information — your IP address, session data, anything that ties the prompt to you personally. The raw prompt then routes to GPU providers sourced from [Akash Network](/projects/akash/), Hyperbolic and Prime Intellect. Those providers see individual prompts but not who sent them or the broader conversation context. Responses stream back through the proxy, and all data is purged immediately. Nothing is stored server-side.
+
+Compare this with centralised alternatives. OpenAI retains conversations and trains on them by default (you can opt out, but the default is collection). Anthropic retains conversations for safety research and model improvement. Google processes prompts through infrastructure that feeds into its broader advertising and data ecosystem. With Venice, there is no conversation history on their servers. Everything stays in your browser's local storage.
+
+The limitation is honest: this is trust-based privacy, not cryptographically provable privacy. The proxy is closed-source. No independent privacy audit has been completed despite being the third-most-requested feature from users (334 votes on Featurebase). Venice claims zero-knowledge inference, but until the architecture is independently verified, users are trusting Voorhees and a roughly six-person team to honour that promise.
+
+For many use cases, trust-based privacy is sufficient. If you are a journalist, lawyer, healthcare professional, or simply someone who does not want a corporation indexing your AI interactions, Venice delivers materially more privacy than any mainstream alternative. But if you need cryptographic guarantees — verifiable proof that no one saw your prompt — you are looking at projects like [Phala](/projects/phala/) or Nillion, which are building that layer but are not yet consumer-ready.
+
+Who benefits most: anyone in regulated industries handling sensitive data, anyone in jurisdictions with speech restrictions, developers building products that handle user data, and anyone who considers their AI interactions to be private by default. For a deeper look at why privacy matters for AI specifically, see [Privacy Is the Killer App](/why-deai/privacy-is-the-killer-app/).
+
 ## Value proposition
 
 Venice sells privacy without friction. You open a browser, type a prompt, and get an uncensored response from open-source models (DeepSeek, Llama, Qwen, Mistral, FLUX and others) without creating an account, providing an email, or agreeing to content restrictions. Pro subscribers can disable Safe Mode entirely. The free tier gives you 10 text prompts and 15 image generations per day.
@@ -75,6 +103,8 @@ Market snapshot: VVV trades at $5.65 with a $250 million market cap. That is 75%
 **Stake VVV.** Staking VVV earns emissions-based yield (nominal APY ranges from 20-72% depending on the period), but this yield comes from newly minted VVV, not protocol revenue. Real yield depends on whether VVV holds value against the inflation. Staking alone does not give you inference access. Seven-day unstaking cooldown.
 
 **Lock and mint DIEM.** To access inference via tokens, lock your staked VVV (sVVV) to mint DIEM on the Venice token dashboard. Each DIEM represents $1/day of perpetual, renewing API credit — stake DIEM (minimum 0.1) to activate access to all models on Venice including Claude, GPT-5 and Gemini. The mint rate rises exponentially as DIEM supply approaches the target supply set by Venice, so early minters get more DIEM per VVV locked. While your sVVV is locked, you still earn 80% of standard staking yields. To exit, burn the same amount of DIEM you minted to unlock your original sVVV (partial unlocks permitted). DIEM also trades on Aerodrome and Coinbase — you can buy it directly instead of minting. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply.
+
+**Getting started.** The fastest path to Venice is the web app at venice.ai — no account required for the free tier (10 text prompts, 15 images per day). Pro subscription at $18/month (or $149/year) unlocks unlimited text with advanced models including Claude, GPT-5, and Gemini, plus 1,000 daily image generations, voice mode, and Memoria (local vector memory). For developers, the API is OpenAI-compatible: change one base URL in your existing code and your prompts route through Venice instead. Available models include DeepSeek V3, Llama 4 Maverick, Qwen 3.5 and others across text, image, code, and audio.
 
 **Build on the API.** The OpenAI-compatible API is the developer on-ramp. The $27 million incentive fund has run two cohorts (110+ applications in Cohort 1, roughly 30 semifinalists in Cohort 2). Grants range from $5,000 to $100,000 in VVV.
 

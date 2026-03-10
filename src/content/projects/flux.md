@@ -1,5 +1,5 @@
 ---
-title: "Flux"
+title: "Flux Review"
 description: "Flux review — fair-launched decentralised cloud with ~8,000 nodes across 67 countries. GPU mining, FluxCloud, FluxEdge. Freedom Score, Returns Score and honest assessment."
 category: "compute"
 token: "FLUX"
@@ -91,9 +91,52 @@ FLUX trades at approximately $0.06 with a market cap of ~$24M. Down 98% from its
 
 **Governance.** Participate in XDAO voting. Currently weighted towards node operators. XDAO 2.0 planned to extend to all FLUX holders. Technical skill: basic.
 
+## Flux GPU mining: how it works and what you can earn
+
+Flux is one of the few remaining fair-launched, mineable crypto projects with genuine compute infrastructure behind it. If you are looking at GPU mining in the DeAI space, Flux is worth understanding because the model is fundamentally different from proof-of-work mining on Bitcoin or Ethereum.
+
+### How Flux mining works
+
+Since the October 2025 PoUW v2 (Proof of Useful Work) soft fork, Flux replaced traditional GPU hash mining with useful compute work. Block time dropped from 2 minutes to 30 seconds, and the mining process now contributes productive computation rather than burning electricity on meaningless hashes. This is a significant evolution — Flux miners are doing real work, not just solving arbitrary puzzles.
+
+Block rewards are 14 FLUX per block (one block every 30 seconds), producing approximately 40,320 FLUX per day. These rewards are distributed across the node tiers:
+
+- **Stratus nodes**: 64.3% of block rewards
+- **Nimbus nodes**: 25% of block rewards
+- **Cumulus nodes**: 7.1% of block rewards
+- **Flux Foundation**: 3.6%
+
+A 10% annual emission reduction targets a long-term inflation rate of approximately 1% by 2036.
+
+### FluxNode tiers and requirements
+
+Running a FluxNode requires both hardware and FLUX collateral locked on-chain:
+
+| Tier | Collateral | CPU | RAM | Storage | Bandwidth |
+|------|-----------|-----|-----|---------|-----------|
+| **Cumulus** | 1,000 FLUX (~$60) | 2 cores | 8 GB | 220 GB SSD | 25 Mbps |
+| **Nimbus** | 12,500 FLUX (~$750) | 4 cores | 32 GB | 440 GB SSD | 50 Mbps |
+| **Stratus** | 40,000 FLUX (~$2,400) | 8 cores | 64 GB | 880 GB SSD | 100 Mbps |
+
+Nodes must maintain 97% uptime. If your node goes offline, you stop earning. ArcaneOS (Flux's secure Docker container OS, released 2025) is required for Progressive Node Rewards eligibility, which shares 80% of FluxCloud revenue with operators.
+
+**Titan fractional staking** lets you participate from just 50 FLUX (~$3) without running hardware. Lock periods of 3, 6, or 12 months. Managed by InFlux Technologies — note this is a centralised custodial option.
+
+### The economics — be honest with yourself
+
+Before buying hardware for a Flux node, work the numbers backwards from current FLUX price and your electricity costs.
+
+At current FLUX prices (~$0.06), the daily block reward pool is worth roughly $2,400 split across approximately 8,000 nodes. A single Cumulus node earning its proportional share of the 7.1% Cumulus allocation might see $0.10-$0.30/day in rewards. A Stratus node gets more, but you have $2,400 in FLUX collateral locked plus server hardware and hosting costs.
+
+The honest picture: node economics currently depend heavily on FLUX price appreciation. At current prices, most operators are earning below the cost of running the hardware. This is why node count has declined from 14,000+ to ~8,000 — operators who needed immediate returns have left.
+
+Flux mining makes sense if you have a multi-year time horizon and believe in the infrastructure thesis, or if you have existing hardware with spare capacity. It does not make sense as a short-term income play at current token prices.
+
+The parallel mining advantage remains: FLUX can be mined alongside other PoW chains simultaneously, making the marginal cost of adding FLUX mining to an existing operation lower than starting from scratch.
+
 ## Honest assessment
 
-### Freedom Score: 80/100 (B)
+## Freedom Score: 80/100
 
 Flux scores strongly on freedom, driven by its fair-launch origins, extensive node infrastructure, and open source commitment.
 
@@ -109,7 +152,7 @@ Flux scores strongly on freedom, driven by its fair-launch origins, extensive no
 
 **Open Source Transparency: 12/15.** 165 public GitHub repos. Core software under AGPL-3.0 and MIT licences. 247 stars, 244 contributors, 8,846 commits on main repo. Companies House filings current. Halborn audits publicly available. Active development through March 2026. No comprehensive FluxOS/FluxCloud protocol audit found.
 
-### Returns Score: 57/100 (D)
+## Returns Score: 57/100
 
 **Token Utility: 15/20.** FLUX is used for node collateral (1,000-40,000 FLUX locked per tier), FluxCloud deployment payments, FluxEdge compute purchases, Titan staking (50-10,000 FLUX), governance voting, and cross-chain Fusion swaps. Multiple genuine use cases creating demand. However, FluxCloud has only ~100 deployed apps – actual compute payment demand is minimal. Most current utility is collateral lock-up rather than consumption.
 

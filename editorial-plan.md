@@ -2,7 +2,7 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-09
+Updated: 2026-03-09 (synced with A0 keyword research report)
 
 ---
 
@@ -140,9 +140,11 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ## Build Pipeline — Keyword-Prioritised
 
-2 tutorials published. Build section revived as the dedicated home for tutorials (separate from project reviews to keep reviews evergreen and tutorials independently updateable).
+2 tutorials published. Build section is the dedicated home for tutorials (separate from project reviews to keep reviews evergreen and tutorials independently updateable).
 
 Each tutorial links back to its project review. Each project review's "How to participate" section links forward to the tutorial.
+
+**Phasing:** Tutorials are a later phase. Write and stockpile, then publish as a batch so the Build section launches with substance. Do not drip-feed individual tutorials — wait until 4-5 are ready to publish together.
 
 ### Priority 1 — Keyword-validated (from Agent Zero keyword research, March 2026)
 
@@ -156,6 +158,12 @@ Each tutorial links back to its project review. Each project review's "How to pa
 
 All have Low competition and transactional intent. Volume is long-tail but these are practical pages that compound over time.
 
+### Priority 1b — Keyword-validated (from A0 report, not yet in Build)
+
+| Priority | Article | Target Query | Monthly Volume | Links to |
+|----------|---------|-------------|----------------|----------|
+| 6 | **Flux GPU Mining: How to Earn with FLUX** | flux gpu mining | 50 | `/projects/flux/` |
+
 ### Priority 2 — Original candidates (not yet keyword-validated)
 
 - Running a Bittensor subnet miner
@@ -167,6 +175,23 @@ Full keyword strategy: `docs/seo-keyword-strategy.md`
 
 ---
 
+## Comparisons Pipeline
+
+A0 keyword research identified "vs" queries (bittensor vs render, render vs akash) as a strategic opportunity — dual-score framework is a unique differentiator and no competitor does systematic DeAI comparisons.
+
+**Decision needed:** Create a dedicated `/comparisons/` section or keep comparisons within existing `/projects/compare/` tool?
+
+A0 recommended a dedicated section. Current compare page is an interactive tool — standalone comparison articles could rank independently for "vs" queries.
+
+### Proposed comparison articles
+
+| Article | Target Queries | Volume | Status |
+|---------|---------------|--------|--------|
+| **Bittensor vs Render vs Akash: DeAI Compute Comparison** | bittensor vs render, render vs akash, akash vs render | 50+50+50 | Not started |
+| **Render vs Akash vs io.net: GPU Compute Showdown** | (podcast episode exists as companion) | 50 | Not started |
+
+---
+
 ## SEO: Existing Page Enrichments (Phase B)
 
 Pages that already exist but need keyword-targeted content additions. No new URLs.
@@ -175,24 +200,35 @@ Pages that already exist but need keyword-targeted content additions. No new URL
 
 | Page | Target Query | Volume | Action | Status |
 |------|-------------|--------|--------|--------|
+| `/projects/venice/` | venice ai review | **5,000** | Add H2 "Venice AI Review 2026", optimise for primary query | Not started |
 | `/projects/venice/` | venice ai uncensored, venice ai private ai | 500+50 | Add "uncensored" and "private AI" coverage, tutorial subsection | Not started |
+| `/projects/peaq/` | peaq review | **5,000** | Add H2 "peaq Review", emphasise DePIN positioning, add comparison table | Not started |
+| `/why-deai/the-case-for-sovereign-ai/` | sovereign ai, what is sovereign ai | **5,000**+500 | **Major expansion** — add definition box, FAQ schema, expand "What is Sovereign AI" section. Highest CPC ($3-$11) = strong commercial intent. Not just schema — this is the #1 SEO opportunity. | Title DONE, expansion not started |
 | `/projects/bittensor/` | bittensor halving | 500 | Add halving section with TAO holder impact | Not started |
-| `/why-deai/the-case-for-sovereign-ai/` | sovereign ai, what is sovereign ai | 5,000+500 | Title optimised; add FAQ schema | Title DONE, schema not started |
-| `/why-deai/what-counts-as-decentralised-ai/` | what is deai | 500 | Title optimised; add FAQ schema | Title DONE, schema not started |
+| `/why-deai/what-counts-as-decentralised-ai/` | what is deai | 500 | Add FAQ schema, "DeAI Definition" section | Title DONE, schema not started |
+| `/projects/flux/` | flux review | 500 | Optimise title tag, add H2 "Flux Review", GPU mining tutorial section | Not started |
+| `/projects/morpheus/` | morpheus review | 500 | Add H2 "Morpheus Review", expand staking tutorial, "How does Morpheus work" section | Not started |
 
 ### Long-tail (50 monthly searches)
 
 | Page | Target Query | Action | Status |
 |------|-------------|--------|--------|
 | `/projects/compare/` | bittensor vs render, render vs akash | Add static SEO intro + popular comparison links above tool | Not started |
-| `/projects/io-net/` | io net earnings | Add earnings expectations to participation section | Not started |
-| `/projects/morpheus/` | how does morpheus work | Verify H2 matches query phrasing | Not started |
+| `/projects/io-net/` | io net earnings | Add earnings calculator table, GPU requirements | Not started |
+| `/projects/render/` | render network review | Optimise for "Render Network Review" query | Not started |
+| `/projects/golem/` | golem network review | Optimise H1 to include "Network" | Not started |
+| `/projects/grass/` | grass tokenomics | Add tokenomics section to existing review | Not started |
+| `/projects/flux/` | flux gpu mining | Add GPU mining tutorial section | Not started |
 
 ### Resources — New Pages
 
 | Article | Target Query | Volume | Status |
 |---------|-------------|--------|--------|
 | **DePIN Tokens Ranked by Freedom & Returns** | depin tokens list | 50 | Not started |
+| **Glossary** — DeAI terminology in plain language | deai glossary, decentralised ai terms | unmeasured | Not started |
+| **Recommended Tools & Software** — Ollama, LM Studio, wallets, node software, privacy tools | ollama setup, lm studio guide | unmeasured | Not started |
+| **Community Directory** — Discords, Telegrams, forums per project | — | — | Not started |
+| **Recommended Reading** — best threads, papers, reports (0xSammy, 0xJeff, a16z, Messari) | — | — | Not started |
 
 Full keyword strategy: `docs/seo-keyword-strategy.md`
 
@@ -255,13 +291,46 @@ Voice clone (Rob/Bobski) + Rachel McGrath co-host on ElevenLabs. Turn-by-turn ge
 
 ## Content Calendar
 
-No fixed dates — quality over cadence. Current focus areas:
+No fixed dates — quality over cadence. Priorities informed by A0 keyword research (March 2026).
 
-1. Monthly/quarterly review process (first monthly review due April 2026)
-2. Akash BME activation follow-up (March 23rd) — update project page + returns score once live on mainnet
-3. Podcast pilot — produce 2-3 episodes, embed on project pages, validate engagement
-4. SEO Phase B page enrichments — Venice uncensored, Bittensor halving, FAQ schemas, compare page intro
-5. Build tutorials prioritised by keyword data — Grass, Render, Aethir, ElizaOS, Virtuals
-6. Event-timed tokenomics — Bittensor halving, ASI Alliance, dTAO economics
-7. Compare page SEO optimisation — static intro content + popular comparison links
-8. Newsletter — monthly digest once Buttondown account approved
+### Phase 1 — SEO quick wins (existing pages, no new URLs)
+
+These are the highest-value, lowest-effort actions. Optimise pages that already exist for queries with proven volume.
+
+1. **Sovereign AI page expansion** — 5,000 searches, $3-$11 CPC, #1 opportunity. Major expansion, not just FAQ schema.
+2. **Venice review optimisation** — H2 "Venice AI Review 2026" (5,000 searches) + "uncensored"/"private AI" keywords (500 searches)
+3. **peaq review optimisation** — H2 "peaq Review" (5,000 searches), DePIN positioning
+4. **Flux review optimisation** — title tag + GPU mining section (500 searches)
+5. **Morpheus review expansion** — "How does Morpheus work" section + staking tutorial (500 searches)
+6. **FAQ schemas** — sovereign ai, what is deai pages
+7. **Minor H1/title tweaks** — Golem ("Network"), Render ("Network Review"), Grass (tokenomics section)
+
+### Phase 2 — Event-timed content
+
+8. Akash BME activation follow-up (March 23rd) — update project page + returns score
+9. Bittensor Halving 2026 — tokenomics article + review section (500 searches, event-timed)
+10. ASI Alliance merged tokenomics — Q2 2026
+11. dTAO subnet economics — Q2 2026
+
+### Phase 3 — New content (tutorials, comparisons, resources)
+
+12. **Build tutorials** — Grass, Render, Aethir, ElizaOS, Virtuals, Flux (keyword-validated, later phase — batch and publish together)
+13. **Resources expansion** — Glossary, Recommended Tools (Ollama, LM Studio etc.), Community Directory, Recommended Reading
+14. **Comparison articles** — Bittensor vs Render vs Akash, GPU compute showdown (dual-score differentiator)
+15. **DIEM tokenomics** — Venice flywheel deep-dive
+16. **DePIN Tokens Ranked** — new resource page (50 searches)
+
+### Phase 4 — Revenue infrastructure
+
+17. **Affiliate links in Build tutorials** — hardware (Mac Studio, GPUs), VPNs, hosting. Add to existing Mac Studio guide + all new tutorials.
+18. **Protocol referral setup** — Venice API, Akash deployments, staking platforms. Add to project "How to participate" sections.
+19. **Recommended Tools page with affiliate links** — Ollama, LM Studio, wallets, node software. Natural, honest recommendations.
+20. **Newsletter sponsorship infrastructure** — once Buttondown subscriber base reaches ~1,000+.
+
+### Ongoing
+
+- Monthly/quarterly review process (first monthly review due April 2026)
+- Podcast episodes — Venice next, then comparison episodes
+- Spotify re-upload with disclaimers
+- Newsletter — monthly digest once Buttondown approved
+- On-chain metrics refresh (`npm run refresh:onchain`)
