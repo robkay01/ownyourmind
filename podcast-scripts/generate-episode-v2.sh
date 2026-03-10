@@ -4,7 +4,7 @@
 # Produces individual clips per dialogue turn, then assembles into a single MP3.
 #
 # Prerequisites:
-#   1. Set ELEVENLABS_API_KEY, ELEVENLABS_ROB_VOICE_ID, ELEVENLABS_RACHEL_VOICE_ID in .env
+#   1. Set ELEVENLABS_API_KEY, ELEVENLABS_BOBSKI_VOICE_ID, ELEVENLABS_RACHEL_VOICE_ID in .env
 #   2. ffmpeg installed (brew install ffmpeg)
 #   3. chmod +x podcast-scripts/generate-episode-v2.sh
 #
@@ -12,7 +12,7 @@
 #   ./podcast-scripts/generate-episode-v2.sh podcast-scripts/bittensor-episode-001-turns.md
 #
 # Output:
-#   podcast-audio/bittensor-episode-001/turns/turn-01-rob.mp3 (etc.)
+#   podcast-audio/bittensor-episode-001/turns/turn-01-bobski.mp3 (etc.)
 #   podcast-audio/bittensor-episode-001/Own-Your-Mind-001-Bittensor.mp3 (final assembled episode)
 
 set -euo pipefail
@@ -20,14 +20,14 @@ set -euo pipefail
 # Load environment variables
 if [ -f .env ]; then
   export ELEVENLABS_API_KEY=$(grep ELEVENLABS_API_KEY .env | cut -d= -f2 | tr -d '[:space:]')
-  export ELEVENLABS_ROB_VOICE_ID=$(grep ELEVENLABS_ROB_VOICE_ID .env | cut -d= -f2 | tr -d '[:space:]')
+  export ELEVENLABS_BOBSKI_VOICE_ID=$(grep ELEVENLABS_BOBSKI_VOICE_ID .env | cut -d= -f2 | tr -d '[:space:]')
   export ELEVENLABS_RACHEL_VOICE_ID=$(grep ELEVENLABS_RACHEL_VOICE_ID .env | cut -d= -f2 | tr -d '[:space:]')
 fi
 
-if [ -z "${ELEVENLABS_API_KEY:-}" ] || [ -z "${ELEVENLABS_ROB_VOICE_ID:-}" ] || [ -z "${ELEVENLABS_RACHEL_VOICE_ID:-}" ]; then
+if [ -z "${ELEVENLABS_API_KEY:-}" ] || [ -z "${ELEVENLABS_BOBSKI_VOICE_ID:-}" ] || [ -z "${ELEVENLABS_RACHEL_VOICE_ID:-}" ]; then
   echo "ERROR: Missing environment variables. Add to .env:"
   echo "  ELEVENLABS_API_KEY=your_key"
-  echo "  ELEVENLABS_ROB_VOICE_ID=your_cloned_voice_id"
+  echo "  ELEVENLABS_BOBSKI_VOICE_ID=your_cloned_voice_id"
   echo "  ELEVENLABS_RACHEL_VOICE_ID=rachel_voice_id"
   exit 1
 fi
@@ -79,7 +79,7 @@ generate_clip() {
       \"voice_settings\": {
         \"stability\": 0.5,
         \"similarity_boost\": 0.75,
-        \"style\": 0.0,
+        \"style\": 0.2,
         \"use_speaker_boost\": true
       }
     }" \
@@ -112,8 +112,8 @@ process_turn() {
   fi
 
   local voice_id
-  if [ "$VOICE" = "ROB" ]; then
-    voice_id="$ELEVENLABS_ROB_VOICE_ID"
+  if [ "$VOICE" = "BOBSKI" ]; then
+    voice_id="$ELEVENLABS_BOBSKI_VOICE_ID"
   else
     voice_id="$ELEVENLABS_RACHEL_VOICE_ID"
   fi
@@ -132,7 +132,7 @@ IN_CODE_BLOCK=false
 
 while IFS= read -r line; do
   # Detect turn headers: ## TURN 01 — ROB
-  if [[ "$line" =~ ^##[[:space:]]TURN[[:space:]]([0-9]+)[[:space:]]—[[:space:]](ROB|RACHEL) ]]; then
+  if [[ "$line" =~ ^##[[:space:]]TURN[[:space:]]([0-9]+)[[:space:]]—[[:space:]](BOBSKI|RACHEL) ]]; then
     # Process previous turn if exists
     process_turn
 

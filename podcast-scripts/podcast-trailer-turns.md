@@ -1,7 +1,7 @@
 # Podcast Trailer — The Dual-Score Podcast for Decentralised AI
 ## Turn-by-Turn Production Script
 
-## TURN 01 — ROB
+## TURN 01 — BOBSKI
 ```
 What if you could actually tell which crypto AI projects are decentralised — and which are just using the label for marketing?
 ```
@@ -11,9 +11,9 @@ What if you could actually tell which crypto AI projects are decentralised — a
 What if there was a rating system for DeAI that measured both sovereignty AND value capture?
 ```
 
-## TURN 03 — ROB
+## TURN 03 — BOBSKI
 ```
-Welcome to the Own Your Mind podcast. I'm Rob.
+Welcome to the Own Your Mind podcast. I'm Bobski.
 ```
 
 ## TURN 04 — RACHEL
@@ -21,7 +21,7 @@ Welcome to the Own Your Mind podcast. I'm Rob.
 And I'm Rachel. Every week, we break down decentralised AI projects with honest, data-driven assessments.
 ```
 
-## TURN 05 — ROB
+## TURN 05 — BOBSKI
 ```
 We don't do hype. We don't take sponsorships. We don't shill tokens.
 ```
@@ -31,7 +31,7 @@ We don't do hype. We don't take sponsorships. We don't shill tokens.
 What we do is score every project on two dimensions. First, the Freedom Score — how decentralised is this thing, really? Six factors: infrastructure, governance, token distribution, censorship resistance, data sovereignty, and open source transparency.
 ```
 
-## TURN 07 — ROB
+## TURN 07 — BOBSKI
 ```
 Second, the Returns Score — does the token actually capture value? Five factors: token utility, value accrual, supply dynamics, revenue sustainability, and liquidity access.
 ```
@@ -41,7 +41,7 @@ Second, the Returns Score — does the token actually capture value? Five factor
 Each project gets two grades from A to F. And we publish our full methodology so anyone can challenge our reasoning.
 ```
 
-## TURN 09 — ROB
+## TURN 09 — BOBSKI
 ```
 We also disclose our positions. If we hold a token, we tell you. If we don't, we tell you that too. Transparency isn't optional — it's the product.
 ```
@@ -51,7 +51,7 @@ We also disclose our positions. If we hold a token, we tell you. If we don't, we
 This is not investment advice. This is independent research for people who want to understand what they're actually buying.
 ```
 
-## TURN 11 — ROB
+## TURN 11 — BOBSKI
 ```
 We cover the big names — Bit-tensor, Akash, Render, Morpheus. We cover the emerging projects you haven't heard of yet. And we call out the projects that claim to be decentralised when the reality tells a different story.
 ```
@@ -61,7 +61,7 @@ We cover the big names — Bit-tensor, Akash, Render, Morpheus. We cover the eme
 The decentralised AI space is moving fast. Billions of dollars are flowing into projects with slick marketing and questionable fundamentals. We're here to cut through the noise.
 ```
 
-## TURN 13 — ROB
+## TURN 13 — BOBSKI
 ```
 If you care about sovereignty — controlling your own data, your own compute, your own AI interactions — this podcast is for you.
 ```
@@ -71,7 +71,7 @@ If you care about sovereignty — controlling your own data, your own compute, y
 If you care about returns — understanding which tokens have sustainable economics and which are inflationary vampire pools — this podcast is for you.
 ```
 
-## TURN 15 — ROB
+## TURN 15 — BOBSKI
 ```
 And if you're tired of content that's just thinly-veiled promotion, you're in the right place.
 ```
@@ -81,7 +81,7 @@ And if you're tired of content that's just thinly-veiled promotion, you're in th
 Freedom AND returns. Sovereignty-first. Practitioner-led. No sponsors.
 ```
 
-## TURN 17 — ROB
+## TURN 17 — BOBSKI
 ```
 Subscribe wherever you get your podcasts. Visit ownyourmind.ai for full project reviews, score breakdowns, and our complete methodology.
 ```

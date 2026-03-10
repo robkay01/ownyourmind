@@ -1,9 +1,9 @@
 # Episode 003 — Akash Network: Real Revenue, Real Risks
 ## Turn-by-Turn Production Script
 
-## TURN 01 — ROB
+## TURN 01 — BOBSKI
 ```
-Welcome to the Own Your Mind podcast. I'm Rob, and today we're covering Akash Network — the decentralised cloud that actually has customers. Real revenue, real workloads, real adoption. But also a looming chain migration that introduces serious uncertainty.
+Welcome to the Own Your Mind podcast. I'm Bobski, and today we're covering Akash Network — the decentralised cloud that actually has customers. Real revenue, real workloads, real adoption. But also a looming chain migration that introduces serious uncertainty.
 
 Freedom Score of 66, Returns Score of 62. This is a project that's further along than most of DeAI, but faces a critical transition.
 ```
@@ -13,7 +13,7 @@ Freedom Score of 66, Returns Score of 62. This is a project that's further along
 And I'm Rachel. The story here is about credibility vs risk. Akash has what most projects don't — actual usage. But that usage is built on infrastructure that may be deprecated.
 ```
 
-## TURN 03 — ROB
+## TURN 03 — BOBSKI
 ```
 So Rachel, what exactly is Akash? The elevator pitch.
 ```
@@ -23,7 +23,7 @@ So Rachel, what exactly is Akash? The elevator pitch.
 Akash is a decentralised cloud computing marketplace built on a Cosmos SDK appchain. Providers list spare GPU, CPU, memory and storage capacity. Tenants describe workloads in a YAML-based configuration language, submit deployment orders on-chain, and providers bid via reverse auction. Lowest qualifying bid wins. Workloads run in Kubernetes containers.
 ```
 
-## TURN 05 — ROB
+## TURN 05 — BOBSKI
 ```
 So it's Airbnb for compute — people with spare capacity list it, people who need compute rent it.
 ```
@@ -33,7 +33,7 @@ So it's Airbnb for compute — people with spare capacity list it, people who ne
 Exactly. The chain handles order matching, escrow payments, and provider attestation. The actual compute happens off-chain. GPU marketplace launched in September 2023, and they've since added AkashML for managed inference.
 ```
 
-## TURN 07 — ROB
+## TURN 07 — BOBSKI
 ```
 What's the value proposition? Why use Akash over AWS?
 ```
@@ -43,7 +43,7 @@ What's the value proposition? Why use Akash over AWS?
 Cost. Akash runs 50 to 85 percent cheaper than AWS, GCP, and Azure. The reverse auction model drives prices down because providers compete for your deployment. But the real differentiator is permissionless supply. Anyone with qualifying hardware can become a provider. No approval process, no geographic restrictions.
 ```
 
-## TURN 09 — ROB
+## TURN 09 — BOBSKI
 ```
 And they have real customers?
 ```
@@ -53,7 +53,7 @@ And they have real customers?
 Venice uses Akash GPUs for inference. Morpheus routes compute through Akash providers. ElizaOS runs AI agents on the network. These aren't testnet experiments — they're real workloads generating real revenue.
 ```
 
-## TURN 11 — ROB
+## TURN 11 — BOBSKI
 ```
 Freedom Score of 66 out of 100, a C grade. What's driving this?
 ```
@@ -63,7 +63,7 @@ Freedom Score of 66 out of 100, a C grade. What's driving this?
 Infrastructure decentralisation gets 12 out of 20. They have 99 active validators — top 100 control about 63 percent of voting power. About 69 active providers with permissionless onboarding. Somewhere between 700 and 1000 GPUs across independent providers.
 ```
 
-## TURN 13 — ROB
+## TURN 13 — BOBSKI
 ```
 But?
 ```
@@ -73,7 +73,7 @@ But?
 But 69 providers is objectively thin, and the count declined through 2025. That's not a growing decentralised network — that's a shrinking one.
 ```
 
-## TURN 15 — ROB
+## TURN 15 — BOBSKI
 ```
 Governance?
 ```
@@ -83,7 +83,7 @@ Governance?
 13 out of 20. Over 300 on-chain governance proposals with active participation. The community rejected a proposal for lack of transparency, showing governance has real teeth. But Overclock Labs drives the strategic roadmap. The chain migration was announced by the founder, not governance-voted.
 ```
 
-## TURN 17 — ROB
+## TURN 17 — BOBSKI
 ```
 Token distribution?
 ```
@@ -93,7 +93,7 @@ Token distribution?
 8 out of 15. Genesis was insider-heavy — 34.5 percent investors, 27 percent team. But the long-term allocation is better: 70 percent of max supply goes to mining and block rewards. All tokens are now fully vested. Total raise was only 4.1 million dollars — small by crypto standards.
 ```
 
-## TURN 19 — ROB
+## TURN 19 — BOBSKI
 ```
 Open source?
 ```
@@ -103,7 +103,7 @@ Open source?
 13 out of 15, nearly exemplary. Fully open source across 65 repositories. But here's the gap: no formal security audit despite five-plus years of operation. A ChainLight vulnerability was discovered in May 2024 — patched, but it showed the attack surface is real.
 ```
 
-## TURN 21 — ROB
+## TURN 21 — BOBSKI
 ```
 Returns Score of 62 out of 100. What works and what doesn't?
 ```
@@ -113,7 +113,7 @@ Returns Score of 62 out of 100. What works and what doesn't?
 Token utility is solid — 16 out of 20. AKT serves three clear functions: payment for compute, staking for security and governance, and requirement for running validators. The network cannot function without the token.
 ```
 
-## TURN 23 — ROB
+## TURN 23 — BOBSKI
 ```
 Value accrual?
 ```
@@ -123,7 +123,7 @@ Value accrual?
 10 out of 20. The protocol takes a cut on compute fees. Staking yields about 7.3 percent nominal. But after 8 percent inflation and a 50 percent community pool tax, real yield is approximately zero.
 ```
 
-## TURN 25 — ROB
+## TURN 25 — BOBSKI
 ```
 They have a burn mechanism, right?
 ```
@@ -133,7 +133,7 @@ They have a burn mechanism, right?
 BME — Burn-Mint Equilibrium. When activated, AKT spent on compute gets burned. If compute spend exceeds inflation, the token becomes deflationary. The code is complete, activation target is early to mid 2026. But at 3.15 million annual revenue against an 88 million market cap, BME can't drive meaningful deflation yet.
 ```
 
-## TURN 27 — ROB
+## TURN 27 — BOBSKI
 ```
 Revenue sustainability?
 ```
@@ -143,7 +143,7 @@ Revenue sustainability?
 This is Akash's strongest dimension — 14 out of 25. 3.15 million in annual revenue from real customers. Revenue grew 128 percent year-over-year. That's more than most DeAI projects can claim. But 3.15 million wouldn't register at AWS. The revenue is real but tiny.
 ```
 
-## TURN 29 — ROB
+## TURN 29 — BOBSKI
 ```
 The elephant in the room — the chain migration.
 ```
@@ -153,7 +153,7 @@ The elephant in the room — the chain migration.
 This is the single highest-impact risk. Akash plans to deprecate its Cosmos chain in late 2026 and migrate to a new chain. Solana has been mentioned as a contender, but no governance vote has been conducted. Migrating an entire blockchain and marketplace is technically complex and could fracture the community.
 ```
 
-## TURN 31 — ROB
+## TURN 31 — BOBSKI
 ```
 Is there a published specification?
 ```
@@ -163,7 +163,7 @@ Is there a published specification?
 No. This is not an upgrade — it's a rebuild. No published roadmap with milestones. Current state is aspirational timelines with no concrete details.
 ```
 
-## TURN 33 — ROB
+## TURN 33 — BOBSKI
 ```
 What actually works about Akash?
 ```
@@ -173,7 +173,7 @@ What actually works about Akash?
 Akash is the most credible decentralised cloud marketplace operating today. 3.15 million annual revenue, up 128 percent year-over-year. Real named customers. Permissionless provider model. Fully open source. Active governance. Listed on Coinbase and Kraken. Mainnet running since 2020.
 ```
 
-## TURN 35 — ROB
+## TURN 35 — BOBSKI
 ```
 What doesn't work?
 ```
@@ -183,7 +183,7 @@ What doesn't work?
 69 active providers is not a cloud marketplace — it's a pilot programme. Provider count declined through 2025. No managed services limits enterprise adoption. Revenue growth sounds impressive until you realise it went from 1.4 million to 3.15 million — not meaningful at infrastructure scale.
 ```
 
-## TURN 37 — ROB
+## TURN 37 — BOBSKI
 ```
 The verdict?
 ```
@@ -193,7 +193,7 @@ The verdict?
 If you want decentralised compute and value permissionless deployment, Akash is the most mature option. The revenue is real. But the chain migration introduces uncertainty that's hard to price. And token economics need BME activation plus order-of-magnitude revenue growth before they become compelling.
 ```
 
-## TURN 39 — ROB
+## TURN 39 — BOBSKI
 ```
 That's Akash Network — Freedom Score 66, Returns Score 62. The most credible decentralised cloud, but facing a critical transition.
 
