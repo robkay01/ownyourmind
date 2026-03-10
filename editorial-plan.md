@@ -41,7 +41,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 6. **Bittensor Halving: What TAO Holders Need to Know** — 3-month retrospective, sell-the-news analysis, dTAO interaction *(draft)*
 7. **Bittensor Subnet Economics: How dTAO Actually Works** — alpha tokens, flow-based emissions, AMM mechanics, zero-emission death spiral *(draft)*
 
-### Build (8 tutorials — 2 published, 6 draft)
+### Build (9 tutorials — 2 published, 7 draft)
 
 1. **Mac Studio DeAI Setup** — setting up a Mac Studio M4 Max for DeAI work
 2. **Agent Zero + Venice + Morpheus** — connecting Agent Zero with Venice and Morpheus APIs
@@ -51,6 +51,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 6. **How to Build an AI Agent with ElizaOS** — character files, model backends, Twitter integration *(draft)*
 7. **Virtuals Protocol: How to Create an AI Agent** — GAME framework, bonding curves, revenue sharing *(draft)*
 8. **Flux Node Setup** — PoUW v2, ArcaneOS, Titan staking, FluxEdge *(draft)*
+9. **Morpheus Lumerin Node Setup** — proxy-router, model hosting, on-chain registration, compute provider economics *(draft)*
 
 ### Journal (1 post)
 
@@ -63,7 +64,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 3. **The Quadrant Model** — how Freedom and Returns scores combine into A/B/C/D positioning
 4. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
 
-**Total published content: 52 pages** (+ 9 draft articles stockpiled)
+**Total published content: 52 pages** (+ 10 draft articles stockpiled)
 
 ---
 
@@ -204,14 +205,14 @@ Pages that already exist but need keyword-targeted content additions. No new URL
 
 | Page | Target Query | Volume | Action | Status |
 |------|-------------|--------|--------|--------|
-| `/projects/venice/` | venice ai review | **5,000** | Add H2 "Venice AI Review 2026", optimise for primary query | Not started |
-| `/projects/venice/` | venice ai uncensored, venice ai private ai | 500+50 | Add "uncensored" and "private AI" coverage, tutorial subsection | Not started |
-| `/projects/peaq/` | peaq review | **5,000** | Add H2 "peaq Review", emphasise DePIN positioning, add comparison table | Not started |
-| `/why-deai/the-case-for-sovereign-ai/` | sovereign ai, what is sovereign ai | **5,000**+500 | **Major expansion** — add definition box, FAQ schema, expand "What is Sovereign AI" section. Highest CPC ($3-$11) = strong commercial intent. Not just schema — this is the #1 SEO opportunity. | Title DONE, expansion not started |
+| `/projects/venice/` | venice ai review | **5,000** | Add H2 "Venice AI Review 2026", optimise for primary query | **DONE** (6ec58e4) |
+| `/projects/venice/` | venice ai uncensored, venice ai private ai | 500+50 | Add "uncensored" and "private AI" coverage, tutorial subsection | **DONE** (6ec58e4) |
+| `/projects/peaq/` | peaq review | **5,000** | Add H2 "peaq Review", emphasise DePIN positioning, add comparison table | **DONE** (6ec58e4) |
+| `/why-deai/the-case-for-sovereign-ai/` | sovereign ai, what is sovereign ai | **5,000**+500 | **Major expansion** — definition box, FAQ schema, comparison table, cost section, FAQ | **DONE** (6ec58e4) |
 | `/projects/bittensor/` | bittensor halving | 500 | Add halving section with TAO holder impact | Not started |
-| `/why-deai/what-counts-as-decentralised-ai/` | what is deai | 500 | Add FAQ schema, "DeAI Definition" section | Title DONE, schema not started |
-| `/projects/flux/` | flux review | 500 | Optimise title tag, add H2 "Flux Review", GPU mining tutorial section | Not started |
-| `/projects/morpheus/` | morpheus review | 500 | Add H2 "Morpheus Review", expand staking tutorial, "How does Morpheus work" section | Not started |
+| `/why-deai/what-counts-as-decentralised-ai/` | what is deai | 500 | Add FAQ schema, "DeAI Definition" section | **DONE** (6ec58e4) |
+| `/projects/flux/` | flux review | 500 | Optimise title tag, add H2 "Flux Review", GPU mining tutorial section | **DONE** (6ec58e4) |
+| `/projects/morpheus/` | morpheus review | 500 | Add H2 "Morpheus Review", expand staking tutorial, "How does Morpheus work" section | **DONE** (6ec58e4) |
 
 ### Long-tail (50 monthly searches)
 
@@ -221,8 +222,8 @@ Pages that already exist but need keyword-targeted content additions. No new URL
 | `/projects/io-net/` | io net earnings | Add earnings calculator table, GPU requirements | Not started |
 | `/projects/render/` | render network review | Optimise for "Render Network Review" query | Not started |
 | `/projects/golem/` | golem network review | Optimise H1 to include "Network" | Not started |
-| `/projects/grass/` | grass tokenomics | Add tokenomics section to existing review | Not started |
-| `/projects/flux/` | flux gpu mining | Add GPU mining tutorial section | Not started |
+| `/projects/grass/` | grass tokenomics | Add tokenomics section to existing review | **DONE** (6ec58e4, title updated) |
+| `/projects/flux/` | flux gpu mining | Add GPU mining tutorial section | **DONE** (6ec58e4) |
 
 ### Resources — New Pages
 
@@ -297,17 +298,17 @@ Voice clone (Rob/Bobski) + Rachel McGrath co-host on ElevenLabs. Turn-by-turn ge
 
 No fixed dates — quality over cadence. Priorities informed by A0 keyword research (March 2026).
 
-### Phase 1 — SEO quick wins (existing pages, no new URLs)
+### Phase 1 — SEO quick wins (existing pages, no new URLs) — DONE
 
-These are the highest-value, lowest-effort actions. Optimise pages that already exist for queries with proven volume.
+Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 
-1. **Sovereign AI page expansion** — 5,000 searches, $3-$11 CPC, #1 opportunity. Major expansion, not just FAQ schema.
-2. **Venice review optimisation** — H2 "Venice AI Review 2026" (5,000 searches) + "uncensored"/"private AI" keywords (500 searches)
-3. **peaq review optimisation** — H2 "peaq Review" (5,000 searches), DePIN positioning
-4. **Flux review optimisation** — title tag + GPU mining section (500 searches)
-5. **Morpheus review expansion** — "How does Morpheus work" section + staking tutorial (500 searches)
-6. **FAQ schemas** — sovereign ai, what is deai pages
-7. **Minor H1/title tweaks** — Golem ("Network"), Render ("Network Review"), Grass (tokenomics section)
+1. ~~**Sovereign AI page expansion**~~ — **DONE**. Expanded from 937 to ~2,400 words. Definition box, FAQ schema, comparison table, cost section.
+2. ~~**Venice review optimisation**~~ — **DONE**. H2 "Venice AI Review 2026", uncensored/private AI coverage.
+3. ~~**peaq review optimisation**~~ — **DONE**. H2 "peaq Review", DePIN positioning.
+4. ~~**Flux review optimisation**~~ — **DONE**. Title tag + GPU mining section.
+5. ~~**Morpheus review expansion**~~ — **DONE**. "How does Morpheus work" section + staking tutorial.
+6. ~~**FAQ schemas**~~ — **DONE**. JSON-LD FAQPage on sovereign AI and "what is DeAI" pages.
+7. ~~**Minor H1/title tweaks**~~ — **DONE**. Grass title updated. Remaining: Golem ("Network"), Render ("Network Review").
 
 ### Phase 2 — Event-timed content
 
