@@ -50,9 +50,9 @@ API_URL="https://api.elevenlabs.io/v1/text-to-speech"
 MODEL="eleven_multilingual_v2"
 FORMAT="mp3_44100_128"
 
-# Generate a 0.7-second silence file for pauses between speakers
+# Generate a 0.4-second silence file for tighter conversational pauses
 if [ ! -f "$PAUSE_FILE" ]; then
-  ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t 0.7 -q:a 9 "$PAUSE_FILE" -y 2>/dev/null
+  ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t 0.4 -q:a 9 "$PAUSE_FILE" -y 2>/dev/null
 fi
 
 generate_clip() {
@@ -219,9 +219,31 @@ FINAL_FILE="$OUTPUT_DIR/Own-Your-Mind-${EP_NUM}-${PROJECT_LABEL}.mp3"
 echo "Concatenating $(grep -c 'file' "$CONCAT_FILE_ABS") segments..."
 ffmpeg -f concat -safe 0 -i "$CONCAT_FILE_ABS" -c copy "$FINAL_RAW" -y 2>/dev/null
 
-# Normalise volume levels across all clips (fixes Rachel volume variation)
-echo "Normalising audio levels..."
-ffmpeg -i "$FINAL_RAW" -af loudnorm=I=-16:TP=-1.5:LRA=11 -ar 44100 -ab 128k "$FINAL_FILE" -y 2>/dev/null
+# Post-processing: shared room sound, EQ, normalisation
+# 1. Room tone: subtle pink noise at -45dB underneath both voices (shared acoustic space)
+# 2. Room reverb: gentle early reflections via aecho (small room feel)
+# 3. EQ: high-pass at 80Hz (remove rumble), gentle low-shelf cut, presence boost 2-4kHz
+# 4. Loudnorm: consistent levels across both voices
+FINAL_PROCESSED="$OUTPUT_DIR/processed.mp3"
+
+echo "Applying shared room tone, reverb, and EQ..."
+ffmpeg -i "$FINAL_RAW" \
+  -f lavfi -i "anoisesrc=d=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$FINAL_RAW"):c=pink:r=44100:a=0.003" \
+  -filter_complex "
+    [0:a]highpass=f=80,lowshelf=f=200:g=-2,equalizer=f=3000:t=q:w=1.5:g=2[voice];
+    [voice]aecho=0.8:0.7:15|25:0.15|0.1[reverbed];
+    [1:a]volume=-45dB[roomtone];
+    [reverbed][roomtone]amix=inputs=2:duration=first:weights=1 0.3[mixed];
+    [mixed]loudnorm=I=-16:TP=-1.5:LRA=11[out]
+  " \
+  -map "[out]" -ar 44100 -ab 128k "$FINAL_PROCESSED" -y 2>/dev/null
+
+if [ -f "$FINAL_PROCESSED" ] && [ "$(wc -c < "$FINAL_PROCESSED")" -gt 1000 ]; then
+  mv "$FINAL_PROCESSED" "$FINAL_FILE"
+else
+  echo "  Post-processing failed, falling back to normalisation only..."
+  ffmpeg -i "$FINAL_RAW" -af loudnorm=I=-16:TP=-1.5:LRA=11 -ar 44100 -ab 128k "$FINAL_FILE" -y 2>/dev/null
+fi
 rm -f "$FINAL_RAW"
 
 if [ -f "$FINAL_FILE" ]; then
