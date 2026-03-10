@@ -2,7 +2,7 @@
 title: "Bittensor Subnet Economics: How dTAO Actually Works"
 description: "Dynamic TAO replaced political voting with market-driven emissions. Alpha tokens, AMM pools, flow-based allocation, and what subnet economics mean for TAO holders and operators."
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## The old system was political
@@ -13,7 +13,7 @@ Dynamic TAO (dTAO) replaced this with markets. Each subnet now has its own token
 
 Then in November 2025, the emission model changed again. The original price-based allocation was being gamed. Projects would inflate their alpha token price using TAO treasuries, collect outsized emissions during the slow price decline, and repeat. The replacement is flow-based: emissions track net capital movement into each subnet, smoothed over an 87-day window. Gaming a flow signal is harder than gaming a price.
 
-Two fundamental changes in under a year. If you are holding TAO or considering subnet participation, the mechanics matter.
+I do not hold TAO. Two fundamental changes in under a year. If you are holding TAO or considering subnet participation, the mechanics matter.
 
 ## Alpha tokens
 

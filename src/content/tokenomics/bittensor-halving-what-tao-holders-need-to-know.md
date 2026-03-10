@@ -1,19 +1,19 @@
 ---
 title: "Bittensor Halving: What TAO Holders Need to Know"
-description: "Bittensor's first halving happened in December 2025. Three months in — what changed for TAO holders, how dTAO interacts with reduced emissions, and whether the Bitcoin playbook applies."
+description: "Bittensor's first halving happened in December 2025. Three months in -- what changed for TAO holders, how dTAO interacts with reduced emissions, and whether the Bitcoin playbook applies."
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## The halving already happened
 
-If you are reading this expecting a countdown to a future event, you missed it. Bittensor's first halving triggered on approximately 14 December 2025, when total TAO issuance crossed 10,500,000 — exactly half of the 21 million cap.
+If you are reading this expecting a countdown to a future event, you missed it. Bittensor's first halving triggered on approximately 14 December 2025, when total TAO issuance crossed 10,500,000 -- exactly half of the 21 million cap.
 
 Unlike Bitcoin's block-height triggers, Bittensor halves based on cumulative supply. TAO spent on subnet registration gets recycled back into the unissued pool, which means the halving date shifted by days as registration activity fluctuated. The actual trigger came around 3:30 AM London time on 14 December.
 
 Daily emissions dropped from ~7,200 TAO to ~3,600 TAO. Annualised inflation fell from roughly 10% to approximately 5%. The second halving is estimated for December 2029 by taostats.io, though the recycling mechanism makes precise forecasting impossible.
 
-I do not hold TAO. I explored mining and found the barrier to entry on established subnets too high for my hardware. But the halving is the single most significant tokenomics event in Bittensor's history, and its interaction with dTAO makes this unlike anything that has happened in crypto before.
+I do not hold TAO. I explored mining and found the barrier to entry on established subnets too high for my hardware. But the halving is the single most significant tokenomics event in Bittensor's history, and its interaction with dTAO makes this unlike anything that has happened in crypto before. For background on the network itself, see our [Bittensor review](/projects/bittensor/). For how dTAO works mechanically, see our [dTAO subnet economics piece](/tokenomics/bittensor-dtao-subnet-economics/).
 
 ## What actually changed
 
@@ -94,23 +94,23 @@ Bitcoin's halving history suggests the real price impact comes 12-18 months afte
 | Bitcoin 4th | Apr 2024 | ~$64,000 | +25-40% | Weakest cycle |
 | **TAO 1st** | **Dec 2025** | **~$285** | **-33% at 3 months** | **TBD** |
 
-If TAO follows the historical Bitcoin pattern, the supply shock would materialise between Q4 2026 and mid-2027. The three-month decline is not inconsistent with this thesis — Bitcoin also declined in the weeks following its halvings before the supply reduction worked its way through the market.
+If TAO follows the historical Bitcoin pattern, the supply shock would materialise between Q4 2026 and mid-2027. The three-month decline is not inconsistent with this thesis -- Bitcoin also declined in the weeks following its halvings before the supply reduction worked its way through the market.
 
 But the comparison has real limits. Bitcoin is a monetary asset. TAO is infrastructure for AI workloads. Bitcoin's halving reduces supply of a fixed-function asset. TAO's halving reduces emissions in a dynamic system where subnets compete for allocation and alpha tokens create additional complexity.
 
 Bitcoin's diminishing returns per cycle are also worth noting: 8,858% to 294% to 541% to less than 50%. Each halving matters less as the absolute supply reduction shrinks. TAO's first halving is its most impactful by definition.
 
-The more relevant question is whether the halving catalyses fundamental improvements — specifically, whether reduced emissions force subnets to develop real revenue models rather than surviving on emission subsidies alone.
+The more relevant question is whether the halving catalyses fundamental improvements -- specifically, whether reduced emissions force subnets to develop real revenue models rather than surviving on emission subsidies alone.
 
 ## What I am watching
 
 Five things that will determine whether the halving matters for TAO holders over the next 12 months:
 
-**1. Subnet revenue development.** Bittensor generates zero external revenue. The entire economic model runs on emissions. If the halving forces subnets to charge for inference, compute or data services — creating actual revenue that supplements emissions — it will be the most bullish possible outcome. Chutes and Gradients both claim usage metrics that could support fee revenue. Whether they implement it is the question.
+**1. Subnet revenue development.** Bittensor generates zero external revenue. The entire economic model runs on emissions. If the halving forces subnets to charge for inference, compute or data services -- creating actual revenue that supplements emissions -- it will be the most bullish possible outcome. Chutes and Gradients both claim usage metrics that could support fee revenue. Whether they implement it is the question.
 
 **2. Alpha staking migration.** If the Root-to-alpha ratio shifts from 72/28 toward 50/50 or beyond, it signals that the dTAO thesis is working and holders are actively curating subnet quality. If it stays at 72/28, dTAO is a governance upgrade but not the economic transformation it was designed to be.
 
-**3. Subnet attrition rate.** How many of the current 129 subnets survive the next six months at half emissions? If 30-40% deregister, that is healthy — the network is concentrating resources in productive subnets. If 70%+ survive but with negligible activity, the zombie problem persists.
+**3. Subnet attrition rate.** How many of the current 129 subnets survive the next six months at half emissions? If 30-40% deregister, that is healthy -- the network is concentrating resources in productive subnets. If 70%+ survive but with negligible activity, the zombie problem persists.
 
 **4. Institutional catalysts.** The Grayscale spot ETF filing is the most significant institutional signal. If approved, it creates a regulated, passive exposure vehicle for TAO. The January price spike on the filing announcement shows the market cares about this.
 
@@ -118,12 +118,12 @@ Five things that will determine whether the halving matters for TAO holders over
 
 ## The honest assessment
 
-The Bittensor halving is real, verifiable, and permanent. Daily emissions are half of what they were. The supply dynamics are the cleanest in the DeAI space — 21 million cap, no pre-mine, no VC allocation, algorithmic scarcity.
+The Bittensor halving is real, verifiable, and permanent. Daily emissions are half of what they were. The supply dynamics are the cleanest in the DeAI space -- 21 million cap, no pre-mine, no VC allocation, algorithmic scarcity.
 
-But supply reduction alone does not create value. Bitcoin halvings work because Bitcoin has persistent, growing demand from a global store-of-value narrative. TAO needs persistent, growing demand from AI workloads flowing through subnets. That demand exists — Chutes processes billions of tokens daily — but it does not generate protocol revenue. The network's entire economic model is still a closed loop funded by inflation.
+But supply reduction alone does not create value. Bitcoin halvings work because Bitcoin has persistent, growing demand from a global store-of-value narrative. TAO needs persistent, growing demand from AI workloads flowing through subnets. That demand exists -- Chutes processes billions of tokens daily -- but it does not generate protocol revenue. The network's entire economic model is still a closed loop funded by inflation.
 
 The dTAO interaction makes this halving more interesting than a simple supply squeeze. Reduced emissions are forcing natural selection among subnets, concentrating capital in productive ones and starving the rest. If this Darwinian pressure produces a smaller number of genuinely revenue-generating subnets, the halving will have been transformative.
 
 If it just means the same emission-dependent model runs at half speed, it is a non-event dressed up in Bitcoin's scarcity narrative.
 
-Three months in, the price says sell-the-news. The fundamentals say check back in twelve months. I think the fundamentals are more likely to be right, but I am watching, not buying — the revenue gap keeps me on the sideline until subnets demonstrate they can earn rather than just receive.
+Three months in, the price says sell-the-news. The fundamentals say check back in twelve months. I think the fundamentals are more likely to be right, but I am watching, not buying -- the revenue gap keeps me on the sideline until subnets demonstrate they can earn rather than just receive.
