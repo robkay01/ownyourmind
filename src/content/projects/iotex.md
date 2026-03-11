@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "10,000,000,000 IOTX"
 verdict: "The most technically differentiated DePIN chain with genuine innovations in device identity and ZK verification. Six years of building with $2.58M TVL to show for it."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-028-Iotex.mp3"
 ---
 
 ## What it does

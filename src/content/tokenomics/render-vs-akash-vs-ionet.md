@@ -3,6 +3,7 @@ title: "RENDER vs AKT vs IO: The Revenue Question"
 description: "Three decentralised compute networks, three different revenue models. What Render gets right on returns, what Akash gets right on freedom, and why the trade-off matters."
 publishDate: 2026-03-07
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsRenderVsAkashVsIonet.mp3"
 ---
 
 ## Why revenue is the question that matters

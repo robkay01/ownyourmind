@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "Unlimited (inflationary PoS)"
 verdict: "A month-old token from Qredo/Binance alumni building an AI agent L1. 60 million agent runs is impressive activity. But inflated user numbers, proprietary core modules, 42% insider allocation, and a 93% price crash demand caution."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-032-Warden.mp3"
 ---
 
 ## What it does

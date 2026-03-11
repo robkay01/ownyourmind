@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "11B ELIZAOS"
 verdict: "A genuinely well-built open-source AI agent framework bolted onto a speculative token economy with no clear value accrual. The framework deserves respect; the token demands scepticism. 99.7% price decline, no governance voting, 40% dilutive supply expansion, and an unpatched memory injection vulnerability."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-015-Elizaos.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "560,000,000 FLUX"
 verdict: "One of crypto's fairest launches with genuine infrastructure across 67 countries. Six years and ~100 deployed applications. The sovereignty credentials are excellent; the commercial traction is not."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-005-Flux.mp3"
 ---
 
 ## What it does

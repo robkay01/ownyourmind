@@ -9,6 +9,7 @@ const whyDeai = defineCollection({
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     draft: z.boolean().default(false),
+    podcastUrl: z.string().optional(),
   }),
 });
 
@@ -58,6 +59,7 @@ const tokenomics = defineCollection({
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     draft: z.boolean().default(false),
+    podcastUrl: z.string().optional(),
   }),
 });
 

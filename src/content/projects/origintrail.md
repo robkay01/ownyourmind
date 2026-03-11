@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "500,000,000 TRAC"
 verdict: "The quiet achiever of DeAI. Best tokenomics, real enterprise adoption, unique category. Eight years of building with unquantified revenue."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-024-Origintrail.mp3"
 ---
 
 ## What it does

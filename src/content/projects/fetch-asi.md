@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "2.71B FET"
 verdict: "Real agent framework and open-source foundation, but the merger has been messy, usage metrics are opaque, and core products are centrally operated."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-009-FetchAsi.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1B VIRTUAL"
 verdict: "The dominant AI agent launchpad with real revenue and ecosystem scale, but centralised inference infrastructure, pump-and-dump agent token dynamics, and a 97% revenue collapse from peak show a platform that is closer to pump.fun with AI branding than a decentralised agent protocol."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-016-Virtuals.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 PHA"
 verdict: "Genuine confidential computing tech with enterprise compliance credentials. The privacy works. The decentralisation does not – yet."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-018-Phala.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 ALLO"
 verdict: "Genuine technical innovation with novel inference synthesis and tier-1 exchange listings from day one. Unproven revenue model and a massive vesting cliff in November 2026 that could nearly double circulating supply."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-025-Allora.mp3"
 ---
 
 ## What it does

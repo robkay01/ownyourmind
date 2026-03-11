@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "644M (536.9M original + 107.4M BME inflation pool, governance-approved)"
 verdict: "Real rendering demand with Hollywood customers. But permissioned network, proprietary core, and OTOY controls everything."
 oymHolds: true
+podcastUrl: "/podcast/Own-Your-Mind-008-Render.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "120M VANA"
 verdict: "The most technically complete data sovereignty protocol in crypto, with genuine user adoption and strong backing. But permissioned validators, Foundation-controlled treasury, and a 95% price decline tell you the market is not yet convinced that 'own your data' translates to token value."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-022-Vana.mp3"
 ---
 
 ## What it does

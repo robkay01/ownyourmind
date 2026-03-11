@@ -3,6 +3,7 @@ title: "ASI Alliance: What the Merged Tokenomics Actually Mean"
 description: "Fetch.ai, SingularityNET and CUDOS merged into the ASI Alliance. What holders of each token got, what the merged economics look like, and why Ocean's exit changes the thesis."
 publishDate: 2026-03-10
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAsiAlliance.mp3"
 ---
 
 ## What happened

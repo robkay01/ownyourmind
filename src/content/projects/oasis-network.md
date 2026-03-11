@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "10,000,000,000 ROSE"
 verdict: "The technology works. The market doesn't care yet. Five years of confidential computing excellence with $288K TVL to show for it."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-019-Oasis.mp3"
 ---
 
 ## What it does

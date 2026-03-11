@@ -1,5 +1,6 @@
 ---
 import ContentLayout from './ContentLayout.astro';
+import PodcastPlayer from '../components/PodcastPlayer.astro';
 
 interface Props {
   title: string;
@@ -9,9 +10,10 @@ interface Props {
   section: string;
   sectionHref: string;
   heroImage?: string;
+  podcastUrl?: string;
 }
 
-const { title, description, publishDate, updatedDate, section, sectionHref, heroImage } = Astro.props;
+const { title, description, publishDate, updatedDate, section, sectionHref, heroImage, podcastUrl } = Astro.props;
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -39,6 +41,8 @@ const formatDate = (date: Date) =>
         <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-secondary)] via-transparent to-transparent" />
       </div>
     )}
+    {podcastUrl && <PodcastPlayer url={podcastUrl} title={title} />}
+
     <header class="mb-10">
       <div class="flex items-center gap-3 text-sm text-[var(--color-text-tertiary)] mb-4">
         <time datetime={publishDate.toISOString()}>

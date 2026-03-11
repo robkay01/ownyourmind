@@ -3,6 +3,7 @@ title: "Bittensor Subnet Economics: How dTAO Actually Works"
 description: "Dynamic TAO replaced political voting with market-driven emissions. Alpha tokens, AMM pools, flow-based allocation, and what subnet economics mean for TAO holders and operators."
 publishDate: 2026-03-10
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsDtaoSubnet.mp3"
 ---
 
 ## The old system was political

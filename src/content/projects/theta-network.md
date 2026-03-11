@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 THETA"
 verdict: "Enterprise-backed infrastructure with Google, Samsung, and Sony as validators. Impressive partnerships but THETA's value accrual problem is fundamental – all fees flow to TFUEL, not THETA."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-021-Theta.mp3"
 ---
 
 ## What it does

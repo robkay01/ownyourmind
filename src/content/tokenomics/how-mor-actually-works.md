@@ -4,6 +4,7 @@ description: "A capital provider's breakdown of Morpheus token economics. Emissi
 publishDate: 2025-03-01
 updatedDate: 2026-03-07
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsHowMorWorks.mp3"
 ---
 
 ## The basics

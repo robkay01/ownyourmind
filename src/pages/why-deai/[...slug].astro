@@ -51,6 +51,7 @@ const faqData = faqs ? {
   section="Why DeAI"
   sectionHref="/why-deai/"
   heroImage={`/images/why-deai-${entry.id}.webp`}
+  podcastUrl={entry.data.podcastUrl}
 >
   {faqData && <script type="application/ld+json" set:html={JSON.stringify(faqData)} />}
   <Content />

@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "100M genesis (no hard cap, inflationary via emissions minus burns)"
 verdict: "Best privacy-focused inference platform available. Centralised company but aligned incentives."
 oymHolds: true
+podcastUrl: "/podcast/Own-Your-Mind-004-Venice.mp3"
 ---
 
 ## What it does

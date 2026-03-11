@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "No max supply (governance-controlled inflation ~1%/year)"
 verdict: "The right thesis – AI needs privacy-preserving computation – attached to a pre-revenue network. World-class team, genuine technology, zero commercial validation."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-023-Nillion.mp3"
 ---
 
 ## What it does

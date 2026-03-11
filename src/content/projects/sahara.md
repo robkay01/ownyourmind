@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "10B SAHARA"
 verdict: "Strong academic credentials, real data labelling traction, and top-tier VC backing. But the core blockchain is not operational, every decentralisation feature is aspirational, and the token contract includes a pause function. A well-funded centralised AI platform with blockchain aspirations, not a decentralised network."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-034-Sahara.mp3"
 ---
 
 ## What it does

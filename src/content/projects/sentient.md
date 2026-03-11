@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "34,359,738,368 SENT (2^35)"
 verdict: "The biggest VC bet in crypto-AI – $85M seed from Founders Fund and Pantera, OML is a genuine innovation. But GRID mainnet is not live, there is zero revenue, and November 2026 VC unlock looms."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-031-Sentient.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "10B AI"
 verdict: "Genuine ML research and strong open-source credentials, but pre-mainnet, pre-token, fully team-controlled governance, and 54.6% insider allocation. A credible research bet, not a working infrastructure play."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-014-Gensyn.mp3"
 ---
 
 ## What it does

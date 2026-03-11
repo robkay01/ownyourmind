@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "333,333,333 ORA"
 verdict: "Genuine technical innovation in verifiable AI inference with ERC standards contributions. But the token is down 99.85%, effectively illiquid, and 83% of supply is locked with undisclosed allocation."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-030-Ora.mp3"
 ---
 
 ## What it does

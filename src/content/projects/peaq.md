@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "No max supply (3.5% inflation, decreasing 10%/year to 1%)"
 verdict: "A well-engineered Machine Economy L1 with 60+ DePINs and enterprise partnerships, but $163.6K annualised revenue tells you the market is not paying for it yet."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-007-Peaq.mp3"
 ---
 
 ## What it does

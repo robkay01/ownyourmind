@@ -27,6 +27,7 @@ supplyType: "uncapped"
 maxSupply: "No max supply (inflationary with 70% fee burn)"
 verdict: "The strongest AI credentials of any L1 founder, a proven sharded chain running since 2020, and real cross-chain traction via Intents. But the AI pivot is weeks old, the TVL is thin relative to market cap, major backers collapsed, and the token is 93% below ATH. A technically excellent chain whose AI ambitions must now be backed by execution, not narrative."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-020-Near.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "800M IO"
 verdict: "Real revenue and growing compute delivery, but closed-source core, no governance, founder scandal, and inflated GPU metrics. A centralised GPU marketplace with a token, not a decentralised protocol."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-010-Ionet.mp3"
 ---
 
 ## What it does

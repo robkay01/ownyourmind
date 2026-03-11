@@ -3,6 +3,7 @@ title: "Bittensor Halving: What TAO Holders Need to Know"
 description: "Bittensor's first halving happened in December 2025. Three months in -- what changed for TAO holders, how dTAO interacts with reduced emissions, and whether the Bitcoin playbook applies."
 publishDate: 2026-03-10
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsBittensorHalving.mp3"
 ---
 
 ## The halving already happened

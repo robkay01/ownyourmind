@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 FLOCK"
 verdict: "NeurIPS-awarded federated learning meets blockchain. Real protocol revenue ($2.7M) from a small number of tasks. The academic credentials are genuine; the question is whether 16 training tasks in 10 months becomes 1,600."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-027-Flock.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1.41B OCEAN (effective ~267.8M after ASI conversion)"
 verdict: "The technology substantially outperforms the tokenomics and governance situation. Compute-to-Data remains one of the most elegant solutions to the data privacy problem in Web3, but a token without stated utility, a fragmented community after 81% supply conversion, dismantled governance, and active litigation over $120M make this a project to watch technically and avoid as a token investment."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-017-Ocean.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 COOKIE"
 verdict: "A legitimate AI agent analytics product with real users and first-mover advantage. But the 'DAO' label is marketing – zero open source code, no verifiable governance, fully centralised infrastructure."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-026-CookieDao.mp3"
 ---
 
 ## What it does

@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1B OLAS (10-year cap)"
 verdict: "Genuine on-chain agent usage and strong open-source credentials, but the economics are not working. $89K marketplace turnover, 99.6% token decline, and 42.65% insider allocation with no enforced vesting. A technically credible protocol that has not yet solved its tokenomics."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-033-Autonolas.mp3"
 ---
 
 ## What it does

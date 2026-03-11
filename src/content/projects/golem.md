@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1,000,000,000 GLM"
 verdict: "The OG decentralised compute network with one of crypto's fairest token distributions. Ten years of building with zero protocol revenue and a token that captures no value from usage."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-011-Golem.mp3"
 ---
 
 ## What it does

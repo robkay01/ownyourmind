@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "100,000,000 NOS"
 verdict: "Working inference marketplace with real deployments and Render integration. Zero revenue visibility and thin liquidity make it a conviction bet on the inference thesis."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-013-Nosana.mp3"
 ---
 
 ## What it does

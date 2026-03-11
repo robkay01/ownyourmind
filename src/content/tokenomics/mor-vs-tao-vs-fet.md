@@ -4,6 +4,7 @@ description: "Three different approaches to tokenising decentralised AI. How MOR
 publishDate: 2025-03-02
 updatedDate: 2026-03-07
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsMorVsTaoVsFet.mp3"
 ---
 
 ## Why this comparison matters

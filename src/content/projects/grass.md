@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "1B GRASS"
 verdict: "Impressive scale and real enterprise traction, but this is a centralised data business with a token incentive layer. Code is entirely closed-source, governance exists only in documentation, users contribute bandwidth without any sovereignty over the data produced, and all revenue flows through an opaque Foundation. The widest airdrop in Solana history does not make a network decentralised."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-006-Grass.mp3"
 ---
 
 ## What it does

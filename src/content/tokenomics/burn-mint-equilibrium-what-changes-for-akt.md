@@ -3,6 +3,7 @@ title: "Burn-Mint Equilibrium: What Actually Changes for AKT Holders"
 description: "Akash's BME upgrade goes live March 23rd. How the burn-mint mechanism works, what it means for stakers and providers, and how it compares to Render's approach."
 publishDate: 2026-03-08
 draft: false
+podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAktBme.mp3"
 ---
 
 ## What is happening

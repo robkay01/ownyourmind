@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "42,000,000,000 ATH"
 verdict: "The best revenue story in DeAI, attached to the worst decentralisation credentials. A profitable enterprise GPU business with a token."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-012-Aethir.mp3"
 ---
 
 ## What it does

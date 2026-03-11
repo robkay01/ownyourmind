@@ -22,6 +22,7 @@ const { Content } = await render(entry);
   section="Tokenomics"
   sectionHref="/tokenomics/"
   heroImage={`/images/tokenomics-${entry.id}.webp`}
+  podcastUrl={entry.data.podcastUrl}
 >
   <Content />
 </ArticleLayout>

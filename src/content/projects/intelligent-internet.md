@@ -27,6 +27,7 @@ supplyType: "capped"
 maxSupply: "21M Foundation Coins (planned, not yet launched)"
 verdict: "Strong open-source AI output (9 models, 20 datasets on HuggingFace) and real agent tooling, but no chain, no token, and execution depends on a controversial founder. Watch closely."
 oymHolds: false
+podcastUrl: "/podcast/Own-Your-Mind-029-IntelligentInternet.mp3"
 ---
 
 ## What it does
