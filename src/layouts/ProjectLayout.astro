@@ -239,6 +239,46 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
   : donutSegments.length > 0
     ? `${((donutSegments[0].value / donutSegments.reduce((s, d) => s + d.value, 0)) * 100).toFixed(0)}%`
     : undefined;
+
+// Review schema for AI search engines
+const reviewLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  name: `${title} Review — Freedom & Returns Analysis`,
+  description: verdict || description,
+  datePublished: publishDate.toISOString(),
+  ...(updatedDate ? { dateModified: updatedDate.toISOString() } : {}),
+  author: {
+    '@type': 'Person',
+    name: 'Bobski',
+    url: new URL('/about/', Astro.site).href,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Own Your Mind',
+    url: Astro.site?.href,
+  },
+  itemReviewed: {
+    '@type': 'SoftwareApplication',
+    name: title,
+    applicationCategory: 'Decentralised AI',
+    ...(token ? { additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Token', value: token },
+      { '@type': 'PropertyValue', name: 'Category', value: category },
+      { '@type': 'PropertyValue', name: 'Status', value: status },
+      { '@type': 'PropertyValue', name: 'Freedom Score', value: `${freedomScore * 10}/100` },
+      ...(returnsScore != null ? [{ '@type': 'PropertyValue', name: 'Returns Score', value: `${Math.round(returnsScore * 10)}/100` }] : []),
+    ]} : {}),
+  },
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: freedomScore,
+    bestRating: 10,
+    worstRating: 0,
+    ratingExplanation: `Freedom Score: ${freedomScore}/10${returnsScore != null ? `. Returns Score: ${returnsScore}/10` : ''}`,
+  },
+  ...(verdict ? { positiveNotes: { '@type': 'ItemList', itemListElement: [{ '@type': 'ListItem', position: 1, name: verdict }] } } : {}),
+});
 ---
 
 <ContentLayout
@@ -250,6 +290,7 @@ const donutCenterLabel = r?.tokenomics?.supply?.circulating_percentage != null
     { label: title },
   ]}
 >
+  <script type="application/ld+json" set:html={reviewLd} />
   <div class="lg:flex lg:gap-8">
   <article class="max-w-4xl min-w-0 flex-1" data-toc-content>
     <header class="mb-10 relative">

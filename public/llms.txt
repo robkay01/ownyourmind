@@ -1,0 +1,49 @@
+# Own Your Mind
+> Independent, practitioner-led research into decentralised AI. Freedom AND returns. Sovereignty-first.
+
+## About
+- Site: https://ownyourmind.ai
+- Author: Bobski — construction PM turned DeAI practitioner, based in Western Australia
+- About: https://ownyourmind.ai/about/
+- RSS: https://ownyourmind.ai/rss.xml
+- Contact: newsletter signup at https://ownyourmind.ai/newsletter/
+
+## What We Cover
+Decentralised AI (DeAI) projects scored on two independent axes:
+- **Freedom Score** (0-100): How decentralised is the infrastructure, governance, token distribution, censorship resistance, data sovereignty, and open-source transparency?
+- **Returns Score** (0-100): How well does the token capture value through utility, accrual, supply dynamics, revenue sustainability, and liquidity?
+
+## Content Sections
+
+### Project Reviews (34 projects)
+In-depth reviews using a 6-point framework: what it does, value proposition, tokenomics, how to participate, honest assessment, and dual scoring.
+- https://ownyourmind.ai/projects/
+- Projects: Aethir (ATH), Akash (AKT), Allora (ALLO), Autonolas (OLAS), Bittensor (TAO), Cookie DAO (COOKIE), ElizaOS (ELIZAOS), Fetch.ai/ASI Alliance (FET), FLock (FLOCK), Flux (FLUX), Gensyn (AI), Golem (GLM), Grass (GRASS), Intelligent Internet (FC), io.net (IO), IoTeX (IOTX), Morpheus (MOR), NEAR Protocol (NEAR), Nillion (NIL), Nosana (NOS), Oasis Network (ROSE), Ocean Protocol (OCEAN), Ora Protocol (ORA), OriginTrail (TRAC), peaq (PEAQ), Phala Network (PHA), Render Network (RENDER), Sahara AI (SAHARA), Sentient (SENT), Theta Network (THETA), Vana (VANA), Venice (VVV), Virtuals Protocol (VIRTUAL), Warden Protocol (WARD)
+
+### Why DeAI (Thesis Essays)
+Evergreen essays on why decentralised AI matters.
+- https://ownyourmind.ai/why-deai/
+- Topics: sovereign AI, centralised vs decentralised AI, privacy, the sovereignty stack, what counts as DeAI, how DeAI competes, why crypto and AI converge
+
+### Tokenomics Analysis
+Deep dives into token economics and comparative analysis.
+- https://ownyourmind.ai/tokenomics/
+- Topics: Bittensor DTAO subnet economics, Akash BME, Morpheus MOR tokenomics, MOR vs TAO vs FET comparison, ASI Alliance merger, Render vs Akash vs io.net, Bittensor halving
+
+### Build Guides
+Hands-on tutorials for participating in DeAI networks.
+- https://ownyourmind.ai/build/
+- Guides: Mac Studio DeAI setup, Render node earning, Grass earning, Aethir node setup, Flux node setup, Morpheus Lumerin node, Virtuals AI agent creation, ElizaOS AI agent, Agent Zero with Venice and Morpheus
+
+### Journal
+Practitioner notes and weekly updates.
+- https://ownyourmind.ai/journal/
+
+### Resources
+Reference material, directories, and tools.
+- https://ownyourmind.ai/resources/
+
+## Scoring Methodology
+- Freedom Score: 6 dimensions totalling 100 points (Infrastructure 0-20, Governance 0-20, Token Distribution 0-15, Censorship Resistance 0-15, Data Sovereignty 0-15, Open Source 0-15)
+- Returns Score: 5 dimensions totalling 100 points (Token Utility 0-20, Value Accrual 0-20, Supply Dynamics 0-20, Revenue Sustainability 0-25, Liquidity & Access 0-15)
+- Grade bands: A (80-100), B (60-79), C (40-59), D (20-39), F (0-19)
