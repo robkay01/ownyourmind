@@ -1,16 +1,16 @@
-# Episode 014 — Gensyn: Research Depth, Zero Revenue
+# Episode 014 — Gensyn: Research Depth, Token But No Market
 ## Turn-by-Turn Production Script
 
 ## TURN 01 — BOBSKI
 ```
 Welcome back to the Own Your Mind podcast. I'm Bobski, and today we're covering Gensyn -- a compute protocol built specifically for machine learning training. Not general compute, not inference -- ML training with cryptographic verification that the work was done correctly.
 
-Seven papers on arXiv. a16z led the Series A. Hundreds of thousands of testnet users. Millions of models trained. But no mainnet, no live token, no revenue, and a high FDV from the public sale. A middling Freedom Score and one of the lowest Returns Scores we have given. Let's talk about why.
+Seven papers on arXiv. a16z led the Series A. Hundreds of thousands of testnet users. Millions of models trained. The token launched in February 2026 -- it's on CoinGecko with a live listing. But no mainnet, no exchange trading, no revenue, and a high FDV from the public sale. A D grade Freedom Score and an F grade Returns Score. Let's talk about why.
 ```
 
 ## TURN 02 — RACHEL
 ```
-And I'm Rachel. Gensyn is the most research-credible project in DeAI with the least to show for it economically.
+And I'm Rachel. Gensyn is the most research-credible project in DeAI -- and one of the hardest to actually invest in. The token exists now, but you still cannot buy or sell it on any exchange.
 ```
 
 ## TURN 03 — BOBSKI
@@ -35,91 +35,91 @@ Seven papers on arXiv -- Verde, NoLoCo, CheckFree, SkipPipe, SAPO, and two more.
 
 ## TURN 07 — BOBSKI
 ```
-But the testnet trains small models.
+The token launched in February 2026. What changed?
 ```
 
 ## TURN 08 — RACHEL
 ```
-Correct. The RL Swarm trains 0.5 to 1.5 billion parameter Qwen variants. Useful for reinforcement learning research, but nowhere near the frontier-scale training -- 70 billion-plus parameters -- that would justify the "network for machine intelligence" branding. Scaling from testnet to production is an unproven leap. And competitors like Akash and io.net have production networks handling real workloads today.
+Token claims began in early 2026. The public sale closed in December 2025 via English auction on Sonar, clearing at a 473 million dollar FDV. Three hundred million tokens -- three per cent of total supply -- are now in circulation. It is listed on CoinGecko. But here is the catch: it is not trading on any exchange. No CEX listings, no DEX pairs. Token holders have their tokens. They just cannot sell them.
 ```
 
 ## TURN 09 — BOBSKI
 ```
-The Freedom Score is a D grade. Where does it land?
+So the token exists but there is no market.
 ```
 
 ## TURN 10 — RACHEL
 ```
-Open source transparency scores highly -- that's strong. MIT licence across core repos. Active community engagement on RL Swarm. Seven academic papers with full methodology. Models on HuggingFace. The research-to-product pipeline is genuinely transparent. Data sovereignty also scores well. CodeAssist trains models locally. RL Swarm publishes to user-owned HuggingFace accounts. Only proofs go on-chain, not raw data.
+Correct. And that distinction matters. Before, we scored liquidity and access at zero because there was literally no token. Now there is a token, so the score moved up slightly. But "token exists, cannot trade it" is only marginally better than "no token at all." The VC backing -- a16z, CoinFund, Protocol Labs, Galaxy -- suggests tier-1 exchange listings will come. But liquidity that does not exist yet cannot score highly regardless of how likely it is to materialise.
 ```
 
 ## TURN 11 — BOBSKI
 ```
-But governance?
+But the testnet still trains small models.
 ```
 
 ## TURN 12 — RACHEL
 ```
-Governance scores poorly. Fully centralised. Two directors -- Fielding and Grieve -- make all decisions. No DAO, no on-chain voting, no governance forum. They describe "progressive decentralisation" as a plan, not a feature. Token distribution fairness also scores poorly. Over half the supply goes to insiders -- investors plus team. The community's direct access is a small fraction. The community treasury sounds generous, but the Foundation controls it, and the Foundation is initially team-aligned.
+Correct. The RL Swarm trains 0.5 to 1.5 billion parameter Qwen variants. Useful for reinforcement learning research, but nowhere near the frontier-scale training -- 70 billion-plus parameters -- that would justify the "network for machine intelligence" branding. Scaling from testnet to production is an unproven leap. And competitors like Akash and io.net have production networks handling real workloads today.
 ```
 
 ## TURN 13 — BOBSKI
 ```
-The Returns Score is an F grade. That's one of the lowest we've scored.
+The Freedom Score is a D grade. Where does it land?
 ```
 
 ## TURN 14 — RACHEL
 ```
-Revenue sustainability scores near the bottom. Zero revenue in years of existence. The testnet has trained millions of models, but those are free workloads on a free network -- not paying customers. Liquidity and access scores zero because there is no tradeable token. You literally cannot buy or sell it today.
+Open source transparency scores highly -- that is strong. MIT licence across core repos. Active community engagement on RL Swarm. Seven academic papers with full methodology. Models on HuggingFace. The research-to-product pipeline is genuinely transparent. Data sovereignty also scores well. CodeAssist trains models locally. RL Swarm publishes to user-owned HuggingFace accounts. Only proofs go on-chain, not raw data.
 ```
 
 ## TURN 15 — BOBSKI
 ```
-The public sale priced it at a high FDV.
+But governance?
 ```
 
 ## TURN 16 — RACHEL
 ```
-Which prices perfection. No mainnet, no revenue, no live token -- at a valuation in the hundreds of millions. If mainnet slips or adoption is slow, the repricing will be painful. Token utility scores middling for design intent only. Compute payments, verification staking, prediction market stakes, governance voting, buy-and-burn from transaction fees -- reasonable on paper, but none of it exists yet.
+Governance scores poorly. Fully centralised. Two directors -- Fielding and Grieve -- make all decisions. No DAO, no on-chain voting, no governance forum. They describe "progressive decentralisation" as a plan, not a feature. Token distribution fairness also scores poorly. Over half the supply goes to insiders -- investors plus team. The community's direct access is five per cent. The community treasury sounds generous, but the Foundation controls it, and the Foundation is initially team-aligned.
 ```
 
 ## TURN 17 — BOBSKI
 ```
-No security audits either?
+The Returns Score is an F grade. Even with the token launch, that is one of the lowest we have scored.
 ```
 
 ## TURN 18 — RACHEL
 ```
-None published. 66.74 million in funding, 90 million testnet transactions, a public token sale -- and no published audit from a recognised firm. That's a straightforward gap they have the resources to close.
+Revenue sustainability scores near the bottom. Zero revenue in nearly six years of existence. The testnet has trained millions of models, but those are free workloads on a free network -- not paying customers. Token utility scores middling for design intent only. Compute payments, verification staking, prediction market stakes, governance voting, buy-and-burn from transaction fees -- reasonable on paper, but none of it is live because there is no mainnet. The token launch moved the needle slightly on liquidity but changed nothing about the underlying economics.
 ```
 
 ## TURN 19 — BOBSKI
 ```
-What's the honest take?
+No security audits either?
 ```
 
 ## TURN 20 — RACHEL
 ```
-The research is genuinely exceptional. Verde verification is a novel contribution. The team is credible and doxxed. The testnet engagement is meaningful. But "still on testnet" after six years of building and 66 million in funding eventually becomes a red flag, not patience. The competitive window is narrowing -- Akash has been live since 2020, Bit-tensor has 128 subnets. Gensyn's verification moat only matters if they ship mainnet before the market decides the problem is solved.
+None published. 66.74 million in funding, 90 million testnet transactions, a public token sale, tokens distributed to holders -- and no published audit from a recognised firm. That is a straightforward gap they have the resources to close.
 ```
 
 ## TURN 21 — BOBSKI
 ```
-The verdict?
+What is the honest take?
 ```
 
 ## TURN 22 — RACHEL
 ```
-A credible research bet, not a working infrastructure play. If the ML verification system works at production scale, the specialisation could be a genuine moat. If it doesn't, Gensyn is a well-funded research lab that spent six years solving a problem the market moved past. Running an RL Swarm node is interesting from a hands-on perspective. Economic exposure requires a high tolerance for uncertainty and a very long time horizon.
+The research is genuinely exceptional. Verde verification is a novel contribution. The team is credible and doxxed. The testnet engagement is meaningful. But "still on testnet" after nearly six years of building and 66 million in funding eventually becomes a red flag, not patience. The token launch was a step, but a token you cannot trade on any exchange is not the same as a liquid market. The competitive window is narrowing -- Akash has been live since 2020, Bittensor has over 100 subnets. Gensyn's verification moat only matters if they ship mainnet before the market decides the problem is solved.
 ```
 
 ## TURN 23 — BOBSKI
 ```
-That's Gensyn -- genuine research depth with no economic substance yet.
+That is Gensyn -- genuine research depth, a token that exists but no exchange to trade it on, and still no economic substance.
 
 For the full deep-dive with current scores and detailed breakdowns, check out ownyourmind.ai/projects/gensyn.
 
-Subscribe wherever you get your podcasts. Next up, ElizaOS -- the most popular open-source AI agent framework in web3. Great framework. Questionable token. That's going to be a fun one.
+Subscribe wherever you get your podcasts. Next up, ElizaOS -- the most popular open-source AI agent framework in web3. Great framework. Questionable token. That is going to be a fun one.
 
 This is the Own Your Mind podcast -- freedom AND returns, sovereignty-first, practitioner-led.
 ```
