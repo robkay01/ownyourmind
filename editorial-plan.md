@@ -117,6 +117,7 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 |---|---|---|---|
 | Ritual | (pre-token) | On-chain AI inference protocol. Verifiable AI for smart contracts. | Medium |
 | Hyperbolic | (pre-token) | Verifiable inference with proof systems. | Low |
+| GenLayer | (pre-token) | AI-powered blockchain for subjective dispute resolution. LLM validators reach consensus on non-deterministic decisions via "Intelligent Contracts" (Python). Novel concept, still on testnet (Bradbury). No token, no disclosed funding. Revisit post-mainnet. genlayer.com | Low |
 
 ### Does Not Meet Bar
 
@@ -267,7 +268,7 @@ Current backlog: `docs/quarterly-review-backlog.md`
 
 ## Podcast Pipeline
 
-AI-generated podcast using Rob's cloned voice (ElevenLabs). Agent Zero scripts from existing reviews, ElevenLabs generates audio, episodes embed on project pages and distribute to podcast platforms.
+AI-generated podcast using Bobski's cloned voice (ElevenLabs) + Rachel co-host. Turn-by-turn scripts generated from existing reviews. ElevenLabs generates audio, ffmpeg post-processes with shared room acoustics (reverb, room tone, EQ). Episodes embed on project pages and distribute to podcast platforms. Plan: generate all 45 remaining episodes via one month of ElevenLabs Pro, then transition to self-hosted open-source TTS (XTTS v2).
 
 Full strategy: `docs/podcast-strategy.md`
 
@@ -284,13 +285,15 @@ Voice clone (Rob/Bobski) + Rachel McGrath co-host on ElevenLabs. Turn-by-turn ge
 | 002 | Morpheus | Deep-Dive | 12m 13s | `/podcast/Own-Your-Mind-002-Morpheus.mp3` |
 | 003 | Akash | Deep-Dive | 8m 17s | `/podcast/Own-Your-Mind-003-Akash.mp3` |
 
-### Episode Backlog
+### Scripts Ready (45 — awaiting audio generation)
 
-| Priority | Project/Topic | Type |
-|----------|--------------|------|
-| 4 | Venice | Deep-Dive |
-| 5 | Render vs Akash vs io.net | Comparison |
-| 6 | Why Decentralised AI Matters | Theme |
+| Range | Content | Count |
+|-------|---------|-------|
+| 004-034 | Project episodes (all 31 remaining projects) | 31 |
+| — | Why DeAI essay discussions | 7 |
+| — | Tokenomics deep-dives | 7 |
+
+All scripts scrubbed of volatile metrics (scores, prices, volumes) for evergreen audio. Listeners directed to site for current numbers. Scripts in `podcast-scripts/`.
 
 ---
 
@@ -325,12 +328,19 @@ Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 15. **DIEM tokenomics** — Venice flywheel deep-dive
 16. **DePIN Tokens Ranked** — new resource page (50 searches)
 
-### Phase 4 — Revenue infrastructure
+### Phase 4 — Podcast & video production
 
-17. **Affiliate links in Build tutorials** — hardware (Mac Studio, GPUs), VPNs, hosting. Add to existing Mac Studio guide + all new tutorials.
-18. **Protocol referral setup** — Venice API, Akash deployments, staking platforms. Add to project "How to participate" sections.
-19. **Recommended Tools page with affiliate links** — Ollama, LM Studio, wallets, node software. Natural, honest recommendations.
-20. **Newsletter sponsorship infrastructure** — once Buttondown subscriber base reaches ~1,000+.
+17. **Generate audio for all 45 podcast scripts** — Subscribe to ElevenLabs Pro ($99/mo, 500K credits) for one month, batch-generate all episodes, cancel
+18. **Video pipeline** — Build automated slide-based video generation (Python + Pillow + ffmpeg) for YouTube. OYM-branded slides synced to audio, zero ongoing cost
+19. **Self-hosted voice cloning** — Fine-tune XTTS v2 (or similar open-source TTS) on Bobski voice data (~3+ hours after all episodes generated). Eliminate ElevenLabs dependency entirely. Write as Build article: "How to Run Your Own AI Podcast Without Subscriptions"
+20. **YouTube channel setup** — Brand Account under existing Google account, upload video episodes
+
+### Phase 5 — Revenue infrastructure
+
+21. **Affiliate links in Build tutorials** — hardware (Mac Studio, GPUs), VPNs, hosting. Add to existing Mac Studio guide + all new tutorials.
+22. **Protocol referral setup** — Venice API, Akash deployments, staking platforms. Add to project "How to participate" sections.
+23. **Recommended Tools page with affiliate links** — Ollama, LM Studio, wallets, node software. Natural, honest recommendations.
+24. **Newsletter sponsorship infrastructure** — once Buttondown subscriber base reaches ~1,000+.
 
 ### Ongoing
 

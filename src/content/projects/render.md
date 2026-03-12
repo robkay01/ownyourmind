@@ -1,6 +1,6 @@
 ---
 title: "Render Network"
-description: "Render Network review — decentralised GPU rendering with Hollywood customers, burn-mint equilibrium, and RENDER staking. Freedom Score, Returns Score and honest assessment."
+description: "Render Network review — decentralised GPU rendering with Hollywood customers, burn-mint equilibrium, and RNP-019 compute rewards. Freedom Score, Returns Score and honest assessment."
 category: "compute"
 token: "RENDER"
 status: "active"
@@ -13,12 +13,13 @@ returnsScoreBreakdown:
   revenueSustainability: 16
   liquidityAccess: 12
 returnsScoreEvidence:
-  tokenUtility: "Settlement currency for rendering and AI compute. No native staking. Holders earn nothing by simply holding. Limited governance role."
-  valueAccrual: "BME burns 95% of job payments. Real Hollywood customers. Burns up 279% YoY. But still net inflationary 10x."
+  tokenUtility: "Settlement currency for rendering and AI compute. RNP-019 (May 2025) introduced availability and job-based rewards for compute node operators, but no holder staking. Holders earn nothing by simply holding. Limited governance role."
+  valueAccrual: "BME burns 95% of job payments. Real Hollywood customers. 1M cumulative RENDER burned by Dec 2025 — monthly burns up from ~20K (Jan 2025) to ~121K (Sep 2025). But still net inflationary."
   supplyDynamics: "644M cap but OTOY treasury 23.3% unvested. 91% held by ~902 addresses. Alameda history."
   revenueSustainability: "69M frames rendered, 35% of volume in 2025. OctaneRender moat. But AI compute pivot late vs Akash/io.net. BME still net inflationary."
   liquidityAccess: "Binance, Coinbase, Kraken, OKX. $50M+ daily volume. Solana SPL liquidity."
 publishDate: 2025-03-01
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "render-token"
 launchType: "ico"
@@ -36,7 +37,9 @@ Render is a GPU rendering marketplace built on Solana. Creators and studios subm
 
 The critical context: Render is built by OTOY Inc., a Los Angeles-based company founded by Jules Urbach in 2008. OTOY created OctaneRender, a widely used GPU rendering engine with native integrations into Blender and Cinema 4D. The Render Network is OTOY's distributed compute layer. The Render Network Foundation, spun out in January 2023 and registered in the Cayman Islands, handles governance. Urbach's COO sits on the Foundation board.
 
-The network dashboard shows roughly 15,670 registered node operators (approximately 5,600 since inception, suggesting the dashboard counts registrations rather than concurrent active nodes). It is explicitly permissioned. Operators must be approved by the Foundation. This is the opposite of how [Akash](/projects/akash/) operates, where anyone with qualifying hardware joins without permission. Dispersed.com, an AI compute subnet, launched in December 2025 with 600-plus AI models at $1.75/hour, but adoption metrics are not yet available.
+The network dashboard shows roughly 15,670 registered node operators (approximately 5,600 since inception, suggesting the dashboard counts registrations rather than concurrent active nodes). It is explicitly permissioned. Operators must be approved by the Foundation. This is the opposite of how [Akash](/projects/akash/) operates, where anyone with qualifying hardware joins without permission.
+
+RNP-019, passed in May 2025, established a dedicated GPU compute subnet for AI and general-purpose workloads — separate from the existing rendering infrastructure. It introduced availability rewards (2 RENDER per weekly epoch per node, prorated by uptime) and job-based rewards (baseline 10 RENDER per epoch for an RTX 4090 at full utilisation, scaled by hardware spec and hours worked). Consumer-grade GPUs like the RTX 4090/5090 can participate. This subnet was officially branded Dispersed at Solana Breakpoint in December 2025, launching with 600-plus AI models at $1.75/hour. RNP-021 subsequently proposed extending the framework to enterprise-grade GPUs (NVIDIA H200, H100, AMD MI300 series). Adoption metrics for Dispersed are not yet available.
 
 The team is roughly 99 people. Advisory board includes J.J. Abrams, Ari Emanuel (Endeavor/WME CEO), Beeple and Brendan Eich (Brave founder). The Hollywood connections are real.
 
@@ -67,9 +70,9 @@ Combined insider allocation is approximately 50% (OTOY Treasury plus Partner Esc
 
 The Burn-and-Mint Equilibrium (BME) works like this: 95% of USD-equivalent job payments get converted to RENDER and burned. 5% goes to OTOY as a service fee. Node operators receive newly minted RENDER from the emission pool. Year one emissions: 9.13 million RENDER. Year two: 5.91 million (35% reduction).
 
-The maths does not work yet. January to September 2025 saw 530,171 RENDER burned (up 279% year-over-year), but monthly emissions of roughly 500,000 RENDER outpace monthly burns of roughly 50,000 RENDER by a factor of ten. BME is net inflationary at current usage. Against a $701 million market cap, the price-to-revenue ratio remains extreme. For comparison, Akash trades at roughly 28x.
+The maths is improving but does not work yet. The network crossed 1 million cumulative RENDER burned in December 2025 — a milestone that took roughly three years under BME. Monthly burns accelerated from approximately 20,000 RENDER in January 2025 to 121,000 RENDER by September 2025 (a 488% increase within the year), with January-to-September 2025 totalling 530,171 RENDER burned (up 279% year-over-year). But monthly emissions still outpace monthly burns by a significant margin. BME remains net inflationary at current usage, though the gap is narrowing. Against a $701 million market cap, the price-to-revenue ratio remains extreme. For comparison, Akash trades at roughly 28x.
 
-There is no native staking. RENDER holders earn nothing by simply holding. The token's primary function, beyond rendering settlement, is speculation.
+There is no native staking for RENDER holders. Simply holding the token earns nothing. RNP-019 introduced availability and job-based rewards for compute node operators on the Dispersed subnet, but these are operator compensation for providing GPU capacity — not holder staking. The proposal explicitly states "no staking is mandated initially." Earnings up to $100 are held as an implicit deposit before disbursement, which functions as a stability measure rather than a staking mechanism. The token's primary function for holders, beyond rendering settlement, remains speculation.
 
 The Alameda connection deserves attention. Alameda Research participated in the $30 million round. NCRI research documented coordinated Twitter bot manipulation that pumped RNDR price by 11-30% on four separate occasions. Roughly half of all Twitter posts about RNDR during those manipulation windows were inauthentic. After FTX collapsed, 972,073 RNDR tokens were transferred from the bankruptcy estate to exchanges.
 
@@ -77,23 +80,23 @@ Market snapshot: RENDER trades at $1.35 with a $701 million market cap and $882 
 
 ## How to participate
 
-**Provide GPUs (if approved).** Apply to become a node operator. The Foundation reviews applications. Minimum hardware: NVIDIA GPU with CUDA 10.1+, 6GB+ VRAM (8GB+ preferred), 32GB+ RAM, 100GB disk, 100/75 Mbps internet. Rewards weighted by compute (25%), bandwidth (35%), GPU model (20%) and uptime (20%). The permissioned approval process is the main barrier.
+**Provide GPUs (if approved).** Apply to become a node operator. The Foundation reviews applications. For the traditional rendering network, minimum hardware is NVIDIA GPU with CUDA 10.1+, 6GB+ VRAM (8GB+ preferred), 32GB+ RAM, 100GB disk, 100/75 Mbps internet, with rewards weighted by compute (25%), bandwidth (35%), GPU model (20%) and uptime (20%). Since RNP-019 (May 2025), the Dispersed compute subnet also accepts consumer-grade GPUs (RTX 4090/5090) for AI and general compute, with availability rewards (2 RENDER per weekly epoch, prorated by uptime) and job-based rewards scaled by hardware spec and utilisation. The permissioned approval process remains the main barrier for both subnets.
 
 **Create and render.** Submit rendering jobs through OctaneRender, Blender Cycles or the Render Portal. Pay in RENDER or Render Credits (stablecoin-equivalent). Fifty to eighty percent cheaper than centralised alternatives. This is the primary use case and the reason the network exists.
 
 **Governance.** Participate in Render Network Proposals (RNPs) through Nation.io. Four-phase process: Draft, Initial Vote (72 hours, no quorum), Final Vote (6 days, 15% quorum of total supply), Implementation. Token-weighted. Be aware that 91% whale concentration heavily influences outcomes. Active participation is extremely low: in RNP-022, only 0.5% of supply actively voted for or against (91.3 million tokens abstained out of 93.9 million participating). Twenty-two RNPs submitted to date.
 
-**Note: there is no staking.** Unlike most DePIN tokens, RENDER offers no staking mechanism. Holding RENDER earns nothing. The only way to earn RENDER is to operate approved GPU nodes.
+**Note: there is no holder staking.** Unlike most DePIN tokens, RENDER offers no staking mechanism for holders. Simply holding RENDER earns nothing. The only way to earn RENDER is to operate approved GPU nodes — either through the traditional rendering network or the Dispersed compute subnet (RNP-019). The Dispersed rewards (availability + job-based) compensate operators for providing GPU capacity, not for locking tokens.
 
 ## Honest assessment
 
-**What works.** The rendering demand is real and growing. Sixty-nine million frames rendered. Roughly 35% of all-time volume in 2025 alone. Enterprise and Hollywood-grade adoption, including Beeple and Apple Vision Pro integration. Burns growing 279% year-over-year is an organic demand signal, even if still small relative to emissions. OctaneRender integration provides a genuine moat: it is a widely used rendering engine and the network is its natural distributed backend. The Solana migration completed successfully. Strong exchange coverage including Binance. The advisory board has genuine industry credibility.
+**What works.** The rendering demand is real and growing. Sixty-nine million frames rendered. Roughly 35% of all-time volume in 2025 alone. Enterprise and Hollywood-grade adoption, including Beeple and Apple Vision Pro integration. The network crossed 1 million cumulative RENDER burned in December 2025, with monthly burns accelerating 488% within the year (from ~20K in January to ~121K by September). That is a genuine organic demand signal, even if still small relative to emissions. RNP-019 (May 2025) expanded the network into AI and general compute with a structured operator rewards framework, and the Dispersed subnet launched in December 2025. OctaneRender integration provides a genuine moat. The Solana migration completed successfully. Strong exchange coverage including Binance. The advisory board has genuine industry credibility.
 
 **What does not work.** The decentralisation narrative does not hold up. Render is a permissioned network controlled by OTOY through multiple vectors: proprietary rendering engine, hardcoded 5% fee, Foundation board representation, operator approval, closed-source orchestration layer. The Foundation is a governance facade. Core rendering software, job orchestration, node operator client and Solana smart contracts are all closed source. Nine public GitHub repositories contain essentially zero operational code, only governance proposals and legacy token utilities. Six contributors total. This is not open source with some proprietary elements. It is proprietary with some open governance.
 
 **The risk.** Jules Urbach is an extreme key person risk. Single founder controlling both OTOY (the company) and Render (the token network) with no visible succession plan. The 91% whale concentration (roughly 902 addresses) means governance is effectively controlled by a small number of large holders, and active voting participation of just 0.5% of supply means outcomes are easily influenced. No verifiable audit of current Solana infrastructure exists. The only confirmed audit (OpenZeppelin, September 2017) covered deprecated Ethereum crowdsale contracts. The Alameda investment and documented bot manipulation add a credibility stain that does not wash off easily.
 
-The AI compute pivot through Dispersed is late. Akash launched GPU compute in September 2023 and has a multi-year head start with a permissionless model. io.net entered the space with a similar timeline. Render entering AI compute in December 2025 with a permissioned approach faces established competition and no obvious structural advantage beyond the OTOY brand.
+The AI compute pivot remains late despite RNP-019 laying the groundwork in May 2025. Akash launched GPU compute in September 2023 and has a multi-year head start with a permissionless model. io.net entered the space with a similar timeline. Render's Dispersed subnet launched in December 2025 with a permissioned approach and faces established competition. The RNP-019 operator rewards (availability + job-based) give GPU providers a clearer earning model than before, but the network still lacks the permissionless onboarding that competitors offer.
 
 Solana single-chain dependency means its seven separate outage incidents (with a declining validator count and 78% client homogeneity via Jito-Solana) can halt settlement. There is no fallback chain.
 
@@ -127,9 +130,9 @@ Three changes would materially increase Render's score:
 
 RENDER scores 72/100 (B grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
-**Token utility (14/20):** RENDER is the settlement currency for rendering jobs and, increasingly, AI compute through the Dispersed subnet. Creators pay in RENDER or Render Credits for GPU rendering, and node operators receive newly minted RENDER as compensation. The utility is clear but narrow – there is no meaningful staking mechanism, no governance weight tied to holdings, and no additional demand sink beyond job settlement. Unlike most DePIN tokens, simply holding RENDER earns you nothing. The token exists to settle transactions, full stop.
+**Token utility (14/20):** RENDER is the settlement currency for rendering jobs and, increasingly, AI compute through the Dispersed subnet. Creators pay in RENDER or Render Credits for GPU rendering, and node operators receive newly minted RENDER as compensation. RNP-019 (May 2025) expanded the token's role by introducing structured availability and job-based rewards for compute node operators, giving RENDER a clearer function in the AI compute layer. However, the utility remains operator-facing — there is no holder staking mechanism, no governance weight tied to holdings, and no additional demand sink beyond job settlement and operator rewards. Simply holding RENDER still earns nothing.
 
-**Value accrual (18/25):** This is Render's strongest returns dimension. The Burn-and-Mint Equilibrium converts 95% of USD-equivalent job payments to RENDER and burns it, with OTOY taking a hardcoded 5% service fee. Real Hollywood customers – Beeple, Apple Vision Pro integration, Stability AI – drive genuine burn demand. Burns grew 279% year-over-year through 2025. The mechanism directly ties network usage to token scarcity. The caveat: monthly emissions still outpace monthly burns by roughly 10x at current usage levels. BME is net inflationary today, but the trajectory is moving in the right direction with verified demand growth.
+**Value accrual (18/20):** This is Render's strongest returns dimension. The Burn-and-Mint Equilibrium converts 95% of USD-equivalent job payments to RENDER and burns it, with OTOY taking a hardcoded 5% service fee. Real Hollywood customers — Beeple, Apple Vision Pro integration, Stability AI — drive genuine burn demand. The network crossed 1 million cumulative RENDER burned in December 2025, with monthly burns accelerating from ~20,000 (January 2025) to ~121,000 (September 2025) — a 488% increase within the year, and 279% year-over-year. The mechanism directly ties network usage to token scarcity. The caveat: monthly emissions still outpace monthly burns at current usage levels. BME remains net inflationary, but the gap is narrowing and the trajectory is clearly positive with verified demand growth.
 
 **Supply dynamics (12/20):** RENDER has a cap of 644 million tokens (536.9 million original plus 107.4 million governance-approved BME inflation pool). The structural concern is concentration: the OTOY treasury holds 23.3% with no vesting schedule, partner escrow accounts for 26.6% with cliff vesting extending to 2051, and 91% of supply sits in roughly 902 addresses. In the 11 weeks to March 2026, large wallets accumulated 20.5 million tokens (3.7% of supply). The Alameda connection – documented bot manipulation that pumped prices 11-30% on four occasions – adds a credibility stain to the distribution history. Whale concentration of this magnitude means a small number of actors can move the market at will.
 
@@ -141,6 +144,6 @@ RENDER scores 72/100 (B grade). Full methodology at [Returns Score Methodology](
 
 Three changes would materially increase Render's returns score:
 
-1. **Introduce a staking mechanism with fee distribution.** RENDER holders currently earn nothing by holding. A staking system that distributes a portion of rendering fees or BME proceeds to stakers would create a demand sink, reduce circulating supply and give holders an economic reason to stay beyond price speculation.
-2. **Close the burn-to-emission gap.** Monthly burns of approximately 50,000 RENDER against emissions of roughly 500,000 RENDER means BME is net inflationary by a factor of ten. Growing rendering and AI compute volume to narrow this gap is the most direct path to making the deflationary narrative match reality.
+1. **Introduce holder staking with fee distribution.** RNP-019 introduced operator rewards for GPU providers, but RENDER holders still earn nothing by holding. A staking system that distributes a portion of rendering fees or BME proceeds to token stakers would create a demand sink, reduce circulating supply and give holders an economic reason to stay beyond price speculation.
+2. **Close the burn-to-emission gap.** The 1 million cumulative burn milestone (December 2025) is encouraging, but monthly emissions still outpace monthly burns. Growing rendering and AI compute volume — including through the Dispersed subnet — to narrow this gap is the most direct path to making the deflationary narrative match reality.
 3. **Publish the OTOY treasury vesting schedule.** The 23.3% treasury allocation with no published vesting creates uncertainty for holders. A transparent, time-locked vesting schedule – ideally enforced on-chain – would reduce the overhang risk and signal alignment between OTOY's interests and token holders.

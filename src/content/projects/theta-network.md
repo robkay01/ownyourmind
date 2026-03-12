@@ -1,6 +1,6 @@
 ---
 title: "Theta Network"
-description: "Blockchain-powered decentralised cloud for AI, media, and entertainment. Enterprise validators (Google, Samsung, Sony). Fixed THETA supply but value accrual flows to TFUEL, not THETA."
+description: "Blockchain-powered decentralised cloud for AI, media, and entertainment. Enterprise validators (Google, Samsung, Sony, NTT Digital). Fixed THETA supply but value accrual flows to TFUEL, not THETA."
 category: "compute"
 token: "THETA"
 status: "active"
@@ -16,9 +16,10 @@ returnsScoreEvidence:
   tokenUtility: "Governance/staking only – NOT the gas token (TFUEL is). Staking for validators (20M min) and guardians (1,000 min). No direct fee capture. Dual-token model sends operational utility to TFUEL."
   valueAccrual: "Value accrual to THETA is indirect. Fees paid in TFUEL. THETA stakers earn inflationary TFUEL rewards. No buyback, no revenue share, no direct fee capture for THETA holders."
   supplyDynamics: "Fixed 1B supply, zero inflation, 100% circulating. No future unlocks. Guardian staking locks supply. Clean structure. 36.3% Theta Labs reserve is concentrated supply risk."
-  revenueSustainability: "EdgeCloud launched June 2024, still early. University and sports team customers but revenue undisclosed. No protocol-level revenue visible. Enterprise partnerships impressive but translation to token value unclear."
+  revenueSustainability: "EdgeCloud launched June 2024, still early. University and sports team customers but revenue undisclosed. RapidAPI integration (January 2026) opens distribution to millions of developers. Imperial College London joined as first European academic partner. No protocol-level revenue visible. Enterprise partnerships impressive but translation to token value unclear."
   liquidityAccess: "Binance, Kraken, KuCoin, Gate.io, Crypto.com. NOT on Coinbase. $13-14M daily volume. FDV equals market cap. Moderate volume for #177 ranked token."
 publishDate: 2025-03-06
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "theta-token"
 launchType: "ico"
@@ -36,7 +37,7 @@ Theta Network is a blockchain-powered decentralised cloud platform for AI, media
 
 The architecture has three layers:
 
-- **Enterprise Validator Nodes** – 20-30 permissioned nodes run by Google, Samsung, Sony, Binance, Deutsche Telekom, and others. They propose and finalise blocks using multi-level BFT consensus.
+- **Enterprise Validator Nodes** – 20-30 permissioned nodes run by Google, Samsung, Sony, Binance, Deutsche Telekom, NTT Digital (joined January 2026), and others. They propose and finalise blocks using multi-level BFT consensus.
 - **Guardian Nodes** – approximately 3,500 permissionless community nodes that seal blocks and check validators. Minimum stake: 1,000 THETA. This layer exists specifically to keep the enterprise validators honest.
 - **Edge Nodes** – 10,000+ nodes providing compute, storage, and video relay resources. Open to anyone. Collectively deliver ~80 PetaFLOPS of distributed GPU compute.
 
@@ -55,9 +56,9 @@ Mainnet launched March 2019. Four major upgrades: Mainnet 2.0 (May 2020, Guardia
 
 ## Value proposition
 
-The enterprise validator set is Theta's most distinctive feature. Google, Samsung, Sony, Binance, and Deutsche Telekom don't lend their names lightly. Having household brands run your validators creates instant credibility and corporate distribution channels that pure crypto projects lack.
+The enterprise validator set is Theta's most distinctive feature. Google, Samsung, Sony, Binance, Deutsche Telekom, and NTT Digital don't lend their names lightly. NTT Digital, part of Japan's NTT Group (one of the world's largest telecoms), joined as an enterprise validator in January 2026 — staking THETA and supporting consensus. Having household brands run your validators creates instant credibility and corporate distribution channels that pure crypto projects lack.
 
-**EdgeCloud** is the growth thesis. Launched May 2024, it positions Theta as a hybrid cloud-edge compute platform for AI workloads. ~80 PetaFLOPS of distributed GPU compute (~250 NVIDIA A100 equivalents) across 10,000+ edge nodes. Customers include universities (Stanford, Imperial College London, KAIST, Seoul Women's University) and sports teams (Vegas Golden Knights, Houston Rockets, Olympique de Marseille). Liner, a GenAI service with 10M+ registered users, uses EdgeCloud.
+**EdgeCloud** is the growth thesis. Launched May 2024, it positions Theta as a hybrid cloud-edge compute platform for AI workloads. ~80 PetaFLOPS of distributed GPU compute (~250 NVIDIA A100 equivalents) across 10,000+ edge nodes. Customers include universities (Stanford, KAIST, Seoul Women's University) and sports teams (Vegas Golden Knights, Houston Rockets, Olympique de Marseille). Liner, a GenAI service with 10M+ registered users, uses EdgeCloud. In January 2026, Imperial College London's Security & Machine Learning Lab became the first UK and European academic partner, adopting EdgeCloud Hybrid for security and trustworthy AI research. The same month, EdgeCloud model APIs launched on RapidAPI — developers can now access speech-to-text, image generation, object detection, and LLM inference without managing GPUs or understanding blockchain mechanics. That is a meaningful distribution unlock.
 
 The MetaChain architecture (Mainnet 4.0) enables permissionless horizontal scaling through interconnected subchains – unlimited transactional throughput with 1-2 second block finalisation. This is the right design for scaling to AI and media workloads.
 
@@ -67,7 +68,7 @@ THETA does not capture fees. All gas, payments, and transaction fees use TFUEL. 
 
 This is the dual-token trap. THETA has excellent supply dynamics (fixed supply, no inflation, 100% circulating) but weak value accrual. The token's value rests on (a) staking demand to secure the network and (b) speculative premium from enterprise partnerships. That is a thin basis for long-term value capture.
 
-The governance story is also incomplete. TDROP governance exists for on-chain voting, but it governs TDROP/ThetaDrop only – not the core Theta blockchain. Theta Labs retains control over protocol direction, roadmap, and validator selection. Core chain governance is listed as a "future goal" with no timeline.
+The governance story is evolving. TDROP governance exists for on-chain voting, but it governs TDROP/ThetaDrop only – not the core Theta blockchain. Theta Labs retains control over protocol direction, roadmap, and validator selection. Core chain governance is listed as a "future goal" with no timeline. That said, the TDROP 2.0 governance vote (5 January 2026) was a meaningful exercise — the community voted to reallocate 4 billion TDROP from NFT liquidity mining rewards to staking incentives, extending them through 2030. The vote passed with strong participation. It is still limited-scope governance (TDROP, not the core chain), but it demonstrates the mechanism works and the community engages when the stakes matter.
 
 At ~$0.195, THETA is 98.8% below its ATH of $15.72 (April 2021). Private sale investors at $0.067 are still in profit (2.9x), but anyone who bought during the 2021 run is deeply underwater.
 
@@ -89,7 +90,7 @@ THETA trades at approximately $0.195 with a market cap of ~$195M. Daily volume ~
 
 **Run an Edge Node.** Provide compute, storage, or video relay resources via the Theta Edge Node software. Earn TFUEL for completed tasks. GPU recommended for EdgeCloud workloads. No THETA staking required. Technical skill: intermediate.
 
-**Participate in TDROP Governance.** Vote on ThetaDrop proposals. Note: this governs the TDROP/NFT ecosystem only, not the core Theta blockchain. Requires 5M TDROP to create proposals. Technical skill: basic.
+**Participate in TDROP Governance.** Vote on ThetaDrop proposals. The TDROP 2.0 vote (January 2026) reallocated 4B TDROP to extend staking rewards through 2030 — proof the mechanism has teeth. Note: this governs the TDROP/NFT ecosystem only, not the core Theta blockchain. TDROP must be staked and delegated to vote. Requires 5M TDROP to create proposals. Technical skill: basic.
 
 ## Honest assessment
 
@@ -99,7 +100,7 @@ Theta Network balances enterprise credibility with meaningful community particip
 
 **Infrastructure Decentralisation: 12/20.** Multi-level BFT with 20-30 enterprise validators, ~3,500 guardian nodes, and 10,000+ edge nodes. Validators are permissioned – only enterprises with 20M THETA can participate. Guardian nodes provide a permissionless check on validators at 1,000 THETA minimum. Edge nodes open to anyone. The enterprise validator set is both a strength (credible partners) and a centralisation concern (restricted access).
 
-**Governance Decentralisation: 8/20.** TDROP governance portal exists for on-chain voting but only governs TDROP/ThetaDrop, not the core Theta blockchain. Core chain governance is a stated future goal with no implementation timeline. Theta Labs retains control over protocol direction, roadmap, and validator selection. The 36.3% Theta Labs reserve concentrates influence.
+**Governance Decentralisation: 10/20.** TDROP governance portal exists for on-chain voting but only governs TDROP/ThetaDrop, not the core Theta blockchain. Core chain governance is a stated future goal with no implementation timeline. Theta Labs retains control over protocol direction, roadmap, and validator selection. The 36.3% Theta Labs reserve concentrates influence. However, the TDROP 2.0 vote (January 2026) demonstrated genuine community participation — 4B TDROP reallocated from NFT rewards to staking via on-chain governance. The mechanism works; the scope remains limited.
 
 **Token Distribution Fairness: 9/15.** 30% private sale with no lockup period is concerning. 36.3% Theta Labs reserve is very large. Team (7.5%) and advisors (1.2%) are modest. All tokens fully unlocked – no overhang. Combined insider allocation ~45% is high but the fully circulating supply means no future dilution.
 
@@ -117,7 +118,7 @@ Theta Network balances enterprise credibility with meaningful community particip
 
 **Supply Dynamics: 16/20.** Fixed supply of 1B THETA with zero inflation is strong. 100% circulating with no future unlocks or dilution risk. Guardian node staking locks up THETA with a 60-hour unstaking period. Clean structure. The 36.3% Theta Labs reserve represents concentrated supply risk but no future emission pressure.
 
-**Revenue Sustainability: 8/25.** EdgeCloud launched June 2024 – still early. University and sports team customers are credible but revenue figures not disclosed. No protocol-level revenue visible on-chain. TFUEL burning exists but hasn't offset inflation. Enterprise partnerships are impressive but unclear how they translate to sustainable token-level revenue. Minimal DeFi ecosystem.
+**Revenue Sustainability: 8/25.** EdgeCloud launched June 2024 – still early. University and sports team customers are credible but revenue figures not disclosed. The January 2026 RapidAPI integration opens EdgeCloud model APIs to millions of developers without blockchain knowledge — a meaningful distribution channel, but too early to assess revenue impact. Imperial College London joined as the first European academic partner the same month. No protocol-level revenue visible on-chain. TFUEL burning exists but hasn't offset inflation. Enterprise partnerships are impressive but unclear how they translate to sustainable token-level revenue. Minimal DeFi ecosystem.
 
 **Liquidity & Access: 10/15.** Binance (primary), Kraken, KuCoin, Gate.io, Crypto.com. Notably absent from Coinbase. $13-14M daily volume is moderate for a #177-ranked token with ~$195M market cap. FDV equals market cap (fully circulating). No significant liquidity concerns but volume has declined substantially from peak.
 
@@ -131,7 +132,7 @@ Theta Network sits in Quadrant B – decent infrastructure decentralisation with
 - **98.8% below ATH.** $15.72 peak to ~$0.195. Severe decline even by crypto standards.
 - **36.3% Theta Labs reserve.** Large concentrated holding with no public deployment strategy.
 - **Permissioned validators.** Only enterprises with 20M THETA ($3.9M) can validate. Not a permissionless validator set.
-- **No core chain governance.** Governance exists for TDROP only. Theta Labs controls all core blockchain decisions.
+- **No core chain governance.** TDROP governance is active (TDROP 2.0 vote passed January 2026) but governs TDROP only. Theta Labs controls all core blockchain decisions.
 - **EdgeCloud revenue undisclosed.** Customers exist but no financial transparency on whether the compute business is sustainable.
 - **No prominent security audit.** No third-party blockchain audit results found publicly.
 - **No Coinbase listing.** Notable accessibility gap for a top-200 token.

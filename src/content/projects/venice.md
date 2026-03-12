@@ -5,20 +5,21 @@ category: "inference"
 token: "VVV"
 status: "active"
 freedomScore: 6
-returnsScore: 6.4
+returnsScore: 6.6
 returnsScoreBreakdown:
   tokenUtility: 16
   valueAccrual: 11
-  supplyDynamics: 13
+  supplyDynamics: 15
   revenueSustainability: 12
   liquidityAccess: 12
 returnsScoreEvidence:
   tokenUtility: "Staking for yield + pro access. Lock staked VVV to mint DIEM, stake DIEM for inference. Multi-step utility loop."
-  valueAccrual: "Monthly revenue buyback burns purchasing VVV on open market. Growing user base drives demand. Magnitude unclear without disclosed revenue."
-  supplyDynamics: "Uncapped supply with emissions minus burns. 42.8% of genesis supply burned. Four emission reductions in 13 months. Deflationary trajectory."
+  valueAccrual: "Monthly revenue buyback burns purchasing VVV on open market since November 2025. Growing user base drives demand. Magnitude unclear without disclosed revenue."
+  supplyDynamics: "Uncapped supply with emissions minus burns. 42.8% of genesis supply burned. Five emission reductions in 13 months (14M → 10M → 8M → 6M/yr). Buyback burns active. Strong deflationary trajectory."
   revenueSustainability: "Privacy-focused inference with real users. Revenue model emerging."
   liquidityAccess: "Good liquidity on Base and major CEX. $50M+ daily volume."
 publishDate: 2025-03-01
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "venice-token"
 launchType: "airdrop"
@@ -76,6 +77,8 @@ The API is OpenAI-compatible. If you have existing code calling OpenAI, you chan
 
 The token mechanics add a DeFi angle. Stake VVV to earn emissions-based yield. To access inference via tokens, you lock staked VVV (sVVV) to mint DIEM — each DIEM represents $1/day of perpetual, renewing API credit against any model on Venice (including Claude, GPT-5, Gemini and all open-source models). The mint rate follows an exponential curve: as DIEM supply approaches the target, it costs progressively more VVV to mint each DIEM. Burning DIEM unlocks your original sVVV. While locked, you still earn 80% of standard staking yields. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply. Minimum threshold is 0.1 DIEM to activate API credits.
 
+A significant capacity optimisation changed DIEM allocation from dividing across all stakers to dividing among active API users only (those who made an API call in the last seven days). The result: a 14x increase in DIEM capacity per token for actual users. This rewards genuine usage rather than passive staking.
+
 The competitive position is clear. If you want private AI inference that actually works today, Venice is the only consumer product delivering it at scale. 1.3 million registered users and 45 billion LLM tokens processed daily are not vanity metrics. Those are real workloads. Warden Protocol alone drives roughly 1.5 million daily chats through the Venice backend. The product ships fast: text, image, video, audio, music, code, web search, voice mode and Memoria (local vector memory) all launched within 18 months.
 
 ## Tokenomics
@@ -91,7 +94,7 @@ VVV launched via airdrop in January 2025. No presale. No ICO. No private round. 
 
 The airdrop distribution was genuinely generous. When 32.6 million tokens went unclaimed after the 45-day window, Venice burned them rather than reclaiming them. That burn, valued at roughly $100 million at the time, removed about a third of genesis supply permanently. Combined with subsequent burns, 42.8% of genesis supply has been destroyed.
 
-Emissions have been cut aggressively: multiple reductions brought annual emissions from 14 million down to 10 million VVV. With the DIEM restructure, stakers now receive 100% of emissions (80% when sVVV is locked for DIEM). Monthly revenue buyback burns have been active since December 2025.
+Emissions have been cut aggressively through five reductions in 13 months: 14 million → 10 million → 8 million (October 2025) → 6 million VVV annually (February 2026). That is a 57% reduction from the original rate. With the DIEM restructure, stakers now receive 100% of emissions (80% when sVVV is locked for DIEM). Monthly revenue buyback burns have been active since November 2025.
 
 The launch was not clean. On day one, two Aerodrome contributors purchased VVV before public announcements, turning $50,000 into over $1 million within an hour. Aerodrome flagged the trades within 30 minutes and suspended both individuals within three hours. VVV dropped 50% on the allegations. The insider trading was external to Venice, but the damage to launch credibility was real.
 
@@ -103,7 +106,7 @@ Market snapshot: VVV trades at $5.65 with a $250 million market cap. That is 75%
 
 **Stake VVV.** Staking VVV earns emissions-based yield (nominal APY ranges from 20-72% depending on the period), but this yield comes from newly minted VVV, not protocol revenue. Real yield depends on whether VVV holds value against the inflation. Staking alone does not give you inference access. Seven-day unstaking cooldown.
 
-**Lock and mint DIEM.** To access inference via tokens, lock your staked VVV (sVVV) to mint DIEM on the Venice token dashboard. Each DIEM represents $1/day of perpetual, renewing API credit — stake DIEM (minimum 0.1) to activate access to all models on Venice including Claude, GPT-5 and Gemini. The mint rate rises exponentially as DIEM supply approaches the target supply set by Venice, so early minters get more DIEM per VVV locked. While your sVVV is locked, you still earn 80% of standard staking yields. To exit, burn the same amount of DIEM you minted to unlock your original sVVV (partial unlocks permitted). DIEM also trades on Aerodrome and Coinbase — you can buy it directly instead of minting. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply.
+**Lock and mint DIEM.** To access inference via tokens, lock your staked VVV (sVVV) to mint DIEM on the Venice token dashboard. Each DIEM represents $1/day of perpetual, renewing API credit — stake DIEM (minimum 0.1) to activate access to all models on Venice including Claude, GPT-5 and Gemini. The mint rate rises exponentially as DIEM supply approaches the target supply set by Venice, so early minters get more DIEM per VVV locked. While your sVVV is locked, you still earn 80% of standard staking yields. To exit, burn the same amount of DIEM you minted to unlock your original sVVV (partial unlocks permitted). DIEM also trades on Aerodrome and Coinbase — you can buy it directly instead of minting. Over 6.3 million VVV is currently locked for DIEM, nearly 10% of total supply. A recent capacity optimisation means DIEM allocation is now divided among active API users (those with an API call in the last seven days) rather than all stakers, resulting in a 14x capacity increase per token for active users.
 
 **Getting started.** The fastest path to Venice is the web app at venice.ai — no account required for the free tier (10 text prompts, 15 images per day). Pro subscription at $18/month (or $149/year) unlocks unlimited text with advanced models including Claude, GPT-5, and Gemini, plus 1,000 daily image generations, voice mode, and Memoria (local vector memory). For developers, the API is OpenAI-compatible: change one base URL in your existing code and your prompts route through Venice instead. Available models include DeepSeek V3, Llama 4 Maverick, Qwen 3.5 and others across text, image, code, and audio.
 
@@ -111,9 +114,9 @@ Market snapshot: VVV trades at $5.65 with a $250 million market cap. That is 75%
 
 ## Honest assessment
 
-**What works.** Venice is the best consumer-facing private AI inference product available today. That is not a high bar, but Venice clears it convincingly. The privacy architecture is genuinely thoughtful. The staking model creates real utility demand. The no-VC funding model means no unlock schedule looming over the token. Product velocity has been impressive: text, image, video, audio, music, code, web search, voice mode and Memoria all shipped within 18 months of launch. The aggressive supply tightening (42.8% burned, emissions slashed, revenue buybacks active) shows a team that understands tokenomics.
+**What works.** Venice is the best consumer-facing private AI inference product available today. That is not a high bar, but Venice clears it convincingly. The privacy architecture is genuinely thoughtful. The staking model creates real utility demand. The no-VC funding model means no unlock schedule looming over the token. Product velocity has been impressive: text, image, video, audio, music, code, web search, voice mode and Memoria all shipped within 18 months of launch. The aggressive supply tightening (42.8% burned, emissions cut 57% from 14M to 6M annually, revenue buybacks active since November 2025) shows a team that understands tokenomics.
 
-**What does not work yet.** Governance. Venice describes token-weighted governance but has not deployed any voting interface. No Snapshot. No Tally. No on-chain governance contracts. Every significant decision, including four emission reductions and the DIEM launch, has been made unilaterally by the team. There is a Featurebase upvote system for feature requests, but that is not governance. Venice is transparent about being a company rather than a DAO, which is honest, but it means VVV holders have no actual decision-making power.
+**What does not work yet.** Governance. Venice describes token-weighted governance but has not deployed any voting interface. No Snapshot. No Tally. No on-chain governance contracts. Every significant decision, including five emission reductions and the DIEM launch, has been made unilaterally by the team. There is a Featurebase upvote system for feature requests, but that is not governance. Venice is transparent about being a company rather than a DAO, which is honest, but it means VVV holders have no actual decision-making power.
 
 **The risk.** Voorhees is the single point of failure. Sole funder, CEO, primary public face of a roughly six-person company. No succession plan. No external investors. No board. Two SEC settlements on his record (SatoshiDice in 2014, ShapeShift in 2024). The ShapeShift precedent is instructive: Voorhees built a centralised crypto exchange, hit regulatory walls, then pivoted to a DAO structure. Venice's trajectory could follow a similar path.
 
@@ -129,7 +132,7 @@ Venice scores 57/100 (C grade). Full methodology at [Freedom Score Methodology](
 
 **Infrastructure decentralisation (9/20):** GPU compute sourced from [Akash](/projects/akash/), Hyperbolic and Prime Intellect, which is permissionless at the provider level. But Venice runs a centralised, closed-source proxy that routes all requests. Single point of control and failure. Users cannot choose their GPU provider. Roughly six employees operate everything.
 
-**Governance decentralisation (5/20):** Token governance described but not deployed. No voting interface, no proposal system, no quorum mechanism. Voorhees is sole funder, CEO and primary decision-maker. Four emission reductions and the DIEM launch were unilateral team decisions. Venice is transparent about being a company, not a DAO, which is at least honest.
+**Governance decentralisation (5/20):** Token governance described but not deployed. No voting interface, no proposal system, no quorum mechanism. Voorhees is sole funder, CEO and primary decision-maker. Five emission reductions and the DIEM launch were unilateral team decisions. Venice is transparent about being a company, not a DAO, which is at least honest.
 
 **Token distribution fairness (11/15):** No presale, no ICO, no VC allocation. Self-funded. 50% of genesis airdropped. 32.6 million unclaimed tokens burned rather than retained. Team allocation 10% with 24-month vesting. The insider trading incident was external (Aerodrome contributors, not Venice team). Company operations allocation (25%) has no published vesting schedule, which is a gap.
 
@@ -147,15 +150,15 @@ Three changes would materially increase Venice's score:
 2. **Open-source the proxy layer.** The centralised, closed-source proxy is the primary freedom score deduction. Open-sourcing it would not eliminate the centralisation (Venice would still operate the instance), but it would allow independent verification and, eventually, self-hosted alternatives.
 3. **Deploy governance.** Ship a token-weighted voting interface, even for non-binding signal votes. Venice describes governance as a feature of VVV but has not built any of the tooling. Deploying Snapshot or an equivalent would convert a marketing claim into a functional mechanism.
 
-## Returns score: 64/100
+## Returns score: 66/100
 
-VVV scores 64/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+VVV scores 66/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
 **Token utility (16/20):** VVV has a well-designed utility loop. Staking VVV earns emissions-based yield, and holding sufficient staked VVV grants pro account access. To get inference from tokens, you lock staked VVV to mint DIEM, then stake DIEM — your inference capacity is proportional to your share of staked DIEM. Each DIEM represents $1/day of perpetual API credit against any model. This creates genuine lock-up demand from heavy API users. The utility is practical and directly tied to product usage rather than abstract governance rights that nobody exercises.
 
-**Value accrual (11/20):** Venice runs monthly revenue buyback burns, purchasing VVV on the open market and destroying it. Combined with aggressive supply tightening – 42.8% of genesis supply burned, four emission reductions in 13 months – the direction of travel is clearly deflationary. The limitation is scale: Venice has not disclosed revenue figures, so the actual magnitude of buyback burns relative to remaining emissions is unclear. The mechanism is right, but without revenue transparency, holders are trusting the team's claims rather than verifiable numbers. Growing the user base from 1.3 million registered users to meaningful recurring revenue is the key variable.
+**Value accrual (11/20):** Venice runs monthly revenue buyback burns since November 2025, purchasing VVV on the open market and destroying it. Combined with aggressive supply tightening — 42.8% of genesis supply burned, five emission reductions in 13 months from 14M to 6M annually — the direction of travel is clearly deflationary. The limitation is scale: Venice has not disclosed revenue figures, so the actual magnitude of buyback burns relative to remaining emissions is unclear. The mechanism is right, but without revenue transparency, holders are trusting the team's claims rather than verifiable numbers. Growing the user base from 1.3 million registered users to meaningful recurring revenue is the key variable.
 
-**Supply dynamics (13/20):** Genesis supply was 100 million VVV with no presale or VC allocation, which is a strong starting point. The 32.6 million unclaimed airdrop tokens were burned rather than reclaimed – a credibility-building move worth approximately $100 million at the time. Emissions have been cut from 14 million to 6 million annually. The problem is the company operations allocation: 25% of genesis supply with no published vesting schedule. Voorhees self-funded the project, which means no VC overhang, but the company can sell its allocation at any time without constraint. Annual inflation at 7.6% is moderate but not negligible against a $250 million market cap.
+**Supply dynamics (15/20):** Genesis supply was 100 million VVV with no presale or VC allocation, which is a strong starting point. The 32.6 million unclaimed airdrop tokens were burned rather than reclaimed — a credibility-building move worth approximately $100 million at the time. Emissions have been cut five times in 13 months: from 14 million down to 6 million VVV annually (October 2025: 10M → 8M; February 2026: 8M → 6M), a 57% total reduction. Monthly revenue buyback burns have been active since November 2025, creating a genuine two-sided tightening: less new supply entering, existing supply being permanently removed. The problem remains the company operations allocation: 25% of genesis supply with no published vesting schedule. Voorhees self-funded the project, which means no VC overhang, but the company can sell its allocation at any time without constraint. Annual inflation is now approximately 7.6% at the reduced 6M rate, moderate but not negligible against a $250 million market cap.
 
 **Revenue sustainability (12/25):** Venice has 1.3 million registered users and processes 45 billion LLM tokens daily, which represents real product usage at meaningful scale. Warden Protocol alone drives 1.5 million daily chats. The subscription model ($18/month or $149/year) provides predictable revenue, and the API is seeing developer adoption. The concern is that Venice has not disclosed any revenue figures. "Real users" and "growing revenue" are qualitative claims without quantitative backing. The privacy inference market is genuine and growing, but Venice faces competition from emerging alternatives and the sustainability of a roughly six-person operation running infrastructure of this scale is an open question.
 

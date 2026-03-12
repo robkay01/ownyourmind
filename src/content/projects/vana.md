@@ -19,6 +19,7 @@ returnsScoreEvidence:
   revenueSustainability: "Real user adoption for data contribution. Early traction."
   liquidityAccess: "Major CEX. Good initial liquidity. But volume declining."
 publishDate: 2025-03-03
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "vana"
 launchType: "airdrop"
@@ -40,7 +41,7 @@ The encryption model is genuinely strong. Users control their own keys (OpenPGP 
 
 The project started as an MIT Media Lab class project in 2021. Co-founders Anna Kazlauskas (MIT '19, ex-Celo engineer) and Art Abal (Harvard, ex-Appen data collection lead) built the initial prototype in an "Emergent Ventures" course taught by Ramesh Raskar. The operating entity is Corsali Inc dba Open Data Labs (San Francisco), with protocol stewardship by the Vana Foundation (Cayman Islands). Team size is approximately 14. Stephen Boske (ex-Coinbase Associate General Counsel) serves as Head of Legal.
 
-Mainnet launched on 16 December 2024 via Binance Launchpool.
+Mainnet launched on 16 December 2024 via Binance Launchpool. The Capella hard fork followed in July 2025 (block height 4,009,180), delivering higher throughput, improved privacy safeguards, and streamlined tooling for deploying data liquidity pools.
 
 ## Value proposition
 
@@ -48,7 +49,7 @@ The pitch is "own your data." Every day, you generate data that trains AI models
 
 The adoption numbers are real. 1.3 million users, 300-plus DataDAOs, 12 million-plus data points onboarded, and 140,000 Reddit users in r/datadao. The Binance Launchpool listing and CZ joining as advisor (via YZi Labs' strategic investment in February 2025) gave the project significant distribution. These are not testnet-only metrics; the mainnet is live and processing data.
 
-The VRC-20 token standard, introduced in April 2025, creates data-backed tokens with on-chain liquidity. Think of them as ERC-20 tokens but representing verified, privacy-preserving datasets. This is a novel financial primitive. Whether it creates sustainable value remains to be seen.
+The VRC-20 token standard, introduced in April 2025, creates data-backed tokens with on-chain liquidity. Think of them as ERC-20 tokens but representing verified, privacy-preserving datasets. This is a novel financial primitive. Crucially, Vana removed its previous "Top 16" DataDAO restriction — any DataDAO that meets the VRC-20 standard now qualifies for liquidity support, replacing the old emissions-based model with continuous liquidity incentives weighted by trading volume (30%), data contributors (20%), and data access fees (50%). This opens participation considerably. Whether it creates sustainable value remains to be seen.
 
 The counter-narrative is equally clear. VANA traded at $35.23 at launch, briefly becoming one of the highest-profile Binance listings. The current price is $1.45. That is a 95% decline in roughly 14 months. The market is saying that owning your data is a good idea, but the VANA token has not demonstrated why it should capture that value.
 
@@ -75,7 +76,7 @@ Market snapshot: VANA trades at $1.45 with a $44.68 million market cap and $174.
 
 ## How to participate
 
-**Contribute data.** The lowest barrier entry. Install the Data Connect desktop app, connect your accounts (Reddit, Twitter, ChatGPT, LinkedIn, Amazon, Spotify, health platforms), and export your data to a DataDAO. No capital required. Your data is validated via Proof-of-Contribution in TEEs, and you earn proportional rewards based on contribution quality and volume.
+**Contribute data.** The lowest barrier entry. Install the Data Connect desktop app, connect your accounts (Reddit, Twitter, ChatGPT, LinkedIn, Amazon, Spotify, health platforms), and export your data to a DataDAO. No capital required. Your data is validated via Proof-of-Contribution in TEEs, and you earn proportional rewards based on contribution quality and volume. Since the removal of the "Top 16" restriction, any VRC-20 compliant DataDAO qualifies for liquidity support — you are no longer limited to a handful of incubated pools.
 
 **Stake VANA.** Stake tokens via stake.vana.org for approximately 6.18% APY. Non-rebasing position model where rewards compound automatically. Web-based, no hardware required.
 
@@ -97,7 +98,7 @@ The open-source footprint is substantial: 83 repositories on GitHub, multiple re
 
 The Vana Foundation controls the treasury and retains significant influence over protocol direction. Governance tools exist (Tally, Snapshot) but I found no evidence of active on-chain governance votes or meaningful participation metrics during research. For a project that has been on mainnet for 14 months, this gap between governance infrastructure and governance activity is notable.
 
-The economics of individual data contribution are challenging. Your Reddit post history, your Spotify listening data, your ChatGPT conversations; each of these is worth fractions of a cent to an AI model trainer. Meaningful returns require massive collective action through DataDAOs, and the gap between 300-plus DataDAOs established and 16 in active incubation suggests most DataDAOs are dormant or experimental.
+The economics of individual data contribution are challenging. Your Reddit post history, your Spotify listening data, your ChatGPT conversations; each of these is worth fractions of a cent to an AI model trainer. Meaningful returns require massive collective action through DataDAOs. The removal of the Top 16 restriction and the shift to VRC-20 liquidity-based incentives is a genuine improvement — it lowers the barrier for new DataDAOs and replaces a competitive ranking system with merit-based qualification. But it does not solve the fundamental demand-side question: how much are AI companies actually paying for this data? Most of the 300-plus DataDAOs remain dormant or experimental.
 
 **The risk.** Intel TDX dependency for Satya validators creates both supply chain risk and a geographic bottleneck. If Intel changes TDX availability or pricing, the entire data validation layer is affected.
 
@@ -107,7 +108,7 @@ The low circulating supply (25.67%) with 59.81% locked means significant unlock-
 
 The competitive landscape includes [Ocean Protocol](/projects/ocean/) (established data marketplace), Sahara AI (AI data platform with strong VC backing), and centralised incumbents like Scale AI and Appen with existing enterprise relationships.
 
-**My position.** I do not hold VANA. The data sovereignty architecture is genuinely impressive, and I respect the user adoption metrics. But permissioned validators, Foundation-controlled governance, and a 95% price decline tell me the project has not yet delivered on its decentralisation thesis. I would reconsider if the validator set becomes permissionless, if governance participation materialises, and if DataDAO economics demonstrate sustainable returns for contributors.
+**My position.** I do not hold VANA. The data sovereignty architecture is genuinely impressive, and the Capella upgrade plus Top 16 removal show the team is actively improving the network. But permissioned validators, Foundation-controlled governance, and a 95% price decline tell me the project has not yet delivered on its decentralisation thesis. I would reconsider if the validator set becomes permissionless, if governance participation materialises, and if DataDAO economics demonstrate sustainable returns for contributors.
 
 ## Freedom score: 59/100
 
@@ -137,7 +138,7 @@ Three changes would materially increase Vana's score:
 
 VANA scores 55/100 (C grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
-**Token utility (14/20):** VANA has well-structured multi-layered utility. Data DAO staking aligns participants with data pool quality. Governance voting gives token holders protocol influence. Data contribution rewards create a direct link between productive activity and token demand. The staking mechanism (approximately 6.18% APY, non-rebasing) provides a baseline yield for passive holders. The 35,000 VANA requirement for L1 validators creates meaningful demand at the infrastructure level. These are real, functioning utility vectors on a live mainnet – not whitepaper promises. The deduction reflects the fact that individual data contribution rewards are likely modest, and the gap between 300+ DataDAOs established and 16 in active incubation suggests most of the ecosystem is dormant.
+**Token utility (14/20):** VANA has well-structured multi-layered utility. Data DAO staking aligns participants with data pool quality. Governance voting gives token holders protocol influence. Data contribution rewards create a direct link between productive activity and token demand. The staking mechanism (approximately 6.18% APY, non-rebasing) provides a baseline yield for passive holders. The 35,000 VANA requirement for L1 validators creates meaningful demand at the infrastructure level. The July 2025 Capella hard fork improved throughput and privacy, and the removal of the Top 16 restriction means any VRC-20 compliant DataDAO now qualifies for liquidity support — broadening the ecosystem's participation surface. These are real, functioning utility vectors on a live mainnet. The deduction reflects the fact that individual data contribution rewards are likely modest, and most of the 300-plus DataDAOs remain dormant or experimental despite the lowered barriers.
 
 **Value accrual (12/25):** The core mechanism is straightforward: users contribute data, DataDAOs aggregate it, AI companies pay for access, and contributors earn proportional rewards. This is a genuine value creation loop that does not exist in most token economies. The VRC-20 standard creates data-backed tokens with on-chain liquidity, which is a novel financial primitive. However, the model is unproven at scale. DataDex has just $984K in TVL for a chain with 1.3 million users – that is remarkably thin economic activity. The value of any individual's Reddit history or Spotify listening data to an AI model trainer is fractions of a cent. Meaningful value accrual requires massive collective action, and the evidence that this is happening at scale is not yet convincing.
 

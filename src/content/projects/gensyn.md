@@ -5,27 +5,28 @@ category: "compute"
 token: "AI"
 status: "upcoming"
 freedomScore: 5
-returnsScore: 2.4
+returnsScore: 2.8
 returnsScoreBreakdown:
   tokenUtility: 10
   valueAccrual: 6
   supplyDynamics: 6
   revenueSustainability: 2
-  liquidityAccess: 0
+  liquidityAccess: 4
 returnsScoreEvidence:
-  tokenUtility: "Pre-token. Intended for compute payment and staking."
-  valueAccrual: "Pre-mainnet. Mechanism designed but unproven."
-  supplyDynamics: "10B cap with 54.6% insider allocation. Heavy dilution."
+  tokenUtility: "Token distributed but pre-mainnet. Intended for compute payment and staking but no live utility yet."
+  valueAccrual: "Pre-mainnet. Buy-and-burn mechanism designed but unproven."
+  supplyDynamics: "10B cap with 54.6% insider allocation. Heavy dilution risk from April 2027 cliff expiry."
   revenueSustainability: "Pre-mainnet. No revenue yet."
-  liquidityAccess: "No tradeable token exists. Cannot assess liquidity. VC backing suggests future tier-1 listings but nothing is assessable today."
+  liquidityAccess: "Token distributed to sale participants (300M circulating). Listed on CoinGecko but not trading on any exchange. No DEX or CEX pairs. VC backing suggests future tier-1 listings but no liquidity exists today."
 publishDate: 2025-03-02
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "gensyn"
-launchType: "pre-token"
+launchType: "ico"
 chain: "Ethereum L2 (Custom Rollup)"
 supplyType: "capped"
 maxSupply: "10B AI"
-verdict: "Genuine ML research and strong open-source credentials, but pre-mainnet, pre-token, fully team-controlled governance, and 54.6% insider allocation. A credible research bet, not a working infrastructure play."
+verdict: "Genuine ML research and strong open-source credentials, but pre-mainnet with a distributed-but-illiquid token, fully team-controlled governance, and 54.6% insider allocation. A credible research bet, not a working infrastructure play."
 oymHolds: false
 podcastUrl: "/podcast/Own-Your-Mind-014-Gensyn.mp3"
 ---
@@ -42,7 +43,7 @@ The project was co-founded in May 2020 by Ben Fielding (PhD in AI/ML from Northu
 
 Funding totals $66.74 million across four rounds: pre-seed ($1.1M, January 2021), seed ($6.5M, March 2022, led by Eden Block), Series A ($43M, June 2023, led by a16z crypto), and a public token sale ($16.14M, December 2025 via English auction on Sonar, clearing at $473M FDV). Other backers include CoinFund, Protocol Labs, Canonical Crypto, Maven 11 Capital, and Galaxy.
 
-Current status: testnet (Phase 0, launched March 2025). The $AI token generation event is planned for April 2026. No mainnet date has been announced.
+Current status: testnet (Phase 0, launched March 2025). The $AI token sale closed in December 2025, and tokens were distributed to buyers in early 2026, with 300 million tokens (3% of total supply) now in circulation. The token is listed on CoinGecko but is not yet trading on any exchange. No mainnet date has been announced.
 
 ## Value proposition
 
@@ -60,7 +61,7 @@ The ML-specific focus is both a strength and a limitation. General compute netwo
 
 ## Tokenomics
 
-$AI is an ERC-20 token on the Gensyn L2. Total supply: 10 billion. The token has not yet launched; TGE is planned for April 2026.
+$AI is an ERC-20 token on the Gensyn L2. Total supply: 10 billion. The token sale closed in December 2025, with tokens distributed to buyers in early 2026. 300 million tokens (3%) are now in circulation.
 
 Distribution:
 
@@ -76,7 +77,7 @@ The community's direct access is limited: 3% public sale plus 2% testnet rewards
 
 Token utility spans five functions: compute payments, verification staking, Delphi prediction market stakes, governance voting, and a programmatic buy-and-burn mechanism from transaction fees. The buy-and-burn only works if there is revenue to burn, which requires mainnet and real usage.
 
-The public sale used a transparent English auction on Sonar, clearing at $473M FDV ($0.0473 per token). No token is trading on any exchange. No market data exists.
+The public sale used a transparent English auction on Sonar, clearing at $473M FDV ($0.0473 per token). Tokens have been distributed to sale participants and the token is listed on CoinGecko, but as of March 2026 no token is trading on any exchange. No market price, volume, or liquidity data exists.
 
 ## How to participate
 
@@ -86,7 +87,7 @@ The public sale used a transparent English auction on Sonar, clearing at $473M F
 
 **Build.** Contribute to open-source repos (rl-swarm, codeassist, blockassist, rl-swarm-contracts). All MIT licensed. Deploy custom swarms. Publish models to HuggingFace. The documentation is solid, covering protocol design, testnet setup, and product guides. Seven arXiv papers provide deep technical context.
 
-**Wait for mainnet.** Beyond testnet participation, there is no way to earn real economic returns from Gensyn today. No staking, no mainnet compute fees, no token to trade. This is a wait-and-build phase.
+**Wait for mainnet and exchange listings.** Beyond testnet participation, there is no way to earn real economic returns from Gensyn today. The token has been distributed to sale participants but is not trading on any exchange. No staking, no mainnet compute fees, no liquidity. This is still a wait-and-build phase.
 
 ## Honest assessment
 
@@ -96,7 +97,7 @@ The testnet engagement is meaningful. 165,000-plus users and two million models 
 
 The open-source credentials are strong. MIT licence across core repos. 1,699 stars and 639 forks on rl-swarm. Six models published on HuggingFace. The research-to-product pipeline is visible: academic papers become protocol components become testnet features.
 
-**What does not work.** No mainnet. No live token. No revenue. No security audits. The project has raised $66.74 million and has been building for nearly six years. At some point, "still on testnet" stops being patience and starts being a red flag. The TGE is planned for April 2026 and mainnet has no confirmed date.
+**What does not work.** No mainnet. No exchange listings. No revenue. No security audits. The project has raised $66.74 million and has been building for nearly six years. The token has been distributed to sale participants but is not yet trading anywhere. At some point, "still on testnet" stops being patience and starts being a red flag. Mainnet has no confirmed date.
 
 The token distribution is insider-heavy. 54.6% to team and investors is above average for the space. The 40.4% community treasury is controlled by the Foundation, whose council is "initially mapped to core team members." In practice, the team controls the vast majority of tokens at launch.
 
@@ -114,7 +115,7 @@ The $473M FDV prices perfection. The public sale clearing at this valuation mean
 
 No security audits have been published for the smart contracts or protocol, despite $66.74 million in funding and a testnet processing 90 million transactions.
 
-**My position.** I do not hold $AI tokens. The project has not launched a token for public trading. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a hands-on perspective; economic exposure requires a high tolerance for uncertainty.
+**My position.** I do not hold $AI tokens. The token has been distributed to sale participants but is not trading on any exchange, so there is no market exposure to take even if you wanted it. The research depth and technical differentiation are genuine, and I will re-evaluate once mainnet launches and real usage data is available. For now, this is a credible research bet with significant execution, competition, and regulatory risk. Running an RL Swarm node is interesting from a hands-on perspective; economic exposure requires a high tolerance for uncertainty and illiquidity.
 
 ## Freedom score: 52/100
 
@@ -140,19 +141,19 @@ Three changes would materially increase Gensyn's score:
 2. **Implement governance before or at TGE.** Token holders spending real money on $AI tokens should have governance rights from day one. An elected council "initially mapped to core team members" is not decentralisation. Deploying on-chain governance with community-elected council members, proposal submission, and transparent voting before TGE would demonstrate genuine commitment to decentralisation.
 3. **Publish security audits.** $66.74 million in funding, 90 million testnet transactions, and a public token sale, yet no published audit from a recognised firm. Before mainnet handles real economic value, smart contract and protocol audits are essential. This is a straightforward gap to close with available resources.
 
-## Returns score: 24/100
+## Returns score: 28/100
 
-AI scores 24/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+AI scores 28/100 (F grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
-**Token utility (10/20):** There is no live token. The $AI token is planned for April 2026 with intended use cases spanning compute payments, verification staking, Delphi prediction market stakes, governance voting, and a programmatic buy-and-burn mechanism. These are reasonable utility vectors on paper, but none of them can be evaluated in practice because the token does not exist yet. Scoring generously for design intent, but design intent is not utility.
+**Token utility (10/20):** The $AI token has been distributed to sale participants but none of the intended utility is live. Planned use cases span compute payments, verification staking, Delphi prediction market stakes, governance voting, and a programmatic buy-and-burn mechanism. These are reasonable utility vectors on paper, but none of them can be evaluated in practice because the mainnet does not exist yet. Scoring generously for design intent, but design intent is not utility.
 
-**Value accrual (8/25):** The buy-and-burn mechanism from transaction fees is the primary value accrual path, and it is a sensible design – protocol revenue destroys token supply, creating deflationary pressure proportional to network usage. The problem is obvious: there is no mainnet, no transactions, and therefore no revenue to burn. The mechanism is designed but entirely unproven. Until real compute workloads generate real fees on a live network, this is a whiteboard exercise priced at $473M FDV.
+**Value accrual (6/20):** The buy-and-burn mechanism from transaction fees is the primary value accrual path, and it is a sensible design — protocol revenue destroys token supply, creating deflationary pressure proportional to network usage. The problem is obvious: there is no mainnet, no transactions, and therefore no revenue to burn. The mechanism is designed but entirely unproven. Until real compute workloads generate real fees on a live network, this is a whiteboard exercise priced at $473M FDV.
 
-**Supply dynamics (6/20):** Ten billion tokens with 54.6% allocated to insiders (29.6% investors plus 25% team). The 12-month cliff and 24-month linear unlock provide meaningful short-term protection, and locked tokens cannot be staked, which prevents insiders from compounding their position during the lockup. But once the cliff expires around April 2027, two years of continuous insider selling pressure begins. The community's direct access is just 5% of total supply. The 40.4% community treasury sounds generous until you realise the Foundation, which is initially team-aligned, controls it.
+**Supply dynamics (6/20):** Ten billion tokens with 54.6% allocated to insiders (29.6% investors plus 25% team). The 12-month cliff and 24-month linear unlock provide meaningful short-term protection, and locked tokens cannot be staked, which prevents insiders from compounding their position during the lockup. But once the cliff expires around January 2027, two years of continuous insider selling pressure begins. The community's direct access is just 5% of total supply. The 40.4% community treasury sounds generous until you realise the Foundation, which is initially team-aligned, controls it.
 
-**Revenue sustainability (2/20):** Zero revenue. Zero mainnet. Zero live token. The litepaper projected V100-equivalent pricing at $0.40 per hour (80% cheaper than AWS), which would be compelling if it existed. The testnet has trained two million models, but those are 0.5B-1.5B parameter Qwen variants on a free network – not paying customers. Revenue sustainability cannot be assessed for a project that has generated precisely no revenue in nearly six years of existence.
+**Revenue sustainability (2/20):** Zero revenue. Zero mainnet. The token exists but generates no economic activity. The litepaper projected V100-equivalent pricing at $0.40 per hour (80% cheaper than AWS), which would be compelling if it existed. The testnet has trained two million models, but those are 0.5B-1.5B parameter Qwen variants on a free network — not paying customers. Revenue sustainability cannot be assessed for a project that has generated precisely no revenue in nearly six years of existence.
 
-**Liquidity and access (14/15):** This scores high not because liquidity exists – there is no tradeable token – but because the setup for future liquidity is strong. a16z-led Series A, $66.74M total funding, public sale on Sonar clearing at $473M FDV, and the calibre of backers (CoinFund, Protocol Labs, Galaxy) virtually guarantees tier-1 exchange listings at TGE. The 3% public sale via transparent English auction was a fair mechanism for the tokens it covered. When the token launches, access will not be the problem. Whether the price justifies the entry will be.
+**Liquidity and access (4/15):** The token has been distributed to sale participants and is listed on CoinGecko, but as of March 2026 it is not trading on any exchange — no CEX listings, no DEX pairs, no market price. Token holders cannot sell. The setup for future liquidity is strong: a16z-led Series A, $66.74M total funding, and the calibre of backers (CoinFund, Protocol Labs, Galaxy) suggests tier-1 exchange listings will follow. The 3% public sale via transparent English auction was a fair mechanism for the tokens it covered. But liquidity that does not exist yet cannot score highly, regardless of how likely it is to materialise.
 
 ### Path to improvement
 

@@ -19,6 +19,7 @@ returnsScoreEvidence:
   revenueSustainability: "1B+ Knowledge Assets, enterprise partnerships (Walmart, Oracle, BSI, GS1). Revenue unquantified – no public dashboard."
   liquidityAccess: "Coinbase, Kraken, KuCoin, Bitstamp, Crypto.com, Bitget, Gate.io. $5M daily volume. No Binance. Good tier-1 coverage."
 publishDate: 2025-03-06
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "origintrail"
 launchType: "ico"
@@ -40,7 +41,7 @@ The network uses semantic web standards: RDF (Resource Description Framework), S
 
 Two node types operate the network. **DKG Core Nodes** provide the infrastructure – they store Knowledge Assets, respond to queries, and earn publishing fees. They require a 50,000-5,000,000 TRAC stake. **DKG Edge Nodes** (introduced in V8) are lightweight nodes for phones, laptops, and IoT devices.
 
-V8, launched on mainnet in June 2025, claims 1,000x throughput improvement over V6, which peaked at 100,000 Knowledge Assets per day.
+V8 launched on mainnet in June 2025, with V8.1.0 following on 23 June 2025 bringing the Random Sampling proof system live across all chains. Random Sampling replaces the previous per-asset on-chain proof model with epoch-based randomised challenges — Core Nodes submit a proof within a short window (e.g. 30 minutes) in response to a random challenge, rather than proving every asset individually. This reduces on-chain transactions by orders of magnitude and delivers a verified 100x+ throughput improvement over V6, which peaked at 100,000 Knowledge Assets per day. Batch minting now enables hundreds of Knowledge Assets in a single transaction. The network has continued iterating through V8.2.x releases, with V8.2.5 shipping in December 2025.
 
 The network operates across three chains: **NeuroWeb** (a Polkadot parachain with its own NEURO governance token), **Base** (Coinbase's L2), and **Gnosis** chain. TRAC is an ERC-20 on Ethereum.
 
@@ -56,7 +57,7 @@ Large language models hallucinate. AI systems are only as good as the data they 
 
 The enterprise traction is real. Walmart awarded OriginTrail for food safety traceability. Oracle integrated with their blockchain cloud service. The British Standards Institution (BSI) has Dan Purtell on the advisory board. OriginTrail is a member of the GS1 Global EPCIS & CBV 2.0 Working Group – the international standard for supply chain data exchange. These are not partnership announcements – these are integrations with enterprise data standards bodies.
 
-Over 1 billion Knowledge Assets have been created across the network. V8 targets 1,000x throughput improvement over V6, which could enable real-time AI data ingestion at scale.
+Over 1 billion Knowledge Assets have been created across the network. V8.1's Random Sampling proof system has delivered a verified 100x+ throughput improvement over V6, with the architecture designed to scale further towards 1,000x as network usage grows.
 
 The counter-narrative: **revenue is a black box.** Publishing fees are paid in TRAC and distributed to node operators – this is real revenue from real usage, not inflationary rewards. But the total amount is not publicly tracked. There is no dashboard, no DeFiLlama listing, no way to assess whether the 1 billion Knowledge Assets translate to meaningful economic activity. Enterprise partnerships are named but the depth and ongoing revenue from each is unclear.
 
@@ -76,6 +77,8 @@ ICO investors who bought at $0.10 are at approximately 3.5x ROI after eight year
 
 Staking requires 50,000 TRAC minimum for Core Nodes (maximum 5 million) and supports delegated staking up to 2 million TRAC per node. Critically, **staking rewards come from publishing fees, not inflation**. This is real yield – when someone publishes a Knowledge Asset, they pay TRAC, and that TRAC is distributed to the nodes storing and serving that asset. There is no fixed APY because returns depend on network usage. Rewards auto-compound.
 
+V8.1 introduced automated TRAC reward distribution to delegators — rewards are now distributed via the Random Sampling proof system without manual claiming. The entire staking system runs natively on V8 infrastructure, and the Staking Dashboard has been upgraded with Node Power and Node Health metrics. The system remains fully non-custodial: delegated tokens are locked in DKG smart contracts, not controlled by node operators.
+
 Unbonding is 28 days on Gnosis and Base, and just 5 minutes on NeuroWeb.
 
 TRAC trades at approximately $0.35 with a market cap around $175 million. Daily volume approximately $5 million. Listed on Coinbase, Kraken, KuCoin, Bitstamp, Crypto.com, Bitget, Gate.io, and HTX. Not on Binance.
@@ -84,7 +87,7 @@ TRAC trades at approximately $0.35 with a market cap around $175 million. Daily 
 
 **Run a DKG Core Node.** Stake 50K-5M TRAC. Store and serve Knowledge Assets. Earn publishing fees from knowledge asset creators. Available on NeuroWeb, Base, and Gnosis. Technical skill: intermediate. Capital requirement: ~$16,000+ at current prices for minimum stake.
 
-**Delegate TRAC.** Stake to existing Core Node operators without running your own node. Maximum 2M TRAC delegation per node. Share in publishing fee rewards. 28-day unbonding on Gnosis/Base, 5 minutes on NeuroWeb. Technical skill: basic.
+**Delegate TRAC.** Stake to existing Core Node operators without running your own node. Maximum 2M TRAC delegation per node. Share in publishing fee rewards — V8.1 automates reward distribution, eliminating manual claiming. 28-day unbonding on Gnosis/Base, 5 minutes on NeuroWeb. Technical skill: basic.
 
 **Build on the DKG.** Publish Knowledge Assets, query the knowledge graph via SPARQL, integrate with AI systems via ChatDKG or elizagraph (ElizaOS integration). SDKs in JavaScript and Python. Technical skill: advanced.
 
@@ -94,7 +97,7 @@ TRAC trades at approximately $0.35 with a market cap around $175 million. Daily 
 
 OriginTrail is one of the most mature open-source projects in DeAI with genuine data sovereignty features, but governance and privacy gaps exist.
 
-**Infrastructure Decentralisation: 12/20.** DKG Core Nodes distributed globally – anyone can run one with 50K TRAC. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides redundancy. V8 Edge Nodes extend to lightweight devices. However, exact active node count is not publicly available. NeuroWeb depends on Polkadot parachain slot. Trace Labs controls protocol development.
+**Infrastructure Decentralisation: 12/20.** DKG Core Nodes distributed globally – anyone can run one with 50K TRAC. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides redundancy. V8 Edge Nodes extend to lightweight devices. V8.1's Random Sampling proof system has meaningfully improved network scalability — on-chain proof requirements reduced by orders of magnitude. However, exact active node count is not publicly available. NeuroWeb depends on Polkadot parachain slot. Trace Labs controls protocol development.
 
 **Governance Decentralisation: 8/20.** NeuroWeb has Polkadot-style parachain governance via NEURO token. TRAC governance for the DKG protocol is less documented. RFC repository exists but formal governance process is unclear. Development decisions controlled by Trace Labs.
 
@@ -108,7 +111,7 @@ OriginTrail is one of the most mature open-source projects in DeAI with genuine 
 
 ### Returns Score: 65/100 (C)
 
-**Token Utility: 16/20.** TRAC is structurally essential – required for publishing Knowledge Assets (fee payment), node staking (50K-5M), delegated staking, and data integrity collateral. You cannot use the DKG without TRAC. Multi-chain deployment expands utility surfaces. Strong utility design with genuine usage requirements.
+**Token Utility: 16/20.** TRAC is structurally essential – required for publishing Knowledge Assets (fee payment), node staking (50K-5M), delegated staking, and data integrity collateral. You cannot use the DKG without TRAC. Multi-chain deployment expands utility surfaces. V8.1's Random Sampling and automated reward distribution have reduced friction for delegators, strengthening the staking utility loop. Strong utility design with genuine usage requirements.
 
 **Value Accrual: 13/20.** Publishing fees paid in TRAC are distributed to node operators – a direct utility-based accrual mechanism. Staking rewards from real network usage, not inflation. One of the few genuine real-yield models in DeAI. Score limited because total fee revenue is not publicly tracked and there is no burn mechanism.
 
@@ -127,7 +130,7 @@ OriginTrail sits in Quadrant B/C – a unique category play with genuine enterpr
 - **Revenue is a black box.** Publishing fees exist but total revenue is not tracked publicly. Impossible to assess sustainability without data.
 - **Small developer community.** 10 contributors to core limits development velocity.
 - **Token down 90% from ATH.** Despite positive ICO ROI, market enthusiasm has waned.
-- **DKG V8 contracts not audited.** Major firm audit gap for a protocol handling verifiable data.
+- **DKG V8 contracts not audited by a major firm.** The protocol has iterated through V8.2.5 without a published audit from a recognised firm — a growing gap given the value locked in staking contracts.
 - **Narrative pivot fatigue.** Supply chain (2018) → Web3 (2021) → AI (2025). Legitimate evolution or searching for fit?
 - **Knowledge graph adoption is niche.** Decentralised knowledge graphs compete with centralised alternatives (Google, Neo4j) that have larger ecosystems.
 - **No Binance listing.** Limits retail discovery and liquidity.

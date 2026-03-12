@@ -19,6 +19,7 @@ returnsScoreEvidence:
   revenueSustainability: "No external revenue. Entirely emission-driven. Subnets compete for emissions."
   liquidityAccess: "Binance, Coinbase, Kraken. $100M+ daily volume. Highly liquid."
 publishDate: 2025-03-02
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "bittensor"
 launchType: "mining"
@@ -54,7 +55,7 @@ For developers, the value is infrastructure. Build a subnet for any AI task, att
 
 TAO has a fixed supply cap of 21 million, mirroring Bitcoin's design. The first halving completed on 14 December 2025, cutting emissions from 1 TAO/block (~7,200/day) to 0.5 TAO/block (~3,600/day). Current inflation is approximately 12-13% annually. Circulating supply is ~10.7M TAO (~51% of max).
 
-Dynamic TAO (dTAO), launched February 2025, replaced the Root Network validator oligarchy with market-driven emission allocation. Each subnet now has its own alpha token traded against TAO in an on-chain AMM. Stakers vote with their TAO by depositing into subnets they believe produce value. Emission allocation follows an 86.8-day EMA of net staking flows.
+Dynamic TAO (dTAO), launched February 2025, replaced the Root Network validator oligarchy with market-driven emission allocation. Each subnet now has its own alpha token traded against TAO in an on-chain AMM. Stakers vote with their TAO by depositing into subnets they believe produce value. The original dTAO allocated emissions based on subnet alpha token prices, but in November 2025 this was replaced by the Tao Flow model, which allocates emissions based on net TAO inflows (staking minus unstaking) rather than token prices. This eliminated structural advantages favouring larger subnets and closed gaming strategies where projects could inflate prices to harvest emissions. Allocation follows an 86.8-day EMA of net staking flows, with subnets experiencing net outflows receiving zero emissions.
 
 The emission split is fixed at 41/41/18 between miners, validators and subnet owners.
 
@@ -78,7 +79,7 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 ## Honest assessment
 
-**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real: Grayscale filed for a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
+**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy, and the Tao Flow emissions upgrade (November 2025) closed gaming vectors in the original price-based model. MEV Shield (December 2025) introduced an encrypted mempool that prevents front-running and sandwich attacks — transactions are encrypted until block inclusion, and it is enabled by default in the CLI and SDK. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real: Grayscale launched a Bittensor Trust (GTAO) and filed an S-1 to convert it into a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
 
 **What does not work yet.** The barrier to entry for mining is high and getting higher. Competitive subnets require serious hardware investment with no guarantee of returns. Most subnets have not demonstrated output quality exceeding centralised alternatives. Academic analysis shows stake weight drives rewards more than AI output quality.
 
@@ -100,9 +101,9 @@ Bittensor scores 56/100 (C grade). Full methodology at [Freedom Score Methodolog
 
 **Token distribution (8/15):** Fair launch technically (no ICO, no pre-mine). But 5.38M TAO mined 2021-2023 with limited participants. Gini ~0.98.
 
-**Censorship resistance (8/15):** Permissionless subnets. No content policy. But OTF controls block production, halted the network in July 2024, and intervened in SN28.
+**Censorship resistance (8/15):** Permissionless subnets. No content policy. MEV Shield (December 2025) encrypts transactions until block inclusion, preventing front-running. But OTF controls block production, halted the network in July 2024, and intervened in SN28.
 
-**Data sovereignty (10/15):** Local miner execution, self-custodial wallets, no platform surveillance. But coldkey exposure on every operation, no ZK on inference.
+**Data sovereignty (10/15):** Local miner execution, self-custodial wallets, no platform surveillance. MEV Shield adds transaction privacy in the mempool. But coldkey exposure on every operation, no ZK on inference.
 
 **Open source transparency (9/15):** MIT licence, 64 public repos, active development. But no security audit, no bug bounty, opaque early distribution, OTF finances undisclosed.
 
@@ -120,13 +121,13 @@ TAO scores 63/100 (C grade). Full methodology at [Returns Score Methodology](/re
 
 **Token utility (17/20):** TAO is structurally essential to every layer of the network. Miners and validators must stake TAO to participate. Registering on popular subnets requires burning TAO, creating a direct cost barrier that ties network growth to token demand. dTAO alpha tokens create a market-based allocation mechanism where stakers vote with capital on which subnets deserve emissions. Governance participation requires stake. The token is not an optional add-on – without TAO, the entire incentive architecture collapses.
 
-**Value accrual (14/25):** Staking TAO earns emissions from the subnets you back, and dTAO creates market-driven pricing for subnet access. Root staking yields 14-20% nominal APY; subnet staking can exceed 80% but carries alpha token price risk. The weakness is that there is no direct fee distribution mechanism. No compute fees, no inference fees, no protocol revenue flows back to holders. Value accrual is entirely through emissions and subnet alpha token appreciation. Academic research showing stake weight (0.50-0.80 correlation) drives rewards more than output quality (0.10-0.30) suggests the system rewards capital concentration over productive contribution.
+**Value accrual (14/25):** Staking TAO earns emissions from the subnets you back, and the Tao Flow model (replacing dTAO's original price-based allocation) creates flow-driven pricing for subnet access. Root staking yields 14-20% nominal APY; subnet staking can exceed 80% but carries alpha token price risk. The weakness is that there is no direct fee distribution mechanism. No compute fees, no inference fees, no protocol revenue flows back to holders. Value accrual is entirely through emissions and subnet alpha token appreciation. Academic research showing stake weight (0.50-0.80 correlation) drives rewards more than output quality (0.10-0.30) suggests the system rewards capital concentration over productive contribution.
 
 **Supply dynamics (18/20):** This is TAO's standout dimension. The Bitcoin-modelled tokenomics – 21 million hard cap, halving completed in December 2025, fair launch with no ICO or pre-mine – give it the cleanest scarcity narrative in the DeAI space. Post-halving emissions of approximately 3,600 TAO per day represent roughly 12-13% annual inflation against circulating supply, which is moderate and declining. Registration burns recycle TAO back to the emission pool rather than destroying it permanently, so the burn is not deflationary in the traditional sense, but it does create friction that regulates network growth.
 
 **Revenue sustainability (5/20):** This is the critical gap. Bittensor generates zero external revenue. The entire economic model runs on emissions. Subnets compete for a share of daily TAO emissions, not for customer payments. Chutes processes billions of tokens daily and Gradients claims to be cheaper than Google Cloud, but neither generates revenue that flows back to the protocol. Until subnets develop independent revenue streams that supplement or replace emissions, TAO's economic model is a closed loop where miners and validators earn tokens funded by inflation, not by external demand for AI services.
 
-**Liquidity and access (14/15):** TAO has the deepest liquidity in the DeAI space. Listed on Binance, Coinbase, Kraken and other major exchanges, with daily volume consistently exceeding $100 million. A Grayscale spot ETF filing and DCG's dedicated Yuma subsidiary add institutional-grade access. You can enter or exit a substantial position without moving the market. For a sector plagued by thin liquidity, this is a genuine competitive advantage.
+**Liquidity and access (14/15):** TAO has the deepest liquidity in the DeAI space. Listed on Binance, Coinbase, Kraken and other major exchanges, with daily volume consistently exceeding $100 million. A Grayscale Bittensor Trust (GTAO) — with an S-1 filed to convert it into a spot ETF — and DCG's dedicated Yuma subsidiary add institutional-grade access. You can enter or exit a substantial position without moving the market. For a sector plagued by thin liquidity, this is a genuine competitive advantage.
 
 ### Path to improvement
 

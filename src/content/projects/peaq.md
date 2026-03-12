@@ -5,26 +5,27 @@ category: "other"
 token: "PEAQ"
 status: "active"
 freedomScore: 5
-returnsScore: 4.7
+returnsScore: 4.8
 returnsScoreBreakdown:
   tokenUtility: 15
   valueAccrual: 9
-  supplyDynamics: 9
+  supplyDynamics: 10
   revenueSustainability: 8
   liquidityAccess: 6
 returnsScoreEvidence:
   tokenUtility: "Gas fees, staking (DPoS/NPoS), governance, machine identity registration, M2M payments. Token structurally essential to chain. 60+ DePINs use PEAQ."
-  valueAccrual: "Transaction fees in PEAQ. 40% of inflation to validators. No fee distribution to non-stakers. No burn. $163.6K annualised fees – negligible accrual."
-  supplyDynamics: "No max supply. 3.5% inflation decreasing 10%/year to 1%. 44.3% circulating. 45% insider allocation. Well-structured but ongoing dilution."
+  valueAccrual: "Transaction fees in PEAQ. 40% of inflation to validators. No fee distribution to non-stakers. $163.6K annualised fees – negligible accrual. VEO programme channels 10% of proceeds to MachineX liquidity."
+  supplyDynamics: "No max supply. Inflation started at 3.5%, now ~3.15% (Year 2 scheduled disinflation of 10%/year to 1%). 44.3% circulating. 45% insider allocation. VEO programme channels early investor exits through vested discounted sales. Well-structured but ongoing dilution."
   revenueSustainability: "Real usage: 40.4M Q3 transactions, 60+ DePINs, enterprise partners (NTT, Airbus, Bosch). But only $163.6K annualised fees. Activity without monetisation."
   liquidityAccess: "Kraken, KuCoin, Gate.io, MEXC, Bitget, Crypto.com. $1.18M daily volume. No Binance main listing. Adequate for small positions."
 publishDate: 2025-03-06
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "peaq-2"
 launchType: "ico"
 chain: "Polkadot parachain (Substrate)"
 supplyType: "uncapped"
-maxSupply: "No max supply (3.5% inflation, decreasing 10%/year to 1%)"
+maxSupply: "No max supply (~3.15% inflation in Year 2, decreasing 10%/year to 1%)"
 verdict: "A well-engineered Machine Economy L1 with 60+ DePINs and enterprise partnerships, but $163.6K annualised revenue tells you the market is not paying for it yet."
 oymHolds: false
 podcastUrl: "/podcast/Own-Your-Mind-007-Peaq.mp3"
@@ -99,7 +100,7 @@ The broader question is whether the Machine Economy needs a specialised L1 at al
 
 ## Tokenomics
 
-PEAQ launched with a genesis supply of 4.2 billion tokens. There is **no maximum supply** – the model is disinflationary with 3.5% annual inflation, decreasing by 10% each year until it stabilises at 1% (approximately 12 years post-launch). This is a thoughtfully designed emission schedule.
+PEAQ launched with a genesis supply of 4.2 billion tokens. There is **no maximum supply** – the model is disinflationary, starting at 3.5% annual inflation and decreasing by 10% each year until it stabilises at 1% (approximately 12 years post-launch). The first scheduled disinflation has already occurred, putting the current rate at approximately 3.15% in Year 2. This is a thoughtfully designed emission schedule.
 
 Funding totalled approximately $24.9 million across rounds: pre-seed (EUR 750K, October 2020), seed (EUR 2.5M, June 2021), second seed ($6M led by Fundamental Labs, June 2022), and Series A ($15M led by Generative Ventures and Borderless Capital, March 2024). Investors include Spartan Group, HV Capital, CMCC Global, Animoca Brands, and Moonrock Capital.
 
@@ -123,6 +124,8 @@ PEAQ trades at approximately $0.015 with a market cap around $28.6 million and F
 
 Staking is DPoS/NPoS with APY ranging 5-15% depending on total staked. Slashing exists for validator misbehaviour.
 
+**Vested Emission Offerings (VEOs).** In mid-2025, peaq launched a VEO programme through Lucid Finance's platform. Early investors can offer portions of their vested tokens at a 12.5% discount to market price with a 3-month linear vesting schedule. Participating investors commit approximately 10% of proceeds as an in-kind contribution to the peaq Foundation, which channels these funds into MachineX (peaq's DEX) to strengthen ecosystem liquidity. All transactions execute on-chain through smart contracts — no backroom deals. The programme sold out five VEOs worth $306,100 in its first month, with $500,000 in total vested PEAQ made available, and a second round of 2.8M+ tokens followed. This is a sensible mechanism: it gives early investors a structured exit route while preventing the sudden dumps that kill token prices, and it channels real liquidity into the ecosystem. Whether it materially affects sell pressure at scale remains to be seen.
+
 Listed on Kraken, KuCoin, Gate.io, MEXC, Bitget, Crypto.com, Coinone, and others. Notably on Binance Alpha only (not the main exchange). Daily volume around $1.18 million.
 
 ## How to participate
@@ -141,7 +144,7 @@ peaq is a well-engineered open-source L1 but with centralised control dynamics a
 
 **Infrastructure Decentralisation: 12/20.** Polkadot parachain with DPoS/NPoS. Secured by Relay Chain validators. 49K TPS achieved. However, parachain dependency means peaq is not independently sovereign – its liveness depends on maintaining a Polkadot slot. Collator set size and distribution not documented. Enterprise focus suggests some centralisation in key relationships.
 
-**Governance Decentralisation: 9/20.** Standard Substrate governance module with on-chain proposals and voting. Functional governance mechanism. However, 45% insider allocation concentrates voting power. EoT Labs GmbH controls development direction. Governance participation data not available.
+**Governance Decentralisation: 9/20.** peaq has published a four-phase governance roadmap: (1) Foundation era at genesis with pools dormant; (2) committee on-chain governance via a six-member council operating within strict parameters (current phase); (3) community committee inclusion where token holders gradually gain voting rights; (4) fully decentralised on-chain governance where PEAQ holders control proposals, voting, and parameter changes directly. The roadmap is credible and well-structured, but peaq is still in phase 2 — a six-member council with undisclosed identities making decisions on behalf of the Foundation. The 45% insider allocation concentrates voting power. Score reflects current state, not the destination.
 
 **Token Distribution Fairness: 5/15.** 45% insider allocation: Core Team 11.5% + EoT Labs 8.5% + Pre-Seed 7% + Seed 5% + Private Sale 13%. Community-accessible allocation is approximately 21% (Community Initiatives 15% + Launchpad 6%). Ecosystem & Treasury (20%) is team-controlled. Only 44.3% circulating after 16 months.
 
@@ -151,13 +154,13 @@ peaq is a well-engineered open-source L1 but with centralised control dynamics a
 
 **Open Source Transparency: 11/15.** 97 public GitHub repos with active development. Core chain is 98.3% Rust. CertiK audit scored 97.96/100. SRL audit completed. SDKs in JS, Python, Rust all open source. Good transparency. Score limited because SRL audit reports are not publicly readable from repos.
 
-## Returns Score: 47/100
+## Returns Score: 48/100
 
 **Token Utility: 15/20.** PEAQ is used for gas fees, staking (DPoS/NPoS), governance, machine identity registration, and M2M payments. The token is structurally essential to the chain – 60+ DePINs use it for operations. Strong multi-utility design with real ecosystem usage.
 
-**Value Accrual: 9/20.** Transaction fees paid in PEAQ (gas). 40% of inflation distributed to validators and delegators. 20% of inflation to DePIN Incentive Pool. No fee distribution to non-staking holders. No burn mechanism. With only $163.6K annualised fees, fee-based accrual is negligible. Value accrual is primarily through staking inflation, not protocol revenue.
+**Value Accrual: 9/20.** Transaction fees paid in PEAQ (gas). 40% of inflation distributed to validators and delegators. 20% of inflation to DePIN Incentive Pool. No fee distribution to non-staking holders. The VEO programme channels 10% of early investor exit proceeds into MachineX DEX liquidity, which is a modest but genuine accrual mechanism. With only $163.6K annualised fees, fee-based accrual is negligible. Value accrual remains primarily through staking inflation, not protocol revenue.
 
-**Supply Dynamics: 9/20.** No max supply but well-structured disinflationary model: 3.5% annual inflation decreasing by 10% per year to 1%. 44.3% circulating after 16 months is reasonable progress. Insider vesting is documented with cliffs and linear schedules. No burn mechanism. Score reflects thoughtful emission design but meaningful inflation ongoing and 55.7% of genesis supply still locked.
+**Supply Dynamics: 10/20.** No max supply but well-structured disinflationary model: inflation started at 3.5% and has already decreased to approximately 3.15% via the scheduled 10% annual reduction, trending toward 1% over 12 years. 44.3% circulating after 16 months is reasonable progress. Insider vesting is documented with cliffs and linear schedules. No verified burn mechanism despite some third-party claims of partial fee burns. The VEO programme through Lucid Finance manages early investor exits through discounted vested sales (12.5% discount, 3-month vesting), channelling 10% of proceeds into ecosystem liquidity — a practical supply management tool, though it does not reduce total supply. Score reflects the scheduled disinflation, VEO programme, and thoughtful emission design, but meaningful inflation is ongoing and 55.7% of genesis supply remains locked.
 
 **Revenue Sustainability: 8/25.** Real usage exists – 40.4 million transactions in Q3 2025, 60+ DePINs, 6M+ machines and people on-chain. Enterprise partnerships (NTT, Continental, Airbus, Bosch) suggest commercial traction. But monetisation is minimal: $163.6K annualised fees does not cover chain operating costs. Revenue does not come close to covering emissions. Early-stage activity without sustainable monetisation.
 

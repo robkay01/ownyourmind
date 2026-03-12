@@ -5,27 +5,28 @@ category: "compute"
 token: "IO"
 status: "active"
 freedomScore: 4
-returnsScore: 4.9
+returnsScore: 5.4
 returnsScoreBreakdown:
   tokenUtility: 12
-  valueAccrual: 6
-  supplyDynamics: 8
+  valueAccrual: 9
+  supplyDynamics: 10
   revenueSustainability: 15
   liquidityAccess: 8
 returnsScoreEvidence:
-  tokenUtility: "Payment for compute, staking for providers. But centralized platform."
-  valueAccrual: "Unclear mechanism. Platform takes fees but how much flows to token?"
-  supplyDynamics: "800M cap. Significant insider allocation. Inflation through rewards."
-  revenueSustainability: "$20M+ annualized revenue. Real customers."
-  liquidityAccess: "Binance listing. But volume has declined significantly since launch."
+  tokenUtility: "Payment for compute, staking for providers. But centralised platform."
+  valueAccrual: "IDE introduces dual-vault buyback-and-burn. Well-designed but not yet implemented."
+  supplyDynamics: "IDE targets 50% reduction of remaining 300M emissions. Announced Dec 2025, planned Q2 2026."
+  revenueSustainability: "$20M+ annualised revenue. Real customers."
+  liquidityAccess: "Binance listing. Volume improved but still thin relative to market cap."
 publishDate: 2025-03-02
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "io"
 launchType: "ico"
 chain: "Solana"
 supplyType: "capped"
 maxSupply: "800M IO"
-verdict: "Real revenue and growing compute delivery, but closed-source core, no governance, founder scandal, and inflated GPU metrics. A centralised GPU marketplace with a token, not a decentralised protocol."
+verdict: "Real revenue and growing compute delivery. IDE tokenomics overhaul (announced Dec 2025) would improve value capture if implemented. But closed-source core, no governance, and inflated GPU metrics persist. A centralised GPU marketplace with a token, not a decentralised protocol."
 oymHolds: false
 podcastUrl: "/podcast/Own-Your-Mind-010-Ionet.mp3"
 ---
@@ -56,11 +57,11 @@ io.net's positioning is stuck in between: not decentralised enough to win on the
 
 ## Tokenomics
 
-IO is an SPL token on Solana. Max supply: 800 million. Circulating supply: approximately 298 million (37.3%) as of March 2026. The remaining tokens unlock through emissions and vesting schedules running to 2028.
+IO is an SPL token on Solana. Max supply: 800 million. Circulating supply: approximately 301 million (37.7%) as of March 2026. The remaining tokens unlock through emissions and vesting schedules running to 2028.
 
 Distribution:
 
-- **Emissions (GPU supplier and staker rewards):** 37.5% (300M IO, distributed hourly over 20 years, disinflationary starting at 8% annual rate, decreasing roughly 1% per month)
+- **Emissions (GPU supplier and staker rewards):** 37.5% (300M IO, originally distributed hourly over 20 years, disinflationary starting at 8% annual rate, decreasing roughly 1% per month — now transitioning to monthly emission epochs)
 - **R&D and Ecosystem:** 16.0% (30% unlocked at TGE, linear vest over 35 months from January 2025)
 - **Seed investors:** 12.5% (13-month cliff, then linear vest over 23 months; unlocks began July 2025)
 - **Core contributors (team):** 11.3% (13-month cliff, then linear vest over 35 months; unlocks began July 2025)
@@ -69,11 +70,20 @@ Distribution:
 
 Insider allocation (seed plus team plus Series A) totals roughly 34%. The Binance Launchpool provided broad initial distribution, and 50% of total supply is earmarked for community over time, but the "community" emissions primarily benefit GPU suppliers, not passive token holders.
 
-The burn mechanism: at least 50% of platform revenue (collected in IO tokens) is permanently burned after GPU suppliers are paid. All slashed tokens are also burned. At the current annualised revenue of roughly $20 million, that means approximately $10 million of buy pressure against hundreds of millions in unlocking insider tokens. The maths does not favour holders in the near term.
+**IDE tokenomics overhaul (announced December 2025).** io.net announced the Incentive Dynamic Engine (IDE), a significant restructure of how emissions and revenue flow through the token. The core changes:
 
-Market snapshot: IO trades at $0.108 with a $32 million market cap and $86 million FDV. That is 98% below the all-time high of $6.43, set on 12 June 2024, the day after listing. The all-time low of $0.092 was hit in February 2026. Listed on Binance, Coinbase, Gate, Bybit, KuCoin, WhiteBIT and others.
+- **Demand-driven emissions:** Replaces the fixed disinflationary schedule with a system that adjusts rewards based on actual network demand. Suppliers earn more when the network is busy, less when it is not. This is a meaningful shift from "pay GPUs to exist" to "pay GPUs to work."
+- **Dual-vault mechanism:** A Reward Vault funds supplier incentives. A Fee Vault collects platform revenue. The separation creates clearer accounting between emission subsidies and earned revenue.
+- **50% buyback-and-burn of revenue:** Half of all platform revenue collected in the Fee Vault is used to buy IO on the open market and permanently burn it. This replaces the previous, vaguer burn mechanism with a structured, auditable flow.
+- **Target 50% supply reduction:** The IDE targets reducing the remaining 300 million emission pool by half — effectively cutting long-term dilution from 300 million tokens to 150 million. If implemented, this materially changes the supply trajectory.
 
-The token was valued at $1 billion at the Series A. Current FDV: $86 million. Investors who bought at that valuation are deeply underwater.
+Implementation is planned for Q2 2026. As of March 2026, the IDE remains an announcement, not a deployed system. The documentation has been updated to reflect the monthly emission epoch transition, but the dual-vault and demand-driven mechanisms are not yet live. The design is sound on paper — demand-driven emissions plus structured burns plus supply reduction is exactly what the token needed. But io.net has a track record of bold announcements followed by delayed or modified execution. Score this based on what is deployed, not what is promised.
+
+The existing burn mechanism (at least 50% of platform revenue permanently burned) continues to operate. At the current annualised revenue of roughly $20 million, that means approximately $10 million of annual buy pressure against insider unlocks. If the IDE's enhanced burn mechanism and supply reduction go live, the maths shifts considerably in holders' favour.
+
+Market snapshot: IO trades at $0.115 with a $35 million market cap and $92 million FDV. That is 98% below the all-time high of $6.43, set on 12 June 2024, the day after listing. The all-time low of $0.092 was hit in February 2026. Listed on Binance, Coinbase, Gate, Bybit, KuCoin, WhiteBIT and others.
+
+The token was valued at $1 billion at the Series A. Current FDV: $92 million. Investors who bought at that valuation are deeply underwater.
 
 ## How to participate
 
@@ -99,7 +109,7 @@ io.net achieved SOC 2 compliance, which covers organisational security controls 
 
 **The risk.** The founder risk has already materialised. Ahmad Shadid departed under a cloud and his subsequent project O.XYZ also faced misrepresentation allegations. Three CEOs in under two years creates leadership instability. Tory Green's move to Foundation chair suggests organisational restructuring is ongoing.
 
-The token is down 98% from ATH. Insider unlocks began in July 2025 and continue through 2028. The burn mechanism provides some counterbalance, but roughly $10 million of annual buy pressure from burns against continuous insider unlocking is not enough to reverse the trend without substantial revenue acceleration.
+The token is down 98% from ATH. Insider unlocks began in July 2025 and continue through 2028. The burn mechanism provides some counterbalance, but roughly $10 million of annual buy pressure from burns against continuous insider unlocking is not enough to reverse the trend without substantial revenue acceleration. The IDE tokenomics overhaul announced in December 2025 addresses these structural problems directly — demand-driven emissions, 50% buyback-and-burn, and a target 50% reduction of the remaining emission pool. If implemented as described in Q2 2026, it would materially improve the supply dynamics. But "if implemented" is doing heavy lifting in that sentence.
 
 The competitive position is squeezed. [Akash](/projects/akash/) is more decentralised, more transparent, fully open source, and cheaper on H100s. Centralised providers are more reliable and come with SLAs. io.net's differentiation, the confidential compute, the IO Intelligence API, the DePIN supply aggregation, is real but not yet a moat.
 
@@ -129,24 +139,24 @@ Three changes would materially increase io.net's score:
 2. **Implement governance.** Token holders have zero governance rights. No DAO, no proposals, no voting. Even a basic governance framework with proposal submission, quorum thresholds and on-chain voting would demonstrate that IO is more than a payment rail for a centralised company. The io.net Foundation controls all strategic decisions without community input.
 3. **Publish a real-time network dashboard with verified metrics.** The gap between 327,000 "registered" GPUs and 6,720 daily active verified GPUs, combined with the 2024 Sybil attack history, has destroyed metric credibility. A real-time, independently verifiable dashboard showing actual active GPUs, compute hours delivered, revenue and burn amounts would rebuild trust. Self-reported quarterly figures filtered through Messari reports are not enough.
 
-## Returns score: 49/100
+## Returns score: 54/100
 
-IO scores 49/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
+IO scores 54/100 (D grade). Full methodology at [Returns Score Methodology](/resources/returns-score-methodology/).
 
-**Token utility (12/20):** IO functions as payment for GPU compute and as staking collateral for providers, which gives it more utility than most DePIN tokens. The Co-Staking Marketplace adds a passive participation layer. But the platform itself is entirely centralised – io.net controls orchestration, matching, and billing. The token is a payment rail for a company's services, not a protocol-native necessity. If io.net decided to accept USDC-only tomorrow, the token's utility would evaporate overnight.
+**Token utility (12/20):** IO functions as payment for GPU compute and as staking collateral for providers, which gives it more utility than most DePIN tokens. The Co-Staking Marketplace adds a passive participation layer. But the platform itself is entirely centralised — io.net controls orchestration, matching, and billing. The token is a payment rail for a company's services, not a protocol-native necessity. If io.net decided to accept USDC-only tomorrow, the token's utility would evaporate overnight.
 
-**Value accrual (8/25):** This is where it gets murky. io.net takes platform fees on compute transactions, but the mechanism by which that revenue flows back to IO token holders is poorly defined. The burn-and-mint structure exists on paper, but roughly $10 million in annual burn pressure against continuous emission and insider unlocks is a net negative. There is no clear flywheel where more platform usage translates into sustained token demand beyond the burn offset.
+**Value accrual (9/20):** The IDE announcement materially improves the outlook here. The dual-vault mechanism (Reward Vault for supplier incentives, Fee Vault for platform revenue) creates a structured separation between emission subsidies and earned revenue. The 50% buyback-and-burn of Fee Vault revenue is a clear, mechanical link between platform usage and token value — exactly the flywheel that was missing. Previously, io.net took platform fees but the flow back to token holders was poorly defined. The IDE design fixes this on paper. Score reflects the credible design offset by the fact that it is not yet deployed. If implemented in Q2 2026 as planned, this dimension would score higher.
 
-**Supply dynamics (8/20):** The 800 million cap sounds reasonable until you look at the distribution. Seed investors hold 12.5%, team 11.3%, Series A 10.15% – that is a third of supply in insider hands. Vesting unlocks began in July 2025 and continue through 2028, creating persistent sell pressure. Emissions for provider rewards add inflationary supply on top. The token is down 98% from ATH, and the unlock schedule means there is more selling ahead, not less.
+**Supply dynamics (10/20):** The structural problems remain: 34% insider allocation, vesting unlocks through 2028, and inflationary emissions. But the IDE's target 50% reduction of the remaining 300 million emission pool is a significant commitment. Cutting long-term dilution from 300 million to 150 million tokens, combined with demand-driven emissions that reduce rewards when the network is underutilised, would fundamentally change the supply trajectory. The transition from hourly to monthly emission epochs is already in the documentation. Score bumped from 8 to 10 to reflect the credible plan, but not higher — the supply reduction is a target, not a deployed mechanism. The token is still down 98% from ATH, and insider unlocks continue regardless of IDE.
 
-**Revenue sustainability (12/20):** This is io.net's genuine bright spot. $20 million-plus annualised revenue with 82.6% quarter-on-quarter growth in Q1 2025 is real traction by any DePIN standard. 7.1 million compute hours delivered in January 2025 alone. These are not projections or "potential" revenue – actual customers are paying for actual GPU time. The question is whether the growth rate holds and whether margins survive competition from Akash and centralised providers.
+**Revenue sustainability (15/25):** This is io.net's genuine bright spot. $20 million-plus annualised revenue with 82.6% quarter-on-quarter growth in Q1 2025 is real traction by any DePIN standard. 7.1 million compute hours delivered in January 2025 alone. These are not projections or "potential" revenue — actual customers are paying for actual GPU time. The question is whether the growth rate holds and whether margins survive competition from Akash and centralised providers.
 
-**Liquidity and access (8/15):** Binance listing provides baseline accessibility, and the token trades on major exchanges. But daily volume has declined significantly since the June 2024 launch hype, and the 98% drawdown from ATH means most holders are deeply underwater. Thin volume relative to market cap creates slippage risk for any meaningful position. The liquidity is adequate for retail but not for institutional-scale entry or exit.
+**Liquidity and access (8/15):** Binance listing provides baseline accessibility, and the token trades on major exchanges including Coinbase, Gate, Bybit, and KuCoin. Daily volume has recovered somewhat from its post-launch trough but remains thin relative to market cap. The 98% drawdown from ATH means most holders are deeply underwater. Liquidity is adequate for retail but not for institutional-scale entry or exit.
 
 ### Path to improvement
 
 Three changes would materially increase io.net's returns score:
 
-1. **Publish a transparent fee-to-burn ratio and demonstrate net deflationary periods.** The burn mechanism exists but is overwhelmed by emissions and insider unlocks. Showing months where burns exceed new supply would prove the tokenomics can work at scale.
-2. **Introduce revenue-sharing or staking yield tied to platform revenue.** Co-Staking is a start, but token holders need a direct, auditable link between platform revenue growth and token value. A percentage of compute fees distributed to stakers would create genuine demand.
+1. **Ship the IDE.** The dual-vault, demand-driven emission, and 50% supply reduction plan is exactly what the tokenomics needed. But it is an announcement, not a product. Delivering IDE on schedule in Q2 2026 and publishing transparent vault balances, burn amounts, and emission rates would prove the team can execute on tokenomics as well as they execute on revenue growth.
+2. **Demonstrate net deflationary months.** Once IDE is live, publishing months where burns plus supply reduction exceed new emissions would be the single most powerful signal for token holders. The maths needs to work publicly, not just on a whiteboard.
 3. **Accelerate the insider unlock schedule or commit to no further raises.** Two to three more years of continuous insider selling at current prices will suppress any organic price recovery. A compressed unlock with a commitment to no further dilutive funding rounds would signal confidence in the revenue trajectory.

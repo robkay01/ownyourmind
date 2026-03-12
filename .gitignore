@@ -32,6 +32,9 @@ cookies.txt
 # Podcast audio outputs (generated MP3s — large files)
 podcast-audio/
 
+# Voice training data (original recordings + processed clips)
+voice-training/
+
 # Remotion explainer video outputs
 explainers/out/
 explainers/node_modules/

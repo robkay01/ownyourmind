@@ -1,6 +1,6 @@
 ---
 title: "Fetch.ai / ASI Alliance"
-description: "Autonomous economic agents and the Artificial Superintelligence Alliance. Merged token combining Fetch.ai, SingularityNET, and CUDOS under one network. Ocean Protocol withdrew October 2025."
+description: "Autonomous economic agents and the Artificial Superintelligence Alliance. Merged token combining Fetch.ai, SingularityNET, and CUDOS under one network. Ocean Protocol withdrew October 2025; lawsuit settled with 286M FET returned."
 category: "agent"
 token: "FET"
 status: "active"
@@ -14,11 +14,12 @@ returnsScoreBreakdown:
   liquidityAccess: 13
 returnsScoreEvidence:
   tokenUtility: "Staking, governance, service payment. But merger created confusion."
-  valueAccrual: "Messy merger with Ocean withdrawal. Unclear post-merger mechanics."
-  supplyDynamics: "2.71B cap. Merger-diluted. Ocean lawsuit over token sales."
+  valueAccrual: "Messy merger with Ocean withdrawal, now settled. Unclear post-merger mechanics."
+  supplyDynamics: "2.71B cap. Merger-diluted. Ocean settlement returned 286M FET."
   revenueSustainability: "Real agent framework but usage metrics opaque. Centrally operated."
   liquidityAccess: "Major CEX listings. Good liquidity. $30-50M volume."
 publishDate: 2025-03-01
+updatedDate: 2026-03-12
 draft: false
 coingeckoId: "fetch-ai"
 launchType: "ico"
@@ -34,7 +35,7 @@ podcastUrl: "/podcast/Own-Your-Mind-009-FetchAsi.mp3"
 
 The Artificial Superintelligence Alliance is what happens when three separate crypto-AI projects decide they are stronger together, then one of them leaves in a lawsuit.
 
-Fetch.ai, SingularityNET and Ocean Protocol announced their merger in March 2024 under the ASI Alliance banner, unifying under the FET token. CUDOS joined in October 2024, contributing 30 validators and compute infrastructure. Ocean Protocol withdrew in October 2025, alleging governance failures, rushed token migration steps and strategic misalignment. Fetch.ai responded with a lawsuit in November 2025 claiming Ocean's foundation had converted 661 million OCEAN tokens into 286 million FET and sold roughly 263 million FET (over 10% of circulating supply) on the open market without disclosure. That lawsuit remains unresolved as of March 2026.
+Fetch.ai, SingularityNET and Ocean Protocol announced their merger in March 2024 under the ASI Alliance banner, unifying under the FET token. CUDOS joined in October 2024, contributing 30 validators and compute infrastructure. Ocean Protocol withdrew in October 2025, alleging governance failures, rushed token migration steps and strategic misalignment. Fetch.ai responded with a lawsuit in November 2025 claiming Ocean's foundation had converted 661 million OCEAN tokens into 286 million FET and sold roughly 263 million FET (over 10% of circulating supply) on the open market without disclosure. The dispute was settled in late 2025, with Ocean agreeing to return 286 million FET (then worth approximately $120 million) and Fetch.ai dropping all legal claims. GeoStaking, a validator node connected to Fetch.ai, mediated the talks. Fetch.ai CEO Humayun Sheikh agreed to cover all legal costs once the tokens were recovered.
 
 What remains is a federated alliance of three entities: Fetch.ai (autonomous AI agents), SingularityNET (AI services marketplace), and CUDOS (cloud compute). The core technology is Fetch.ai's Cosmos SDK blockchain (Fetchhub-4) running up to 70 validators with CometBFT consensus. The uAgents Python framework lets developers build autonomous agents that register on-chain via the Almanac contract. Agentverse provides a no-code browser-based deployment platform. SingularityNET offers a marketplace for publishing and consuming AI services across Ethereum and Cardano. The alliance is also building ASI Chain, a new blockDAG Layer 1 using MeTTa (a cognitive programming language from the OpenCog Hyperon AGI framework) compiled into Rholang. ASI Chain entered DevNet in November 2025.
 
@@ -74,7 +75,7 @@ Distribution of the merged supply:
 - **Advisors:** 4.38% (cliff vesting)
 - **Public sale (Binance Launchpad IEO):** 2.49%
 
-The AGIX and OCEAN migration allocations (56.17% combined) are not new insider supply; they represent conversion of existing communities. But the roughly 600 million FET minted to absorb OCEAN holders did dilute existing FET holders. And then Ocean Protocol allegedly dumped 263 million of those FET on the open market.
+The AGIX and OCEAN migration allocations (56.17% combined) are not new insider supply; they represent conversion of existing communities. But the roughly 600 million FET minted to absorb OCEAN holders did dilute existing FET holders. Ocean Protocol sold approximately 263 million of those FET on the open market, leading to a lawsuit that was settled in late 2025 with Ocean returning 286 million FET to the Fetch community.
 
 The Earn and Burn mechanism launched in January 2026 with a first burn of 5 million FET. Ecosystem fees from ASI Cloud, ASI-1 Mini and other products buy and burn FET. Five million FET is 0.18% of supply. Symbolic, not structural. The Fetch.ai Foundation also executed a $50 million FET buyback in June 2025, which is a more meaningful signal.
 
@@ -92,7 +93,7 @@ Market snapshot: FET trades at $0.15 with a $334 million market cap and $401 mil
 
 **Validate.** Run a validator node on Fetchhub-4. Maximum 70 slots. Requires substantial FET stake (competitive; top validators hold 30 million-plus FET), server infrastructure and DevOps expertise. High barrier to entry.
 
-**Governance.** Vote on alliance proposals using staked FET. Proposals have included merger approvals (CUDOS, Paal.ai) and tokenomics changes.
+**Governance.** Vote on alliance proposals using staked FET. Proposals have included the CUDOS merger approval and tokenomics changes. A proposed Paal.ai merger (900 million PAAL tokens converting to FET at 6.24:1 with 180-day vesting) was withdrawn in November 2024 after community backlash over the conversion ratio, causing PAAL to drop 70%.
 
 **Contribute.** Open-source repos across three GitHub organisations (fetchai, singnet, oceanprotocol). Innovation Lab partnership with Imperial College London backed by a $10 million fund. Hackathon participation. Apache 2.0 licensing on core repos.
 
@@ -100,13 +101,13 @@ Market snapshot: FET trades at $0.15 with a $334 million market cap and $401 mil
 
 **What works.** The uAgents framework is the most mature open-source agent framework in the DeAI space. Functional, well-documented, Apache 2.0, actively maintained (last commit March 2026). Fetchhub-4 runs reliably as a Cosmos SDK chain with IBC interoperability. The team credibility is real: Goertzel is a genuine AGI research figure with 150-plus publications, and Sheikh is a DeepMind founding investor. The Innovation Lab with Imperial College London ($10 million fund) is a serious academic partnership. The Earn and Burn mechanism, while nascent, establishes a deflationary counter. 371 public repositories across three GitHub organisations is a substantial open-source footprint. ASI-1 Mini, whatever you think of the "first Web3-native LLM" framing, represents a concrete product at the intersection of AI and crypto.
 
-**What does not work.** The merger has been a governance catastrophe. Ocean Protocol's exit, the alleged dumping of 263 million FET, and the resulting lawsuit are not growing pains. They are structural failures in alliance governance. The "Artificial Superintelligence" branding is aspirational to the point of misleading. The constituent projects are building AI agents, marketplaces and compute infrastructure. Valuable, yes. A path to superintelligence? No.
+**What does not work.** The merger has been a governance catastrophe. Ocean Protocol's exit, the sale of 263 million FET on the open market, and the resulting lawsuit (since settled, with 286 million FET returned) are not growing pains. They are structural failures in alliance governance. The "Artificial Superintelligence" branding is aspirational to the point of misleading. The constituent projects are building AI agents, marketplaces and compute infrastructure. Valuable, yes. A path to superintelligence? No.
 
 Usage metrics are notably opaque. No public dashboard for transaction counts, active users or revenue. ASI Cloud exited beta in December 2025 but publishes no adoption data. SingularityNET's marketplace has been live since 2017 and still does not disclose usage volumes. For a project with a $334 million market cap, this lack of transparency is not a gap. It is a choice.
 
 The ASI Chain (blockDAG with MeTTa/Rholang) is in DevNet with no mainnet timeline. The complexity of running three separate technical platforms (Cosmos chain, Ethereum/Cardano marketplace, DevNet blockDAG) under one token creates integration challenges and a confusing user experience.
 
-**The risk.** Alliance fragmentation is the defining risk. Ocean Protocol already left. If SingularityNET departed, the alliance narrative collapses entirely. The active lawsuit creates ongoing legal costs, management distraction and reputational damage.
+**The risk.** Alliance fragmentation is the defining risk. Ocean Protocol already left. If SingularityNET departed, the alliance narrative collapses entirely. The Ocean lawsuit has been settled (286 million FET returned), removing the immediate legal overhang, but the episode exposed governance vulnerabilities that remain unaddressed.
 
 The token is down 96% from its all-time high. The merger was announced at a combined "valuation" of $7.5 billion. Actual market cap: $334 million. That gap represents real losses for holders who bought the merger narrative.
 
@@ -114,7 +115,7 @@ Key person dependency is acute. Sheikh and Goertzel are essential to the allianc
 
 Core revenue-generating products (ASI Cloud, ASI-1 Mini, Agentverse) are centrally operated by Fetch.ai Inc. This contradicts the decentralisation narrative. The 70-validator cap on Fetchhub-4, with top validators holding 143 million FET, creates concentration at the infrastructure level too.
 
-**My position.** I do not hold FET. The governance failures demonstrated by the Ocean Protocol exit, the opaque usage metrics, and the 96% price decline from the merger-hype peak make this a wait-and-see proposition. The uAgents framework is worth exploring as a developer tool. The token requires demonstrated execution, lawsuit resolution and transparent adoption metrics before the risk profile becomes acceptable.
+**My position.** I do not hold FET. The governance failures demonstrated by the Ocean Protocol exit, the opaque usage metrics, and the 96% price decline from the merger-hype peak make this a wait-and-see proposition. The uAgents framework is worth exploring as a developer tool. The Ocean lawsuit settlement removes one overhang, but the token still requires demonstrated execution, governance reform and transparent adoption metrics before the risk profile becomes acceptable.
 
 ## Freedom score: 50/100
 
@@ -122,9 +123,9 @@ The ASI Alliance scores 50/100 (D grade). Full methodology at [Freedom Score Met
 
 **Infrastructure decentralisation (9/20):** Fetchhub-4 runs on Cosmos SDK with CometBFT consensus, capped at 70 validator slots. Permissionless in theory, but the small validator set and high capital requirements create concentration. Top validators (Kiln: 143M FET, Binance Staking: 60M FET) hold disproportionate influence. The 30 CUDOS validators added some diversity. Core value-adding products (Agentverse, ASI Cloud, ASI-1 Mini) are centrally hosted by Fetch.ai Inc. SingularityNET marketplace relies on centralised infrastructure for service discovery. ASI Chain is still in DevNet.
 
-**Governance decentralisation (8/20):** On-chain governance via FET token voting exists for major decisions (merger approvals, new members). CUDOS and Paal.ai proposals went through community votes. However, the Governing Council (Sheikh as Chairman, Goertzel as CEO) holds outsized influence. Ocean Protocol's exit exposed governance failures: Ocean alleged the governance "didn't match the original decentralised vision" and cited rushed decision-making. Each foundation retains independent governance, enabling strategic decisions without full community consent. The lawsuit demonstrates governance dysfunction.
+**Governance decentralisation (8/20):** On-chain governance via FET token voting exists for major decisions (merger approvals, new members). The CUDOS merger went through a community vote; the Paal.ai proposal was withdrawn before voting after community backlash. However, the Governing Council (Sheikh as Chairman, Goertzel as CEO) holds outsized influence. Ocean Protocol's exit exposed governance failures: Ocean alleged the governance "didn't match the original decentralised vision" and cited rushed decision-making. Each foundation retains independent governance, enabling strategic decisions without full community consent. The lawsuit (since settled) demonstrated governance dysfunction.
 
-**Token distribution fairness (7/15):** Original FET launched via Binance Launchpad IEO ($6M raised, February 2019). Original insider allocations (founders 8.77%, foundation 8.77%, advisors 4.38%, private sale 5.08%) total roughly 27%. The AGIX and OCEAN migration allocations (56.17% combined) represent community conversion, not new insider supply. However, the Ocean Protocol controversy revealed that Ocean Foundation allegedly converted 661M OCEAN into 286M FET and sold 263M FET without disclosure. CUDOS merger included a 5% fee. The $50M buyback was a positive signal.
+**Token distribution fairness (7/15):** Original FET launched via Binance Launchpad IEO ($6M raised, February 2019). Original insider allocations (founders 8.77%, foundation 8.77%, advisors 4.38%, private sale 5.08%) total roughly 27%. The AGIX and OCEAN migration allocations (56.17% combined) represent community conversion, not new insider supply. However, the Ocean Protocol controversy revealed that Ocean Foundation converted 661M OCEAN into 286M FET and sold 263M FET without disclosure — a dispute settled in late 2025 with the 286M FET returned. CUDOS merger included a 5% fee. The $50M buyback was a positive signal.
 
 **Censorship resistance (8/15):** The Cosmos SDK base layer is permissionless. IBC enables cross-chain interoperability. ERC-20 token on Ethereum provides additional resistance via Ethereum's validator set. However, the application layer has significant vectors: Agentverse is centrally hosted (Fetch.ai can deplatform agents), ASI Cloud and ASI-1 Mini are centrally operated, and the SingularityNET marketplace has curation capabilities. Agent registration requires renewal every 48 hours via the Almanac contract, creating dependency.
 
@@ -137,7 +138,7 @@ The ASI Alliance scores 50/100 (D grade). Full methodology at [Freedom Score Met
 Three changes would materially increase the ASI Alliance's score:
 
 1. **Publish transparent usage metrics.** No public dashboard for ASI Cloud adoption, SingularityNET marketplace volumes, agent deployments or revenue. For a $334 million market cap project, this is indefensible. A real-time metrics dashboard would be the single biggest credibility signal. [Akash](/projects/akash/) publishes quarterly Messari reports and tracks on-chain revenue. The ASI Alliance publishes nothing.
-2. **Resolve the Ocean Protocol lawsuit and reform governance.** The messy exit and alleged token dumping destroyed holder value and exposed structural governance failures. Resolving the lawsuit transparently, publishing a post-mortem, and implementing governance reforms (clear exit procedures, transparent treasury operations, community veto mechanisms) would address the most damaging narrative around the project.
+2. **Publish a post-mortem and reform governance.** The Ocean lawsuit is settled and the 286 million FET returned, but the alliance has not published a post-mortem or implemented governance reforms. Clear exit procedures, transparent treasury operations and community veto mechanisms would address the structural failures the episode exposed.
 3. **Open-source ASI-1 Mini and ASI Cloud.** The core AI products are centrally operated and not open source. Open-sourcing ASI-1 Mini model weights and the ASI Cloud orchestration layer would align the products with the open-source credentials of the underlying infrastructure. The "decentralised AI" narrative cannot hold when the AI itself is proprietary.
 
 ## Returns score: 55/100
@@ -146,9 +147,9 @@ FET scores 55/100 (C grade). Full methodology at [Returns Score Methodology](/re
 
 **Token utility (14/20):** FET serves as the staking token for Fetchhub-4 validators, the governance token for alliance-wide decisions, and the payment token for agent services and ASI Cloud compute. Those are three genuine utility layers, which is more than most projects in this space can claim. The complication is the merger. Three separate communities – Fetch.ai, SingularityNET, and CUDOS – were funnelled into one token, and the AGIX and CUDOS migration ratios created confusion about what FET actually represents. The utility is real but the identity is muddled.
 
-**Value accrual (10/25):** The merger has made value accrual mechanics genuinely hard to evaluate. Ocean Protocol's withdrawal and alleged sale of 263 million FET on the open market demonstrated that the alliance structure can actively destroy value rather than create it. ASI Cloud and ASI-1 Mini generate revenue, but both are centrally operated by Fetch.ai Inc – the fees flow to a company, and the relationship between that company revenue and FET token value is not transparent. The $50 million buyback was a positive signal, but a one-off buyback is not a sustainable accrual mechanism.
+**Value accrual (10/25):** The merger has made value accrual mechanics genuinely hard to evaluate. Ocean Protocol's withdrawal and sale of 263 million FET on the open market demonstrated that the alliance structure can actively destroy value rather than create it. The settlement returned 286 million FET, partially unwinding the damage, but the episode set a precedent. ASI Cloud and ASI-1 Mini generate revenue, but both are centrally operated by Fetch.ai Inc – the fees flow to a company, and the relationship between that company revenue and FET token value is not transparent. The $50 million buyback was a positive signal, but a one-off buyback is not a sustainable accrual mechanism.
 
-**Supply dynamics (10/20):** The 2.71 billion cap absorbed three separate token supplies via migration, which is inherently dilutive to original FET holders who did not sign up for the additional supply. The Ocean Protocol lawsuit alleges that 263 million FET (over 10% of circulating supply) were sold without disclosure, which is a supply shock of extraordinary magnitude if true. CUDOS migration included a 5% fee. The structural risk here is not the cap itself but the precedent that alliance membership can introduce surprise supply events.
+**Supply dynamics (10/20):** The 2.71 billion cap absorbed three separate token supplies via migration, which is inherently dilutive to original FET holders who did not sign up for the additional supply. Ocean Protocol sold 263 million FET (over 10% of circulating supply) without disclosure — a supply shock of extraordinary magnitude. The settlement returned 286 million FET, but the sell pressure already hit the market. CUDOS migration included a 5% fee. The structural risk here is not the cap itself but the precedent that alliance membership can introduce surprise supply events.
 
 **Revenue sustainability (8/20):** The uAgents framework is functional and has first-mover advantage in the agent space. Agentverse removes the developer barrier. ASI Cloud claims 50% cheaper than AWS. ASI-1 Mini offers inference with FET payments. The problem is that none of these products publish usage metrics. For a project that has been building since 2017, the absence of public revenue data, marketplace volumes, or active user counts is a deliberate choice – and not one that inspires confidence. Revenue may exist, but if you will not show it, the market will price it at zero.
 
@@ -160,4 +161,4 @@ Three changes would materially increase the ASI Alliance's returns score:
 
 1. **Publish auditable revenue metrics for all products.** ASI Cloud, ASI-1 Mini, Agentverse, and SingularityNET marketplace should each have public dashboards showing active users, transaction volumes, and revenue. The market cannot value what it cannot measure, and the persistent opacity is being priced as a risk premium.
 2. **Establish a transparent, recurring buyback-and-burn funded by platform revenue.** The $50 million buyback was a one-off. A monthly or quarterly burn funded by a fixed percentage of ASI Cloud and marketplace fees would create predictable deflationary pressure and demonstrate that product revenue flows to token holders, not just to Fetch.ai Inc's balance sheet.
-3. **Resolve the Ocean Protocol lawsuit and publish a post-mortem.** The lawsuit is the single largest overhang on the token. Whether Ocean's allegations are true or false, the ambiguity is worse than either outcome. Transparent resolution with published findings would remove the uncertainty discount the market is applying to FET.
+3. **Publish a governance post-mortem.** The Ocean lawsuit has been settled and the 286 million FET returned, removing the immediate legal overhang. But the alliance has not published a transparent account of what happened or what governance reforms will prevent a recurrence. Without that, the governance risk discount persists.

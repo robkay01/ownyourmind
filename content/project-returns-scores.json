@@ -383,23 +383,23 @@
     {
       "id": "virtuals",
       "ticker": "VIRTUAL",
-      "returnsScoreRaw": 58,
-      "returnsScore": 5.8,
-      "grade": "D",
+      "returnsScoreRaw": 68,
+      "returnsScore": 6.8,
+      "grade": "C",
       "quadrant": "C",
       "breakdown": {
         "tokenUtility": 16,
-        "valueAccrual": 12,
-        "supplyDynamics": 8,
-        "revenueSustainability": 14,
-        "liquidityAccess": 8
+        "valueAccrual": 14,
+        "supplyDynamics": 12,
+        "revenueSustainability": 16,
+        "liquidityAccess": 10
       },
       "reasoning": {
-        "tokenUtility": "Agent launchpad. Bonding curve participation. Governance.",
-        "valueAccrual": "Fee capture from launches. But agent tokens are speculative.",
-        "supplyDynamics": "Fixed supply. But launchpad dynamics dilute participants.",
-        "revenueSustainability": "Dominant launchpad with real revenue. 97% revenue collapse from peak.",
-        "liquidityAccess": "Base chain. Good liquidity. But speculative dynamics."
+        "tokenUtility": "Multi-chain agent launchpad. Unicorn conviction-based launch. veVIRTUAL governance.",
+        "valueAccrual": "Fee capture across four chains. Buyback-and-burn of 25 agent tokens. Community rewards up to $1M/month.",
+        "supplyDynamics": "Fixed 1B supply. Buyback-and-burn programme. No VC allocation. Fair IDO distribution.",
+        "revenueSustainability": "Dominant multi-chain launchpad. 18,000+ agents. 97% revenue collapse from peak remains a concern.",
+        "liquidityAccess": "Multi-chain (Base, Solana, Ronin). Major exchange listings. ~$63M daily volume."
       }
     }
   ],
