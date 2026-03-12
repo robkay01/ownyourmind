@@ -322,6 +322,14 @@ const reviewLd = JSON.stringify({
       </div>
       <p class="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">{description}</p>
 
+      {/* Quick verdict — extractable summary for AI search engines */}
+      {verdict && (
+        <div class="p-4 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] mb-6">
+          <p class="text-sm font-medium text-[var(--color-accent)] mb-1">Verdict</p>
+          <p class="text-[var(--color-text-primary)] leading-relaxed">{verdict}</p>
+        </div>
+      )}
+
       <!-- Freedom Score breakdown -->
       {hasFreedomBreakdown ? (
         <FreedomScoreBreakdown freedomScore={r!.freedom_score} />
@@ -363,14 +371,6 @@ const reviewLd = JSON.stringify({
           <MetricCard value={formatMarketCap(market.marketCap)} label="Market Cap" />
           <MetricCard value={formatMarketCap(market.fdv)} label="FDV" />
           <MetricCard value={formatPercent(market.priceChange24h)} label="24h Change" change={market.priceChange24h} />
-        </div>
-      )}
-
-      <!-- Verdict -->
-      {verdict && (
-        <div class="mt-4 p-4 rounded-lg border-l-3 border-[var(--color-accent)] bg-[var(--color-accent-muted)]">
-          <span class="text-xs text-[var(--color-text-tertiary)] uppercase tracking-wider block mb-1">OYM Verdict</span>
-          <p class="text-sm text-[var(--color-text-primary)] leading-relaxed">{verdict}</p>
         </div>
       )}
 

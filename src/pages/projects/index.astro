@@ -193,9 +193,9 @@ function downsample(data: number[], targetPoints: number): number[] {
                 {entry.data.returnsScore ? (
                   <div class="flex items-center gap-2">
                     <div class="freedom-bar-container">
-                      <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
+                      <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(Math.round(entry.data.returnsScore))};`} />
                     </div>
-                    <span class="text-sm font-bold whitespace-nowrap" style={`color: ${scoreColor(entry.data.returnsScore)};`}>
+                    <span class="text-sm font-bold whitespace-nowrap" style={`color: ${scoreColor(Math.round(entry.data.returnsScore))};`}>
                       {Math.round(entry.data.returnsScore)}
                     </span>
                   </div>
@@ -305,9 +305,9 @@ function downsample(data: number[], targetPoints: number): number[] {
             {entry.data.returnsScore ? (
               <>
                 <div class="freedom-bar-container flex-1">
-                  <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(entry.data.returnsScore)};`} />
+                  <div class="freedom-bar" style={`width: ${entry.data.returnsScore * 10}%; background-color: ${scoreColor(Math.round(entry.data.returnsScore))};`} />
                 </div>
-                <span class="text-sm font-bold" style={`color: ${scoreColor(entry.data.returnsScore)};`}>{Math.round(entry.data.returnsScore)}</span>
+                <span class="text-sm font-bold" style={`color: ${scoreColor(Math.round(entry.data.returnsScore))};`}>{Math.round(entry.data.returnsScore)}</span>
               </>
             ) : (
               <>
