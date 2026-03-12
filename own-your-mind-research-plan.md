@@ -100,14 +100,27 @@ Execute research in this order for each project:
 - Identify the founding team and core contributors
 - Determine the project's chain, launch date, and current status
 
-**Step 2: Technical Architecture (45 mins)**
+**Step 2: Recent Events Sweep (20 mins) — MANDATORY**
+This step exists because documentation and whitepapers are often outdated. The most important data for a live project is frequently in the last 12 months of announcements, not the original whitepaper.
+- Search for "[Project Name] 2025 2026" and "[Token] tokenomics changes" to surface recent developments
+- Check the project's official blog/announcements for the last 12 months
+- Check governance forum for passed/failed proposals that changed protocol parameters (inflation, fees, emissions, staking)
+- Search for recent funding rounds, ETF filings, exchange listings, or delistings
+- Search for security incidents, exploits, or audit results in the last 12 months
+- Search for major partnerships, integrations, or protocol upgrades
+- Check DefiLlama for current fees/revenue data (not just TVL)
+- Document all findings with dates — these override any contradictory information from older docs or whitepapers
+- If the project has been live for 6+ months, this step requires a minimum of 5 web searches and 3 source reads
+- **Failure to complete this step was the root cause of the NEAR Protocol research miss (2026-03-12): inflation halving (Oct 2025), fee switch (Feb 2026), governance controversy, and ETF filing were all missed because only docs/whitepaper were read, not recent announcements.**
+
+**Step 3: Technical Architecture (45 mins)**
 - Map the technical architecture from documentation
 - Review GitHub: languages used, commit frequency, contributor count, open issues, last commit date
 - Identify dependencies and integrations
 - Determine what is on-chain vs off-chain
 - Assess actual decentralisation of infrastructure (nodes, validators, governance)
 
-**Step 3: Tokenomics & Financial Data (45 mins)**
+**Step 4: Tokenomics & Financial Data (45 mins)**
 - Document the complete token model from primary sources
 - Verify supply data against on-chain sources (block explorer, contract)
 - Record current market data (price, market cap, FDV, volume, circulating vs total supply)
@@ -115,30 +128,30 @@ Execute research in this order for each project:
 - Calculate real staking yields (net of inflation, gas costs, lock-up periods)
 - Identify token utility: what does holding/staking the token actually get you?
 
-**Step 4: Participation & Usage (30 mins)**
+**Step 5: Participation & Usage (30 mins)**
 - Document all ways to participate (stake, run node, build, use as consumer)
 - Record minimum requirements for each participation type (hardware, capital, technical skill)
 - Identify barriers to entry
 - Assess actual current usage (active users, transactions, compute delivered, etc.)
 
-**Step 5: Ecosystem & Community (20 mins)**
+**Step 6: Ecosystem & Community (20 mins)**
 - Record community size across platforms (Discord members, X followers, GitHub contributors, governance participation)
 - Note key partnerships and integrations
 - Assess governance: who actually controls decisions?
 - Note any notable backers, investors, or grants
 
-**Step 6: Risk Assessment (20 mins)**
+**Step 7: Risk Assessment (20 mins)**
 - Review audit history and any security incidents
 - Assess regulatory risk
 - Evaluate team risk (anonymous vs doxxed, single points of failure)
 - Assess technical risk (dependencies, centralisation vectors)
 - Document any known controversies or concerns
 
-**Step 7: Freedom Score Assessment (15 mins)**
+**Step 8: Freedom Score Assessment (15 mins)**
 - Complete the Freedom Score rubric (Section 3.2)
 - Document evidence for each sub-score
 
-**Step 8: Returns Score Assessment (20 mins)**
+**Step 9: Returns Score Assessment (20 mins)**
 - Complete the Returns Score rubric (Section 3.3)
 - Score all five dimensions with evidence for each
 - Cross-reference every evidence statement against the editorial body text and research data
