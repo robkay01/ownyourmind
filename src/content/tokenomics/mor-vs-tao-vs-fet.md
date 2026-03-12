@@ -2,7 +2,7 @@
 title: "MOR vs TAO vs FET: Token Models Compared"
 description: "Three different approaches to tokenising decentralised AI. How MOR, TAO and FET/ASI work, what drives their value, and which model aligns best with actual decentralisation."
 publishDate: 2025-03-02
-updatedDate: 2026-03-07
+updatedDate: 2026-03-12
 draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsMorVsTaoVsFet.mp3"
 ---
@@ -48,15 +48,15 @@ MOR (Morpheus), TAO (Bittensor) and FET (Fetch.ai / ASI Alliance) represent thre
 
 ## FET: the enterprise-pivot token
 
-**Model.** FET originated as the Fetch.ai token for autonomous economic agents. In 2024 it merged into the ASI (Artificial Superintelligence) Alliance with SingularityNET (AGIX), Ocean Protocol (OCEAN) and later CUDOS. The token still trades under the FET ticker – the planned migration to an ASI ticker has not completed. In October 2025, Ocean Protocol withdrew from the alliance entirely, and Fetch.ai subsequently sued Ocean (case 1:25-cv-9210) alleging Ocean converted and dumped ~263M FET (~10% of circulating supply) on the open market. The alliance is now effectively Fetch.ai + SingularityNET + CUDOS.
+**Model.** FET originated as the Fetch.ai token for autonomous economic agents. In 2024 it merged into the ASI (Artificial Superintelligence) Alliance with SingularityNET (AGIX), Ocean Protocol (OCEAN) and later CUDOS. The token still trades under the FET ticker – the planned migration to an ASI ticker has not completed. In October 2025, Ocean Protocol withdrew from the alliance entirely, and Fetch.ai sued Ocean (case 1:25-cv-9210) over the conversion of ~263M FET (~10% of circulating supply). The case was settled — Ocean returned 286 million FET (~$120M) to the alliance. The alliance is now effectively Fetch.ai + SingularityNET + CUDOS.
 
 **What drives value.** Agent adoption, staking demand and AI services. FET is staked on the Cosmos-based Fetchhub-4 chain for network security (~5-10% APY) with a 21-day unbonding period. The uAgents framework and Agentverse platform enable autonomous agent development. SingularityNET contributes an AI marketplace, and CUDOS provides compute infrastructure (ASI Cloud).
 
 **Strengths.** Broad ecosystem spanning agents, AI marketplace and compute under one token. Strong marketing and institutional partnerships. High liquidity and exchange availability – the most accessible DeAI position for institutional investors. The Fetch.ai chain (Cosmos SDK) is technically sound.
 
-**Weaknesses.** Insider allocations are among the highest in DeAI – roughly 50% of the original FET supply went to founders (20%), foundation (20%) and advisors (10%). The merger added complexity without clear integration of the underlying technology stacks. As of March 2026, Fetch.ai's Cosmos chain, SingularityNET's Ethereum/Cardano marketplace and CUDOS compute still operate as distinct platforms. The planned ASI Chain (a new blockDAG L1) is in DevNet but not yet on mainnet. The "superintelligence" branding is aspirational rather than descriptive. Ocean's departure and lawsuit exposed governance fractures and the risks of centralised alliance management. The validator set is capped at 70 – very small for a major network.
+**Weaknesses.** Insider allocations are among the highest in DeAI – roughly 50% of the original FET supply went to founders (20%), foundation (20%) and advisors (10%). The merger added complexity without clear integration of the underlying technology stacks. As of March 2026, Fetch.ai's Cosmos chain, SingularityNET's Ethereum/Cardano marketplace and CUDOS compute still operate as distinct platforms. The planned ASI Chain (a new blockDAG L1) is in DevNet but not yet on mainnet. The "superintelligence" branding is aspirational rather than descriptive. Ocean's departure and the subsequent lawsuit (since settled, with 286M FET returned) exposed governance fractures and the risks of centralised alliance management. The validator set is capped at 70 – very small for a major network.
 
-**Alignment score.** Low. The token economics are closer to a traditional VC-backed crypto project than a community-owned network. Insider allocations and foundation holdings create structural selling pressure. The governance model concentrates power in the Alliance leadership (Superintelligence Alliance Ltd, a Singapore-registered company). Ocean's exit demonstrated that "decentralised alliance" governance can fracture when corporate interests diverge.
+**Alignment score.** Low. The token economics are closer to a traditional VC-backed crypto project than a community-owned network. Insider allocations and foundation holdings create structural selling pressure. The governance model concentrates power in the Alliance leadership (Superintelligence Alliance Ltd, a Singapore-registered company). Ocean's exit and subsequent lawsuit (settled, 286M FET returned) demonstrated that "decentralised alliance" governance can fracture when corporate interests diverge.
 
 ## The comparison that matters
 
@@ -66,7 +66,7 @@ This is the single most important factor in evaluating DeAI token models. When i
 
 - **MOR:** 0% insider allocation. No insider selling pressure.
 - **TAO:** No formal insider allocation, but early mining was concentrated among a small group including Polychain, DCG and dao5. Academic analysis shows the top 1% of wallets control ~90% of stake. The effect is similar to insider allocation.
-- **FET/ASI:** ~50% of original FET supply to founders, foundation and advisors. Multiple institutional raises totalling ~$83M. Ocean's alleged dump of ~263M FET demonstrates the ongoing selling pressure risk from large holders.
+- **FET/ASI:** ~50% of original FET supply to founders, foundation and advisors. Multiple institutional raises totalling ~$83M. Ocean's conversion of ~263M FET (since recovered via settlement) demonstrates the selling pressure risk from large holders.
 
 ### Value accrual mechanism
 
@@ -92,6 +92,6 @@ This is not financial advice. It is my framework for thinking about these positi
 
 **TAO** if you want exposure to the largest decentralised AI network and believe the competitive subnet model will drive value. Accept the governance centralisation risk and the early-holder concentration.
 
-**FET/ASI** if you want the most liquid, most institutionally accessible DeAI position and are less concerned about actual decentralisation. Be aware that the alliance has fractured (Ocean's exit and lawsuit) and the technology integration remains incomplete. The token will likely trade on narrative and partnerships more than on-chain fundamentals.
+**FET/ASI** if you want the most liquid, most institutionally accessible DeAI position and are less concerned about actual decentralisation. Be aware that the alliance has fractured (Ocean's exit and settled lawsuit) and the technology integration remains incomplete. The token will likely trade on narrative and partnerships more than on-chain fundamentals.
 
 I hold positions in MOR and TAO. I do not hold FET. These positions reflect my assessment that tokenomic alignment with actual decentralisation matters more than branding and institutional backing.

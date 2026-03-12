@@ -2,6 +2,7 @@
 title: "Bittensor Halving: What TAO Holders Need to Know"
 description: "Bittensor's first halving happened in December 2025. Three months in -- what changed for TAO holders, how dTAO interacts with reduced emissions, and whether the Bitcoin playbook applies."
 publishDate: 2026-03-10
+updatedDate: 2026-03-12
 draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsBittensorHalving.mp3"
 ---
@@ -35,7 +36,7 @@ The supply schedule mirrors Bitcoin deliberately. 21 million cap, halving cycle,
 
 TAO traded at approximately $280-290 on halving day. Three months later, it sits around $190-197. That is a 33% decline.
 
-The sell-the-news pattern was textbook. The halving was the most telegraphed event in Bittensor's history. Everyone saw it coming, many bought ahead of it, and the supply reduction was already priced in before it happened. A Grayscale spot ETF filing in early January 2026 briefly spiked the price to ~$242, but it did not hold.
+The sell-the-news pattern was textbook. The halving was the most telegraphed event in Bittensor's history. Everyone saw it coming, many bought ahead of it, and the supply reduction was already priced in before it happened. Grayscale launched its Bittensor Trust (GTAO) on 11 December 2025, with OTC trading available to accredited investors. An S-1 filed on 30 December 2025 signalled intent to convert the Trust into a spot ETF, which briefly spiked the price to ~$242 in early January 2026, but it did not hold.
 
 Market cap sits at approximately $2 billion. Fully diluted valuation is around $4 billion. Daily trading volume is roughly $250 million across Binance, Coinbase and Kraken.
 
@@ -44,6 +45,8 @@ Market cap sits at approximately $2 billion. Fully diluted valuation is around $
 This is what makes Bittensor's halving fundamentally different from Bitcoin's.
 
 dTAO launched in February 2025, ten months before the halving. It replaced the Root Network validator oligarchy with market-driven emission allocation. Each subnet now has its own alpha token, traded against TAO via an on-chain AMM. When TAO emissions halved, the alpha tokens injected into subnet liquidity pools halved proportionally.
+
+Two protocol changes in late 2025 further reshaped how emissions interact with the halving. Tao Flow (November 2025) replaced the old price-based emission allocation with a flow-based model: subnets now receive emissions proportional to their net TAO inflows, and subnets with net outflows receive zero. This means the halved emissions are no longer spread across every subnet equally -- they concentrate in subnets that are actively attracting capital. MEV Shield (24 December 2025) addressed a different problem, encrypting mempool transactions using validator public keys so they can only be decrypted at block inclusion. This prevents front-running on subnet alpha trades, which matters more now that reduced emissions make every TAO of liquidity more contested.
 
 Here is the critical detail most analysis misses: only alpha tokens injected into subnet liquidity pools are subject to halving. Alpha rewards distributed directly to miners, validators and subnet owners remain constant. This creates a dual supply shock at the protocol layer (less TAO minted) and the application layer (less alpha liquidity per subnet).
 
@@ -113,7 +116,7 @@ Five things that will determine whether the halving matters for TAO holders over
 
 **3. Subnet attrition rate.** How many of the current 129 subnets survive the next six months at half emissions? If 30-40% deregister, that is healthy -- the network is concentrating resources in productive subnets. If 70%+ survive but with negligible activity, the zombie problem persists.
 
-**4. Institutional catalysts.** The Grayscale spot ETF filing is the most significant institutional signal. If approved, it creates a regulated, passive exposure vehicle for TAO. The January price spike on the filing announcement shows the market cares about this.
+**4. Institutional catalysts.** The Grayscale Bittensor Trust (GTAO) already provides accredited investors with regulated TAO exposure via OTC trading. The pending S-1 for ETF conversion is the next catalyst -- if approved, it opens passive exposure to a much wider investor base. The January price spike on the filing shows the market cares about this.
 
 **5. The recycling effect on the second halving.** TAO spent on subnet registration recycles back to unissued supply, effectively pushing the second halving further out. If network activity increases (more registrations, more recycling), the December 2029 estimate could shift materially. This is a unique dynamic that has no Bitcoin equivalent.
 

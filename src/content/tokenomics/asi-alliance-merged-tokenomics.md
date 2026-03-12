@@ -2,6 +2,7 @@
 title: "ASI Alliance: What the Merged Tokenomics Actually Mean"
 description: "Fetch.ai, SingularityNET and CUDOS merged into the ASI Alliance. What holders of each token got, what the merged economics look like, and why Ocean's exit changes the thesis."
 publishDate: 2026-03-10
+updatedDate: 2026-03-12
 draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAsiAlliance.mp3"
 ---
@@ -12,7 +13,7 @@ In March 2024, Fetch.ai, SingularityNET and Ocean Protocol announced they would 
 
 CUDOS joined in October 2024, contributing 30 validators. Then in October 2025, Ocean Protocol withdrew, alleging governance failures and strategic misalignment. Fetch.ai filed a lawsuit the following month, alleging Ocean's Foundation converted 661 million OCEAN into 286 million FET and sold approximately 263 million FET -- over 10% of circulating supply -- without disclosure.
 
-That lawsuit is unresolved as of March 2026. The alliance continues as Fetch.ai + SingularityNET + CUDOS, but it lost its strongest data sovereignty component when Ocean walked.
+That lawsuit was settled in early 2026, with Ocean returning 286 million FET (approximately $120M) to the alliance. The legal matter is closed, but the reputational damage remains. The alliance continues as Fetch.ai + SingularityNET + CUDOS, but it lost its strongest data sovereignty component when Ocean walked.
 
 I do not hold FET. The governance breakdown that caused a founding member to leave within 18 months raises questions I have not been able to answer from public information. For individual project assessments, see our [Fetch/ASI review](/projects/fetch-asi/) and [Ocean review](/projects/ocean/).
 
@@ -27,7 +28,7 @@ All tokens consolidated under the **FET ticker** (not renamed to ASI on exchange
 | OCEAN | 1 OCEAN = 0.433226 FET |
 | CUDOS | 118.344 CUDOS = 1 FET (5% fee, 3-10 month vesting) |
 
-Migration is not 100% complete. OCEAN and AGIX still trade independently -- OCEAN has approximately 200 million tokens circulating ($23.6M market cap), AGIX has approximately 250 million ($16.2M market cap). No public deadline for conversion has been documented. Given Ocean's withdrawal and the lawsuit, the status of remaining OCEAN-to-FET conversion is legally and practically uncertain.
+Migration is not 100% complete. OCEAN and AGIX still trade independently -- OCEAN has approximately 200 million tokens circulating ($23.6M market cap), AGIX has approximately 250 million ($16.2M market cap). No public deadline for conversion has been documented. Given Ocean's withdrawal, the status of remaining OCEAN-to-FET conversion is practically uncertain.
 
 ## The merged supply
 
@@ -94,9 +95,9 @@ Ocean Protocol was the data layer of the alliance. Its compute-to-data capabilit
 
 The remaining components are agents (Fetch), AI marketplace (SingularityNET) and validators (CUDOS). These overlap more than they complement. The thesis that three distinct capabilities would combine into something greater depends on all three being present. Two and a half is a weaker proposition.
 
-The lawsuit adds uncertainty. If Fetch.ai's allegations about OCEAN-to-FET conversion and dumping are proven, it exposes governance failures in how the merger was structured. If Ocean's allegations about governance not matching the "original decentralised vision" are proven, it exposes structural problems in the alliance itself.
+The lawsuit has since been settled, with Ocean returning 286 million FET (~$120M). The legal uncertainty is resolved, but what it revealed is not reassuring. The fact that a founding member could convert and sell over 10% of circulating supply without disclosure -- and that this only surfaced through litigation -- exposes governance failures in how the merger was structured. Ocean's counter-allegations about governance not matching the "original decentralised vision" point to structural problems in the alliance itself.
 
-Either way, a founding member leaving within 18 months is not a sign of health.
+Settlement or not, a founding member leaving within 18 months is not a sign of health.
 
 ## Next-generation tokenomics
 
@@ -115,7 +116,7 @@ This is well-designed on paper. No implementation timeline has been published. A
 
 **1. ASI:Chain mainnet.** The convergence layer that is supposed to unify all products under one protocol. Until it launches, the alliance is three separate products sharing a token. No timeline published.
 
-**2. The Ocean lawsuit.** Resolution will clarify what happened with the OCEAN-to-FET conversion and whether 263 million FET was dumped on markets. If proven, it explains a meaningful portion of the 96% price decline.
+**2. The Ocean settlement fallout.** The lawsuit is settled and Ocean returned 286 million FET, but the episode confirmed that 263 million FET was sold without disclosure. That explains a meaningful portion of the 96% price decline, and the reputational damage to the alliance's governance credibility persists.
 
 **3. Usage metrics.** None of the platforms -- Agentverse, SingularityNET marketplace, ASI Cloud -- publish adoption or revenue data. For a combined ecosystem that has been live in various forms since 2017, this opacity is a red flag.
 
@@ -127,7 +128,7 @@ This is well-designed on paper. No implementation timeline has been published. A
 
 The ASI Alliance has genuine technical talent. Ben Goertzel is one of the most credible AGI researchers alive. Fetch.ai's agent architecture is functional and differentiated. The combined patent portfolio and research output is substantial.
 
-But the execution has been troubled. A 96% price decline from the merger announcement. A founding member's acrimonious exit. An unresolved lawsuit alleging insider dumping. No published usage metrics across any platform. A convergence layer with no mainnet date.
+But the execution has been troubled. A 96% price decline from the merger announcement. A founding member's acrimonious exit. A settled lawsuit that confirmed undisclosed selling of over 10% of circulating supply. No published usage metrics across any platform. A convergence layer with no mainnet date.
 
 The merger thesis was that combining three specialised projects would create something greater. Losing the data layer and the associated lawsuit have damaged that thesis. What remains is a well-resourced agent platform (Fetch), a long-running but opaque AI marketplace (SingularityNET), and a validator set (CUDOS), sharing a token that has lost 96% of its value.
 

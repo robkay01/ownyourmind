@@ -2,6 +2,7 @@
 title: "RENDER vs AKT vs IO: The Revenue Question"
 description: "Three decentralised compute networks, three different revenue models. What Render gets right on returns, what Akash gets right on freedom, and why the trade-off matters."
 publishDate: 2026-03-07
+updatedDate: 2026-03-12
 draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsRenderVsAkashVsIonet.mp3"
 ---
@@ -25,7 +26,7 @@ Render, Akash and io.net are the three largest decentralised compute networks by
 | **Network model** | Permissioned | Permissionless | Permissionless portal |
 | **Core software** | Proprietary (OTOY) | Open source (Apache 2.0) | Partially open |
 | **Freedom score** | 32/100 (F) | 66/100 (C) | 38/100 (F) |
-| **Returns score** | 72/100 (B) | 62/100 (C) | 49/100 (D) |
+| **Returns score** | 72/100 (B) | 62/100 (C) | 54/100 (D) |
 
 ## Render: centralisation as a product strategy
 
@@ -33,9 +34,9 @@ Render's revenue story starts with OctaneRender. OTOY built one of the most wide
 
 The burn mechanism is straightforward. When a creator pays for a rendering job, 95% of the RENDER spent is permanently burned. 5% goes to OTOY as a service fee. Node operators receive newly minted RENDER from an emission pool. If burns exceed emissions, the token becomes deflationary.
 
-Burns grew 279% year-over-year through 2025. Monthly burns increased from roughly 20,000 RENDER in January to 121,000 in September. Sixty-nine million frames have been rendered, with 35% of all-time volume in 2025 alone. The trajectory is real.
+Burns grew 279% year-over-year through 2025. Monthly burns increased from roughly 20,000 RENDER in January to 121,000 in September. Over 1 million RENDER have now been permanently burned. Sixty-nine million frames have been rendered, with 35% of all-time volume in 2025 alone. The trajectory is real.
 
-The problem: monthly emissions of roughly 492,000 RENDER still outpace monthly burns of roughly 59,000 RENDER by a factor of eight. BME is net inflationary today. The system needs approximately 8x more rendering demand before it flips deflationary. That is a lot of rendering.
+The problem: monthly emissions of roughly 492,000 RENDER still outpace burns. BME is net inflationary today. The system needs substantially more rendering demand before it flips deflationary. That is a lot of rendering.
 
 **Why it scores highest on returns.** Render has something most DeAI projects do not: a moat. OctaneRender is proprietary software with genuine Hollywood adoption – Beeple, Apple Vision Pro, Stability AI. Studios already using OctaneRender have a natural path to the network. The burn mechanism directly ties usage to token scarcity. The 644M hard cap with declining emissions gives a clear path to deflation at scale. And major exchange listings (Binance, Coinbase, Kraken, OKX) provide institutional-grade liquidity.
 
@@ -78,7 +79,7 @@ Strip away the marketing and look at what each token actually does with revenue:
 | Mechanism | RENDER | AKT | IO |
 |-----------|--------|-----|-----|
 | **Does revenue burn tokens?** | Yes – 95% of job spend burned | Not yet (BME approved, not active) | Claimed – 50%+ of post-supplier revenue |
-| **Does revenue flow to holders?** | No – no staking, no fee distribution | Partially – staking yields include small fee component | Not clearly documented |
+| **Does revenue flow to holders?** | Not to holders – no holder staking or fee distribution. Operators earn job-based rewards since RNP-019 (May 2025), tied to availability and completed work | Partially – staking yields include small fee component | Not clearly documented |
 | **Is revenue verifiable?** | Partially – burns on-chain, USD not disclosed | Yes – fully on-chain | Partially – Messari reports, but core figures self-reported |
 | **Is the system deflationary?** | Not yet (8x gap) | Not yet (inflationary by design) | Unknown |
 | **Revenue growth rate** | +279% YoY burns | +128% YoY spend | N/A (too new) |
