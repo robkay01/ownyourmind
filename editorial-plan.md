@@ -2,7 +2,7 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-10 (Priority 1 tokenomics + build articles drafted)
+Updated: 2026-03-12 (0xJeff research: Arcium, Secret Network reassess, privacy+AI narratives, agent economy essay)
 
 ---
 
@@ -95,11 +95,25 @@ Two additional articles written since:
 - "Why Crypto + AI Converge" (Agent Zero partnership) — DONE
 - "The Sovereignty Stack" — DONE
 
-### Priority 2 (ideas for future)
+### Priority 2 — Narrative-driven (keyword research: March 2026)
+
+#### "Why Private AI Inference Is the Next Infrastructure Battle"
+**Status:** Idea — **HIGH PRIORITY**
+**Angle:** Framework piece connecting Venice, Nillion, Phala, Oasis, Arcium into a unified thesis. TEEs vs FHE vs MPC — what actually works today vs what's theoretical. 0G Sealed Inference (March 2026) as the latest entrant. OYM owns this intersection (privacy + AI) that 0xJeff treats as separate narratives.
+**Target queries:** private AI inference, decentralized AI privacy, confidential AI compute
+**Estimated volume:** Growing — "private AI" is a 2026 breakout term. No established authority site owns this niche yet.
+**Keyword advantage:** OYM already ranks for "venice ai review" (5,000/mo) and "sovereign ai" (5,000/mo). This essay links the two.
+
+#### "When AI Agents Hold Wallets: The Economic Layer We're Missing"
+**Status:** Idea — **HIGH PRIORITY**
+**Angle:** AI agents as autonomous economic actors. Coinbase Agentic Wallets (Feb 2026), BNB Chain ERC-8004, x402 protocol (50M+ transactions). CZ and Armstrong both calling this the future. What it means for DeAI infrastructure — agents need compute (Bittensor, Akash), data (Ocean, Vana), and inference (Venice, Morpheus). The economic plumbing that connects our existing project coverage.
+**Target queries:** AI agents crypto wallets, autonomous AI agents blockchain, agentic wallets
+**Estimated volume:** High and rising — $7.84B→$52.62B market by 2030 (MarketsandMarkets). 90% search interest drop after late-2025 hype peak = opportunity to publish quality content as noise clears.
+**Keyword advantage:** No practitioner-depth coverage exists. All current content is news articles or listicles.
 
 #### "The Four Stages of AI Privacy (and Where We Are Now)"
 **Status:** Idea
-**Angle:** Framework piece mapping the evolution from "no privacy" to "programmable privacy" in AI.
+**Angle:** Framework piece mapping the evolution from "no privacy" to "programmable privacy" in AI. Now enriched by 0xJeff's 9-category privacy taxonomy.
 
 #### "You're Already Paying for Privacy — You Just Don't Know It"
 **Status:** Idea
@@ -115,7 +129,10 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 | Project | Token | Notes | Priority |
 |---|---|---|---|
+| Arcium | ARX | Parallelised confidential computing on Solana. MPC+FHE+ZKP combined. Mainnet Alpha launched Q1 2026. ~$68M market cap. $9M raised (Coinbase Ventures, Jump Crypto). Mint-and-burn ARX tokenomics. First app: Umbra (shielded transfers). Core DeAI — privacy compute is the founding thesis. Source: 0xJeff Privacy Landscape. | **High** |
 | Ritual | (pre-token) | On-chain AI inference protocol. Verifiable AI for smart contracts. | Medium |
+| Secret Network | SCRT | **Reassess Q2 2026.** Previously classified AI-washed (DeFi collapse → AI rebrand). BUT: 2026 roadmap shows real AI products — SecretAI SDK, Confidential RAG, Confidential Fine-Tuning, Verifiable Message Signing. NVIDIA TEE-backed. scrtlabs maintains Morpheus-Lumerin-Node (1,765 commits, active). 40% YoY growth in active apps. If SecretAI shows measurable adoption by Q2, reclassify from AI-washed to DeAI-adjacent. Source: 0xJeff Privacy Landscape + Secret 2026 roadmap. | Medium |
+| Fhenix | (pre-token) | FHE L2 on Ethereum. Compute on encrypted data without decryption. $22M raised (Multicoin Capital). Threshold FHE paper accepted to ACM CCS 2025. CoFHE coprocessor on Base. No token yet. Revisit post-TGE. Source: 0xJeff Privacy Landscape. | Low |
 | Hyperbolic | (pre-token) | Verifiable inference with proof systems. | Low |
 | GenLayer | (pre-token) | AI-powered blockchain for subjective dispute resolution. LLM validators reach consensus on non-deterministic decisions via "Intelligent Contracts" (Python). Novel concept, still on testnet (Bradbury). No token, no disclosed funding. Revisit post-mainnet. genlayer.com | Low |
 
@@ -123,7 +140,7 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 | Project | Token | Verdict | Why |
 |---|---|---|---|
-| Secret Network | SCRT | AI-washed | DeFi collapse to AI rebrand. Embryonic adoption. Opportunistic pivot. |
+| ~~Secret Network~~ | ~~SCRT~~ | ~~AI-washed~~ | Moved to "Potential future additions" — reassess Q2 2026 after SecretAI adoption data. |
 
 ---
 
@@ -263,6 +280,7 @@ Current backlog: `docs/quarterly-review-backlog.md`
 - **Dune Analytics** — on-chain dashboards. Venice: [seoul/venice](https://dune.com/seoul/venice), [maxdesalle/venice](https://dune.com/maxdesalle/venice), [jdhyper/vvv-launch-and-staking](https://dune.com/jdhyper/vvv-launch-and-staking)
 - **Academic** — federated learning economics, FHE performance papers
 - **DeAI Twitter/X** — @0xJeff, @CanteraCapital, @OlasNetwork, @baboracles
+- **0xJeff Substack** (Tier 3) — "The Privacy Landscape Part 1" (Mar 5 2026), "The 7 Narratives" (Mar 12 2026), "After Hour EP.45" (Mar 8 2026). Privacy taxonomy, narrative framework, project-level takes. Filed in `0xBobski_research/0xJeff/`
 
 ---
 
@@ -320,13 +338,16 @@ Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 10. ~~ASI Alliance merged tokenomics~~ — **DONE** (drafted 2026-03-10)
 11. ~~dTAO subnet economics~~ — **DONE** (drafted 2026-03-10)
 
-### Phase 3 — New content (tutorials, comparisons, resources)
+### Phase 3 — New content (tutorials, comparisons, resources, narrative essays)
 
 12. ~~**Build tutorials**~~ — **DONE** — All 6 keyword-validated tutorials drafted 2026-03-10, stockpiled for batch publish
-13. **Resources expansion** — Glossary, Recommended Tools (Ollama, LM Studio etc.), Community Directory, Recommended Reading
-14. **Comparison articles** — Bittensor vs Render vs Akash, GPU compute showdown (dual-score differentiator)
-15. **DIEM tokenomics** — Venice flywheel deep-dive
-16. **DePIN Tokens Ranked** — new resource page (50 searches)
+13. **"Why Private AI Inference Is the Next Infrastructure Battle"** — why-deai essay. Connects Venice/Nillion/Phala/Oasis/Arcium. OYM owns privacy+AI intersection.
+14. **"When AI Agents Hold Wallets"** — why-deai or journal essay. Agentic economy narrative — connects to all existing infrastructure coverage.
+15. **Arcium project review** — Full research protocol. Mainnet Alpha live, ARX token, MPC+FHE on Solana.
+16. **Comparison articles** — Bittensor vs Render vs Akash, GPU compute showdown (dual-score differentiator)
+17. **DIEM tokenomics** — Venice flywheel deep-dive
+18. **DePIN Tokens Ranked** — new resource page (50 searches)
+19. **Resources expansion** — Glossary, Recommended Tools (Ollama, LM Studio etc.), Community Directory, Recommended Reading
 
 ### Phase 4 — Podcast & video production
 

@@ -104,6 +104,42 @@ This pattern matters for voice: Rob doesn't wing it. He studies the domain forma
 - Comfortable with governance, board reporting, lender requirements, regulatory interfaces; this shows in how he assesses project maturity and accountability structures
 - Has managed A$500m+ projects through procurement, construction, commissioning, and handover; understands the full lifecycle, not just the pitch
 
+### Voice patterns from professional emails (extracted March 2026)
+
+Analysis of 19 sent emails from Rob's 10-year professional archive reveals patterns that complement the Twitter voice data:
+
+**Sentence structure:**
+- Opens with context, then action. "As mentioned last week we are concerned about X. There appears to be a problem with Y." Not the other way around.
+- Uses "Please can you..." not "Could you please..." or "Would you mind..." The politeness is there but it's efficient, not deferential.
+- Frequently ends emails with a specific request or next step. Does not trail off or leave things open-ended.
+- Uses "FYI," as a standalone opener when forwarding context. Brief, no padding.
+
+**Technical communication style:**
+- Cites specific contract clauses by number ("Clause 27(f)", "Clause 25.6(ii)"). Backs assertions with primary sources, not summaries.
+- Uses worked examples to explain complex mechanics. The Lifecycle procedure email walks through a carpet replacement deferral calculation step by step. This is the same approach used in OYM tokenomics articles.
+- When explaining risk, names the specific consequence: "This is a risk to long term structural stability and potential for resulting vibration/alignment issues with the pumps." Not "this could be problematic."
+- Links academic sources directly when sharing research (academic paper URLs pasted with key findings summarised in plain English).
+
+**Tone markers:**
+- "Hi [first name]" opening, "Thanks / Cheers / Rob" closing. Never "Dear" unless writing to a stranger. Never "Best regards."
+- Addresses people by first name only, even senior stakeholders.
+- "I would suggest is that..." — proposes solutions, not just problems. Frames actions as suggestions when politically useful, but the suggestion is clearly a direction.
+- "If we don't receive anything we will need to resort to contractual notices." — escalation is stated factually, not threatened. The consequence is the message, not the emotion.
+- "Could we get Andrew Sobey out to site early next week..." — requests framed as collaborative questions even when he clearly has authority to direct.
+
+**Risk communication:**
+- Names risks with specificity: "The feedwater pumps are one of the biggest risks to business interruption." Doesn't say "there's a risk." Says exactly what the risk is and why it matters.
+- Provides context before concern: explains what's happening, then why it matters, then what he wants done about it.
+- "tipped us off (off the record)" — comfortable noting informal intelligence alongside formal analysis. This maps to the OYM approach of combining on-chain data with community intelligence.
+
+**NEM suspended email (best voice sample):**
+- The "Fact / Take" structure is pure Rob. States the objective fact, then his interpretation. Numbered, systematic, no waffle.
+- Uses casual phrasing within analytical framework: "'to the moon'" in quotes (ironic), "beyond the pale" (British idiom), "mighty tempted" (colloquial within serious analysis).
+- Shares this analysis proactively during a "poorly timed holiday" — the instinct to explain and educate is genuine, not performed. Same energy as OYM.
+
+**Key difference from Twitter voice:**
+- Professional emails are more structured, more specific, more reference-heavy. The personality is the same but the rigour is higher. OYM editorial should sit between the two: Twitter's personality with email's precision.
+
 ## Crypto and DeAI Convictions (from tweet history)
 
 - **Morpheus is his highest-conviction DeAI project.** Consistently promotes it, defends it, suggests it to others. Believes in the fair launch model (wstETH staking for MOR). Sees it as genuinely pioneering.

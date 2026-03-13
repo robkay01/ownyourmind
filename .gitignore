@@ -38,3 +38,7 @@ voice-training/
 # Remotion explainer video outputs
 explainers/out/
 explainers/node_modules/
+# Voice samples and email extracts - private
+0xBobski_research/voice-samples/
+Sent Items.*
+Outlook Data File.*
