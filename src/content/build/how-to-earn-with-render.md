@@ -4,7 +4,7 @@ description: "There is no RENDER staking. Here is what actually exists: GPU node
 difficulty: "intermediate"
 category: "walkthrough"
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## The short answer on staking
@@ -23,13 +23,13 @@ There are two paths:
 
 Provide approved NVIDIA GPUs to render frames for OctaneRender, Blender Cycles and Redshift jobs. Creators submit scenes, the network matches them to your GPU, you render the frames, and you earn RENDER from the BME emissions pool.
 
-This is the established path. 69 million cumulative frames rendered. ~15,670 registered node operators. Real Hollywood and enterprise customers.
+This is the established path. Nearly 70 million cumulative frames rendered. ~15,680 registered node operators. Real Hollywood and enterprise customers.
 
 ### 2. Compute node operator (AI/general)
 
 New as of March 2025 via RNP-019, expanded in November 2025 via RNP-021. Provide GPUs for AI inference, video generation and general compute workloads. Separate from rendering — you cannot share hardware between the two.
 
-This is the growth path. Partners include Manifest (distributed LLM for financial services), Think Agents (on-chain AI), and Dispersed.com (600+ AI models). Enterprise-grade expansion supports H100, H200, A100 and AMD MI300 series GPUs.
+This is the growth path. Partners include Manifest (distributed LLM for financial services) and Think Agents (on-chain AI). The Render team also built Dispersed.com (600+ AI models), which serves as the commercial face of the compute subnet. Enterprise-grade expansion supports H100, H200, A100 and AMD MI300 series GPUs.
 
 ## Hardware requirements
 
@@ -56,7 +56,7 @@ Same bandwidth requirements. Must run Linux (Ubuntu 22.04 or 24.04). Docker requ
 | RTX 5070 Ti | 1.1x |
 | RTX 4090 | 1.0x (baseline) |
 
-Enterprise tier (RNP-021): H100, H200, A100, L40, L4, T4, AMD MI300 series. Up to 1,200 H200-equivalent enterprise nodes planned.
+Enterprise tier (RNP-021): H100, H200, A100, L40, L4, T4, AMD MI300 series, Intel Data Center GPU Max series, and potentially Groq LPUs. Up to 1,200 H200-equivalent enterprise nodes planned.
 
 Compute nodes must be dedicated — no sharing workloads with rendering nodes. This is effectively two parallel networks under one token.
 
@@ -92,13 +92,13 @@ Current availability rewards: 12,500 RENDER/month split across rendering nodes, 
 
 Year 1 BME emissions totalled 9.13 million RENDER across all node operators. Year 2 drops to 5.91 million RENDER — a 35% reduction. After RNP-013 rebalanced allocations, weekly node job rewards sit at approximately 20,700 RENDER.
 
-At current RENDER price (~$1.41), that is roughly $29,200 per week split across ~15,670 registered operators. If every operator were equally active, that would be $1.86 per operator per week. They are not equally active, and reward weighting by GPU score, uptime and work completed means top operators earn significantly more. But the pool is not large.
+At current RENDER price (~$1.82), that is roughly $37,700 per week split across ~15,680 registered operators. If every operator were equally active, that would be $2.40 per operator per week. They are not equally active, and reward weighting by GPU score, uptime and work completed means top operators earn significantly more. But the pool is not large.
 
 ### BME burns (the deflationary thesis)
 
 Every rendering or compute job burns 95% of the RENDER payment (5% goes to OTOY as a service fee). The thesis is that as usage grows, burns exceed emissions and RENDER becomes deflationary.
 
-Current reality: monthly burns are approximately 50,000 RENDER versus monthly emissions of approximately 500,000 RENDER. That is a 10x gap. Burns are growing 279% year-over-year, which is genuinely impressive growth, but the network needs roughly 10x current usage before approaching equilibrium. This is the same structural challenge I covered in the [BME tokenomics comparison](/tokenomics/burn-mint-equilibrium-what-changes-for-akt/).
+Current reality: monthly burns are approximately 50,000 RENDER versus monthly emissions of approximately 500,000 RENDER. That is a 10x gap. Network usage grew 87% year-over-year in 2025 (after 200% in 2024), but the network needs roughly 10x current usage before approaching equilibrium. This is the same structural challenge I covered in the [BME tokenomics comparison](/tokenomics/burn-mint-equilibrium-what-changes-for-akt/).
 
 ### Compute node economics
 
@@ -118,13 +118,13 @@ The honest picture: at current prices and utilisation rates, GPU node operation 
 
 RENDER holders can vote on Render Network Proposals (RNPs) via Nation.io. Proposals go through a two-stage process: initial vote (72 hours, no quorum) and final vote (6 days, 15% quorum, 60% approval threshold). Voting is token-weighted using RENDER in self-custody Solana wallets.
 
-Participation is extremely low. RNP-022 saw 2.77% approve, 0.01% disapprove, 97.22% abstain. Only about 0.5% of supply actively votes. There are 22 RNPs to date — 7 implemented, 11 approved and on the roadmap. Governance is functional but barely used.
+Participation is extremely low. RNP-022 saw 2.77% approve, 0.01% disapprove, 97.22% abstain. Only about 0.5% of supply actively votes. There are 23 RNPs to date (RNP-000 through RNP-022) — 9 implemented, 10 approved and on the roadmap. Governance is functional but barely used.
 
 ## What I would do
 
 I hold RENDER. I bought it for the BME thesis and the OctaneRender moat — Hollywood rendering customers create real, verifiable demand that most DeAI projects cannot match. But I do not operate a node. My hardware is a Mac Studio, not a rack of NVIDIA GPUs.
 
-If I were setting up a Render node today, I would go the compute route (RNP-019/021) rather than rendering. The AI compute market is growing faster, the GPU requirements overlap with hardware you might use for other purposes, and the enterprise expansion via RNP-021 signals where the Foundation sees future demand.
+At current RENDER price (~$1.82), if I were setting up a Render node today, I would go the compute route (RNP-019/021) rather than rendering. The AI compute market is growing faster, the GPU requirements overlap with hardware you might use for other purposes, and the enterprise expansion via RNP-021 signals where the Foundation sees future demand.
 
 I would use hardware I already own. I would not buy GPUs specifically for Render at current reward levels. And I would treat the RENDER emissions as a bonus on top of hardware I use for other work, not as a primary income source.
 

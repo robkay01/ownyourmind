@@ -4,12 +4,12 @@ description: "How to set up an Aethir node — Checker nodes, Edge devices, and 
 difficulty: "beginner"
 category: "walkthrough"
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## What Aethir offers
 
-Aethir is an enterprise GPU compute network for AI and cloud gaming. It claims $127.8 million in 2025 revenue and 150+ enterprise customers. Those numbers are self-reported and not independently audited, which matters for everything that follows.
+Aethir is an enterprise GPU compute network for AI and cloud gaming. It claims $147 million in annualised recurring revenue and 150+ enterprise customers. Those numbers are self-reported and not independently audited, which matters for everything that follows.
 
 There are three ways to participate in the network. Each has very different economics, barriers to entry and risk profiles. For the full project assessment, see our [Aethir review](/projects/aethir/).
 
@@ -69,7 +69,7 @@ Cannot run multiple CLI instances on one machine. Windows GUI is also available 
 - **Bonus rewards:** Quarterly, requires over 95% uptime for the entire quarter
 - **Withdrawal vesting:** 120 days (first claim), 180 days (subsequent), OR 30-day accelerated vesting at a 75% penalty (you keep only 25%)
 
-Aethir does not publish per-node daily figures. Community reports vary significantly and are often outdated. At current ATH price ($0.0059), any per-node daily reward measured in hundreds of ATH translates to cents, not dollars.
+Aethir does not publish per-node daily figures. Community reports vary significantly and are often outdated. At current ATH price (~$0.006), any per-node daily reward measured in hundreds of ATH translates to cents, not dollars.
 
 ### Checker risks
 
@@ -107,9 +107,9 @@ The emission schedule has declined:
 - **Promotional period (Nov 2024 - Jun 2025):** ~100 ATH/day
 - **Tokenomics v2.0 (Jul 2025 onwards):** ~10 ATH/day base, minus 5% network fee
 
-**At current ATH price ($0.0059):**
-- 10 ATH/day = approximately $0.06/day = ~$1.77/month
-- A $999 device at $1.77/month takes roughly **47 years to break even**
+**At current ATH price (~$0.006):**
+- 10 ATH/day = approximately $0.06/day = ~$1.80/month
+- A $999 device at $1.80/month takes roughly **46 years to break even**
 
 I want to be very clear about this. At current token prices, the Aethir Edge is not an investment that generates returns from compute earnings. It is a speculative bet that ATH will appreciate significantly. If ATH returns to $0.05 (still 58% below its all-time high), daily earnings become ~$0.50 and break-even drops to about 5.5 years. At its ATH of $0.1185, break-even becomes about 2.3 years.
 
@@ -146,13 +146,13 @@ Cloud Hosts earn through two streams: ATH token rewards (Proof of Capacity and P
 
 | Metric | Value |
 |---|---|
-| Price | $0.0059 |
-| Market cap | ~$103M |
-| Circulating supply | ~17B ATH |
+| Price | ~$0.006 |
+| Market cap | ~$110M |
+| Circulating supply | ~18.4B ATH |
 | Total supply | 42B ATH |
 | All-time high | $0.1185 (down ~95%) |
 
-**Critical risk: token unlocks.** Approximately 9.66 billion ATH (23% of total supply) becomes liquid through 2026, with monthly unlocks of roughly $92 million worth starting Q2 2026. This could double circulating supply. The token distribution allocates 50% to compute providers, 15% to ecosystem, 12.5% to team, 11.5% to investors, 6% to airdrop, 5% to advisors.
+**Critical risk: token unlocks.** Approximately 23.6 billion ATH (56% of total supply) remains unvested, releasing linearly through 2028 primarily via Checker and Compute Provider allocations. At current prices (~$0.006), monthly new supply entering circulation is worth roughly $8-10 million — though this figure scales with any price increase. The token distribution allocates 50% to compute providers, 15% to ecosystem, 12.5% to team, 11.5% to investors, 6% to airdrop, 5% to advisors.
 
 ### Staking options
 
@@ -166,7 +166,7 @@ US, Cuba, Iran, North Korea, Syria, Crimea, Donetsk and Luhansk are fully restri
 
 ## My assessment
 
-Aethir has the best revenue story in DeAI — $127.8 million claimed for 2025 — attached to the worst decentralisation credentials. The Indexers are centralised. Cloud Host onboarding is gatekept. The revenue figures are self-reported with no independent audit.
+Aethir has the best revenue story in DeAI — $147 million ARR claimed — attached to the worst decentralisation credentials. The Indexers are centralised. Cloud Host onboarding is gatekept. The revenue figures are self-reported with no independent audit.
 
 For someone looking to participate:
 

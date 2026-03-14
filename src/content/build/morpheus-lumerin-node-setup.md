@@ -4,7 +4,7 @@ description: "How to set up a Morpheus Lumerin node and earn MOR by serving AI i
 difficulty: "intermediate"
 category: "walkthrough"
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## What you are building
@@ -30,9 +30,9 @@ The node also bundles a desktop UI (Electron), a CLI client, and IPFS (Kubo) for
 
 ## What you earn
 
-24% of all MOR emissions go to compute providers. The daily emission started at 14,400 MOR/day in February 2024 and decreases by approximately 2.47 MOR per day. By March 2026 (day 761), that is roughly 12,521 MOR/day total, with approximately 3,005 MOR/day allocated to the compute pool.
+24% of all MOR emissions go to compute providers. The daily emission started at 14,400 MOR/day in February 2024 and decreases by approximately 2.47 MOR per day. By mid-March 2026 (~day 766), that is roughly 12,511 MOR/day total, with approximately 3,003 MOR/day allocated to the compute pool.
 
-At current MOR price (~$1.42), the entire compute pool is worth roughly $4,267/day (~$128,000/month) across all providers. MOR is down 99% from its all-time high of $139 (May 2024). Individual earnings depend on how many providers are active and how much consumer demand exists.
+At current MOR price (~$1.40), the entire compute pool is worth roughly $4,204/day (~$126,000/month) across all providers. MOR is down 99% from its all-time high of $139 (May 2024). Individual earnings depend on how many providers are active and how much consumer demand exists.
 
 The honest problem: there is no public dashboard showing active provider count, demand volume, or reward distribution. You can query the Diamond contract's `getProviderIds()` function on BaseScan to get the registered provider count, or ask in the Discord #compute-providers channel. But the network does not surface this data in any accessible way, which is a significant gap.
 
@@ -64,7 +64,7 @@ Your staked MOR also caps your maximum reward. Stake 100 MOR, earn up to 100 MOR
 
 ### Bootstrapping incentive
 
-During the first year after the capital contract bootstrapping period, the top 100 compute providers may receive a pro-rata 2.4% of MOR emissions (one-tenth of the compute bucket). This is the early subsidy for providers who show up before consumer demand has fully materialised.
+During the first year after the capital contract bootstrapping period, the top 100 compute providers may receive a pro-rata 2.4% of MOR emissions (one-tenth of the compute bucket). The capital contract bootstrapping period was 90 days from February 2024, so this incentive window likely closed around August 2025. Whether it was extended is not documented — check the Discord #compute-providers channel for current status.
 
 ### Staking requirements
 
@@ -74,8 +74,8 @@ The barrier to entry is low in MOR terms:
 |---|---|
 | Register as provider | 0.2 MOR (~$0.28) |
 | Register a model | 0.1 MOR (~$0.14) |
-| Post a bid | 0.3 MOR (~$0.43) |
-| **Total to start** | **0.6 MOR (~$0.85)** |
+| Post a bid | 0.3 MOR (~$0.42) |
+| **Total to start** | **0.6 MOR (~$0.84)** |
 
 That is under a dollar to register. Additional stake above the minimum increases your reputation weight and your earning cap. To register as a subnet operator, you need 10,000 MOR (~$14,200).
 
@@ -280,15 +280,15 @@ Let me work the numbers at current prices for the budget single-GPU build.
 
 **Staking:** 0.6 MOR (~$0.85). Negligible.
 
-**Earnings:** The entire compute pool receives approximately 3,005 MOR/day (~$4,267/day at $1.42/MOR). Under the Yellowstone model, rewards are not split equally -- they go to providers who win bids and serve inference. But as a rough guide:
+**Earnings:** The entire compute pool receives approximately 3,003 MOR/day (~$4,204/day at $1.40/MOR). Under the Yellowstone model, rewards are not split equally -- they go to providers who win bids and serve inference. But as a rough guide:
 
 | Providers sharing pool | Your monthly share | Monthly AUD (approx.) | Break-even |
 |---|---|---|---|
-| 25 | ~3,606 MOR | ~$7,350 | < 1 month |
-| 50 | ~1,803 MOR | ~$3,675 | ~1 month |
-| 100 | ~901 MOR | ~$1,837 | ~2 months |
-| 250 | ~361 MOR | ~$736 | ~4 months |
-| 500 | ~180 MOR | ~$367 | ~8 months |
+| 25 | ~3,604 MOR | ~$7,240 | < 1 month |
+| 50 | ~1,802 MOR | ~$3,620 | ~1 month |
+| 100 | ~901 MOR | ~$1,810 | ~2 months |
+| 250 | ~360 MOR | ~$724 | ~4 months |
+| 500 | ~180 MOR | ~$362 | ~8 months |
 
 These assume equal sharing, which the Yellowstone model does not guarantee -- competitive pricing and uptime determine your actual share. Subtract $50-60/month in electricity from each scenario.
 
@@ -298,8 +298,8 @@ The provider count is the variable that makes or breaks this. At 100 providers, 
 
 | MOR price | Daily pool value | Monthly pool value |
 |---|---|---|
-| $0.50 (further decline) | $1,503 | $45,075 |
-| $1.42 (current) | $4,267 | $128,000 |
+| $0.50 (further decline) | $1,502 | $45,045 |
+| $1.40 (current) | $4,204 | $126,000 |
 | $5.00 (recovery) | $15,025 | $450,750 |
 | $10.00 (modest recovery) | $30,050 | $901,500 |
 

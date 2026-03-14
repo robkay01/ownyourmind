@@ -4,7 +4,7 @@ description: "How to set up a FluxNode and earn FLUX. Node tiers, ArcaneOS insta
 difficulty: "intermediate"
 category: "walkthrough"
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## GPU mining is dead
@@ -19,9 +19,9 @@ The way to earn FLUX is now node operation or Titan fractional staking. For the 
 
 | Path | Capital required | Technical skill | Earnings potential |
 |---|---|---|---|
-| **FluxNode (Cumulus)** | 1,000 FLUX (~$60) + hardware | Intermediate | Low at current prices |
-| **FluxNode (Nimbus)** | 12,500 FLUX (~$750) + hardware | Intermediate | Moderate at current prices |
-| **FluxNode (Stratus)** | 40,000 FLUX (~$2,400) + hardware | Intermediate | Best per-node at current prices |
+| **FluxNode (Cumulus)** | 1,000 FLUX (~$56) + hardware | Intermediate | Low at current prices |
+| **FluxNode (Nimbus)** | 12,500 FLUX (~$700) + hardware | Intermediate | Moderate at current prices |
+| **FluxNode (Stratus)** | 40,000 FLUX (~$2,240) + hardware | Intermediate | Best per-node at current prices |
 | **Titan staking** | 50+ FLUX (~$3) | Beginner | Lowest, but no hardware |
 
 ## Node tier requirements
@@ -54,7 +54,7 @@ Block time: 30 seconds (reduced from 2 minutes). Block reward: 14 FLUX per block
 | Cumulus | 7.1% | 1.0 FLUX | ~2,880 FLUX |
 | Foundation | 3.6% | 0.5 FLUX | ~1,440 FLUX |
 
-Total daily emissions: approximately 40,320 FLUX. A 10% annual emission reduction replaces the old halving mechanism, targeting ~1% inflation by 2036. New max supply: 560 million FLUX.
+Total daily emissions: approximately 40,320 FLUX. A 10% annual emission reduction replaces the old halving mechanism, targeting ~1% inflation by 2036. Max supply: 440 million FLUX.
 
 ### Parallel asset bonus
 
@@ -62,7 +62,7 @@ For every 1 FLUX earned in block rewards, node operators earn an additional 0.1 
 
 ## Setting up a FluxNode with ArcaneOS
 
-ArcaneOS is required for all new nodes. It replaced legacy FluxOS in March 2025 and is mandatory for Progressive Node Rewards eligibility.
+ArcaneOS launched in March 2025 and is mandatory for Progressive Node Rewards (PNR) eligibility and enterprise-grade app hosting. Legacy FluxOS nodes remain functional for earning native block and parallel mining rewards, but only ArcaneOS nodes qualify for PNR revenue sharing.
 
 ### What you need before starting
 
@@ -121,19 +121,19 @@ Currently 111 active Titan Nodes with approximately 3.8 million FLUX staked.
 
 At current FLUX price (~$0.06), let me work the numbers.
 
-The total daily emission pool is ~40,320 FLUX worth roughly $2,400. Split across an estimated 10,000-14,000 nodes (exact count varies by source — the live dashboard at nodeinfo.app.runonflux.io gives the current figure):
+The total daily emission pool is ~40,320 FLUX worth roughly $2,258. Split across approximately 7,835 nodes (Cumulus: 4,488, Nimbus: 1,725, Stratus: 1,622 — check the live dashboard at nodeinfo.app.runonflux.io for current figures):
 
-- **Cumulus:** The 2,880 FLUX daily Cumulus pool divided across thousands of Cumulus nodes yields cents per day per node. Hardware and hosting costs are not covered.
-- **Nimbus:** Better, but still likely below the cost of running the hardware.
-- **Stratus:** The 25,920 FLUX Stratus pool divided across fewer Stratus nodes produces the best per-node returns. At $0.06 per FLUX, a Stratus node might earn $1-2/day before parallel assets. Still tight against hardware costs.
+- **Cumulus:** The 2,880 FLUX daily Cumulus pool divided across 4,488 Cumulus nodes yields roughly 0.64 FLUX/day (~$0.04). Hardware and hosting costs are not covered.
+- **Nimbus:** The 10,080 FLUX Nimbus pool across 1,725 nodes yields roughly 5.8 FLUX/day (~$0.33). Still below hosting costs.
+- **Stratus:** The 25,920 FLUX Stratus pool across 1,622 nodes yields roughly 16 FLUX/day (~$0.90) before parallel assets. With all parallel assets active, this could roughly double to ~$1.80/day. Still tight against hardware costs.
 
-**Progressive Node Rewards** add FluxCloud revenue sharing: 80% of FluxCloud application revenues go to ArcaneOS node operators (25% to Cumulus, 33% to Nimbus, 42% to Stratus). However, FluxCloud has approximately 100 deployed apps and the revenue share is still in early rollout.
+**Progressive Node Rewards** add FluxCloud revenue sharing: 80% of FluxCloud application revenues go to ArcaneOS node operators. However, FluxCloud has approximately 658 deployed apps currently (over 25,000 historically) and the revenue share is still in early rollout.
 
 **FluxEdge** offers a separate GPU revenue stream. If you have an NVIDIA GPU (GTX 1060 minimum, RTX 3060+ recommended), you can contribute it to FluxEdge via the FluxCore desktop app and earn rental fees ($0.10-2.00+ per GPU hour depending on the card). This is independent of FluxNode rewards and is the closest thing to "GPU mining" that still exists on Flux.
 
 ### The real thesis
 
-Node economics at current FLUX prices do not generate positive returns for most operators. This is why the node count declined from 14,000+ to approximately 8,000-10,000 — operators who needed immediate returns have left.
+Node economics at current FLUX prices do not generate positive returns for most operators. This is why the node count has declined from 14,000+ to approximately 7,800 — operators who needed immediate returns have left.
 
 Running a FluxNode makes sense if:
 - You believe FLUX will appreciate significantly from current levels
@@ -149,7 +149,7 @@ Nodes must maintain 97%+ uptime. If you go offline, you miss payout cycles and a
 
 ArcaneOS includes built-in monitoring with Discord/Telegram alerts. For external monitoring, UptimeRobot (free tier, 50 monitors) can track your node's API endpoint and web UI.
 
-The latest ArcaneOS "Regal Elephant" update adds automatic rollback on npm install failures and smarter UPnP port selection, reducing maintenance burden.
+Recent ArcaneOS updates have added automatic rollback on npm install failures and smarter UPnP port selection, reducing maintenance burden.
 
 **Flux TestNet** is available for testing the full setup before committing real FLUX collateral. Use it.
 

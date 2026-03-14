@@ -4,7 +4,7 @@ description: "Step-by-step guide to building an autonomous AI agent with ElizaOS
 difficulty: "intermediate"
 category: "walkthrough"
 publishDate: 2026-03-10
-draft: true
+draft: false
 ---
 
 ## What ElizaOS is
@@ -15,9 +15,11 @@ Your agent can post on Twitter, respond in Discord, execute blockchain transacti
 
 For the full project assessment, see our [ElizaOS review](/projects/elizaos/).
 
+**Version note:** This guide covers ElizaOS v1.x (latest stable: v1.7.2). ElizaOS v2 is in alpha (v2.0.0-alpha) with changes to the plugin namespace and an event-driven architecture. When v2 reaches stable release, this guide will be updated. The core concepts (character files, plugin system, model backends) carry over.
+
 ## What you need
 
-- **Node.js v23.3+** — specifically v23.3 or later, not v20 or v22. This is the most common source of errors.
+- **Node.js v23+** — specifically v23 or later, not v20 or v22. This is the most common source of errors.
 - **Bun** runtime (from bun.sh)
 - **Git**
 - **At least one AI model provider:** OpenAI API key, Anthropic API key, Venice API key, or Ollama installed locally
@@ -36,7 +38,7 @@ nvm install 23
 nvm use 23
 
 # Verify
-node --version  # Must be v23.3+
+node --version  # Must be v23+
 
 # Install Bun
 curl -fsSL https://bun.sh/install | bash
@@ -150,6 +152,8 @@ VENICE_IMAGE_MODEL=fluently-xl
 VENICE_EMBEDDING_MODEL=text-embedding-bge-m3
 ```
 
+**Note:** Venice is retiring `llama-3.1-405b` from its web app on 30 May 2026. The API equivalent is `hermes-3-llama-3.1-405b`. After that date, requests will auto-route to a model of similar capability. Check Venice's model list for current options.
+
 For Ollama (local inference):
 ```bash
 # Install Ollama first (brew install ollama on Mac)
@@ -170,12 +174,14 @@ Install the plugin:
 elizaos plugins add @elizaos/plugin-twitter
 ```
 
-Set environment variables:
+Set environment variables. The recommended authentication method is **OAuth 1.0a** (not OAuth 2.0):
+
 ```bash
-# Username/password auth (simpler)
-TWITTER_USERNAME=your_username
-TWITTER_PASSWORD=your_password
-TWITTER_EMAIL=your_email
+# OAuth 1.0a auth (recommended)
+TWITTER_API_KEY=your_api_key
+TWITTER_API_SECRET_KEY=your_api_secret_key
+TWITTER_ACCESS_TOKEN=your_access_token
+TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
 
 # Behaviour controls
 TWITTER_DRY_RUN=true          # Start with this ON
@@ -185,6 +191,8 @@ TWITTER_ENABLE_ACTIONS=true
 POST_INTERVAL_MIN=90          # Minutes between posts
 POST_INTERVAL_MAX=180
 ```
+
+You will need a Twitter Developer account with OAuth 1.0a credentials. The older username/password authentication still exists as a legacy option but is not recommended.
 
 Add `"clients": ["twitter"]` to your character file and launch.
 
@@ -248,7 +256,7 @@ A moderately active Twitter agent making 8-16 posts per day with reply handling 
 
 ## Common pitfalls
 
-1. **Wrong Node.js version.** Must be v23.3+, not v20 or v22. Check with `node --version`.
+1. **Wrong Node.js version.** Must be v23+, not v20 or v22. Check with `node --version`.
 2. **Bun not in PATH.** Add `export PATH="$HOME/.bun/bin:$PATH"` to your shell profile after installing Bun.
 3. **Plugin install failures.** If auto-install fails, manually install: `bun add @elizaos/plugin-name`.
 4. **Mainnet transactions by accident.** Always specify the target chain when using blockchain plugins. Test on testnets first.

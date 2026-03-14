@@ -31,27 +31,27 @@ Updated: 2026-03-12 (0xJeff research: Arcium, Secret Network reassess, privacy+A
 
 All 34 projects have both Freedom Scores and Returns Scores with full editorial breakdowns.
 
-### Tokenomics (7 articles — 4 published, 3 draft)
+### Tokenomics (7 articles — ALL PUBLISHED)
 
 1. **How MOR Actually Works** — capital provider's breakdown of Morpheus token economics, Power Factor, burn mechanics
 2. **MOR vs TAO vs FET: Token Models Compared** — three approaches to tokenising AI infrastructure compared
 3. **RENDER vs AKT vs IO: The Revenue Question** — why Render scores highest on returns despite lowest freedom, revenue model comparison
 4. **Burn-Mint Equilibrium: What Actually Changes for AKT Holders** — AEP-76 mechanics, worked examples, safety infrastructure, Render BME comparison, post-activation metrics
-5. **ASI Alliance: What the Merged Tokenomics Actually Mean** — FET/AGIX/OCEAN/CUDOS conversion, Ocean exit, lawsuit, merged supply dynamics *(draft)*
-6. **Bittensor Halving: What TAO Holders Need to Know** — 3-month retrospective, sell-the-news analysis, dTAO interaction *(draft)*
-7. **Bittensor Subnet Economics: How dTAO Actually Works** — alpha tokens, flow-based emissions, AMM mechanics, zero-emission death spiral *(draft)*
+5. **ASI Alliance: What the Merged Tokenomics Actually Mean** — FET/AGIX/OCEAN/CUDOS conversion, Ocean exit, lawsuit, merged supply dynamics
+6. **Bittensor Halving: What TAO Holders Need to Know** — 3-month retrospective, sell-the-news analysis, dTAO interaction
+7. **Bittensor Subnet Economics: How dTAO Actually Works** — alpha tokens, flow-based emissions, AMM mechanics, zero-emission death spiral
 
-### Build (9 tutorials — 2 published, 7 draft)
+### Build (9 tutorials — ALL PUBLISHED)
 
 1. **Mac Studio DeAI Setup** — setting up a Mac Studio M4 Max for DeAI work
 2. **Agent Zero + Venice + Morpheus** — connecting Agent Zero with Venice and Morpheus APIs
-3. **How to Earn with Grass** — bandwidth sharing setup, airdrop mechanics, honest economics *(draft)*
-4. **How to Earn with RENDER** — node operator guide, rendering/compute nodes, BME, no native staking *(draft)*
-5. **Aethir Node Setup** — Checker/Edge/Cloud nodes, honest break-even analysis *(draft)*
-6. **How to Build an AI Agent with ElizaOS** — character files, model backends, Twitter integration *(draft)*
-7. **Virtuals Protocol: How to Create an AI Agent** — GAME framework, bonding curves, revenue sharing *(draft)*
-8. **Flux Node Setup** — PoUW v2, ArcaneOS, Titan staking, FluxEdge *(draft)*
-9. **Morpheus Lumerin Node Setup** — proxy-router, model hosting, on-chain registration, compute provider economics *(draft)*
+3. **How to Earn with Grass** — bandwidth sharing setup, airdrop mechanics, honest economics
+4. **How to Earn with RENDER** — node operator guide, rendering/compute nodes, BME, no native staking
+5. **Aethir Node Setup** — Checker/Edge/Cloud nodes, honest break-even analysis
+6. **How to Build an AI Agent with ElizaOS** — character files, model backends, Twitter integration
+7. **Virtuals Protocol: How to Create an AI Agent** — GAME framework, bonding curves, revenue sharing
+8. **Flux Node Setup** — PoUW v2, ArcaneOS, Titan staking, FluxEdge
+9. **Morpheus Lumerin Node Setup** — proxy-router, model hosting, on-chain registration, compute provider economics
 
 ### Journal (1 post)
 
@@ -64,7 +64,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 3. **The Quadrant Model** — how Freedom and Returns scores combine into A/B/C/D positioning
 4. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
 
-**Total published content: 52 pages** (+ 10 draft articles stockpiled)
+**Total published content: 62 pages** (no remaining drafts)
 
 ---
 
@@ -185,7 +185,7 @@ Each tutorial links back to its project review. Each project review's "How to pa
 | 5 | ~~**Virtuals Protocol: How to Create an AI Agent**~~ | virtuals protocol ai agent | 50 | **DONE** — Drafted 2026-03-10 |
 | 6 | ~~**Flux Node Setup: How to Earn with FLUX**~~ | flux gpu mining | 50 | **DONE** — Drafted 2026-03-10. Reframed: GPU mining dead since PoUW v2. |
 
-All 6 drafted as `draft: true`, stockpiled for batch publishing when Build section launches.
+All 7 tutorials published 2026-03-14 after accuracy review and data refresh. Build section is live.
 
 ### Priority 2 — Original candidates (not yet keyword-validated)
 
@@ -333,14 +333,14 @@ Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 
 ### Phase 2 — Event-timed content
 
-8. Akash BME activation follow-up (March 23rd) — update project page + returns score
+8. Akash BME activation follow-up (March 23rd) — update project page + returns score. **PREPARED** — changes scoped: update frontmatter (returnsScore 6.2→~6.8-7.0, valueAccrual 10→14-15, supplyDynamics 12→15-16, evidence text), update editorial body (BME now active, not "code complete"), update maxSupply/verdict fields. Apply after confirming activation on-chain and collecting first week metrics.
 9. ~~Bittensor Halving 2026~~ — **DONE** (drafted 2026-03-10)
 10. ~~ASI Alliance merged tokenomics~~ — **DONE** (drafted 2026-03-10)
 11. ~~dTAO subnet economics~~ — **DONE** (drafted 2026-03-10)
 
 ### Phase 3 — New content (tutorials, comparisons, resources, narrative essays)
 
-12. ~~**Build tutorials**~~ — **DONE** — All 6 keyword-validated tutorials drafted 2026-03-10, stockpiled for batch publish
+12. ~~**Build tutorials**~~ — **DONE** — All 7 tutorials published 2026-03-14 after accuracy review and data refresh
 13. **"Why Private AI Inference Is the Next Infrastructure Battle"** — why-deai essay. Connects Venice/Nillion/Phala/Oasis/Arcium. OYM owns privacy+AI intersection.
 14. **"When AI Agents Hold Wallets"** — why-deai or journal essay. Agentic economy narrative — connects to all existing infrastructure coverage.
 15. **Arcium project review** — Full research protocol. Mainnet Alpha live, ARX token, MPC+FHE on Solana.
