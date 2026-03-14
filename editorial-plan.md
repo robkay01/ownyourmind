@@ -2,13 +2,13 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-14 (Build section launched: 7 tutorials published with accuracy review, hero images, nav link. Tokenomics all published. 72 pages live.)
+Updated: 2026-03-14 (Build section launched with 9 tutorials, hero images, nav + homepage card. Privacy inference article published with podcast. Venice/Phala scores corrected. Freedom methodology updated. 73 pages live.)
 
 ---
 
 ## Current Content Inventory
 
-### Why DeAI (7 articles) — COMPLETE
+### Why DeAI (8 articles) — COMPLETE
 
 1. **The Case for Sovereign AI** — foundational thesis, sovereignty stack, why it matters
 2. **Centralised AI vs Decentralised AI** — balanced comparison, where each wins, practical framework
@@ -17,6 +17,7 @@ Updated: 2026-03-14 (Build section launched: 7 tutorials published with accuracy
 5. **How DeAI Actually Competes** — coordination, specialisation and economics, not ideology
 6. **Why Crypto + AI Converge** — Agent Zero partnership article on the structural convergence
 7. **The Sovereignty Stack** — practical framework for assembling AI sovereignty infrastructure today
+8. **Why Private AI Inference Is the Next Infrastructure Battle** — 5-level privacy spectrum, anonymisation vs confidentiality, Morpheus TEE alpha, practical decision framework
 
 ### Projects (34 reviews)
 
@@ -64,7 +65,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 3. **The Quadrant Model** — how Freedom and Returns scores combine into A/B/C/D positioning
 4. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
 
-**Total published content: 72 pages** (62 content pages + 10 section/utility pages, no remaining drafts)
+**Total published content: 73 pages** (63 content pages + 10 section/utility pages, no remaining drafts)
 
 ---
 
@@ -94,15 +95,12 @@ All 3 Priority 1 articles from the original plan have been **written and publish
 Two additional articles written since:
 - "Why Crypto + AI Converge" (Agent Zero partnership) — DONE
 - "The Sovereignty Stack" — DONE
+- "Why Private AI Inference Is the Next Infrastructure Battle" — DONE (published 2026-03-14, podcast generated)
 
 ### Priority 2 — Narrative-driven (keyword research: March 2026)
 
-#### "Why Private AI Inference Is the Next Infrastructure Battle"
-**Status:** Idea — **HIGH PRIORITY**
-**Angle:** Framework piece connecting Venice, Nillion, Phala, Oasis, Arcium into a unified thesis. TEEs vs FHE vs MPC — what actually works today vs what's theoretical. 0G Sealed Inference (March 2026) as the latest entrant. OYM owns this intersection (privacy + AI) that 0xJeff treats as separate narratives.
-**Target queries:** private AI inference, decentralized AI privacy, confidential AI compute
-**Estimated volume:** Growing — "private AI" is a 2026 breakout term. No established authority site owns this niche yet.
-**Keyword advantage:** OYM already ranks for "venice ai review" (5,000/mo) and "sovereign ai" (5,000/mo). This essay links the two.
+#### ~~"Why Private AI Inference Is the Next Infrastructure Battle"~~
+**Status: DONE** — Published 2026-03-14. 5-level privacy spectrum framework. Honest Venice critique (anonymisation vs confidentiality). Morpheus TEE alpha (SCRT Labs partnership, Intel TDX, 10+ PRs). Podcast episode generated (9m 41s). Corrected Venice Data Sovereignty 12→10, Phala 11→13. Updated Freedom Score methodology with anonymisation vs confidentiality guidance.
 
 #### "When AI Agents Hold Wallets: The Economic Layer We're Missing"
 **Status:** Idea — **HIGH PRIORITY**
@@ -112,8 +110,7 @@ Two additional articles written since:
 **Keyword advantage:** No practitioner-depth coverage exists. All current content is news articles or listicles.
 
 #### "The Four Stages of AI Privacy (and Where We Are Now)"
-**Status:** Idea
-**Angle:** Framework piece mapping the evolution from "no privacy" to "programmable privacy" in AI. Now enriched by 0xJeff's 9-category privacy taxonomy.
+**Status:** Deprioritised — substantially covered by the private AI inference article's 5-level spectrum. Could revisit with a more historical/evolutionary angle if there's demand.
 
 #### "You're Already Paying for Privacy — You Just Don't Know It"
 **Status:** Idea
@@ -129,9 +126,9 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 | Project | Token | Notes | Priority |
 |---|---|---|---|
-| Arcium | ARX | Parallelised confidential computing on Solana. MPC+FHE+ZKP combined. Mainnet Alpha launched Q1 2026. ~$68M market cap. $9M raised (Coinbase Ventures, Jump Crypto). Mint-and-burn ARX tokenomics. First app: Umbra (shielded transfers). Core DeAI — privacy compute is the founding thesis. Source: 0xJeff Privacy Landscape. | **High** |
+| Arcium | ARX | Parallelised confidential computing on Solana. MPC+FHE+ZKP combined. **Pre-mainnet, token not yet trading.** $10M raised (Coinbase Ventures, Jump Crypto). CoinList public sale Apr 2025 at $0.20. Acquired Inpher (Web2 confidential ML) bringing Manticore protocol. Team: 4 TUM co-founders + PhDs from EPFL, Sorbonne, ETH Zurich. NVIDIA Inception member. **Classification: DeAI-adjacent** (founding thesis was privacy payments as Elusiv, AI is now a co-equal strategic pillar alongside DeFi privacy). **Wait for mainnet + token launch before full review.** Source: 0xJeff Privacy Landscape + direct research March 2026. | **High (watchlist)** |
 | Ritual | (pre-token) | On-chain AI inference protocol. Verifiable AI for smart contracts. | Medium |
-| Secret Network | SCRT | **Reassess Q2 2026.** Previously classified AI-washed (DeFi collapse → AI rebrand). BUT: 2026 roadmap shows real AI products — SecretAI SDK, Confidential RAG, Confidential Fine-Tuning, Verifiable Message Signing. NVIDIA TEE-backed. scrtlabs maintains Morpheus-Lumerin-Node (1,765 commits, active). 40% YoY growth in active apps. If SecretAI shows measurable adoption by Q2, reclassify from AI-washed to DeAI-adjacent. Source: 0xJeff Privacy Landscape + Secret 2026 roadmap. | Medium |
+| Secret Network | SCRT | **Reassess Q2 2026.** Previously classified AI-washed (DeFi collapse → AI rebrand). BUT: 2026 roadmap shows real AI products — SecretAI SDK, Confidential RAG, Confidential Fine-Tuning, Verifiable Message Signing. NVIDIA TEE-backed. **Key finding (March 2026): SCRT Labs is the TEE partner for Morpheus compute privacy** — SecretVM platform, direct code contributions to Morpheus-Lumerin-Node (10+ PRs merged). This is concrete evidence of real AI infrastructure work, not vapourware. If SecretAI shows measurable adoption by Q2, reclassify from AI-washed to DeAI-adjacent. | **Medium-High** |
 | Fhenix | (pre-token) | FHE L2 on Ethereum. Compute on encrypted data without decryption. $22M raised (Multicoin Capital). Threshold FHE paper accepted to ACM CCS 2025. CoFHE coprocessor on Base. No token yet. Revisit post-TGE. Source: 0xJeff Privacy Landscape. | Low |
 | Hyperbolic | (pre-token) | Verifiable inference with proof systems. | Low |
 | GenLayer | (pre-token) | AI-powered blockchain for subjective dispute resolution. LLM validators reach consensus on non-deterministic decisions via "Intelligent Contracts" (Python). Novel concept, still on testnet (Bradbury). No token, no disclosed funding. Revisit post-mainnet. genlayer.com | Low |
@@ -339,9 +336,9 @@ Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 ### Phase 3 — New content (tutorials, comparisons, resources, narrative essays)
 
 12. ~~**Build tutorials**~~ — **DONE** — All 7 tutorials published 2026-03-14 after accuracy review and data refresh
-13. **"Why Private AI Inference Is the Next Infrastructure Battle"** — why-deai essay. Connects Venice/Nillion/Phala/Oasis/Arcium. OYM owns privacy+AI intersection.
+13. ~~**"Why Private AI Inference Is the Next Infrastructure Battle"**~~ — **DONE** — Published 2026-03-14 with podcast (9m 41s). 5-level privacy spectrum. Venice/Phala scores corrected. Methodology updated.
 14. **"When AI Agents Hold Wallets"** — why-deai or journal essay. Agentic economy narrative — connects to all existing infrastructure coverage.
-15. **Arcium project review** — Full research protocol. Mainnet Alpha live, ARX token, MPC+FHE on Solana.
+15. **Arcium project review** — **Watchlist.** Pre-mainnet, no live token. DeAI-adjacent classification. Wait for mainnet + TGE before full research protocol.
 16. **Comparison articles** — Bittensor vs Render vs Akash, GPU compute showdown (dual-score differentiator)
 17. **DIEM tokenomics** — Venice flywheel deep-dive
 18. **DePIN Tokens Ranked** — new resource page (50 searches)
