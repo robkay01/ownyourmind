@@ -9,13 +9,13 @@ draft: false
 
 ## What ElizaOS is
 
-ElizaOS is an open-source TypeScript framework for building autonomous AI agents. It has 17,700+ GitHub stars, 5,500+ forks, and is the most popular AI agent framework in web3. It is MIT licensed and free to use — no token required.
+[ElizaOS](https://github.com/elizaOS/eliza) is an open-source TypeScript framework for building autonomous AI agents. It has 17,700+ GitHub stars, 5,500+ forks, and is the most popular AI agent framework in web3. It is MIT licensed and free to use — no token required.
 
 Your agent can post on Twitter, respond in Discord, execute blockchain transactions, maintain persistent memory, and operate 24/7 without intervention. The framework handles the plumbing. You define the personality and capabilities.
 
 For the full project assessment, see our [ElizaOS review](/projects/elizaos/).
 
-**Version note:** This guide covers ElizaOS v1.x (latest stable: v1.7.2). ElizaOS v2 is in alpha (v2.0.0-alpha) with changes to the plugin namespace and an event-driven architecture. When v2 reaches stable release, this guide will be updated. The core concepts (character files, plugin system, model backends) carry over.
+**Version note:** This guide covers ElizaOS v1.x (latest stable: v1.7.2). ElizaOS v2 is in alpha (v2.0.0-alpha.31 as of March 2026) with changes to the plugin namespace and an event-driven architecture. When v2 reaches stable release, this guide will be updated. The core concepts (character files, plugin system, model backends) carry over.
 
 ## What you need
 
@@ -139,7 +139,7 @@ ElizaOS includes tools for generating character files from existing data: `tweet
 |---|---|---|---|---|
 | **OpenAI** | `@elizaos/plugin-openai` | ~$5-30/month | Data sent to OpenAI | Highest capability |
 | **Anthropic** | `@elizaos/plugin-anthropic` | ~$5-30/month | Data sent to Anthropic | Strong reasoning |
-| **Venice** | `@elizaos/plugin-venice` | VVV staking or Pro sub | Private inference, no logs | Sovereignty-focused |
+| **Venice** | `@elizaos/plugin-venice` | VVV staking or Pro sub ($18/mo) | Private inference, no logs, 47+ models | Sovereignty-focused |
 | **Ollama** | `@elizaos/plugin-llama` | Free (hardware cost) | Fully local | Maximum privacy |
 
 For Venice, set these environment variables:
@@ -147,12 +147,12 @@ For Venice, set these environment variables:
 ```bash
 VENICE_API_KEY=your_key
 VENICE_SMALL_MODEL=llama-3.3-70b
-VENICE_LARGE_MODEL=llama-3.1-405b
-VENICE_IMAGE_MODEL=fluently-xl
+VENICE_LARGE_MODEL=zai-org-glm-4.7
+VENICE_IMAGE_MODEL=venice-sd35
 VENICE_EMBEDDING_MODEL=text-embedding-bge-m3
 ```
 
-**Note:** Venice is retiring `llama-3.1-405b` from its web app on 30 May 2026. The API equivalent is `hermes-3-llama-3.1-405b`. After that date, requests will auto-route to a model of similar capability. Check Venice's model list for current options.
+Venice's default large model is now `zai-org-glm-4.7` (GLM 4.7, 198K context) — it replaced `llama-3.1-405b` as the recommended option. For image generation, `venice-sd35` is the ElizaOS default; `flux-2-max` and `qwen-image` are also available. The embedding model `text-embedding-bge-m3` remains unchanged. Check Venice's API docs for the full model list — they now offer 47+ text models including Claude, GPT, Gemini, and Grok variants.
 
 For Ollama (local inference):
 ```bash
