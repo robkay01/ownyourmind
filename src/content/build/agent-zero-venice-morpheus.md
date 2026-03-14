@@ -20,7 +20,7 @@ This is what a sovereign AI agent stack looks like in practice.
 - Basic terminal and Docker familiarity
 - Approximately 30 minutes
 
-I run this on a RackNerd VPS in Texas. A local machine works equally well. The VPS gives me 24/7 uptime without keeping my Mac Studio dedicated to the agent.
+I run this on both a RackNerd VPS in Texas and locally on my Mac Studio. The VPS gives me 24/7 uptime for persistent tasks. Local gives me faster iteration and full sovereignty over the inference layer when I point it at Ollama. You can start with either — or run both.
 
 ## Step 1: Set up the VPS (if using one)
 
@@ -143,7 +143,7 @@ docker compose up -d --build
 | Venice AI | High (encrypted, no logging) | Fast | Per-token pricing | High |
 | Morpheus compute | High | Moderate | MOR per request | Complete |
 
-I use all three depending on the task. Local Ollama for sensitive work and experimentation. Venice for tasks that need larger models than my hardware supports. Morpheus compute when I want to test the network and contribute to demand.
+I use all three depending on the task. Local Ollama on my Mac Studio for sensitive work and rapid iteration — the prompt never leaves my machine. Venice for tasks that need larger models than my hardware supports, or when I want uncensored output. Morpheus compute when I want to test the network and contribute to demand. Running Agent Zero on both a VPS and locally means I can keep persistent agents running remotely while experimenting freely on my local instance.
 
 ## What the agent can do
 
