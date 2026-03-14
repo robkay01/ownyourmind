@@ -126,9 +126,9 @@ The closed-source proxy is both the product and the vulnerability. If it goes do
 
 **My position.** I hold VVV and DIEM. I stake VVV for API access and use Venice daily for both the web interface and API calls. I find the product genuinely useful. I also recognise that I am trusting a roughly six-person company with my inference privacy, and that trust is not the same as a cryptographic guarantee.
 
-## Freedom score: 57/100
+## Freedom score: 55/100
 
-Venice scores 57/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+Venice scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
 **Infrastructure decentralisation (9/20):** GPU compute sourced from [Akash](/projects/akash/), Hyperbolic and Prime Intellect, which is permissionless at the provider level. But Venice runs a centralised, closed-source proxy that routes all requests. Single point of control and failure. Users cannot choose their GPU provider. Roughly six employees operate everything.
 
@@ -138,7 +138,7 @@ Venice scores 57/100 (C grade). Full methodology at [Freedom Score Methodology](
 
 **Censorship resistance (11/15):** The strongest censorship resistance of any consumer AI product today. Pro subscribers can disable all content filtering. Open-source models that cannot be centrally recalled. But Venice controls the proxy and can theoretically block users, models or content types. Free tier already blocked in the UK. The resistance is a business decision, not an architectural guarantee.
 
-**Data sovereignty (12/15):** No server-side storage of prompts or responses. Conversation history in local browser storage only. Proxy strips identifying information before forwarding to GPUs. Crypto payment option available. But GPU providers must see plaintext prompts (no homomorphic encryption), and no independent privacy audit has been completed. Competitors like Nillion, Phala and Secret Network offer stronger cryptographic guarantees.
+**Data sovereignty (10/15):** No server-side storage of prompts or responses. Conversation history in local browser storage only. Proxy strips identifying information before forwarding to GPUs — genuine anonymisation. Crypto payment option available. However, this is anonymisation, not confidentiality: GPU providers see plaintext prompts during inference and there is no cryptographic or hardware mechanism preventing them from reading or copying prompt content. The privacy guarantee is policy-based (zero data retention), not verifiable. No independent privacy audit has been completed. Competitors like Phala (TEE-attested), Nillion (MPC) and Secret Network (TEE) offer hardware-enforced or cryptographic guarantees that Venice's architecture does not.
 
 **Open source and transparency (9/15):** Uses open-source AI models. Smart contracts verified on BaseScan. CLI and agent runtime are open source. But the core inference engine, proxy layer and platform code are all closed source. Privacy claims cannot be independently verified without an audit.
 

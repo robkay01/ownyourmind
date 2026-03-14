@@ -2,7 +2,7 @@
 
 Working document for content planning. Not published to the site.
 
-Updated: 2026-03-12 (0xJeff research: Arcium, Secret Network reassess, privacy+AI narratives, agent economy essay)
+Updated: 2026-03-14 (Build section launched: 7 tutorials published with accuracy review, hero images, nav link. Tokenomics all published. 72 pages live.)
 
 ---
 
@@ -64,7 +64,7 @@ All 34 projects have both Freedom Scores and Returns Scores with full editorial 
 3. **The Quadrant Model** — how Freedom and Returns scores combine into A/B/C/D positioning
 4. **DeAI Project Directory** — all 34 reviewed projects with categories, notes and review links
 
-**Total published content: 62 pages** (no remaining drafts)
+**Total published content: 72 pages** (62 content pages + 10 section/utility pages, no remaining drafts)
 
 ---
 
@@ -146,9 +146,9 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ## Tokenomics Pipeline
 
-4 articles published.
+All 7 articles published.
 
-### Priority 1 — Tied to market events
+### Priority 1 — Tied to market events — ALL DONE
 
 | Article | Trigger | Target timing | Notes |
 |---|---|---|---|
@@ -168,13 +168,11 @@ All 34 projects now reviewed. No immediate pipeline for new project reviews.
 
 ## Build Pipeline — Keyword-Prioritised
 
-2 tutorials published. Build section is the dedicated home for tutorials (separate from project reviews to keep reviews evergreen and tutorials independently updateable).
+All 9 tutorials published. Build section launched 2026-03-14 with nav link, index page, hero images, and difficulty badges.
 
 Each tutorial links back to its project review. Each project review's "How to participate" section links forward to the tutorial.
 
-**Phasing:** Tutorials are a later phase. Write and stockpile, then publish as a batch so the Build section launches with substance. Do not drip-feed individual tutorials — wait until 4-5 are ready to publish together.
-
-### Priority 1 — Keyword-validated (from Agent Zero keyword research, March 2026) — ALL DRAFTED
+### Priority 1 — Keyword-validated (from Agent Zero keyword research, March 2026) — ALL PUBLISHED
 
 | Priority | Article | Target Query | Monthly Volume | Status |
 |----------|---------|-------------|----------------|--------|
@@ -329,7 +327,7 @@ Completed in commit 6ec58e4 (2026-03-10). All 7 high-value pages enriched:
 4. ~~**Flux review optimisation**~~ — **DONE**. Title tag + GPU mining section.
 5. ~~**Morpheus review expansion**~~ — **DONE**. "How does Morpheus work" section + staking tutorial.
 6. ~~**FAQ schemas**~~ — **DONE**. JSON-LD FAQPage on sovereign AI and "what is DeAI" pages.
-7. ~~**Minor H1/title tweaks**~~ — **DONE**. Grass title updated. Remaining: Golem ("Network"), Render ("Network Review").
+7. ~~**Minor H1/title tweaks**~~ — **PARTIAL**. Grass title updated. **Still TODO:** Golem ("Network"), Render ("Network Review").
 
 ### Phase 2 — Event-timed content
 

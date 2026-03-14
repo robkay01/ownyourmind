@@ -1,0 +1,198 @@
+---
+title: "Why Private AI Inference Is the Next Infrastructure Battle"
+description: "When you send a prompt to an AI, who else sees it? The answer is more nuanced than any project wants to admit. A practitioner's guide to the five levels of AI privacy."
+publishDate: 2026-03-14
+draft: true
+---
+
+import PullQuote from '../../components/PullQuote.astro';
+
+## What "private" actually means
+
+Every AI privacy project says it is private. Most of them are using the word differently.
+
+When Venice says it is private, it means your identity is stripped from the prompt before it reaches a GPU provider. When Phala says it is private, it means the GPU provider cannot read your prompt even during processing. When you run Llama on your Mac Studio, there is no provider to worry about at all.
+
+These are three different things. All three call themselves private. Only one of them keeps the contents of your prompt invisible to everyone except you.
+
+<PullQuote>Privacy in AI is not binary. It is a spectrum, and most projects are further down that spectrum than their marketing suggests.</PullQuote>
+
+This distinction matters because the use case defines the required level. Asking an AI to write a blog post does not need the same privacy as asking it to analyse your company's financial projections, your medical records, or your legal strategy. Understanding where each platform sits on the spectrum is not academic — it determines what you should and should not trust them with.
+
+## The five levels of AI inference privacy
+
+### Level 0: No privacy — OpenAI, Anthropic (default)
+
+The provider sees your prompt in plaintext. They store it. They log metadata — who asked, when, from where, what model, how many tokens. The data persists on their infrastructure indefinitely unless you have negotiated specific terms.
+
+OpenAI's enterprise privacy page is 2,400 words long. That length tells you everything about the complexity of data handling on their side. Samsung employees leaked source code through ChatGPT. Amazon staff pasted confidential documents. The data breaches have already happened.
+
+With default settings, centralised providers know **who** you are, **what** you asked, and they **store** both indefinitely.
+
+### Level 1: Policy-based privacy — Venice, Morpheus (current)
+
+This is where most "private" AI platforms sit today, and it requires honest examination.
+
+[Venice](/projects/venice/) routes your prompt through a privacy proxy before it reaches a distributed GPU provider. The proxy strips your identity — the GPU provider does not know who sent the prompt. Venice's zero data retention (ZDR) policy means they claim not to log prompts, and the GPU providers are contractually required not to store them either.
+
+Here is what that means in practice:
+
+- **Your identity is hidden.** The GPU provider does not know who you are. This is real anonymisation.
+- **Your prompt content is visible.** The GPU provider must see the plaintext prompt to run inference on it. There is no encryption during processing.
+- **No data is stored — by policy.** Venice does not log prompts. GPU providers are told not to. But there is no cryptographic or hardware mechanism that prevents a provider from reading or copying your prompt during the milliseconds it sits in their GPU memory.
+
+To use the construction analogy: it is like sending a confidential document through a courier service that strips your return address from the envelope. The recipient does not know who sent it. But they open the envelope to read the document inside. They promise not to photocopy it. You trust them on that.
+
+<PullQuote>Venice provides anonymisation, not confidentiality. The "who" is hidden. The "what" is exposed to the compute provider. It is "we don't know who asked" rather than "we can't see what was asked."</PullQuote>
+
+This is dramatically better than Level 0. There is no persistent data. There is no identity link. There are no logs to subpoena. For the vast majority of AI use cases — writing, coding, analysis, creative work — Level 1 is sufficient. You do not need military-grade encryption to ask an AI to help with your marketing copy.
+
+But if you are pasting your company's cap table, your patient's medical records, or your client's legal strategy into a Level 1 system, you need to understand that a GPU provider could theoretically read that content during inference. They do not know it is yours. They claim not to store it. But the content itself passes through their hardware in plaintext.
+
+[Morpheus](/projects/morpheus/) operates similarly today — P2P encrypted routing between you and the provider, but the provider sees the prompt during inference. The encryption protects the data in transit (nobody can intercept it between you and the provider), not during computation.
+
+### Level 2: Hardware-enforced privacy — Phala, NVIDIA Confidential Compute
+
+This is where the privacy guarantee moves from policy to physics.
+
+Trusted Execution Environments (TEEs) are hardware enclaves built into modern processors. When your prompt enters a TEE, it is encrypted in memory. The GPU processes your data inside the enclave, but even the server operator — the person who owns the physical hardware — cannot read the contents. The hardware enforces this isolation. It is not a policy choice. It is a design constraint of the silicon.
+
+[Phala Network](/projects/phala/) runs GPU TEE inference on NVIDIA H100, H200, and B200 hardware with SOC 2 Type I and HIPAA compliance certifications. Their open-source dstack SDK converts standard containers into confidential VMs. The technology produces attestation reports — cryptographic proofs that the enclave is genuine and has not been tampered with.
+
+What this means for your prompt:
+
+- **The GPU provider cannot read your prompt.** The hardware prevents it, even though the data is on their machine.
+- **Attestation proves the enclave is genuine.** You can verify the security properties before sending sensitive data.
+- **Performance overhead is minimal.** Less than 2-5% throughput penalty — near-native speed for private inference.
+
+The tradeoff: you are trusting the hardware vendor (Intel, AMD, NVIDIA) to have implemented the enclave correctly. This trust is not absolute. Intel SGX was compromised in 2022, and Phala had to migrate from SGX to TDX in response. The attack surface is dramatically smaller than Level 1 — you need a hardware zero-day rather than a rogue GPU operator — but it exists.
+
+TEE-based privacy is not mathematically proven. It is hardware-attested. The distinction matters for the most sensitive use cases, but for enterprise AI inference, it represents a genuine step change from "trust our policy" to "verify our attestation."
+
+### Level 3: Cryptographic privacy — FHE, MPC, ZK
+
+This is the mathematical guarantee. No trust in hardware vendors, no trust in policies, no trust in anything except the mathematics of cryptography.
+
+**Fully Homomorphic Encryption (FHE)** allows computation on encrypted data. Your prompt stays encrypted from the moment it leaves your machine through the entire inference process. The GPU computes the answer without ever decrypting the question. The provider literally cannot see your data — it is mathematically impossible without your decryption key.
+
+The problem: 100-1000x computational overhead. A prompt that takes 2 seconds at Level 0 could take minutes to hours under FHE. This is improving rapidly — Zama and others have made dramatic advances — but FHE is not viable for real-time LLM inference today.
+
+**Multi-Party Computation (MPC)** distributes your prompt across multiple parties, none of whom see the complete data. Each party processes a fragment and they jointly compute the result. No single party can reconstruct your original prompt.
+
+Arcium on Solana combines MPC with FHE and zero-knowledge proofs for parallelised confidential computing. Their acquisition of Inpher (a Web2 confidential ML company) brought the Manticore protocol — ML-optimised MPC supporting encrypted model training, inference, XGBoost, clustering, and federated learning. This is not theoretical AI privacy; it is acquired, tested technology from the enterprise ML world being ported to a decentralised network. Arcium is pre-mainnet with no live token, but the technical depth (PhDs from EPFL, Sorbonne, ETH Zurich on the team, NVIDIA Inception membership) suggests this is a serious effort.
+
+The problem for AI inference: coordination overhead between parties adds 10-100x latency compared to plaintext execution. Not yet practical for interactive LLM inference, but potentially viable for training workloads and batch processing where latency matters less. As hardware acceleration improves (Arcium's NVIDIA partnership targets this), the gap will narrow.
+
+**Zero-Knowledge Proofs (ZKPs)** can prove that a computation was performed correctly without revealing the inputs. You could prove "this model produced this output from a valid input" without revealing what the input was.
+
+ZK is excellent for verification but does not inherently protect data *during* computation. For AI inference privacy, ZK works best in combination with TEE or MPC — the other technique keeps your data hidden during processing, and ZK proves the result is legitimate afterwards.
+
+### Level 4: Local inference — your hardware, your rules
+
+The most private inference is inference that never touches a network. Running an open-weight model on your own hardware means no provider, no policy, no attestation, no cryptography — just your prompt on your machine.
+
+The tradeoffs are real: you are limited to open-weight models (no Claude, no GPT-5), you need capable hardware ($3,000-6,000 for a Mac Studio that runs 70B models), and performance depends on your local specs. But for genuinely sensitive work — legal documents, medical analysis, proprietary code — local inference is the gold standard of privacy.
+
+## Where each project sits
+
+| Project | Level | Privacy type | What the provider sees |
+|---------|-------|-------------|----------------------|
+| OpenAI / Anthropic (default) | 0 | None | Everything: identity + prompt + stored |
+| Venice | 1 | Policy (ZDR) | Prompt content, not identity. Not stored by policy. |
+| Morpheus (current) | 1→2 | Policy + P2P encryption (TEE in dev) | Prompt content during inference. TEE integration shipping — proxy-router attested, LLM attestation next. |
+| Phala Network | 2 | TEE (hardware) | Nothing — hardware enclave prevents access |
+| Oasis (ROFL) | 2 | TEE (hardware) | Nothing during computation |
+| Arcium | 3 | MPC+FHE+ZKP | Fragments only — no party sees complete data |
+| Nillion | 3 | MPC + secret sharing | Fragments only |
+| Local (Ollama, llama.cpp) | 4 | Physical isolation | No provider exists |
+
+## The honest assessment of Venice
+
+Venice deserves specific attention because it is the project we recommend most often for private inference, and our existing coverage needs qualifying.
+
+In our [Venice review](/projects/venice/), we describe the privacy model accurately: "GPU Providers see individual requests without user identity, and no persistent data is stored." That is correct. But we should be clearer about what this means and does not mean.
+
+**What Venice gets right:**
+- Identity separation through the proxy is genuine and well-implemented
+- Zero data retention means there is nothing to subpoena, nothing to breach, nothing to train on
+- The local-storage-only conversation model means Venice itself cannot reconstruct your history
+- At $18/month for unlimited text with uncensored models, the price-to-privacy ratio is the best in the market
+
+**What Venice does not provide:**
+- Confidentiality of prompt content during GPU processing. The provider sees your prompt in cleartext.
+- Provable non-storage. The ZDR policy is contractual, not cryptographic. You cannot verify that a provider deleted your data.
+- Protection against a malicious or compromised GPU provider. If a provider chose to log prompts, the system does not prevent it.
+
+**Who should use Venice without concern:**
+- Anyone whose prompts do not contain personally identifiable information or trade secrets
+- Writers, developers, researchers working with non-sensitive material
+- Users who want uncensored model access without identity tracking
+- Anyone for whom "better than OpenAI" is a sufficient standard
+
+**Who should think twice:**
+- Healthcare providers processing patient data
+- Legal professionals handling privileged communications
+- Companies pasting proprietary financial data, source code, or strategic plans
+- Anyone whose threat model includes a compromised or malicious GPU provider
+
+For that second group, Level 2 (Phala TEE) or Level 4 (local) is the appropriate choice today.
+
+## What is coming
+
+Three developments are worth watching:
+
+**Morpheus TEE integration — actively shipping.** This is not a roadmap item. As of mid-March 2026, the Morpheus team has merged 10+ PRs to the `dev` branch implementing TEE support in partnership with SCRT Labs (Secret Network). The implementation runs on SecretVM — Secret Network's confidential VM platform using Intel TDX.
+
+What has shipped (on `dev`, not yet on `main`):
+- TEE-hardened Docker images with cosign keyless signing and SBOM generation
+- Intel TDX RTMR3 measurement computed in CI/CD and published in signed attestation manifests
+- Auto-deployment to SecretVM instances with post-deploy verification
+- TLS termination via Traefik sidecar — the management API is no longer exposed externally
+- Chat context storage explicitly disabled in TEE mode
+
+The trust model is properly designed: consumers fetch the expected RTMR3 hash from the signed manifest (published in the container registry), then verify it against the actual RTMR3 from the hardware attestation. The provider never self-reports its own measurements. This means a consumer can independently verify that a provider is running exactly the attested code inside a genuine TEE enclave.
+
+**Current limitation:** Only the proxy-router runs inside the TEE — not the LLM model server itself. Phase 2 (planned) would co-locate the proxy-router and the LLM in the same TEE VM, which is when Morpheus fully moves to Level 2. Phase 1c (next milestone) adds consumer-side attestation verification in the proxy-router code and UI badges showing TEE status.
+
+This matters because Morpheus already has P2P encrypted routing — prompts never touch a centralised relay. Adding TEE to the provider side closes the last gap: the provider who processes the inference. When Phase 2 ships, Morpheus becomes a decentralised inference marketplace with hardware-attested privacy — a combination nobody else offers today.
+
+**Dolphin's hybrid approach.** Dolphin, the creator of Venice's uncensored models, is researching a hybrid architecture combining TEE with "sharded inference" — an MPC-like technique where the prompt is split across multiple GPU providers. No single provider sees the full prompt, and each provider runs inside a TEE. This would sit between Level 2 and Level 3 on the spectrum.
+
+**FHE acceleration.** Zama, Fhenix, and dedicated FHE hardware projects are driving down the overhead from 1000x toward 10-100x. When FHE reaches single-digit overhead for transformer inference — plausible within 2-3 years — it unlocks mathematically provable privacy at near-native speed. That changes the entire landscape.
+
+## A practical decision framework
+
+The question is not "which level is best?" The question is "what level does my use case require?"
+
+**Level 1 is sufficient when:**
+- Your prompts are general knowledge work (writing, coding, analysis)
+- The prompt content would not cause harm if exposed without your identity attached
+- You want meaningful privacy improvement over centralised providers at zero performance cost
+- Your threat model is "I don't want a company logging and training on my data"
+
+**Level 2 is required when:**
+- Your prompts contain personally identifiable information about others (healthcare, legal)
+- Regulatory compliance requires verifiable data protection (HIPAA, GDPR data processing)
+- Your threat model includes a compromised infrastructure provider
+- You need to prove to an auditor that data was protected during processing
+
+**Level 4 is required when:**
+- Maximum assurance is non-negotiable (state secrets, extreme IP sensitivity)
+- You cannot trust any external infrastructure, even hardware-attested enclaves
+- You have the hardware and are willing to accept the model and performance limitations
+
+Most people overestimate the privacy level they need and underestimate the friction of higher levels. If you are not processing data that would trigger HIPAA, securities regulations, or legal privilege, Level 1 is likely sufficient and Level 0 (sending everything to OpenAI) is the real problem to solve.
+
+## The infrastructure battle
+
+Here is why this is the next infrastructure battle and not just a technology debate.
+
+**Regulatory pressure is accelerating.** GDPR, the EU AI Act, HIPAA, CCPA, and emerging state-level US privacy laws are all converging on the same requirement: demonstrate that data is protected during AI processing. "We have a policy" is not going to satisfy auditors for long.
+
+**Enterprise adoption requires it.** Every corporate legal team restricting ChatGPT usage is a potential customer for private inference. Samsung banned ChatGPT after the source code leak. Banks restrict AI tool usage. Healthcare providers cannot send patient data to OpenAI. The demand exists. The infrastructure to serve it at scale does not — yet.
+
+**The cost structure favours it.** Venice already demonstrates that private inference can be cheaper than centralised APIs. Decentralised compute (Akash at 50-85% below AWS) drives down the cost base. Privacy does not have to be a premium feature. It can be the default, at a discount, because you are not subsidising OpenAI's infrastructure margin and data extraction business.
+
+The projects that win the infrastructure battle will be the ones that push up the privacy level while keeping the cost and performance competitive. Venice proved that Level 1 attracts 1.3 million users. Phala is proving that Level 2 is production-viable. The gap between "works in a paper" and "works at scale" for Levels 3 and beyond is closing.
+
+The question is not whether private AI inference becomes standard. It is which projects build the infrastructure that makes it seamless enough that users choose it without thinking about privacy at all — the same way HTTPS became the default for web browsing without anyone actively choosing it.

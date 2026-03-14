@@ -94,9 +94,9 @@ Market snapshot: PHA trades at approximately $0.044 with a $36.4M market cap ($5
 
 **My position.** I do not hold PHA. I covered Phala extensively in [What Counts as Decentralised AI?](/why-deai/what-counts-as-decentralised-ai/) as a DeAI-adjacent project – genuine technology serving AI workloads from a general-purpose privacy infrastructure base. The TEE technology is credible. The decentralisation is not. At current prices ($0.044, 97% below ATH), the market has already expressed scepticism. Whether Phala converts its enterprise compliance positioning into meaningful adoption beyond 398 paid users is the core investment question.
 
-## Freedom score: 60/100
+## Freedom score: 57/100
 
-Phala scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
+Phala scores 57/100 (C grade). Full methodology at [Freedom Score Methodology](/resources/freedom-score-methodology/).
 
 **Infrastructure decentralisation (8/20).** The L2 is Stage 0 on L2Beat – centralised sequencer, permissioned proposer, instantly upgradable contracts with no exit window. GPU worker registration requires emailing the team (not self-service). 87.4% single-developer concentration on the dstack codebase is an extreme bus factor. 29,478 active devices provides hardware distribution, but chain-level infrastructure is heavily centralised. The migration from Polkadot removed the shared security of a decentralised relay chain.
 
@@ -106,7 +106,7 @@ Phala scores 55/100 (C grade). Full methodology at [Freedom Score Methodology](/
 
 **Censorship resistance (8/15).** TEE computation-level privacy is the real deal – data genuinely cannot be observed during processing. However, the centralised sequencer can censor L2 transactions. GPU worker onboarding is gated (email-based registration). California terms of service apply via the US subsidiary. The privacy guarantee applies within the enclave but not at the network access layer.
 
-**Data sovereignty (11/15).** The strongest dimension. Zero-knowledge properties within TEEs are hardware-enforced, not just promised. Remote attestation provides cryptographic proof of computation integrity. The self-hosted dstack option means you can run the entire stack without relying on Phala's managed service – that is genuine sovereignty. SOC 2 and HIPAA compliance add institutional credibility. Gaps: sequencer has metadata visibility, Phala Cloud registration requires account creation.
+**Data sovereignty (13/15).** The strongest dimension and one of the highest data sovereignty scores in our review set. This is confidentiality, not just anonymisation: TEE enclaves are hardware-enforced, meaning the compute provider provably cannot read data during processing — a fundamentally different guarantee from policy-based "we don't store your data" claims. Remote attestation provides cryptographic proof of computation integrity that consumers can verify before sending sensitive data. The self-hosted dstack option means you can run the entire stack without relying on Phala's managed service — that is genuine sovereignty. SOC 2 Type I and HIPAA compliance add institutional credibility that most crypto projects cannot match. Gaps: sequencer has metadata visibility (knows who is transacting, if not what), and Phala Cloud registration requires account creation.
 
 **Open source and transparency (11/15).** Apache-2.0 licensed across core repositories. dstack donated to the Linux Foundation for neutral governance. Two professional audits completed (zkSecurity for dstack, Code4rena for Phat Contract runtime) plus an EtherAuthority token contract audit. Annual transparency reports published. The gap is the instantly upgradable L2 contracts – regardless of how transparent the code is, contracts that can change without notice undermine the "don't trust, verify" principle.
 
