@@ -52,24 +52,25 @@ brew install ollama
 # Start the Ollama service
 ollama serve &
 
-# Pull a model (Mistral 7B is a good starting point)
-ollama pull mistral
+# Pull a model (Llama 3.3 is a good starting point)
+ollama pull llama3.3
 
 # Test it
-ollama run mistral "Explain decentralised AI in two sentences."
+ollama run llama3.3 "Explain decentralised AI in two sentences."
 ```
 
-For a 64GB machine, these models run well:
+For a 64GB machine, these models run well as of March 2026:
 
 | Model | Size | Speed | Good for |
 |-------|------|-------|----------|
-| Mistral 7B | ~4GB | Fast | General tasks, drafting |
-| Llama 3 8B | ~5GB | Fast | Code, reasoning |
-| Qwen 2.5 32B | ~20GB | Moderate | Complex analysis |
-| Llama 3 70B (Q4) | ~40GB | Slow | Best quality, long context |
-| DeepSeek Coder 33B | ~20GB | Moderate | Code generation |
+| Gemma 3 12B | ~8GB | Fast | General tasks, multilingual |
+| Llama 3.3 70B (Q4) | ~40GB | Moderate | Best all-round, my daily driver |
+| Qwen 3 32B | ~20GB | Moderate | Complex reasoning, strong at code |
+| DeepSeek-R1 14B | ~9GB | Fast | Reasoning tasks, chain-of-thought |
+| Mistral Small 24B | ~14GB | Fast | Concise output, function calling |
+| Codestral 22B | ~13GB | Fast | Code generation and review |
 
-With 64GB you can run anything up to about 40GB model size with reasonable performance. The 70B quantised models work but response times are noticeably slower.
+With 64GB you can run anything up to about 40GB model size with reasonable performance. Llama 3.3 70B at Q4 quantisation is the sweet spot — it fits in memory with room to spare and handles most tasks as well as cloud APIs. For faster responses on lighter tasks, Gemma 3 12B or DeepSeek-R1 14B are excellent.
 
 ## Step 3: Install llama.cpp (optional, more control)
 
@@ -81,10 +82,11 @@ brew install llama.cpp
 # Download a GGUF model manually
 mkdir -p ~/models
 cd ~/models
-wget https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q5_K_M.gguf
+# Example: Qwen 3 32B at Q4_K_M quantisation
+wget https://huggingface.co/bartowski/Qwen3-32B-GGUF/resolve/main/Qwen3-32B-Q4_K_M.gguf
 
 # Run with specific parameters
-llama-cli -m ~/models/mistral-7b-instruct-v0.2.Q5_K_M.gguf \
+llama-cli -m ~/models/Qwen3-32B-Q4_K_M.gguf \
   -p "Explain decentralised compute in one paragraph." \
   -n 256 \
   --temp 0.7
@@ -104,12 +106,12 @@ curl http://localhost:11434/api/tags
 curl http://localhost:11434/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "mistral",
+    "model": "llama3.3",
     "messages": [{"role": "user", "content": "Hello"}]
   }'
 ```
 
-This is the foundation for connecting local models to agents, automation tools and custom applications without any external API dependency.
+This is the foundation for connecting local models to agents, automation tools and custom applications without any external API dependency. See our [Agent Zero + Venice + Morpheus walkthrough](/build/agent-zero-venice-morpheus/) for a full setup guide connecting an AI agent to your local Ollama instance.
 
 ## Step 5: Connect to a compute network (optional)
 

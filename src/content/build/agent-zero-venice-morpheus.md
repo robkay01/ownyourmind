@@ -9,7 +9,7 @@ draft: false
 
 ## What we are building
 
-Agent Zero is an open-source AI agent framework. Venice is a privacy-focused AI inference provider. Morpheus provides decentralised compute infrastructure. Combining them gives you an autonomous AI agent running on infrastructure you control, with no centralised intermediary seeing your prompts or data.
+[Agent Zero](https://github.com/frdel/agent-zero) is an open-source AI agent framework. [Venice](/projects/venice/) is a privacy-focused AI inference provider. [Morpheus](/projects/morpheus/) provides decentralised compute infrastructure. Combining them gives you an autonomous AI agent running on infrastructure you control, with no centralised intermediary seeing your prompts or data.
 
 This is what a sovereign AI agent stack looks like in practice.
 
@@ -108,7 +108,7 @@ EMBEDDING_API_KEY=not-needed
 EMBEDDING_MODEL=nomic-embed-text
 ```
 
-For a fully local setup, point all four roles at Ollama. For a fully sovereign setup on Venice, use Venice for all four — your prompts are anonymised through their proxy and nothing is stored.
+For a fully local setup, point all four roles at Ollama. For a fully sovereign setup on Venice, use Venice for all four — your prompts are anonymised through their proxy and nothing is stored. See our [Venice review](/projects/venice/) for the full privacy model assessment, including the distinction between anonymisation and confidentiality.
 
 The embedding model is the one people most often misconfigure. It must be an embedding model, not a chat model. Venice offers `text-embedding-bge-m3`. For Ollama, pull `nomic-embed-text` with `ollama pull nomic-embed-text`.
 
@@ -146,7 +146,7 @@ This is a simple example. Agent Zero can handle multi-step tasks including web r
 
 ## Step 5: Connect to Morpheus compute (optional)
 
-Instead of using Venice's hosted API, you can route inference through the Morpheus compute network. This means your agent's inference requests are served by decentralised compute providers earning MOR tokens.
+Instead of using Venice's hosted API, you can route inference through the [Morpheus compute network](/projects/morpheus/). This means your agent's inference requests are served by decentralised compute providers earning MOR tokens. See our [Morpheus Lumerin Node tutorial](/build/morpheus-lumerin-node-setup/) if you want to run the other side of this — providing compute rather than consuming it.
 
 The Morpheus compute endpoint works as an OpenAI-compatible API. Update your `.env`:
 
