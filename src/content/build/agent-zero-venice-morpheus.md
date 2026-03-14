@@ -57,21 +57,60 @@ Edit the `.env` file to configure your API endpoints:
 nano .env
 ```
 
-Set the following variables:
+Agent Zero uses four separate model roles. Each can point at a different provider and model, which gives you flexibility to balance cost, speed, and capability.
+
+| Role | What it does | Recommended model |
+|------|-------------|-------------------|
+| **Chat model** | Main reasoning — the brain that handles your tasks, plans steps, writes code | Largest model you can afford (llama-3.3-70b on Venice, or GPT-4o) |
+| **Utility model** | Background tasks — summarisation, formatting, tool output parsing | Smaller/cheaper model is fine (llama-3.3-70b or a 7B model locally) |
+| **Browser model** | Reads and interprets web pages when the agent browses | Needs decent comprehension (llama-3.3-70b works well) |
+| **Embedding model** | Converts text to vectors for memory retrieval and RAG | Dedicated embedding model (text-embedding-bge-m3 on Venice, or nomic-embed-text locally) |
+
+Set these in the `.env` file:
 
 ```
-# Use Venice AI for inference
+# === Venice AI (privacy-focused, uncensored) ===
 CHAT_API_BASE=https://api.venice.ai/api/v1
 CHAT_API_KEY=your-venice-api-key
 CHAT_MODEL=llama-3.3-70b
 
-# Or use local Ollama
-# CHAT_API_BASE=http://host.docker.internal:11434/v1
-# CHAT_API_KEY=not-needed
-# CHAT_MODEL=mistral
+UTILITY_API_BASE=https://api.venice.ai/api/v1
+UTILITY_API_KEY=your-venice-api-key
+UTILITY_MODEL=llama-3.3-70b
+
+BROWSER_API_BASE=https://api.venice.ai/api/v1
+BROWSER_API_KEY=your-venice-api-key
+BROWSER_MODEL=llama-3.3-70b
+
+EMBEDDING_API_BASE=https://api.venice.ai/api/v1
+EMBEDDING_API_KEY=your-venice-api-key
+EMBEDDING_MODEL=text-embedding-bge-m3
 ```
 
-Venice provides access to uncensored open-weight models via API. The inference happens on Venice's infrastructure. If you want full sovereignty over the inference layer as well, point the API base to your local Ollama instance instead.
+You do not have to use the same provider for every role. A common setup is Venice for chat (quality matters) and local Ollama for utility and embeddings (saves API credits):
+
+```
+# === Hybrid: Venice for chat, local Ollama for the rest ===
+CHAT_API_BASE=https://api.venice.ai/api/v1
+CHAT_API_KEY=your-venice-api-key
+CHAT_MODEL=llama-3.3-70b
+
+UTILITY_API_BASE=http://host.docker.internal:11434/v1
+UTILITY_API_KEY=not-needed
+UTILITY_MODEL=mistral
+
+BROWSER_API_BASE=http://host.docker.internal:11434/v1
+BROWSER_API_KEY=not-needed
+BROWSER_MODEL=mistral
+
+EMBEDDING_API_BASE=http://host.docker.internal:11434/v1
+EMBEDDING_API_KEY=not-needed
+EMBEDDING_MODEL=nomic-embed-text
+```
+
+For a fully local setup, point all four roles at Ollama. For a fully sovereign setup on Venice, use Venice for all four — your prompts are anonymised through their proxy and nothing is stored.
+
+The embedding model is the one people most often misconfigure. It must be an embedding model, not a chat model. Venice offers `text-embedding-bge-m3`. For Ollama, pull `nomic-embed-text` with `ollama pull nomic-embed-text`.
 
 ## Step 3: Run Agent Zero with Docker
 
