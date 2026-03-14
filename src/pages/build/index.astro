@@ -1,0 +1,56 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import Card from '../../components/Card.astro';
+import MeshGradient from '../../components/MeshGradient.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('build'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const difficultyColour = (d: string) =>
+  d === 'beginner' ? 'text-green-400' : d === 'intermediate' ? 'text-yellow-400' : 'text-red-400';
+---
+
+<ContentLayout
+  title="Build"
+  description="Hands-on tutorials. Node setups, agent frameworks, earning guides, and honest economics."
+  breadcrumbs={[{ label: 'Build' }]}
+>
+  <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 mb-10 overflow-hidden rounded-xl">
+    <img src="/images/build-header.webp" alt="" class="w-full h-48 sm:h-56 object-cover opacity-40" loading="eager" />
+    <MeshGradient variant="subtle" />
+    <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/60 to-transparent"></div>
+    <div class="absolute inset-0 flex items-end p-6 sm:p-8">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-2">Build</h1>
+        <p class="text-lg text-[var(--color-text-secondary)] max-w-2xl">
+          Hands-on tutorials. Node setups, agent frameworks, earning guides, and honest economics.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-6">
+    {entries.map((entry) => (
+      <Card href={`/build/${entry.id}/`} class="!p-0 overflow-hidden">
+        <div class="p-5 sm:p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <span class:list={['text-xs font-medium uppercase tracking-wider', difficultyColour(entry.data.difficulty)]}>
+              {entry.data.difficulty}
+            </span>
+            <span class="text-sm text-[var(--color-text-tertiary)]">
+              {entry.data.publishDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">{entry.data.title}</h2>
+          <p class="text-[var(--color-text-secondary)]">{entry.data.description}</p>
+        </div>
+      </Card>
+    ))}
+  </div>
+
+  {entries.length === 0 && (
+    <p class="text-[var(--color-text-tertiary)] py-12 text-center">Coming soon.</p>
+  )}
+</ContentLayout>
