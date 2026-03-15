@@ -1,0 +1,71 @@
+---
+interface Marker {
+  position: number; // 0-100
+  label: string;
+  sublabel?: string;
+}
+
+interface Props {
+  title?: string;
+  leftLabel: string;
+  rightLabel: string;
+  markers: Marker[];
+  colorFrom?: string;
+  colorTo?: string;
+}
+
+const {
+  title,
+  leftLabel,
+  rightLabel,
+  markers,
+  colorFrom = '#EF4444',
+  colorTo = '#10B981',
+} = Astro.props;
+
+const sortedMarkers = [...markers].sort((a, b) => a.position - b.position);
+---
+
+<div class="chart-container my-6" aria-label={title || 'Spectrum'}>
+  {title && (
+    <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-4">{title}</h3>
+  )}
+
+  {/* Labels */}
+  <div class="flex justify-between text-xs text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2">
+    <span>{leftLabel}</span>
+    <span>{rightLabel}</span>
+  </div>
+
+  {/* Bar */}
+  <div class="relative">
+    <div
+      class="h-3 rounded-full w-full"
+      style={`background: linear-gradient(to right, ${colorFrom}, ${colorTo});`}
+    />
+
+    {/* Markers */}
+    {sortedMarkers.map((marker) => (
+      <div
+        class="absolute flex flex-col items-center"
+        style={`left: ${marker.position}%; top: -4px; transform: translateX(-50%);`}
+      >
+        <div
+          class="w-5 h-5 rounded-full border-3 border-[var(--color-bg-primary)] bg-white shadow-sm"
+          style="border-width: 3px;"
+        />
+        <span class="text-xs font-medium text-[var(--color-text-primary)] mt-2 whitespace-nowrap">
+          {marker.label}
+        </span>
+        {marker.sublabel && (
+          <span class="text-[10px] text-[var(--color-text-tertiary)] whitespace-nowrap">
+            {marker.sublabel}
+          </span>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {/* Spacer for marker labels */}
+  <div class="h-12" />
+</div>

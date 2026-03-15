@@ -1,0 +1,27 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  sublabel?: string;
+  color?: string;
+}
+
+const { value, label, sublabel, color = 'var(--color-accent)' } = Astro.props;
+---
+
+<div class="card-elevated p-6 sm:p-8 text-center my-6">
+  <span
+    class="font-[var(--font-heading)] text-4xl sm:text-5xl font-bold leading-none block mb-2"
+    style={`color: ${color};`}
+  >
+    {value}
+  </span>
+  <span class="text-base sm:text-lg text-[var(--color-text-primary)] font-medium block">
+    {label}
+  </span>
+  {sublabel && (
+    <span class="text-sm text-[var(--color-text-tertiary)] block mt-1">
+      {sublabel}
+    </span>
+  )}
+</div>
