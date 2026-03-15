@@ -99,16 +99,16 @@ The tradeoffs are real: you are limited to open-weight models (no Claude, no GPT
 
 <ComparisonTable
   title="Where each project sits on the privacy spectrum"
-  headers={["Project", "Level", "Privacy type", "What the provider sees"]}
+  headers={["Project", "Privacy level", "Privacy type", "What the provider sees"]}
   rows={[
-    { label: "OpenAI / Anthropic", values: ["Level 0", "None", "Everything: identity + prompt + stored"] },
-    { label: "Venice", values: ["Level 1", "Policy (ZDR)", "Prompt content, not identity. Not stored by policy."] },
-    { label: "Morpheus (current)", values: ["Level 1→2", "Policy + P2P (TEE in dev)", "Prompt during inference. TEE shipping."] },
-    { label: "Phala Network", values: ["Level 2", "TEE (hardware)", "Nothing — hardware enclave prevents access"] },
-    { label: "Oasis (ROFL)", values: ["Level 2", "TEE (hardware)", "Nothing during computation"] },
-    { label: "Arcium", values: ["Level 3", "MPC+FHE+ZKP", "Fragments only — no party sees complete data"] },
-    { label: "Nillion", values: ["Level 3", "MPC + secret sharing", "Fragments only"] },
-    { label: "Local (Ollama, llama.cpp)", values: ["Level 4", "Physical isolation", "No provider exists"] },
+    { label: "OpenAI / Anthropic", values: [0, "None", "Everything: identity + prompt + stored"] },
+    { label: "Venice", values: [25, "Policy (ZDR)", "Prompt content, not identity. Not stored by policy."] },
+    { label: "Morpheus (current)", values: [37, "Policy + P2P (TEE in dev)", "Prompt during inference. TEE shipping."] },
+    { label: "Phala Network", values: [50, "TEE (hardware)", "Nothing — hardware enclave prevents access"] },
+    { label: "Oasis (ROFL)", values: [50, "TEE (hardware)", "Nothing during computation"] },
+    { label: "Arcium", values: [75, "MPC+FHE+ZKP", "Fragments only — no party sees complete data"] },
+    { label: "Nillion", values: [75, "MPC + secret sharing", "Fragments only"] },
+    { label: "Local (Ollama, llama.cpp)", values: [100, "Physical isolation", "No provider exists"] },
   ]}
 />
 
