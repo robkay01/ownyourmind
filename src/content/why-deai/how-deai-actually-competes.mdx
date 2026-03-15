@@ -34,7 +34,7 @@ DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of 
   <MetricCard value="25x" label="DeepSeek vs GPT-5.4 gap" />
 </div>
 
-Let me be specific about the numbers because the deltas are significant. DeepSeek V3.2 (which now powers both their chat and reasoning endpoints) costs $0.28 per million input tokens and $0.42 per million output tokens ([DeepSeek pricing](https://api-docs.deepseek.com/quick_start/pricing)). OpenAI's current frontier model, GPT-5.4, costs $2.50 and $15 respectively ([OpenAI pricing](https://openai.com/api/pricing/)). Their reasoning model o3 costs $2 and $8. Claude Opus 4.6 costs $5 and $25 ([Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing)). For a million tokens in and a million tokens out, you are looking at $0.70 with DeepSeek versus $17.50 with GPT-5.4 versus $30 with Claude Opus 4.6. That is a 25x gap between DeepSeek and OpenAI's frontier model.
+Let me be specific about the numbers because the deltas are significant. DeepSeek V3.2 (which now powers both their chat and reasoning endpoints) costs $0.28 per million input tokens and $0.42 per million output tokens ([DeepSeek pricing](https://api-docs.deepseek.com/quick_start/pricing)). OpenAI's current frontier model, GPT-5.4, costs $2.50 and $15 respectively ([OpenAI pricing](https://openai.com/api/pricing/)). Claude Opus 4.6 costs $5 and $25 ([Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing)). For a million tokens in and a million tokens out, you are looking at $0.70 with DeepSeek versus $17.50 with GPT-5.4 versus $30 with Claude Opus 4.6. That is a 25x gap between DeepSeek and OpenAI's frontier model.
 
 The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually tied" with OpenAI o3 on technical problem-solving. [SoftwareSeni analysis](https://www.softwareseni.com/ai-model-comparison-2025-deepseek-vs-gpt-4-vs-claude-vs-llama-for-enterprise-use-cases/) confirms it delivers roughly 90% of Claude/GPT-4 capability. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
 
@@ -43,8 +43,7 @@ The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually t
   headers={["Model", "Input $/1M", "Output $/1M", "Total (1M in + 1M out)"]}
   rows={[
     { label: "DeepSeek V3.2", values: ["$0.28", "$0.42", "$0.70"] },
-    { label: "OpenAI o3 (reasoning)", values: ["$2.00", "$8.00", "$10.00"] },
-    { label: "OpenAI GPT-5.4 (frontier)", values: ["$2.50", "$15.00", "$17.50"] },
+    { label: "OpenAI GPT-5.4", values: ["$2.50", "$15.00", "$17.50"] },
     { label: "Claude Opus 4.6", values: ["$5.00", "$25.00", "$30.00"] },
   ]}
 />
@@ -54,7 +53,6 @@ The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually t
   bars={[
     { label: "Claude Opus 4.6", value: 30, displayValue: "$30.00" },
     { label: "OpenAI GPT-5.4", value: 17.5, displayValue: "$17.50" },
-    { label: "OpenAI o3", value: 10, displayValue: "$10.00" },
     { label: "DeepSeek V3.2", value: 0.70, displayValue: "$0.70" },
   ]}
 />
