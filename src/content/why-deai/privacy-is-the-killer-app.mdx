@@ -20,11 +20,11 @@ OpenAI's enterprise privacy page is 2,400 words long. That is the length it take
 
 The centralised AI companies will tell you they do not train on enterprise data. They have settings for that now. But those settings are toggles on their infrastructure, not architectural guarantees. When the next data breach happens, or the next government subpoena arrives, those toggles will not protect you. The data exists. It is stored. It can be accessed.
 
-Privacy in AI is not about hiding wrongdoing. It is about the fundamental difference between renting intelligence and owning it. When you run inference on infrastructure you control, your prompts exist only on your terms. That is sovereignty.
+Privacy in AI is not about hiding wrongdoing. It is about the fundamental difference between renting intelligence and owning it. When you run inference on infrastructure you control, your prompts exist only on your terms. That is sovereignty. For a practical breakdown of what a full sovereignty setup looks like, see [the sovereignty stack](/why-deai/the-sovereignty-stack/).
 
 ## The privacy technologies, honestly evaluated
 
-Three cryptographic approaches dominate the conversation around private AI inference. Each works. Each has tradeoffs that matter in practice.
+Three cryptographic approaches dominate the conversation around [private AI inference](/why-deai/private-ai-inference/). Each works. Each has tradeoffs that matter in practice.
 
 ### Trusted Execution Environments (TEE)
 
@@ -133,7 +133,7 @@ Nillion (NIL) and Oasis (ROSE) are general-purpose privacy infrastructure that h
 
 ### Local inference
 
-The most private inference is inference that never touches a network. Running Llama 3.3 70B on a Mac Studio with 64GB unified memory requires no external API, no data transmission, no logs on anyone else's server.
+The most private inference is inference that never touches a network. Running Llama 3.3 70B on a [Mac Studio](/build/mac-studio-deai-setup/) with 64GB unified memory requires no external API, no data transmission, no logs on anyone else's server.
 
 The tradeoffs are real:
 - Hardware cost: $3,000-6,000 for a capable local machine
