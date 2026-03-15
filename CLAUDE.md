@@ -20,6 +20,8 @@ Instructions for Claude Code working in this repository. These override default 
 **Tech:** Astro 5, Tailwind v4, Pagefind, React (SearchModal only), Cloudflare Pages.
 **Design:** Deep teal (#0D9488) accent on charcoal (#0F1117), Space Grotesk headings, Inter body. Dark theme, editorial/magazine tone. No 3D graphics, animated gradients, neon cyberpunk, emojis in nav/headings, or generic Substack look.
 
+**Writing style:** UK English. Short, direct sentences. No em-dashes (—). Use full stops, commas, colons, or parentheses instead. Rob's voice is Australian-direct: gets to the point, no filler, comfortable saying "I don't know yet." See `rob-profile.md` for full voice rules.
+
 ```bash
 npm run dev              # Development server
 npm run build            # Production build

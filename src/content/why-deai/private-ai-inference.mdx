@@ -19,41 +19,41 @@ These are three different things. All three call themselves private. Only one of
 
 <PullQuote>Privacy in AI is not binary. It is a spectrum, and most projects are further down that spectrum than their marketing suggests.</PullQuote>
 
-This distinction matters because the use case defines the required level. Asking an AI to write a blog post does not need the same privacy as asking it to analyse your company's financial projections, your medical records, or your legal strategy. Understanding where each platform sits on the spectrum is not academic — it determines what you should and should not trust them with.
+This distinction matters because the use case defines the required level. Asking an AI to write a blog post does not need the same privacy as asking it to analyse your company's financial projections, your medical records, or your legal strategy. Understanding where each platform sits on the spectrum is not academic. It determines what you should and should not trust them with.
 
 ## The five levels of AI inference privacy
 
-### Level 0: No privacy — OpenAI, Anthropic (default)
+### Level 0: No privacy. OpenAI, Anthropic (default)
 
-The provider sees your prompt in plaintext. They store it. They log metadata — who asked, when, from where, what model, how many tokens. The data persists on their infrastructure indefinitely unless you have negotiated specific terms.
+The provider sees your prompt in plaintext. They store it. They log metadata: who asked, when, from where, what model, how many tokens. The data persists on their infrastructure indefinitely unless you have negotiated specific terms.
 
 OpenAI's enterprise privacy page is 2,400 words long. That length tells you everything about the complexity of data handling on their side. Samsung employees leaked source code through ChatGPT. Amazon staff pasted confidential documents. The data breaches have already happened.
 
 With default settings, centralised providers know **who** you are, **what** you asked, and they **store** both indefinitely.
 
-### Level 1: Policy-based privacy — Venice, Morpheus (current)
+### Level 1: Policy-based privacy. Venice, Morpheus (current)
 
 This is where most "private" AI platforms sit today, and it requires honest examination.
 
-[Venice](/projects/venice/) routes your prompt through a privacy proxy before it reaches a distributed GPU provider. The proxy strips your identity — the GPU provider does not know who sent the prompt. Venice's zero data retention (ZDR) policy means they claim not to log prompts, and the GPU providers are contractually required not to store them either.
+[Venice](/projects/venice/) routes your prompt through a privacy proxy before it reaches a distributed GPU provider. The proxy strips your identity. The GPU provider does not know who sent the prompt. Venice's zero data retention (ZDR) policy means they claim not to log prompts, and the GPU providers are contractually required not to store them either.
 
 Here is what that means in practice:
 
 - **Your identity is hidden.** The GPU provider does not know who you are. This is real anonymisation.
 - **Your prompt content is visible.** The GPU provider must see the plaintext prompt to run inference on it. There is no encryption during processing.
-- **No data is stored — by policy.** Venice does not log prompts. GPU providers are told not to. But there is no cryptographic or hardware mechanism that prevents a provider from reading or copying your prompt during the milliseconds it sits in their GPU memory.
+- **No data is stored, by policy.** Venice does not log prompts. GPU providers are told not to. But there is no cryptographic or hardware mechanism that prevents a provider from reading or copying your prompt during the milliseconds it sits in their GPU memory.
 
 To use the construction analogy: it is like sending a confidential document through a courier service that strips your return address from the envelope. The recipient does not know who sent it. But they open the envelope to read the document inside. They promise not to photocopy it. You trust them on that.
 
 <PullQuote>Venice provides anonymisation, not confidentiality. The "who" is hidden. The "what" is exposed to the compute provider. It is "we don't know who asked" rather than "we can't see what was asked."</PullQuote>
 
-This is dramatically better than Level 0. There is no persistent data. There is no identity link. There are no logs to subpoena. For the vast majority of AI use cases — writing, coding, analysis, creative work — Level 1 is sufficient. You do not need military-grade encryption to ask an AI to help with your marketing copy.
+This is dramatically better than Level 0. There is no persistent data. There is no identity link. There are no logs to subpoena. For the vast majority of AI use cases (writing, coding, analysis, creative work) Level 1 is sufficient. You do not need military-grade encryption to ask an AI to help with your marketing copy.
 
 But if you are pasting your company's cap table, your patient's medical records, or your client's legal strategy into a Level 1 system, you need to understand that a GPU provider could theoretically read that content during inference. They do not know it is yours. They claim not to store it. But the content itself passes through their hardware in plaintext.
 
-[Morpheus](/projects/morpheus/) operates similarly today — P2P encrypted routing between you and the provider, but the provider sees the prompt during inference. The encryption protects the data in transit (nobody can intercept it between you and the provider), not during computation.
+[Morpheus](/projects/morpheus/) operates similarly today. P2P encrypted routing between you and the provider, but the provider sees the prompt during inference. The encryption protects the data in transit (nobody can intercept it between you and the provider), not during computation.
 
-### Level 2: Hardware-enforced privacy — Phala, NVIDIA Confidential Compute
+### Level 2: Hardware-enforced privacy. Phala, NVIDIA Confidential Compute
 
 This is where the privacy guarantee moves from policy to physics.
 
