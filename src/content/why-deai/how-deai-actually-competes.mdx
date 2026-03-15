@@ -2,7 +2,7 @@
 title: "How DeAI Actually Competes"
 description: "DeAI won't beat OpenAI at frontier models. The edge is coordination, specialisation, and economics. Not ideology – game theory and market structure."
 publishDate: 2026-03-07
-updatedDate: 2026-03-12
+updatedDate: 2026-03-15
 draft: false
 podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiHowDeaiCompetes.mp3"
 ---
@@ -25,7 +25,7 @@ This is where DeAI can actually win.
 Something shifted in late 2024. Open-source models stopped being the budget option that admitted they were worse. They became the budget option that admitted they were almost as good.
 
 <PullQuote>
-DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of the cost. That's not a gap. That's a canyon.
+DeepSeek V3.2 delivers roughly 90% of GPT-5.4's capability at roughly 4% of the cost. That's not a gap. That's a canyon.
 </PullQuote>
 
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
@@ -36,7 +36,7 @@ DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of 
 
 Let me be specific about the numbers because the deltas are significant. DeepSeek V3.2 (which now powers both their chat and reasoning endpoints) costs $0.28 per million input tokens and $0.42 per million output tokens ([DeepSeek pricing](https://api-docs.deepseek.com/quick_start/pricing)). OpenAI's current frontier model, GPT-5.4, costs $2.50 and $15 respectively ([OpenAI pricing](https://openai.com/api/pricing/)). Claude Opus 4.6 costs $5 and $25 ([Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing)). For a million tokens in and a million tokens out, you are looking at $0.70 with DeepSeek versus $17.50 with GPT-5.4 versus $30 with Claude Opus 4.6. That is a 25x gap between DeepSeek and OpenAI's frontier model.
 
-The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually tied" with OpenAI o3 on technical problem-solving. [SoftwareSeni analysis](https://www.softwareseni.com/ai-model-comparison-2025-deepseek-vs-gpt-4-vs-claude-vs-llama-for-enterprise-use-cases/) confirms it delivers roughly 90% of Claude/GPT-4 capability. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
+The quality gap is small and shrinking. DeepSeek V3.2 delivers roughly 90% of frontier capability on most benchmarks. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
 
 <ComparisonTable
   title="Model pricing comparison (March 2026, verified against provider pricing pages)"
@@ -57,15 +57,15 @@ The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually t
   ]}
 />
 
-Qwen3 Coder hits 69.6% on SWE-Bench Verified. That beats GPT-4 on key coding benchmarks. [Index.dev review](https://www.index.dev/blog/qwen-ai-coding-review) The licence is MIT. Cost: $0.35/$0.39 per million tokens. You can fine-tune it. You can host it. You can build products on top of it without asking permission or paying API taxes.
+Qwen3 Coder hits 69.6% on SWE-Bench Verified. That beats older GPT models on key coding benchmarks. [Index.dev review](https://www.index.dev/blog/qwen-ai-coding-review) The licence is MIT. You can fine-tune it. You can host it. You can build products on top of it without asking permission or paying API taxes.
 
-Llama 4 Scout offers a 10 million token context window. Ten million. That's not a typo. [Meta AI Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) Same workloads that cost $147 with GPT-4.5 run at roughly $0.42 with Llama 4 Scout. [Bind.co comparison](https://blog.getbind.co/llama-4-comparison-with-claude-3-7-sonnet-gpt-4-5-and-gemini-2-5/) That's a 350x cost difference.
+Llama 4 Scout offers a 10 million token context window. Ten million. That is not a typo. [Meta AI Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) The context length alone opens workloads that would cost significantly more on frontier APIs.
 
-This matters because it breaks the centralised AI business model. OpenAI and Anthropic charge premiums for frontier capability. If frontier-adjacent models cost 5-20% of frontier models and deliver 80-95% of the performance, the premium upstream compresses. You don't need GPT-5 for most tasks. You need something good enough, cheap enough, and controllable.
+This matters because it breaks the centralised AI business model. OpenAI and Anthropic charge premiums for frontier capability. If frontier-adjacent models cost 4-20% of frontier models and deliver 80-95% of the performance, the premium compresses. You do not need GPT-5.4 for most tasks. You need something good enough, cheap enough, and controllable.
 
 ### The self-hosting option
 
-When DeepSeek V3 costs $0.14 per million tokens through their API, you might wonder why anyone would bother self-hosting. The answer is control, not cost.
+When DeepSeek V3.2 costs $0.28 per million input tokens through their API, you might wonder why anyone would bother self-hosting. The answer is control, not cost.
 
 Self-hosting means no rate limits. No usage tracking. No terms of service that change with a policy update. No possibility that the provider decides your use case violates their interpretation of safety guidelines.
 
@@ -95,7 +95,7 @@ This is the real DeAI opportunity: not beating GPT-5 at being GPT-5, but buildin
 
 ## Coordination layers: where DeAI gets interesting
 
-The cost advantage is real but not uniquely DeAI. Anyone can run DeepSeek on AWS. The structural DeAI play is coordination: mechanisms that align incentives across distributed participants to produce AI capability.
+The cost advantage is real but not uniquely DeAI. Anyone can run DeepSeek V3.2 on AWS. The structural DeAI play is coordination: mechanisms that align incentives across distributed participants to produce AI capability.
 
 ### Bittensor: the coordination experiment that actually shipped
 
@@ -289,7 +289,7 @@ DeAI competes on three dimensions that centralised players cannot match without 
 DeAI's edge is not better AI. It's better economics, coordination, and sovereignty. The technology is the means, not the differentiator.
 </PullQuote>
 
-What DeAI does not compete on is frontier capability. GPT-5, Claude 5, Gemini 2.5: these will be better than anything the decentralised ecosystem produces for the foreseeable future. The frontier labs have the GPUs, the researchers, and the data. That game is not winnable.
+What DeAI does not compete on is frontier capability. GPT-5.4, Claude Opus 4.6, Gemini 3 Pro: these will be better than anything the decentralised ecosystem produces for the foreseeable future. The frontier labs have the GPUs, the researchers, and the data. That game is not winnable.
 
 But most AI workloads don't need frontier models. They need good enough, cheap enough, and controllable. That's where DeAI plays. And that's where the economics are shifting toward open-source and decentralised infrastructure.
 
