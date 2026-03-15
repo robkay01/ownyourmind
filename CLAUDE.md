@@ -97,7 +97,9 @@ Every quantitative claim in editorial content must follow these rules. They exis
 5. **Attribution over assertion.** "Allium Labs' on-chain analysis shows $3M" beats "x402 processed $3M."
 6. **Scepticism scales with narrative alignment.** Apply extra scrutiny to data that conveniently proves the article's point. If a number seems too good, it probably is.
 
-**Previous failure (March 2026):** x402 article cited self-reported $24M volume as fact. Independent analysis: $3M on-chain (Allium), $1.6M after wash filter (Artemis). A 15x inflation from a single self-reported source. Article rewritten with full attribution chain.
+**Previous failures (March 2026):**
+- x402 article cited self-reported $24M volume as fact. Independent analysis: $3M on-chain (Allium), $1.6M after wash filter (Artemis). A 15x inflation from a single self-reported source.
+- how-deai-competes article cited Claude Opus at $15/$75 per 1M tokens (old Opus 4.0 pricing). Opus 4.6 (Feb 2026) is $5/$25 — a 67% price cut the audit failed to catch. **API pricing must be verified against provider pricing pages at time of publication, not from cached research data.**
 
 ---
 
