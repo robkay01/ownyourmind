@@ -78,9 +78,9 @@ The vault and circuit breaker design is more conservative than most DeFi burn me
 
 Your staking mechanics do not change. Inflation parameters remain governed separately. What changes is the effective inflation rate.
 
-At current usage ($3.15M annual revenue, ~$265K monthly), Akash's simulations estimate:
-- **~2.1 million AKT burned monthly** at current prices
-- **Effective inflation drops from 8% to approximately 5.2%**
+At current usage ($3.15M annual revenue, ~$265K monthly), Akash's own simulations project:
+- **~2.1 million AKT burned monthly** at current prices (projected, not yet verified on-chain)
+- **Effective inflation drops from 8% to approximately 5.2%** (Akash projection)
 
 That is not deflation. But it is a meaningful reduction in dilution. Your ~7.3% nominal staking yield starts looking more like a real positive return when effective inflation drops to 5%. And the gap closes further as compute revenue grows.
 
@@ -119,7 +119,7 @@ Both Akash and Render use burn-mint equilibrium, but the implementations are fun
 | **Safety mechanism** | BME vault + circuit breakers at CR 0.90/0.95 | No equivalent vault described |
 | **Fee structure** | 25bps mint spread | 5% service fee |
 | **Supply cap** | No cap (inflation + BME) | 644M hard cap |
-| **Current gap to deflation** | Inflation drops from 8% to ~5.2% | Emissions outpace burns ~8x |
+| **Current gap to deflation** | Inflation drops from 8% to ~5.2% (Akash projection) | Emissions outpace burns ~8x |
 
 The key conceptual difference: **Render decouples payment from reward.** When a creator burns RENDER, providers are paid from a separate fixed emission schedule proportional to work done. The burn and the provider payment are independent flows.
 
@@ -137,7 +137,7 @@ Five metrics to track once BME activates on 23 March:
 
 2. **BME vault collateral ratio.** Should stay well above 1.0. If it approaches 0.95, the market is testing the mechanism. Below 0.90 and circuit breakers halt new ACT mints — a stress scenario.
 
-3. **Compute revenue growth.** BME at $3.15M annual revenue drops effective inflation to ~5.2%. At $10M revenue, the burn becomes much more significant — Akash estimates ~0.77M AKT net monthly burn at that level. Revenue growth is the lever that makes BME matter.
+3. **Compute revenue growth.** BME at $3.15M annual revenue drops effective inflation to ~5.2% per Akash's projections. At $10M revenue, the burn becomes much more significant — Akash estimates ~0.77M AKT net monthly burn at that level. Revenue growth is the lever that makes BME matter.
 
 4. **Provider count and utilisation.** BME should improve provider economics (no take-rate, AKT alignment). If provider count starts growing after its 2025 decline, BME is having the intended effect on supply-side participation.
 
@@ -147,7 +147,7 @@ Five metrics to track once BME activates on 23 March:
 
 BME is a genuine improvement to AKT tokenomics. It takes a token that had no meaningful connection between usage and value and creates a direct, on-chain, verifiable link. Every dollar of compute spent now burns AKT. That is real.
 
-But let us not pretend it solves everything. At $3.15M annual revenue, BME reduces effective inflation from 8% to roughly 5.2%. The token is still inflationary. Still no supply cap. The mechanism needs significantly higher revenue — an order of magnitude, realistically — before net deflation becomes plausible.
+But let us not pretend it solves everything. At $3.15M annual revenue, BME reduces effective inflation from 8% to roughly 5.2% per Akash's own modelling. The token is still inflationary. Still no supply cap. The mechanism needs significantly higher revenue — an order of magnitude, realistically — before net deflation becomes plausible.
 
 The comparison to Render is instructive. Render has the same fundamental challenge in reverse: a hard supply cap and a proven burn mechanism, but burns that lag emissions by 8x. Both networks are betting that compute demand will grow fast enough to flip their respective models deflationary. Neither is there yet.
 

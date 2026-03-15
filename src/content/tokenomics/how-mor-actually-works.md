@@ -139,7 +139,7 @@ After approximately 16 years (day 5,833), tail emissions kick in at 50% of MOR b
 
 As a capital provider with a 6-year Power Factor lock, I track five things:
 
-1. **Total stETH staked.** As more stETH enters the pool, my share of emissions dilutes. Over 6,500 capital providers have participated, with 320,000+ ETH flowing through the contracts historically. My per-unit returns decline as the pool grows, but a growing pool signals network health.
+1. **Total stETH staked.** As more stETH enters the pool, my share of emissions dilutes. According to Morpheus dashboard data, over 6,500 capital providers have participated, with 320,000+ ETH flowing through the contracts historically. My per-unit returns decline as the pool grows, but a growing pool signals network health.
 
 2. **Power Factor adoption.** My effective multiplier depends not just on my own lock, but on how many other participants also lock. If everyone locks for six years, my relative advantage disappears. If most people do not lock, my ~10.7x multiplier gives me a massive edge. So far, most participants have not locked for the maximum duration.
 

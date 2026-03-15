@@ -19,7 +19,7 @@ Render, Akash and io.net are the three largest decentralised compute networks by
 |---|---|---|---|
 | **Market cap** | $696M | $100M | ~$34M |
 | **Revenue model** | Burn-Mint Equilibrium (BME) | Take fee on deployment spend | Incentive Dynamic Engine (IDE) |
-| **2025 revenue** | ~$1M (burn-derived) | $3.15M (on-chain verified) | $20M+ annualised (self-reported) |
+| **2025 revenue** | ~$1M (burn-derived) | $3.15M (on-chain verified) | $20M+ annualised from Q1 2025 figures (self-reported) |
 | **Revenue verifiable?** | Partially (burns on-chain, USD revenue not disclosed) | Yes (Cosmos transactions, Messari reports) | Partially (Messari quarterly reports, but core figures self-reported) |
 | **P/Revenue** | ~696x | ~32x | ~1.9x |
 | **Supply cap** | 644M (hard) | No cap (8% inflation) | 800M (hard) |
@@ -34,7 +34,7 @@ Render's revenue story starts with OctaneRender. OTOY built one of the most wide
 
 The burn mechanism is straightforward. When a creator pays for a rendering job, 95% of the RENDER spent is permanently burned. 5% goes to OTOY as a service fee. Node operators receive newly minted RENDER from an emission pool. If burns exceed emissions, the token becomes deflationary.
 
-Burns grew 279% year-over-year through 2025. Monthly burns increased from roughly 20,000 RENDER in January to 121,000 in September. Over 1 million RENDER have now been permanently burned. Sixty-nine million frames have been rendered, with 35% of all-time volume in 2025 alone. The trajectory is real.
+According to Render Foundation reports, burns grew 279% year-over-year through 2025. Monthly burns increased from roughly 20,000 RENDER in January to 121,000 in September. Over 1 million RENDER have now been permanently burned. Sixty-nine million frames have been rendered, with 35% of all-time volume in 2025 alone. The trajectory is real.
 
 The problem: monthly emissions of roughly 492,000 RENDER still outpace burns. BME is net inflationary today. The system needs substantially more rendering demand before it flips deflationary. That is a lot of rendering.
 
@@ -52,7 +52,7 @@ Revenue is modest but verifiable. Akash generated $3.15M in on-chain revenue in 
 
 The customer base is crypto-native but growing. Venice.ai processes billions of inference tokens through Akash. ElizaOS uses AkashChat as its default inference API. Morpheus has a one-click Console template. Gensyn runs H100 nodes for reinforcement learning. Average lease value doubled year-over-year to $25.03, indicating higher-value workloads replacing the low-value spam that plagued the network in early 2025.
 
-Akash's pricing advantage is real: 70-85% cheaper than AWS SageMaker for equivalent GPU workloads. AkashML offers inference at $2-4 per million tokens versus OpenAI's $15.
+Akash's marketplace benchmarks show 70-85% savings versus AWS SageMaker for equivalent GPU workloads. AkashML offers inference at $2-4 per million tokens versus OpenAI's $15.
 
 **Where it falls short on returns.** No supply cap – 8% annual inflation dilutes holders. Staking yields roughly 7.3% nominal, which nets -0.7% real yield after inflation. The approved BME mechanism (AEP-76) has not yet activated – when it does, tenants will burn AKT to mint compute credits, creating deflationary pressure. But until it activates, AKT's value accrual is weak. Liquidity is thinner than Render – no Binance listing, $1-5M daily volume versus Render's $41M.
 
@@ -62,7 +62,7 @@ The P/Revenue ratio tells a story. At roughly 32x, Akash is priced like an early
 
 ## io.net: the unverifiable claim
 
-io.net is the most aggressive of the three. It claims $20M+ in annualised revenue (Q1 2025 alone was $5.7M, an 82.6% quarter-on-quarter increase), 327,000 registered GPUs, and partnerships with Dell Technologies. Named enterprise customers include Leonardo.Ai (19M users, 50% GPU cost reduction), Wondera ($2.48M savings versus AWS) and UC Berkeley's RAIL Lab (92.8% cost savings).
+io.net is the most aggressive of the three. It claims $20M+ in annualised revenue, extrapolated from a self-reported $5.7M in Q1 2025 (an 82.6% quarter-on-quarter increase), 327,000 registered GPUs, and partnerships with Dell Technologies. Named enterprise customers include Leonardo.Ai (19M users, 50% GPU cost reduction), Wondera ($2.48M savings versus AWS) and UC Berkeley's RAIL Lab (92.8% cost savings).
 
 The revenue figures are self-reported. Messari publishes quarterly reports with network metrics, and token data is verifiable on-chain, but the core revenue and utilisation numbers come from io.net. The gap between headline metrics and reality is the persistent concern – 327,000 registered GPUs but only 6,720 daily verified active, after a 2024 Sybil attack inflated GPU counts with 1.8 million fake devices. The market has noticed – io.net's ~$32M market cap pricing it at roughly 1.6x claimed revenue is the market saying "we are not confident in these numbers."
 
@@ -70,7 +70,7 @@ The Incentive Dynamic Engine burns at least 50% of post-supplier revenue by purc
 
 io.net launched in June 2024 and is down 98% from its all-time high. The token still has significant unlocks through 2030. The core platform is proprietary with no on-chain governance. The enterprise case studies are compelling if true, but "if true" is doing a lot of work in that sentence.
 
-**The lesson.** Revenue claims without full verifiability carry a discount. Akash's $3.15M of fully on-chain revenue is more valuable as an investment signal than io.net's $20M of self-reported revenue, because you can trace every dollar of one on a block explorer and you cannot do the same for the other.
+**The lesson.** Revenue claims without full verifiability carry a discount. Akash's $3.15M of fully on-chain revenue is more valuable as an investment signal than io.net's $20M of self-reported annualised revenue, because you can trace every dollar of one on a block explorer and you cannot do the same for the other.
 
 ## The revenue comparison that matters
 
@@ -82,7 +82,7 @@ Strip away the marketing and look at what each token actually does with revenue:
 | **Does revenue flow to holders?** | Not to holders – no holder staking or fee distribution. Operators earn job-based rewards since RNP-019 (May 2025), tied to availability and completed work | Partially – staking yields include small fee component | Not clearly documented |
 | **Is revenue verifiable?** | Partially – burns on-chain, USD not disclosed | Yes – fully on-chain | Partially – Messari reports, but core figures self-reported |
 | **Is the system deflationary?** | Not yet (8x gap) | Not yet (inflationary by design) | Unknown |
-| **Revenue growth rate** | +279% YoY burns | +128% YoY spend | N/A (too new) |
+| **Revenue growth rate** | +279% YoY burns (Render Foundation) | +128% YoY spend | N/A (too new) |
 
 Render has the best-designed value capture mechanism (BME). Akash has the most trustworthy revenue data. io.net has the strongest revenue growth claim, but the verification gap keeps it discounted.
 
@@ -106,7 +106,7 @@ But markets are not always right about time horizons. Akash has three structural
 
 I hold both RENDER and AKT. Different positions for different theses.
 
-**RENDER** is a bet on rendering demand and the OctaneRender moat. I accept the centralisation. I am not buying it for the sovereignty thesis. I am buying it because 69 million rendered frames and 279% burn growth suggest real product-market fit, and the BME mechanism will reward that adoption if it continues.
+**RENDER** is a bet on rendering demand and the OctaneRender moat. I accept the centralisation. I am not buying it for the sovereignty thesis. I am buying it because 69 million rendered frames and 279% burn growth (per Render Foundation reports) suggest real product-market fit, and the BME mechanism will reward that adoption if it continues.
 
 **AKT** is a bet on permissionless compute becoming the default. The revenue is smaller but growing, verifiable and diversifying beyond crypto-native customers. The BME activation is a catalyst that the market has not yet priced. At 32x P/Revenue with 128% growth, the valuation is reasonable if the growth trajectory holds.
 

@@ -30,7 +30,7 @@ MOR (Morpheus), TAO (Bittensor) and FET (Fetch.ai / ASI Alliance) represent thre
 
 **Strengths.** Zero insider allocation means no unlock-driven selling pressure. The emission model is transparent and predictable. All four contributor groups are incentivised. The Power Factor multiplier (up to ~10.7x for a 6-year lock) rewards long-term conviction. Capital deposits are withdrawable after just 7 days, and earned MOR has no vesting or lock – the Power Factor lock is entirely voluntary. Protocol-owned liquidity deepens every day capital is staked.
 
-**Weaknesses.** The network is still young, so compute demand has not yet reached the levels needed for significant burn pressure. Capital provider returns depend heavily on MOR price, which is volatile. Liquidity is thin (primarily DEX with ~$30K daily volume), making meaningful positions difficult to enter or exit.
+**Weaknesses.** The network is still young, so compute demand has not yet reached the levels needed for significant burn pressure. Capital provider returns depend heavily on MOR price, which is volatile. Liquidity is thin (primarily DEX with approximately $30K daily volume based on DEX data at time of writing), making meaningful positions difficult to enter or exit.
 
 **Alignment score.** High. The tokenomics directly incentivise the behaviours the network needs: compute provision, code contribution, capital commitment and community growth. No misalignment between token holders and network operators.
 

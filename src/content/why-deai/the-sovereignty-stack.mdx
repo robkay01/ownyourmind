@@ -112,7 +112,7 @@ But Grass is not a data sovereignty solution. Users contribute bandwidth, not da
 
 | Metric | Value |
 |--------|-------|
-| Users | 1.3 million |
+| Users | 1.3 million (self-reported) |
 | DataDAOs | 300+ (16 active) |
 | Mainnet | December 2024 |
 | Daily Transactions | 1.7 million (claimed) |
@@ -205,7 +205,7 @@ Inference sovereignty means querying AI models without exposing inputs to third 
 
 ### Venice: Privacy-as-feature
 
-[Venice](/projects/venice/) has 1.3 million registered users processing 45 billion tokens daily. No server-side storage of prompts. Local browser storage for history. Strips identifying info before GPU forwarding. Uncensored models. [Venice Analysis](/projects/venice/)
+[Venice](/projects/venice/) reports 1.3 million registered users processing 45 billion tokens daily. No server-side storage of prompts. Local browser storage for history. Strips identifying info before GPU forwarding. Uncensored models. [Venice Analysis](/projects/venice/)
 
 **But:** GPU providers see plaintext prompts. Centralised, closed-source proxy. No independent privacy audit. Privacy is a business decision, not architectural. Freedom Score: 57/100.
 
@@ -243,11 +243,11 @@ Coordination layer protocols align incentives across sovereign infrastructure, e
 
 ### Bittensor: The largest DeAI network
 
-[Bittensor](/projects/bittensor/) has 128+ active subnets, $100M+ daily volume, and Chutes (a subnet handling serverless inference) processes billions of tokens daily. Real workloads, not hypothetical. [Bittensor Analysis](/projects/bittensor/)
+[Bittensor](/projects/bittensor/) has 128+ active subnets, $100M+ exchange-reported daily volume (unfiltered; may include wash trading), and Chutes (a subnet handling serverless inference) processes billions of tokens daily. Real workloads, not hypothetical. [Bittensor Analysis](/projects/bittensor/)
 
 **The incentive model:** Miners compete to produce AI outputs. Validators score them. The best miners earn the most TAO. Darwinian selection applied to model inference and training.
 
-**The stake-weight problem:** Academic analysis shows stake weight correlates 0.50-0.80 with rewards, while quality correlates only 0.10-0.30. Wealth determines TAO earnings more than actual AI quality. This is a fundamental misalignment.
+**The stake-weight problem:** Stake weight appears to correlate more strongly with rewards than output quality. Wealth determines TAO earnings more than actual AI quality. This is a fundamental misalignment.
 
 **Sovereignty tradeoffs:** Local execution. Self-custodial wallets. No platform surveillance. But PoA block production is centralised. Triumvirate governance (3 OTF employees). Gini coefficient ~0.98 (extreme early mining concentration). Zero external revenue, entirely emission-dependent.
 
@@ -339,7 +339,7 @@ You don't need full sovereignty to see benefits. Hybrid approaches work. Route n
 |-------|----------|------------|
 | Compute | Akash | High (2020 mainnet, $3.15M revenue) |
 | Compute | Render | High (enterprise customers) |
-| Inference | Venice | High (1.3M users, 45B tokens/day) |
+| Inference | Venice | High (1.3M users claimed, 45B tokens/day claimed) |
 | Inference | Phala | Medium-High (TEE production, SOC2/HIPAA) |
 | Data | Grass | High (scale proven, sovereignty concerns) |
 | Coordination | Bittensor | High (largest DeAI, real workloads) |
