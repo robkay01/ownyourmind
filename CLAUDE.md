@@ -96,10 +96,12 @@ Every quantitative claim in editorial content must follow these rules. They exis
 4. **Subsidised activity ≠ organic activity.** Note when protocols subsidise gas/transaction costs. Free transactions inflate volume.
 5. **Attribution over assertion.** "Allium Labs' on-chain analysis shows $3M" beats "x402 processed $3M."
 6. **Scepticism scales with narrative alignment.** Apply extra scrutiny to data that conveniently proves the article's point. If a number seems too good, it probably is.
+7. **Price/rate data must be fetched from primary sources at publication.** Never use cached/training knowledge for API pricing, token costs, staking yields, or exchange rates. Always WebFetch the provider's own pricing page directly — not web search snippets. Prices change frequently (e.g. Opus 4.6 cut pricing 67% from Opus 4.0).
+8. **Audits must check accuracy, not just attribution.** A properly attributed claim can still be wrong if the underlying data has changed. When auditing, verify that facts are current, not just that sources are cited.
 
 **Previous failures (March 2026):**
 - x402 article cited self-reported $24M volume as fact. Independent analysis: $3M on-chain (Allium), $1.6M after wash filter (Artemis). A 15x inflation from a single self-reported source.
-- how-deai-competes article cited Claude Opus at $15/$75 per 1M tokens (old Opus 4.0 pricing). Opus 4.6 (Feb 2026) is $5/$25 — a 67% price cut the audit failed to catch. **API pricing must be verified against provider pricing pages at time of publication, not from cached research data.**
+- how-deai-competes article cited Claude Opus at $15/$75 per 1M tokens (old Opus 4.0 pricing). Opus 4.6 (Feb 2026) is $5/$25 — a 67% price cut the audit failed to catch. First fix also used stale DeepSeek R1 pricing from web search instead of checking DeepSeek's own docs (R1 replaced by V3.2). **Three failures:** (1) stale training data used as fact, (2) audit checked attribution not accuracy, (3) fix used web search snippets instead of primary source. Rules 7 and 8 added.
 
 ---
 
