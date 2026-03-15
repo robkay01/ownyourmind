@@ -8,6 +8,8 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiHowDeaiCompetes.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
 
 DeAI is not going to out-frontier the frontier labs. That's not the play.
 
@@ -25,16 +27,26 @@ Something shifted in late 2024. Open-source models stopped being the budget opti
 DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of the cost. That's not a gap. That's a canyon.
 </PullQuote>
 
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
+  <MetricCard value="~3%" label="Cost vs frontier" />
+  <MetricCard value="~90%" label="Capability retained" />
+  <MetricCard value="350x" label="Llama 4 vs GPT-4.5 cost gap" />
+</div>
+
 Let me be specific about the numbers because the deltas are absurd. DeepSeek R1 costs $0.55 per million input tokens and $2.19 per million output tokens. OpenAI o1 costs $15 and $60 respectively. That's a 27x difference on input and a 27x difference on output. For a million tokens in and a million tokens out, you're looking at roughly $2.74 with DeepSeek versus $75 with OpenAI o1. [Data Studios comparison](https://www.datastudios.org/post/chatgpt-vs-claude-vs-deepseek-full-report-and-comparison-on-features-capabilities-pricing-and-mo)
 
 The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually tied" with OpenAI o3 on technical problem-solving. [SoftwareSeni analysis](https://www.softwareseni.com/ai-model-comparison-2025-deepseek-vs-gpt-4-vs-claude-vs-llama-for-enterprise-use-cases/) confirms it delivers roughly 90% of Claude/GPT-4 capability. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
 
-| Model | Input $/1M | Output $/1M | Total (1M in + 1M out) |
-|-------|------------|-------------|------------------------|
-| DeepSeek R1 | $0.55 | $2.19 | ~$2.74 |
-| DeepSeek V3 | $0.14 | $0.28 | $0.42 |
-| OpenAI o1 | $15.00 | $60.00 | $75.00 |
-| Claude Opus 4 | ~$15.00 | ~$75.00 | ~$90.00 |
+<ComparisonTable
+  title="Model pricing comparison"
+  headers={["Model", "Input $/1M", "Output $/1M", "Total (1M in + 1M out)"]}
+  rows={[
+    { label: "DeepSeek R1", values: ["$0.55", "$2.19", "~$2.74"] },
+    { label: "DeepSeek V3", values: ["$0.14", "$0.28", "$0.42"] },
+    { label: "OpenAI o1", values: ["$15.00", "$60.00", "$75.00"] },
+    { label: "Claude Opus 4", values: ["~$15.00", "~$75.00", "~$90.00"] },
+  ]}
+/>
 
 Qwen3 Coder hits 69.6% on SWE-Bench Verified. That beats GPT-4 on key coding benchmarks. [Index.dev review](https://www.index.dev/blog/qwen-ai-coding-review) The licence is MIT. Cost: $0.35/$0.39 per million tokens. You can fine-tune it. You can host it. You can build products on top of it without asking permission or paying API taxes.
 
@@ -114,11 +126,15 @@ But usage metrics are not publicly disclosed. Mainnet is described as "pending" 
 
 I am sceptical of any project that raises $85 million before shipping. The history of crypto is littered with well-funded projects that never found product-market fit. Sentient might be different. The investors are credible. But until mainnet launches with measurable usage, it belongs in the "wait and see" category.
 
-| Project | Status | Real Traction? | Key Signal |
-|---------|--------|----------------|------------|
-| Bittensor | Production | Yes | 128 subnets, $100M+ exchange-reported daily volume, Chutes revenue |
-| Sentient | Testnet | Early | $85M funding, Grid launched Aug 2025, Binance listing |
-| FLock.io | Production | Yes | Web3 Agent Model benchmarks, CB Insights AI 100, Bittensor subnet |
+<ComparisonTable
+  title="Coordination layer traction"
+  headers={["Project", "Status", "Real Traction?", "Key Signal"]}
+  rows={[
+    { label: "Bittensor", values: ["Production", "Yes", "128 subnets, $100M+ daily volume, Chutes revenue"] },
+    { label: "Sentient", values: ["Testnet", "Early", "$85M funding, Grid launched Aug 2025, Binance listing"] },
+    { label: "FLock.io", values: ["Production", "Yes", "Web3 Agent Model benchmarks, CB Insights AI 100, Bittensor subnet"] },
+  ]}
+/>
 
 ## The geopolitical angle: neutrality as a feature
 
@@ -180,10 +196,14 @@ Neither standard has massive adoption today. But they are building blocks for an
 
 The bet is that agent-to-agent commerce becomes meaningful. If that happens, these standards become the rails. If it doesn't, they remain infrastructure in search of users. But compared to DeAI projects building speculative token economies without utility, standards work is infrastructure investment.
 
-| Standard | Deployed | Chains | Purpose |
-|----------|----------|--------|---------|
-| ERC-8004 | Jan 29, 2026 | 18+ EVM | Agent identity, reputation, validation registries |
-| x402 | Active | Solana, Base, MultiversX, Sei | Micropayments for API calls via HTTP 402 |
+<ComparisonTable
+  title="On-chain AI standards"
+  headers={["Standard", "Deployed", "Chains", "Purpose"]}
+  rows={[
+    { label: "ERC-8004", values: ["Jan 29, 2026", "18+ EVM", "Agent identity, reputation, validation registries"] },
+    { label: "x402", values: ["Active", "Solana, Base, MultiversX, Sei", "Micropayments for API calls via HTTP 402"] },
+  ]}
+/>
 
 ## Cost benchmarks: decentralised compute at scale
 
@@ -191,12 +211,16 @@ The cost advantage for decentralised compute is real but nuanced.
 
 The headline claim: "You can get industry-standard GPUs for less than 50% of AWS/Azure costs." [Capracap Substack](https://capracap.substack.com/p/render-vs-akash-a-deeper-look-into) This is directionally correct but hides important tradeoffs.
 
-| Provider | Approx Cost/GPU-Hour (A100 80GB) | Notes |
-|----------|-----------------------------------|-------|
-| AWS On-Demand | ~$3-4 | Reference baseline with SLAs |
-| Akash | ~$1.50-2 | Variable, spot-market, fewer guarantees |
-| Render | ~$1-2 | Rendering-focused, AI pivot ongoing |
-| io.net | ~$0.50-1.50 | But verify actual availability |
+<ComparisonTable
+  title="GPU compute cost comparison (A100 80GB)"
+  headers={["Provider", "Approx Cost/GPU-Hour", "Notes"]}
+  rows={[
+    { label: "AWS On-Demand", values: ["~$3-4", "Reference baseline with SLAs"] },
+    { label: "Akash", values: ["~$1.50-2", "Variable, spot-market, fewer guarantees"] },
+    { label: "Render", values: ["~$1-2", "Rendering-focused, AI pivot ongoing"] },
+    { label: "io.net", values: ["~$0.50-1.50", "But verify actual availability"] },
+  ]}
+/>
 
 [Akash](/projects/akash/) is the most credible open-source compute marketplace. 69 active providers, 700-1,000 GPUs, roughly 60% utilisation. $3.15 million annual revenue, up 128% year-over-year. Real customers: [Venice](/projects/venice/), ElizaOS, Morpheus, Gensyn. Permissionless provider onboarding. Fully open source. Freedom Score: 66/100, among the highest for DePIN GPU networks.
 

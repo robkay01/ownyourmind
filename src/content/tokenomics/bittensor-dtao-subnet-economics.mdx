@@ -6,6 +6,10 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsDtaoSubnet.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+
 ## The old system was political
 
 Before February 2025, a small group of root validators decided which subnets received TAO emissions. They set weights across subnets based on their judgement, and those stake-weighted votes determined each subnet's share. It was a delegated, political process. If you knew the right validators, your subnet ate well. If you did not, good luck.
@@ -38,11 +42,13 @@ Emissions reach subnets in two stages.
 
 **Stage 2: Distribution (every tempo, roughly 72 minutes).** Each subnet's emissions split:
 
-| Recipient | Share |
-|---|---|
-| Subnet owner | 18% |
-| Miners | 41% |
-| Validators and stakers | 41% |
+<div class="not-prose my-6">
+  <AllocationBar allocations={[
+    { category: "Subnet Owner", percentage: 18 },
+    { category: "Miners", percentage: 41 },
+    { category: "Validators & Stakers", percentage: 41 }
+  ]} />
+</div>
 
 The owner share is fixed globally at 18%. Miners are allocated via Yuma Consensus (the subnet's internal ranking mechanism). Validators and stakers receive proportional to their stake.
 
@@ -58,16 +64,16 @@ This is the risk that most dTAO explainers skip. Alpha tokens are not stablecoin
 
 ## The network today
 
-| Metric | Value |
-|---|---|
-| Active subnets | 129 |
-| TAO price | ~$195 |
-| Circulating supply | ~9.6M TAO |
-| Max supply | 21M TAO |
-| Daily emission | 3,600 TAO (~$702,000) |
-| Subnet registration cost | ~746 TAO (~$145,000) |
-| Block time | 12 seconds |
-| Tempo | ~72 minutes (360 blocks) |
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose my-6">
+  <MetricCard label="Active Subnets" value="129" />
+  <MetricCard label="TAO Price" value="~$195" />
+  <MetricCard label="Circulating Supply" value="~9.6M TAO" />
+  <MetricCard label="Max Supply" value="21M TAO" />
+  <MetricCard label="Daily Emission" value="3,600 TAO (~$702k)" />
+  <MetricCard label="Registration Cost" value="~746 TAO (~$145k)" />
+  <MetricCard label="Block Time" value="12 seconds" />
+  <MetricCard label="Tempo" value="~72 min (360 blocks)" />
+</div>
 
 The registration cost is dynamic -- it lowers gradually over time and doubles every time a new subnet is created. At $145,000, creating a subnet is not casual. Rate-limited to one creation per four days.
 
@@ -75,12 +81,18 @@ Each subnet supports up to 256 neurons and 64 validators.
 
 ## Notable subnets
 
-| ID | Name | What it does |
-|---|---|---|
-| 0 | Root | Subnet-agnostic TAO staking (special subnet, no miners) |
-| 1 | Apex (Macrocosm OS) | Open competitions for algorithmic and agentic optimisation |
-| 8 | Vanta (Taoshi) | Decentralised execution engine for prop trading |
-| 9 | IOTA (Macrocosmos) | Distributed AI model pretraining |
+<div class="not-prose my-6">
+  <ComparisonTable
+    title="Notable Subnets"
+    headers={["ID", "Name", "What It Does"]}
+    rows={[
+      { label: "0", values: ["Root", "Subnet-agnostic TAO staking (special subnet, no miners)"] },
+      { label: "1", values: ["Apex (Macrocosm OS)", "Open competitions for algorithmic and agentic optimisation"] },
+      { label: "8", values: ["Vanta (Taoshi)", "Decentralised execution engine for prop trading"] },
+      { label: "9", values: ["IOTA (Macrocosmos)", "Distributed AI model pretraining"] }
+    ]}
+  />
+</div>
 
 Others include Compute Horde (distributed GPU compute), Data Universe (web data collection), and TAOHash (Bitcoin mining coordination). The ecosystem is broad but most subnets are early-stage.
 
