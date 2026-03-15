@@ -1,0 +1,205 @@
+---
+title: "Bittensor Subnets: Where the Revenue Actually Is"
+description: "TAO is the token. Subnets are the business. A practitioner's guide to which Bittensor subnets generate real revenue, which ones are farming emissions, and how to tell the difference."
+publishDate: 2026-03-15
+draft: true
+---
+
+import PullQuote from '../../components/PullQuote.astro';
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import BarChart from '../../components/BarChart.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+import DonutChart from '../../components/DonutChart.astro';
+import StatCallout from '../../components/StatCallout.astro';
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+  <MetricCard value="129" label="Active subnets" />
+  <MetricCard value="$2.53B" label="TAO market cap" />
+  <MetricCard value="~3,600" label="TAO emitted daily" />
+  <MetricCard value="72.5%" label="TAO still in Root staking" />
+</div>
+
+## The thesis
+
+TAO is a $2.5 billion token. Most people buy it as an AI narrative bet. But TAO itself does not generate revenue. It is the coordination layer, the base currency, the staking asset. The revenue, the products, the actual AI workloads, those happen in the subnets.
+
+There are 129 active subnets on [Bittensor](/projects/bittensor/) as of March 2026. Most of them will fail. A handful are generating real revenue from real customers. The gap between the two is where the opportunity and the risk both live.
+
+This article examines the subnets that matter. Not all 129. The ones with verifiable traction, real products, or interesting economic models worth understanding. For how the subnet emission system works mechanically, see our [dTAO subnet economics](/tokenomics/bittensor-dtao-subnet-economics/) deep dive. For how TAO compares to other DeAI tokens, see [MOR vs TAO vs FET](/tokenomics/mor-vs-tao-vs-fet/).
+
+<PullQuote>0xJeff puts it directly: "The real opportunities lie in subnet tokens." TAO might be the index. Subnets are the individual stocks.</PullQuote>
+
+## Where the emissions flow
+
+The top 10 subnets capture 56.46% of all TAO emissions. The remaining 119 subnets share the other 43.54%. Concentration is extreme.
+
+<BarChart
+  title="Top 10 subnets by emission share"
+  bars={[
+    { label: "Chutes (SN64)", value: 14.39, displayValue: "14.39%" },
+    { label: "TAOHash (SN14)", value: 8.20, displayValue: "8.20%" },
+    { label: "Gradients (SN56)", value: 6.66, displayValue: "6.66%" },
+    { label: "Targon (SN4)", value: 5.73, displayValue: "5.73%" },
+    { label: "Templar (SN3)", value: 5.62, displayValue: "5.62%" },
+    { label: "Celium (SN51)", value: 4.44, displayValue: "4.44%" },
+    { label: "Prop Trading (SN8)", value: 3.45, displayValue: "3.45%" },
+    { label: "Kaito (SN5)", value: 3.13, displayValue: "3.13%" },
+    { label: "Nineteen (SN19)", value: 2.71, displayValue: "2.71%" },
+    { label: "Pretrain (SN9)", value: 2.13, displayValue: "2.13%" },
+  ]}
+  unit="%"
+/>
+
+Under [dTAO](/tokenomics/bittensor-dtao-subnet-economics/), emission allocation is market-driven. Stakers vote with their TAO by depositing into subnets they believe produce value. The more TAO staked into a subnet, the more emissions it receives. This is Darwinian selection applied to AI infrastructure: produce value or lose your emissions to someone who does.
+
+The staking split tells an important story. 72.5% of staked TAO is still in Root (the legacy staking mechanism). Only 27.5% has moved to alpha (subnet) staking. The "every holder is a VC" vision has not materialised at scale. Most TAO holders are still parking in Root for conservative yield rather than actively allocating to subnets.
+
+<DonutChart
+  segments={[
+    { label: "Root (SN0)", value: 72.5, color: "var(--color-chart-2)" },
+    { label: "Subnet (Alpha)", value: 27.5, color: "var(--color-accent)" },
+  ]}
+  centerLabel="7.35M"
+  centerSubLabel="TAO staked"
+/>
+
+## The Rayon Labs question
+
+One team dominates the ecosystem. Rayon Labs operates three subnets: Chutes (SN64), Gradients (SN56), and Nineteen (SN19). Combined, they command 23.71% of all TAO emissions ([Messari](https://messari.io/report/rayon-labs-the-subnet-trifecta), [OAK Research](https://oakresearch.io/en/analyses/innovations/rayon-labs-subnet-leader-bittensor-tao)). Nearly a quarter of the network's output flows to a single operator.
+
+<StatCallout value="23.71%" label="of TAO emissions flow to one team" sublabel="Rayon Labs: Chutes + Gradients + Nineteen" />
+
+This is a centralisation concern worth naming. Bittensor's thesis is Darwinian competition among independent teams. When one operator captures a quarter of emissions across three subnets, the "decentralised AI" framing needs honest qualification. Rayon Labs earns those emissions by building products people use. That is the system working as designed. But it is also concentration risk.
+
+## Subnet by subnet
+
+### Chutes (SN64): the revenue machine
+
+Chutes is the subnet everyone points to when they say Bittensor has real revenue. It is a serverless inference platform where developers deploy AI models without managing infrastructure.
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3 my-6">
+  <MetricCard value="14.39%" label="Emission share (#1)" />
+  <MetricCard value="18" label="Models on OpenRouter" />
+  <MetricCard value="200+" label="Models on chutes.ai" />
+  <MetricCard value="$3-20/mo" label="Subscription tiers" />
+</div>
+
+The numbers tell a growth story. Rayon Labs reports 160 billion tokens processed per day and 9.1 trillion tokens cumulative across 400,000 users. These are self-reported figures. But the OpenRouter integration provides independent verification of real volume: Chutes is listed as a [provider on OpenRouter](https://openrouter.ai/provider/chutes) with 18 models and visible daily throughput data showing billions of tokens processed.
+
+The revenue model is real. Developers pay $3-20/month for platform access, or use the API with per-token pricing (from $0.22/M tokens for Mistral). Revenue auto-stakes into the alpha token, creating a flywheel where usage drives token demand. This is not just emission farming. It is a functioning business.
+
+Chutes was the first Bittensor subnet to reach $100 million market cap. GitHub activity is substantial: 1,077 commits on the chutes-api repository.
+
+The honest caveat: the growth from 5-6 billion tokens/day (reported in early 2026) to 160 billion/day (reported March 2026) is extraordinary. A 30x increase in roughly two months. That trajectory needs watching to confirm it sustains rather than representing a temporary spike.
+
+### Gradients (SN56): training for everyone
+
+Gradients makes AI model fine-tuning accessible without code. Upload your data, pick a base model, click train. The platform handles everything: text and image model training, RLHF, alignment tuning. Currently on version 5.0.
+
+The cost advantage is the pitch. Multiple sources report training costs of $100-500 on Gradients versus $10,000+ on Google Vertex. Rayon Labs published a comparison showing Gradients v3 at $5/hour versus AWS at $67.50/hour and Google at $19.25/hour. These comparisons are self-reported and the exact workloads may differ, but the directional cost savings are consistent with other decentralised compute pricing we have seen on [Akash](/projects/akash/) and [Render](/projects/render/).
+
+Gradients captures 6.66% of TAO emissions (rank #3). The product is live at gradients.io with community-trained models visible on the platform. Subnet-specific code is not publicly available on GitHub, which limits independent technical verification.
+
+### Nineteen (SN19): speed as a feature
+
+Nineteen is Rayon Labs' inference subnet focused on ultra-low latency. Multiple sources describe it as holding a "world record for fastest LLM inference." The product is live at nineteen.ai for text and image generation.
+
+At 2.71% of emissions (rank #9), Nineteen is the smallest of the Rayon Labs trio. It serves a different market from Chutes: where Chutes optimises for scale and serverless deployment, Nineteen optimises for speed on latency-sensitive workloads.
+
+### Templar (SN3): decentralised training breakthrough
+
+Templar completed Covenant-72B on 10 March 2026: a 72 billion parameter model pre-trained on 1.1 trillion tokens across 70+ nodes using commodity internet connections. No centralised cluster. No whitelist. Anyone with GPUs could join or leave freely.
+
+<StatCallout value="72B" label="Parameters trained on decentralised infrastructure" sublabel="Covenant-72B: outperformed LLaMA-2-70B on MMLU (67.1 vs 65.6)" />
+
+This is genuinely significant. The technical innovation is SparseLoCo, a compression technique that combines top-k sparsification with 2-bit quantisation and error feedback to reduce communication overhead by 146x. Without this, the bandwidth requirements would make decentralised training over home internet connections impractical. The results are published on [arXiv](https://arxiv.org/html/2603.08163).
+
+Templar captures 5.62% of emissions (rank #5). But there is an important caveat: the subnet is currently in a 100% burn period with zero emissions being distributed while it transitions to a new competition format called "Templar: Crusades." Miners are not being evaluated. This is a development pause, not a failure, but anyone staking into SN3 right now is earning nothing.
+
+### Sportsensor (SN41): prediction meets Polymarket
+
+Sportsensor runs a decentralised sports prediction network. Miners compete to build the best models for predicting outcomes across NFL, NBA, MLB, NHL, EPL, and MLS. The meta-model aggregates the best predictions and trades them on Polymarket through proxy wallets.
+
+The revenue model is direct: Almanac (the front-end) charges a 1% fee on winning trades. Revenue buys back the SN41 token. This is a real, verifiable revenue loop tied to Polymarket trading.
+
+ContangoDigital, a VC investing in DeAI, leads the team and also operates @AskBillyBets, a public-facing prediction agent powered by Sportsensor intelligence. The Polymarket integration is confirmed in the [GitHub source code](https://github.com/sportstensor/sn41).
+
+The concern: both sportsensor.io and sportsensor.ai domains are currently dead. For a product claiming real traction, having no live website is a red flag. GitHub engagement is low (4 stars, 116 commits). The 427% NBA trading profit cited by 0xJeff comes from Sportsensor's own trading report and could not be independently verified.
+
+### Score (SN44): computer vision for sports
+
+Score takes a different approach to sports AI. Rather than predicting outcomes from data, Score uses decentralised computer vision to annotate football (soccer) video footage. Miners compete to annotate game footage accurately and quickly. The annotated data feeds into player scoring models.
+
+The headline partnership: DKING (now rebranded to SIRE) secured a $300 million AUM deployment from a leading sports-betting hedge fund. This was [announced publicly](https://x.com/webuildscore/status/1932744735866655125) at the Proof of Talk event and [covered by crypto media](https://coinfomania.com/dking-secures-300m-aum-deployment-in-strategic-partnership-with-leading-sports-betting-hedge-fund-to-launch-ai-driven-defi-strategies-for-the-2025-2026-season/). The meta-model was designed with ex-FIFA data scientists. SN44 averages roughly 70% prediction accuracy.
+
+The caveat: dking.bot has an expired SSL certificate, which is not a great look for a product managing $300M in strategies. The partnership announcement is verifiable but the ongoing performance is not transparent.
+
+### Zeus (SN18): weather forecasting
+
+Zeus is a weather forecasting subnet using ERA5 reanalysis data from the Copernicus Climate Data Store. Miners compete to produce more accurate forecasts than traditional baselines. The product is live at zeussubnet.com with active development (v1.5.6, 97 commits).
+
+0xJeff mentions the commodity trading application: hedge funds would pay for weather intelligence that helps forecast commodity prices. The subnet's own website does not make this claim directly. The weather forecasting product is real. The commodity trading revenue opportunity is plausible but unsubstantiated.
+
+### Metanova Labs (SN68): drug discovery
+
+Metanova runs a decentralised drug screening platform. Miners submit molecular candidates from the SAVI 2020 library (1.75 billion synthesisable compounds). Validators evaluate binding affinity using PSICHIC, a GNN-based oracle. A recent combinatorial update enables generation of billions of additional synthesisable molecules.
+
+This is one of the most intellectually interesting subnets. The model turns drug discovery from a centralised, decade-long, billion-dollar process into a decentralised competition where participants screen compounds for therapeutic potential. Wet lab testing is described as "imminent" by [Bittensor.ai](https://www.bittensor.ai/learning-hub/sn68-metanova-labs).
+
+GitHub activity is strong (451 commits, updated March 13 2026). The DeSci use case is genuine. The risk is the gap between virtual screening and actual drug candidates. Computer models identify promising molecules. Chemistry determines if they work.
+
+## The application layer: CreatorBid and Bitstarter
+
+Two platforms are building infrastructure around subnets rather than running them directly.
+
+**CreatorBid** is positioning itself as the distribution network for Bittensor. It functions like Virtuals Protocol but for the TAO ecosystem: an agent launchpad where teams build products on top of subnet intelligence. Notable agents include $AION (prediction vaults using SN6), $SIRE/DKING (sports via SN44), $SHOGUN (InfoFi), and $TAOLOR (research copilot). The TAO Council initiative provides integration, partnership, and incubation support for subnet teams. CreatorBid is launching v2 with Trade Compass (winner of the Endgame Hackathon) as the first project.
+
+**Bitstarter** is a fundraising platform for subnets. It enables subnet owners to sell future emissions or OTC alpha tokens at a discount to raise operating capital. Recent raises include Quasar (SN24, 400 TAO for long-context LLM), Djinn (600 TAO for market intelligence), and Handshake58 (220 TAO for AI payment infrastructure). The model offers tiered discounts: Quasar gave 25% discount with 3-month lock or 40% discount with 6-month lock. Half the TAO raised goes to buyback to maintain alpha token price. Bitstarter's team is anonymous, which is a risk factor.
+
+## How to evaluate a subnet
+
+Not all subnets are equal. Here is a practical framework for assessment:
+
+<ComparisonTable
+  title="Subnet evaluation framework"
+  headers={["Signal", "Strong", "Weak"]}
+  rows={[
+    { label: "Revenue", values: ["External customers paying for the product", "Revenue only from TAO emissions"] },
+    { label: "Product", values: ["Live product users can access today", "Testnet, coming soon, or whitepaper only"] },
+    { label: "Verification", values: ["Usage data on independent platforms (OpenRouter, Polymarket)", "Self-reported metrics with no external validation"] },
+    { label: "Team", values: ["Public identity, track record, active GitHub", "Anonymous, minimal commits, forked code"] },
+    { label: "Emission dependency", values: ["Revenue exceeds or approaches emission value", "100% dependent on emissions for survival"] },
+    { label: "Website", values: ["Live, maintained, accurate", "Dead domains, expired certs, placeholder pages"] },
+  ]}
+/>
+
+Apply this framework honestly and most of the 129 subnets fall into the "weak" column on multiple signals. The handful that score "strong" across the board are where the genuine opportunity sits.
+
+## The risk framework
+
+0xJeff's DeAI Matrix is the most useful risk classification:
+
+<ComparisonTable
+  title="Subnet risk tiers (adapted from 0xJeff)"
+  headers={["Tier", "Category", "Examples", "Characteristics"]}
+  rows={[
+    { label: "Cash Cows", values: ["Decentralised compute", "Chutes, Celium", "Proven revenue, established market, slower growth"] },
+    { label: "Stars", values: ["Decentralised inference", "Nineteen, Targon", "Growing revenue, growing market, high potential"] },
+    { label: "Question Marks", values: ["Everything else", "Prediction, DeSci, agents, security", "Early stage, unproven, high risk/high reward"] },
+  ]}
+/>
+
+The cash cows (decentralised compute and inference) generate 8-9 figure annualised revenue according to 0xJeff. These are self-reported aggregate figures and should be treated as directional rather than precise. But the pattern is clear: compute and inference have product-market fit. Everything else is still proving itself.
+
+## The honest assessment
+
+Bittensor's subnet model is the most interesting coordination mechanism in DeAI. It creates real incentives for teams to build AI products, compete on quality, and find customers. The Darwinian pressure is genuine: subnets that do not produce value lose emissions and eventually get deregistered.
+
+Chutes is the standout. A serverless inference platform processing billions of tokens daily through OpenRouter, with paid subscription tiers and a functioning revenue model. It is the strongest evidence that the subnet model can produce real businesses, not just emission-farming operations.
+
+But the concentration is concerning. One team (Rayon Labs) captures nearly a quarter of emissions. Several subnets with prominent claims have dead websites. Self-reported metrics are pervasive and independent verification is difficult. The 72.5% Root staking ratio suggests most TAO holders are not actively participating in the subnet economy that is supposed to be the network's core value proposition.
+
+The subnets worth watching are the ones where revenue comes from external customers, not just from TAO emissions recycling through the system. Chutes has this with OpenRouter. Sportsensor has it with Polymarket (if the product survives). Score has it with the DKING hedge fund partnership (if the performance materialises). Metanova could have it if wet lab results validate the computational screening.
+
+For a [Bittensor](/projects/bittensor/) holder, the subnet layer is where the fundamental value either materialises or does not. TAO is the bet on the ecosystem. Subnets are where you find out if the bet is paying off.
