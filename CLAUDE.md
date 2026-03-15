@@ -100,6 +100,7 @@ Every quantitative claim in editorial content must follow these rules. They exis
 6. **Scepticism scales with narrative alignment.** Apply extra scrutiny to data that conveniently proves the article's point. If a number seems too good, it probably is.
 7. **Price/rate data must be fetched from primary sources at publication.** Never use cached/training knowledge for API pricing, token costs, staking yields, or exchange rates. Always WebFetch the provider's own pricing page directly — not web search snippets. Prices change frequently (e.g. Opus 4.6 cut pricing 67% from Opus 4.0).
 8. **Audits must check accuracy, not just attribution.** A properly attributed claim can still be wrong if the underlying data has changed. When auditing, verify that facts are current, not just that sources are cited.
+9. **Verify every claim you introduce or change.** When updating content, do not introduce new factual claims (model names, benchmark results, capability comparisons) without verifying them against primary sources first. Changing "90% of Claude Opus 4" to "90% of GPT-5.4" is a new claim that requires its own verification, not a safe substitution. Every edit that changes a factual assertion must be verified before committing.
 
 **Previous failures (March 2026):**
 - x402 article cited self-reported $24M volume as fact. Independent analysis: $3M on-chain (Allium), $1.6M after wash filter (Artemis). A 15x inflation from a single self-reported source.
