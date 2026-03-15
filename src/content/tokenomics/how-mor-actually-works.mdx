@@ -7,6 +7,17 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsHowMorWorks.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+  <MetricCard value="42M" label="Max supply" />
+  <MetricCard value="14,400" label="Daily emission (Yr 1)" />
+  <MetricCard value="6,500+" label="Capital providers" />
+  <MetricCard value="0%" label="Insider allocation" />
+</div>
+
 ## The basics
 
 MOR is the native token of the Morpheus network. It is distributed daily to four groups: compute providers, code contributors, capital providers and community builders. There was no pre-mine, no ICO and no VC allocation. Every MOR in existence was earned through direct contribution to the network.
@@ -17,13 +28,25 @@ This is the single most important thing about MOR's tokenomics. In a space litte
 
 Total supply follows a declining emission curve. Year one: approximately 14,400 MOR emitted daily, split across five buckets.
 
-| Recipient | Share | Daily MOR (Year 1) |
-|-----------|-------|---------------------|
-| Compute providers | 24% | ~3,456 |
-| Code contributors | 24% | ~3,456 |
-| Capital providers | 24% | ~3,456 |
-| Community builders | 24% | ~3,456 |
-| Protection fund | 4% | ~576 |
+<AllocationBar allocations={[
+  { category: "Compute Providers", percentage: 24 },
+  { category: "Code Contributors", percentage: 24 },
+  { category: "Capital Providers", percentage: 24 },
+  { category: "Community Builders", percentage: 24 },
+  { category: "Protection Fund", percentage: 4 },
+]} />
+
+<ComparisonTable
+  title="Daily MOR Emission (Year 1)"
+  headers={["Recipient", "Daily MOR"]}
+  rows={[
+    { label: "Compute Providers", values: ["~3,456"] },
+    { label: "Code Contributors", values: ["~3,456"] },
+    { label: "Capital Providers", values: ["~3,456"] },
+    { label: "Community Builders", values: ["~3,456"] },
+    { label: "Protection Fund", values: ["~576"] },
+  ]}
+/>
 
 Emissions decline following a curve that roughly halves every four years. This mirrors Bitcoin's halving model but uses a smoother decay function rather than discrete halving events. The practical effect is the same: early participants earn disproportionately more per unit of contribution.
 
@@ -72,15 +95,19 @@ The Power Factor equals the dilution you would experience during your lock perio
 
 In practice, the multipliers look roughly like this:
 
-| Lock Duration | Approximate Multiplier |
-|---------------|----------------------|
-| < 6 months | ~1.0x (no meaningful boost) |
-| 1 year | ~2.0x |
-| 2 years | ~4.0x |
-| 3 years | ~5.8x |
-| 4 years | ~7.4x |
-| 5 years | ~9.4x |
-| 6 years (max) | ~10.7x |
+<ComparisonTable
+  title="Power Factor Multipliers"
+  headers={["Lock Duration", "Approximate Multiplier"]}
+  rows={[
+    { label: "< 6 months", values: ["~1.0x (no meaningful boost)"] },
+    { label: "1 year", values: ["~2.0x"] },
+    { label: "2 years", values: ["~4.0x"] },
+    { label: "3 years", values: ["~5.8x"] },
+    { label: "4 years", values: ["~7.4x"] },
+    { label: "5 years", values: ["~9.4x"] },
+    { label: "6 years (max)", values: ["~10.7x"] },
+  ]}
+/>
 
 The curve is steepest in the early years because that is when emissions are highest and dilution is fastest. A 6-year lock at ~10.7x is significant – you are earning roughly eleven times the MOR per unit of staked capital compared to someone who does not lock at all.
 

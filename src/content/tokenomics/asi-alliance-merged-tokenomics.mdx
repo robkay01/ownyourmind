@@ -7,6 +7,17 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAsiAlliance.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose mb-8">
+  <MetricCard label="Total Supply" value="2.71B FET" />
+  <MetricCard label="Circulating" value="~2,260M" />
+  <MetricCard label="Price" value="~$0.145" />
+  <MetricCard label="From ATH" value="-96%" change={-96} changeLabel="from $3.45" />
+</div>
+
 ## What happened
 
 In March 2024, Fetch.ai, SingularityNET and Ocean Protocol announced they would merge into the Artificial Superintelligence Alliance. The pitch: combine three complementary AI projects -- agents (Fetch), AI marketplace (SingularityNET), and data (Ocean) -- under one token and one governance structure.
@@ -21,39 +32,45 @@ I do not hold FET. The governance breakdown that caused a founding member to lea
 
 All tokens consolidated under the **FET ticker** (not renamed to ASI on exchanges, despite the alliance name):
 
-| Original token | Conversion ratio |
-|---|---|
-| FET | 1:1 (base token) |
-| AGIX | 1 AGIX = 0.433350 FET |
-| OCEAN | 1 OCEAN = 0.433226 FET |
-| CUDOS | 118.344 CUDOS = 1 FET (5% fee, 3-10 month vesting) |
+<ComparisonTable
+  headers={["Original token", "Conversion ratio"]}
+  rows={[
+    { label: "FET", values: ["1:1 (base token)"] },
+    { label: "AGIX", values: ["1 AGIX = 0.433350 FET"] },
+    { label: "OCEAN", values: ["1 OCEAN = 0.433226 FET"] },
+    { label: "CUDOS", values: ["118.344 CUDOS = 1 FET (5% fee, 3-10 month vesting)"] },
+  ]}
+/>
 
 Migration is not 100% complete. OCEAN and AGIX still trade independently -- OCEAN has approximately 200 million tokens circulating ($23.6M market cap), AGIX has approximately 250 million ($16.2M market cap). No public deadline for conversion has been documented. Given Ocean's withdrawal, the status of remaining OCEAN-to-FET conversion is practically uncertain.
 
 ## The merged supply
 
-| Metric | Value |
-|---|---|
-| Total supply | 2,714,384,547 FET (hard cap) |
-| Circulating | ~2,260M FET (83.3%) |
-| Price | ~$0.145 |
-| Market cap | ~$328M |
-| All-time high | $3.45 (March 2024, merger announcement) |
-| Current vs ATH | Down 96% |
+<ComparisonTable
+  headers={["Metric", "Value"]}
+  rows={[
+    { label: "Total supply", values: ["2,714,384,547 FET (hard cap)"] },
+    { label: "Circulating", values: ["~2,260M FET (83.3%)"] },
+    { label: "Price", values: ["~$0.145"] },
+    { label: "Market cap", values: ["~$328M"] },
+    { label: "All-time high", values: ["$3.45 (March 2024, merger announcement)"] },
+    { label: "Current vs ATH", values: ["Down 96%"] },
+  ]}
+/>
 
 The distribution of merged supply:
 
-| Allocation | Share |
-|---|---|
-| AGIX migration (SingularityNET holders) | 32.95% |
-| OCEAN migration (Ocean holders) | 23.22% |
-| Founders | 8.77% (cliff vesting to 2050) |
-| Foundation (co-founded with Bosch) | 8.77% |
-| Future releases | 7.63% (reserved, schedule to 2050) |
-| Mining/staking rewards | 6.57% |
-| Private sale | 5.08% (fully unlocked) |
-| Advisors | 4.38% (cliff vesting) |
-| Public sale (Binance Launchpad IEO) | 2.49% |
+<AllocationBar allocations={[
+  { category: "AGIX migration", percentage: 32.95 },
+  { category: "OCEAN migration", percentage: 23.22 },
+  { category: "Founders", percentage: 8.77 },
+  { category: "Foundation", percentage: 8.77 },
+  { category: "Future releases", percentage: 7.63 },
+  { category: "Mining/staking", percentage: 6.57 },
+  { category: "Private sale", percentage: 5.08 },
+  { category: "Advisors", percentage: 4.38 },
+  { category: "Public sale", percentage: 2.49 },
+]} />
 
 The AGIX and OCEAN allocations (56.17% combined) represent community token swaps, not new insider supply. But approximately 600 million FET was minted to absorb OCEAN holders, which diluted original FET holders.
 
