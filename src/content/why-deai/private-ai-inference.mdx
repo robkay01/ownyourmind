@@ -7,6 +7,7 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiPrivateAiInference.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
 
 ## What "private" actually means
 
@@ -96,16 +97,20 @@ The tradeoffs are real: you are limited to open-weight models (no Claude, no GPT
 
 ## Where each project sits
 
-| Project | Level | Privacy type | What the provider sees |
-|---------|-------|-------------|----------------------|
-| OpenAI / Anthropic (default) | 0 | None | Everything: identity + prompt + stored |
-| Venice | 1 | Policy (ZDR) | Prompt content, not identity. Not stored by policy. |
-| Morpheus (current) | 1→2 | Policy + P2P encryption (TEE in dev) | Prompt content during inference. TEE integration shipping — proxy-router attested, LLM attestation next. |
-| Phala Network | 2 | TEE (hardware) | Nothing — hardware enclave prevents access |
-| Oasis (ROFL) | 2 | TEE (hardware) | Nothing during computation |
-| Arcium | 3 | MPC+FHE+ZKP | Fragments only — no party sees complete data |
-| Nillion | 3 | MPC + secret sharing | Fragments only |
-| Local (Ollama, llama.cpp) | 4 | Physical isolation | No provider exists |
+<ComparisonTable
+  title="Where each project sits on the privacy spectrum"
+  headers={["Project", "Level", "Privacy type", "What the provider sees"]}
+  rows={[
+    { label: "OpenAI / Anthropic", values: ["0", "None", "Everything: identity + prompt + stored"] },
+    { label: "Venice", values: ["1", "Policy (ZDR)", "Prompt content, not identity. Not stored by policy."] },
+    { label: "Morpheus (current)", values: ["1→2", "Policy + P2P (TEE in dev)", "Prompt during inference. TEE shipping."] },
+    { label: "Phala Network", values: ["2", "TEE (hardware)", "Nothing — hardware enclave prevents access"] },
+    { label: "Oasis (ROFL)", values: ["2", "TEE (hardware)", "Nothing during computation"] },
+    { label: "Arcium", values: ["3", "MPC+FHE+ZKP", "Fragments only — no party sees complete data"] },
+    { label: "Nillion", values: ["3", "MPC + secret sharing", "Fragments only"] },
+    { label: "Local (Ollama, llama.cpp)", values: ["4", "Physical isolation", "No provider exists"] },
+  ]}
+/>
 
 ## The honest assessment of Venice
 

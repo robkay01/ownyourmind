@@ -6,6 +6,16 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAktBme.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import VerificationFunnel from '../../components/VerificationFunnel.astro';
+
+<div class="grid grid-cols-3 gap-3 mb-8">
+  <MetricCard value="$3.15M" label="Annual revenue (on-chain)" />
+  <MetricCard value="~2.1M" label="AKT monthly burn (projected)" />
+  <MetricCard value="5.2%" label="Effective inflation (projected)" />
+</div>
+
 ## What is happening
 
 On 23 March 2026 at 14:00 UTC, Akash Network activates AEP-76: Burn-Mint Equilibrium. The on-chain governance vote runs 7–14 March. If it passes (and every indication is that it will — major validators including Polkachu have already voted yes), mainnet upgrades to v2.0.0 with BME and WASM smart contract support.
@@ -59,6 +69,16 @@ Provider completes the work. Settlement happens when AKT is $1.50:
 - **666.67 AKT reminted** to the provider
 - **Net burn: 210.53 AKT** (~$240 worth permanently removed from supply)
 
+<VerificationFunnel
+  title="BME worked example: $1,000 compute at AKT $1.14→$1.50"
+  steps={[
+    { label: "AKT burned (tenant)", value: "877.19", source: "Mint phase at $1.14", width: 100 },
+    { label: "ACT minted", value: "1,000", source: "Compute credit (USD-pegged)", width: 100 },
+    { label: "AKT reminted (provider)", value: "666.67", source: "Settlement at $1.50", width: 76 },
+    { label: "Net burn", value: "210.53 AKT", source: "Permanently removed", width: 24 },
+  ]}
+/>
+
 In a rising market, BME is deflationary. In a falling market, it is inflationary. In a flat market, it is roughly neutral. The mechanism amplifies the directional trend.
 
 ### The safety infrastructure
@@ -110,16 +130,20 @@ The 25bps spread on the mint side means approximately $0.85 of every $1 spent bu
 
 Both Akash and Render use burn-mint equilibrium, but the implementations are fundamentally different. I covered this in [RENDER vs AKT vs IO: The Revenue Question](/tokenomics/render-vs-akash-vs-ionet/), but the BME specifics are worth comparing directly.
 
-| | Akash (AEP-76) | Render (RNP-001/006) |
-|---|---|---|
-| **Burn trigger** | Tenant top-up burns AKT to mint ACT | Job completion burns RENDER paid by creators |
-| **Provider payment** | Reminted AKT at settlement TWAP | Separate emission pool (fixed declining schedule) |
-| **Intermediate token** | ACT (soulbound, USD-pegged) | None — RENDER burned directly |
-| **Deflationary when** | AKT appreciates between mint and settle | Burns exceed fixed emission rate |
-| **Safety mechanism** | BME vault + circuit breakers at CR 0.90/0.95 | No equivalent vault described |
-| **Fee structure** | 25bps mint spread | 5% service fee |
-| **Supply cap** | No cap (inflation + BME) | 644M hard cap |
-| **Current gap to deflation** | Inflation drops from 8% to ~5.2% (Akash projection) | Emissions outpace burns ~8x |
+<ComparisonTable
+  title="Akash vs Render BME comparison"
+  headers={["", "Akash (AEP-76)", "Render (RNP-001/006)"]}
+  rows={[
+    { label: "Burn trigger", values: ["Tenant top-up burns AKT to mint ACT", "Job completion burns RENDER paid by creators"] },
+    { label: "Provider payment", values: ["Reminted AKT at settlement TWAP", "Separate emission pool (fixed declining schedule)"] },
+    { label: "Intermediate token", values: ["ACT (soulbound, USD-pegged)", "None — RENDER burned directly"] },
+    { label: "Deflationary when", values: ["AKT appreciates between mint and settle", "Burns exceed fixed emission rate"] },
+    { label: "Safety mechanism", values: ["BME vault + circuit breakers at CR 0.90/0.95", "No equivalent vault described"] },
+    { label: "Fee structure", values: ["25bps mint spread", "5% service fee"] },
+    { label: "Supply cap", values: ["No cap (inflation + BME)", "644M hard cap"] },
+    { label: "Current gap to deflation", values: ["Inflation drops from 8% to ~5.2% (Akash projection)", "Emissions outpace burns ~8x"] },
+  ]}
+/>
 
 The key conceptual difference: **Render decouples payment from reward.** When a creator burns RENDER, providers are paid from a separate fixed emission schedule proportional to work done. The burn and the provider payment are independent flows.
 

@@ -52,7 +52,7 @@ const projects = defineCollection({
 });
 
 const tokenomics = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/tokenomics' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/tokenomics' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),

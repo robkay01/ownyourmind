@@ -7,6 +7,15 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsRenderVsAkashVsIonet.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+
+<div class="grid grid-cols-3 gap-3 mb-8">
+  <MetricCard value="696x" label="RENDER P/Revenue" />
+  <MetricCard value="32x" label="AKT P/Revenue" />
+  <MetricCard value="~2x" label="IO P/Revenue (self-reported)" />
+</div>
+
 ## Why revenue is the question that matters
 
 Most DeAI tokens have no revenue. Their value comes entirely from emissions – participants earn tokens funded by inflation, trade them for dollars, and the system works until it does not. The few projects that have figured out how to generate real revenue from real customers are worth studying closely, because revenue is what separates infrastructure from speculation.
@@ -15,18 +24,22 @@ Render, Akash and io.net are the three largest decentralised compute networks by
 
 ## The three models at a glance
 
-| | RENDER | AKT (Akash) | IO (io.net) |
-|---|---|---|---|
-| **Market cap** | $696M | $100M | ~$34M |
-| **Revenue model** | Burn-Mint Equilibrium (BME) | Take fee on deployment spend | Incentive Dynamic Engine (IDE) |
-| **2025 revenue** | ~$1M (burn-derived) | $3.15M (on-chain verified) | $20M+ annualised from Q1 2025 figures (self-reported) |
-| **Revenue verifiable?** | Partially (burns on-chain, USD revenue not disclosed) | Yes (Cosmos transactions, Messari reports) | Partially (Messari quarterly reports, but core figures self-reported) |
-| **P/Revenue** | ~696x | ~32x | ~1.9x |
-| **Supply cap** | 644M (hard) | No cap (8% inflation) | 800M (hard) |
-| **Network model** | Permissioned | Permissionless | Permissionless portal |
-| **Core software** | Proprietary (OTOY) | Open source (Apache 2.0) | Partially open |
-| **Freedom score** | 32/100 (F) | 66/100 (C) | 38/100 (F) |
-| **Returns score** | 72/100 (B) | 62/100 (C) | 54/100 (D) |
+<ComparisonTable
+  title="The three models at a glance"
+  headers={["", "RENDER", "AKT (Akash)", "IO (io.net)"]}
+  rows={[
+    { label: "Market cap", values: ["$696M", "$100M", "~$34M"] },
+    { label: "Revenue model", values: ["Burn-Mint Equilibrium (BME)", "Take fee on deployment spend", "Incentive Dynamic Engine (IDE)"] },
+    { label: "2025 revenue", values: ["~$1M (burn-derived)", "$3.15M (on-chain verified)", "$20M+ annualised from Q1 2025 figures (self-reported)"] },
+    { label: "Revenue verifiable?", values: ["Partially (burns on-chain, USD revenue not disclosed)", "Yes (Cosmos transactions, Messari reports)", "Partially (Messari quarterly reports, but core figures self-reported)"] },
+    { label: "P/Revenue", values: ["~696x", "~32x", "~1.9x"] },
+    { label: "Supply cap", values: ["644M (hard)", "No cap (8% inflation)", "800M (hard)"] },
+    { label: "Network model", values: ["Permissioned", "Permissionless", "Permissionless portal"] },
+    { label: "Core software", values: ["Proprietary (OTOY)", "Open source (Apache 2.0)", "Partially open"] },
+    { label: "Freedom score", values: ["32/100 (F)", "66/100 (C)", "38/100 (F)"] },
+    { label: "Returns score", values: ["72/100 (B)", "62/100 (C)", "54/100 (D)"] },
+  ]}
+/>
 
 ## Render: centralisation as a product strategy
 
@@ -76,13 +89,17 @@ io.net launched in June 2024 and is down 98% from its all-time high. The token s
 
 Strip away the marketing and look at what each token actually does with revenue:
 
-| Mechanism | RENDER | AKT | IO |
-|-----------|--------|-----|-----|
-| **Does revenue burn tokens?** | Yes – 95% of job spend burned | Not yet (BME approved, not active) | Claimed – 50%+ of post-supplier revenue |
-| **Does revenue flow to holders?** | Not to holders – no holder staking or fee distribution. Operators earn job-based rewards since RNP-019 (May 2025), tied to availability and completed work | Partially – staking yields include small fee component | Not clearly documented |
-| **Is revenue verifiable?** | Partially – burns on-chain, USD not disclosed | Yes – fully on-chain | Partially – Messari reports, but core figures self-reported |
-| **Is the system deflationary?** | Not yet (8x gap) | Not yet (inflationary by design) | Unknown |
-| **Revenue growth rate** | +279% YoY burns (Render Foundation) | +128% YoY spend | N/A (too new) |
+<ComparisonTable
+  title="Revenue mechanism comparison"
+  headers={["Mechanism", "RENDER", "AKT", "IO"]}
+  rows={[
+    { label: "Does revenue burn tokens?", values: ["Yes – 95% of job spend burned", "Not yet (BME approved, not active)", "Claimed – 50%+ of post-supplier revenue"] },
+    { label: "Does revenue flow to holders?", values: ["Not to holders – no holder staking or fee distribution. Operators earn job-based rewards since RNP-019 (May 2025), tied to availability and completed work", "Partially – staking yields include small fee component", "Not clearly documented"] },
+    { label: "Is revenue verifiable?", values: ["Partially – burns on-chain, USD not disclosed", "Yes – fully on-chain", "Partially – Messari reports, but core figures self-reported"] },
+    { label: "Is the system deflationary?", values: ["Not yet (8x gap)", "Not yet (inflationary by design)", "Unknown"] },
+    { label: "Revenue growth rate", values: ["+279% YoY burns (Render Foundation)", "+128% YoY spend", "N/A (too new)"] },
+  ]}
+/>
 
 Render has the best-designed value capture mechanism (BME). Akash has the most trustworthy revenue data. io.net has the strongest revenue growth claim, but the verification gap keeps it discounted.
 
