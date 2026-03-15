@@ -10,6 +10,7 @@ podcastUrl: "/podcast/Own-Your-Mind--TokenomicsBittensorHalving.mp3"
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import AllocationBar from '../../components/AllocationBar.astro';
+import DonutChart from '../../components/DonutChart.astro';
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose my-6">
   <MetricCard label="Halving Date" value="14 Dec 2025" />
@@ -101,11 +102,13 @@ Current staking statistics from taostats.io:
       { label: "Total accounts", values: ["~447,000"] },
     ]}
   />
-  <AllocationBar
-    allocations={[
-      { category: "Root (SN0)", percentage: 72 },
-      { category: "Subnet (Alpha)", percentage: 28 },
+  <DonutChart
+    segments={[
+      { label: "Root (SN0)", value: 72, color: "var(--color-accent)" },
+      { label: "Subnet (Alpha)", value: 28, color: "var(--color-chart-3)" },
     ]}
+    centerLabel="7.3M"
+    centerSubLabel="TAO staked"
   />
 </div>
 

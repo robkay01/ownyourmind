@@ -1,0 +1,58 @@
+---
+interface Bar {
+  label: string;
+  value: number;
+  displayValue?: string;
+  color?: string;
+}
+
+interface Props {
+  title?: string;
+  bars: Bar[];
+  maxValue?: number;
+  unit?: string;
+}
+
+const { title, bars, maxValue, unit = '' } = Astro.props;
+
+const chartColors = [
+  'var(--color-accent)',
+  'var(--color-chart-2)',
+  'var(--color-chart-3)',
+  'var(--color-chart-4)',
+  'var(--color-chart-5)',
+  'var(--color-chart-6)',
+  'var(--color-chart-7)',
+];
+
+const max = maxValue ?? Math.max(...bars.map((b) => b.value));
+---
+
+<div class="chart-container" aria-label={title || 'Bar chart'}>
+  {title && (
+    <h3 class="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-4">{title}</h3>
+  )}
+
+  <div class="space-y-3">
+    {bars.map((bar, i) => {
+      const width = max > 0 ? (bar.value / max) * 100 : 0;
+      const color = bar.color || chartColors[i % chartColors.length];
+      return (
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="text-sm text-[var(--color-text-secondary)]">{bar.label}</span>
+            <span class="text-sm font-mono font-semibold text-[var(--color-text-primary)]">
+              {bar.displayValue ?? `${bar.value}${unit}`}
+            </span>
+          </div>
+          <div class="h-6 rounded bg-[var(--color-bg-primary)] overflow-hidden">
+            <div
+              class="h-full rounded transition-all"
+              style={`width: ${Math.max(width, 1)}%; background-color: ${color};`}
+            />
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

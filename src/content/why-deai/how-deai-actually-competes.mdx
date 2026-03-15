@@ -10,6 +10,7 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiHowDeaiCompetes.mp3"
 import PullQuote from '../../components/PullQuote.astro';
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
+import BarChart from '../../components/BarChart.astro';
 
 DeAI is not going to out-frontier the frontier labs. That's not the play.
 
@@ -45,6 +46,16 @@ The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually t
     { label: "DeepSeek V3", values: ["$0.14", "$0.28", "$0.42"] },
     { label: "OpenAI o1", values: ["$15.00", "$60.00", "$75.00"] },
     { label: "Claude Opus 4", values: ["~$15.00", "~$75.00", "~$90.00"] },
+  ]}
+/>
+
+<BarChart
+  title="Cost per 1M tokens in + 1M out"
+  bars={[
+    { label: "Claude Opus 4", value: 90, displayValue: "~$90.00" },
+    { label: "OpenAI o1", value: 75, displayValue: "$75.00" },
+    { label: "DeepSeek R1", value: 2.74, displayValue: "$2.74" },
+    { label: "DeepSeek V3", value: 0.42, displayValue: "$0.42" },
   ]}
 />
 

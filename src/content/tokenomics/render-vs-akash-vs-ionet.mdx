@@ -9,12 +9,17 @@ podcastUrl: "/podcast/Own-Your-Mind--TokenomicsRenderVsAkashVsIonet.mp3"
 
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
+import BarChart from '../../components/BarChart.astro';
 
-<div class="grid grid-cols-3 gap-3 mb-8">
-  <MetricCard value="696x" label="RENDER P/Revenue" />
-  <MetricCard value="32x" label="AKT P/Revenue" />
-  <MetricCard value="~2x" label="IO P/Revenue (self-reported)" />
-</div>
+<BarChart
+  title="Price-to-Revenue Ratio"
+  bars={[
+    { label: "RENDER", value: 696, displayValue: "696x" },
+    { label: "AKT", value: 32, displayValue: "32x" },
+    { label: "IO (self-reported)", value: 1.9, displayValue: "~2x" },
+  ]}
+  unit="x"
+/>
 
 ## Why revenue is the question that matters
 

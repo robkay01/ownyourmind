@@ -10,6 +10,7 @@ podcastUrl: "/podcast/Own-Your-Mind--TokenomicsHowMorWorks.mp3"
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import AllocationBar from '../../components/AllocationBar.astro';
+import DonutChart from '../../components/DonutChart.astro';
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
   <MetricCard value="42M" label="Max supply" />
@@ -28,13 +29,17 @@ This is the single most important thing about MOR's tokenomics. In a space litte
 
 Total supply follows a declining emission curve. Year one: approximately 14,400 MOR emitted daily, split across five buckets.
 
-<AllocationBar allocations={[
-  { category: "Compute Providers", percentage: 24 },
-  { category: "Code Contributors", percentage: 24 },
-  { category: "Capital Providers", percentage: 24 },
-  { category: "Community Builders", percentage: 24 },
-  { category: "Protection Fund", percentage: 4 },
-]} />
+<DonutChart
+  segments={[
+    { label: "Compute Providers", value: 24, color: "var(--color-accent)" },
+    { label: "Code Contributors", value: 24, color: "var(--color-chart-2)" },
+    { label: "Capital Providers", value: 24, color: "var(--color-chart-3)" },
+    { label: "Community Builders", value: 24, color: "var(--color-chart-4)" },
+    { label: "Protection Fund", value: 4, color: "var(--color-chart-5)" },
+  ]}
+  centerLabel="14,400"
+  centerSubLabel="MOR/day"
+/>
 
 <ComparisonTable
   title="Daily MOR Emission (Year 1)"

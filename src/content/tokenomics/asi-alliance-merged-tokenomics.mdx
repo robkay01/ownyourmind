@@ -10,6 +10,7 @@ podcastUrl: "/podcast/Own-Your-Mind--TokenomicsAsiAlliance.mp3"
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import AllocationBar from '../../components/AllocationBar.astro';
+import DonutChart from '../../components/DonutChart.astro';
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose mb-8">
   <MetricCard label="Total Supply" value="2.71B FET" />
@@ -60,17 +61,22 @@ Migration is not 100% complete. OCEAN and AGIX still trade independently -- OCEA
 
 The distribution of merged supply:
 
-<AllocationBar allocations={[
-  { category: "AGIX migration", percentage: 32.95 },
-  { category: "OCEAN migration", percentage: 23.22 },
-  { category: "Founders", percentage: 8.77 },
-  { category: "Foundation", percentage: 8.77 },
-  { category: "Future releases", percentage: 7.63 },
-  { category: "Mining/staking", percentage: 6.57 },
-  { category: "Private sale", percentage: 5.08 },
-  { category: "Advisors", percentage: 4.38 },
-  { category: "Public sale", percentage: 2.49 },
-]} />
+<DonutChart
+  segments={[
+    { label: "AGIX migration", value: 32.95, color: "var(--color-accent)" },
+    { label: "OCEAN migration", value: 23.22, color: "var(--color-chart-2)" },
+    { label: "Founders", value: 8.77, color: "var(--color-chart-3)" },
+    { label: "Foundation", value: 8.77, color: "var(--color-chart-4)" },
+    { label: "Future releases", value: 7.63, color: "var(--color-chart-5)" },
+    { label: "Mining/staking", value: 6.57, color: "var(--color-chart-6)" },
+    { label: "Private sale", value: 5.08, color: "var(--color-chart-7)" },
+    { label: "Advisors", value: 4.38, color: "#8B5CF6" },
+    { label: "Public sale", value: 2.49, color: "#F97316" },
+  ]}
+  centerLabel="2.71B"
+  centerSubLabel="Total FET"
+  size={220}
+/>
 
 The AGIX and OCEAN allocations (56.17% combined) represent community token swaps, not new insider supply. But approximately 600 million FET was minted to absorb OCEAN holders, which diluted original FET holders.
 
