@@ -8,6 +8,9 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiPrivateAiInference.mp3"
 
 import PullQuote from '../../components/PullQuote.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
+import SpectrumBar from '../../components/SpectrumBar.astro';
+import StatCallout from '../../components/StatCallout.astro';
+import FlowDiagram from '../../components/FlowDiagram.astro';
 
 ## What "private" actually means
 
@@ -20,6 +23,21 @@ These are three different things. All three call themselves private. Only one of
 <PullQuote>Privacy in AI is not binary. It is a spectrum, and most projects are further down that spectrum than their marketing suggests.</PullQuote>
 
 This distinction matters because the use case defines the required level. Asking an AI to write a blog post does not need the same privacy as asking it to analyse your company's financial projections, your medical records, or your legal strategy. Understanding where each platform sits on the spectrum is not academic. It determines what you should and should not trust them with.
+
+<SpectrumBar
+  title="The AI Privacy Spectrum"
+  leftLabel="No privacy"
+  rightLabel="Full isolation"
+  markers={[
+    { position: 0, label: "OpenAI/Anthropic", sublabel: "Level 0" },
+    { position: 25, label: "Venice", sublabel: "Level 1" },
+    { position: 50, label: "Phala/Oasis", sublabel: "Level 2" },
+    { position: 75, label: "Arcium/Nillion", sublabel: "Level 3" },
+    { position: 100, label: "Local", sublabel: "Level 4" },
+  ]}
+  colorFrom="#EF4444"
+  colorTo="#10B981"
+/>
 
 ## The five levels of AI inference privacy
 
@@ -45,6 +63,16 @@ Here is what that means in practice:
 
 To use the construction analogy: it is like sending a confidential document through a courier service that strips your return address from the envelope. The recipient does not know who sent it. But they open the envelope to read the document inside. They promise not to photocopy it. You trust them on that.
 
+<FlowDiagram
+  title="Venice privacy flow (Level 1)"
+  steps={[
+    { label: "Your prompt", icon: "📝" },
+    { label: "Venice proxy", sublabel: "Identity stripped", icon: "🔀" },
+    { label: "GPU provider", sublabel: "Sees prompt, not identity", icon: "⚡" },
+    { label: "Response", sublabel: "Data purged", icon: "✅" },
+  ]}
+/>
+
 <PullQuote>Venice provides anonymisation, not confidentiality. The "who" is hidden. The "what" is exposed to the compute provider. It is "we don't know who asked" rather than "we can't see what was asked."</PullQuote>
 
 This is dramatically better than Level 0. There is no persistent data. There is no identity link. There are no logs to subpoena. For the vast majority of AI use cases (writing, coding, analysis, creative work) Level 1 is sufficient. You do not need military-grade encryption to ask an AI to help with your marketing copy.
@@ -66,6 +94,16 @@ What this means for your prompt:
 - **The GPU provider cannot read your prompt.** The hardware prevents it, even though the data is on their machine.
 - **Attestation proves the enclave is genuine.** You can verify the security properties before sending sensitive data.
 - **Performance overhead is minimal.** Less than 2-5% throughput penalty. Near-native speed for private inference.
+
+<FlowDiagram
+  title="TEE privacy flow (Level 2)"
+  steps={[
+    { label: "Your prompt", icon: "📝" },
+    { label: "TEE enclave", sublabel: "Hardware-encrypted", icon: "🔒" },
+    { label: "GPU processes", sublabel: "Cannot read contents", icon: "⚡" },
+    { label: "Response", sublabel: "Attestation verified", icon: "✅" },
+  ]}
+/>
 
 The tradeoff: you are trusting the hardware vendor (Intel, AMD, NVIDIA) to have implemented the enclave correctly. This trust is not absolute. Intel SGX was compromised in 2022, and Phala had to migrate from SGX to TDX in response. The attack surface is dramatically smaller than Level 1 (you need a hardware zero-day rather than a rogue GPU operator) but it exists.
 
@@ -148,6 +186,8 @@ For that second group, Level 2 (Phala TEE) or Level 4 (local) is the appropriate
 Three developments are worth watching:
 
 **Morpheus TEE integration, actively shipping.** This is not a roadmap item. As of mid-March 2026, the Morpheus team has merged 10+ PRs to the `dev` branch implementing TEE support in partnership with SCRT Labs (Secret Network). The implementation runs on SecretVM, Secret Network's confidential VM platform using Intel TDX.
+
+<StatCallout value="10+ PRs" label="Merged to dev branch in 5 days" sublabel="SCRT Labs partnership, Intel TDX" />
 
 What has shipped (on `dev`, not yet on `main`):
 - TEE-hardened Docker images with cosign keyless signing and SBOM generation

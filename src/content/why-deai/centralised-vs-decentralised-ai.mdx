@@ -7,6 +7,8 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiCentralisedVsDecentralised.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import StatCallout from '../../components/StatCallout.astro';
 
 ## The honest version
 
@@ -30,6 +32,8 @@ I use both daily. Centralised AI for most of my professional work. Decentralised
 
 **Cost.** Decentralised compute marketplaces consistently undercut centralised cloud providers. Akash's marketplace listings show GPU compute at 50-80% below AWS equivalent pricing. For batch inference, training runs and non-latency-sensitive workloads, the economics are compelling.
 
+<StatCallout value="50-80%" label="cheaper GPU compute on decentralised marketplaces" sublabel="Akash marketplace vs AWS equivalent pricing" />
+
 **Censorship resistance.** No terms of service. No content policy. No model refusing your request because a safety team decided your use case was problematic. If you need uncensored inference for legitimate purposes (security research, creative writing, medical queries, legal analysis), decentralised is the only reliable option.
 
 **Privacy.** Your prompts, your data and your outputs stay on infrastructure you control. No corporate data harvesting. No ambiguity about whether your inputs are being used to train the next model version. For sensitive professional work, this is not optional.
@@ -52,16 +56,20 @@ I use both daily. Centralised AI for most of my professional work. Decentralised
 
 The choice between centralised and decentralised is not binary. It is a spectrum, and the right position depends on what you are doing.
 
-|  | Centralised | Decentralised | Local |
-|---|---|---|---|
-| **Best for** | Frontier quality, low latency | Cost, privacy, censorship resistance | Sensitive data, offline, zero ongoing cost |
-| **Model quality** | Best available | Good enough for most tasks | Depends on hardware |
-| **Cost** | Pay per token | 50-80% cheaper | Free after hardware |
-| **Privacy** | Your data on their servers | Better, varies by network | Complete |
-| **Censorship** | Content policies apply | Uncensored | Uncensored |
-| **Reliability** | High (uptime SLAs) | Improving | Depends on your setup |
-| **Latency** | Fast | Higher (network overhead) | Fast (no network) |
-| **Ownership** | Customer | Stakeholder (tokens) | Full |
+<ComparisonTable
+  title="The practical framework"
+  headers={["", "Centralised", "Decentralised", "Local"]}
+  rows={[
+    { label: "Best for", values: ["Frontier quality, low latency", "Cost, privacy, censorship resistance", "Sensitive data, offline, zero ongoing cost"] },
+    { label: "Model quality", values: ["Best available", "Good enough for most tasks", "Depends on hardware"] },
+    { label: "Cost", values: ["Pay per token", "50-80% cheaper", "Free after hardware"] },
+    { label: "Privacy", values: ["Your data on their servers", "Better, varies by network", "Complete"] },
+    { label: "Censorship", values: ["Content policies apply", "Uncensored", "Uncensored"] },
+    { label: "Reliability", values: ["High (uptime SLAs)", "Improving", "Depends on your setup"] },
+    { label: "Latency", values: ["Fast", "Higher (network overhead)", "Fast (no network)"] },
+    { label: "Ownership", values: ["Customer", "Stakeholder (tokens)", "Full"] },
+  ]}
+/>
 
 **Use centralised when:**
 - You need frontier model quality (complex reasoning, long-context analysis)

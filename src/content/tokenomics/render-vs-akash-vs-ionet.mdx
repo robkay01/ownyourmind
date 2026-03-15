@@ -10,6 +10,7 @@ podcastUrl: "/podcast/Own-Your-Mind--TokenomicsRenderVsAkashVsIonet.mp3"
 import MetricCard from '../../components/MetricCard.astro';
 import ComparisonTable from '../../components/ComparisonTable.astro';
 import BarChart from '../../components/BarChart.astro';
+import StatCallout from '../../components/StatCallout.astro';
 
 <BarChart
   title="Price-to-Revenue Ratio"
@@ -91,6 +92,18 @@ io.net launched in June 2024 and is down 98% from its all-time high. The token s
 **The lesson.** Revenue claims without full verifiability carry a discount. Akash's $3.15M of fully on-chain revenue is more valuable as an investment signal than io.net's $20M of self-reported annualised revenue, because you can trace every dollar of one on a block explorer and you cannot do the same for the other.
 
 ## The revenue comparison that matters
+
+<StatCallout value="696x" label="RENDER P/Revenue ratio" sublabel="vs Akash at 32x -- the market pays a 20x premium for brand and liquidity" />
+
+<BarChart
+  title="2025 Revenue Comparison (USD)"
+  bars={[
+    { label: "RENDER", value: 1, displayValue: "~$1M (burn-derived)" },
+    { label: "AKT", value: 3.15, displayValue: "$3.15M (on-chain)" },
+    { label: "IO", value: 20, displayValue: "~$20M (self-reported)" },
+  ]}
+  unit="M"
+/>
 
 Strip away the marketing and look at what each token actually does with revenue:
 

@@ -7,6 +7,12 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiSovereigntyStack.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import SpectrumBar from '../../components/SpectrumBar.astro';
+import StatCallout from '../../components/StatCallout.astro';
+import FlowDiagram from '../../components/FlowDiagram.astro';
+import MetricCard from '../../components/MetricCard.astro';
+import BarChart from '../../components/BarChart.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
 
 AI sovereignty doesn't require becoming a cypherpunk. You can assemble a working sovereignty stack from production-ready DeAI infrastructure today. But the choices involve real tradeoffs between cost, maturity, and decentralisation.
 
@@ -16,24 +22,17 @@ This is what you actually need to run their own AI infrastructure. Not ideology.
 
 True AI sovereignty requires control across five interconnected layers. Each layer offers varying degrees of decentralisation, maturity, and tradeoffs. No single protocol solves all layers. Sovereignty requires composition.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                  COORDINATION LAYER                      │
-│     (Bittensor, Morpheus) - Incentives & Discovery       │
-├─────────────────────────────────────────────────────────┤
-│                   INFERENCE LAYER                        │
-│    (Venice, Phala) - Private Computation & Routing       │
-├─────────────────────────────────────────────────────────┤
-│                    MODEL LAYER                           │
-│   (Llama, Qwen, DeepSeek) - Open Weights & Fine-Tuning   │
-├─────────────────────────────────────────────────────────┤
-│                    DATA LAYER                            │
-│      (Vana, Ocean, Grass) - Training Data & Privacy      │
-├─────────────────────────────────────────────────────────┤
-│                   COMPUTE LAYER                          │
-│      (Akash, Render, io.net) - GPU Infrastructure        │
-└─────────────────────────────────────────────────────────┘
-```
+<FlowDiagram
+  title="The Five-Layer Sovereignty Stack"
+  direction="vertical"
+  steps={[
+    { label: "Coordination", sublabel: "Bittensor, Morpheus" },
+    { label: "Inference", sublabel: "Venice, Phala" },
+    { label: "Model", sublabel: "Llama, Qwen, DeepSeek" },
+    { label: "Data", sublabel: "Vana, Ocean, Grass" },
+    { label: "Compute", sublabel: "Akash, Render, io.net" },
+  ]}
+/>
 
 Each layer is a choice. Each choice has tradeoffs. Some layers are production-ready. Others are experimental. Let's go through them honestly.
 
@@ -45,12 +44,12 @@ Sovereign compute means controlling the physical infrastructure processing AI wo
 
 [Akash](/projects/akash/) is the longest-running decentralised cloud marketplace. Mainnet since September 2020. Real revenue: $3.15 million annually, up 128% year-over-year. [Messari Akash Report](https://messari.io/asset/akash-network)
 
-| Metric | Value |
-|--------|-------|
-| Active Providers | ~69 |
-| Available GPUs | 700-1,000 |
-| Pricing vs AWS | 50-85% cheaper |
-| 2025 Deployments | 3.1 million (466% growth) |
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+  <MetricCard value="~69" label="Active Providers" />
+  <MetricCard value="700-1K" label="Available GPUs" />
+  <MetricCard value="50-85%" label="Cheaper than AWS" />
+  <MetricCard value="3.1M" label="2025 Deployments" change={466} changeLabel="YoY" />
+</div>
 
 **What works:** No KYC for deployments. Reverse auction model where providers compete on price. Self-custodial. H100s at roughly $1.50-2 per GPU-hour versus $3-4 on AWS. [Akash Benchmark Analysis](https://akash.network/benchmark)
 
@@ -80,19 +79,17 @@ Akash has the longest track record and the strongest decentralisation credential
 
 ### Compute sovereignty spectrum
 
-```
-HIGH SOVEREIGNTY
-    │
-    ├── Akash (no KYC, auction model, longest track record)
-    │
-    ├── Gensyn (promising design, unproven)
-    │
-    ├── Render (permissioned, real customers)
-    │
-    └── io.net (closed-source, centralised operation)
-    │
-LOW SOVEREIGNTY
-```
+<SpectrumBar
+  title="Compute Sovereignty Spectrum"
+  leftLabel="Centralised"
+  rightLabel="Sovereign"
+  markers={[
+    { position: 20, label: "io.net", sublabel: "Closed-source, centralised" },
+    { position: 42, label: "Render", sublabel: "Permissioned, real customers" },
+    { position: 60, label: "Gensyn", sublabel: "Promising design, unproven" },
+    { position: 82, label: "Akash", sublabel: "No KYC, auction model" },
+  ]}
+/>
 
 ## DATA: Where your training data comes from
 
@@ -110,12 +107,12 @@ But Grass is not a data sovereignty solution. Users contribute bandwidth, not da
 
 [Vana](/projects/vana/) is different. Users export personal data (Reddit history, Spotify listening, ChatGPT interactions) and contribute to DataDAOs that pool and validate it. TEE-based verification. Users control keys. Self-hosting option exists. Consent enforced on-chain. [Vana Analysis](/projects/vana/)
 
-| Metric | Value |
-|--------|-------|
-| Users | 1.3 million (self-reported) |
-| DataDAOs | 300+ (16 active) |
-| Mainnet | December 2024 |
-| Daily Transactions | 1.7 million (claimed) |
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+  <MetricCard value="1.3M" label="Users" changeLabel="self-reported" />
+  <MetricCard value="300+" label="DataDAOs" changeLabel="16 active" />
+  <MetricCard value="Dec 2024" label="Mainnet Launch" />
+  <MetricCard value="1.7M" label="Daily Transactions" changeLabel="claimed" />
+</div>
 
 **What works:** True data sovereignty via user-controlled keys. TEE verification. Self-host option.
 
@@ -129,19 +126,17 @@ But the Foundation has stated the token has "no intended utility value." Governa
 
 ### Data sovereignty spectrum
 
-```
-HIGH SOVEREIGNTY
-    │
-    ├── Vana (user-controlled keys, self-host, TEE verification)
-    │
-    ├── Ocean (Compute-to-Data, but governance crisis)
-    │
-    ├── Sahara (blockchain-tracked ownership, chain not live)
-    │
-    └── Grass (bandwidth contribution, not data sovereignty)
-    │
-LOW SOVEREIGNTY
-```
+<SpectrumBar
+  title="Data Sovereignty Spectrum"
+  leftLabel="Centralised"
+  rightLabel="Sovereign"
+  markers={[
+    { position: 18, label: "Grass", sublabel: "Bandwidth, not data ownership" },
+    { position: 45, label: "Sahara", sublabel: "Chain not live yet" },
+    { position: 62, label: "Ocean", sublabel: "Best tech, governance crisis" },
+    { position: 85, label: "Vana", sublabel: "User-controlled keys, TEE" },
+  ]}
+/>
 
 ## MODEL: Can you run and modify your own?
 
@@ -149,12 +144,16 @@ Model layer sovereignty means three things: access to model weights, ability to 
 
 ### Open model landscape (2026)
 
-| Model | Parameters | VRAM (INT4) | Min Hardware |
-|-------|------------|-------------|--------------|
-| Llama 3.1 8B | 8B | 4-6 GB | RTX 3060/4060 |
-| Llama 4 Scout | 109B | 55 GB | 1x H100 80GB |
-| Qwen 3.5 72B | 72B | 36 GB | 1x H100 |
-| DeepSeek V3.2 | 671B | ~600 GB (FP8) | 8x H100 |
+<ComparisonTable
+  title="Open Model Landscape (2026)"
+  headers={["Model", "Parameters", "VRAM (INT4)", "Min Hardware"]}
+  rows={[
+    { label: "Llama 3.1 8B", values: ["8B", "4-6 GB", "RTX 3060/4060"] },
+    { label: "Llama 4 Scout", values: ["109B", "55 GB", "1x H100 80GB"] },
+    { label: "Qwen 3.5 72B", values: ["72B", "36 GB", "1x H100"] },
+    { label: "DeepSeek V3.2", values: ["671B", "~600 GB (FP8)", "8x H100"] },
+  ]}
+/>
 
 **VRAM rules of thumb:** FP16 needs parameters x 2 (in GB). INT4 needs parameters x 0.5. Add 20-40% for KV cache in production. [GPU Requirements Cheat Sheet](https://docs.spheron.network/gpu-cheatsheet)
 
@@ -164,11 +163,15 @@ Full fine-tuning of a 70B model costs $240-360 per run and requires 1,120 GB of 
 
 QLoRA changed everything. 70B models trainable on a single consumer GPU with 48GB VRAM. 10-30x cheaper than full fine-tuning. 99% fewer trainable parameters. Training time: 10-20 hours for 10K examples. [PremAI Fine-Tuning Guide](https://premai.io/blog/qlora-fine-tuning-guide/)
 
-| Method | VRAM Required | Cost/Run |
-|--------|---------------|----------|
-| Full Fine-Tuning | 1,120 GB | $240-360 |
-| LoRA | 160-200 GB | $38-58 |
-| QLoRA | 46 GB | $10-24 |
+<BarChart
+  title="Fine-Tuning Cost per Run (70B Model)"
+  unit=""
+  bars={[
+    { label: "Full Fine-Tuning (1,120 GB VRAM)", value: 300, displayValue: "$240-360" },
+    { label: "LoRA (160-200 GB VRAM)", value: 48, displayValue: "$38-58" },
+    { label: "QLoRA (46 GB VRAM)", value: 17, displayValue: "$10-24" },
+  ]}
+/>
 
 <PullQuote>
 QLoRA democratises fine-tuning. 70B models trainable on consumer hardware. $10-24 per run versus $240-360. This is a genuine sovereignty enabler.
@@ -176,14 +179,18 @@ QLoRA democratises fine-tuning. 70B models trainable on consumer hardware. $10-2
 
 ### Model sovereignty assessment
 
-| Capability | Open Weights | API Only |
-|------------|--------------|----------|
-| Run offline | Yes | No |
-| Fine-tune | Yes | Limited/None |
-| Modify architecture | Yes | No |
-| No usage tracking | Yes | No |
-| No rate limits | Yes | No |
-| Full control | Yes | No |
+<ComparisonTable
+  title="Model Sovereignty Assessment"
+  headers={["Capability", "Open Weights", "API Only"]}
+  rows={[
+    { label: "Run offline", values: ["Yes", "No"] },
+    { label: "Fine-tune", values: ["Yes", "Limited/None"] },
+    { label: "Modify architecture", values: ["Yes", "No"] },
+    { label: "No usage tracking", values: ["Yes", "No"] },
+    { label: "No rate limits", values: ["Yes", "No"] },
+    { label: "Full control", values: ["Yes", "No"] },
+  ]}
+/>
 
 Open weights don't guarantee sovereignty. You still need compute to run them. But they're a prerequisite.
 
@@ -193,11 +200,15 @@ Inference sovereignty means querying AI models without exposing inputs to third 
 
 ### Privacy technology comparison
 
-| Technology | Overhead | Trust Model | Maturity |
-|------------|----------|-------------|----------|
-| TEE | Near-native | Trust Intel/AMD | Production |
-| FHE | 100-1,000x | Cryptographic | 2027-28 |
-| MPC | Network-bound | Honest majority | Production |
+<ComparisonTable
+  title="Privacy Technology Comparison"
+  headers={["Technology", "Overhead", "Trust Model", "Maturity"]}
+  rows={[
+    { label: "TEE", values: ["Near-native", "Trust Intel/AMD", "Production"] },
+    { label: "FHE", values: ["100-1,000x", "Cryptographic", "2027-28"] },
+    { label: "MPC", values: ["Network-bound", "Honest majority", "Production"] },
+  ]}
+/>
 
 **TEE tradeoffs:** Near-native speed. Sub-second latency possible. But you trust Intel/AMD/ARM hardware. Side-channel attacks are possible. No quantum resistance. [BlockEden Privacy Analysis](https://blog.blockeden.dev/privacy-stack-wars/)
 
@@ -213,11 +224,11 @@ Inference sovereignty means querying AI models without exposing inputs to third 
 
 [Phala Network](/projects/phala/) uses Trusted Execution Environments (Intel TDX, NVIDIA H100/H200/B200). Remote attestation proves computation integrity. SOC 2 Type I + HIPAA compliance. The only DeAI TEE cloud with both certifications. [Phala Review](/projects/phala/)
 
-| Metric | Value |
-|--------|-------|
-| Paid Users | 398 |
-| Annual Recurring Revenue | $2M+ (claimed) |
-| Active Devices | 29,478 |
+<div class="grid grid-cols-3 gap-3 my-6">
+  <MetricCard value="398" label="Paid Users" />
+  <MetricCard value="$2M+" label="Annual Revenue" changeLabel="claimed" />
+  <MetricCard value="29,478" label="Active Devices" />
+</div>
 
 **What works:** Hardware-enforced privacy. Remote attestation. Compliance certifications. ElizaOS V2 integration.
 
@@ -225,17 +236,16 @@ Inference sovereignty means querying AI models without exposing inputs to third 
 
 ### Inference sovereignty spectrum
 
-```
-HIGH SOVEREIGNTY
-    │
-    ├── Local inference (no third party, but hardware limits)
-    │
-    ├── Phala (TEE-based, attestation, compliance)
-    │
-    └── Venice (no logging, but GPU providers see plaintext)
-    │
-LOW SOVEREIGNTY
-```
+<SpectrumBar
+  title="Inference Sovereignty Spectrum"
+  leftLabel="Centralised"
+  rightLabel="Sovereign"
+  markers={[
+    { position: 40, label: "Venice", sublabel: "No logging, plaintext to GPUs" },
+    { position: 68, label: "Phala", sublabel: "TEE-based, attestation" },
+    { position: 92, label: "Local inference", sublabel: "No third party" },
+  ]}
+/>
 
 ## COORDINATION: How do distributed participants align?
 
@@ -255,12 +265,16 @@ Coordination layer protocols align incentives across sovereign infrastructure, e
 
 [Morpheus](/projects/morpheus/) is the only genuine fair launch in DeAI. Every MOR earned through contribution. No premine. No VC allocation. [Morpheus Review](/projects/morpheus/)
 
-| Contributor Type | What They Provide | How They Earn MOR |
-|-----------------|-------------------|-------------------|
-| Compute | GPU inference | Proving workload |
-| Code | Smart contracts, agents | GitHub contribution scoring |
-| Capital | stETH deposits | Funding protocol development |
-| Community | Onboarding, docs | Through protection fund |
+<ComparisonTable
+  title="Morpheus Contribution Model"
+  headers={["Contributor Type", "What They Provide", "How They Earn MOR"]}
+  rows={[
+    { label: "Compute", values: ["GPU inference", "Proving workload"] },
+    { label: "Code", values: ["Smart contracts, agents", "GitHub contribution scoring"] },
+    { label: "Capital", values: ["stETH deposits", "Funding protocol development"] },
+    { label: "Community", values: ["Onboarding, docs", "Through protection fund"] },
+  ]}
+/>
 
 **What works:** Fair launch changes everything. The protocol cannot be rug-pulled by early insiders. Local agent execution. No platform surveillance. 16-year emission decay mimics Bitcoin.
 
@@ -268,60 +282,66 @@ Coordination layer protocols align incentives across sovereign infrastructure, e
 
 ### Coordination sovereignty spectrum
 
-```
-HIGH SOVEREIGNTY
-    │
-    ├── Morpheus (fair launch, zero insider allocation, local execution)
-    │
-    └── Bittensor (local execution, but stake-weight centralisation)
-    │
-LOW SOVEREIGNTY
-```
+<SpectrumBar
+  title="Coordination Sovereignty Spectrum"
+  leftLabel="Centralised"
+  rightLabel="Sovereign"
+  markers={[
+    { position: 55, label: "Bittensor", sublabel: "Local execution, stake-weight centralisation" },
+    { position: 82, label: "Morpheus", sublabel: "Fair launch, zero insider allocation" },
+  ]}
+/>
 
 ## What does sovereignty actually cost?
 
+<StatCallout
+  value="2M tokens/day"
+  label="The break-even point for self-hosting vs API"
+  sublabel="Below this, use APIs. Above this, sovereignty becomes economical."
+/>
+
 The break-even point is clear: roughly 2 million tokens per day separates API viability from self-hosting necessity. Below that, use APIs. Above that, sovereignty becomes economical.
 
-| Daily Tokens | API Cost | Self-Hosted Cost | Winner |
-|--------------|----------|------------------|--------|
-| 500K | ~$15 | ~$850/month fixed | API |
-| 2M | ~$60 | ~$850/month fixed | Threshold |
-| 10M | ~$300 | ~$850/month fixed | Self-Hosted |
-| 50M | ~$1,500 | ~$850/month fixed | Self-Hosted |
+<ComparisonTable
+  title="API vs Self-Hosted Cost Comparison"
+  headers={["Daily Tokens", "API Cost", "Self-Hosted Cost", "Winner"]}
+  rows={[
+    { label: "500K", values: ["~$15/day", "~$850/month fixed", "API"] },
+    { label: "2M", values: ["~$60/day", "~$850/month fixed", "Threshold"] },
+    { label: "10M", values: ["~$300/day", "~$850/month fixed", "Self-Hosted"] },
+    { label: "50M", values: ["~$1,500/day", "~$850/month fixed", "Self-Hosted"] },
+  ]}
+/>
 
 ### Three sovereignty stacks
 
 **Entry-level (Individual, 7B model):** Consumer GPU you own. Llama 3.1 8B INT4. Local inference with Ollama. No privacy tech. Cost: $0-200/month. Sovereignty: HIGH. Limitations: Model size, no coordination.
 
-```
-┌────────────────────────────────────────┐
-│ COORDINATION:      None                │
-├────────────────────────────────────────┤
-│ INFERENCE:         Local (Ollama)      │
-├────────────────────────────────────────┤
-│ MODEL:             Llama 3.1 8B INT4   │
-├────────────────────────────────────────┤
-│ DATA:              Public datasets     │
-├────────────────────────────────────────┤
-│ COMPUTE:           Consumer GPU owned  │
-└────────────────────────────────────────┘
-```
+<FlowDiagram
+  title="Entry-Level Sovereignty Stack"
+  direction="vertical"
+  steps={[
+    { label: "Coordination", sublabel: "None" },
+    { label: "Inference", sublabel: "Local (Ollama)" },
+    { label: "Model", sublabel: "Llama 3.1 8B INT4" },
+    { label: "Data", sublabel: "Public datasets" },
+    { label: "Compute", sublabel: "Consumer GPU owned" },
+  ]}
+/>
 
 **Professional (Small team, 70B model):** Akash H100 spot. Qwen 3.5 72B INT4. Phala Cloud for TEE inference. Vana DataDAO participation. Bittensor subnet coordination. Cost: $2,000-4,000/month. Sovereignty: MEDIUM-HIGH.
 
-```
-┌────────────────────────────────────────┐
-│ COORDINATION:      Bittensor subnet    │
-├────────────────────────────────────────┤
-│ INFERENCE:         Phala Cloud (TEE)   │
-├────────────────────────────────────────┤
-│ MODEL:             Qwen 3.5 72B INT4   │
-├────────────────────────────────────────┤
-│ DATA:              Vana DataDAOs       │
-├────────────────────────────────────────┤
-│ COMPUTE:           Akash H100 spot     │
-└────────────────────────────────────────┘
-```
+<FlowDiagram
+  title="Professional Sovereignty Stack"
+  direction="vertical"
+  steps={[
+    { label: "Coordination", sublabel: "Bittensor subnet" },
+    { label: "Inference", sublabel: "Phala Cloud (TEE)" },
+    { label: "Model", sublabel: "Qwen 3.5 72B INT4" },
+    { label: "Data", sublabel: "Vana DataDAOs" },
+    { label: "Compute", sublabel: "Akash H100 spot" },
+  ]}
+/>
 
 **Enterprise (400B+ model):** Multi-provider Akash cluster. Fine-tuned 70B+ model. Ocean C2D or Sahara for data. Phala Enterprise for inference. Custom subnet. Cost: $40,000-100,000/month. Sovereignty: MEDIUM.
 
@@ -335,32 +355,44 @@ You don't need full sovereignty to see benefits. Hybrid approaches work. Route n
 
 ### Production-ready now (2026)
 
-| Layer | Protocol | Confidence |
-|-------|----------|------------|
-| Compute | Akash | High (2020 mainnet, $3.15M revenue) |
-| Compute | Render | High (enterprise customers) |
-| Inference | Venice | High (1.3M users claimed, 45B tokens/day claimed) |
-| Inference | Phala | Medium-High (TEE production, SOC2/HIPAA) |
-| Data | Grass | High (scale proven, sovereignty concerns) |
-| Coordination | Bittensor | High (largest DeAI, real workloads) |
-| Model | Llama 3.1/4, Qwen, DeepSeek | High (open weights, active dev) |
+<ComparisonTable
+  title="Production-Ready Now (2026)"
+  headers={["Layer", "Protocol", "Confidence"]}
+  rows={[
+    { label: "Compute", values: ["Akash", "High (2020 mainnet, $3.15M revenue)"] },
+    { label: "Compute", values: ["Render", "High (enterprise customers)"] },
+    { label: "Inference", values: ["Venice", "High (1.3M users, 45B tokens/day)"] },
+    { label: "Inference", values: ["Phala", "Medium-High (TEE, SOC2/HIPAA)"] },
+    { label: "Data", values: ["Grass", "High (scale proven, sovereignty concerns)"] },
+    { label: "Coordination", values: ["Bittensor", "High (largest DeAI, real workloads)"] },
+    { label: "Model", values: ["Llama/Qwen/DeepSeek", "High (open weights, active dev)"] },
+  ]}
+/>
 
 ### Emerging (6-12 months)
 
-| Layer | Protocol | Timeline |
-|-------|----------|----------|
-| Compute | Gensyn | TGE April 2026, mainnet TBD |
-| Data | Vana | Mainnet live, decentralisation roadmap pending |
-| Data | Sahara | Sahara Chain in development |
-| Coordination | Morpheus | Functional but thin liquidity |
+<ComparisonTable
+  title="Emerging (6-12 Months)"
+  headers={["Layer", "Protocol", "Timeline"]}
+  rows={[
+    { label: "Compute", values: ["Gensyn", "TGE April 2026, mainnet TBD"] },
+    { label: "Data", values: ["Vana", "Mainnet live, decentralisation roadmap pending"] },
+    { label: "Data", values: ["Sahara", "Sahara Chain in development"] },
+    { label: "Coordination", values: ["Morpheus", "Functional but thin liquidity"] },
+  ]}
+/>
 
 ### Experimental
 
-| Layer | Protocol | Status |
-|-------|----------|--------|
-| Inference | FHE-based | 100-1000x overhead, mainstream 2027-28 |
-| Inference | MPC-based | Network-bound, honest majority required |
-| Data | Ocean | Governance crisis, litigation |
+<ComparisonTable
+  title="Experimental"
+  headers={["Layer", "Protocol", "Status"]}
+  rows={[
+    { label: "Inference", values: ["FHE-based", "100-1000x overhead, mainstream 2027-28"] },
+    { label: "Inference", values: ["MPC-based", "Network-bound, honest majority required"] },
+    { label: "Data", values: ["Ocean", "Governance crisis, litigation"] },
+  ]}
+/>
 
 <PullQuote>
 Compute is the most production-ready layer. Data sovereignty is the hardest problem. Inference privacy requires tradeoffs. The break-even point is 2M tokens/day.

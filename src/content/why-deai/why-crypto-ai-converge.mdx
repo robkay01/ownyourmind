@@ -8,6 +8,12 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiCryptoAiConverge.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import StatCallout from '../../components/StatCallout.astro';
+import BarChart from '../../components/BarChart.astro';
+import DonutChart from '../../components/DonutChart.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import MetricCard from '../../components/MetricCard.astro';
+import TimelineChart from '../../components/TimelineChart.astro';
 
 Tokenomics is the coordination mechanism that makes crypto and AI fundamentally aligned. AI systems require massive coordination: compute provision, data contribution, validation, and incentive alignment. Cryptographic tokens provide the mechanism to coordinate these activities at scale without centralised intermediaries.
 
@@ -45,12 +51,16 @@ Every network faces the chicken-and-egg problem. No compute providers without us
 
 Tokens transform customer acquisition cost into token emissions.
 
-| Project | Bootstrap Mechanism | Results |
-|---------|---------------------|---------|
-| Bittensor | Emissions to miners/validators | 128+ subnets, $100M+ exchange-reported daily volume |
-| Morpheus | 16-year emission schedule, fair launch | Functional compute marketplace |
-| Render | Initial token distribution to providers | 15,670 node operators |
-| Akash | Inflation to validators, take rate from providers | $3.15M annual revenue |
+<ComparisonTable
+  title="Bootstrap mechanisms compared"
+  headers={["Project", "Bootstrap Mechanism", "Results"]}
+  rows={[
+    { label: "Bittensor", values: ["Emissions to miners/validators", "128+ subnets, $100M+ daily volume"] },
+    { label: "Morpheus", values: ["16-year emission schedule, fair launch", "Functional compute marketplace"] },
+    { label: "Render", values: ["Initial token distribution to providers", "15,670 node operators"] },
+    { label: "Akash", values: ["Inflation to validators, take rate from providers", "$3.15M annual revenue"] },
+  ]}
+/>
 
 ### Token incentives = customer acquisition cost
 
@@ -86,14 +96,24 @@ Three categories:
 
 ### Burning: When does it create value?
 
-| Project | Burn Mechanism | Effectiveness |
-|---------|----------------|---------------|
-| FET | Earn and Burn launched Jan 2026, 5M FET burned | Too early to assess; 5M = 0.18% of supply |
-| Venice | Monthly revenue buyback burns (self-reported) | 42.8% of genesis burned; meaningful |
-| Morpheus | Burn on compute purchase | Minimal vs emissions |
-| Bittensor | Registration burns (recycled) | Returns to emission pool. No value accrual |
+<ComparisonTable
+  title="Burn mechanisms compared"
+  headers={["Project", "Burn Mechanism", "Effectiveness"]}
+  rows={[
+    { label: "FET", values: ["Earn and Burn launched Jan 2026, 5M FET burned", "Too early to assess; 5M = 0.18% of supply"] },
+    { label: "Venice", values: ["Monthly revenue buyback burns (self-reported)", "42.8% of genesis burned; meaningful"] },
+    { label: "Morpheus", values: ["Burn on compute purchase", "Minimal vs emissions"] },
+    { label: "Bittensor", values: ["Registration burns (recycled)", "Returns to emission pool. No value accrual"] },
+  ]}
+/>
 
 Burning only creates value when: (1) revenue comes from real customers, not token emissions; (2) burn volume is meaningful vs inflation; (3) burn is permanent, not recycled.
+
+<StatCallout
+  value="42.8%"
+  label="of Venice genesis supply burned through revenue buybacks"
+  sublabel="Self-reported. Real customer revenue funding permanent burns."
+/>
 
 Venice is the standout here. The team reports 42.8% of genesis supply burned through revenue buybacks. That's value accrual from actual customers paying for API usage, though revenue figures are self-reported and unaudited. [Venice Review](/projects/venice/)
 
@@ -111,13 +131,12 @@ Bittensor's registration burns are recycled back to emissions. No value accrual.
 
 ### TAO (Bittensor)
 
-| Metric | Value |
-|--------|-------|
-| Market Cap | $1.9B peak |
-| Supply | 10.7M circulating / 21M cap (51%) |
-| Emissions | 3,600 TAO/day post-halving |
-| Inflation | 12-13% annually |
-| External Revenue | Zero |
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+  <MetricCard value="$1.9B" label="Peak Market Cap" />
+  <MetricCard value="51%" label="Circulating Supply" />
+  <MetricCard value="3,600" label="TAO/day Emissions" />
+  <MetricCard value="$0" label="External Revenue" />
+</div>
 
 **How subnet incentives work:** 41% to miners, 41% to validators, 18% to subnet owners. 128+ subnets competing for emission share. dTAO makes subnet allocation market-driven via staking flows.
 
@@ -136,12 +155,12 @@ TAO is emission-funded. No external revenue. When emissions end, what funds the 
 
 ### MOR (Morpheus)
 
-| Metric | Value |
-|--------|-------|
-| Market Cap | ~$42M (thin liquidity) |
-| Supply | Fair launch, every MOR earned |
-| Emissions | ~14,400 MOR/day year 1, 16-year decay |
-| Distribution | 24% each: compute, code, capital, community |
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+  <MetricCard value="~$42M" label="Market Cap" />
+  <MetricCard value="100%" label="Fair Launch" />
+  <MetricCard value="14,400" label="MOR/day Year 1" />
+  <MetricCard value="24%" label="Per Contributor Type" />
+</div>
 
 **The four-contributor model:** Compute providers earn by proving workload. Code contributors earn via GitHub scoring. Capital providers stake stETH to fund development. Community contributors earn through the protection fund.
 
@@ -156,12 +175,12 @@ TAO is emission-funded. No external revenue. When emissions end, what funds the 
 
 ### FET (Fetch.ai / ASI Alliance)
 
-| Metric | Value |
-|--------|-------|
-| Market Cap | $334M |
-| Token Price | $0.15 (96% below ATH $3.45) |
-| Supply | 2.26B circulating (83%) |
-| External Revenue | Ecosystem fees (minimal) |
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+  <MetricCard value="$334M" label="Market Cap" />
+  <MetricCard value="$0.15" label="Token Price" change={-96} changeLabel="from ATH" />
+  <MetricCard value="83%" label="Circulating Supply" />
+  <MetricCard value="5M FET" label="First Burn (Jan 2026)" />
+</div>
 
 **Merger complications:** Ocean Protocol withdrew, alleging 263M FET sold without disclosure. Lawsuit settled in late 2025 with 286M FET returned to the Fetch community. The merger did not create value. Token down 96% from all-time high. Federated structure with governance issues. [Fetch/ASI Review](/projects/fetch-asi/)
 
@@ -178,15 +197,40 @@ TAO is emission-funded. No external revenue. When emissions end, what funds the 
 
 ### Comparison table
 
-| Metric | TAO | MOR | FET |
-|--------|-----|-----|-----|
-| Market Cap | $1.9B | ~$42M | $334M |
-| Freedom Score | 56/100 | 76/100 | 50/100 |
-| Returns Score | 63/100 | 57/100 | 55/100 |
-| Circulating Supply | 51% | Fair launch | 83% |
-| Annual Inflation | 12-13% | ~25% year 1, declining | Minimal |
-| External Revenue | Zero | Minimal | Ecosystem fees |
-| Burns | Recycled | Minimal | 5M (Jan 2026) |
+<BarChart
+  title="Market cap comparison"
+  bars={[
+    { label: "TAO (Bittensor)", value: 1900, displayValue: "$1.9B" },
+    { label: "FET (ASI Alliance)", value: 334, displayValue: "$334M" },
+    { label: "MOR (Morpheus)", value: 42, displayValue: "~$42M" },
+  ]}
+  unit="M"
+/>
+
+<ComparisonTable
+  title="The big three compared"
+  headers={["Metric", "TAO", "MOR", "FET"]}
+  rows={[
+    { label: "Freedom Score", values: ["56/100", "76/100", "50/100"] },
+    { label: "Returns Score", values: ["63/100", "57/100", "55/100"] },
+    { label: "Circulating Supply", values: ["51%", "Fair launch", "83%"] },
+    { label: "Annual Inflation", values: ["12-13%", "~25% yr 1, declining", "Minimal"] },
+    { label: "External Revenue", values: ["Zero", "Minimal", "Ecosystem fees"] },
+    { label: "Burns", values: ["Recycled", "Minimal", "5M (Jan 2026)"] },
+  ]}
+/>
+
+<TimelineChart
+  title="Key DeAI token events"
+  events={[
+    { date: "2021", title: "Bittensor mainnet launch", description: "TAO emissions begin. Subnet model establishes competitive AI marketplace.", status: "completed" },
+    { date: "2024 Feb", title: "Morpheus fair launch", description: "Zero insider allocation. Four-contributor model begins 16-year emission schedule.", status: "completed" },
+    { date: "2024 Jul", title: "ASI Alliance merger", description: "Fetch.ai, Ocean Protocol, SingularityNET merge tokens into ASI. Ocean later withdraws.", status: "completed" },
+    { date: "2025 Q4", title: "Ocean lawsuit settled", description: "286M FET returned to community after allegations of undisclosed token sales.", status: "completed" },
+    { date: "2026 Jan", title: "FET Earn and Burn launches", description: "First burn of 5M FET (0.18% of supply). Revenue-funded buyback mechanism.", status: "active" },
+    { date: "2028+", title: "Bittensor halving cycle", description: "Emissions halve. With zero external revenue, sustainability becomes critical.", status: "upcoming" },
+  ]}
+/>
 
 ## The sustainability cliff
 
