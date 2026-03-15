@@ -7,6 +7,17 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsBittensorHalving.mp3"
 ---
 
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 not-prose my-6">
+  <MetricCard label="Halving Date" value="14 Dec 2025" />
+  <MetricCard label="Price at Halving" value="~$285" />
+  <MetricCard label="Current Price" value="~$195" change={-33} changeLabel="since halving" />
+  <MetricCard label="Supply Minted" value="51.2%" />
+</div>
+
 ## The halving already happened
 
 If you are reading this expecting a countdown to a future event, you missed it. Bittensor's first halving triggered on approximately 14 December 2025, when total TAO issuance crossed 10,500,000 -- exactly half of the 21 million cap.
@@ -21,14 +32,20 @@ I do not hold TAO. I explored mining and found the barrier to entry on establish
 
 ### The numbers
 
-| Metric | Pre-halving | Post-halving (current) |
-|---|---|---|
-| TAO per block | 1.0 | 0.5 |
-| Daily emission | ~7,200 TAO | ~3,600 TAO |
-| Block time | ~12 seconds | ~12 seconds |
-| Annual inflation | ~10% | ~5% |
-| Circulating supply | ~10.5M TAO | ~10.75M TAO |
-| % of 21M cap minted | 50% | 51.2% |
+<div class="not-prose my-6">
+  <ComparisonTable
+    title="Pre-Halving vs Post-Halving"
+    headers={["Metric", "Pre-halving", "Post-halving (current)"]}
+    rows={[
+      { label: "TAO per block", values: ["1.0", "0.5"] },
+      { label: "Daily emission", values: ["~7,200 TAO", "~3,600 TAO"] },
+      { label: "Block time", values: ["~12 seconds", "~12 seconds"] },
+      { label: "Annual inflation", values: ["~10%", "~5%"] },
+      { label: "Circulating supply", values: ["~10.5M TAO", "~10.75M TAO"] },
+      { label: "% of 21M cap minted", values: ["50%", "51.2%"] },
+    ]}
+  />
+</div>
 
 The supply schedule mirrors Bitcoin deliberately. 21 million cap, halving cycle, fair launch with no ICO or pre-mine. The scarcity narrative is clean. Whether the price follows is a different question.
 
@@ -72,13 +89,25 @@ This matters for anyone evaluating which subnets to stake on. Pre-halving subnet
 
 Current staking statistics from taostats.io:
 
-| Metric | Value |
-|---|---|
-| Total staked | ~7.3M TAO |
-| Staking ratio | ~68% of circulating supply |
-| Root (SN0) staking | ~5.3M TAO (72% of staked) |
-| Subnet (alpha) staking | ~2.0M TAO (28% of staked) |
-| Total accounts | ~447,000 |
+<div class="not-prose my-6">
+  <ComparisonTable
+    title="Staking Statistics"
+    headers={["Metric", "Value"]}
+    rows={[
+      { label: "Total staked", values: ["~7.3M TAO"] },
+      { label: "Staking ratio", values: ["~68% of circulating supply"] },
+      { label: "Root (SN0) staking", values: ["~5.3M TAO (72% of staked)"] },
+      { label: "Subnet (alpha) staking", values: ["~2.0M TAO (28% of staked)"] },
+      { label: "Total accounts", values: ["~447,000"] },
+    ]}
+  />
+  <AllocationBar
+    allocations={[
+      { category: "Root (SN0)", percentage: 72 },
+      { category: "Subnet (Alpha)", percentage: 28 },
+    ]}
+  />
+</div>
 
 The Root-to-alpha ratio tells an interesting story. dTAO was supposed to turn every TAO holder into a venture capitalist, allocating capital to subnets they believe in. Ten months in, 72% of staked TAO is still in the traditional Root network. The "every holder is a VC" vision has not materialised at scale.
 
@@ -90,13 +119,19 @@ Subnet staking offers higher potential returns (80%+) but carries alpha token pr
 
 Bitcoin's halving history suggests the real price impact comes 12-18 months after the event, not immediately.
 
-| Halving | Date | Price at halving | Peak return | Peak timing |
-|---|---|---|---|---|
-| Bitcoin 1st | Nov 2012 | ~$12 | +8,858% | 12 months |
-| Bitcoin 2nd | Jul 2016 | ~$650 | +294% | 17 months |
-| Bitcoin 3rd | May 2020 | ~$8,500 | +541% | 18 months |
-| Bitcoin 4th | Apr 2024 | ~$64,000 | +25-40% | Weakest cycle |
-| **TAO 1st** | **Dec 2025** | **~$285** | **-33% at 3 months** | **TBD** |
+<div class="not-prose my-6">
+  <ComparisonTable
+    title="Halving Cycle Returns"
+    headers={["Halving", "Date", "Price at halving", "Peak return", "Peak timing"]}
+    rows={[
+      { label: "Bitcoin 1st", values: ["Nov 2012", "~$12", "+8,858%", "12 months"] },
+      { label: "Bitcoin 2nd", values: ["Jul 2016", "~$650", "+294%", "17 months"] },
+      { label: "Bitcoin 3rd", values: ["May 2020", "~$8,500", "+541%", "18 months"] },
+      { label: "Bitcoin 4th", values: ["Apr 2024", "~$64,000", "+25-40%", "Weakest cycle"] },
+      { label: "TAO 1st", values: ["Dec 2025", "~$285", "-33% at 3 months", "TBD"] },
+    ]}
+  />
+</div>
 
 If TAO follows the historical Bitcoin pattern, the supply shock would materialise between Q4 2026 and mid-2027. The three-month decline is not inconsistent with this thesis -- Bitcoin also declined in the weeks following its halvings before the supply reduction worked its way through the market.
 

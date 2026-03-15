@@ -7,6 +7,8 @@ podcastUrl: "/podcast/Own-Your-Mind--WhyDeaiPrivacyKillerApp.mp3"
 ---
 
 import PullQuote from '../../components/PullQuote.astro';
+import MetricCard from '../../components/MetricCard.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
 
 ## The invisible cost of free
 
@@ -48,11 +50,15 @@ The limitation is network latency, not compute. Every operation requires coordin
 
 ### The practical verdict
 
-| Technology | Overhead | Production Ready | Trust Model |
-|------------|----------|------------------|-------------|
-| TEE | Under 5% | Yes | Hardware vendor |
-| FHE | 100-1000x | Research stage | Mathematical |
-| MPC | 10-100x (latency) | Limited use cases | Network participants |
+<ComparisonTable
+  title="Privacy Technology Comparison"
+  headers={['Technology', 'Overhead', 'Production Ready', 'Trust Model']}
+  rows={[
+    { label: 'TEE', values: ['Under 5%', 'Yes', 'Hardware vendor'] },
+    { label: 'FHE', values: ['100-1000x', 'Research stage', 'Mathematical'] },
+    { label: 'MPC', values: ['10-100x (latency)', 'Limited use cases', 'Network participants'] },
+  ]}
+/>
 
 For private inference today, TEE is the only option with acceptable performance. The trust tradeoff is real, but it is a better tradeoff than sending your data to OpenAI.
 
@@ -72,17 +78,26 @@ This is the opening for decentralised AI. When you run inference on a TEE-enable
 
 [Venice](/projects/venice/), the privacy-focused inference platform, reports 1.3 million registered users and claims to process 45 billion tokens daily. That is not traffic funnelled through a single provider. That is inference demand from users who explicitly chose not to send their prompts to OpenAI. The signal is clear.
 
+<div class="grid grid-cols-2 gap-3 my-6">
+  <MetricCard value="1.3M" label="Venice Registered Users" />
+  <MetricCard value="45B" label="Daily Tokens Processed" />
+</div>
+
 ## What private inference actually costs
 
 The assumption is that privacy costs more. The pricing data tells a different story.
 
 Venice API pricing (per 1M tokens):
 
-| Model Category | Input | Output |
-|----------------|-------|--------|
-| Budget (Llama 3.2, Gemma, Nemotron) | $0.07-0.15 | $0.20-0.60 |
-| Mid-range (Llama 3.3 70B, Qwen 3) | $0.70-0.75 | $2.80-3.20 |
-| Premium (Claude Opus, GPT-5.2) | $2.00-6.00 | $15.00-30.00 |
+<ComparisonTable
+  title="Venice API Pricing (per 1M tokens)"
+  headers={['Model Category', 'Input', 'Output']}
+  rows={[
+    { label: 'Budget (Llama 3.2, Gemma, Nemotron)', values: ['$0.07-0.15', '$0.20-0.60'] },
+    { label: 'Mid-range (Llama 3.3 70B, Qwen 3)', values: ['$0.70-0.75', '$2.80-3.20'] },
+    { label: 'Premium (Claude Opus, GPT-5.2)', values: ['$2.00-6.00', '$15.00-30.00'] },
+  ]}
+/>
 
 For comparison, OpenAI's GPT-5.2 costs $1.75 per 1M input tokens. Claude Opus 4.6 costs $5.00 per 1M input tokens through Anthropic directly.
 
@@ -105,6 +120,12 @@ Pricing: Pro subscription at $18/month for unlimited text with premium model acc
 [Phala](/projects/phala/) has pivoted from general-purpose confidential computing to AI agent infrastructure. GPU TEE inference on NVIDIA H100, H200, and B200 hardware is live, with SOC 2 Type I and HIPAA compliance certifications that most crypto projects cannot match. The open-source dstack SDK, donated to the Linux Foundation's Confidential Computing Consortium, converts standard containers into confidential VMs.
 
 The commercial traction is early: 398 paid users and a partially verified $2M+ ARR. That is more than most DePIN projects can demonstrate, but it is a very small base for a cloud infrastructure business. The TEE technology is credible and differentiated. Whether Phala converts its compliance positioning into meaningful adoption is the open question.
+
+<div class="grid grid-cols-3 gap-3 my-6">
+  <MetricCard value="398" label="Paid Users" />
+  <MetricCard value="$2M+" label="Annual Recurring Revenue" />
+  <MetricCard value="29,478" label="Network Devices" />
+</div>
 
 ### Other privacy-adjacent projects
 

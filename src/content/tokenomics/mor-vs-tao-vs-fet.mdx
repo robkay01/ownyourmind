@@ -7,20 +7,27 @@ draft: false
 podcastUrl: "/podcast/Own-Your-Mind--TokenomicsMorVsTaoVsFet.mp3"
 ---
 
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import AllocationBar from '../../components/AllocationBar.astro';
+
 ## Why this comparison matters
 
 MOR (Morpheus), TAO (Bittensor) and FET (Fetch.ai / ASI Alliance) represent three fundamentally different approaches to tokenising AI infrastructure. They look similar from the outside. All three are "AI tokens." In practice, their economic models, incentive structures and decentralisation properties are different enough that comparing them reveals what actually matters in DeAI tokenomics.
 
 ## The three models at a glance
 
-| | MOR (Morpheus) | TAO (Bittensor) | FET (ASI Alliance) |
-|---|---|---|---|
-| **Supply cap** | 42 million | 21 million | ~2.72 billion |
-| **Launch** | Fair launch, no pre-mine | Mining launch, early concentration | IEO + seed + private + institutional raises |
-| **Insider allocation** | 0% | None formal, but early mining heavily concentrated | ~50% to founders, foundation and advisors |
-| **Earning mechanism** | Stake stETH, provide compute, contribute code | Mine, validate, stake into subnets (dTAO) | Stake FET, run agents |
-| **Value driver** | Compute access demand + PoL burn | Subnet quality + staking flows + alpha tokens | Agent adoption + staking |
-| **Lock-ups** | 7-day on deposits; Power Factor lock voluntary (up to 6 yrs) | None (liquid on receipt, alpha conversion risk) | 21-day fixed unbonding period |
+<ComparisonTable
+  title="Three token models at a glance"
+  headers={["", "MOR (Morpheus)", "TAO (Bittensor)", "FET (ASI Alliance)"]}
+  rows={[
+    { label: "Supply cap", values: ["42 million", "21 million", "~2.72 billion"] },
+    { label: "Launch", values: ["Fair launch, no pre-mine", "Mining launch, early concentration", "IEO + seed + private + institutional raises"] },
+    { label: "Insider allocation", values: ["0%", "None formal, but early mining heavily concentrated", "~50% to founders, foundation and advisors"] },
+    { label: "Earning mechanism", values: ["Stake stETH, provide compute, contribute code", "Mine, validate, stake into subnets (dTAO)", "Stake FET, run agents"] },
+    { label: "Value driver", values: ["Compute access demand + PoL burn", "Subnet quality + staking flows + alpha tokens", "Agent adoption + staking"] },
+    { label: "Lock-ups", values: ["7-day on deposits; Power Factor lock voluntary (up to 6 yrs)", "None (liquid on receipt, alpha conversion risk)", "21-day fixed unbonding period"] },
+  ]}
+/>
 
 ## MOR: the fair-launch compute token
 
@@ -68,21 +75,52 @@ This is the single most important factor in evaluating DeAI token models. When i
 - **TAO:** No formal insider allocation, but early mining was concentrated among a small group including Polychain, DCG and dao5. Academic analysis shows the top 1% of wallets control ~90% of stake. The effect is similar to insider allocation.
 - **FET/ASI:** ~50% of original FET supply to founders, foundation and advisors. Multiple institutional raises totalling ~$83M. Ocean's conversion of ~263M FET (since recovered via settlement) demonstrates the selling pressure risk from large holders.
 
+**MOR allocation**
+<AllocationBar allocations={[
+  { category: "Community (emissions)", percentage: 100 },
+]} />
+
+**TAO allocation (effective control)**
+<AllocationBar allocations={[
+  { category: "Top 1% wallets (early miners, VCs)", percentage: 90 },
+  { category: "Remaining holders", percentage: 10 },
+]} />
+
+**FET allocation (original)**
+<AllocationBar allocations={[
+  { category: "Founders", percentage: 20 },
+  { category: "Foundation", percentage: 20 },
+  { category: "Advisors", percentage: 10 },
+  { category: "Public / community", percentage: 50 },
+]} />
+
 ### Value accrual mechanism
 
 Where does value flow when the network grows?
 
-- **MOR:** Directly to participants through emissions and Power Factor multiplied rewards. Indirectly to all holders through PoL burn-driven scarcity and growing protocol-owned liquidity.
-- **TAO:** To the most competitive miners and validators. Post-dTAO, stakers earn through alpha token dynamics. Holders benefit from scarcity but passive holding without staking earns nothing.
-- **FET/ASI:** To stakers through staking yields. To the foundation through network fees. To insiders through appreciation of their holdings.
+<ComparisonTable
+  title="Value accrual comparison"
+  headers={["", "MOR", "TAO", "FET/ASI"]}
+  rows={[
+    { label: "Primary beneficiaries", values: ["All participants via emissions + Power Factor rewards", "Competitive miners and validators", "Stakers via yields; foundation via fees"] },
+    { label: "Passive holder value", values: ["PoL burn-driven scarcity + growing protocol-owned liquidity", "Scarcity from halving, but no yield without staking", "Appreciation of insider holdings"] },
+    { label: "Mechanism", values: ["Emissions + structural burn", "Alpha token dynamics + staking flows", "Staking yields + network fees"] },
+  ]}
+/>
 
 ### Practical decentralisation
 
 How decentralised is the network in practice, not marketing?
 
-- **MOR:** High. Four independent contributor groups. No single entity controls emissions or governance in the long term. Bootstrap-phase controls are the main caveat.
-- **TAO:** Moderate. dTAO improved emission allocation by replacing the centralised Root Network with market-driven staking. But governance remains concentrated – Triumvirate of 3 OTF employees, Senate of top validators, and extreme stake concentration (Gini 0.9825).
-- **FET/ASI:** Low. Superintelligence Alliance Ltd is a Singapore-registered company with a formal board. Validator set capped at 70. Ocean's departure exposed that alliance governance is corporate, not community-driven. Tech stacks remain separate platforms despite the merged token.
+<ComparisonTable
+  title="Practical decentralisation"
+  headers={["", "MOR", "TAO", "FET/ASI"]}
+  rows={[
+    { label: "Rating", values: ["High", "Moderate", "Low"] },
+    { label: "Governance", values: ["Four independent contributor groups; no single entity controls long-term", "Triumvirate of 3 OTF employees + Senate of top validators", "Superintelligence Alliance Ltd (Singapore company) with formal board"] },
+    { label: "Key concern", values: ["Bootstrap-phase controls", "Extreme stake concentration (Gini 0.9825)", "Validator set capped at 70; tech stacks remain separate platforms"] },
+  ]}
+/>
 
 ## Which to hold
 
