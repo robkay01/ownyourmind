@@ -29,33 +29,33 @@ DeepSeek R1 delivers roughly 90% of Claude Opus 4's capability at roughly 3% of 
 </PullQuote>
 
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6">
-  <MetricCard value="~3%" label="Cost vs frontier" />
+  <MetricCard value="~4%" label="DeepSeek R1 vs OpenAI o1 cost" />
   <MetricCard value="~90%" label="Capability retained" />
   <MetricCard value="350x" label="Llama 4 vs GPT-4.5 cost gap" />
 </div>
 
-Let me be specific about the numbers because the deltas are absurd. DeepSeek R1 costs $0.55 per million input tokens and $2.19 per million output tokens. OpenAI o1 costs $15 and $60 respectively. That's a 27x difference on input and a 27x difference on output. For a million tokens in and a million tokens out, you're looking at roughly $2.74 with DeepSeek versus $75 with OpenAI o1. [Data Studios comparison](https://www.datastudios.org/post/chatgpt-vs-claude-vs-deepseek-full-report-and-comparison-on-features-capabilities-pricing-and-mo)
+Let me be specific about the numbers because the deltas are significant. DeepSeek R1 costs $0.50 per million input tokens and $2.18 per million output tokens. OpenAI o1 costs $15 and $60 respectively. Claude Opus 4.6 costs $5 and $25 — a major price cut from the previous generation. For a million tokens in and a million tokens out, you are looking at roughly $2.68 with DeepSeek R1 versus $75 with OpenAI o1 versus $30 with Claude Opus 4.6. DeepSeek's unified V3.2 model drops that further to $0.70.
 
 The quality gap is small and shrinking. Developers rank DeepSeek R1 "virtually tied" with OpenAI o3 on technical problem-solving. [SoftwareSeni analysis](https://www.softwareseni.com/ai-model-comparison-2025-deepseek-vs-gpt-4-vs-claude-vs-llama-for-enterprise-use-cases/) confirms it delivers roughly 90% of Claude/GPT-4 capability. You can run it locally. No API calls. No data leaving your infrastructure. No usage limits.
 
 <ComparisonTable
-  title="Model pricing comparison"
+  title="Model pricing comparison (March 2026)"
   headers={["Model", "Input $/1M", "Output $/1M", "Total (1M in + 1M out)"]}
   rows={[
-    { label: "DeepSeek R1", values: ["$0.55", "$2.19", "~$2.74"] },
-    { label: "DeepSeek V3", values: ["$0.14", "$0.28", "$0.42"] },
+    { label: "DeepSeek V3.2", values: ["$0.28", "$0.42", "$0.70"] },
+    { label: "DeepSeek R1", values: ["$0.50", "$2.18", "$2.68"] },
+    { label: "Claude Opus 4.6", values: ["$5.00", "$25.00", "$30.00"] },
     { label: "OpenAI o1", values: ["$15.00", "$60.00", "$75.00"] },
-    { label: "Claude Opus 4", values: ["~$15.00", "~$75.00", "~$90.00"] },
   ]}
 />
 
 <BarChart
   title="Cost per 1M tokens in + 1M out"
   bars={[
-    { label: "Claude Opus 4", value: 90, displayValue: "~$90.00" },
     { label: "OpenAI o1", value: 75, displayValue: "$75.00" },
-    { label: "DeepSeek R1", value: 2.74, displayValue: "$2.74" },
-    { label: "DeepSeek V3", value: 0.42, displayValue: "$0.42" },
+    { label: "Claude Opus 4.6", value: 30, displayValue: "$30.00" },
+    { label: "DeepSeek R1", value: 2.68, displayValue: "$2.68" },
+    { label: "DeepSeek V3.2", value: 0.70, displayValue: "$0.70" },
   ]}
 />
 
