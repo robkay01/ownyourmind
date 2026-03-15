@@ -11,7 +11,7 @@ draft: false
 
 If you searched "Flux GPU mining", I need to update you. Since the PoUW v2 soft fork at block 2,020,000 (October 2025), traditional GPU hash mining no longer works for earning FLUX. Mining pools and GPU mining software are obsolete.
 
-Flux replaced GPU mining with Proof of Nodes. FluxNodes now handle all block production and transaction validation. The rationale was that mining pools posed centralisation risks and provided no direct utility to the network. FluxNodes contribute compute, storage and deployment services — useful work, not hash puzzles.
+Flux replaced GPU mining with Proof of Nodes. FluxNodes now handle all block production and transaction validation. The rationale was that mining pools posed centralisation risks and provided no direct utility to the network. FluxNodes contribute compute, storage and deployment services. Useful work, not hash puzzles.
 
 The way to earn FLUX is now node operation or Titan fractional staking. For the full project assessment, see our [Flux review](/projects/flux/).
 
@@ -41,7 +41,7 @@ Additional requirements across all tiers:
 - UEFI Boot Mode enabled
 - AMD64 (x86-64) architecture only
 - 97%+ uptime
-- NVMe drives strongly recommended — 5x faster than traditional SSDs
+- NVMe drives strongly recommended. They are 5x faster than traditional SSDs
 
 ## Block rewards after PoUW v2
 
@@ -58,7 +58,7 @@ Total daily emissions: approximately 40,320 FLUX. A 10% annual emission reductio
 
 ### Parallel asset bonus
 
-For every 1 FLUX earned in block rewards, node operators earn an additional 0.1 of each parallel asset (FLUX tokens on other chains — Ethereum, BSC, Solana, TRON, Avalanche, Polygon and others). With all parallel assets active, this can potentially double total earnings. Parallel assets swap 1:1 with native FLUX via Fusion.
+For every 1 FLUX earned in block rewards, node operators earn an additional 0.1 of each parallel asset (FLUX tokens on other chains: Ethereum, BSC, Solana, TRON, Avalanche, Polygon and others). With all parallel assets active, this can potentially double total earnings. Parallel assets swap 1:1 with native FLUX via Fusion.
 
 ## Setting up a FluxNode with ArcaneOS
 
@@ -78,7 +78,7 @@ ArcaneOS launched in March 2025 and is mandatory for Progressive Node Rewards (P
 
 **2. Run the installer.** ArcaneOS uses a graphical installer. Configure keyboard, hostname, console user (pre-defined as "console"), networking, and UPnP ports. All disks are encrypted via LVM.
 
-**3. Enrol the Platform Key.** Access UEFI/OVMF firmware to import the Flux Platform Key for Secure Boot. This is a security requirement — ArcaneOS uses a chain of trust during installation.
+**3. Enrol the Platform Key.** Access UEFI/OVMF firmware to import the Flux Platform Key for Secure Boot. This is a security requirement. ArcaneOS uses a chain of trust during installation.
 
 **4. Configure the FluxNode.** Access the web UI from the launch screen. Choose your configuration method: Manual, ZelCore Token, or SSP Token. Enter your wallet details and select your node tier.
 
@@ -95,7 +95,7 @@ ArcaneOS launched in March 2025 and is mandatory for Progressive Node Rewards (P
 ### Limitations
 
 - ArcaneOS focuses on home-based nodes. VPS usage is limited due to Secure Boot constraints.
-- AMD64 only — no ARM support.
+- AMD64 only. No ARM support.
 - VMware v16 is incompatible. Use v17 or Proxmox.
 
 ## Titan fractional staking
@@ -109,7 +109,7 @@ If you do not want to run hardware, Titan lets you stake FLUX and earn rewards f
 | Maximum per FluxID | 40,000 FLUX |
 | Lock periods | 3, 6, or 12 months |
 | Payouts | Twice weekly (Monday and Thursday, ~9:00 AM UTC) |
-| Parallel assets | Not included — native FLUX only |
+| Parallel assets | Not included, native FLUX only |
 
 Longer lock periods yield higher returns and lower fees. Collateral cannot be withdrawn during the lock period. Rewards can be redeemed early only if at least 50 FLUX has accumulated.
 
@@ -121,7 +121,7 @@ Currently 111 active Titan Nodes with approximately 3.8 million FLUX staked.
 
 At current FLUX price (~$0.06), let me work the numbers.
 
-The total daily emission pool is ~40,320 FLUX worth roughly $2,258. Split across approximately 7,835 nodes (Cumulus: 4,488, Nimbus: 1,725, Stratus: 1,622 — check the live dashboard at nodeinfo.app.runonflux.io for current figures):
+The total daily emission pool is ~40,320 FLUX worth roughly $2,258. Split across approximately 7,835 nodes (Cumulus: 4,488, Nimbus: 1,725, Stratus: 1,622; check the live dashboard at nodeinfo.app.runonflux.io for current figures):
 
 - **Cumulus:** The 2,880 FLUX daily Cumulus pool divided across 4,488 Cumulus nodes yields roughly 0.64 FLUX/day (~$0.04). Hardware and hosting costs are not covered.
 - **Nimbus:** The 10,080 FLUX Nimbus pool across 1,725 nodes yields roughly 5.8 FLUX/day (~$0.33). Still below hosting costs.
@@ -133,7 +133,7 @@ The total daily emission pool is ~40,320 FLUX worth roughly $2,258. Split across
 
 ### The real thesis
 
-Node economics at current FLUX prices do not generate positive returns for most operators. This is why the node count has declined from 14,000+ to approximately 7,800 — operators who needed immediate returns have left.
+Node economics at current FLUX prices do not generate positive returns for most operators. This is why the node count has declined from 14,000+ to approximately 7,800. Operators who needed immediate returns have left.
 
 Running a FluxNode makes sense if:
 - You believe FLUX will appreciate significantly from current levels
@@ -145,7 +145,7 @@ It does not make sense if you need current-price returns to cover hardware and h
 
 ## Monitoring and maintenance
 
-Nodes must maintain 97%+ uptime. If you go offline, you miss payout cycles and are sent to the back of the reward queue. No slashing — you just stop earning.
+Nodes must maintain 97%+ uptime. If you go offline, you miss payout cycles and are sent to the back of the reward queue. No slashing. You just stop earning.
 
 ArcaneOS includes built-in monitoring with Discord/Telegram alerts. For external monitoring, UptimeRobot (free tier, 50 monitors) can track your node's API endpoint and web UI.
 

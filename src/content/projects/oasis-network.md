@@ -1,6 +1,6 @@
 ---
 title: "Oasis Network"
-description: "Privacy-first Layer 1 with confidential smart contracts via TEE-powered ParaTimes. ROFL mainnet live, institutional pilot with Franklin Templeton — but TVL still under $1M after five years."
+description: "Privacy-first Layer 1 with confidential smart contracts via TEE-powered ParaTimes. ROFL mainnet live, institutional pilot with Franklin Templeton, but TVL still under $1M after five years."
 category: "data"
 token: "ROSE"
 status: "active"
@@ -26,7 +26,7 @@ launchType: "ico"
 chain: "Oasis Network (own L1)"
 supplyType: "capped"
 maxSupply: "10,000,000,000 ROSE"
-verdict: "The technology works and is finally shipping product — ROFL mainnet, institutional pilots, liquid staking. But TVL peaked at $7.5M then crashed back under $1M. Promising direction, unproven traction."
+verdict: "The technology works and is finally shipping product. ROFL mainnet, institutional pilots, liquid staking. But TVL peaked at $7.5M then crashed back under $1M. Promising direction, unproven traction."
 oymHolds: false
 podcastUrl: "/podcast/Own-Your-Mind-019-Oasis.mp3"
 ---
@@ -53,15 +53,15 @@ Mainnet launched 18 November 2020.
 
 ## Value proposition
 
-Confidential computing that actually works in production. Oasis has been running confidential smart contracts since 2020 – not as a testnet, not as a roadmap item, but as a functioning network processing 25,000-31,000 daily transactions on Sapphire. If you need EVM-compatible privacy today, Sapphire is one of the only production options. Since July 2025, ROFL extends this to off-chain compute — AI inference, oracles, and autonomous agents running inside TEEs with on-chain attestation.
+Confidential computing that actually works in production. Oasis has been running confidential smart contracts since 2020 – not as a testnet, not as a roadmap item, but as a functioning network processing 25,000-31,000 daily transactions on Sapphire. If you need EVM-compatible privacy today, Sapphire is one of the only production options. Since July 2025, ROFL extends this to off-chain compute: AI inference, oracles, and autonomous agents running inside TEEs with on-chain attestation.
 
 The technical approach uses Intel SGX trusted execution environments. Data is encrypted at rest and in transit, and only decrypted inside the hardware enclave. Even the node operators cannot see the data they are processing. Sapphire adds confidential state (the contract's storage is encrypted), end-to-end encryption (data is encrypted from the user's browser to the enclave), and confidential randomness.
 
-The counter-narrative used to write itself as "$288K TVL after five years." That number has moved — Sapphire TVL peaked at $7.5M in April 2025, driven largely by Accumulated Finance's liquid staking protocol (stROSE), which locked 12M+ ROSE. But the peak did not hold. By early 2026, Sapphire TVL had fallen back to around $700K. The trajectory shows the ecosystem can attract capital, but not retain it. Still less TVL than a mid-tier Uniswap pool, though no longer an embarrassment.
+The counter-narrative used to write itself as "$288K TVL after five years." That number has moved. Sapphire TVL peaked at $7.5M in April 2025, driven largely by Accumulated Finance's liquid staking protocol (stROSE), which locked 12M+ ROSE. But the peak did not hold. By early 2026, Sapphire TVL had fallen back to around $700K. The trajectory shows the ecosystem can attract capital, but not retain it. Still less TVL than a mid-tier Uniswap pool, though no longer an embarrassment.
 
 The ICO was in July 2018 at $0.02 per ROSE. The token hit $0.60 in January 2022. It now trades at ~$0.012. ICO investors who held through are at negative 40% ROI after seven years. The token is down 98% from its all-time high.
 
-Two developments shift the picture. First, **ROFL mainnet** (July 2025) moves Oasis from "privacy L1" to "confidential compute platform" — off-chain AI inference, oracles, and autonomous agents running inside TEEs with on-chain verification. This is the right product for the AI-privacy moment, if they can attract builders. Second, the **SemiLiquid institutional pilot** (December 2025) with Franklin Templeton, Zodia Custody, M11Credit, and Presto Labs demonstrated tokenised money-market fund shares used as collateral, with the credit workflow running on Oasis's confidential infrastructure. Oasis's strategic investment arm backed SemiLiquid as its first venture.
+Two developments shift the picture. First, **ROFL mainnet** (July 2025) moves Oasis from "privacy L1" to "confidential compute platform". Off-chain AI inference, oracles, and autonomous agents running inside TEEs with on-chain verification. This is the right product for the AI-privacy moment, if they can attract builders. Second, the **SemiLiquid institutional pilot** (December 2025) with Franklin Templeton, Zodia Custody, M11Credit, and Presto Labs demonstrated tokenised money-market fund shares used as collateral, with the credit workflow running on Oasis's confidential infrastructure. Oasis's strategic investment arm backed SemiLiquid as its first venture.
 
 The privacy compute market may simply not be ready yet. Or Oasis may have failed to capture it despite being first. The ROFL launch and institutional pilot suggest the team has shifted strategy from "build it and they will come" to actively pursuing AI and institutional use cases. The TVL spike-and-crash shows demand exists but retention does not. Whether ROFL and institutional partnerships change this trajectory is the question for 2026.
 
@@ -119,13 +119,13 @@ Oasis has genuine production-ready confidential computing with strong open-sourc
 
 ### Returns Score: 46/100 (D)
 
-**Token Utility: 13/20.** ROSE is used for gas fees across all ParaTimes, PoS staking (minimum 100 ROSE), and governance. ROFL mainnet (July 2025) adds off-chain compute utility — ROFL apps pay gas and attestation fees in ROSE. Accumulated Finance's liquid staking creates additional utility via stROSE. Utility is broadening but ROFL adoption is early-stage.
+**Token Utility: 13/20.** ROSE is used for gas fees across all ParaTimes, PoS staking (minimum 100 ROSE), and governance. ROFL mainnet (July 2025) adds off-chain compute utility. ROFL apps pay gas and attestation fees in ROSE. Accumulated Finance's liquid staking creates additional utility via stROSE. Utility is broadening but ROFL adoption is early-stage.
 
 **Value Accrual: 7/20.** Transaction fees accrue to validators but remain low. Staking rewards come from the 23.5% staking allocation, not protocol revenue. No fee distribution to non-staking holders. No burn mechanism. TVL improved to ~$700K on Sapphire (from $288K) and peaked at $7.5M, but fee generation remains negligible. SemiLiquid institutional pilot could drive institutional transaction volume, but is pre-revenue. Marginal improvement.
 
 **Supply Dynamics: 14/20.** 10B fixed max supply with 75% circulating – the most mature supply profile in DeAI. FDV/mcap ratio of 1.33x means minimal remaining dilution. Most insider vesting near completion. No burn but also no meaningful inflation beyond declining staking emissions. Strong supply dynamics in a project with limited adoption.
 
-**Revenue Sustainability: 5/25.** Still near-zero protocol revenue after 5+ years of mainnet operation. TVL peaked at $7.5M (April 2025) via Accumulated Finance liquid staking but fell back to under $1M. The SemiLiquid pilot with Franklin Templeton and Zodia Custody demonstrates institutional interest in confidential infrastructure for RWA collateral — a plausible revenue pathway. ROFL positions Oasis for the AI-privacy compute market. Score raised from 3 to reflect genuine strategic progress, but revenue remains aspirational.
+**Revenue Sustainability: 5/25.** Still near-zero protocol revenue after 5+ years of mainnet operation. TVL peaked at $7.5M (April 2025) via Accumulated Finance liquid staking but fell back to under $1M. The SemiLiquid pilot with Franklin Templeton and Zodia Custody demonstrates institutional interest in confidential infrastructure for RWA collateral, a plausible revenue pathway. ROFL positions Oasis for the AI-privacy compute market. Score raised from 3 to reflect genuine strategic progress, but revenue remains aspirational.
 
 **Liquidity & Access: 7/15.** Listed on Binance, Coinbase, KuCoin, Bybit, MEXC, Gate.io. Daily volume ~$6M. Good exchange coverage for tier-1 and tier-2 CEXs. Volume has declined from prior levels; market cap (~$89M) is low relative to these listings.
 

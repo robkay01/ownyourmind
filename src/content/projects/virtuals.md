@@ -1,6 +1,6 @@
 ---
 title: "Virtuals Protocol"
-description: "Virtuals Protocol review — multi-chain AI agent launchpad on Base, Solana and Ronin. Tokenomics, buyback-and-burn, Unicorn launch system, VIRTUAL token, Freedom Score and honest assessment."
+description: "Virtuals Protocol review. Multi-chain AI agent launchpad on Base, Solana and Ronin. Tokenomics, buyback-and-burn, Unicorn launch system, VIRTUAL token, Freedom Score and honest assessment."
 category: "agent"
 token: "VIRTUAL"
 status: "active"
@@ -109,7 +109,7 @@ The handling of the January 2025 smart contract vulnerability raises governance 
 
 Smart contracts on Base are upgradeable (noted in the Cantina audit), meaning the team can modify contract behaviour. Base itself runs on a centralised sequencer operated by Coinbase, adding another layer of centralisation beneath the protocol.
 
-The competitive landscape is challenging. Free, open-source frameworks (LangChain, CrewAI, AutoGPT) offer comparable agent capabilities. [Olas](/projects/autonolas/) provides a more decentralised agent protocol. [ElizaOS](/projects/elizaos/) competes for developer mindshare on Solana — the same chain Virtuals now operates on. The multi-chain expansion broadens the addressable market but also multiplies the competitive surface.
+The competitive landscape is challenging. Free, open-source frameworks (LangChain, CrewAI, AutoGPT) offer comparable agent capabilities. [Olas](/projects/autonolas/) provides a more decentralised agent protocol. [ElizaOS](/projects/elizaos/) competes for developer mindshare on Solana, the same chain Virtuals now operates on. The multi-chain expansion broadens the addressable market but also multiplies the competitive surface.
 
 The ~86% decline from ATH reflects market scepticism about the sustainability of the agent launchpad model. The buyback-and-burn and Unicorn launch system are structural improvements, but they do not change the underlying dependency on narrative-driven speculation. If agent utility does not improve beyond speculative token trading, these mechanisms defer the problem rather than solve it.
 
@@ -157,6 +157,6 @@ VIRTUAL scores 68/100 (C grade). Full methodology at [Returns Score Methodology]
 
 Three changes would materially increase Virtuals' returns score:
 
-1. **Demonstrate cycle-independent revenue.** The buyback-and-burn and community rewards programmes are positive steps, but the 97% revenue collapse from early 2025 remains the defining data point. Revenue that persists through a market downturn — from productive agent activity, ACP transaction fees, or enterprise use cases — would fundamentally change the investment thesis. The multi-chain infrastructure is in place; the revenue model needs to prove resilience.
+1. **Demonstrate cycle-independent revenue.** The buyback-and-burn and community rewards programmes are positive steps, but the 97% revenue collapse from early 2025 remains the defining data point. Revenue that persists through a market downturn (from productive agent activity, ACP transaction fees, or enterprise use cases) would fundamentally change the investment thesis. The multi-chain infrastructure is in place; the revenue model needs to prove resilience.
 2. **Publish transparent agent quality metrics.** The 18,000+ agent count is a vanity metric when the vast majority are inactive. Publishing daily active agents, inference calls, ACP transactions, and revenue per agent would let the market distinguish between ecosystem quantity and quality. The Unicorn launch system is a start, but the market needs data to price conviction accurately.
 3. **Decentralise or open-source the GAME inference engine.** The centralised inference layer is both a freedom deficit and a returns risk. If Virtuals' servers go down, every agent stops functioning and the token's utility evaporates. A permissionless inference provider network would reduce single-point-of-failure risk, which is ultimately a returns consideration as much as a decentralisation one.

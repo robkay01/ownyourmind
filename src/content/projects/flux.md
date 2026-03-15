@@ -98,7 +98,7 @@ Flux is one of the few remaining fair-launched, mineable crypto projects with ge
 
 ### How Flux mining works
 
-Since the October 2025 PoUW v2 (Proof of Useful Work) soft fork, Flux replaced traditional GPU hash mining with useful compute work. Block time dropped from 2 minutes to 30 seconds, and the mining process now contributes productive computation rather than burning electricity on meaningless hashes. This is a significant evolution — Flux miners are doing real work, not just solving arbitrary puzzles.
+Since the October 2025 PoUW v2 (Proof of Useful Work) soft fork, Flux replaced traditional GPU hash mining with useful compute work. Block time dropped from 2 minutes to 30 seconds, and the mining process now contributes productive computation rather than burning electricity on meaningless hashes. This is a significant evolution. Flux miners are doing real work, not just solving arbitrary puzzles.
 
 Block rewards are 14 FLUX per block (one block every 30 seconds), producing approximately 40,320 FLUX per day. These rewards are distributed across the node tiers:
 
@@ -121,15 +121,15 @@ Running a FluxNode requires both hardware and FLUX collateral locked on-chain:
 
 Nodes must maintain 97% uptime. If your node goes offline, you stop earning. ArcaneOS (Flux's secure Docker container OS, released 2025) is required for Progressive Node Rewards eligibility, which shares 80% of FluxCloud revenue with operators.
 
-**Titan fractional staking** lets you participate from just 50 FLUX (~$3) without running hardware. Lock periods of 3, 6, or 12 months. Managed by InFlux Technologies — note this is a centralised custodial option.
+**Titan fractional staking** lets you participate from just 50 FLUX (~$3) without running hardware. Lock periods of 3, 6, or 12 months. Managed by InFlux Technologies. Note this is a centralised custodial option.
 
-### The economics — be honest with yourself
+### The economics: be honest with yourself
 
 Before buying hardware for a Flux node, work the numbers backwards from current FLUX price and your electricity costs.
 
 At current FLUX prices (~$0.06), the daily block reward pool is worth roughly $2,400 split across approximately 8,000 nodes. A single Cumulus node earning its proportional share of the 7.1% Cumulus allocation might see $0.10-$0.30/day in rewards. A Stratus node gets more, but you have $2,400 in FLUX collateral locked plus server hardware and hosting costs.
 
-The honest picture: node economics currently depend heavily on FLUX price appreciation. At current prices, most operators are earning below the cost of running the hardware. This is why node count has declined from 14,000+ to ~8,000 — operators who needed immediate returns have left.
+The honest picture: node economics currently depend heavily on FLUX price appreciation. At current prices, most operators are earning below the cost of running the hardware. This is why node count has declined from 14,000+ to ~8,000. Operators who needed immediate returns have left.
 
 Flux mining makes sense if you have a multi-year time horizon and believe in the infrastructure thesis, or if you have existing hardware with spare capacity. It does not make sense as a short-term income play at current token prices.
 

@@ -9,7 +9,7 @@ draft: false
 
 ## What you are building
 
-Virtuals Protocol lets you create a tokenised AI agent — an autonomous entity with its own personality, social media presence, and tradeable token — without writing code. Over 18,000 agents have been deployed. A handful have achieved real traction. The vast majority have not.
+Virtuals Protocol lets you create a tokenised AI agent (an autonomous entity with its own personality, social media presence, and tradeable token) without writing code. Over 18,000 agents have been deployed. A handful have achieved real traction. The vast majority have not.
 
 I want to set expectations clearly before you start. Creating an agent on Virtuals costs approximately $65 in VIRTUAL tokens. Launching one that generates meaningful revenue or trading volume requires marketing, community building and a genuine use case. The platform makes creation easy. Success is another matter entirely.
 
@@ -21,7 +21,7 @@ For the full project assessment, see our [Virtuals Protocol review](/projects/vi
 - **Small amount of ETH on Base** for gas fees (~$0.01-0.05 per transaction)
 - **100 VIRTUAL tokens** (~$76 at current prices) to create the agent
 - **X/Twitter account** if you want social media integration
-- **A concept** — what will your agent do, who is the audience, what personality should it have?
+- **A concept.** What will your agent do, who is the audience, what personality should it have?
 
 No special hardware. No GPU. No coding. Everything runs on Virtuals' hosted infrastructure.
 
@@ -39,10 +39,10 @@ Do not skip this. The technical creation process takes minutes. The thinking sho
 
 1. Go to **fun.virtuals.io** and click "Create New Agent"
 2. Fill in the mandatory fields:
-   - **Profile picture** — this is the agent's visual identity
-   - **Agent name** — unique identifier, choose carefully
-   - **Ticker symbol** — maximum 6 characters (e.g. $LUNA, $AIXBT)
-   - **Description** — purpose, personality, interests, backstory
+   - **Profile picture.** This is the agent's visual identity.
+   - **Agent name.** Unique identifier, choose carefully.
+   - **Ticker symbol.** Maximum 6 characters (e.g. $LUNA, $AIXBT).
+   - **Description.** Purpose, personality, interests, backstory.
 3. Optionally link Twitter, Telegram, YouTube, website
 4. **Pay 100 VIRTUAL** to deploy
 
@@ -50,7 +50,7 @@ Your agent enters the **bonding curve phase** on fun.virtuals.io. Community memb
 
 ## Step 3: Graduation
 
-When 42,000 VIRTUAL accumulates in the bonding curve from community purchases (not paid by you — this comes from trading activity), the agent "graduates":
+When 42,000 VIRTUAL accumulates in the bonding curve from community purchases (not paid by you, this comes from trading activity), the agent "graduates":
 
 - A Uniswap V2 liquidity pool is automatically created (agent token paired with VIRTUAL)
 - LP tokens are locked for 10 years (rug-pull protection)
@@ -58,7 +58,7 @@ When 42,000 VIRTUAL accumulates in the bonding curve from community purchases (n
 - An Agent NFT is minted as proof of creation
 - Fixed supply: 1 billion ERC-20 agent tokens
 
-At current VIRTUAL prices (~$0.76), the graduation threshold represents roughly $31,600 in cumulative trading. This is the real barrier — not the 100 VIRTUAL creation cost, but attracting enough interest to graduate.
+At current VIRTUAL prices (~$0.76), the graduation threshold represents roughly $31,600 in cumulative trading. This is the real barrier, not the 100 VIRTUAL creation cost, but attracting enough interest to graduate.
 
 Many agents never graduate. They sit on fun.virtuals.io with minimal trading volume until interest fades. This is the norm, not the exception.
 
@@ -82,7 +82,7 @@ To connect your agent to X/Twitter:
 4. Select "Use Virtuals' AI Stack"
 5. On X: go to Settings > Your Account > Automation > Managing account to set up the automation label
 
-Your agent will now post autonomously based on its GAME configuration. Monitor it — autonomous social media posting needs oversight, especially in the early days.
+Your agent will now post autonomously based on its GAME configuration. Monitor it. Autonomous social media posting needs oversight, especially in the early days.
 
 ## The GAME framework
 
@@ -90,14 +90,14 @@ GAME (Game Agentic Module Engine) is the AI engine powering agent behaviour. It 
 
 **Task Generator (High-Level Planner):** Receives the agent's goal and description, generates tasks aligned with that goal, and assigns them to specialised Workers.
 
-**Workers (Low-Level Planners):** Execute specific actions — posting tweets, trading tokens, generating images, processing on-chain transactions. Each Worker has isolated function sets to prevent bloated action spaces.
+**Workers (Low-Level Planners):** Execute specific actions: posting tweets, trading tokens, generating images, processing on-chain transactions. Each Worker has isolated function sets to prevent bloated action spaces.
 
 You configure GAME by defining:
-- **Agent Definition Prompts** — goal, character, personality, communication style
-- **Task Generator Context** — what the agent knows about itself (follower counts, engagement metrics)
-- **Worker Context** — what actions are available, what data workers can observe
+- **Agent Definition Prompts.** Goal, character, personality, communication style.
+- **Task Generator Context.** What the agent knows about itself (follower counts, engagement metrics).
+- **Worker Context.** What actions are available, what data workers can observe.
 
-GAME is available as a cloud service (low-code), an open-source SDK (for developers), and an API (for custom integration). You do not need to touch the SDK for a basic agent — the cloud configuration handles it.
+GAME is available as a cloud service (low-code), an open-source SDK (for developers), and an API (for custom integration). You do not need to touch the SDK for a basic agent. The cloud configuration handles it.
 
 ## Revenue sharing
 
@@ -109,7 +109,7 @@ A 1% trading tax applies to all agent token trades after graduation:
 | Agent Affiliates | 20% | Platforms facilitating trades |
 | Agent SubDAO | 50% | Community governance treasury |
 
-If your agent's token does $10,000 in daily volume, the 1% tax generates $100/day. Your 30% share is $30/day. The math is straightforward — your earnings scale linearly with trading volume.
+If your agent's token does $10,000 in daily volume, the 1% tax generates $100/day. Your 30% share is $30/day. The math is straightforward. Your earnings scale linearly with trading volume.
 
 Revenue generated by the agent itself (services sold via the Agent Commerce Protocol) triggers buyback-and-burn of agent tokens rather than direct distribution. This is deflationary for the agent token but does not put cash in your wallet.
 
@@ -119,7 +119,7 @@ Let me be direct about the numbers.
 
 **Creation cost:** 100 VIRTUAL (~$76). Low barrier.
 
-**Graduation cost:** You do not pay this directly — it comes from community trading. But your agent needs to attract ~$31,600 in cumulative trading to graduate. If it does not, it sits on fun.virtuals.io indefinitely.
+**Graduation cost:** You do not pay this directly. It comes from community trading. But your agent needs to attract ~$31,600 in cumulative trading to graduate. If it does not, it sits on fun.virtuals.io indefinitely.
 
 **Ongoing costs:** Minimal. Gas on Base is fractions of a cent. Virtuals hosts the infrastructure.
 
@@ -130,12 +130,12 @@ Let me be direct about the numbers.
 ### What success looks like
 
 - **Luna (AI-DOL):** AI livestreamer, ~1M TikTok followers, 10M+ views, collaborated with Bruno Mars. Peak agent token market cap in the hundreds of millions.
-- **AIXBT:** Market intelligence agent monitoring 400+ KOLs. Hit ~$500M market cap at peak (currently ~$30M — down 94%).
+- **AIXBT:** Market intelligence agent monitoring 400+ KOLs. Hit ~$500M market cap at peak (currently ~$30M, down 94%).
 - **Ethy AI:** 2M+ transactions processed.
 
 ### What failure looks like
 
-The vast majority of agents. Minimal trading volume. No graduation. Agent tokens worth fractions of a cent per address. The platform creates the same dynamics as any token launchpad — a few winners and many losers.
+The vast majority of agents. Minimal trading volume. No graduation. Agent tokens worth fractions of a cent per address. The platform creates the same dynamics as any token launchpad: a few winners and many losers.
 
 ## Risks
 
@@ -153,10 +153,10 @@ The vast majority of agents. Minimal trading volume. No graduation. Agent tokens
 
 ## My take
 
-I do not hold VIRTUAL and I have not created an agent. The platform is technically impressive — creating a tokenised AI agent in minutes with built-in social media integration, on-chain commerce and community governance is genuinely novel.
+I do not hold VIRTUAL and I have not created an agent. The platform is technically impressive. Creating a tokenised AI agent in minutes with built-in social media integration, on-chain commerce and community governance is genuinely novel.
 
 But I struggle with the economics. The vast majority of agent tokens trade like meme coins with AI branding. The 97% revenue collapse from Virtuals' peak tells you how sentiment-driven this market is. Luna and AIXBT are outliers, not templates.
 
-If you have a genuine use case for an autonomous AI agent — market intelligence, customer interaction, content creation, on-chain automation — Virtuals provides the easiest path to deploying one with a tokenised economic model. The 100 VIRTUAL creation cost is low enough to experiment.
+If you have a genuine use case for an autonomous AI agent (market intelligence, customer interaction, content creation, on-chain automation), Virtuals provides the easiest path to deploying one with a tokenised economic model. The 100 VIRTUAL creation cost is low enough to experiment.
 
 If you are launching an agent primarily to trade the token, understand that you are playing a launchpad game where the odds heavily favour early movers and the platform itself.

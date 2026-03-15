@@ -20,7 +20,7 @@ This is what a sovereign AI agent stack looks like in practice.
 - Basic terminal and Docker familiarity
 - Approximately 30 minutes
 
-I run this on both a RackNerd VPS in Texas and locally on my Mac Studio. The VPS gives me 24/7 uptime for persistent tasks. Local gives me faster iteration and full sovereignty over the inference layer when I point it at Ollama. You can start with either — or run both.
+I run this on both a RackNerd VPS in Texas and locally on my Mac Studio. The VPS gives me 24/7 uptime for persistent tasks. Local gives me faster iteration and full sovereignty over the inference layer when I point it at Ollama. You can start with either, or run both.
 
 ## Step 1: Set up the VPS (if using one)
 
@@ -61,8 +61,8 @@ Agent Zero uses four separate model roles. Each can point at a different provide
 
 | Role | What it does | Recommended model |
 |------|-------------|-------------------|
-| **Chat model** | Main reasoning — the brain that handles your tasks, plans steps, writes code | Largest model you can afford (llama-3.3-70b on Venice, or GPT-4o) |
-| **Utility model** | Background tasks — summarisation, formatting, tool output parsing | Smaller/cheaper model is fine (llama-3.3-70b or a 7B model locally) |
+| **Chat model** | Main reasoning. The brain that handles your tasks, plans steps, writes code | Largest model you can afford (llama-3.3-70b on Venice, or GPT-4o) |
+| **Utility model** | Background tasks: summarisation, formatting, tool output parsing | Smaller/cheaper model is fine (llama-3.3-70b or a 7B model locally) |
 | **Browser model** | Reads and interprets web pages when the agent browses | Needs decent comprehension (llama-3.3-70b works well) |
 | **Embedding model** | Converts text to vectors for memory retrieval and RAG | Dedicated embedding model (text-embedding-bge-m3 on Venice, or nomic-embed-text locally) |
 
@@ -108,7 +108,7 @@ EMBEDDING_API_KEY=not-needed
 EMBEDDING_MODEL=nomic-embed-text
 ```
 
-For a fully local setup, point all four roles at Ollama. For a fully sovereign setup on Venice, use Venice for all four — your prompts are anonymised through their proxy and nothing is stored. See our [Venice review](/projects/venice/) for the full privacy model assessment, including the distinction between anonymisation and confidentiality.
+For a fully local setup, point all four roles at Ollama. For a fully sovereign setup on Venice, use Venice for all four. Your prompts are anonymised through their proxy and nothing is stored. See our [Venice review](/projects/venice/) for the full privacy model assessment, including the distinction between anonymisation and confidentiality.
 
 The embedding model is the one people most often misconfigure. It must be an embedding model, not a chat model. Venice offers `text-embedding-bge-m3`. For Ollama, pull `nomic-embed-text` with `ollama pull nomic-embed-text`.
 
@@ -146,7 +146,7 @@ This is a simple example. Agent Zero can handle multi-step tasks including web r
 
 ## Step 5: Connect to Morpheus compute (optional)
 
-Instead of using Venice's hosted API, you can route inference through the [Morpheus compute network](/projects/morpheus/). This means your agent's inference requests are served by decentralised compute providers earning MOR tokens. See our [Morpheus Lumerin Node tutorial](/build/morpheus-lumerin-node-setup/) if you want to run the other side of this — providing compute rather than consuming it.
+Instead of using Venice's hosted API, you can route inference through the [Morpheus compute network](/projects/morpheus/). This means your agent's inference requests are served by decentralised compute providers earning MOR tokens. See our [Morpheus Lumerin Node tutorial](/build/morpheus-lumerin-node-setup/) if you want to run the other side of this, providing compute rather than consuming it.
 
 The Morpheus compute endpoint works as an OpenAI-compatible API. Update your `.env`:
 
@@ -182,7 +182,7 @@ docker compose up -d --build
 | Venice AI | High (encrypted, no logging) | Fast | Per-token pricing | High |
 | Morpheus compute | High | Moderate | MOR per request | Complete |
 
-I use all three depending on the task. Local Ollama on my Mac Studio for sensitive work and rapid iteration — the prompt never leaves my machine. Venice for tasks that need larger models than my hardware supports, or when I want uncensored output. Morpheus compute when I want to test the network and contribute to demand. Running Agent Zero on both a VPS and locally means I can keep persistent agents running remotely while experimenting freely on my local instance.
+I use all three depending on the task. Local Ollama on my Mac Studio for sensitive work and rapid iteration. The prompt never leaves my machine. Venice for tasks that need larger models than my hardware supports, or when I want uncensored output. Morpheus compute when I want to test the network and contribute to demand. Running Agent Zero on both a VPS and locally means I can keep persistent agents running remotely while experimenting freely on my local instance.
 
 ## What the agent can do
 

@@ -1,6 +1,6 @@
 ---
 title: "Aethir"
-description: "Aethir review — enterprise GPU compute network for AI and cloud gaming. Aethir node setup, ATH token, $127.8M revenue, Freedom Score and honest assessment."
+description: "Aethir review. Enterprise GPU compute network for AI and cloud gaming. Aethir node setup, ATH token, $127.8M revenue, Freedom Score and honest assessment."
 category: "compute"
 token: "ATH"
 status: "active"
@@ -39,11 +39,11 @@ The network runs through three roles. **Containers** execute the actual compute 
 
 Founded by Daniel Wang (CEO, ex-Riot Games COO/Head of International Publishing, ex-IVC Partner) and Mark Rydon (CSO, ex-Bechtel Corporation). CTO Kyle Okamoto came from Ericsson (CEO of IoT/Automotive/Security division) and Verizon Media (Chief Network Officer). Headquartered in Singapore. The team's background is enterprise infrastructure and gaming, not crypto-native. This shows in the product – it is built to sell GPU compute to enterprises, not to maximise decentralisation.
 
-Token launched 12 June 2024. The network claims 440,000+ GPU containers across 94 countries serving 150+ enterprise clients. In July 2025, ATH expanded to the Solana blockchain via LayerZero and Stargate bridging, enabling enterprise clients to purchase compute directly on Solana — a logical move given the concentration of AI agent builders (ai16z, elizaOS) in that ecosystem.
+Token launched 12 June 2024. The network claims 440,000+ GPU containers across 94 countries serving 150+ enterprise clients. In July 2025, ATH expanded to the Solana blockchain via LayerZero and Stargate bridging, enabling enterprise clients to purchase compute directly on Solana, a logical move given the concentration of AI agent builders (ai16z, elizaOS) in that ecosystem.
 
 ## Value proposition
 
-Revenue. Aethir claims $127.8 million in total revenue for 2025 (January–December). The annualised run rate figures require scrutiny: Aethir's own Q3 blog post states $166 million ARR, but a separate enterprise growth post gives $147 million ARR — which is simply Q3's $39.8 million multiplied by four. The gap suggests the $166 million figure includes contracted recurring revenue beyond simple quarterly annualisation, but neither figure is independently verifiable. If even the lower number is accurate, this makes Aethir the highest-revenue project in the entire DeAI space by a significant margin. For context, [Akash](/projects/akash/) generates roughly $3.15 million annually. [Render](/projects/render/) is in a similar range.
+Revenue. Aethir claims $127.8 million in total revenue for 2025 (January–December). The annualised run rate figures require scrutiny: Aethir's own Q3 blog post states $166 million ARR, but a separate enterprise growth post gives $147 million ARR, which is simply Q3's $39.8 million multiplied by four. The gap suggests the $166 million figure includes contracted recurring revenue beyond simple quarterly annualisation, but neither figure is independently verifiable. If even the lower number is accurate, this makes Aethir the highest-revenue project in the entire DeAI space by a significant margin. For context, [Akash](/projects/akash/) generates roughly $3.15 million annually. [Render](/projects/render/) is in a similar range.
 
 The enterprise sales motion is the differentiator. Where Akash runs a permissionless marketplace and lets providers compete in reverse auctions, Aethir operates more like a traditional cloud sales organisation that happens to source GPUs from a distributed network. This is why the revenue numbers are large – enterprise contracts with committed capacity, not spot pricing.
 
@@ -51,7 +51,7 @@ The counter-narrative is straightforward: **these revenue figures are entirely s
 
 The 440,000 GPU containers figure is similarly unverifiable. There is a dashboard at dashboard.aethir.com but the underlying data comes from Aethir's own systems. Without open-source code or on-chain attestation, every metric is self-certified.
 
-For the sovereignty thesis, Aethir offers very little. The code is closed source. The token contract has an admin multisig that can mint new tokens and manage a whitelist. Governance is no longer undocumented — Aethir announced a four-phase governance roadmap in late 2024 (development, community education, beta testing, full launch) with a governance committee comprising compute providers, validators, and ATH stakers. Full decentralised governance was targeted for Q1 2026, though as of March 2026 there is no confirmation that the full launch has completed. Even with governance arriving, you are still renting GPUs from a centralised enterprise that distributes hardware geographically — which is useful, but not meaningfully different from renting from AWS except that the infrastructure providers are more varied.
+For the sovereignty thesis, Aethir offers very little. The code is closed source. The token contract has an admin multisig that can mint new tokens and manage a whitelist. Governance is no longer undocumented. Aethir announced a four-phase governance roadmap in late 2024 (development, community education, beta testing, full launch) with a governance committee comprising compute providers, validators, and ATH stakers. Full decentralised governance was targeted for Q1 2026, though as of March 2026 there is no confirmation that the full launch has completed. Even with governance arriving, you are still renting GPUs from a centralised enterprise that distributes hardware geographically, which is useful, but not meaningfully different from renting from AWS except that the infrastructure providers are more varied.
 
 ## Tokenomics
 
@@ -68,7 +68,7 @@ Total supply is 42 billion ATH. Distribution:
 - **Advisors:** 5%
 - **Public/private sale:** 0.17%
 
-In October 2025, the Aethir Foundation redirected 1.26 billion ATH tokens originally earmarked for the Season 3 Cloud Drop airdrop into a new **Digital Asset Treasury (DAT)**. The DAT functions as a strategic compute reserve: it buys ATH on-market, stakes them to onboard new GPU hosts, books compute on the platform, sells that compute for dollars, and uses the proceeds to buy more ATH. The tokens cannot be distributed directly or sold on open markets. Predictive Oncology (NASDAQ: POAI) separately announced a $344 million private investment in ATH for its own DAT-based Strategic Compute Reserve — a noteworthy institutional endorsement, though the relationship between the two DAT structures is unclear.
+In October 2025, the Aethir Foundation redirected 1.26 billion ATH tokens originally earmarked for the Season 3 Cloud Drop airdrop into a new **Digital Asset Treasury (DAT)**. The DAT functions as a strategic compute reserve: it buys ATH on-market, stakes them to onboard new GPU hosts, books compute on the platform, sells that compute for dollars, and uses the proceeds to buy more ATH. The tokens cannot be distributed directly or sold on open markets. Predictive Oncology (NASDAQ: POAI) separately announced a $344 million private investment in ATH for its own DAT-based Strategic Compute Reserve, a noteworthy institutional endorsement, though the relationship between the two DAT structures is unclear.
 
 Circulating supply sits at roughly 17.5 billion ATH (41.6% of max). That means 58.4% of supply is still locked or vesting. The compute provider allocation alone – 21 billion tokens – will continue entering circulation for years. Team tokens started unlocking in December 2025 and vest daily until December 2028.
 
@@ -78,7 +78,7 @@ Staking exists across three pools: Gaming, AI, and EigenLayer pre-deposits. Lock
 
 Token contract is on Ethereum mainnet (0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B) with operations and rewards on Arbitrum. The contract is verified on Etherscan – Solidity v0.8.18, ERC-20 with minting capabilities and whitelist management controlled by an admin multisig. That multisig can mint new tokens. This is not a decentralised token.
 
-Listed on OKX, Bybit, KuCoin, Bitget, Gate.io, MEXC, and others. Coinbase listed ATH in March 2025, adding tier-1 exchange access. ATH was also added to Binance Alpha — a pre-listing token selection pool, not a full exchange listing — with a community Vote to List campaign in April 2025. As of March 2026, ATH is not listed on Binance for spot trading. Daily volume around $32 million, which is healthy. 52,443 holders on Ethereum, 137,452 on Arbitrum.
+Listed on OKX, Bybit, KuCoin, Bitget, Gate.io, MEXC, and others. Coinbase listed ATH in March 2025, adding tier-1 exchange access. ATH was also added to Binance Alpha (a pre-listing token selection pool, not a full exchange listing) with a community Vote to List campaign in April 2025. As of March 2026, ATH is not listed on Binance for spot trading. Daily volume around $32 million, which is healthy. 52,443 holders on Ethereum, 137,452 on Arbitrum.
 
 ## How to participate
 
@@ -96,7 +96,7 @@ Aethir scores among the lowest Freedom Scores on this site. Here is why:
 
 **Infrastructure Decentralisation: 9/20.** The hardware is geographically distributed – 440,000 containers across 94 countries is genuine breadth. But all protocol logic, container management, and indexing is controlled by Aethir. The code is closed source. You cannot run an independent indexer or checker without Aethir's permission.
 
-**Governance Decentralisation: 4/20.** A four-phase governance roadmap was published in late 2024, with a committee structure comprising compute providers, validators, and ATH stakers. Governance areas include product direction, network parameters, token economics, and staking rewards. Full launch was targeted for Q1 2026 but as of March 2026 there is no confirmation that decentralised governance is live — no on-chain voting, no verifiable community proposals. The DAO Treasury holds 7.5% of supply. Score remains at 4 until governance is demonstrably operational, not just roadmapped.
+**Governance Decentralisation: 4/20.** A four-phase governance roadmap was published in late 2024, with a committee structure comprising compute providers, validators, and ATH stakers. Governance areas include product direction, network parameters, token economics, and staking rewards. Full launch was targeted for Q1 2026 but as of March 2026 there is no confirmation that decentralised governance is live. No on-chain voting, no verifiable community proposals. The DAO Treasury holds 7.5% of supply. Score remains at 4 until governance is demonstrably operational, not just roadmapped.
 
 **Token Distribution Fairness: 5/15.** 50% to compute providers is structurally positive but 29% goes to team, investors, and advisors. The node sale raised $148 million from an unknown number of unique buyers – concentration risk is unassessable. Public sale was 0.17%.
 
@@ -114,13 +114,13 @@ Aethir scores among the lowest Freedom Scores on this site. Here is why:
 
 **Supply Dynamics: 8/20.** 42 billion max supply with only 41.6% circulating. 50% allocated to compute providers vesting over years represents sustained dilution pressure. Team tokens vesting until December 2028. No burn mechanism. The FDV-to-market-cap ratio of 2.4x quantifies the dilution ahead. Score capped low given the combination of heavy remaining emissions and no offsetting burns.
 
-**Revenue Sustainability: 17/25.** If the self-reported figures are accurate, $127.8 million in total 2025 revenue from 150+ enterprise clients represents genuine product-market fit at a scale no other DeAI project approaches. The ARR figure is inconsistent across Aethir's own publications — $166 million in the Q3 results post versus $147 million in the enterprise growth post (the latter being Q3's $39.8 million simply annualised). Neither figure is independently verified — not on DeFiLlama, not on Token Terminal, not verifiable on-chain. The DAT mechanism adds a wrinkle: if the DAT is booking compute on Aethir's own platform using redirected airdrop tokens, some portion of reported revenue may be self-referential. Score reflects strong claimed revenue tempered by verification gap and ARR inconsistency.
+**Revenue Sustainability: 17/25.** If the self-reported figures are accurate, $127.8 million in total 2025 revenue from 150+ enterprise clients represents genuine product-market fit at a scale no other DeAI project approaches. The ARR figure is inconsistent across Aethir's own publications. $166 million in the Q3 results post versus $147 million in the enterprise growth post (the latter being Q3's $39.8 million simply annualised). Neither figure is independently verified. Not on DeFiLlama, not on Token Terminal, not verifiable on-chain. The DAT mechanism adds a wrinkle: if the DAT is booking compute on Aethir's own platform using redirected airdrop tokens, some portion of reported revenue may be self-referential. Score reflects strong claimed revenue tempered by verification gap and ARR inconsistency.
 
-**Liquidity & Access: 12/15.** Listed on OKX, Bybit, KuCoin, Bitget, Gate.io, Coinbase (March 2025), and several others. Binance Alpha pre-listing pool inclusion (not a full spot listing) with a Vote to List campaign in April 2025 — as of March 2026, not listed on Binance for spot trading. $32 million daily volume provides reasonable entry and exit for most position sizes. The Coinbase addition brings genuine tier-1 access that was previously absent. Score raised from 11 to reflect Coinbase listing.
+**Liquidity & Access: 12/15.** Listed on OKX, Bybit, KuCoin, Bitget, Gate.io, Coinbase (March 2025), and several others. Binance Alpha pre-listing pool inclusion (not a full spot listing) with a Vote to List campaign in April 2025. As of March 2026, not listed on Binance for spot trading. $32 million daily volume provides reasonable entry and exit for most position sizes. The Coinbase addition brings genuine tier-1 access that was previously absent. Score raised from 11 to reflect Coinbase listing.
 
 ### Quadrant: C (Low Freedom, Moderate Returns)
 
-Aethir sits firmly in Quadrant C – potentially profitable but centralised. The revenue story is compelling if verified. The freedom story is improving — governance is finally being documented — but remains weak. This is an enterprise GPU business with a token, and governance window-dressing does not change the fundamental architecture.
+Aethir sits firmly in Quadrant C – potentially profitable but centralised. The revenue story is compelling if verified. The freedom story is improving (governance is finally being documented) but remains weak. This is an enterprise GPU business with a token, and governance window-dressing does not change the fundamental architecture.
 
 ### Key risks
 

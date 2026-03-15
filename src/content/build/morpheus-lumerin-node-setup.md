@@ -9,7 +9,7 @@ draft: false
 
 ## What you are building
 
-A Morpheus Lumerin node turns your hardware into a decentralised AI inference provider. You host an AI model, register on-chain, and serve prompts to consumers who pay in MOR. The proxy-router handles encrypted P2P routing between you and consumers — prompts and responses never touch the blockchain or any centralised relay.
+A Morpheus Lumerin node turns your hardware into a decentralised AI inference provider. You host an AI model, register on-chain, and serve prompts to consumers who pay in MOR. The proxy-router handles encrypted P2P routing between you and consumers. Prompts and responses never touch the blockchain or any centralised relay.
 
 The same software serves both providers and consumers. Any user can be a provider. The difference is whether you attach a GPU and a model.
 
@@ -19,10 +19,10 @@ For the full project assessment, see our [Morpheus review](/projects/morpheus/).
 
 The architecture has four moving parts:
 
-1. **Your AI model server** — llama.cpp, vLLM, or any OpenAI-compatible API running on your hardware
-2. **The proxy-router** — a Go process that monitors the BASE blockchain, manages encrypted sessions between you and consumers, and routes inference traffic P2P
-3. **The Diamond smart contract on BASE** — an on-chain marketplace where providers register, post bids, and consumers purchase sessions
-4. **MOR token** — payment and staking medium for the entire system
+1. **Your AI model server.** llama.cpp, vLLM, or any OpenAI-compatible API running on your hardware.
+2. **The proxy-router.** A Go process that monitors the BASE blockchain, manages encrypted sessions between you and consumers, and routes inference traffic P2P.
+3. **The Diamond smart contract on BASE.** An on-chain marketplace where providers register, post bids, and consumers purchase sessions.
+4. **MOR token.** Payment and staking medium for the entire system.
 
 When a consumer wants AI inference, they browse available bids on-chain, purchase a session by staking MOR, and their proxy-router establishes a direct encrypted connection to your proxy-router. Traffic flows P2P. The blockchain only handles discovery and settlement.
 
@@ -64,7 +64,7 @@ Your staked MOR also caps your maximum reward. Stake 100 MOR, earn up to 100 MOR
 
 ### Bootstrapping incentive
 
-During the first year after the capital contract bootstrapping period, the top 100 compute providers may receive a pro-rata 2.4% of MOR emissions (one-tenth of the compute bucket). The capital contract bootstrapping period was 90 days from February 2024, so this incentive window likely closed around August 2025. Whether it was extended is not documented — check the Discord #compute-providers channel for current status.
+During the first year after the capital contract bootstrapping period, the top 100 compute providers may receive a pro-rata 2.4% of MOR emissions (one-tenth of the compute bucket). The capital contract bootstrapping period was 90 days from February 2024, so this incentive window likely closed around August 2025. Whether it was extended is not documented. Check the Discord #compute-providers channel for current status.
 
 ### Staking requirements
 
@@ -118,8 +118,8 @@ Consumer nodes need minimal hardware -- any modern desktop or laptop runs the pr
 ### Network requirements
 
 Your proxy-router must have a **publicly accessible endpoint** (IP:port or domain:port). Two ports need to be open:
-- **3333** — proxy/routing (TCP)
-- **8082** — Swagger API/management
+- **3333** for proxy/routing (TCP)
+- **8082** for Swagger API/management
 
 The docs recommend running behind a proxy, load balancer, or VPN for IP obfuscation. Your endpoint is visible on-chain, so anyone can see your provider address.
 
@@ -137,7 +137,7 @@ make -j 8 LLAMA_CUDA=1
 
 ### Download a model
 
-Any GGUF-format model from HuggingFace works. The Hermes-3-Llama-3.1-8B is a good starting point — capable enough to be useful, small enough for a single GPU.
+Any GGUF-format model from HuggingFace works. The Hermes-3-Llama-3.1-8B is a good starting point, capable enough to be useful and small enough for a single GPU.
 
 ### Start the model server
 
@@ -189,7 +189,7 @@ docker run -d \
 
 ### Option 3: Akash
 
-An SDL template (`02.2-proxy-router-akash.yml`) is available for fully decentralised hosting of the proxy-router on the Akash Network. This means your compute provision can itself be decentralised — model on your GPU, routing on Akash.
+An SDL template (`02.2-proxy-router-akash.yml`) is available for fully decentralised hosting of the proxy-router on the Akash Network. This means your compute provision can itself be decentralised: model on your GPU, routing on Akash.
 
 ### Configure the environment
 
@@ -268,7 +268,7 @@ The proxy-router is model-agnostic. You can route to anything with an API:
 | Prodia | `prodia-v2` | Image generation |
 | Hyperbolic | `hyperbolic-sd` | Image generation |
 
-The self-hosted llama.cpp path is the most aligned with the sovereignty thesis — you control the model, the hardware, and the data. Forwarding to OpenAI or Anthropic works but adds centralised dependency and API costs.
+The self-hosted llama.cpp path is the most aligned with the sovereignty thesis. You control the model, the hardware, and the data. Forwarding to OpenAI or Anthropic works but adds centralised dependency and API costs.
 
 ## The honest economics
 
@@ -312,22 +312,22 @@ MOR only needs to recover to $5-10 (still 93-97% below ATH) for the compute pool
 The proxy-router logs to stdout. For production, pipe to a log file or monitoring service.
 
 Key things to watch:
-- **Session creation failures** — v5.14.0 fixed an integer overflow that caused these, but monitor for new issues
-- **Model server uptime** — if llama.cpp crashes, your provider stops earning
-- **Wallet balance** — you need ETH on BASE for gas. Keep a buffer.
-- **Software updates** — the node is actively developed. Check releases regularly.
+- **Session creation failures.** v5.14.0 fixed an integer overflow that caused these, but monitor for new issues.
+- **Model server uptime.** If llama.cpp crashes, your provider stops earning.
+- **Wallet balance.** You need ETH on BASE for gas. Keep a buffer.
+- **Software updates.** The node is actively developed. Check releases regularly.
 
 ## Common issues
 
-1. **"No provider accepting session"** — known issue under load. Ensure your endpoint is publicly accessible and your model server is running.
-2. **macOS quarantine** — run `xattr -c proxy-router` after downloading.
-3. **RPC rate limits** — if using a free Alchemy/Infura tier, you may hit rate limits during high blockchain activity. Consider a paid plan.
-4. **Port forwarding** — if behind a home router, you need to forward ports 3333 and 8082 to your machine. UPnP may handle this, but manual configuration is more reliable.
-5. **Model too large for VRAM** — if your model does not fit in GPU memory, llama.cpp will offload layers to CPU, destroying performance. Use a model that fits entirely in your GPU's VRAM.
+1. **"No provider accepting session".** Known issue under load. Ensure your endpoint is publicly accessible and your model server is running.
+2. **macOS quarantine.** Run `xattr -c proxy-router` after downloading.
+3. **RPC rate limits.** If using a free Alchemy/Infura tier, you may hit rate limits during high blockchain activity. Consider a paid plan.
+4. **Port forwarding.** If behind a home router, you need to forward ports 3333 and 8082 to your machine. UPnP may handle this, but manual configuration is more reliable.
+5. **Model too large for VRAM.** If your model does not fit in GPU memory, llama.cpp will offload layers to CPU, destroying performance. Use a model that fits entirely in your GPU's VRAM.
 
 ## Testnet first
 
-BASE Sepolia testnet (Chain ID 84532) is available. Use it. The setup is identical except you use testnet contract addresses and free testnet tokens. Get comfortable with the full flow — model hosting, proxy-router configuration, on-chain registration, bid creation — before committing real MOR.
+BASE Sepolia testnet (Chain ID 84532) is available. Use it. The setup is identical except you use testnet contract addresses and free testnet tokens. Get comfortable with the full flow (model hosting, proxy-router configuration, on-chain registration, bid creation) before committing real MOR.
 
 The testnet environment variables are in the `env.example` file.
 

@@ -41,7 +41,7 @@ The network uses semantic web standards: RDF (Resource Description Framework), S
 
 Two node types operate the network. **DKG Core Nodes** provide the infrastructure – they store Knowledge Assets, respond to queries, and earn publishing fees. They require a 50,000-5,000,000 TRAC stake. **DKG Edge Nodes** (introduced in V8) are lightweight nodes for phones, laptops, and IoT devices.
 
-V8 launched on mainnet in June 2025, with V8.1.0 following on 23 June 2025 bringing the Random Sampling proof system live across all chains. Random Sampling replaces the previous per-asset on-chain proof model with epoch-based randomised challenges — Core Nodes submit a proof within a short window (e.g. 30 minutes) in response to a random challenge, rather than proving every asset individually. This reduces on-chain transactions by orders of magnitude and delivers a verified 100x+ throughput improvement over V6, which peaked at 100,000 Knowledge Assets per day. Batch minting now enables hundreds of Knowledge Assets in a single transaction. The network has continued iterating through V8.2.x releases, with V8.2.5 shipping in December 2025.
+V8 launched on mainnet in June 2025, with V8.1.0 following on 23 June 2025 bringing the Random Sampling proof system live across all chains. Random Sampling replaces the previous per-asset on-chain proof model with epoch-based randomised challenges. Core Nodes submit a proof within a short window (e.g. 30 minutes) in response to a random challenge, rather than proving every asset individually. This reduces on-chain transactions by orders of magnitude and delivers a verified 100x+ throughput improvement over V6, which peaked at 100,000 Knowledge Assets per day. Batch minting now enables hundreds of Knowledge Assets in a single transaction. The network has continued iterating through V8.2.x releases, with V8.2.5 shipping in December 2025.
 
 The network operates across three chains: **NeuroWeb** (a Polkadot parachain with its own NEURO governance token), **Base** (Coinbase's L2), and **Gnosis** chain. TRAC is an ERC-20 on Ethereum.
 
@@ -77,7 +77,7 @@ ICO investors who bought at $0.10 are at approximately 3.5x ROI after eight year
 
 Staking requires 50,000 TRAC minimum for Core Nodes (maximum 5 million) and supports delegated staking up to 2 million TRAC per node. Critically, **staking rewards come from publishing fees, not inflation**. This is real yield – when someone publishes a Knowledge Asset, they pay TRAC, and that TRAC is distributed to the nodes storing and serving that asset. There is no fixed APY because returns depend on network usage. Rewards auto-compound.
 
-V8.1 introduced automated TRAC reward distribution to delegators — rewards are now distributed via the Random Sampling proof system without manual claiming. The entire staking system runs natively on V8 infrastructure, and the Staking Dashboard has been upgraded with Node Power and Node Health metrics. The system remains fully non-custodial: delegated tokens are locked in DKG smart contracts, not controlled by node operators.
+V8.1 introduced automated TRAC reward distribution to delegators. Rewards are now distributed via the Random Sampling proof system without manual claiming. The entire staking system runs natively on V8 infrastructure, and the Staking Dashboard has been upgraded with Node Power and Node Health metrics. The system remains fully non-custodial: delegated tokens are locked in DKG smart contracts, not controlled by node operators.
 
 Unbonding is 28 days on Gnosis and Base, and just 5 minutes on NeuroWeb.
 
@@ -87,7 +87,7 @@ TRAC trades at approximately $0.35 with a market cap around $175 million. Daily 
 
 **Run a DKG Core Node.** Stake 50K-5M TRAC. Store and serve Knowledge Assets. Earn publishing fees from knowledge asset creators. Available on NeuroWeb, Base, and Gnosis. Technical skill: intermediate. Capital requirement: ~$16,000+ at current prices for minimum stake.
 
-**Delegate TRAC.** Stake to existing Core Node operators without running your own node. Maximum 2M TRAC delegation per node. Share in publishing fee rewards — V8.1 automates reward distribution, eliminating manual claiming. 28-day unbonding on Gnosis/Base, 5 minutes on NeuroWeb. Technical skill: basic.
+**Delegate TRAC.** Stake to existing Core Node operators without running your own node. Maximum 2M TRAC delegation per node. Share in publishing fee rewards. V8.1 automates reward distribution, eliminating manual claiming. 28-day unbonding on Gnosis/Base, 5 minutes on NeuroWeb. Technical skill: basic.
 
 **Build on the DKG.** Publish Knowledge Assets, query the knowledge graph via SPARQL, integrate with AI systems via ChatDKG or elizagraph (ElizaOS integration). SDKs in JavaScript and Python. Technical skill: advanced.
 
@@ -97,7 +97,7 @@ TRAC trades at approximately $0.35 with a market cap around $175 million. Daily 
 
 OriginTrail is one of the most mature open-source projects in DeAI with genuine data sovereignty features, but governance and privacy gaps exist.
 
-**Infrastructure Decentralisation: 12/20.** DKG Core Nodes distributed globally – anyone can run one with 50K TRAC. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides redundancy. V8 Edge Nodes extend to lightweight devices. V8.1's Random Sampling proof system has meaningfully improved network scalability — on-chain proof requirements reduced by orders of magnitude. However, exact active node count is not publicly available. NeuroWeb depends on Polkadot parachain slot. Trace Labs controls protocol development.
+**Infrastructure Decentralisation: 12/20.** DKG Core Nodes distributed globally – anyone can run one with 50K TRAC. Multi-chain deployment (NeuroWeb, Base, Gnosis) provides redundancy. V8 Edge Nodes extend to lightweight devices. V8.1's Random Sampling proof system has meaningfully improved network scalability. On-chain proof requirements reduced by orders of magnitude. However, exact active node count is not publicly available. NeuroWeb depends on Polkadot parachain slot. Trace Labs controls protocol development.
 
 **Governance Decentralisation: 8/20.** NeuroWeb has Polkadot-style parachain governance via NEURO token. TRAC governance for the DKG protocol is less documented. RFC repository exists but formal governance process is unclear. Development decisions controlled by Trace Labs.
 
@@ -130,7 +130,7 @@ OriginTrail sits in Quadrant B/C – a unique category play with genuine enterpr
 - **Revenue is a black box.** Publishing fees exist but total revenue is not tracked publicly. Impossible to assess sustainability without data.
 - **Small developer community.** 10 contributors to core limits development velocity.
 - **Token down 90% from ATH.** Despite positive ICO ROI, market enthusiasm has waned.
-- **DKG V8 contracts not audited by a major firm.** The protocol has iterated through V8.2.5 without a published audit from a recognised firm — a growing gap given the value locked in staking contracts.
+- **DKG V8 contracts not audited by a major firm.** The protocol has iterated through V8.2.5 without a published audit from a recognised firm. This is a growing gap given the value locked in staking contracts.
 - **Narrative pivot fatigue.** Supply chain (2018) → Web3 (2021) → AI (2025). Legitimate evolution or searching for fit?
 - **Knowledge graph adoption is niche.** Decentralised knowledge graphs compete with centralised alternatives (Google, Neo4j) that have larger ecosystems.
 - **No Binance listing.** Limits retail discovery and liquidity.

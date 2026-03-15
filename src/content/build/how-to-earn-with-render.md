@@ -27,7 +27,7 @@ This is the established path. Nearly 70 million cumulative frames rendered. ~15,
 
 ### 2. Compute node operator (AI/general)
 
-New as of March 2025 via RNP-019, expanded in November 2025 via RNP-021. Provide GPUs for AI inference, video generation and general compute workloads. Separate from rendering — you cannot share hardware between the two.
+New as of March 2025 via RNP-019, expanded in November 2025 via RNP-021. Provide GPUs for AI inference, video generation and general compute workloads. Separate from rendering. You cannot share hardware between the two.
 
 This is the growth path. Partners include Manifest (distributed LLM for financial services) and Think Agents (on-chain AI). The Render team also built Dispersed.com (600+ AI models), which serves as the commercial face of the compute subnet. Enterprise-grade expansion supports H100, H200, A100 and AMD MI300 series GPUs.
 
@@ -58,7 +58,7 @@ Same bandwidth requirements. Must run Linux (Ubuntu 22.04 or 24.04). Docker requ
 
 Enterprise tier (RNP-021): H100, H200, A100, L40, L4, T4, AMD MI300 series, Intel Data Center GPU Max series, and potentially Groq LPUs. Up to 1,200 H200-equivalent enterprise nodes planned.
 
-Compute nodes must be dedicated — no sharing workloads with rendering nodes. This is effectively two parallel networks under one token.
+Compute nodes must be dedicated. No sharing workloads with rendering nodes. This is effectively two parallel networks under one token.
 
 ## How to become a node operator
 
@@ -66,17 +66,17 @@ Compute nodes must be dedicated — no sharing workloads with rendering nodes. T
 
 The Render Network is **permissioned**. You cannot just install software and start earning. Apply via the Render Foundation waitlist at renderfoundation.com. The Foundation reviews applications and approves operators.
 
-This is worth pausing on. In a space where "permissionless" is a core value, Render requires explicit approval to participate as a provider. It is one of the reasons Render scores 3/10 on our Freedom Score — OTOY and the Foundation control who can supply compute.
+This is worth pausing on. In a space where "permissionless" is a core value, Render requires explicit approval to participate as a provider. It is one of the reasons Render scores 3/10 on our Freedom Score. OTOY and the Foundation control who can supply compute.
 
 ### Step 2: Set up your wallet
 
-You need a Solana wallet — Phantom or Solflare are the recommended options. RENDER is an SPL token on Solana. You will need a small amount of SOL (~0.1 SOL) for transaction fees.
+You need a Solana wallet. Phantom or Solflare are the recommended options. RENDER is an SPL token on Solana. You will need a small amount of SOL (~0.1 SOL) for transaction fees.
 
 If you hold old RNDR tokens on Ethereum, bridge them to RENDER on Solana at upgrade.rendernetwork.com. The conversion is 1:1. You pay your own gas for the bridge.
 
 ### Step 3: Configure your hardware
 
-Once approved, install the Render node software. For rendering nodes, your GPU needs a current OctaneBench score — this determines your position in the job matching queue and your reward weighting.
+Once approved, install the Render node software. For rendering nodes, your GPU needs a current OctaneBench score. This determines your position in the job matching queue and your reward weighting.
 
 For compute nodes, install Docker, configure the compute client, and ensure your Linux environment meets the specifications.
 
@@ -86,11 +86,11 @@ Availability matters. Since RNP-015, node operators earn availability rewards fo
 
 Current availability rewards: 12,500 RENDER/month split across rendering nodes, another 12,500 RENDER/month for compute client nodes. Your share depends on your uptime relative to all other operators.
 
-## The economics — be honest with yourself
+## The economics: be honest with yourself
 
 ### BME emissions (what you earn)
 
-Year 1 BME emissions totalled 9.13 million RENDER across all node operators. Year 2 drops to 5.91 million RENDER — a 35% reduction. After RNP-013 rebalanced allocations, weekly node job rewards sit at approximately 20,700 RENDER.
+Year 1 BME emissions totalled 9.13 million RENDER across all node operators. Year 2 drops to 5.91 million RENDER, a 35% reduction. After RNP-013 rebalanced allocations, weekly node job rewards sit at approximately 20,700 RENDER.
 
 At current RENDER price (~$1.82), that is roughly $37,700 per week split across ~15,680 registered operators. If every operator were equally active, that would be $2.40 per operator per week. They are not equally active, and reward weighting by GPU score, uptime and work completed means top operators earn significantly more. But the pool is not large.
 
@@ -118,11 +118,11 @@ The honest picture: at current prices and utilisation rates, GPU node operation 
 
 RENDER holders can vote on Render Network Proposals (RNPs) via Nation.io. Proposals go through a two-stage process: initial vote (72 hours, no quorum) and final vote (6 days, 15% quorum, 60% approval threshold). Voting is token-weighted using RENDER in self-custody Solana wallets.
 
-Participation is extremely low. RNP-022 saw 2.77% approve, 0.01% disapprove, 97.22% abstain. Only about 0.5% of supply actively votes. There are 23 RNPs to date (RNP-000 through RNP-022) — 9 implemented, 10 approved and on the roadmap. Governance is functional but barely used.
+Participation is extremely low. RNP-022 saw 2.77% approve, 0.01% disapprove, 97.22% abstain. Only about 0.5% of supply actively votes. There are 23 RNPs to date (RNP-000 through RNP-022): 9 implemented, 10 approved and on the roadmap. Governance is functional but barely used.
 
 ## What I would do
 
-I hold RENDER. I bought it for the BME thesis and the OctaneRender moat — Hollywood rendering customers create real, verifiable demand that most DeAI projects cannot match. But I do not operate a node. My hardware is a Mac Studio, not a rack of NVIDIA GPUs.
+I hold RENDER. I bought it for the BME thesis and the OctaneRender moat. Hollywood rendering customers create real, verifiable demand that most DeAI projects cannot match. But I do not operate a node. My hardware is a Mac Studio, not a rack of NVIDIA GPUs.
 
 At current RENDER price (~$1.82), if I were setting up a Render node today, I would go the compute route (RNP-019/021) rather than rendering. The AI compute market is growing faster, the GPU requirements overlap with hardware you might use for other purposes, and the enterprise expansion via RNP-021 signals where the Foundation sees future demand.
 

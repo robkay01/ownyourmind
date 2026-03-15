@@ -1,6 +1,6 @@
 ---
 title: "ElizaOS"
-description: "ElizaOS review — the most popular open-source AI agent framework in web3. How to build an AI agent with ElizaOS, tokenomics, Freedom Score and honest assessment."
+description: "ElizaOS review. The most popular open-source AI agent framework in web3. How to build an AI agent with ElizaOS, tokenomics, Freedom Score and honest assessment."
 category: "agent"
 token: "ELIZAOS"
 status: "active"

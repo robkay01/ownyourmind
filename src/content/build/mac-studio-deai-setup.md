@@ -70,7 +70,7 @@ For a 64GB machine, these models run well as of March 2026:
 | Mistral Small 24B | ~14GB | Fast | Concise output, function calling |
 | Codestral 22B | ~13GB | Fast | Code generation and review |
 
-With 64GB you can run anything up to about 40GB model size with reasonable performance. Llama 3.3 70B at Q4 quantisation is the sweet spot — it fits in memory with room to spare and handles most tasks as well as cloud APIs. For faster responses on lighter tasks, Gemma 3 12B or DeepSeek-R1 14B are excellent.
+With 64GB you can run anything up to about 40GB model size with reasonable performance. Llama 3.3 70B at Q4 quantisation is the sweet spot. It fits in memory with room to spare and handles most tasks as well as cloud APIs. For faster responses on lighter tasks, Gemma 3 12B or DeepSeek-R1 14B are excellent.
 
 ## Step 3: Install llama.cpp (optional, more control)
 

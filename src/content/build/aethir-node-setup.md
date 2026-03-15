@@ -1,6 +1,6 @@
 ---
 title: "Aethir Node Setup: How to Earn with ATH"
-description: "How to set up an Aethir node — Checker nodes, Edge devices, and Cloud Host GPU providers. Requirements, costs, realistic earnings, and why the numbers matter more than the marketing."
+description: "How to set up an Aethir node. Checker nodes, Edge devices, and Cloud Host GPU providers. Requirements, costs, realistic earnings, and why the numbers matter more than the marketing."
 difficulty: "beginner"
 category: "walkthrough"
 publishDate: 2026-03-10
@@ -21,7 +21,7 @@ There are three ways to participate in the network. Each has very different econ
 | **Edge** | Contributes light compute via dedicated device | ~$999-1,399 + 2,069 ATH | Beginner | Very low at current prices |
 | **Cloud Host** | Provides enterprise GPUs (H100, H200, A100) | $200K+ in hardware | Advanced | Potentially profitable |
 
-A fourth role, **Indexer**, matches client requests with Containers — but Aethir operates these centrally. You cannot run one.
+A fourth role, **Indexer**, matches client requests with Containers, but Aethir operates these centrally. You cannot run one.
 
 ## Checker node setup
 
@@ -39,7 +39,7 @@ This is not demanding hardware:
 
 ### Getting a licence
 
-The primary sale (March 2024) sold out — 66,000+ licences to 20,000+ buyers across 53 pricing tiers, starting at ~$500. Roughly $75-92 million raised.
+The primary sale (March 2024) sold out. 66,000+ licences to 20,000+ buyers across 53 pricing tiers, starting at ~$500. Roughly $75-92 million raised.
 
 Licences became transferable in July 2025 and trade as NFTs on secondary markets (Arbitrum). Check OpenSea or Blur for current floor prices.
 
@@ -59,9 +59,9 @@ aethir version
 # Import wallet and approve licence via CLI
 ```
 
-Cannot run multiple CLI instances on one machine. Windows GUI is also available — download from app.aethir.com, install, connect wallet, approve licence.
+Cannot run multiple CLI instances on one machine. Windows GUI is also available. Download from app.aethir.com, install, connect wallet, approve licence.
 
-### Checker earnings — the honest numbers
+### Checker earnings: the honest numbers
 
 15% of total ATH supply (6.3 billion ATH) is allocated to checkers over 4 years: 10% base + 5% bonus.
 
@@ -98,7 +98,7 @@ The Edge is a dedicated hardware device that contributes light compute to the ne
 
 That is genuinely the entire setup. No Linux, no Docker, no CLI. Plug it in.
 
-### Edge earnings — the honest numbers
+### Edge earnings: the honest numbers
 
 23% of total ATH supply (~9.66 billion ATH) is allocated to Edge devices over 10 years.
 
@@ -152,7 +152,7 @@ Cloud Hosts earn through two streams: ATH token rewards (Proof of Capacity and P
 | Total supply | 42B ATH |
 | All-time high | $0.1185 (down ~95%) |
 
-**Critical risk: token unlocks.** Approximately 23.6 billion ATH (56% of total supply) remains unvested, releasing linearly through 2028 primarily via Checker and Compute Provider allocations. At current prices (~$0.006), monthly new supply entering circulation is worth roughly $8-10 million — though this figure scales with any price increase. The token distribution allocates 50% to compute providers, 15% to ecosystem, 12.5% to team, 11.5% to investors, 6% to airdrop, 5% to advisors.
+**Critical risk: token unlocks.** Approximately 23.6 billion ATH (56% of total supply) remains unvested, releasing linearly through 2028 primarily via Checker and Compute Provider allocations. At current prices (~$0.006), monthly new supply entering circulation is worth roughly $8-10 million, though this figure scales with any price increase. The token distribution allocates 50% to compute providers, 15% to ecosystem, 12.5% to team, 11.5% to investors, 6% to airdrop, 5% to advisors.
 
 ### Staking options
 
@@ -166,7 +166,7 @@ US, Cuba, Iran, North Korea, Syria, Crimea, Donetsk and Luhansk are fully restri
 
 ## My assessment
 
-Aethir has the best revenue story in DeAI — $147 million ARR claimed — attached to the worst decentralisation credentials. The Indexers are centralised. Cloud Host onboarding is gatekept. The revenue figures are self-reported with no independent audit.
+Aethir has the best revenue story in DeAI ($147 million ARR claimed) attached to the worst decentralisation credentials. The Indexers are centralised. Cloud Host onboarding is gatekept. The revenue figures are self-reported with no independent audit.
 
 For someone looking to participate:
 
@@ -174,4 +174,4 @@ For someone looking to participate:
 - **Edge devices** are a speculative bet on ATH price, not a compute business at current prices. Only buy one if you believe ATH will 5-10x and you are comfortable waiting.
 - **Cloud Hosting** is a real GPU business with potentially viable economics, but requires enterprise-scale capital and the willingness to trust Aethir's utilisation claims.
 
-I do not hold ATH. The centralisation concerns and the massive unlock schedule keep me on the sideline. But I watch the revenue numbers — if they are real and independently verified, Aethir becomes a very different conversation.
+I do not hold ATH. The centralisation concerns and the massive unlock schedule keep me on the sideline. But I watch the revenue numbers. If they are real and independently verified, Aethir becomes a very different conversation.

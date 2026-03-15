@@ -34,25 +34,25 @@ The threshold for "high" on each axis is 55/100 (displayed as 5.5/10 on the dash
                 LOW RETURNS
 ```
 
-### Quadrant A — Best of both
+### Quadrant A: Best of both
 
 High Freedom, High Returns. The ideal position: genuinely decentralised and the token captures real value. These are rare. Most projects that score well on freedom are early-stage with weak tokenomics, and most projects with strong returns are centralised.
 
 **What it means for investors:** Strong conviction hold. The project delivers sovereignty without sacrificing economic fundamentals.
 
-### Quadrant B — Sovereignty play
+### Quadrant B: Sovereignty play
 
-High Freedom, Low Returns. Genuinely decentralised but the token economics are weak — high inflation, no burn mechanism, or revenue that does not flow through the token. These are often the most ideologically important projects in the space.
+High Freedom, Low Returns. Genuinely decentralised but the token economics are weak: high inflation, no burn mechanism, or revenue that does not flow through the token. These are often the most ideologically important projects in the space.
 
 **What it means for investors:** You are investing in the infrastructure thesis, not the current token model. The bet is that utility and revenue will eventually catch up to the decentralisation fundamentals. Position sizing should reflect that uncertainty.
 
-### Quadrant C — Centralised value
+### Quadrant C: Centralised value
 
 Low Freedom, High Returns. The token captures value effectively, but the project is not meaningfully decentralised. Proprietary tech, permissioned networks, foundation-controlled governance. These often outperform in the short term because centralisation produces a better product.
 
 **What it means for investors:** The returns are real but carry platform risk. If the founding team or company fails, the network likely fails with it. You are investing in a company with a token, not a decentralised protocol.
 
-### Quadrant D — Avoid
+### Quadrant D: Avoid
 
 Low Freedom, Low Returns. Neither decentralised nor economically sound. These are projects where the token adds no genuine utility and the "decentralised" label is marketing.
 
@@ -71,7 +71,7 @@ No editorial override. The quadrant is derived directly from the two scores. If 
 
 Most DeAI coverage treats decentralisation as either everything (sovereignty maximalists) or nothing (pure investment analysis). We think both perspectives miss something.
 
-A sovereignty seeker who ignores returns buys tokens that dilute to zero. An investor who ignores freedom buys centralised platforms dressed as protocols — and gets surprised when the team rugs, the SEC intervenes, or the permissioned network censors their workload.
+A sovereignty seeker who ignores returns buys tokens that dilute to zero. An investor who ignores freedom buys centralised platforms dressed as protocols, and gets surprised when the team rugs, the SEC intervenes, or the permissioned network censors their workload.
 
 The quadrant model forces honesty about the trade-off. A project cannot be all things. The question is whether you understand what you are buying and whether the trade-off is one you are willing to make.
 
@@ -79,6 +79,6 @@ The quadrant model forces honesty about the trade-off. A project cannot be all t
 
 Quadrant labels appear on:
 
-- The [Projects Dashboard](/projects/) — as a column in the table and on mobile cards
-- Individual project review pages — between the score breakdowns and market data
-- The [Compare tool](/projects/compare/) — in the scores section
+- The [Projects Dashboard](/projects/), as a column in the table and on mobile cards
+- Individual project review pages, between the score breakdowns and market data
+- The [Compare tool](/projects/compare/), in the scores section

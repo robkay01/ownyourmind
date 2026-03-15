@@ -1,6 +1,6 @@
 ---
 title: "Bittensor"
-description: "Bittensor review — the largest decentralised AI network by market cap. TAO tokenomics, dTAO subnet economics, halving schedule, Freedom Score and honest assessment."
+description: "Bittensor review. The largest decentralised AI network by market cap. TAO tokenomics, dTAO subnet economics, halving schedule, Freedom Score and honest assessment."
 category: "platform"
 token: "TAO"
 status: "active"
@@ -79,7 +79,7 @@ Registration on popular subnets requires burning TAO. This creates a cost barrie
 
 ## Honest assessment
 
-**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy, and the Tao Flow emissions upgrade (November 2025) closed gaming vectors in the original price-based model. MEV Shield (December 2025) introduced an encrypted mempool that prevents front-running and sandwich attacks — transactions are encrypted until block inclusion, and it is enabled by default in the CLI and SDK. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real: Grayscale launched a Bittensor Trust (GTAO) and filed an S-1 to convert it into a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
+**What works.** Bittensor is the largest decentralised AI network by market cap (~$1.9B), with 128+ subnets and 8,000+ reported GPU nodes. The subnet architecture is genuinely innovative. dTAO was a meaningful improvement over the Root Network oligarchy, and the Tao Flow emissions upgrade (November 2025) closed gaming vectors in the original price-based model. MEV Shield (December 2025) introduced an encrypted mempool that prevents front-running and sandwich attacks. Transactions are encrypted until block inclusion, and it is enabled by default in the CLI and SDK. The Bitcoin-modelled tokenomics (21M cap, halving schedule, fair launch) give it the cleanest scarcity narrative in the space. Institutional adoption is real: Grayscale launched a Bittensor Trust (GTAO) and filed an S-1 to convert it into a spot ETF, DCG launched a dedicated subsidiary (Yuma), and it has listings on Binance, Coinbase and Kraken.
 
 **What does not work yet.** The barrier to entry for mining is high and getting higher. Competitive subnets require serious hardware investment with no guarantee of returns. Most subnets have not demonstrated output quality exceeding centralised alternatives. Academic analysis shows stake weight drives rewards more than AI output quality.
 
@@ -127,7 +127,7 @@ TAO scores 63/100 (C grade). Full methodology at [Returns Score Methodology](/re
 
 **Revenue sustainability (5/20):** This is the critical gap. Bittensor generates zero external revenue. The entire economic model runs on emissions. Subnets compete for a share of daily TAO emissions, not for customer payments. Chutes processes billions of tokens daily and Gradients claims to be cheaper than Google Cloud, but neither generates revenue that flows back to the protocol. Until subnets develop independent revenue streams that supplement or replace emissions, TAO's economic model is a closed loop where miners and validators earn tokens funded by inflation, not by external demand for AI services.
 
-**Liquidity and access (14/15):** TAO has the deepest liquidity in the DeAI space. Listed on Binance, Coinbase, Kraken and other major exchanges, with daily volume consistently exceeding $100 million. A Grayscale Bittensor Trust (GTAO) — with an S-1 filed to convert it into a spot ETF — and DCG's dedicated Yuma subsidiary add institutional-grade access. You can enter or exit a substantial position without moving the market. For a sector plagued by thin liquidity, this is a genuine competitive advantage.
+**Liquidity and access (14/15):** TAO has the deepest liquidity in the DeAI space. Listed on Binance, Coinbase, Kraken and other major exchanges, with daily volume consistently exceeding $100 million. A Grayscale Bittensor Trust (GTAO), with an S-1 filed to convert it into a spot ETF, and DCG's dedicated Yuma subsidiary add institutional-grade access. You can enter or exit a substantial position without moving the market. For a sector plagued by thin liquidity, this is a genuine competitive advantage.
 
 ### Path to improvement
 

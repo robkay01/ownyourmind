@@ -19,11 +19,11 @@ For the full project assessment, see our [Grass review](/projects/grass/).
 
 Before I walk through the setup, you need to understand what "passive income" means here.
 
-Grass does not pay you a fixed rate. You earn points based on uptime and bandwidth contribution. Those points convert to GRASS tokens through seasonal airdrops — not continuous payments. The conversion rate is not fixed and depends on how many people are participating and how many tokens are allocated to each season.
+Grass does not pay you a fixed rate. You earn points based on uptime and bandwidth contribution. Those points convert to GRASS tokens through seasonal airdrops, not continuous payments. The conversion rate is not fixed and depends on how many people are participating and how many tokens are allocated to each season.
 
 Season 1 distributed 100 million GRASS (10% of supply) to approximately 2 million users in October 2024. If you started early and ran consistently, you might have received 2,000-3,000 GRASS tokens worth $500-800 at listing. At current prices (~$0.37), those same tokens are worth $740-1,110.
 
-Season 2 will distribute 170 million GRASS — nearly double Season 1 — expected in H1 2026 but not yet distributed. With 8.5+ million monthly active nodes now competing for that allocation across 190+ countries, individual shares may not increase proportionally despite the larger pool.
+Season 2 will distribute 170 million GRASS (nearly double Season 1), expected in H1 2026 but not yet distributed. With 8.5+ million monthly active nodes now competing for that allocation across 190+ countries, individual shares may not increase proportionally despite the larger pool.
 
 This is beer money for most participants. The setup takes five minutes and runs in the background, so the effort-to-reward ratio is reasonable. But do not expect meaningful income.
 
@@ -32,7 +32,7 @@ This is beer money for most participants. The setup takes five minutes and runs 
 ### What you need
 
 - A computer (Windows, Mac, or Linux) or Android phone
-- An internet connection — no minimum speed specified
+- An internet connection (no minimum speed specified)
 - A Solana wallet (Phantom or Solflare) for token claims
 - Five minutes
 
@@ -42,7 +42,7 @@ Go to grass.io and create an account with your email or Google. You must be 18 o
 
 ### Step 2: Download the Desktop Node
 
-Go to grass.io/download and install the Desktop Node for your operating system. The Desktop Node is strongly recommended over the browser extension — it handles 10x more bandwidth and earns at **2x the rate**.
+Go to grass.io/download and install the Desktop Node for your operating system. The Desktop Node is strongly recommended over the browser extension. It handles 10x more bandwidth and earns at **2x the rate**.
 
 The browser extension (Chrome/Edge) still works but is being phased out. If you are starting fresh, go straight to the Desktop Node.
 
@@ -58,12 +58,12 @@ Go to app.grass.io and connect a Solana wallet. You will need this to claim toke
 
 The Rewards Dashboard at app.grass.io shows your accumulated points. There are two types since Epoch 11:
 
-- **Uptime Points** — earned for maintaining a connection, plus referral bonuses
-- **Network Points** — from a fixed daily pool of 1,000,000 points distributed proportionally based on actual bandwidth used
+- **Uptime Points**, earned for maintaining a connection, plus referral bonuses
+- **Network Points**, from a fixed daily pool of 1,000,000 points distributed proportionally based on actual bandwidth used
 
 ## Multiple devices
 
-You can run Grass on more than one device, but there is a catch. If multiple devices share the same public IP address (same Wi-Fi network), your total earnings stay the same — they are split across devices, not multiplied.
+You can run Grass on more than one device, but there is a catch. If multiple devices share the same public IP address (same Wi-Fi network), your total earnings stay the same. They are split across devices, not multiplied.
 
 To actually increase earnings, run devices on **different public IP addresses**: home broadband, mobile data, office network. Desktop at home plus the Android app on mobile data is the optimal multi-device setup.
 
@@ -91,7 +91,7 @@ Season 1 covered Epochs 1-7 and distributed 100 million GRASS. Season 2 covers s
 | Chain | Solana |
 | Exchanges | Bybit, Binance, KuCoin, Kraken, Coinbase, Gate.io |
 
-GRASS staking is available at grassfoundation.io/stake — delegate to routers, rewards distributed every second, 7-day unbonding period. APY is not publicly disclosed.
+GRASS staking is available at grassfoundation.io/stake. Delegate to routers, rewards distributed every second, 7-day unbonding period. APY is not publicly disclosed.
 
 The tokenomics allocation is worth noting: 25.2% to early investors (1-year cliff + 1-year vest), 22% to contributors (1-year cliff + 3-year vest), 22.8% to foundation/ecosystem. Nearly half the supply is allocated to insiders. A 55 million token ecosystem contributor unlock completed on 28 February 2026, increasing circulating supply by roughly 13%.
 
@@ -117,7 +117,7 @@ No cap on referrals. Bonuses are ongoing as long as the referred user stays acti
 
 ## Risks and downsides
 
-**Your IP is exposed.** Grass routes web requests through your residential IP. While they claim no personal data is accessed, any app routing traffic through your connection introduces theoretical risk. You cannot use a VPN — it is explicitly prohibited and will reduce your earnings.
+**Your IP is exposed.** Grass routes web requests through your residential IP. While they claim no personal data is accessed, any app routing traffic through your connection introduces theoretical risk. You cannot use a VPN. It is explicitly prohibited and will reduce your earnings.
 
 **Centralisation.** Grass scores 4/10 on our Freedom Score. Wynd Labs (the company behind Grass) controls which "verified institutions" use the network. The verification process is opaque. Code is entirely closed-source. Governance exists only in documentation.
 
@@ -131,6 +131,6 @@ No cap on referrals. Bonuses are ongoing as long as the referred user stays acti
 
 Grass is the lowest-effort earning opportunity in the DeAI space. Install an app, let it run, occasionally check your points. The bandwidth impact is genuinely minimal in my experience.
 
-But I rate it as a speculative bonus, not income. The token is down 90% from its peak. Earnings depend on seasonal airdrops with uncertain conversion rates. The network is centralised despite the DePIN branding. And the fundamental value proposition — sharing your bandwidth as a residential proxy — requires trust in a company whose verification processes are opaque.
+But I rate it as a speculative bonus, not income. The token is down 90% from its peak. Earnings depend on seasonal airdrops with uncertain conversion rates. The network is centralised despite the DePIN branding. And the fundamental value proposition (sharing your bandwidth as a residential proxy) requires trust in a company whose verification processes are opaque.
 
-I run it on my Mac Studio because the marginal cost is zero. If Season 2 delivers a meaningful airdrop, great. If not, I have lost nothing but a fraction of bandwidth I was not using anyway. That is the right way to think about Grass — a free option on potential future value, not an income stream.
+I run it on my Mac Studio because the marginal cost is zero. If Season 2 delivers a meaningful airdrop, great. If not, I have lost nothing but a fraction of bandwidth I was not using anyway. That is the right way to think about Grass: a free option on potential future value, not an income stream.

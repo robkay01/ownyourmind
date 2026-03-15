@@ -95,7 +95,7 @@ The founding team has deep credentials. McConaghy's two successful exits and 20 
 
 Ocean Nodes' permissionless deployment with minimal hardware requirements (1 vCPU, 2 GB RAM) represents a meaningful step toward infrastructure decentralisation. The libp2p communication layer and Typesense metadata caching provide a solid technical foundation.
 
-**What does not work.** The ASI Alliance fallout has left Ocean Protocol in an unprecedented position. A token whose own Foundation says has "no intended utility value." A community where 81% of token holders have already left for FET/ASI. The Fetch.ai lawsuit has been settled — Ocean returned 286 million FET (~$120 million) — but the reputational damage remains. Governance mechanisms (OceanDAO, veOCEAN) that have been dismantled with no replacement. This is the cost of a merger that went wrong.
+**What does not work.** The ASI Alliance fallout has left Ocean Protocol in an unprecedented position. A token whose own Foundation says has "no intended utility value." A community where 81% of token holders have already left for FET/ASI. The Fetch.ai lawsuit has been settled. Ocean returned 286 million FET (~$120 million), but the reputational damage remains. Governance mechanisms (OceanDAO, veOCEAN) that have been dismantled with no replacement. This is the cost of a merger that went wrong.
 
 The governance vacuum is particularly damaging. OceanDAO ran 23 rounds of quadratic voting grants from 2021 to November 2022 before being superseded. veOCEAN staking gave holders curation power over data assets. Passive and Active Data Farming ended in May 2024. Now there is nothing. No on-chain voting, no community proposals, no mechanism for token holders to influence protocol direction. The Foundation controls all strategic decisions unilaterally.
 
@@ -103,7 +103,7 @@ Ocean Market activity and data NFT adoption metrics are not publicly disclosed. 
 
 Trading volume of $77,000 per day on a project with this history and technical depth is a damning market signal. The market is saying that great technology with no token utility and a fragmented community is not worth holding.
 
-**The risk.** The Fetch.ai lawsuit has been settled, with Ocean returning 286 million FET. The settlement removes the litigation overhang but the underlying allegations — minting 719 million OCEAN and selling 263 million FET through exchanges without disclosure — have not been publicly adjudicated. The reputational damage persists regardless of the legal resolution.
+**The risk.** The Fetch.ai lawsuit has been settled, with Ocean returning 286 million FET. The settlement removes the litigation overhang but the underlying allegations (minting 719 million OCEAN and selling 263 million FET through exchanges without disclosure) have not been publicly adjudicated. The reputational damage persists regardless of the legal resolution.
 
 The "no intended utility value" declaration creates an existential question. If the token has no utility, why should it have any value? The buyback-and-burn narrative relies on profits from unspecified "spin-out ventures" with no disclosed timeline. This is hope, not a business model.
 

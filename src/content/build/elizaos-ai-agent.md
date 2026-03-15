@@ -9,7 +9,7 @@ draft: false
 
 ## What ElizaOS is
 
-[ElizaOS](https://github.com/elizaOS/eliza) is an open-source TypeScript framework for building autonomous AI agents. It has 17,700+ GitHub stars, 5,500+ forks, and is the most popular AI agent framework in web3. It is MIT licensed and free to use — no token required.
+[ElizaOS](https://github.com/elizaOS/eliza) is an open-source TypeScript framework for building autonomous AI agents. It has 17,700+ GitHub stars, 5,500+ forks, and is the most popular AI agent framework in web3. It is MIT licensed and free to use. No token required.
 
 Your agent can post on Twitter, respond in Discord, execute blockchain transactions, maintain persistent memory, and operate 24/7 without intervention. The framework handles the plumbing. You define the personality and capabilities.
 
@@ -19,7 +19,7 @@ For the full project assessment, see our [ElizaOS review](/projects/elizaos/).
 
 ## What you need
 
-- **Node.js v23+** — specifically v23 or later, not v20 or v22. This is the most common source of errors.
+- **Node.js v23+**, specifically v23 or later, not v20 or v22. This is the most common source of errors.
 - **Bun** runtime (from bun.sh)
 - **Git**
 - **At least one AI model provider:** OpenAI API key, Anthropic API key, Venice API key, or Ollama installed locally
@@ -55,7 +55,7 @@ The CLI method is the fastest path:
 # Install CLI
 bun i -g @elizaos/cli
 
-# Create project (interactive — prompts for DB and model provider)
+# Create project (interactive, prompts for DB and model provider)
 elizaos create my-agent
 
 # Start
@@ -123,13 +123,13 @@ A more complete one:
 ```
 
 Key fields:
-- **bio** — can be a string or array (arrays get randomised for variation)
-- **lore** — extended backstory and beliefs
-- **knowledge** — facts fed into RAG retrieval
-- **messageExamples** — sample conversations for tone calibration
-- **postExamples** — example social media posts
-- **style** — writing rules per context (all, chat, post)
-- **modelProvider** — which LLM backend ("openai", "anthropic", "venice", "ollama")
+- **bio** can be a string or array (arrays get randomised for variation)
+- **lore** is extended backstory and beliefs
+- **knowledge** contains facts fed into RAG retrieval
+- **messageExamples** are sample conversations for tone calibration
+- **postExamples** are example social media posts
+- **style** defines writing rules per context (all, chat, post)
+- **modelProvider** sets which LLM backend ("openai", "anthropic", "venice", "ollama")
 
 ElizaOS includes tools for generating character files from existing data: `tweets2character` (from your tweets), `folder2knowledge` (from documents), and `chats2character` (from chat logs).
 
@@ -152,7 +152,7 @@ VENICE_IMAGE_MODEL=venice-sd35
 VENICE_EMBEDDING_MODEL=text-embedding-bge-m3
 ```
 
-Venice's default large model is now `zai-org-glm-4.7` (GLM 4.7, 198K context) — it replaced `llama-3.1-405b` as the recommended option. For image generation, `venice-sd35` is the ElizaOS default; `flux-2-max` and `qwen-image` are also available. The embedding model `text-embedding-bge-m3` remains unchanged. Check Venice's API docs for the full model list — they now offer 47+ text models including Claude, GPT, Gemini, and Grok variants.
+Venice's default large model is now `zai-org-glm-4.7` (GLM 4.7, 198K context). It replaced `llama-3.1-405b` as the recommended option. For image generation, `venice-sd35` is the ElizaOS default; `flux-2-max` and `qwen-image` are also available. The embedding model `text-embedding-bge-m3` remains unchanged. Check Venice's API docs for the full model list. They now offer 47+ text models including Claude, GPT, Gemini, and Grok variants.
 
 For Ollama (local inference):
 ```bash
@@ -163,11 +163,11 @@ ollama pull mistral
 OLLAMA_MODEL=mistral
 ```
 
-I would use Venice for a sovereignty-first agent — your prompts and responses stay private, you get access to uncensored open-weight models, and the API is OpenAI-compatible. See our [Venice review](/projects/venice/) for details on the privacy model.
+I would use Venice for a sovereignty-first agent. Your prompts and responses stay private, you get access to uncensored open-weight models, and the API is OpenAI-compatible. See our [Venice review](/projects/venice/) for details on the privacy model.
 
 ## Step 4: Add Twitter integration
 
-This is the most common use case — an agent that posts autonomously on X/Twitter.
+This is the most common use case: an agent that posts autonomously on X/Twitter.
 
 Install the plugin:
 ```bash
@@ -205,10 +205,10 @@ X/Twitter aggressively rate-limits API calls. Start with conservative posting in
 ElizaOS has 23+ blockchain plugins covering most major chains.
 
 ```bash
-# Solana — transfers, Jupiter swaps, NFTs
+# Solana: transfers, Jupiter swaps, NFTs
 elizaos plugins add @elizaos/plugin-solana
 
-# EVM — Ethereum, Base, Arbitrum transfers and swaps
+# EVM: Ethereum, Base, Arbitrum transfers and swaps
 elizaos plugins add @elizaos/plugin-evm
 ```
 
@@ -228,15 +228,15 @@ Configure chains in the character file:
 }
 ```
 
-Once configured, you can tell the agent "Transfer 0.01 ETH to 0xABC... on Base" via natural language. **Always specify the chain explicitly** — without it, the agent may default to mainnet and execute real transactions when you meant to test.
+Once configured, you can tell the agent "Transfer 0.01 ETH to 0xABC... on Base" via natural language. **Always specify the chain explicitly.** Without it, the agent may default to mainnet and execute real transactions when you meant to test.
 
 ## Memory system
 
 ElizaOS maintains persistent memory across conversations using vector embeddings and semantic search. Three database options:
 
-- **PGLite** — embedded PostgreSQL (3MB WASM), good for development
-- **SQLite** — file-based, lightweight
-- **PostgreSQL** — full Postgres with pgvector, recommended for production
+- **PGLite**, embedded PostgreSQL (3MB WASM), good for development
+- **SQLite**, file-based, lightweight
+- **PostgreSQL**, full Postgres with pgvector, recommended for production
 
 The memory system automatically extracts facts from conversations, stores them as embeddings, and retrieves relevant context for future interactions. Your agent remembers what it has been told and builds on it.
 
@@ -268,7 +268,7 @@ A moderately active Twitter agent making 8-16 posts per day with reply handling 
 
 The $elizaOS token exists but is **not required to build or run agents**. The framework is fully open-source under MIT licence. You can build, deploy and operate agents without holding a single token.
 
-The token is for the broader DAO ecosystem — cross-chain agent coordination, governance. The framework-to-token connection is loose, which is why our [review](/projects/elizaos/) gives ElizaOS a returns score of 2.7/10 despite the framework being genuinely good.
+The token is for the broader DAO ecosystem: cross-chain agent coordination, governance. The framework-to-token connection is loose, which is why our [review](/projects/elizaos/) gives ElizaOS a returns score of 2.7/10 despite the framework being genuinely good.
 
 ## My assessment
 
